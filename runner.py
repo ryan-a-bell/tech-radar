@@ -54,6 +54,7 @@ def build_radar_json():
         "count": len(items),
         "items": items,
     }
+    os.makedirs(os.path.dirname(core.RADAR_JSON), exist_ok=True)
     with open(core.RADAR_JSON, "w") as f:
         json.dump(payload, f, indent=2)
     return len(items)
