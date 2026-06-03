@@ -1,0 +1,22 @@
+{
+  "id": "github:jamwithai/production-agentic-rag-course",
+  "name": "production-agentic-rag-course",
+  "description": "A python project trending on GitHub.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/jamwithai/production-agentic-rag-course",
+  "canonical_url": "github.com/jamwithai/production-agentic-rag-course",
+  "also_seen": [],
+  "company": null,
+  "stars": 372,
+  "momentum": 37,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 372
+  }
+}

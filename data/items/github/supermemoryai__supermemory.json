@@ -1,0 +1,22 @@
+{
+  "id": "github:supermemoryai/supermemory",
+  "name": "supermemory",
+  "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/supermemoryai/supermemory",
+  "canonical_url": "github.com/supermemoryai/supermemory",
+  "also_seen": [],
+  "company": null,
+  "stars": 601,
+  "momentum": 60,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 601
+  }
+}

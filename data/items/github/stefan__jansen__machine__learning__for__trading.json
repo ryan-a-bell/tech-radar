@@ -1,0 +1,22 @@
+{
+  "id": "github:stefan-jansen/machine-learning-for-trading",
+  "name": "machine-learning-for-trading",
+  "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+  "canonical_url": "github.com/stefan-jansen/machine-learning-for-trading",
+  "also_seen": [],
+  "company": null,
+  "stars": 716,
+  "momentum": 71,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 716
+  }
+}

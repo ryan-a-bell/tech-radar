@@ -1,0 +1,22 @@
+{
+  "id": "github:nesquena/hermes-webui",
+  "name": "hermes-webui",
+  "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/nesquena/hermes-webui",
+  "canonical_url": "github.com/nesquena/hermes-webui",
+  "also_seen": [],
+  "company": null,
+  "stars": 734,
+  "momentum": 73,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 734
+  }
+}

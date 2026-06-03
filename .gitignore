@@ -1,3 +1,6 @@
+# Tech radar — raw scrape audit logs (replay buffer, not curated state)
+data/raw/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

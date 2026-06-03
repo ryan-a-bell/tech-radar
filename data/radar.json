@@ -1,0 +1,270 @@
+{
+  "generated": "2026-06-03",
+  "count": 11,
+  "items": [
+    {
+      "id": "github:supermemoryai/supermemory",
+      "name": "supermemory",
+      "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "canonical_url": "github.com/supermemoryai/supermemory",
+      "also_seen": [],
+      "company": null,
+      "stars": 601,
+      "momentum": 60,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 601
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jamwithai/production-agentic-rag-course",
+      "name": "production-agentic-rag-course",
+      "description": "A python project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/jamwithai/production-agentic-rag-course",
+      "canonical_url": "github.com/jamwithai/production-agentic-rag-course",
+      "also_seen": [],
+      "company": null,
+      "stars": 372,
+      "momentum": 37,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 372
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/markitdown",
+      "name": "markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/microsoft/markitdown",
+      "canonical_url": "github.com/microsoft/markitdown",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 2006,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 2006
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:stefan-jansen/machine-learning-for-trading",
+      "name": "machine-learning-for-trading",
+      "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+      "canonical_url": "github.com/stefan-jansen/machine-learning-for-trading",
+      "also_seen": [],
+      "company": null,
+      "stars": 716,
+      "momentum": 71,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 716
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nesquena/hermes-webui",
+      "name": "hermes-webui",
+      "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/nesquena/hermes-webui",
+      "canonical_url": "github.com/nesquena/hermes-webui",
+      "also_seen": [],
+      "company": null,
+      "stars": 734,
+      "momentum": 73,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 734
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chopratejas/headroom",
+      "name": "headroom",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/chopratejas/headroom",
+      "canonical_url": "github.com/chopratejas/headroom",
+      "also_seen": [],
+      "company": null,
+      "stars": 3528,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 3528
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:reconurge/flowsint",
+      "name": "flowsint",
+      "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/reconurge/flowsint",
+      "canonical_url": "github.com/reconurge/flowsint",
+      "also_seen": [],
+      "company": null,
+      "stars": 509,
+      "momentum": 50,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 509
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:OpenBMB/VoxCPM",
+      "name": "VoxCPM",
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "canonical_url": "github.com/openbmb/voxcpm",
+      "also_seen": [],
+      "company": null,
+      "stars": 713,
+      "momentum": 71,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 713
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:D4Vinci/Scrapling",
+      "name": "Scrapling",
+      "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "canonical_url": "github.com/d4vinci/scrapling",
+      "also_seen": [],
+      "company": null,
+      "stars": 1078,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 1078
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Open-LLM-VTuber/Open-LLM-VTuber",
+      "name": "Open-LLM-VTuber",
+      "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "canonical_url": "github.com/open-llm-vtuber/open-llm-vtuber",
+      "also_seen": [],
+      "company": null,
+      "stars": 702,
+      "momentum": 70,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 702
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:affaan-m/ECC",
+      "name": "ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/affaan-m/ECC",
+      "canonical_url": "github.com/affaan-m/ecc",
+      "also_seen": [],
+      "company": null,
+      "stars": 2147,
+      "momentum": 100,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 2147
+      },
+      "trend": "none",
+      "trend_delta": 0
+    }
+  ]
+}

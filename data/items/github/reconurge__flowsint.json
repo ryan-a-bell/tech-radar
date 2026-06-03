@@ -1,0 +1,22 @@
+{
+  "id": "github:reconurge/flowsint",
+  "name": "flowsint",
+  "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/reconurge/flowsint",
+  "canonical_url": "github.com/reconurge/flowsint",
+  "also_seen": [],
+  "company": null,
+  "stars": 509,
+  "momentum": 50,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 509
+  }
+}

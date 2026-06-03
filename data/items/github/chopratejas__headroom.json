@@ -1,0 +1,22 @@
+{
+  "id": "github:chopratejas/headroom",
+  "name": "headroom",
+  "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/chopratejas/headroom",
+  "canonical_url": "github.com/chopratejas/headroom",
+  "also_seen": [],
+  "company": null,
+  "stars": 3528,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 3528
+  }
+}

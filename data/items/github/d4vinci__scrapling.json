@@ -1,0 +1,22 @@
+{
+  "id": "github:D4Vinci/Scrapling",
+  "name": "Scrapling",
+  "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/D4Vinci/Scrapling",
+  "canonical_url": "github.com/d4vinci/scrapling",
+  "also_seen": [],
+  "company": null,
+  "stars": 1078,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 1078
+  }
+}
