@@ -1,7 +1,175 @@
 {
-  "generated": "2026-06-03",
-  "count": 18,
+  "generated": "2026-06-04",
+  "count": 25,
   "items": [
+    {
+      "id": "github:github/spec-kit",
+      "name": "spec-kit",
+      "description": "\ud83d\udcab Toolkit to help you get started with Spec-Driven Development",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/github/spec-kit",
+      "canonical_url": "github.com/github/spec-kit",
+      "also_seen": [],
+      "company": null,
+      "stars": 311,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 311
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:openclaw/openclaw-windows-node",
+      "name": "openclaw-windows-node",
+      "description": "Windows companion suite for OpenClaw - System Tray app, Shared library, Node, and PowerToys Command Palette extension",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/openclaw/openclaw-windows-node",
+      "canonical_url": "github.com/openclaw/openclaw-windows-node",
+      "also_seen": [],
+      "company": null,
+      "stars": 331,
+      "momentum": 33,
+      "tags": [
+        "c#"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 331
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:lfnovo/open-notebook",
+      "name": "open-notebook",
+      "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "canonical_url": "github.com/lfnovo/open-notebook",
+      "also_seen": [],
+      "company": null,
+      "stars": 227,
+      "momentum": 22,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 227
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mvanhorn/last30days-skill",
+      "name": "last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "canonical_url": "github.com/mvanhorn/last30days-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 173,
+      "momentum": 17,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 173
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/cosmos",
+      "name": "cosmos",
+      "description": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/NVIDIA/cosmos",
+      "canonical_url": "github.com/nvidia/cosmos",
+      "also_seen": [],
+      "company": "NVIDIA",
+      "stars": 138,
+      "momentum": 13,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 138
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:github/copilot-sdk",
+      "name": "copilot-sdk",
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/github/copilot-sdk",
+      "canonical_url": "github.com/github/copilot-sdk",
+      "also_seen": [],
+      "company": null,
+      "stars": 25,
+      "momentum": 2,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 25
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PaddlePaddle/PaddleOCR",
+      "name": "PaddleOCR",
+      "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "canonical_url": "github.com/paddlepaddle/paddleocr",
+      "also_seen": [],
+      "company": null,
+      "stars": 105,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-04",
+      "stars_history": {
+        "2026-06-04": 105
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:aquasecurity/trivy",
       "name": "trivy",
@@ -13,18 +181,19 @@
       "canonical_url": "github.com/aquasecurity/trivy",
       "also_seen": [],
       "company": null,
-      "stars": 24,
+      "stars": 255,
       "momentum": 2,
       "tags": [
         "go"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 24
+        "2026-06-03": 24,
+        "2026-06-04": 255
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 231
     },
     {
       "id": "github:supermemoryai/supermemory",
@@ -211,11 +380,12 @@
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 1735
+        "2026-06-03": 1735,
+        "2026-06-04": 1735
       },
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -229,18 +399,19 @@
       "canonical_url": "github.com/chopratejas/headroom",
       "also_seen": [],
       "company": null,
-      "stars": 3530,
+      "stars": 3139,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 3530
+        "2026-06-03": 3530,
+        "2026-06-04": 3139
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -391
     },
     {
       "id": "github:reconurge/flowsint",
@@ -253,18 +424,19 @@
       "canonical_url": "github.com/reconurge/flowsint",
       "also_seen": [],
       "company": null,
-      "stars": 509,
+      "stars": 308,
       "momentum": 50,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 509
+        "2026-06-03": 509,
+        "2026-06-04": 308
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -201
     },
     {
       "id": "github:jwasham/coding-interview-university",
@@ -281,11 +453,12 @@
       "momentum": 33,
       "tags": [],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 330
+        "2026-06-03": 330,
+        "2026-06-04": 330
       },
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -395,18 +568,19 @@
       "canonical_url": "github.com/open-llm-vtuber/open-llm-vtuber",
       "also_seen": [],
       "company": null,
-      "stars": 693,
+      "stars": 583,
       "momentum": 70,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 693
+        "2026-06-03": 693,
+        "2026-06-04": 583
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -110
     },
     {
       "id": "github:affaan-m/ECC",
@@ -419,18 +593,19 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 2141,
+      "stars": 1736,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-04",
       "stars_history": {
-        "2026-06-03": 2141
+        "2026-06-03": 2141,
+        "2026-06-04": 1736
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -405
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "id": "github:mvanhorn/last30days-skill",
+  "name": "last30days-skill",
+  "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/mvanhorn/last30days-skill",
+  "canonical_url": "github.com/mvanhorn/last30days-skill",
+  "also_seen": [],
+  "company": null,
+  "stars": 173,
+  "momentum": 17,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-04",
+  "last_seen": "2026-06-04",
+  "stars_history": {
+    "2026-06-04": 173
+  }
+}

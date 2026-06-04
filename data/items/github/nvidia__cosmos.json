@@ -1,0 +1,22 @@
+{
+  "id": "github:NVIDIA/cosmos",
+  "name": "cosmos",
+  "description": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/NVIDIA/cosmos",
+  "canonical_url": "github.com/nvidia/cosmos",
+  "also_seen": [],
+  "company": "NVIDIA",
+  "stars": 138,
+  "momentum": 13,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "first_seen": "2026-06-04",
+  "last_seen": "2026-06-04",
+  "stars_history": {
+    "2026-06-04": 138
+  }
+}

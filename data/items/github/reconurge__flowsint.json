@@ -9,14 +9,15 @@
   "canonical_url": "github.com/reconurge/flowsint",
   "also_seen": [],
   "company": null,
-  "stars": 509,
+  "stars": 308,
   "momentum": 50,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-06-03",
+  "last_seen": "2026-06-04",
   "stars_history": {
-    "2026-06-03": 509
+    "2026-06-03": 509,
+    "2026-06-04": 308
   }
 }
