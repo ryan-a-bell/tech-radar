@@ -1,0 +1,22 @@
+{
+  "id": "github:lyogavin/airllm",
+  "name": "airllm",
+  "description": "AirLLM 70B inference with single 4GB GPU",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/lyogavin/airllm",
+  "canonical_url": "github.com/lyogavin/airllm",
+  "also_seen": [],
+  "company": null,
+  "stars": 208,
+  "momentum": 20,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 208
+  }
+}

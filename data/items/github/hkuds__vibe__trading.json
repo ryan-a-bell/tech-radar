@@ -1,0 +1,22 @@
+{
+  "id": "github:HKUDS/Vibe-Trading",
+  "name": "Vibe-Trading",
+  "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/HKUDS/Vibe-Trading",
+  "canonical_url": "github.com/hkuds/vibe-trading",
+  "also_seen": [],
+  "company": null,
+  "stars": 197,
+  "momentum": 19,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 197
+  }
+}

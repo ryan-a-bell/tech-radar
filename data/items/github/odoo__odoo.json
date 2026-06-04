@@ -1,0 +1,22 @@
+{
+  "id": "github:odoo/odoo",
+  "name": "odoo",
+  "description": "Odoo. Open Source Apps To Grow Your Business.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/odoo/odoo",
+  "canonical_url": "github.com/odoo/odoo",
+  "also_seen": [],
+  "company": null,
+  "stars": 29,
+  "momentum": 2,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 29
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "github:opendataloader-project/opendataloader-pdf",
+  "name": "opendataloader-pdf",
+  "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+  "canonical_url": "github.com/opendataloader-project/opendataloader-pdf",
+  "also_seen": [],
+  "company": null,
+  "stars": 570,
+  "momentum": 57,
+  "tags": [
+    "java"
+  ],
+  "first_seen": "2026-06-03",
+  "last_seen": "2026-06-03",
+  "stars_history": {
+    "2026-06-03": 570
+  }
+}
