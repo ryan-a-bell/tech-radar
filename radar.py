@@ -61,7 +61,7 @@ def _resolve(needle):
 def _write(item):
     """Persist a modified item back to its own file."""
     path = core.id_to_path(item["id"])
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(item, f, indent=2)
 
 

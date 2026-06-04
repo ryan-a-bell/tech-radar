@@ -36,7 +36,7 @@ def save_raw(scraper_name, items, day):
     """Dump untouched scrape output — the audit trail / replay buffer."""
     folder = os.path.join(core.RAW_DIR, day)
     os.makedirs(folder, exist_ok=True)
-    with open(os.path.join(folder, f"{scraper_name}.json"), "w") as f:
+    with open(os.path.join(folder, f"{scraper_name}.json"), "w", encoding="utf-8") as f:
         json.dump(items, f, indent=2)
 
 
@@ -55,7 +55,7 @@ def build_radar_json():
         "items": items,
     }
     os.makedirs(os.path.dirname(core.RADAR_JSON), exist_ok=True)
-    with open(core.RADAR_JSON, "w") as f:
+    with open(core.RADAR_JSON, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
     return len(items)
 

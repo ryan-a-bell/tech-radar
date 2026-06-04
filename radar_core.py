@@ -125,7 +125,7 @@ def save_new(item):
     if os.path.exists(path):
         return False
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(item, f, indent=2)
     return True
 
@@ -138,7 +138,7 @@ def touch_last_seen(item_id, day=None, stars=None):
     if not os.path.exists(path):
         return False
     today = day or date.today().isoformat()
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         item = json.load(f)
     item["last_seen"] = today
     if stars is not None:
@@ -148,7 +148,7 @@ def touch_last_seen(item_id, day=None, stars=None):
         if len(item["stars_history"]) > 90:
             keep = dict(sorted(item["stars_history"].items())[-90:])
             item["stars_history"] = keep
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(item, f, indent=2)
     return True
 
@@ -185,7 +185,7 @@ def load_all_items():
     for root, _, files in os.walk(ITEMS_DIR):
         for fn in files:
             if fn.endswith(".json"):
-                with open(os.path.join(root, fn)) as f:
+                with open(os.path.join(root, fn), encoding="utf-8") as f:
                     out.append(json.load(f))
     return out
 
@@ -211,7 +211,7 @@ def record_also_seen(item_id, source, url, day=None):
     path = id_to_path(item_id)
     if not os.path.exists(path):
         return False
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         item = json.load(f)
     item["last_seen"] = day or date.today().isoformat()
     seen = item.setdefault("also_seen", [])
@@ -220,11 +220,11 @@ def record_also_seen(item_id, source, url, day=None):
         return False
     for entry in seen:
         if entry.get("source") == source and entry.get("url") == url:
-            with open(path, "w") as f:
+            with open(path, "w", encoding="utf-8") as f:
                 json.dump(item, f, indent=2)
             return False
     seen.append({"source": source, "url": url,
                  "seen": day or date.today().isoformat()})
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(item, f, indent=2)
     return True

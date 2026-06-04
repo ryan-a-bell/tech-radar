@@ -1,0 +1,19 @@
+# No third-party packages required.
+# The entire pipeline runs on the Python standard library.
+# Minimum Python version: 3.8
+#
+# stdlib modules used:
+#   argparse, json, os, sys, re, datetime, shutil  — general utilities
+#   urllib.request                                  — HTTP fetching (no requests)
+#   html.parser                                     — HTML scraping (no beautifulsoup)
+#   abc                                             — Scraper abstract base class
+#
+# The dashboard (React 18, ReactDOM, Babel) loads from CDN at browser
+# runtime — these are not pip packages.
+#
+# To get started:
+#   python3 -m venv .venv && source .venv/bin/activate
+#   python runner.py          # discover technologies
+#   python radar.py list      # review what was found
+#   python build_site.py      # build the dashboard into site/
+#   cd site && python -m http.server 8000
