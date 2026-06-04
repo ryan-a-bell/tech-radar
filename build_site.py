@@ -41,7 +41,7 @@ def main():
 
     # 4. copy dashboard.jsx, stripping `export default` so the
     #    in-browser Babel setup (which expects a global `App`) works.
-    with open(os.path.join(HERE, "dashboard.jsx")) as f:
+    with open(os.path.join(HERE, "dashboard.jsx"), encoding="utf-8") as f:
         src = f.read()
     src = re.sub(r"export\s+default\s+function\s+App",
                  "function App", src)
@@ -49,7 +49,7 @@ def main():
     src = re.sub(r'^import\s+React.*?;\s*$', "", src, flags=re.M)
     # re-expose the hooks the dashboard uses from the global React
     hooks = "const { useState, useMemo, useEffect } = React;\n"
-    with open(os.path.join(SITE, "dashboard.jsx"), "w") as f:
+    with open(os.path.join(SITE, "dashboard.jsx"), "w", encoding="utf-8") as f:
         f.write(hooks + src)
 
     # 5. copy the data the dashboard fetches
