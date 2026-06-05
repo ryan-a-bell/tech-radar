@@ -9,14 +9,15 @@
   "canonical_url": "github.com/openclaw/openclaw-windows-node",
   "also_seen": [],
   "company": null,
-  "stars": 331,
+  "stars": 411,
   "momentum": 33,
   "tags": [
     "c#"
   ],
   "first_seen": "2026-06-04",
-  "last_seen": "2026-06-04",
+  "last_seen": "2026-06-05",
   "stars_history": {
-    "2026-06-04": 331
+    "2026-06-04": 331,
+    "2026-06-05": 411
   }
 }

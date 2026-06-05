@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-04",
+  "generated": "2026-06-05",
   "count": 25,
   "items": [
     {
@@ -13,18 +13,19 @@
       "canonical_url": "github.com/github/spec-kit",
       "also_seen": [],
       "company": null,
-      "stars": 311,
+      "stars": 321,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 311
+        "2026-06-04": 311,
+        "2026-06-05": 321
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 10
     },
     {
       "id": "github:openclaw/openclaw-windows-node",
@@ -37,18 +38,19 @@
       "canonical_url": "github.com/openclaw/openclaw-windows-node",
       "also_seen": [],
       "company": null,
-      "stars": 331,
+      "stars": 411,
       "momentum": 33,
       "tags": [
         "c#"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 331
+        "2026-06-04": 331,
+        "2026-06-05": 411
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 80
     },
     {
       "id": "github:lfnovo/open-notebook",
@@ -61,18 +63,19 @@
       "canonical_url": "github.com/lfnovo/open-notebook",
       "also_seen": [],
       "company": null,
-      "stars": 227,
+      "stars": 212,
       "momentum": 22,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 227
+        "2026-06-04": 227,
+        "2026-06-05": 212
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -15
     },
     {
       "id": "github:mvanhorn/last30days-skill",
@@ -85,18 +88,19 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 173,
+      "stars": 199,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 173
+        "2026-06-04": 173,
+        "2026-06-05": 199
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 26
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -109,18 +113,19 @@
       "canonical_url": "github.com/nvidia/cosmos",
       "also_seen": [],
       "company": "NVIDIA",
-      "stars": 138,
+      "stars": 133,
       "momentum": 13,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 138
+        "2026-06-04": 138,
+        "2026-06-05": 133
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -5
     },
     {
       "id": "github:github/copilot-sdk",
@@ -133,18 +138,19 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 25,
+      "stars": 38,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 25
+        "2026-06-04": 25,
+        "2026-06-05": 38
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 13
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
@@ -157,18 +163,19 @@
       "canonical_url": "github.com/paddlepaddle/paddleocr",
       "also_seen": [],
       "company": null,
-      "stars": 105,
+      "stars": 141,
       "momentum": 10,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
-        "2026-06-04": 105
+        "2026-06-04": 105,
+        "2026-06-05": 141
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 36
     },
     {
       "id": "github:aquasecurity/trivy",
@@ -187,10 +194,11 @@
         "go"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 24,
-        "2026-06-04": 255
+        "2026-06-04": 255,
+        "2026-06-05": 255
       },
       "trend": "up",
       "trend_delta": 231
@@ -374,19 +382,20 @@
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "also_seen": [],
       "company": null,
-      "stars": 1735,
+      "stars": 1913,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 1735,
-        "2026-06-04": 1735
+        "2026-06-04": 1735,
+        "2026-06-05": 1913
       },
-      "trend": "flat",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 178
     },
     {
       "id": "github:chopratejas/headroom",
@@ -399,19 +408,20 @@
       "canonical_url": "github.com/chopratejas/headroom",
       "also_seen": [],
       "company": null,
-      "stars": 3139,
+      "stars": 3142,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 3530,
-        "2026-06-04": 3139
+        "2026-06-04": 3139,
+        "2026-06-05": 3142
       },
       "trend": "down",
-      "trend_delta": -391
+      "trend_delta": -388
     },
     {
       "id": "github:reconurge/flowsint",
@@ -430,10 +440,11 @@
         "typescript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 509,
-        "2026-06-04": 308
+        "2026-06-04": 308,
+        "2026-06-05": 308
       },
       "trend": "down",
       "trend_delta": -201
@@ -449,17 +460,18 @@
       "canonical_url": "github.com/jwasham/coding-interview-university",
       "also_seen": [],
       "company": null,
-      "stars": 330,
+      "stars": 632,
       "momentum": 33,
       "tags": [],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 330,
-        "2026-06-04": 330
+        "2026-06-04": 330,
+        "2026-06-05": 632
       },
-      "trend": "flat",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 302
     },
     {
       "id": "github:lyogavin/airllm",
@@ -568,19 +580,20 @@
       "canonical_url": "github.com/open-llm-vtuber/open-llm-vtuber",
       "also_seen": [],
       "company": null,
-      "stars": 583,
+      "stars": 581,
       "momentum": 70,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 693,
-        "2026-06-04": 583
+        "2026-06-04": 583,
+        "2026-06-05": 581
       },
       "trend": "down",
-      "trend_delta": -110
+      "trend_delta": -112
     },
     {
       "id": "github:affaan-m/ECC",
@@ -593,19 +606,20 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 1736,
+      "stars": 1750,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
       "stars_history": {
         "2026-06-03": 2141,
-        "2026-06-04": 1736
+        "2026-06-04": 1736,
+        "2026-06-05": 1750
       },
       "trend": "down",
-      "trend_delta": -405
+      "trend_delta": -391
     }
   ]
 }

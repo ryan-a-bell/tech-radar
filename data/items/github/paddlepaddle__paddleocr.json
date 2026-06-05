@@ -9,14 +9,15 @@
   "canonical_url": "github.com/paddlepaddle/paddleocr",
   "also_seen": [],
   "company": null,
-  "stars": 105,
+  "stars": 141,
   "momentum": 10,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-04",
-  "last_seen": "2026-06-04",
+  "last_seen": "2026-06-05",
   "stars_history": {
-    "2026-06-04": 105
+    "2026-06-04": 105,
+    "2026-06-05": 141
   }
 }
