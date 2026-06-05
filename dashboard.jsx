@@ -8,12 +8,6 @@ import React, { useState, useMemo, useEffect } from "react";
      · Dispatch    — editorial briefing grid
    All include the "Discovered" ring (the runner's inbox).
 
-   EDITING (Solutions 1 + 2): the dashboard is a STATIC viewer — it
-   cannot write to the repo. Clicking a card and picking a new ring
-   stages a *pending* change in this browser's localStorage (an overlay
-   on top of radar.json) so you can preview the board live. To make a
-   change STICK you must run the generated `radar.py` commands shown in
-   the amber Unsaved Changes bar, then commit. Nothing persists on its own.
    ============================================================ */
 
 const QUADRANTS = ["Techniques", "Tools", "Platforms", "Languages"];
@@ -28,10 +22,6 @@ const RING_INK = {
   Adopt: "#1a7f4b", Trial: "#1d6fb8", Assess: "#b8841d",
   Hold: "#b13a3a", Discovered: "#6d4fc4",
 };
-
-// amber accent used everywhere a change is staged-but-not-saved
-const PENDING_INK = "#b8841d";
-const PENDING_BG = "#fef3c7";
 
 /* Fallback sample — used if radar.json can't be fetched. */
 const SAMPLE = {
@@ -55,46 +45,6 @@ const SAMPLE = {
 function daysAgo(iso) {
   const d = new Date(iso + "T00:00:00");
   return Math.floor((Date.now() - d.getTime()) / 86400000);
-}
-
-/* ===================== PENDING RING CHANGES (Solutions 1 + 2) =====================
-   The dashboard never writes to the repo. A ring change is recorded as a
-   *pending* edit in localStorage (Solution 1 — a personal overlay) and is
-   only made real when the user runs the generated `radar.py` commands
-   (Solution 2). These helpers are the whole mechanism. */
-const PENDING_KEY = "radar:pending-ring-changes";
-
-function loadPending() {
-  try { return JSON.parse(localStorage.getItem(PENDING_KEY)) || {}; }
-  catch { return {}; }
-}
-
-function persistPending(map) {
-  try {
-    if (Object.keys(map).length) {
-      localStorage.setItem(PENDING_KEY, JSON.stringify(map));
-    } else {
-      localStorage.removeItem(PENDING_KEY);
-    }
-  } catch (e) { console.error("pending save failed", e); }
-}
-
-/* Overlay the pending ring changes onto the fetched items, so every view
-   shows the would-be ring and can flag it (_pending) for badge styling. */
-function applyPending(items, pending) {
-  return items.map((d) => {
-    const p = pending[d.id];
-    if (!p) return d;
-    return { ...d, ring: p.to, _pending: true, _pendingFrom: p.from };
-  });
-}
-
-/* The exact commands the user MUST run for the changes to persist.
-   radar.py rebuilds data/radar.json after each one. */
-function buildCommands(pending) {
-  return Object.values(pending).map(
-    (p) => `python radar.py promote "${p.id}" ${p.to}`
-  );
 }
 
 function useRadarData() {
@@ -139,170 +89,6 @@ function Pill({ label, active, onClick, color }) {
   );
 }
 
-/* ===================== RING EDITOR =====================
-   Segmented control shown in the detail views. Clicking a ring stages a
-   pending change (or clears it, if you pick the original ring back). It
-   makes the "preview only — not saved" state impossible to miss. */
-function RingEditor({ item, onSetRing }) {
-  const current = item.ring; // overlaid ring = the pending target if pending
-  return (
-    <div style={{ marginBottom: 14 }}>
-      <div style={{
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-        color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
-      }}>MOVE TO RING</div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-        {RINGS.map((r) => {
-          const on = current === r;
-          return (
-            <button key={r} onClick={() => onSetRing(item.id, r)} style={{
-              fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, letterSpacing: 0.5,
-              padding: "6px 12px", cursor: "pointer", borderRadius: 4,
-              border: "1.5px solid " + RING_INK[r],
-              background: on ? RING_INK[r] : "transparent",
-              color: on ? "#fff" : RING_INK[r], fontWeight: on ? 700 : 400,
-            }}>{r}</button>
-          );
-        })}
-      </div>
-      {item._pending ? (
-        <div style={{
-          marginTop: 8, padding: "8px 10px", background: PENDING_BG,
-          border: "1px solid " + PENDING_INK, borderRadius: 4,
-          fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
-          color: "#7a5c1a", lineHeight: 1.5,
-        }}>
-          ⚠ Preview only — staged <strong>{item._pendingFrom} → {item.ring}</strong>.
-          {" "}Nothing is saved until you run the command in the
-          {" "}<strong>Unsaved Changes</strong> bar at the bottom.
-        </div>
-      ) : (
-        <div style={{
-          marginTop: 8, fontFamily: "'IBM Plex Mono', monospace",
-          fontSize: 10, color: "#9a9384", lineHeight: 1.5,
-        }}>
-          Pick a ring to stage a change. It is saved only in this browser
-          until you run the generated command.
-        </div>
-      )}
-    </div>
-  );
-}
-
-/* ===================== UNSAVED CHANGES BAR =====================
-   Fixed to the bottom whenever there are pending changes. This is the
-   "Solution 2" surface: it spells out, unmistakably, that the staged
-   moves are NOT saved, and hands over the exact commands to run. */
-function barBtn(color, ghost) {
-  return {
-    fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, letterSpacing: 0.5,
-    padding: "6px 12px", cursor: "pointer", borderRadius: 4,
-    border: "1.5px solid " + color,
-    background: ghost ? "transparent" : color,
-    color: ghost ? color : "#fff",
-  };
-}
-
-function PendingBar({ pending, onRevert, onClear }) {
-  const [open, setOpen] = useState(true);
-  const [copied, setCopied] = useState(false);
-  const list = Object.values(pending);
-  if (!list.length) return null;
-
-  const cmds = buildCommands(pending).join("\n");
-
-  const copy = async () => {
-    try { await navigator.clipboard.writeText(cmds); }
-    catch { /* clipboard blocked — user can still select the text */ }
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1600);
-  };
-
-  const download = () => {
-    const body =
-      "#!/usr/bin/env bash\n" +
-      "# Run from the tech-radar repo root.\n" +
-      "# Then: git add -A && git commit -m \"curate radar\" && git push\n" +
-      "set -e\n" + cmds + "\n";
-    const blob = new Blob([body], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "apply-radar-changes.sh"; a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  return (
-    <div style={{
-      position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 45,
-      background: PENDING_BG, borderTop: "4px solid " + PENDING_INK,
-      fontFamily: "'IBM Plex Mono', ui-monospace, monospace",
-      boxShadow: "0 -6px 18px rgba(0,0,0,0.28)",
-      maxHeight: "60vh", overflowY: "auto",
-    }}>
-      <div style={{
-        padding: "10px 16px", display: "flex", alignItems: "center",
-        gap: 12, flexWrap: "wrap",
-      }}>
-        <strong style={{ color: "#7a4f00", fontSize: 13, letterSpacing: 0.5 }}>
-          ⚠ {list.length} UNSAVED CHANGE{list.length > 1 ? "S" : ""}
-        </strong>
-        <span style={{ color: "#7a5c1a", fontSize: 11 }}>
-          Preview only — saved in THIS browser. Run the commands to make them stick.
-        </span>
-        <button onClick={() => setOpen(!open)} style={barBtn("#7a4f00", true)}>
-          {open ? "HIDE ▾" : "SHOW ▸"}
-        </button>
-        <button onClick={onClear} style={barBtn("#b13a3a", true)}>CLEAR ALL</button>
-      </div>
-
-      {open && (
-        <div style={{ padding: "0 16px 16px" }}>
-          {/* staged-change chips, each revertable */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
-            {list.map((p) => (
-              <span key={p.id} style={{
-                display: "inline-flex", alignItems: "center", gap: 6,
-                background: "#fff", border: "1px solid " + PENDING_INK,
-                borderRadius: 4, padding: "3px 8px", fontSize: 11, color: "#5c4a16",
-              }}>
-                {p.name}: {p.from} → <strong>{p.to}</strong>
-                <button onClick={() => onRevert(p.id)} aria-label="revert" style={{
-                  border: "none", background: "transparent", cursor: "pointer",
-                  color: "#b13a3a", fontSize: 14, lineHeight: 1, padding: 0,
-                }}>×</button>
-              </span>
-            ))}
-          </div>
-
-          {/* the three steps, stated plainly */}
-          <div style={{ color: "#7a5c1a", fontSize: 11.5, marginBottom: 8, lineHeight: 1.6 }}>
-            <strong>To save these for real:</strong>{" "}
-            1 · open a terminal in your <strong>tech-radar</strong> folder &nbsp;·&nbsp;
-            2 · run the commands below &nbsp;·&nbsp;
-            3 · <code>{"git add -A && git commit -m \"curate radar\" && git push"}</code>
-          </div>
-
-          <pre style={{
-            margin: 0, background: "#1a1a1a", color: "#e6edf3",
-            padding: "12px 14px", borderRadius: 4, fontSize: 12,
-            overflowX: "auto", whiteSpace: "pre", lineHeight: 1.6,
-          }}>{cmds}</pre>
-
-          <div style={{ display: "flex", gap: 8, marginTop: 10, flexWrap: "wrap" }}>
-            <button onClick={copy} style={barBtn("#1a7f4b")}>
-              {copied ? "✓ COPIED" : "COPY COMMANDS"}
-            </button>
-            <button onClick={download} style={barBtn("#1d6fb8")}>DOWNLOAD .sh</button>
-            <span style={{ color: "#9a7b2a", fontSize: 10.5, alignSelf: "center" }}>
-              Changes stay staged here until you run them or click CLEAR ALL.
-            </span>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 /* ===================== NOTES (artifact storage) =====================
    Notes live in the dashboard's per-user storage, NOT in radar.json.
    This keeps the file pipeline read-only for the dashboard and lets
@@ -332,7 +118,7 @@ async function saveNote(id, text) {
    Same editorial visual language as Dispatch: cream paper, hard drop
    shadows, Georgia for body, IBM Plex Mono for meta. The radar plot
    stays as the centerpiece but adapts to the lighter palette. */
-function Observatory({ data, status, onSetRing }) {
+function Observatory({ data, status }) {
   const [active, setActive] = useState(null);
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
@@ -366,7 +152,6 @@ function Observatory({ data, status, onSetRing }) {
     return { ...d, x: cx + Math.cos(ang) * rad, y: cy - Math.sin(ang) * rad };
   }), [items]);
 
-  // the live version of the selected item, so it reflects pending edits
   const activeLive = active
     ? (data.items.find((x) => x.id === active.id) || active)
     : null;
@@ -504,10 +289,6 @@ function Observatory({ data, status, onSetRing }) {
               return (
                 <g key={d.id} style={{ cursor: "pointer" }}
                   onMouseEnter={() => setActive(d)} onClick={() => setActive(d)}>
-                  {d._pending && (
-                    <circle cx={d.x} cy={d.y} r={12} fill="none"
-                      stroke={PENDING_INK} strokeWidth="1.5" strokeDasharray="2 2" />
-                  )}
                   {(d.ring === "Discovered" || isNew) && (
                     <circle cx={d.x} cy={d.y} r={on ? 14 : 9} fill="none"
                       stroke={RING_INK[d.ring]} strokeWidth="1" opacity="0.35" />
@@ -530,8 +311,6 @@ function Observatory({ data, status, onSetRing }) {
               boxShadow: activeLive.ring === "Discovered"
                 ? "5px 5px 0 " + RING_INK.Discovered
                 : "5px 5px 0 #1a1a1a",
-              outline: activeLive._pending ? "2px dashed " + PENDING_INK : "none",
-              outlineOffset: 3,
               padding: "16px 18px", position: "relative",
             }}>
               <div style={{
@@ -577,9 +356,6 @@ function Observatory({ data, status, onSetRing }) {
                   </span>
                 </span>
               </div>
-
-              {/* ring editor — stages a pending change */}
-              <RingEditor item={activeLive} onSetRing={onSetRing} />
 
               {/* notes editor */}
               <div style={{
@@ -724,8 +500,6 @@ function Dispatch({ data, status }) {
               background: isDisc ? "#f6f1ff" : "#fffdf7",
               border: "1px solid #1a1a1a",
               boxShadow: isDisc ? "5px 5px 0 " + RING_INK.Discovered : "5px 5px 0 #1a1a1a",
-              outline: d._pending ? "2px dashed " + PENDING_INK : "none",
-              outlineOffset: 2,
               padding: "17px 17px 15px", position: "relative",
             }}>
               <div style={{
@@ -741,7 +515,6 @@ function Dispatch({ data, status }) {
               }}>
                 № {String(i + 1).padStart(2, "0")} — {d.quadrant.toUpperCase()}
                 {isNew && <span style={{ color: "#1d6fb8" }}> · NEW</span>}
-                {d._pending && <span style={{ color: PENDING_INK, fontWeight: 700 }}> · ⚠ UNSAVED {d._pendingFrom}→{d.ring}</span>}
               </div>
 
               <h2 style={{
@@ -785,7 +558,7 @@ function Dispatch({ data, status }) {
      - sortable card list scrolls on the right (scannable detail)
      - click anything -> modal with full detail + ring editor + notes
    Hovering either side highlights the matching item on the other. */
-function Atlas({ data, status, onSetRing }) {
+function Atlas({ data, status }) {
   const [active, setActive] = useState(null);      // selected -> modal
   const [hoverId, setHoverId] = useState(null);    // cross-highlight
   const [ringFilter, setRingFilter] = useState("All");
@@ -831,7 +604,6 @@ function Atlas({ data, status, onSetRing }) {
     }
   }, [filtered, sortBy]);
 
-  // the live version of the selected item, so the modal reflects pending edits
   const activeLive = active
     ? (data.items.find((x) => x.id === active.id) || active)
     : null;
@@ -900,15 +672,6 @@ function Atlas({ data, status, onSetRing }) {
             {status === "live" ? "LIVE FEED" : "SAMPLE DATA"} — {data.generated}
           </span>
         </div>
-      </div>
-
-      {/* hint: cards are editable */}
-      <div style={{
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
-        color: "#6b6456", letterSpacing: 0.5, margin: "10px 0 0",
-      }}>
-        Tip: click any card to move it between rings. Changes preview here and
-        are saved only after you run the generated commands.
       </div>
 
       {/* summary strip */}
@@ -1020,10 +783,6 @@ function Atlas({ data, status, onSetRing }) {
                   onMouseEnter={() => setHoverId(d.id)}
                   onMouseLeave={() => setHoverId(null)}
                   onClick={() => setActive(d)}>
-                  {d._pending && (
-                    <circle cx={d.x} cy={d.y} r={isHover ? 15 : 11} fill="none"
-                      stroke={PENDING_INK} strokeWidth="1.5" strokeDasharray="2 2" />
-                  )}
                   {(d.ring === "Discovered" || isNew || isHover) && (
                     <circle cx={d.x} cy={d.y} r={isHover ? 14 : 9} fill="none"
                       stroke={RING_INK[d.ring]} strokeWidth={isHover ? 1.5 : 1}
@@ -1066,8 +825,6 @@ function Atlas({ data, status, onSetRing }) {
                       boxShadow: isHover
                         ? "7px 7px 0 " + (isDisc ? RING_INK.Discovered : "#1a1a1a")
                         : "4px 4px 0 " + (isDisc ? RING_INK.Discovered : "#1a1a1a"),
-                      outline: d._pending ? "2px dashed " + PENDING_INK : "none",
-                      outlineOffset: 2,
                       padding: "14px 14px 12px", position: "relative",
                       cursor: "pointer", transition: "box-shadow .12s",
                     }}>
@@ -1083,7 +840,6 @@ function Atlas({ data, status, onSetRing }) {
                     }}>
                       № {String(i + 1).padStart(2, "0")} — {d.quadrant.toUpperCase()}
                       {isNew && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
-                      {d._pending && <span style={{ color: PENDING_INK, fontWeight: 700 }}> · ⚠ UNSAVED {d._pendingFrom}→{d.ring}</span>}
                     </div>
                     <h2 style={{
                       margin: "0 0 6px", fontSize: 18, fontWeight: 800,
@@ -1128,8 +884,6 @@ function Atlas({ data, status, onSetRing }) {
             background: activeLive.ring === "Discovered" ? "#f6f1ff" : "#fffdf7",
             border: "1px solid #1a1a1a",
             boxShadow: "8px 8px 0 " + (activeLive.ring === "Discovered" ? RING_INK.Discovered : "#1a1a1a"),
-            outline: activeLive._pending ? "2px dashed " + PENDING_INK : "none",
-            outlineOffset: 3,
             padding: "20px 22px", position: "relative",
             width: "100%", maxWidth: 540, maxHeight: "90vh", overflowY: "auto",
             fontFamily: "Georgia, serif",
@@ -1195,9 +949,6 @@ function Atlas({ data, status, onSetRing }) {
               </span>
             </div>
 
-            {/* ring editor — stages a pending change */}
-            <RingEditor item={activeLive} onSetRing={onSetRing} />
-
             <div style={{
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
               color: "#6b6456", letterSpacing: 1.5, marginBottom: 5,
@@ -1241,31 +992,7 @@ function Atlas({ data, status, onSetRing }) {
 /* ===================== SHELL ===================== */
 export default function App() {
   const [view, setView] = useState("atlas");
-  const { data: rawData, status } = useRadarData();
-
-  // pending ring changes — the browser-local overlay (Solution 1)
-  const [pending, setPending] = useState(loadPending);
-  useEffect(() => { persistPending(pending); }, [pending]);
-
-  // stage / clear a ring change. Picking the original ring back clears it.
-  const setRing = (id, ring) => {
-    setPending((prev) => {
-      const orig = (rawData?.items || []).find((x) => x.id === id);
-      if (!orig) return prev;
-      const next = { ...prev };
-      if (ring === orig.ring) delete next[id];
-      else next[id] = { id, name: orig.name, from: orig.ring, to: ring };
-      return next;
-    });
-  };
-  const revertOne = (id) => setPending((p) => { const n = { ...p }; delete n[id]; return n; });
-  const clearAll = () => setPending({});
-
-  // overlay the pending changes so every view previews them live
-  const data = useMemo(
-    () => (rawData ? { ...rawData, items: applyPending(rawData.items, pending) } : rawData),
-    [rawData, pending]
-  );
+  const { data, status } = useRadarData();
 
   if (!data) {
     return (
@@ -1277,13 +1004,9 @@ export default function App() {
     );
   }
 
-  const pendingCount = Object.keys(pending).length;
-
   return (
     <div style={{
       minHeight: "100vh", background: "#000",
-      // leave room for the fixed Unsaved Changes bar
-      paddingBottom: pendingCount ? 260 : 0,
     }}>
       <div style={{
         display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
@@ -1306,14 +1029,6 @@ export default function App() {
             cursor: "pointer", fontFamily: "inherit",
           }}>{m.label}</button>
         ))}
-        {pendingCount > 0 && (
-          <span style={{
-            fontSize: 10.5, letterSpacing: 1, color: "#1a1a1a",
-            background: PENDING_INK, padding: "4px 9px", borderRadius: 3, marginLeft: 8,
-          }}>
-            ⚠ {pendingCount} UNSAVED
-          </span>
-        )}
         <span style={{
           marginLeft: "auto", fontSize: 10, letterSpacing: 1,
           color: status === "live" ? "#4ade80" : "#fbbf24",
@@ -1323,12 +1038,10 @@ export default function App() {
       </div>
 
       {view === "atlas"
-        ? <Atlas data={data} status={status} onSetRing={setRing} />
+        ? <Atlas data={data} status={status} />
         : view === "observatory"
-        ? <Observatory data={data} status={status} onSetRing={setRing} />
+        ? <Observatory data={data} status={status} />
         : <Dispatch data={data} status={status} />}
-
-      <PendingBar pending={pending} onRevert={revertOne} onClear={clearAll} />
     </div>
   );
 }
