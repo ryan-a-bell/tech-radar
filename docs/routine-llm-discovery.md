@@ -121,6 +121,7 @@ the values; omit company if None):
       momentum=<momentum>,
       tags=<tags>,
       company="<company-or-omit>",
+      discovered_by="llm",   # marks this as an LLM organic discovery
   )
   saved = core.save_new(item)
   print("saved" if saved else "already exists — skipped")

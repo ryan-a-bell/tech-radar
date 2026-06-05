@@ -10,6 +10,7 @@ radar.py — manage the technology radar without hand-editing JSON.
   python radar.py set <id-or-name> quadrant Platforms
   python radar.py set <id-or-name> company "Anthropic"
   python radar.py archive <id-or-name>        # mark Hold + tag 'archived'
+  python radar.py add "<name>" -q Tools -d "..." -u <url>  # manual add
   python radar.py find <text>                 # search name/description
 
 After any change the dashboard's radar.json is rebuilt automatically.
@@ -136,6 +137,33 @@ def cmd_archive(args):
     _rebuild()
 
 
+def cmd_add(args):
+    """Manually add a technology. Marked discovered_by='manual'."""
+    source = args.source or "Manual"
+    key = args.key or _slugify_key(args.name)
+    item = core.new_item(
+        source=source,
+        key=key,
+        name=args.name,
+        description=args.description or "",
+        url=args.url or "",
+        quadrant=args.quadrant or "Tools",
+        momentum=args.momentum or 0,
+        company=args.company,
+        discovered_by="manual",
+    )
+    if core.save_new(item):
+        print(f"  added {item['name']} — {item['id']} (manual)")
+        _rebuild()
+    else:
+        print(f"  already exists: {item['id']} — nothing written")
+
+
+def _slugify_key(text):
+    import re
+    return re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower() or "item"
+
+
 def cmd_find(args):
     n = args.text.lower()
     hits = [it for it in core.load_all_items()
@@ -177,6 +205,17 @@ def main():
     p = sub.add_parser("archive", help="archive an item (Hold + tag)")
     p.add_argument("item")
     p.set_defaults(func=cmd_archive)
+
+    p = sub.add_parser("add", help="manually add a technology (discovered_by=manual)")
+    p.add_argument("name")
+    p.add_argument("--description", "-d")
+    p.add_argument("--url", "-u")
+    p.add_argument("--quadrant", "-q", choices=core.QUADRANTS)
+    p.add_argument("--source", "-s", help="source label (default: Manual)")
+    p.add_argument("--key", "-k", help="unique key (default: slug of name)")
+    p.add_argument("--company", "-c")
+    p.add_argument("--momentum", "-m", type=int)
+    p.set_defaults(func=cmd_add)
 
     p = sub.add_parser("find", help="search name/description")
     p.add_argument("text")

@@ -1,0 +1,85 @@
+name: Build & Deploy Radar
+
+# Publishes the STATIC, read-only dashboard to GitHub Pages.
+# build_site.py only bundles index.html + dashboard.jsx + radar.json — the
+# editable dashboard (edit.html / dashboard_edit.jsx / edit_server.py) is
+# never deployed, so nobody can edit the public radar.
+#
+# One-time setup: repo Settings → Pages → Build and deployment →
+#   Source = "GitHub Actions".
+
+on:
+  # daily discovery + redeploy
+  schedule:
+    - cron: "0 6 * * *"      # 06:00 UTC every day
+  # manual button in the Actions tab
+  workflow_dispatch:
+  # redeploy whenever the dashboard or data changes on main
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "dashboard.jsx"
+      - "build_site.py"
+      - "data/**"
+      - ".github/workflows/deploy.yml"
+
+permissions:
+  contents: write     # commit newly discovered items back to the repo
+  pages: write        # publish to GitHub Pages
+  id-token: write     # OIDC token for the Pages deploy
+
+# never run two deploys at once; let an in-progress run finish
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Discovery only runs on the schedule or a manual trigger — NOT on
+      # push. That prevents an infinite commit → push → run loop.
+      - name: Run discovery
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python runner.py
+
+      - name: Commit any new discoveries
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "discovery: $(date -u +%Y-%m-%d) — automated scrape"
+            git push
+          else
+            echo "no new items today"
+          fi
+
+      - name: Build static site
+        run: python build_site.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

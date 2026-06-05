@@ -81,7 +81,7 @@ def canonical_url(*urls):
 # --- the item schema ---------------------------------------------------
 def new_item(source, key, name, description, url,
              quadrant="Tools", momentum=0, stars=0, tags=None,
-             company=None, linked_url=None):
+             company=None, linked_url=None, discovered_by="scraper"):
     """Build a fresh discovered item. The runner ALWAYS sets ring=Discovered.
 
     company: the org/vendor behind the tech, if it's a company product
@@ -90,6 +90,10 @@ def new_item(source, key, name, description, url,
     linked_url: a secondary url the source points at (e.g. the GitHub repo
              a Reddit post links to). Used for cross-source dedup — the
              scraper passes it when the source exposes one.
+    discovered_by: provenance of this discovery. One of:
+             "scraper" — found by an automated runner.py scraper (default)
+             "llm"     — found by the weekly LLM organic-discovery routine
+             "manual"  — added by a human
     """
     today = date.today().isoformat()
     return {
@@ -99,6 +103,8 @@ def new_item(source, key, name, description, url,
         "quadrant": quadrant if quadrant in QUADRANTS else "Tools",
         "ring": "Discovered",          # human changes this later
         "source": source,
+        # how this tech entered the radar: scraper | llm | manual
+        "discovered_by": discovered_by,
         "url": url,
         # canonical identity for cross-source merging — None if unknown
         "canonical_url": canonical_url(url, linked_url),

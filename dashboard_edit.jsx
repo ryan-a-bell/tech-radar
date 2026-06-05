@@ -27,15 +27,15 @@ const RING_INK = {
 const SAMPLE = {
   generated: "2026-05-23",
   items: [
-    { id: "github:oven-sh/bun", name: "Bun", description: "All-in-one JavaScript runtime and toolkit with a built-in bundler, test runner, and Node-compatible package manager.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 78900, momentum: 72, tags: ["runtime"], first_seen: "2026-05-21", last_seen: "2026-05-23" },
-    { id: "github:astral-sh/uv", name: "uv", description: "Extremely fast Python package and project manager, written in Rust.", quadrant: "Tools", ring: "Adopt", source: "GitHub", url: "#", stars: 39800, momentum: 76, tags: ["python"], first_seen: "2026-05-14", last_seen: "2026-05-23" },
-    { id: "github:modelcontextprotocol/servers", name: "MCP Servers", description: "Reference implementations for the Model Context Protocol, connecting LLMs to tools and data.", quadrant: "Techniques", ring: "Trial", source: "GitHub", url: "#", stars: 28700, momentum: 91, tags: ["llm"], first_seen: "2026-05-22", last_seen: "2026-05-23" },
+    { id: "github:oven-sh/bun", name: "Bun", description: "All-in-one JavaScript runtime and toolkit with a built-in bundler, test runner, and Node-compatible package manager.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 78900, momentum: 72, tags: ["runtime"], first_seen: "2026-05-21", last_seen: "2026-05-23", discovered_by: "scraper", stars_history: { "2026-05-15": 76800, "2026-05-17": 77300, "2026-05-19": 77900, "2026-05-21": 78400, "2026-05-23": 78900 } },
+    { id: "github:astral-sh/uv", name: "uv", description: "Extremely fast Python package and project manager, written in Rust.", quadrant: "Tools", ring: "Adopt", source: "GitHub", url: "#", stars: 39800, momentum: 76, tags: ["python"], first_seen: "2026-05-14", last_seen: "2026-05-23", discovered_by: "manual", stars_history: { "2026-05-15": 38200, "2026-05-17": 38600, "2026-05-19": 39100, "2026-05-21": 39500, "2026-05-23": 39800 } },
+    { id: "github:modelcontextprotocol/servers", name: "MCP Servers", description: "Reference implementations for the Model Context Protocol, connecting LLMs to tools and data.", quadrant: "Techniques", ring: "Trial", source: "GitHub", url: "#", stars: 28700, momentum: 91, tags: ["llm"], first_seen: "2026-05-22", last_seen: "2026-05-23", discovered_by: "llm", stars_history: { "2026-05-15": 22100, "2026-05-17": 23800, "2026-05-19": 25400, "2026-05-21": 27000, "2026-05-23": 28700 } },
     { id: "github:zed-industries/zed", name: "Zed", description: "High-performance, multiplayer code editor written in Rust with an agentic editing mode.", quadrant: "Tools", ring: "Assess", source: "GitHub", url: "#", stars: 51200, momentum: 64, tags: ["editor"], first_seen: "2026-05-15", last_seen: "2026-05-23" },
     { id: "github:tursodatabase/libsql", name: "libSQL", description: "Open-source fork of SQLite with edge-replicated embedded replicas.", quadrant: "Platforms", ring: "Discovered", source: "GitHub", url: "#", stars: 12800, momentum: 58, tags: ["database"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "github:gleam-lang/gleam", name: "Gleam", description: "Type-safe, friendly language for building scalable systems on the Erlang VM.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 18100, momentum: 44, tags: ["functional"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "hn:valkey-multithread", name: "Valkey", description: "Community-driven Redis fork under the Linux Foundation; multi-threaded core.", quadrant: "Platforms", ring: "Discovered", source: "HackerNews", url: "#", stars: 21500, momentum: 67, tags: ["cache"], first_seen: "2026-05-22", last_seen: "2026-05-23" },
     { id: "github:tauri-apps/tauri", name: "Tauri", description: "Build small, fast desktop and mobile apps with a web frontend and Rust backend.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 89200, momentum: 61, tags: ["desktop"], first_seen: "2026-05-11", last_seen: "2026-05-23" },
-    { id: "arxiv:dspy-2026", name: "DSPy", description: "Framework for programming, rather than prompting, language model pipelines.", quadrant: "Techniques", ring: "Discovered", source: "arXiv", url: "#", stars: 19200, momentum: 81, tags: ["llm"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
+    { id: "arxiv:dspy-2026", name: "DSPy", description: "Framework for programming, rather than prompting, language model pipelines.", quadrant: "Techniques", ring: "Discovered", source: "arXiv", url: "#", stars: 19200, momentum: 81, tags: ["llm"], first_seen: "2026-05-23", last_seen: "2026-05-23", discovered_by: "llm" },
     { id: "github:bigskysoftware/htmx", name: "htmx", description: "Access modern browser features directly from HTML, no build step required.", quadrant: "Tools", ring: "Adopt", source: "GitHub", url: "#", stars: 41000, momentum: 49, tags: ["frontend"], first_seen: "2026-05-10", last_seen: "2026-05-23" },
     { id: "github:modular/mojo", name: "Mojo", description: "Python-superset language designed for AI hardware, compiling through MLIR.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 23400, momentum: 87, tags: ["ai"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "yt:webgpu-deep-dive", name: "WebGPU", description: "Modern GPU compute and graphics API for the browser, now baseline across engines.", quadrant: "Techniques", ring: "Assess", source: "YouTube", url: "#", stars: 9400, momentum: 53, tags: ["graphics"], first_seen: "2026-05-08", last_seen: "2026-05-23" },
@@ -45,6 +45,54 @@ const SAMPLE = {
 function daysAgo(iso) {
   const d = new Date(iso + "T00:00:00");
   return Math.floor((Date.now() - d.getTime()) / 86400000);
+}
+
+/* ===================== PROVENANCE =====================
+   How a technology entered the radar. Older items predate the field, so
+   anything missing is treated as a scraper find (that's where they came from). */
+const PROVENANCE = {
+  scraper: { label: "AUTO",   tip: "found by an automated scraper", color: "#6b6456" },
+  llm:     { label: "AI",     tip: "found by the LLM discovery routine", color: "#7c5cd6" },
+  manual:  { label: "MANUAL", tip: "added by hand", color: "#1a7f4b" },
+};
+function provOf(d) { return PROVENANCE[d.discovered_by] || PROVENANCE.scraper; }
+
+function ProvBadge({ item }) {
+  const p = provOf(item);
+  return (
+    <span title={p.tip} style={{
+      fontFamily: "'IBM Plex Mono', monospace", fontSize: 8.5, letterSpacing: 1,
+      color: "#fff", background: p.color, padding: "1px 5px", borderRadius: 2,
+      verticalAlign: "middle",
+    }}>{p.label}</span>
+  );
+}
+
+/* ===================== SPARKLINE =====================
+   Tiny star-history trend line. Only GitHub items carry stars_history, so
+   this renders nothing (returns null) for everything else or when there
+   aren't at least two data points to draw a line between. */
+function Sparkline({ history, color, w = 54, h = 16 }) {
+  const keys = history ? Object.keys(history).sort() : [];
+  if (keys.length < 2) return null;
+  const vals = keys.map((k) => history[k]);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const span = max - min || 1;
+  const step = w / (vals.length - 1);
+  const pts = vals.map((v, i) =>
+    `${(i * step).toFixed(1)},${(h - ((v - min) / span) * (h - 2) - 1).toFixed(1)}`
+  ).join(" ");
+  const up = vals[vals.length - 1] >= vals[0];
+  const stroke = color || (up ? RING_INK.Adopt : RING_INK.Hold);
+  return (
+    <svg width={w} height={h} style={{ display: "block", overflow: "visible" }}
+      aria-label="star history">
+      <polyline points={pts} fill="none" stroke={stroke}
+        strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+      <circle cx={(w).toFixed(1)} cy={(h - ((vals[vals.length - 1] - min) / span) * (h - 2) - 1).toFixed(1)}
+        r="1.6" fill={stroke} />
+    </svg>
+  );
 }
 
 function useRadarData(refreshKey = 0) {
@@ -367,6 +415,7 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
                 {activeLive.quadrant.toUpperCase()} · {activeLive.source.toUpperCase()}
                 {activeLive.company ? " · " + activeLive.company.toUpperCase() : ""}
                 {daysAgo(activeLive.first_seen) <= 7 && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
+                {" "}<ProvBadge item={activeLive} />
               </div>
 
               <h2 style={{
@@ -385,7 +434,11 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
                 padding: "8px 0", marginBottom: 12,
                 fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456",
               }}>
-                <span>first seen {activeLive.first_seen}</span>
+                <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  first seen {activeLive.first_seen}
+                  {activeLive.stars ? <span>★{(activeLive.stars / 1000).toFixed(1)}k</span> : null}
+                  <Sparkline history={activeLive.stars_history} />
+                </span>
                 <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
                   m{activeLive.momentum}
                   <span style={{ display: "inline-block", width: 50, height: 5, background: "#e3ddcd" }}>
@@ -558,6 +611,7 @@ function Dispatch({ data, status }) {
               }}>
                 № {String(i + 1).padStart(2, "0")} — {d.quadrant.toUpperCase()}
                 {isNew && <span style={{ color: "#1d6fb8" }}> · NEW</span>}
+                {" "}<ProvBadge item={d} />
               </div>
 
               <h2 style={{
@@ -574,7 +628,10 @@ function Dispatch({ data, status }) {
                 display: "flex", justifyContent: "space-between", alignItems: "center",
                 fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, color: "#6b6456",
               }}>
-                <span>{d.source}{d.stars ? ` · ★${(d.stars / 1000).toFixed(1)}k` : ""}</span>
+                <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                  {d.source}{d.stars ? ` · ★${(d.stars / 1000).toFixed(1)}k` : ""}
+                  <Sparkline history={d.stars_history} />
+                </span>
                 <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
                   m{d.momentum}
                   <span style={{ display: "inline-block", width: 40, height: 5, background: "#e3ddcd" }}>
@@ -892,6 +949,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                     }}>
                       № {String(i + 1).padStart(2, "0")} — {d.quadrant.toUpperCase()}
                       {isNew && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
+                      {" "}<ProvBadge item={d} />
                     </div>
                     <h2 style={{
                       margin: "0 0 6px", fontSize: 18, fontWeight: 800,
@@ -906,7 +964,10 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                       display: "flex", justifyContent: "space-between", alignItems: "center",
                       fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: "#6b6456",
                     }}>
-                      <span>{d.source}{d.company ? " · " + d.company : ""}</span>
+                      <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                        {d.source}{d.company ? " · " + d.company : ""}
+                        <Sparkline history={d.stars_history} w={40} h={14} />
+                      </span>
                       <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
                         m{d.momentum}
                         <span style={{ display: "inline-block", width: 32, height: 4, background: "#e3ddcd" }}>
@@ -963,6 +1024,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               {activeLive.quadrant.toUpperCase()} · {activeLive.source.toUpperCase()}
               {activeLive.company ? " · " + activeLive.company.toUpperCase() : ""}
               {daysAgo(activeLive.first_seen) <= 7 && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
+              {" "}<ProvBadge item={activeLive} />
             </div>
 
             <h2 style={{
@@ -989,7 +1051,11 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               padding: "8px 0", marginBottom: 14,
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456",
             }}>
-              <span>first seen {activeLive.first_seen}</span>
+              <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                first seen {activeLive.first_seen}
+                {activeLive.stars ? <span>★{(activeLive.stars / 1000).toFixed(1)}k</span> : null}
+                <Sparkline history={activeLive.stars_history} />
+              </span>
               <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
                 m{activeLive.momentum}
                 <span style={{ display: "inline-block", width: 56, height: 5, background: "#e3ddcd" }}>
