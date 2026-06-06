@@ -1,7 +1,107 @@
 {
   "generated": "2026-06-06",
-  "count": 31,
+  "count": 41,
   "items": [
+    {
+      "id": "github:openai/whisper",
+      "name": "whisper",
+      "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openai/whisper",
+      "canonical_url": "github.com/openai/whisper",
+      "also_seen": [],
+      "company": "OpenAI",
+      "stars": 116,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 116
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vitejs/vite",
+      "name": "vite",
+      "description": "Next generation frontend tooling. It's fast!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vitejs/vite",
+      "canonical_url": "github.com/vitejs/vite",
+      "also_seen": [],
+      "company": null,
+      "stars": 71,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 71
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:sveltejs/svelte",
+      "name": "svelte",
+      "description": "web development for the rest of us",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/sveltejs/svelte",
+      "canonical_url": "github.com/sveltejs/svelte",
+      "also_seen": [],
+      "company": null,
+      "stars": 158,
+      "momentum": 15,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 158
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:obra/superpowers",
+      "name": "superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/obra/superpowers",
+      "canonical_url": "github.com/obra/superpowers",
+      "also_seen": [],
+      "company": null,
+      "stars": 1008,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 1008
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:openai/plugins",
       "name": "plugins",
@@ -14,7 +114,7 @@
       "canonical_url": "github.com/openai/plugins",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 49,
+      "stars": 215,
       "momentum": 4,
       "tags": [
         "javascript"
@@ -22,7 +122,57 @@
       "first_seen": "2026-06-06",
       "last_seen": "2026-06-06",
       "stars_history": {
-        "2026-06-06": 49
+        "2026-06-06": 215
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nginx/nginx",
+      "name": "nginx",
+      "description": "The official NGINX Open Source repository.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nginx/nginx",
+      "canonical_url": "github.com/nginx/nginx",
+      "also_seen": [],
+      "company": null,
+      "stars": 39,
+      "momentum": 3,
+      "tags": [
+        "c"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 39
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/mxc",
+      "name": "mxc",
+      "description": "Policy-driven, layered isolation and containment",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/mxc",
+      "canonical_url": "github.com/microsoft/mxc",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 57,
+      "momentum": 5,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 57
       },
       "trend": "none",
       "trend_delta": 0
@@ -39,7 +189,7 @@
       "canonical_url": "github.com/mempalace/mempalace",
       "also_seen": [],
       "company": null,
-      "stars": 227,
+      "stars": 441,
       "momentum": 22,
       "tags": [
         "python"
@@ -47,7 +197,32 @@
       "first_seen": "2026-06-06",
       "last_seen": "2026-06-06",
       "stars_history": {
-        "2026-06-06": 227
+        "2026-06-06": 441
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:golang/go",
+      "name": "go",
+      "description": "The Go programming language",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/golang/go",
+      "canonical_url": "github.com/golang/go",
+      "also_seen": [],
+      "company": null,
+      "stars": 24,
+      "momentum": 2,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 24
       },
       "trend": "none",
       "trend_delta": 0
@@ -73,6 +248,81 @@
       "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-06": 126
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:santifer/career-ops",
+      "name": "career-ops",
+      "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/santifer/career-ops",
+      "canonical_url": "github.com/santifer/career-ops",
+      "also_seen": [],
+      "company": null,
+      "stars": 186,
+      "momentum": 18,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 186
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/VibeVoice",
+      "name": "VibeVoice",
+      "description": "Open-Source Frontier Voice AI",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/VibeVoice",
+      "canonical_url": "github.com/microsoft/vibevoice",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 219,
+      "momentum": 21,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 219
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:danielmiessler/Personal_AI_Infrastructure",
+      "name": "Personal_AI_Infrastructure",
+      "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+      "canonical_url": "github.com/danielmiessler/personal_ai_infrastructure",
+      "also_seen": [],
+      "company": null,
+      "stars": 63,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 63
       },
       "trend": "none",
       "trend_delta": 0
@@ -114,7 +364,7 @@
       "canonical_url": "github.com/copilotkit/copilotkit",
       "also_seen": [],
       "company": null,
-      "stars": 366,
+      "stars": 613,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -122,7 +372,7 @@
       "first_seen": "2026-06-06",
       "last_seen": "2026-06-06",
       "stars_history": {
-        "2026-06-06": 366
+        "2026-06-06": 613
       },
       "trend": "none",
       "trend_delta": 0
@@ -139,7 +389,7 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 148,
+      "stars": 700,
       "momentum": 14,
       "tags": [
         "python"
@@ -147,7 +397,7 @@
       "first_seen": "2026-06-06",
       "last_seen": "2026-06-06",
       "stars_history": {
-        "2026-06-06": 148
+        "2026-06-06": 700
       },
       "trend": "none",
       "trend_delta": 0
@@ -214,7 +464,7 @@
       "canonical_url": "github.com/lfnovo/open-notebook",
       "also_seen": [],
       "company": null,
-      "stars": 1152,
+      "stars": 783,
       "momentum": 22,
       "tags": [
         "typescript"
@@ -224,10 +474,10 @@
       "stars_history": {
         "2026-06-04": 227,
         "2026-06-05": 212,
-        "2026-06-06": 1152
+        "2026-06-06": 783
       },
       "trend": "up",
-      "trend_delta": 925
+      "trend_delta": 556
     },
     {
       "id": "github:mvanhorn/last30days-skill",
@@ -240,7 +490,7 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 731,
+      "stars": 441,
       "momentum": 17,
       "tags": [
         "python"
@@ -250,10 +500,10 @@
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
-        "2026-06-06": 731
+        "2026-06-06": 441
       },
       "trend": "up",
-      "trend_delta": 558
+      "trend_delta": 268
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -318,7 +568,7 @@
       "canonical_url": "github.com/paddlepaddle/paddleocr",
       "also_seen": [],
       "company": null,
-      "stars": 747,
+      "stars": 449,
       "momentum": 10,
       "tags": [
         "python"
@@ -328,10 +578,10 @@
       "stars_history": {
         "2026-06-04": 105,
         "2026-06-05": 141,
-        "2026-06-06": 747
+        "2026-06-06": 449
       },
       "trend": "up",
-      "trend_delta": 642
+      "trend_delta": 344
     },
     {
       "id": "github:aquasecurity/trivy",
@@ -344,7 +594,7 @@
       "canonical_url": "github.com/aquasecurity/trivy",
       "also_seen": [],
       "company": null,
-      "stars": 207,
+      "stars": 159,
       "momentum": 2,
       "tags": [
         "go"
@@ -355,10 +605,10 @@
         "2026-06-03": 24,
         "2026-06-04": 255,
         "2026-06-05": 255,
-        "2026-06-06": 207
+        "2026-06-06": 159
       },
       "trend": "up",
-      "trend_delta": 183
+      "trend_delta": 135
     },
     {
       "id": "github:supermemoryai/supermemory",
