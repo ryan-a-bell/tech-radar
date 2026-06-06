@@ -9,16 +9,17 @@
   "canonical_url": "github.com/aquasecurity/trivy",
   "also_seen": [],
   "company": null,
-  "stars": 255,
+  "stars": 207,
   "momentum": 2,
   "tags": [
     "go"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-06-05",
+  "last_seen": "2026-06-06",
   "stars_history": {
     "2026-06-03": 24,
     "2026-06-04": 255,
-    "2026-06-05": 255
+    "2026-06-05": 255,
+    "2026-06-06": 207
   }
 }

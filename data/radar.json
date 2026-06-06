@@ -1,7 +1,157 @@
 {
-  "generated": "2026-06-05",
-  "count": 25,
+  "generated": "2026-06-06",
+  "count": 31,
   "items": [
+    {
+      "id": "github:openai/plugins",
+      "name": "plugins",
+      "description": "OpenAI Plugins",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openai/plugins",
+      "canonical_url": "github.com/openai/plugins",
+      "also_seen": [],
+      "company": "OpenAI",
+      "stars": 49,
+      "momentum": 4,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 49
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MemPalace/mempalace",
+      "name": "mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MemPalace/mempalace",
+      "canonical_url": "github.com/mempalace/mempalace",
+      "also_seen": [],
+      "company": null,
+      "stars": 227,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 227
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:withastro/flue",
+      "name": "flue",
+      "description": "The sandbox agent framework.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/withastro/flue",
+      "canonical_url": "github.com/withastro/flue",
+      "also_seen": [],
+      "company": null,
+      "stars": 126,
+      "momentum": 12,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 126
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:666ghj/MiroFish",
+      "name": "MiroFish",
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. \u7b80\u6d01\u901a\u7528\u7684\u7fa4\u4f53\u667a\u80fd\u5f15\u64ce\uff0c\u9884\u6d4b\u4e07\u7269",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/666ghj/MiroFish",
+      "canonical_url": "github.com/666ghj/mirofish",
+      "also_seen": [],
+      "company": null,
+      "stars": 320,
+      "momentum": 32,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 320
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:CopilotKit/CopilotKit",
+      "name": "CopilotKit",
+      "description": "The Frontend Stack for Agents & Generative UI. React + Angular. Makers of the AG-UI Protocol",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "canonical_url": "github.com/copilotkit/copilotkit",
+      "also_seen": [],
+      "company": null,
+      "stars": 366,
+      "momentum": 36,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 366
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Panniantong/Agent-Reach",
+      "name": "Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "canonical_url": "github.com/panniantong/agent-reach",
+      "also_seen": [],
+      "company": null,
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 148
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:github/spec-kit",
       "name": "spec-kit",
@@ -38,19 +188,20 @@
       "canonical_url": "github.com/openclaw/openclaw-windows-node",
       "also_seen": [],
       "company": null,
-      "stars": 411,
+      "stars": 326,
       "momentum": 33,
       "tags": [
         "c#"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 331,
-        "2026-06-05": 411
+        "2026-06-05": 411,
+        "2026-06-06": 326
       },
-      "trend": "up",
-      "trend_delta": 80
+      "trend": "down",
+      "trend_delta": -5
     },
     {
       "id": "github:lfnovo/open-notebook",
@@ -63,19 +214,20 @@
       "canonical_url": "github.com/lfnovo/open-notebook",
       "also_seen": [],
       "company": null,
-      "stars": 212,
+      "stars": 1152,
       "momentum": 22,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 227,
-        "2026-06-05": 212
+        "2026-06-05": 212,
+        "2026-06-06": 1152
       },
-      "trend": "down",
-      "trend_delta": -15
+      "trend": "up",
+      "trend_delta": 925
     },
     {
       "id": "github:mvanhorn/last30days-skill",
@@ -88,19 +240,20 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 199,
+      "stars": 731,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 173,
-        "2026-06-05": 199
+        "2026-06-05": 199,
+        "2026-06-06": 731
       },
       "trend": "up",
-      "trend_delta": 26
+      "trend_delta": 558
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -113,19 +266,20 @@
       "canonical_url": "github.com/nvidia/cosmos",
       "also_seen": [],
       "company": "NVIDIA",
-      "stars": 133,
+      "stars": 479,
       "momentum": 13,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 138,
-        "2026-06-05": 133
+        "2026-06-05": 133,
+        "2026-06-06": 479
       },
-      "trend": "down",
-      "trend_delta": -5
+      "trend": "up",
+      "trend_delta": 341
     },
     {
       "id": "github:github/copilot-sdk",
@@ -138,19 +292,20 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 38,
+      "stars": 309,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 25,
-        "2026-06-05": 38
+        "2026-06-05": 38,
+        "2026-06-06": 309
       },
       "trend": "up",
-      "trend_delta": 13
+      "trend_delta": 284
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
@@ -163,19 +318,20 @@
       "canonical_url": "github.com/paddlepaddle/paddleocr",
       "also_seen": [],
       "company": null,
-      "stars": 141,
+      "stars": 747,
       "momentum": 10,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-04": 105,
-        "2026-06-05": 141
+        "2026-06-05": 141,
+        "2026-06-06": 747
       },
       "trend": "up",
-      "trend_delta": 36
+      "trend_delta": 642
     },
     {
       "id": "github:aquasecurity/trivy",
@@ -188,20 +344,21 @@
       "canonical_url": "github.com/aquasecurity/trivy",
       "also_seen": [],
       "company": null,
-      "stars": 255,
+      "stars": 207,
       "momentum": 2,
       "tags": [
         "go"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-03": 24,
         "2026-06-04": 255,
-        "2026-06-05": 255
+        "2026-06-05": 255,
+        "2026-06-06": 207
       },
       "trend": "up",
-      "trend_delta": 231
+      "trend_delta": 183
     },
     {
       "id": "github:supermemoryai/supermemory",
@@ -382,20 +539,21 @@
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "also_seen": [],
       "company": null,
-      "stars": 1913,
+      "stars": 1845,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-03": 1735,
         "2026-06-04": 1735,
-        "2026-06-05": 1913
+        "2026-06-05": 1913,
+        "2026-06-06": 1845
       },
       "trend": "up",
-      "trend_delta": 178
+      "trend_delta": 110
     },
     {
       "id": "github:chopratejas/headroom",
@@ -408,20 +566,21 @@
       "canonical_url": "github.com/chopratejas/headroom",
       "also_seen": [],
       "company": null,
-      "stars": 3142,
+      "stars": 2473,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-03": 3530,
         "2026-06-04": 3139,
-        "2026-06-05": 3142
+        "2026-06-05": 3142,
+        "2026-06-06": 2473
       },
       "trend": "down",
-      "trend_delta": -388
+      "trend_delta": -1057
     },
     {
       "id": "github:reconurge/flowsint",
@@ -460,18 +619,19 @@
       "canonical_url": "github.com/jwasham/coding-interview-university",
       "also_seen": [],
       "company": null,
-      "stars": 632,
+      "stars": 745,
       "momentum": 33,
       "tags": [],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-03": 330,
         "2026-06-04": 330,
-        "2026-06-05": 632
+        "2026-06-05": 632,
+        "2026-06-06": 745
       },
       "trend": "up",
-      "trend_delta": 302
+      "trend_delta": 415
     },
     {
       "id": "github:lyogavin/airllm",
@@ -606,20 +766,21 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 1750,
+      "stars": 1361,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-06-06",
       "stars_history": {
         "2026-06-03": 2141,
         "2026-06-04": 1736,
-        "2026-06-05": 1750
+        "2026-06-05": 1750,
+        "2026-06-06": 1361
       },
       "trend": "down",
-      "trend_delta": -391
+      "trend_delta": -780
     }
   ]
 }
