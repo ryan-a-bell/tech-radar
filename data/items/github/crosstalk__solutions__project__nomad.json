@@ -1,0 +1,23 @@
+{
+  "id": "github:Crosstalk-Solutions/project-nomad",
+  "name": "project-nomad",
+  "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered\u2014anytime, anywhere.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+  "canonical_url": "github.com/crosstalk-solutions/project-nomad",
+  "also_seen": [],
+  "company": null,
+  "stars": 304,
+  "momentum": 30,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-07",
+  "stars_history": {
+    "2026-06-07": 304
+  }
+}

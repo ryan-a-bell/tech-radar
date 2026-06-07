@@ -1,7 +1,282 @@
 {
   "generated": "2026-06-07",
-  "count": 41,
+  "count": 52,
   "items": [
+    {
+      "id": "github:RyanCodrai/turbovec",
+      "name": "turbovec",
+      "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "canonical_url": "github.com/ryancodrai/turbovec",
+      "also_seen": [],
+      "company": null,
+      "stars": 1533,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 1533
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:refactoringhq/tolaria",
+      "name": "tolaria",
+      "description": "Desktop app to manage markdown knowledge bases",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/refactoringhq/tolaria",
+      "canonical_url": "github.com/refactoringhq/tolaria",
+      "also_seen": [],
+      "company": null,
+      "stars": 242,
+      "momentum": 24,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 242
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Leonxlnx/taste-skill",
+      "name": "taste-skill",
+      "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "canonical_url": "github.com/leonxlnx/taste-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 1104,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 1104
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Crosstalk-Solutions/project-nomad",
+      "name": "project-nomad",
+      "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered\u2014anytime, anywhere.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "canonical_url": "github.com/crosstalk-solutions/project-nomad",
+      "also_seen": [],
+      "company": null,
+      "stars": 304,
+      "momentum": 30,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 304
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/pg_durable",
+      "name": "pg_durable",
+      "description": "PostgreSQL in-database durable execution",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/pg_durable",
+      "canonical_url": "github.com/microsoft/pg_durable",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 314,
+      "momentum": 31,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 314
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opencv/opencv",
+      "name": "opencv",
+      "description": "Open Source Computer Vision Library",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opencv/opencv",
+      "canonical_url": "github.com/opencv/opencv",
+      "also_seen": [],
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 58
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ggml-org/llama.cpp",
+      "name": "llama.cpp",
+      "description": "LLM inference in C/C++",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "canonical_url": "github.com/ggml-org/llama.cpp",
+      "also_seen": [],
+      "company": null,
+      "stars": 199,
+      "momentum": 19,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 199
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:aaif-goose/goose",
+      "name": "goose",
+      "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aaif-goose/goose",
+      "canonical_url": "github.com/aaif-goose/goose",
+      "also_seen": [],
+      "company": null,
+      "stars": 262,
+      "momentum": 26,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 262
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:HunxByts/GhostTrack",
+      "name": "GhostTrack",
+      "description": "Useful tool to track location or mobile number",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "canonical_url": "github.com/hunxbyts/ghosttrack",
+      "also_seen": [],
+      "company": null,
+      "stars": 21,
+      "momentum": 2,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 21
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TapXWorld/ChinaTextbook",
+      "name": "ChinaTextbook",
+      "description": "\u6240\u6709\u5c0f\u521d\u9ad8\u3001\u5927\u5b66PDF\u6559\u6750\u3002",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "canonical_url": "github.com/tapxworld/chinatextbook",
+      "also_seen": [],
+      "company": null,
+      "stars": 355,
+      "momentum": 35,
+      "tags": [
+        "roff"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 355
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:yikart/AiToEarn",
+      "name": "AiToEarn",
+      "description": "Let's use AI to Earn!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yikart/AiToEarn",
+      "canonical_url": "github.com/yikart/aitoearn",
+      "also_seen": [],
+      "company": null,
+      "stars": 180,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-07": 180
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:openai/whisper",
       "name": "whisper",
@@ -118,7 +393,7 @@
       "canonical_url": "github.com/openai/plugins",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 213,
+      "stars": 262,
       "momentum": 4,
       "tags": [
         "javascript"
@@ -127,10 +402,10 @@
       "last_seen": "2026-06-07",
       "stars_history": {
         "2026-06-06": 215,
-        "2026-06-07": 213
+        "2026-06-07": 262
       },
-      "trend": "down",
-      "trend_delta": -2
+      "trend": "up",
+      "trend_delta": 47
     },
     {
       "id": "github:nginx/nginx",
@@ -478,7 +753,7 @@
       "canonical_url": "github.com/lfnovo/open-notebook",
       "also_seen": [],
       "company": null,
-      "stars": 794,
+      "stars": 555,
       "momentum": 22,
       "tags": [
         "typescript"
@@ -489,10 +764,10 @@
         "2026-06-04": 227,
         "2026-06-05": 212,
         "2026-06-06": 783,
-        "2026-06-07": 794
+        "2026-06-07": 555
       },
       "trend": "up",
-      "trend_delta": 567
+      "trend_delta": 328
     },
     {
       "id": "github:mvanhorn/last30days-skill",
@@ -505,7 +780,7 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 439,
+      "stars": 1097,
       "momentum": 17,
       "tags": [
         "python"
@@ -516,10 +791,10 @@
         "2026-06-04": 173,
         "2026-06-05": 199,
         "2026-06-06": 441,
-        "2026-06-07": 439
+        "2026-06-07": 1097
       },
       "trend": "up",
-      "trend_delta": 266
+      "trend_delta": 924
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -807,21 +1082,22 @@
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "also_seen": [],
       "company": null,
-      "stars": 1845,
+      "stars": 1117,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
       "stars_history": {
         "2026-06-03": 1735,
         "2026-06-04": 1735,
         "2026-06-05": 1913,
-        "2026-06-06": 1845
+        "2026-06-06": 1845,
+        "2026-06-07": 1117
       },
-      "trend": "up",
-      "trend_delta": 110
+      "trend": "down",
+      "trend_delta": -618
     },
     {
       "id": "github:chopratejas/headroom",

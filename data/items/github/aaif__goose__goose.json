@@ -1,0 +1,23 @@
+{
+  "id": "github:aaif-goose/goose",
+  "name": "goose",
+  "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/aaif-goose/goose",
+  "canonical_url": "github.com/aaif-goose/goose",
+  "also_seen": [],
+  "company": null,
+  "stars": 262,
+  "momentum": 26,
+  "tags": [
+    "rust"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-07",
+  "stars_history": {
+    "2026-06-07": 262
+  }
+}

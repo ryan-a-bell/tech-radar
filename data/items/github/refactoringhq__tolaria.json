@@ -1,0 +1,23 @@
+{
+  "id": "github:refactoringhq/tolaria",
+  "name": "tolaria",
+  "description": "Desktop app to manage markdown knowledge bases",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/refactoringhq/tolaria",
+  "canonical_url": "github.com/refactoringhq/tolaria",
+  "also_seen": [],
+  "company": null,
+  "stars": 242,
+  "momentum": 24,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-07",
+  "stars_history": {
+    "2026-06-07": 242
+  }
+}
