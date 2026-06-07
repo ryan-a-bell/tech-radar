@@ -10,14 +10,15 @@
   "canonical_url": "github.com/copilotkit/copilotkit",
   "also_seen": [],
   "company": null,
-  "stars": 613,
+  "stars": 631,
   "momentum": 36,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-06",
-  "last_seen": "2026-06-06",
+  "last_seen": "2026-06-07",
   "stars_history": {
-    "2026-06-06": 613
+    "2026-06-06": 613,
+    "2026-06-07": 631
   }
 }
