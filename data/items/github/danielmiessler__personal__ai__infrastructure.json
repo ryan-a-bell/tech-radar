@@ -10,15 +10,16 @@
   "canonical_url": "github.com/danielmiessler/personal_ai_infrastructure",
   "also_seen": [],
   "company": null,
-  "stars": 70,
+  "stars": 337,
   "momentum": 6,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-06",
-  "last_seen": "2026-06-07",
+  "last_seen": "2026-06-08",
   "stars_history": {
     "2026-06-06": 63,
-    "2026-06-07": 70
+    "2026-06-07": 70,
+    "2026-06-08": 337
   }
 }

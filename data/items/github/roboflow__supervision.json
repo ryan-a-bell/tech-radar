@@ -1,0 +1,23 @@
+{
+  "id": "github:roboflow/supervision",
+  "name": "supervision",
+  "description": "We write your reusable computer vision tools. \ud83d\udc9c",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/roboflow/supervision",
+  "canonical_url": "github.com/roboflow/supervision",
+  "also_seen": [],
+  "company": null,
+  "stars": 957,
+  "momentum": 95,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "stars_history": {
+    "2026-06-08": 957
+  }
+}

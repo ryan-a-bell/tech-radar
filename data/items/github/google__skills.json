@@ -1,0 +1,23 @@
+{
+  "id": "github:google/skills",
+  "name": "skills",
+  "description": "Agent Skills for Google products and technologies",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/google/skills",
+  "canonical_url": "github.com/google/skills",
+  "also_seen": [],
+  "company": "Google",
+  "stars": 481,
+  "momentum": 48,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-08",
+  "stars_history": {
+    "2026-06-08": 481
+  }
+}
