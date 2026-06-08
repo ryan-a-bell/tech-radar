@@ -10,14 +10,15 @@
   "canonical_url": "github.com/opencv/opencv",
   "also_seen": [],
   "company": null,
-  "stars": 58,
+  "stars": 65,
   "momentum": 5,
   "tags": [
     "c++"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-07",
+  "last_seen": "2026-06-08",
   "stars_history": {
-    "2026-06-07": 58
+    "2026-06-07": 58,
+    "2026-06-08": 65
   }
 }

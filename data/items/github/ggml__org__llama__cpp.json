@@ -10,14 +10,15 @@
   "canonical_url": "github.com/ggml-org/llama.cpp",
   "also_seen": [],
   "company": null,
-  "stars": 199,
+  "stars": 158,
   "momentum": 19,
   "tags": [
     "c++"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-07",
+  "last_seen": "2026-06-08",
   "stars_history": {
-    "2026-06-07": 199
+    "2026-06-07": 199,
+    "2026-06-08": 158
   }
 }
