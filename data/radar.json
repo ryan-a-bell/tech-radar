@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08",
+  "generated": "2026-06-09",
   "count": 57,
   "items": [
     {
@@ -14,18 +14,19 @@
       "canonical_url": "github.com/andyyyy64/whichllm",
       "also_seen": [],
       "company": null,
-      "stars": 103,
+      "stars": 143,
       "momentum": 10,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
-        "2026-06-08": 103
+        "2026-06-08": 103,
+        "2026-06-09": 143
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 40
     },
     {
       "id": "github:roboflow/supervision",
@@ -39,18 +40,19 @@
       "canonical_url": "github.com/roboflow/supervision",
       "also_seen": [],
       "company": null,
-      "stars": 957,
+      "stars": 1288,
       "momentum": 95,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
-        "2026-06-08": 957
+        "2026-06-08": 957,
+        "2026-06-09": 1288
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 331
     },
     {
       "id": "github:google/skills",
@@ -64,18 +66,19 @@
       "canonical_url": "github.com/google/skills",
       "also_seen": [],
       "company": "Google",
-      "stars": 481,
+      "stars": 461,
       "momentum": 48,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
-        "2026-06-08": 481
+        "2026-06-08": 481,
+        "2026-06-09": 461
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -20
     },
     {
       "id": "github:phuryn/pm-skills",
@@ -89,16 +92,17 @@
       "canonical_url": "github.com/phuryn/pm-skills",
       "also_seen": [],
       "company": null,
-      "stars": 112,
+      "stars": 164,
       "momentum": 11,
       "tags": [],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
-        "2026-06-08": 112
+        "2026-06-08": 112,
+        "2026-06-09": 164
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 52
     },
     {
       "id": "github:luongnv89/claude-howto",
@@ -112,18 +116,19 @@
       "canonical_url": "github.com/luongnv89/claude-howto",
       "also_seen": [],
       "company": null,
-      "stars": 154,
+      "stars": 312,
       "momentum": 15,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
-        "2026-06-08": 154
+        "2026-06-08": 154,
+        "2026-06-09": 312
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 158
     },
     {
       "id": "github:RyanCodrai/turbovec",
@@ -137,19 +142,20 @@
       "canonical_url": "github.com/ryancodrai/turbovec",
       "also_seen": [],
       "company": null,
-      "stars": 1730,
+      "stars": 1729,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 1533,
-        "2026-06-08": 1730
+        "2026-06-08": 1730,
+        "2026-06-09": 1729
       },
       "trend": "up",
-      "trend_delta": 197
+      "trend_delta": 196
     },
     {
       "id": "github:refactoringhq/tolaria",
@@ -163,19 +169,20 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 649,
+      "stars": 651,
       "momentum": 24,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 242,
-        "2026-06-08": 649
+        "2026-06-08": 649,
+        "2026-06-09": 651
       },
       "trend": "up",
-      "trend_delta": 407
+      "trend_delta": 409
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -325,10 +332,11 @@
         "rust"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 262,
-        "2026-06-08": 699
+        "2026-06-08": 699,
+        "2026-06-09": 699
       },
       "trend": "up",
       "trend_delta": 437
@@ -371,19 +379,20 @@
       "canonical_url": "github.com/tapxworld/chinatextbook",
       "also_seen": [],
       "company": null,
-      "stars": 593,
+      "stars": 592,
       "momentum": 35,
       "tags": [
         "roff"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 355,
-        "2026-06-08": 593
+        "2026-06-08": 593,
+        "2026-06-09": 592
       },
       "trend": "up",
-      "trend_delta": 238
+      "trend_delta": 237
     },
     {
       "id": "github:yikart/AiToEarn",
@@ -533,11 +542,12 @@
         "javascript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 215,
         "2026-06-07": 262,
-        "2026-06-08": 296
+        "2026-06-08": 296,
+        "2026-06-09": 296
       },
       "trend": "up",
       "trend_delta": 81
@@ -606,20 +616,21 @@
       "canonical_url": "github.com/mempalace/mempalace",
       "also_seen": [],
       "company": null,
-      "stars": 452,
+      "stars": 170,
       "momentum": 22,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 441,
         "2026-06-07": 446,
-        "2026-06-08": 452
+        "2026-06-08": 452,
+        "2026-06-09": 170
       },
-      "trend": "up",
-      "trend_delta": 11
+      "trend": "down",
+      "trend_delta": -271
     },
     {
       "id": "github:golang/go",
@@ -684,20 +695,21 @@
       "canonical_url": "github.com/santifer/career-ops",
       "also_seen": [],
       "company": null,
-      "stars": 665,
+      "stars": 308,
       "momentum": 18,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 186,
         "2026-06-07": 193,
-        "2026-06-08": 665
+        "2026-06-08": 665,
+        "2026-06-09": 308
       },
       "trend": "up",
-      "trend_delta": 479
+      "trend_delta": 122
     },
     {
       "id": "github:microsoft/VibeVoice",
@@ -737,20 +749,21 @@
       "canonical_url": "github.com/danielmiessler/personal_ai_infrastructure",
       "also_seen": [],
       "company": null,
-      "stars": 337,
+      "stars": 62,
       "momentum": 6,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 63,
         "2026-06-07": 70,
-        "2026-06-08": 337
+        "2026-06-08": 337,
+        "2026-06-09": 62
       },
-      "trend": "up",
-      "trend_delta": 274
+      "trend": "down",
+      "trend_delta": -1
     },
     {
       "id": "github:666ghj/MiroFish",
@@ -789,20 +802,21 @@
       "canonical_url": "github.com/copilotkit/copilotkit",
       "also_seen": [],
       "company": null,
-      "stars": 578,
+      "stars": 378,
       "momentum": 36,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 613,
         "2026-06-07": 631,
-        "2026-06-08": 578
+        "2026-06-08": 578,
+        "2026-06-09": 378
       },
       "trend": "down",
-      "trend_delta": -35
+      "trend_delta": -235
     },
     {
       "id": "github:Panniantong/Agent-Reach",
@@ -816,20 +830,21 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 961,
+      "stars": 679,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
-        "2026-06-08": 961
+        "2026-06-08": 961,
+        "2026-06-09": 679
       },
-      "trend": "up",
-      "trend_delta": 261
+      "trend": "down",
+      "trend_delta": -21
     },
     {
       "id": "github:github/spec-kit",
@@ -927,13 +942,14 @@
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
         "2026-06-06": 441,
         "2026-06-07": 1097,
-        "2026-06-08": 3558
+        "2026-06-08": 3558,
+        "2026-06-09": 3558
       },
       "trend": "up",
       "trend_delta": 3385
