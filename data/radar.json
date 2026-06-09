@@ -1,7 +1,105 @@
 {
   "generated": "2026-06-09",
-  "count": 57,
+  "count": 61,
   "items": [
+    {
+      "id": "github:x1xhlol/system-prompts-and-models-of-ai-tools",
+      "name": "system-prompts-and-models-of-ai-tools",
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "canonical_url": "github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "also_seen": [],
+      "company": null,
+      "stars": 66,
+      "momentum": 6,
+      "tags": [],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-09": 66
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:maziyarpanahi/openmed",
+      "name": "openmed",
+      "description": "open-source healthcare ai",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/maziyarpanahi/openmed",
+      "canonical_url": "github.com/maziyarpanahi/openmed",
+      "also_seen": [],
+      "company": null,
+      "stars": 165,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-09": 165
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:francescopace/espectre",
+      "name": "espectre",
+      "description": "\ud83d\udedc ESPectre \ud83d\udc7b - Motion detection system based on Wi-Fi spectre analysis (CSI), with Home Assistant integration.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/francescopace/espectre",
+      "canonical_url": "github.com/francescopace/espectre",
+      "also_seen": [],
+      "company": null,
+      "stars": 112,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-09": 112
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:addyosmani/agent-skills",
+      "name": "agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "canonical_url": "github.com/addyosmani/agent-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 348,
+      "momentum": 34,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-09": 348
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Andyyyy64/whichllm",
       "name": "whichllm",
@@ -14,7 +112,7 @@
       "canonical_url": "github.com/andyyyy64/whichllm",
       "also_seen": [],
       "company": null,
-      "stars": 143,
+      "stars": 631,
       "momentum": 10,
       "tags": [
         "python"
@@ -23,10 +121,10 @@
       "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-08": 103,
-        "2026-06-09": 143
+        "2026-06-09": 631
       },
       "trend": "up",
-      "trend_delta": 40
+      "trend_delta": 528
     },
     {
       "id": "github:roboflow/supervision",
@@ -40,7 +138,7 @@
       "canonical_url": "github.com/roboflow/supervision",
       "also_seen": [],
       "company": null,
-      "stars": 1288,
+      "stars": 735,
       "momentum": 95,
       "tags": [
         "python"
@@ -49,10 +147,10 @@
       "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-08": 957,
-        "2026-06-09": 1288
+        "2026-06-09": 735
       },
-      "trend": "up",
-      "trend_delta": 331
+      "trend": "down",
+      "trend_delta": -222
     },
     {
       "id": "github:google/skills",
@@ -92,17 +190,17 @@
       "canonical_url": "github.com/phuryn/pm-skills",
       "also_seen": [],
       "company": null,
-      "stars": 164,
+      "stars": 808,
       "momentum": 11,
       "tags": [],
       "first_seen": "2026-06-08",
       "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-08": 112,
-        "2026-06-09": 164
+        "2026-06-09": 808
       },
       "trend": "up",
-      "trend_delta": 52
+      "trend_delta": 696
     },
     {
       "id": "github:luongnv89/claude-howto",
@@ -142,7 +240,7 @@
       "canonical_url": "github.com/ryancodrai/turbovec",
       "also_seen": [],
       "company": null,
-      "stars": 1729,
+      "stars": 1800,
       "momentum": 100,
       "tags": [
         "python"
@@ -152,10 +250,10 @@
       "stars_history": {
         "2026-06-07": 1533,
         "2026-06-08": 1730,
-        "2026-06-09": 1729
+        "2026-06-09": 1800
       },
       "trend": "up",
-      "trend_delta": 196
+      "trend_delta": 267
     },
     {
       "id": "github:refactoringhq/tolaria",
@@ -169,7 +267,7 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 651,
+      "stars": 821,
       "momentum": 24,
       "tags": [
         "typescript"
@@ -179,10 +277,10 @@
       "stars_history": {
         "2026-06-07": 242,
         "2026-06-08": 649,
-        "2026-06-09": 651
+        "2026-06-09": 821
       },
       "trend": "up",
-      "trend_delta": 409
+      "trend_delta": 579
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -274,19 +372,20 @@
       "canonical_url": "github.com/opencv/opencv",
       "also_seen": [],
       "company": null,
-      "stars": 65,
+      "stars": 395,
       "momentum": 5,
       "tags": [
         "c++"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 58,
-        "2026-06-08": 65
+        "2026-06-08": 65,
+        "2026-06-09": 395
       },
       "trend": "up",
-      "trend_delta": 7
+      "trend_delta": 337
     },
     {
       "id": "github:ggml-org/llama.cpp",
@@ -326,7 +425,7 @@
       "canonical_url": "github.com/aaif-goose/goose",
       "also_seen": [],
       "company": null,
-      "stars": 699,
+      "stars": 490,
       "momentum": 26,
       "tags": [
         "rust"
@@ -336,10 +435,10 @@
       "stars_history": {
         "2026-06-07": 262,
         "2026-06-08": 699,
-        "2026-06-09": 699
+        "2026-06-09": 490
       },
       "trend": "up",
-      "trend_delta": 437
+      "trend_delta": 228
     },
     {
       "id": "github:HunxByts/GhostTrack",
@@ -379,7 +478,7 @@
       "canonical_url": "github.com/tapxworld/chinatextbook",
       "also_seen": [],
       "company": null,
-      "stars": 592,
+      "stars": 517,
       "momentum": 35,
       "tags": [
         "roff"
@@ -389,10 +488,10 @@
       "stars_history": {
         "2026-06-07": 355,
         "2026-06-08": 593,
-        "2026-06-09": 592
+        "2026-06-09": 517
       },
       "trend": "up",
-      "trend_delta": 237
+      "trend_delta": 162
     },
     {
       "id": "github:yikart/AiToEarn",
@@ -406,19 +505,20 @@
       "canonical_url": "github.com/yikart/aitoearn",
       "also_seen": [],
       "company": null,
-      "stars": 183,
+      "stars": 786,
       "momentum": 18,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-06-09",
       "stars_history": {
         "2026-06-07": 180,
-        "2026-06-08": 183
+        "2026-06-08": 183,
+        "2026-06-09": 786
       },
       "trend": "up",
-      "trend_delta": 3
+      "trend_delta": 606
     },
     {
       "id": "github:openai/whisper",
@@ -536,7 +636,7 @@
       "canonical_url": "github.com/openai/plugins",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 296,
+      "stars": 284,
       "momentum": 4,
       "tags": [
         "javascript"
@@ -547,10 +647,10 @@
         "2026-06-06": 215,
         "2026-06-07": 262,
         "2026-06-08": 296,
-        "2026-06-09": 296
+        "2026-06-09": 284
       },
       "trend": "up",
-      "trend_delta": 81
+      "trend_delta": 69
     },
     {
       "id": "github:nginx/nginx",
@@ -695,7 +795,7 @@
       "canonical_url": "github.com/santifer/career-ops",
       "also_seen": [],
       "company": null,
-      "stars": 308,
+      "stars": 1114,
       "momentum": 18,
       "tags": [
         "javascript"
@@ -706,10 +806,10 @@
         "2026-06-06": 186,
         "2026-06-07": 193,
         "2026-06-08": 665,
-        "2026-06-09": 308
+        "2026-06-09": 1114
       },
       "trend": "up",
-      "trend_delta": 122
+      "trend_delta": 928
     },
     {
       "id": "github:microsoft/VibeVoice",
@@ -936,7 +1036,7 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 3558,
+      "stars": 3177,
       "momentum": 17,
       "tags": [
         "python"
@@ -949,10 +1049,10 @@
         "2026-06-06": 441,
         "2026-06-07": 1097,
         "2026-06-08": 3558,
-        "2026-06-09": 3558
+        "2026-06-09": 3177
       },
       "trend": "up",
-      "trend_delta": 3385
+      "trend_delta": 3004
     },
     {
       "id": "github:NVIDIA/cosmos",

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/aaif-goose/goose",
   "also_seen": [],
   "company": null,
-  "stars": 699,
+  "stars": 490,
   "momentum": 26,
   "tags": [
     "rust"
@@ -20,6 +20,6 @@
   "stars_history": {
     "2026-06-07": 262,
     "2026-06-08": 699,
-    "2026-06-09": 699
+    "2026-06-09": 490
   }
 }

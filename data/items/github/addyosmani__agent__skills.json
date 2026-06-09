@@ -1,0 +1,23 @@
+{
+  "id": "github:addyosmani/agent-skills",
+  "name": "agent-skills",
+  "description": "Production-grade engineering skills for AI coding agents.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/addyosmani/agent-skills",
+  "canonical_url": "github.com/addyosmani/agent-skills",
+  "also_seen": [],
+  "company": null,
+  "stars": 348,
+  "momentum": 34,
+  "tags": [
+    "shell"
+  ],
+  "first_seen": "2026-06-09",
+  "last_seen": "2026-06-09",
+  "stars_history": {
+    "2026-06-09": 348
+  }
+}
