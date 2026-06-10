@@ -1,0 +1,23 @@
+{
+  "id": "github:activeloopai/hivemind",
+  "name": "hivemind",
+  "description": "One brain for all your agents",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/activeloopai/hivemind",
+  "canonical_url": "github.com/activeloopai/hivemind",
+  "also_seen": [],
+  "company": null,
+  "stars": 47,
+  "momentum": 4,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-10",
+  "last_seen": "2026-06-10",
+  "stars_history": {
+    "2026-06-10": 47
+  }
+}
