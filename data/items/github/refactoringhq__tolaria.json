@@ -10,16 +10,17 @@
   "canonical_url": "github.com/refactoringhq/tolaria",
   "also_seen": [],
   "company": null,
-  "stars": 821,
+  "stars": 829,
   "momentum": 24,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-09",
+  "last_seen": "2026-06-10",
   "stars_history": {
     "2026-06-07": 242,
     "2026-06-08": 649,
-    "2026-06-09": 821
+    "2026-06-09": 821,
+    "2026-06-10": 829
   }
 }
