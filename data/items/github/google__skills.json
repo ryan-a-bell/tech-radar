@@ -10,16 +10,17 @@
   "canonical_url": "github.com/google/skills",
   "also_seen": [],
   "company": "Google",
-  "stars": 680,
+  "stars": 211,
   "momentum": 48,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-08",
-  "last_seen": "2026-06-10",
+  "last_seen": "2026-06-11",
   "stars_history": {
     "2026-06-08": 481,
     "2026-06-09": 461,
-    "2026-06-10": 680
+    "2026-06-10": 680,
+    "2026-06-11": 211
   }
 }
