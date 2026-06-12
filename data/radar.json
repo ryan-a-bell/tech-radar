@@ -1,7 +1,230 @@
 {
-  "generated": "2026-06-11",
-  "count": 68,
+  "generated": "2026-06-12",
+  "count": 77,
   "items": [
+    {
+      "id": "github:alchaincyf/zhangxuefeng-skill",
+      "name": "zhangxuefeng-skill",
+      "description": "\u5f20\u96ea\u5cf0.skill \u2014 \u5f20\u96ea\u5cf0\u7684\u8ba4\u77e5\u64cd\u4f5c\u7cfb\u7edf\u3002\u9ad8\u8003\u5fd7\u613f/\u8003\u7814/\u804c\u4e1a\u89c4\u5212\u7684\u5b9e\u6218\u601d\u7ef4\u6846\u67b6\u3002\u7531\u5973\u5a32.skill\u751f\u6210\u3002",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
+      "canonical_url": "github.com/alchaincyf/zhangxuefeng-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 89,
+      "momentum": 8,
+      "tags": [],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 89
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hexo-ai/sia",
+      "name": "sia",
+      "description": "SIA is a Self Improving AI framework to autonomously improve the performance of any AI system (Model / Agent) on a benchmark task.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hexo-ai/sia",
+      "canonical_url": "github.com/hexo-ai/sia",
+      "also_seen": [],
+      "company": null,
+      "stars": 199,
+      "momentum": 19,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 199
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:restic/restic",
+      "name": "restic",
+      "description": "Fast, secure, efficient backup program",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/restic/restic",
+      "canonical_url": "github.com/restic/restic",
+      "also_seen": [],
+      "company": null,
+      "stars": 61,
+      "momentum": 6,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 61
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mattermost/mattermost",
+      "name": "mattermost",
+      "description": "Mattermost is an open source platform for secure collaboration across the entire software development lifecycle..",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mattermost/mattermost",
+      "canonical_url": "github.com/mattermost/mattermost",
+      "also_seen": [],
+      "company": null,
+      "stars": 53,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 53
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bannedbook/fanqiang",
+      "name": "fanqiang",
+      "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "canonical_url": "github.com/bannedbook/fanqiang",
+      "also_seen": [],
+      "company": null,
+      "stars": 161,
+      "momentum": 16,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 161
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chatwoot/chatwoot",
+      "name": "chatwoot",
+      "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. \ud83d\udd25\ud83d\udcac",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chatwoot/chatwoot",
+      "canonical_url": "github.com/chatwoot/chatwoot",
+      "also_seen": [],
+      "company": null,
+      "stars": 67,
+      "momentum": 6,
+      "tags": [
+        "ruby"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 67
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kenn-io/agentsview",
+      "name": "agentsview",
+      "description": "Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kenn-io/agentsview",
+      "canonical_url": "github.com/kenn-io/agentsview",
+      "also_seen": [],
+      "company": null,
+      "stars": 114,
+      "momentum": 11,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 114
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:msitarzewski/agency-agents",
+      "name": "agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "canonical_url": "github.com/msitarzewski/agency-agents",
+      "also_seen": [],
+      "company": null,
+      "stars": 1599,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 1599
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/SkillSpector",
+      "name": "SkillSpector",
+      "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "canonical_url": "github.com/nvidia/skillspector",
+      "also_seen": [],
+      "company": "NVIDIA",
+      "stars": 319,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 319
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:FareedKhan-dev/train-llm-from-scratch",
       "name": "train-llm-from-scratch",
@@ -40,19 +263,20 @@
       "canonical_url": "github.com/soxoj/maigret",
       "also_seen": [],
       "company": null,
-      "stars": 318,
+      "stars": 661,
       "momentum": 26,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-10": 261,
-        "2026-06-11": 318
+        "2026-06-11": 318,
+        "2026-06-12": 661
       },
       "trend": "up",
-      "trend_delta": 57
+      "trend_delta": 400
     },
     {
       "id": "github:activeloopai/hivemind",
@@ -92,19 +316,20 @@
       "canonical_url": "github.com/apple/container",
       "also_seen": [],
       "company": "Apple",
-      "stars": 1611,
+      "stars": 2430,
       "momentum": 100,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-10": 1358,
-        "2026-06-11": 1611
+        "2026-06-11": 1611,
+        "2026-06-12": 2430
       },
       "trend": "up",
-      "trend_delta": 253
+      "trend_delta": 1072
     },
     {
       "id": "github:ruvnet/RuView",
@@ -170,19 +395,20 @@
       "canonical_url": "github.com/masterking32/masterdnsvpn",
       "also_seen": [],
       "company": null,
-      "stars": 354,
+      "stars": 507,
       "momentum": 9,
       "tags": [
         "go"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-10": 92,
-        "2026-06-11": 354
+        "2026-06-11": 354,
+        "2026-06-12": 507
       },
       "trend": "up",
-      "trend_delta": 262
+      "trend_delta": 415
     },
     {
       "id": "github:x1xhlol/system-prompts-and-models-of-ai-tools",
@@ -196,18 +422,19 @@
       "canonical_url": "github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "also_seen": [],
       "company": null,
-      "stars": 393,
+      "stars": 368,
       "momentum": 6,
       "tags": [],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-09": 66,
         "2026-06-10": 397,
-        "2026-06-11": 393
+        "2026-06-11": 393,
+        "2026-06-12": 368
       },
       "trend": "up",
-      "trend_delta": 327
+      "trend_delta": 302
     },
     {
       "id": "github:maziyarpanahi/openmed",
@@ -221,20 +448,21 @@
       "canonical_url": "github.com/maziyarpanahi/openmed",
       "also_seen": [],
       "company": null,
-      "stars": 527,
+      "stars": 426,
       "momentum": 16,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-09": 165,
         "2026-06-10": 535,
-        "2026-06-11": 527
+        "2026-06-11": 527,
+        "2026-06-12": 426
       },
       "trend": "up",
-      "trend_delta": 362
+      "trend_delta": 261
     },
     {
       "id": "github:francescopace/espectre",
@@ -274,20 +502,21 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 821,
+      "stars": 3278,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
-        "2026-06-11": 821
+        "2026-06-11": 821,
+        "2026-06-12": 3278
       },
       "trend": "up",
-      "trend_delta": 473
+      "trend_delta": 2930
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -384,19 +613,20 @@
       "canonical_url": "github.com/phuryn/pm-skills",
       "also_seen": [],
       "company": null,
-      "stars": 804,
+      "stars": 1978,
       "momentum": 11,
       "tags": [],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-08": 112,
         "2026-06-09": 808,
         "2026-06-10": 775,
-        "2026-06-11": 804
+        "2026-06-11": 804,
+        "2026-06-12": 1978
       },
       "trend": "up",
-      "trend_delta": 692
+      "trend_delta": 1866
     },
     {
       "id": "github:luongnv89/claude-howto",
@@ -466,22 +696,23 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 612,
+      "stars": 604,
       "momentum": 24,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-07": 242,
         "2026-06-08": 649,
         "2026-06-09": 821,
         "2026-06-10": 618,
-        "2026-06-11": 612
+        "2026-06-11": 612,
+        "2026-06-12": 604
       },
       "trend": "up",
-      "trend_delta": 370
+      "trend_delta": 362
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -681,21 +912,22 @@
       "canonical_url": "github.com/tapxworld/chinatextbook",
       "also_seen": [],
       "company": null,
-      "stars": 519,
+      "stars": 88,
       "momentum": 35,
       "tags": [
         "roff"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-10",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-07": 355,
         "2026-06-08": 593,
         "2026-06-09": 517,
-        "2026-06-10": 519
+        "2026-06-10": 519,
+        "2026-06-12": 88
       },
-      "trend": "up",
-      "trend_delta": 164
+      "trend": "down",
+      "trend_delta": -267
     },
     {
       "id": "github:yikart/AiToEarn",
@@ -815,21 +1047,22 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 1104,
+      "stars": 1322,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-12",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
         "2026-06-10": 1011,
-        "2026-06-11": 1104
+        "2026-06-11": 1104,
+        "2026-06-12": 1322
       },
       "trend": "up",
-      "trend_delta": 96
+      "trend_delta": 314
     },
     {
       "id": "github:openai/plugins",

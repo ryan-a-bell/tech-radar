@@ -10,16 +10,17 @@
   "canonical_url": "github.com/maziyarpanahi/openmed",
   "also_seen": [],
   "company": null,
-  "stars": 527,
+  "stars": 426,
   "momentum": 16,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-09",
-  "last_seen": "2026-06-11",
+  "last_seen": "2026-06-12",
   "stars_history": {
     "2026-06-09": 165,
     "2026-06-10": 535,
-    "2026-06-11": 527
+    "2026-06-11": 527,
+    "2026-06-12": 426
   }
 }

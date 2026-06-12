@@ -1,0 +1,23 @@
+{
+  "id": "github:hexo-ai/sia",
+  "name": "sia",
+  "description": "SIA is a Self Improving AI framework to autonomously improve the performance of any AI system (Model / Agent) on a benchmark task.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/hexo-ai/sia",
+  "canonical_url": "github.com/hexo-ai/sia",
+  "also_seen": [],
+  "company": null,
+  "stars": 199,
+  "momentum": 19,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 199
+  }
+}

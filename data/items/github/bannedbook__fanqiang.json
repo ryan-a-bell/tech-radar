@@ -1,0 +1,23 @@
+{
+  "id": "github:bannedbook/fanqiang",
+  "name": "fanqiang",
+  "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/bannedbook/fanqiang",
+  "canonical_url": "github.com/bannedbook/fanqiang",
+  "also_seen": [],
+  "company": null,
+  "stars": 161,
+  "momentum": 16,
+  "tags": [
+    "kotlin"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 161
+  }
+}

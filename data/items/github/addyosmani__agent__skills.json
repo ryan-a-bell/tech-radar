@@ -10,16 +10,17 @@
   "canonical_url": "github.com/addyosmani/agent-skills",
   "also_seen": [],
   "company": null,
-  "stars": 821,
+  "stars": 3278,
   "momentum": 34,
   "tags": [
     "shell"
   ],
   "first_seen": "2026-06-09",
-  "last_seen": "2026-06-11",
+  "last_seen": "2026-06-12",
   "stars_history": {
     "2026-06-09": 348,
     "2026-06-10": 781,
-    "2026-06-11": 821
+    "2026-06-11": 821,
+    "2026-06-12": 3278
   }
 }

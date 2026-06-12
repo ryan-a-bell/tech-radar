@@ -1,0 +1,23 @@
+{
+  "id": "github:msitarzewski/agency-agents",
+  "name": "agency-agents",
+  "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/msitarzewski/agency-agents",
+  "canonical_url": "github.com/msitarzewski/agency-agents",
+  "also_seen": [],
+  "company": null,
+  "stars": 1599,
+  "momentum": 100,
+  "tags": [
+    "shell"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 1599
+  }
+}

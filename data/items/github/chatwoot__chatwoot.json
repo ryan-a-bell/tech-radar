@@ -1,0 +1,23 @@
+{
+  "id": "github:chatwoot/chatwoot",
+  "name": "chatwoot",
+  "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. \ud83d\udd25\ud83d\udcac",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/chatwoot/chatwoot",
+  "canonical_url": "github.com/chatwoot/chatwoot",
+  "also_seen": [],
+  "company": null,
+  "stars": 67,
+  "momentum": 6,
+  "tags": [
+    "ruby"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 67
+  }
+}

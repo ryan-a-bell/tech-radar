@@ -1,0 +1,23 @@
+{
+  "id": "github:kenn-io/agentsview",
+  "name": "agentsview",
+  "description": "Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/kenn-io/agentsview",
+  "canonical_url": "github.com/kenn-io/agentsview",
+  "also_seen": [],
+  "company": null,
+  "stars": 114,
+  "momentum": 11,
+  "tags": [
+    "go"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 114
+  }
+}
