@@ -1,0 +1,23 @@
+{
+  "id": "github:music-assistant/server",
+  "name": "server",
+  "description": "Music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistant and must run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/music-assistant/server",
+  "canonical_url": "github.com/music-assistant/server",
+  "also_seen": [],
+  "company": null,
+  "stars": 6,
+  "momentum": 0,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-12": 6
+  }
+}
