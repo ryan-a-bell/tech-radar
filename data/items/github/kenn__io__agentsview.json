@@ -10,14 +10,15 @@
   "canonical_url": "github.com/kenn-io/agentsview",
   "also_seen": [],
   "company": null,
-  "stars": 114,
+  "stars": 187,
   "momentum": 11,
   "tags": [
     "go"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-12",
+  "last_seen": "2026-06-13",
   "stars_history": {
-    "2026-06-12": 114
+    "2026-06-12": 114,
+    "2026-06-13": 187
   }
 }
