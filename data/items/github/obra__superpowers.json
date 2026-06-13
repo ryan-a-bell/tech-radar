@@ -10,18 +10,19 @@
   "canonical_url": "github.com/obra/superpowers",
   "also_seen": [],
   "company": null,
-  "stars": 1276,
+  "stars": 1275,
   "momentum": 100,
   "tags": [
     "shell"
   ],
   "first_seen": "2026-06-06",
-  "last_seen": "2026-06-12",
+  "last_seen": "2026-06-13",
   "stars_history": {
     "2026-06-06": 1008,
     "2026-06-07": 700,
     "2026-06-10": 1011,
     "2026-06-11": 1104,
-    "2026-06-12": 1276
+    "2026-06-12": 1276,
+    "2026-06-13": 1275
   }
 }

@@ -10,16 +10,17 @@
   "canonical_url": "github.com/masterking32/masterdnsvpn",
   "also_seen": [],
   "company": null,
-  "stars": 401,
+  "stars": 400,
   "momentum": 9,
   "tags": [
     "go"
   ],
   "first_seen": "2026-06-10",
-  "last_seen": "2026-06-12",
+  "last_seen": "2026-06-13",
   "stars_history": {
     "2026-06-10": 92,
     "2026-06-11": 354,
-    "2026-06-12": 401
+    "2026-06-12": 401,
+    "2026-06-13": 400
   }
 }

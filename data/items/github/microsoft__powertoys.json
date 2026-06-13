@@ -10,14 +10,15 @@
   "canonical_url": "github.com/microsoft/powertoys",
   "also_seen": [],
   "company": "Microsoft",
-  "stars": 90,
+  "stars": 103,
   "momentum": 9,
   "tags": [
     "c"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-12",
+  "last_seen": "2026-06-13",
   "stars_history": {
-    "2026-06-12": 90
+    "2026-06-12": 90,
+    "2026-06-13": 103
   }
 }
