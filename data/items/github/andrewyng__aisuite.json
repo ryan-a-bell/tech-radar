@@ -10,14 +10,15 @@
   "canonical_url": "github.com/andrewyng/aisuite",
   "also_seen": [],
   "company": null,
-  "stars": 132,
+  "stars": 127,
   "momentum": 13,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-13",
-  "last_seen": "2026-06-13",
+  "last_seen": "2026-06-14",
   "stars_history": {
-    "2026-06-13": 132
+    "2026-06-13": 132,
+    "2026-06-14": 127
   }
 }

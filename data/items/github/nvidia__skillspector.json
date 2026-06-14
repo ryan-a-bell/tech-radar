@@ -10,15 +10,16 @@
   "canonical_url": "github.com/nvidia/skillspector",
   "also_seen": [],
   "company": "NVIDIA",
-  "stars": 809,
+  "stars": 804,
   "momentum": 31,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-13",
+  "last_seen": "2026-06-14",
   "stars_history": {
     "2026-06-12": 319,
-    "2026-06-13": 809
+    "2026-06-13": 809,
+    "2026-06-14": 804
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-13",
+  "generated": "2026-06-14",
   "count": 83,
   "items": [
     {
@@ -14,18 +14,19 @@
       "canonical_url": "github.com/swc-project/swc",
       "also_seen": [],
       "company": null,
-      "stars": 12,
+      "stars": 20,
       "momentum": 1,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
-        "2026-06-13": 12
+        "2026-06-13": 12,
+        "2026-06-14": 20
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:andrewyng/aisuite",
@@ -39,18 +40,19 @@
       "canonical_url": "github.com/andrewyng/aisuite",
       "also_seen": [],
       "company": null,
-      "stars": 132,
+      "stars": 127,
       "momentum": 13,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
-        "2026-06-13": 132
+        "2026-06-13": 132,
+        "2026-06-14": 127
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -5
     },
     {
       "id": "github:alchaincyf/zhangxuefeng-skill",
@@ -112,19 +114,20 @@
       "canonical_url": "github.com/music-assistant/server",
       "also_seen": [],
       "company": null,
-      "stars": 277,
+      "stars": 270,
       "momentum": 0,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 6,
-        "2026-06-13": 277
+        "2026-06-13": 277,
+        "2026-06-14": 270
       },
       "trend": "up",
-      "trend_delta": 271
+      "trend_delta": 264
     },
     {
       "id": "github:restic/restic",
@@ -189,19 +192,20 @@
       "canonical_url": "github.com/iptv-org/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 650,
+      "stars": 530,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 142,
-        "2026-06-13": 650
+        "2026-06-13": 650,
+        "2026-06-14": 530
       },
       "trend": "up",
-      "trend_delta": 508
+      "trend_delta": 388
     },
     {
       "id": "github:bannedbook/fanqiang",
@@ -215,19 +219,20 @@
       "canonical_url": "github.com/bannedbook/fanqiang",
       "also_seen": [],
       "company": null,
-      "stars": 86,
+      "stars": 93,
       "momentum": 16,
       "tags": [
         "kotlin"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 161,
-        "2026-06-13": 86
+        "2026-06-13": 86,
+        "2026-06-14": 93
       },
       "trend": "down",
-      "trend_delta": -75
+      "trend_delta": -68
     },
     {
       "id": "github:chatwoot/chatwoot",
@@ -241,19 +246,20 @@
       "canonical_url": "github.com/chatwoot/chatwoot",
       "also_seen": [],
       "company": null,
-      "stars": 86,
+      "stars": 83,
       "momentum": 6,
       "tags": [
         "ruby"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 67,
-        "2026-06-13": 86
+        "2026-06-13": 86,
+        "2026-06-14": 83
       },
       "trend": "up",
-      "trend_delta": 19
+      "trend_delta": 16
     },
     {
       "id": "github:kenn-io/agentsview",
@@ -267,19 +273,20 @@
       "canonical_url": "github.com/kenn-io/agentsview",
       "also_seen": [],
       "company": null,
-      "stars": 187,
+      "stars": 190,
       "momentum": 11,
       "tags": [
         "go"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 114,
-        "2026-06-13": 187
+        "2026-06-13": 187,
+        "2026-06-14": 190
       },
       "trend": "up",
-      "trend_delta": 73
+      "trend_delta": 76
     },
     {
       "id": "github:msitarzewski/agency-agents",
@@ -319,19 +326,20 @@
       "canonical_url": "github.com/nvidia/skillspector",
       "also_seen": [],
       "company": "NVIDIA",
-      "stars": 809,
+      "stars": 804,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 319,
-        "2026-06-13": 809
+        "2026-06-13": 809,
+        "2026-06-14": 804
       },
       "trend": "up",
-      "trend_delta": 490
+      "trend_delta": 485
     },
     {
       "id": "github:microsoft/PowerToys",
@@ -345,19 +353,20 @@
       "canonical_url": "github.com/microsoft/powertoys",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 374,
+      "stars": 370,
       "momentum": 9,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 90,
-        "2026-06-13": 374
+        "2026-06-13": 374,
+        "2026-06-14": 370
       },
       "trend": "up",
-      "trend_delta": 284
+      "trend_delta": 280
     },
     {
       "id": "github:LMCache/LMCache",
@@ -371,19 +380,20 @@
       "canonical_url": "github.com/lmcache/lmcache",
       "also_seen": [],
       "company": null,
-      "stars": 246,
+      "stars": 238,
       "momentum": 1,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-12": 17,
-        "2026-06-13": 246
+        "2026-06-13": 246,
+        "2026-06-14": 238
       },
       "trend": "up",
-      "trend_delta": 229
+      "trend_delta": 221
     },
     {
       "id": "github:FareedKhan-dev/train-llm-from-scratch",
@@ -476,21 +486,22 @@
       "canonical_url": "github.com/apple/container",
       "also_seen": [],
       "company": "Apple",
-      "stars": 1471,
+      "stars": 1487,
       "momentum": 100,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-10": 1358,
         "2026-06-11": 1611,
         "2026-06-12": 3513,
-        "2026-06-13": 1471
+        "2026-06-13": 1471,
+        "2026-06-14": 1487
       },
       "trend": "up",
-      "trend_delta": 113
+      "trend_delta": 129
     },
     {
       "id": "github:ruvnet/RuView",
@@ -584,20 +595,21 @@
       "canonical_url": "github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
       "also_seen": [],
       "company": null,
-      "stars": 107,
+      "stars": 109,
       "momentum": 6,
       "tags": [],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-09": 66,
         "2026-06-10": 397,
         "2026-06-11": 393,
         "2026-06-12": 368,
-        "2026-06-13": 107
+        "2026-06-13": 107,
+        "2026-06-14": 109
       },
       "trend": "up",
-      "trend_delta": 41
+      "trend_delta": 43
     },
     {
       "id": "github:maziyarpanahi/openmed",
@@ -666,22 +678,23 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1507,
+      "stars": 1514,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
         "2026-06-11": 821,
         "2026-06-12": 2660,
-        "2026-06-13": 1507
+        "2026-06-13": 1507,
+        "2026-06-14": 1514
       },
       "trend": "up",
-      "trend_delta": 1159
+      "trend_delta": 1166
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -1214,23 +1227,24 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 931,
+      "stars": 924,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
         "2026-06-10": 1011,
         "2026-06-11": 1104,
         "2026-06-12": 1276,
-        "2026-06-13": 931
+        "2026-06-13": 931,
+        "2026-06-14": 924
       },
-      "trend": "down",
-      "trend_delta": -77
+      "trend": "up",
+      "trend_delta": 224
     },
     {
       "id": "github:openai/plugins",

@@ -10,15 +10,16 @@
   "canonical_url": "github.com/lmcache/lmcache",
   "also_seen": [],
   "company": null,
-  "stars": 246,
+  "stars": 238,
   "momentum": 1,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-13",
+  "last_seen": "2026-06-14",
   "stars_history": {
     "2026-06-12": 17,
-    "2026-06-13": 246
+    "2026-06-13": 246,
+    "2026-06-14": 238
   }
 }
