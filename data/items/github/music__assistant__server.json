@@ -10,16 +10,17 @@
   "canonical_url": "github.com/music-assistant/server",
   "also_seen": [],
   "company": null,
-  "stars": 270,
+  "stars": 197,
   "momentum": 0,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-14",
+  "last_seen": "2026-06-15",
   "stars_history": {
     "2026-06-12": 6,
     "2026-06-13": 277,
-    "2026-06-14": 270
+    "2026-06-14": 270,
+    "2026-06-15": 197
   }
 }

@@ -10,16 +10,17 @@
   "canonical_url": "github.com/iptv-org/iptv",
   "also_seen": [],
   "company": null,
-  "stars": 530,
+  "stars": 1528,
   "momentum": 14,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-14",
+  "last_seen": "2026-06-15",
   "stars_history": {
     "2026-06-12": 142,
     "2026-06-13": 650,
-    "2026-06-14": 530
+    "2026-06-14": 530,
+    "2026-06-15": 1528
   }
 }

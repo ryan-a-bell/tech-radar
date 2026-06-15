@@ -1,7 +1,307 @@
 {
-  "generated": "2026-06-14",
-  "count": 83,
+  "generated": "2026-06-15",
+  "count": 95,
   "items": [
+    {
+      "id": "github:teslamate-org/teslamate",
+      "name": "teslamate",
+      "description": "A self-hosted data logger for your Tesla \ud83d\ude98 [main maintainer= @JakobLichterfeld ]",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/teslamate-org/teslamate",
+      "canonical_url": "github.com/teslamate-org/teslamate",
+      "also_seen": [],
+      "company": null,
+      "stars": 35,
+      "momentum": 3,
+      "tags": [
+        "elixir"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 35
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:itsfatduck/optimizerDuck",
+      "name": "optimizerDuck",
+      "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/itsfatduck/optimizerDuck",
+      "canonical_url": "github.com/itsfatduck/optimizerduck",
+      "also_seen": [],
+      "company": null,
+      "stars": 321,
+      "momentum": 32,
+      "tags": [
+        "c#"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 321
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:meshery/meshery",
+      "name": "meshery",
+      "description": "Meshery, the cloud native manager",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/meshery/meshery",
+      "canonical_url": "github.com/meshery/meshery",
+      "also_seen": [],
+      "company": null,
+      "stars": 20,
+      "momentum": 2,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 20
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:krahets/hello-algo",
+      "name": "hello-algo",
+      "description": "\u300aHello \u7b97\u6cd5\u300b\uff1a\u52a8\u753b\u56fe\u89e3\u3001\u4e00\u952e\u8fd0\u884c\u7684\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5\u6559\u7a0b\u3002\u652f\u6301\u7b80\u4e2d\u3001\u7e41\u4e2d\u3001English\u3001\u65e5\u672c\u8a9e\uff0c\u63d0\u4f9b Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart \u7b49\u4ee3\u7801\u5b9e\u73b0",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/krahets/hello-algo",
+      "canonical_url": "github.com/krahets/hello-algo",
+      "also_seen": [],
+      "company": null,
+      "stars": 34,
+      "momentum": 3,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 34
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:freeCodeCamp/freeCodeCamp",
+      "name": "freeCodeCamp",
+      "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "canonical_url": "github.com/freecodecamp/freecodecamp",
+      "also_seen": [],
+      "company": null,
+      "stars": 146,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 146
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:trycua/cua",
+      "name": "cua",
+      "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/trycua/cua",
+      "canonical_url": "github.com/trycua/cua",
+      "also_seen": [],
+      "company": null,
+      "stars": 57,
+      "momentum": 5,
+      "tags": [
+        "html"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 57
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:rohitg00/ai-engineering-from-scratch",
+      "name": "ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
+      "also_seen": [],
+      "company": null,
+      "stars": 538,
+      "momentum": 53,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 538
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Raphire/Win11Debloat",
+      "name": "Win11Debloat",
+      "description": "A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Raphire/Win11Debloat",
+      "canonical_url": "github.com/raphire/win11debloat",
+      "also_seen": [],
+      "company": null,
+      "stars": 114,
+      "momentum": 11,
+      "tags": [
+        "powershell"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 114
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mikeroyal/Self-Hosting-Guide",
+      "name": "Self-Hosting-Guide",
+      "description": "Self-Hosting Guide. Learn all about locally hosting (on premises & private web servers) and managing software applications by yourself or your organization. Including Cloud, LLMs, WireGuard, Automation, Home Assistant, and Networking.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mikeroyal/Self-Hosting-Guide",
+      "canonical_url": "github.com/mikeroyal/self-hosting-guide",
+      "also_seen": [],
+      "company": null,
+      "stars": 126,
+      "momentum": 12,
+      "tags": [
+        "dockerfile"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 126
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:shiyu-coder/Kronos",
+      "name": "Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "canonical_url": "github.com/shiyu-coder/kronos",
+      "also_seen": [],
+      "company": null,
+      "stars": 244,
+      "momentum": 24,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 244
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
+      "name": "Introduction-to-Autonomous-Robots",
+      "description": "Introduction to Autonomous Robots",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
+      "canonical_url": "github.com/introduction-to-autonomous-robots/introduction-to-autonomous-robots",
+      "also_seen": [],
+      "company": null,
+      "stars": 293,
+      "momentum": 29,
+      "tags": [
+        "tex"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 293
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Free-TV/IPTV",
+      "name": "IPTV",
+      "description": "M3U Playlist for free TV channels",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Free-TV/IPTV",
+      "canonical_url": "github.com/free-tv/iptv",
+      "also_seen": [],
+      "company": null,
+      "stars": 70,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-15",
+      "stars_history": {
+        "2026-06-15": 70
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:swc-project/swc",
       "name": "swc",
@@ -114,20 +414,21 @@
       "canonical_url": "github.com/music-assistant/server",
       "also_seen": [],
       "company": null,
-      "stars": 270,
+      "stars": 197,
       "momentum": 0,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-12": 6,
         "2026-06-13": 277,
-        "2026-06-14": 270
+        "2026-06-14": 270,
+        "2026-06-15": 197
       },
       "trend": "up",
-      "trend_delta": 264
+      "trend_delta": 191
     },
     {
       "id": "github:restic/restic",
@@ -192,20 +493,21 @@
       "canonical_url": "github.com/iptv-org/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 530,
+      "stars": 1528,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-12": 142,
         "2026-06-13": 650,
-        "2026-06-14": 530
+        "2026-06-14": 530,
+        "2026-06-15": 1528
       },
       "trend": "up",
-      "trend_delta": 388
+      "trend_delta": 1386
     },
     {
       "id": "github:bannedbook/fanqiang",
@@ -246,20 +548,21 @@
       "canonical_url": "github.com/chatwoot/chatwoot",
       "also_seen": [],
       "company": null,
-      "stars": 83,
+      "stars": 400,
       "momentum": 6,
       "tags": [
         "ruby"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-12": 67,
         "2026-06-13": 86,
-        "2026-06-14": 83
+        "2026-06-14": 83,
+        "2026-06-15": 400
       },
       "trend": "up",
-      "trend_delta": 16
+      "trend_delta": 333
     },
     {
       "id": "github:kenn-io/agentsview",
@@ -326,20 +629,21 @@
       "canonical_url": "github.com/nvidia/skillspector",
       "also_seen": [],
       "company": "NVIDIA",
-      "stars": 804,
+      "stars": 964,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-12": 319,
         "2026-06-13": 809,
-        "2026-06-14": 804
+        "2026-06-14": 804,
+        "2026-06-15": 964
       },
       "trend": "up",
-      "trend_delta": 485
+      "trend_delta": 645
     },
     {
       "id": "github:microsoft/PowerToys",
@@ -1554,21 +1858,22 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 679,
+      "stars": 1045,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-09",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
         "2026-06-08": 961,
-        "2026-06-09": 679
+        "2026-06-09": 679,
+        "2026-06-15": 1045
       },
-      "trend": "down",
-      "trend_delta": -21
+      "trend": "up",
+      "trend_delta": 84
     },
     {
       "id": "github:github/spec-kit",
@@ -2048,19 +2353,20 @@
       "canonical_url": "github.com/jwasham/coding-interview-university",
       "also_seen": [],
       "company": null,
-      "stars": 745,
+      "stars": 516,
       "momentum": 33,
       "tags": [],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-06",
+      "last_seen": "2026-06-15",
       "stars_history": {
         "2026-06-03": 330,
         "2026-06-04": 330,
         "2026-06-05": 632,
-        "2026-06-06": 745
+        "2026-06-06": 745,
+        "2026-06-15": 516
       },
-      "trend": "up",
-      "trend_delta": 415
+      "trend": "down",
+      "trend_delta": -229
     },
     {
       "id": "github:lyogavin/airllm",

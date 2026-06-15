@@ -1,0 +1,23 @@
+{
+  "id": "github:freeCodeCamp/freeCodeCamp",
+  "name": "freeCodeCamp",
+  "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+  "canonical_url": "github.com/freecodecamp/freecodecamp",
+  "also_seen": [],
+  "company": null,
+  "stars": 146,
+  "momentum": 14,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-15",
+  "last_seen": "2026-06-15",
+  "stars_history": {
+    "2026-06-15": 146
+  }
+}
