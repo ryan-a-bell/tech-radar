@@ -10,15 +10,16 @@
   "canonical_url": "github.com/swc-project/swc",
   "also_seen": [],
   "company": null,
-  "stars": 20,
+  "stars": 21,
   "momentum": 1,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-13",
-  "last_seen": "2026-06-14",
+  "last_seen": "2026-06-16",
   "stars_history": {
     "2026-06-13": 12,
-    "2026-06-14": 20
+    "2026-06-14": 20,
+    "2026-06-16": 21
   }
 }

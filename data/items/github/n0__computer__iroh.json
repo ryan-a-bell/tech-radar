@@ -1,0 +1,23 @@
+{
+  "id": "github:n0-computer/iroh",
+  "name": "iroh",
+  "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/n0-computer/iroh",
+  "canonical_url": "github.com/n0-computer/iroh",
+  "also_seen": [],
+  "company": null,
+  "stars": 326,
+  "momentum": 32,
+  "tags": [
+    "rust"
+  ],
+  "first_seen": "2026-06-16",
+  "last_seen": "2026-06-16",
+  "stars_history": {
+    "2026-06-16": 326
+  }
+}

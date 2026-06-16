@@ -1,7 +1,132 @@
 {
   "generated": "2026-06-16",
-  "count": 95,
+  "count": 100,
   "items": [
+    {
+      "id": "github:alibaba/zvec",
+      "name": "zvec",
+      "description": "A lightweight, lightning-fast, in-process vector database",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/zvec",
+      "canonical_url": "github.com/alibaba/zvec",
+      "also_seen": [],
+      "company": null,
+      "stars": 251,
+      "momentum": 25,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-16": 251
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+      "name": "universal-android-debloater-next-generation",
+      "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+      "canonical_url": "github.com/universal-debloater-alliance/universal-android-debloater-next-generation",
+      "also_seen": [],
+      "company": null,
+      "stars": 146,
+      "momentum": 14,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-16": 146
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:puppeteer/puppeteer",
+      "name": "puppeteer",
+      "description": "JavaScript API for Chrome and Firefox",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/puppeteer/puppeteer",
+      "canonical_url": "github.com/puppeteer/puppeteer",
+      "also_seen": [],
+      "company": null,
+      "stars": 171,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-16": 171
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:n0-computer/iroh",
+      "name": "iroh",
+      "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/n0-computer/iroh",
+      "canonical_url": "github.com/n0-computer/iroh",
+      "also_seen": [],
+      "company": null,
+      "stars": 326,
+      "momentum": 32,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-16": 326
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cypress-io/cypress",
+      "name": "cypress",
+      "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cypress-io/cypress",
+      "canonical_url": "github.com/cypress-io/cypress",
+      "also_seen": [],
+      "company": null,
+      "stars": 11,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-16": 11
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:teslamate-org/teslamate",
       "name": "teslamate",
@@ -14,7 +139,7 @@
       "canonical_url": "github.com/teslamate-org/teslamate",
       "also_seen": [],
       "company": null,
-      "stars": 33,
+      "stars": 214,
       "momentum": 3,
       "tags": [
         "elixir"
@@ -23,10 +148,10 @@
       "last_seen": "2026-06-16",
       "stars_history": {
         "2026-06-15": 35,
-        "2026-06-16": 33
+        "2026-06-16": 214
       },
-      "trend": "down",
-      "trend_delta": -2
+      "trend": "up",
+      "trend_delta": 179
     },
     {
       "id": "github:itsfatduck/optimizerDuck",
@@ -66,7 +191,7 @@
       "canonical_url": "github.com/meshery/meshery",
       "also_seen": [],
       "company": null,
-      "stars": 228,
+      "stars": 229,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -75,10 +200,10 @@
       "last_seen": "2026-06-16",
       "stars_history": {
         "2026-06-15": 20,
-        "2026-06-16": 228
+        "2026-06-16": 229
       },
       "trend": "up",
-      "trend_delta": 208
+      "trend_delta": 209
     },
     {
       "id": "github:krahets/hello-algo",
@@ -118,7 +243,7 @@
       "canonical_url": "github.com/freecodecamp/freecodecamp",
       "also_seen": [],
       "company": null,
-      "stars": 736,
+      "stars": 640,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -127,10 +252,10 @@
       "last_seen": "2026-06-16",
       "stars_history": {
         "2026-06-15": 146,
-        "2026-06-16": 736
+        "2026-06-16": 640
       },
       "trend": "up",
-      "trend_delta": 590
+      "trend_delta": 494
     },
     {
       "id": "github:trycua/cua",
@@ -326,19 +451,20 @@
       "canonical_url": "github.com/swc-project/swc",
       "also_seen": [],
       "company": null,
-      "stars": 20,
+      "stars": 21,
       "momentum": 1,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-16",
       "stars_history": {
         "2026-06-13": 12,
-        "2026-06-14": 20
+        "2026-06-14": 20,
+        "2026-06-16": 21
       },
       "trend": "up",
-      "trend_delta": 8
+      "trend_delta": 9
     },
     {
       "id": "github:andrewyng/aisuite",
@@ -426,7 +552,7 @@
       "canonical_url": "github.com/music-assistant/server",
       "also_seen": [],
       "company": null,
-      "stars": 225,
+      "stars": 157,
       "momentum": 0,
       "tags": [
         "python"
@@ -438,10 +564,10 @@
         "2026-06-13": 277,
         "2026-06-14": 270,
         "2026-06-15": 197,
-        "2026-06-16": 225
+        "2026-06-16": 157
       },
       "trend": "up",
-      "trend_delta": 219
+      "trend_delta": 151
     },
     {
       "id": "github:restic/restic",
@@ -506,7 +632,7 @@
       "canonical_url": "github.com/iptv-org/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 2657,
+      "stars": 1196,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -518,10 +644,10 @@
         "2026-06-13": 650,
         "2026-06-14": 530,
         "2026-06-15": 1528,
-        "2026-06-16": 2657
+        "2026-06-16": 1196
       },
       "trend": "up",
-      "trend_delta": 2515
+      "trend_delta": 1054
     },
     {
       "id": "github:bannedbook/fanqiang",
@@ -2421,18 +2547,19 @@
       "canonical_url": "github.com/openbmb/voxcpm",
       "also_seen": [],
       "company": null,
-      "stars": 713,
+      "stars": 413,
       "momentum": 71,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-16",
       "stars_history": {
-        "2026-06-03": 713
+        "2026-06-03": 713,
+        "2026-06-16": 413
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -300
     },
     {
       "id": "github:HKUDS/Vibe-Trading",
