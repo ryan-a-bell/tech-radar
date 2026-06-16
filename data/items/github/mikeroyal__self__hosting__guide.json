@@ -10,14 +10,15 @@
   "canonical_url": "github.com/mikeroyal/self-hosting-guide",
   "also_seen": [],
   "company": null,
-  "stars": 126,
+  "stars": 188,
   "momentum": 12,
   "tags": [
     "dockerfile"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-15",
+  "last_seen": "2026-06-16",
   "stars_history": {
-    "2026-06-15": 126
+    "2026-06-15": 126,
+    "2026-06-16": 188
   }
 }

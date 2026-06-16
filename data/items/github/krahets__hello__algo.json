@@ -10,14 +10,15 @@
   "canonical_url": "github.com/krahets/hello-algo",
   "also_seen": [],
   "company": null,
-  "stars": 34,
+  "stars": 71,
   "momentum": 3,
   "tags": [
     "java"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-15",
+  "last_seen": "2026-06-16",
   "stars_history": {
-    "2026-06-15": 34
+    "2026-06-15": 34,
+    "2026-06-16": 71
   }
 }

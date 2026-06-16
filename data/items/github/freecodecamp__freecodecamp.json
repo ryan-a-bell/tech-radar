@@ -10,14 +10,15 @@
   "canonical_url": "github.com/freecodecamp/freecodecamp",
   "also_seen": [],
   "company": null,
-  "stars": 146,
+  "stars": 736,
   "momentum": 14,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-15",
+  "last_seen": "2026-06-16",
   "stars_history": {
-    "2026-06-15": 146
+    "2026-06-15": 146,
+    "2026-06-16": 736
   }
 }

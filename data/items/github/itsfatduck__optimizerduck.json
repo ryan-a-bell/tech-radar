@@ -10,14 +10,15 @@
   "canonical_url": "github.com/itsfatduck/optimizerduck",
   "also_seen": [],
   "company": null,
-  "stars": 321,
+  "stars": 340,
   "momentum": 32,
   "tags": [
     "c#"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-15",
+  "last_seen": "2026-06-16",
   "stars_history": {
-    "2026-06-15": 321
+    "2026-06-15": 321,
+    "2026-06-16": 340
   }
 }
