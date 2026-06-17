@@ -10,19 +10,20 @@
   "canonical_url": "github.com/panniantong/agent-reach",
   "also_seen": [],
   "company": null,
-  "stars": 1100,
+  "stars": 2025,
   "momentum": 14,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-06",
-  "last_seen": "2026-06-16",
+  "last_seen": "2026-06-17",
   "stars_history": {
     "2026-06-06": 700,
     "2026-06-07": 683,
     "2026-06-08": 961,
     "2026-06-09": 679,
     "2026-06-15": 1045,
-    "2026-06-16": 1100
+    "2026-06-16": 1100,
+    "2026-06-17": 2025
   }
 }

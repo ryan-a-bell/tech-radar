@@ -1,7 +1,282 @@
 {
   "generated": "2026-06-17",
-  "count": 101,
+  "count": 113,
   "items": [
+    {
+      "id": "github:google-research/timesfm",
+      "name": "timesfm",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-research/timesfm",
+      "canonical_url": "github.com/google-research/timesfm",
+      "also_seen": [],
+      "company": null,
+      "stars": 84,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 84
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mattpocock/skills",
+      "name": "skills",
+      "description": "Skills for Real Engineers. Straight from my .claude directory.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mattpocock/skills",
+      "canonical_url": "github.com/mattpocock/skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 1849,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 1849
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alexzhang13/rlm",
+      "name": "rlm",
+      "description": "General plug-and-play inference library for Recursive Language Models (RLMs), supporting various sandboxes.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alexzhang13/rlm",
+      "canonical_url": "github.com/alexzhang13/rlm",
+      "also_seen": [],
+      "company": null,
+      "stars": 37,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 37
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:makeplane/plane",
+      "name": "plane",
+      "description": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/makeplane/plane",
+      "canonical_url": "github.com/makeplane/plane",
+      "also_seen": [],
+      "company": null,
+      "stars": 68,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 68
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:penpot/penpot",
+      "name": "penpot",
+      "description": "Penpot: The open-source design tool for design and code collaboration",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/penpot/penpot",
+      "canonical_url": "github.com/penpot/penpot",
+      "also_seen": [],
+      "company": null,
+      "stars": 94,
+      "momentum": 9,
+      "tags": [
+        "clojure"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 94
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nautechsystems/nautilus_trader",
+      "name": "nautilus_trader",
+      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "canonical_url": "github.com/nautechsystems/nautilus_trader",
+      "also_seen": [],
+      "company": null,
+      "stars": 86,
+      "momentum": 8,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 86
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:continuedev/continue",
+      "name": "continue",
+      "description": "open-source coding agent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/continuedev/continue",
+      "canonical_url": "github.com/continuedev/continue",
+      "also_seen": [],
+      "company": null,
+      "stars": 38,
+      "momentum": 3,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 38
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:DeusData/codebase-memory-mcp",
+      "name": "codebase-memory-mcp",
+      "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph \u2014 average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "canonical_url": "github.com/deusdata/codebase-memory-mcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 367,
+      "momentum": 36,
+      "tags": [
+        "c"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 367
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:yairm210/Unciv",
+      "name": "Unciv",
+      "description": "Open-source Android/Desktop remake of Civ V",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yairm210/Unciv",
+      "canonical_url": "github.com/yairm210/unciv",
+      "also_seen": [],
+      "company": null,
+      "stars": 41,
+      "momentum": 4,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 41
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bytedance/UI-TARS-desktop",
+      "name": "UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "canonical_url": "github.com/bytedance/ui-tars-desktop",
+      "also_seen": [],
+      "company": null,
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 148
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:RocketChat/Rocket.Chat",
+      "name": "Rocket.Chat",
+      "description": "The Secure CommsOS\u2122 for mission-critical operations",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/RocketChat/Rocket.Chat",
+      "canonical_url": "github.com/rocketchat/rocket.chat",
+      "also_seen": [],
+      "company": null,
+      "stars": 15,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 15
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:rmyndharis/OpenWA",
       "name": "OpenWA",
@@ -23,6 +298,31 @@
       "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-17": 185
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:calesthio/OpenMontage",
+      "name": "OpenMontage",
+      "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "canonical_url": "github.com/calesthio/openmontage",
+      "also_seen": [],
+      "company": null,
+      "stars": 71,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 71
       },
       "trend": "none",
       "trend_delta": 0
@@ -65,7 +365,7 @@
       "canonical_url": "github.com/universal-debloater-alliance/universal-android-debloater-next-generation",
       "also_seen": [],
       "company": null,
-      "stars": 146,
+      "stars": 465,
       "momentum": 14,
       "tags": [
         "rust"
@@ -74,10 +374,10 @@
       "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-16": 146,
-        "2026-06-17": 146
+        "2026-06-17": 465
       },
-      "trend": "flat",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 319
     },
     {
       "id": "github:puppeteer/puppeteer",
@@ -117,7 +417,7 @@
       "canonical_url": "github.com/n0-computer/iroh",
       "also_seen": [],
       "company": null,
-      "stars": 334,
+      "stars": 422,
       "momentum": 32,
       "tags": [
         "rust"
@@ -126,10 +426,10 @@
       "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-16": 326,
-        "2026-06-17": 334
+        "2026-06-17": 422
       },
       "trend": "up",
-      "trend_delta": 8
+      "trend_delta": 96
     },
     {
       "id": "github:cypress-io/cypress",
@@ -222,7 +522,7 @@
       "canonical_url": "github.com/meshery/meshery",
       "also_seen": [],
       "company": null,
-      "stars": 228,
+      "stars": 199,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -232,10 +532,10 @@
       "stars_history": {
         "2026-06-15": 20,
         "2026-06-16": 229,
-        "2026-06-17": 228
+        "2026-06-17": 199
       },
       "trend": "up",
-      "trend_delta": 208
+      "trend_delta": 179
     },
     {
       "id": "github:krahets/hello-algo",
@@ -249,19 +549,20 @@
       "canonical_url": "github.com/krahets/hello-algo",
       "also_seen": [],
       "company": null,
-      "stars": 71,
+      "stars": 109,
       "momentum": 3,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-15": 34,
-        "2026-06-16": 71
+        "2026-06-16": 71,
+        "2026-06-17": 109
       },
       "trend": "up",
-      "trend_delta": 37
+      "trend_delta": 75
     },
     {
       "id": "github:freeCodeCamp/freeCodeCamp",
@@ -275,7 +576,7 @@
       "canonical_url": "github.com/freecodecamp/freecodecamp",
       "also_seen": [],
       "company": null,
-      "stars": 633,
+      "stars": 764,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -285,10 +586,10 @@
       "stars_history": {
         "2026-06-15": 146,
         "2026-06-16": 640,
-        "2026-06-17": 633
+        "2026-06-17": 764
       },
       "trend": "up",
-      "trend_delta": 487
+      "trend_delta": 618
     },
     {
       "id": "github:trycua/cua",
@@ -724,22 +1025,23 @@
       "canonical_url": "github.com/chatwoot/chatwoot",
       "also_seen": [],
       "company": null,
-      "stars": 431,
+      "stars": 400,
       "momentum": 6,
       "tags": [
         "ruby"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-12": 67,
         "2026-06-13": 86,
         "2026-06-14": 83,
         "2026-06-15": 400,
-        "2026-06-16": 431
+        "2026-06-16": 431,
+        "2026-06-17": 400
       },
       "trend": "up",
-      "trend_delta": 364
+      "trend_delta": 333
     },
     {
       "id": "github:kenn-io/agentsview",
@@ -1709,13 +2011,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 924,
+      "stars": 1109,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -1723,10 +2025,11 @@
         "2026-06-11": 1104,
         "2026-06-12": 1276,
         "2026-06-13": 931,
-        "2026-06-14": 924
+        "2026-06-14": 924,
+        "2026-06-17": 1109
       },
       "trend": "up",
-      "trend_delta": 224
+      "trend_delta": 98
     },
     {
       "id": "github:openai/plugins",
@@ -2036,23 +2339,24 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 1100,
+      "stars": 2025,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
         "2026-06-08": 961,
         "2026-06-09": 679,
         "2026-06-15": 1045,
-        "2026-06-16": 1100
+        "2026-06-16": 1100,
+        "2026-06-17": 2025
       },
       "trend": "up",
-      "trend_delta": 421
+      "trend_delta": 1346
     },
     {
       "id": "github:github/spec-kit",

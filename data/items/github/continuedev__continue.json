@@ -1,0 +1,23 @@
+{
+  "id": "github:continuedev/continue",
+  "name": "continue",
+  "description": "open-source coding agent",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/continuedev/continue",
+  "canonical_url": "github.com/continuedev/continue",
+  "also_seen": [],
+  "company": null,
+  "stars": 38,
+  "momentum": 3,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-17",
+  "last_seen": "2026-06-17",
+  "stars_history": {
+    "2026-06-17": 38
+  }
+}

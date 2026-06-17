@@ -1,0 +1,23 @@
+{
+  "id": "github:penpot/penpot",
+  "name": "penpot",
+  "description": "Penpot: The open-source design tool for design and code collaboration",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/penpot/penpot",
+  "canonical_url": "github.com/penpot/penpot",
+  "also_seen": [],
+  "company": null,
+  "stars": 94,
+  "momentum": 9,
+  "tags": [
+    "clojure"
+  ],
+  "first_seen": "2026-06-17",
+  "last_seen": "2026-06-17",
+  "stars_history": {
+    "2026-06-17": 94
+  }
+}

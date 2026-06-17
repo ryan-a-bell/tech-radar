@@ -1,0 +1,23 @@
+{
+  "id": "github:nautechsystems/nautilus_trader",
+  "name": "nautilus_trader",
+  "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/nautechsystems/nautilus_trader",
+  "canonical_url": "github.com/nautechsystems/nautilus_trader",
+  "also_seen": [],
+  "company": null,
+  "stars": 86,
+  "momentum": 8,
+  "tags": [
+    "rust"
+  ],
+  "first_seen": "2026-06-17",
+  "last_seen": "2026-06-17",
+  "stars_history": {
+    "2026-06-17": 86
+  }
+}
