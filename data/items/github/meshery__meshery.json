@@ -10,15 +10,16 @@
   "canonical_url": "github.com/meshery/meshery",
   "also_seen": [],
   "company": null,
-  "stars": 229,
+  "stars": 228,
   "momentum": 2,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-16",
+  "last_seen": "2026-06-17",
   "stars_history": {
     "2026-06-15": 20,
-    "2026-06-16": 229
+    "2026-06-16": 229,
+    "2026-06-17": 228
   }
 }

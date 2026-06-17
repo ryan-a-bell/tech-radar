@@ -1,7 +1,32 @@
 {
-  "generated": "2026-06-16",
-  "count": 100,
+  "generated": "2026-06-17",
+  "count": 101,
   "items": [
+    {
+      "id": "github:rmyndharis/OpenWA",
+      "name": "OpenWA",
+      "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rmyndharis/OpenWA",
+      "canonical_url": "github.com/rmyndharis/openwa",
+      "also_seen": [],
+      "company": null,
+      "stars": 185,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 185
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:alibaba/zvec",
       "name": "zvec",
@@ -14,18 +39,19 @@
       "canonical_url": "github.com/alibaba/zvec",
       "also_seen": [],
       "company": null,
-      "stars": 251,
+      "stars": 156,
       "momentum": 25,
       "tags": [
         "c++"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
-        "2026-06-16": 251
+        "2026-06-16": 251,
+        "2026-06-17": 156
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -95
     },
     {
       "id": "github:Universal-Debloater-Alliance/universal-android-debloater-next-generation",
@@ -45,11 +71,12 @@
         "rust"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
-        "2026-06-16": 146
+        "2026-06-16": 146,
+        "2026-06-17": 146
       },
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -64,18 +91,19 @@
       "canonical_url": "github.com/puppeteer/puppeteer",
       "also_seen": [],
       "company": null,
-      "stars": 171,
+      "stars": 56,
       "momentum": 17,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
-        "2026-06-16": 171
+        "2026-06-16": 171,
+        "2026-06-17": 56
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -115
     },
     {
       "id": "github:n0-computer/iroh",
@@ -89,18 +117,19 @@
       "canonical_url": "github.com/n0-computer/iroh",
       "also_seen": [],
       "company": null,
-      "stars": 326,
+      "stars": 334,
       "momentum": 32,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
-        "2026-06-16": 326
+        "2026-06-16": 326,
+        "2026-06-17": 334
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:cypress-io/cypress",
@@ -114,18 +143,19 @@
       "canonical_url": "github.com/cypress-io/cypress",
       "also_seen": [],
       "company": null,
-      "stars": 11,
+      "stars": 13,
       "momentum": 1,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
-        "2026-06-16": 11
+        "2026-06-16": 11,
+        "2026-06-17": 13
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2
     },
     {
       "id": "github:teslamate-org/teslamate",
@@ -139,19 +169,20 @@
       "canonical_url": "github.com/teslamate-org/teslamate",
       "also_seen": [],
       "company": null,
-      "stars": 214,
+      "stars": 215,
       "momentum": 3,
       "tags": [
         "elixir"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-15": 35,
-        "2026-06-16": 214
+        "2026-06-16": 214,
+        "2026-06-17": 215
       },
       "trend": "up",
-      "trend_delta": 179
+      "trend_delta": 180
     },
     {
       "id": "github:itsfatduck/optimizerDuck",
@@ -191,19 +222,20 @@
       "canonical_url": "github.com/meshery/meshery",
       "also_seen": [],
       "company": null,
-      "stars": 229,
+      "stars": 228,
       "momentum": 2,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-15": 20,
-        "2026-06-16": 229
+        "2026-06-16": 229,
+        "2026-06-17": 228
       },
       "trend": "up",
-      "trend_delta": 209
+      "trend_delta": 208
     },
     {
       "id": "github:krahets/hello-algo",
@@ -243,19 +275,20 @@
       "canonical_url": "github.com/freecodecamp/freecodecamp",
       "also_seen": [],
       "company": null,
-      "stars": 640,
+      "stars": 633,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-15": 146,
-        "2026-06-16": 640
+        "2026-06-16": 640,
+        "2026-06-17": 633
       },
       "trend": "up",
-      "trend_delta": 494
+      "trend_delta": 487
     },
     {
       "id": "github:trycua/cua",
@@ -451,20 +484,21 @@
       "canonical_url": "github.com/swc-project/swc",
       "also_seen": [],
       "company": null,
-      "stars": 21,
+      "stars": 20,
       "momentum": 1,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-13": 12,
         "2026-06-14": 20,
-        "2026-06-16": 21
+        "2026-06-16": 21,
+        "2026-06-17": 20
       },
       "trend": "up",
-      "trend_delta": 9
+      "trend_delta": 8
     },
     {
       "id": "github:andrewyng/aisuite",
@@ -558,13 +592,14 @@
         "python"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-12": 6,
         "2026-06-13": 277,
         "2026-06-14": 270,
         "2026-06-15": 197,
-        "2026-06-16": 157
+        "2026-06-16": 157,
+        "2026-06-17": 157
       },
       "trend": "up",
       "trend_delta": 151
@@ -632,22 +667,23 @@
       "canonical_url": "github.com/iptv-org/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 1196,
+      "stars": 1197,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-12": 142,
         "2026-06-13": 650,
         "2026-06-14": 530,
         "2026-06-15": 1528,
-        "2026-06-16": 1196
+        "2026-06-16": 1196,
+        "2026-06-17": 1197
       },
       "trend": "up",
-      "trend_delta": 1054
+      "trend_delta": 1055
     },
     {
       "id": "github:bannedbook/fanqiang",
@@ -2547,19 +2583,20 @@
       "canonical_url": "github.com/openbmb/voxcpm",
       "also_seen": [],
       "company": null,
-      "stars": 413,
+      "stars": 408,
       "momentum": 71,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
       "stars_history": {
         "2026-06-03": 713,
-        "2026-06-16": 413
+        "2026-06-16": 413,
+        "2026-06-17": 408
       },
       "trend": "down",
-      "trend_delta": -300
+      "trend_delta": -305
     },
     {
       "id": "github:HKUDS/Vibe-Trading",
