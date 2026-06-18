@@ -10,15 +10,16 @@
   "canonical_url": "github.com/n0-computer/iroh",
   "also_seen": [],
   "company": null,
-  "stars": 422,
+  "stars": 421,
   "momentum": 32,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-16",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
     "2026-06-16": 326,
-    "2026-06-17": 422
+    "2026-06-17": 422,
+    "2026-06-18": 421
   }
 }

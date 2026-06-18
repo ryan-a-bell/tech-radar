@@ -10,14 +10,15 @@
   "canonical_url": "github.com/makeplane/plane",
   "also_seen": [],
   "company": null,
-  "stars": 68,
+  "stars": 89,
   "momentum": 6,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 68
+    "2026-06-17": 68,
+    "2026-06-18": 89
   }
 }

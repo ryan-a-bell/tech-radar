@@ -10,14 +10,15 @@
   "canonical_url": "github.com/rocketchat/rocket.chat",
   "also_seen": [],
   "company": null,
-  "stars": 15,
+  "stars": 22,
   "momentum": 1,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 15
+    "2026-06-17": 15,
+    "2026-06-18": 22
   }
 }

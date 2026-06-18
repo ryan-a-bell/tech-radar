@@ -10,15 +10,16 @@
   "canonical_url": "github.com/universal-debloater-alliance/universal-android-debloater-next-generation",
   "also_seen": [],
   "company": null,
-  "stars": 465,
+  "stars": 457,
   "momentum": 14,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-16",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
     "2026-06-16": 146,
-    "2026-06-17": 465
+    "2026-06-17": 465,
+    "2026-06-18": 457
   }
 }

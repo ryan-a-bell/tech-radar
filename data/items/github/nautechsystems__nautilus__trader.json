@@ -10,14 +10,15 @@
   "canonical_url": "github.com/nautechsystems/nautilus_trader",
   "also_seen": [],
   "company": null,
-  "stars": 86,
+  "stars": 98,
   "momentum": 8,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 86
+    "2026-06-17": 86,
+    "2026-06-18": 98
   }
 }

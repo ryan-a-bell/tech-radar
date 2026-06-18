@@ -10,14 +10,15 @@
   "canonical_url": "github.com/continuedev/continue",
   "also_seen": [],
   "company": null,
-  "stars": 38,
+  "stars": 49,
   "momentum": 3,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 38
+    "2026-06-17": 38,
+    "2026-06-18": 49
   }
 }

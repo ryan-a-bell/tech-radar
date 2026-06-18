@@ -10,14 +10,15 @@
   "canonical_url": "github.com/mattpocock/skills",
   "also_seen": [],
   "company": null,
-  "stars": 1849,
+  "stars": 1523,
   "momentum": 100,
   "tags": [
     "shell"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 1849
+    "2026-06-17": 1849,
+    "2026-06-18": 1523
   }
 }

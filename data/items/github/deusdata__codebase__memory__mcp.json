@@ -10,14 +10,15 @@
   "canonical_url": "github.com/deusdata/codebase-memory-mcp",
   "also_seen": [],
   "company": null,
-  "stars": 367,
+  "stars": 371,
   "momentum": 36,
   "tags": [
     "c"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
   "stars_history": {
-    "2026-06-17": 367
+    "2026-06-17": 367,
+    "2026-06-18": 371
   }
 }
