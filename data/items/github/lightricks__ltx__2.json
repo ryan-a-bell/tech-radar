@@ -1,0 +1,23 @@
+{
+  "id": "github:Lightricks/LTX-2",
+  "name": "LTX-2",
+  "description": "Official Python inference and LoRA trainer package for the LTX-2 audio\u2013video generative model.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Lightricks/LTX-2",
+  "canonical_url": "github.com/lightricks/ltx-2",
+  "also_seen": [],
+  "company": null,
+  "stars": 51,
+  "momentum": 5,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "stars_history": {
+    "2026-06-19": 51
+  }
+}

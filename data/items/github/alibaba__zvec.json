@@ -10,15 +10,16 @@
   "canonical_url": "github.com/alibaba/zvec",
   "also_seen": [],
   "company": null,
-  "stars": 156,
+  "stars": 259,
   "momentum": 25,
   "tags": [
     "c++"
   ],
   "first_seen": "2026-06-16",
-  "last_seen": "2026-06-17",
+  "last_seen": "2026-06-19",
   "stars_history": {
     "2026-06-16": 251,
-    "2026-06-17": 156
+    "2026-06-17": 156,
+    "2026-06-19": 259
   }
 }

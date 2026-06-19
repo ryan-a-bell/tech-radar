@@ -10,15 +10,16 @@
   "canonical_url": "github.com/google-research/timesfm",
   "also_seen": [],
   "company": null,
-  "stars": 606,
+  "stars": 844,
   "momentum": 8,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-18",
+  "last_seen": "2026-06-19",
   "stars_history": {
     "2026-06-17": 84,
-    "2026-06-18": 606
+    "2026-06-18": 606,
+    "2026-06-19": 844
   }
 }

@@ -1,0 +1,23 @@
+{
+  "id": "github:dotnet/aspnetcore",
+  "name": "aspnetcore",
+  "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/dotnet/aspnetcore",
+  "canonical_url": "github.com/dotnet/aspnetcore",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 14,
+  "momentum": 1,
+  "tags": [
+    "c#"
+  ],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "stars_history": {
+    "2026-06-19": 14
+  }
+}

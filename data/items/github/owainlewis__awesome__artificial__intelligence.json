@@ -1,0 +1,21 @@
+{
+  "id": "github:owainlewis/awesome-artificial-intelligence",
+  "name": "awesome-artificial-intelligence",
+  "description": "A curated list of Artificial Intelligence (AI) courses, books, video lectures and papers.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/owainlewis/awesome-artificial-intelligence",
+  "canonical_url": "github.com/owainlewis/awesome-artificial-intelligence",
+  "also_seen": [],
+  "company": null,
+  "stars": 40,
+  "momentum": 4,
+  "tags": [],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "stars_history": {
+    "2026-06-19": 40
+  }
+}

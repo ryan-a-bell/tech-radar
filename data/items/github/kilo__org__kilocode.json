@@ -1,0 +1,23 @@
+{
+  "id": "github:Kilo-Org/kilocode",
+  "name": "kilocode",
+  "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Kilo-Org/kilocode",
+  "canonical_url": "github.com/kilo-org/kilocode",
+  "also_seen": [],
+  "company": null,
+  "stars": 1345,
+  "momentum": 100,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "stars_history": {
+    "2026-06-19": 1345
+  }
+}
