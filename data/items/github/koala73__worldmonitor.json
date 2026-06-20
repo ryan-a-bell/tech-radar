@@ -1,0 +1,23 @@
+{
+  "id": "github:koala73/worldmonitor",
+  "name": "worldmonitor",
+  "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/koala73/worldmonitor",
+  "canonical_url": "github.com/koala73/worldmonitor",
+  "also_seen": [],
+  "company": null,
+  "stars": 156,
+  "momentum": 15,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "stars_history": {
+    "2026-06-20": 156
+  }
+}

@@ -10,15 +10,16 @@
   "canonical_url": "github.com/withastro/flue",
   "also_seen": [],
   "company": null,
-  "stars": 162,
+  "stars": 309,
   "momentum": 12,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-06",
-  "last_seen": "2026-06-19",
+  "last_seen": "2026-06-20",
   "stars_history": {
     "2026-06-06": 126,
-    "2026-06-19": 162
+    "2026-06-19": 162,
+    "2026-06-20": 309
   }
 }

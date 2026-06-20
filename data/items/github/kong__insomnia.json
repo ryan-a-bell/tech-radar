@@ -10,14 +10,15 @@
   "canonical_url": "github.com/kong/insomnia",
   "also_seen": [],
   "company": null,
-  "stars": 18,
+  "stars": 292,
   "momentum": 1,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-19",
+  "last_seen": "2026-06-20",
   "stars_history": {
-    "2026-06-19": 18
+    "2026-06-19": 18,
+    "2026-06-20": 292
   }
 }
