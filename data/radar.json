@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-21",
-  "count": 129,
+  "count": 137,
   "items": [
     {
       "id": "github:jamiepine/voicebox",
@@ -64,7 +64,7 @@
       "canonical_url": "github.com/tursodatabase/turso",
       "also_seen": [],
       "company": "Turso",
-      "stars": 801,
+      "stars": 543,
       "momentum": 80,
       "tags": [
         "rust"
@@ -72,7 +72,57 @@
       "first_seen": "2026-06-21",
       "last_seen": "2026-06-21",
       "stars_history": {
-        "2026-06-21": 801
+        "2026-06-21": 543
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:asgeirtj/system_prompts_leaks",
+      "name": "system_prompts_leaks",
+      "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
+      "also_seen": [],
+      "company": null,
+      "stars": 352,
+      "momentum": 35,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 352
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:smicallef/spiderfoot",
+      "name": "spiderfoot",
+      "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/smicallef/spiderfoot",
+      "canonical_url": "github.com/smicallef/spiderfoot",
+      "also_seen": [],
+      "company": null,
+      "stars": 288,
+      "momentum": 28,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 288
       },
       "trend": "none",
       "trend_delta": 0
@@ -103,6 +153,106 @@
       "trend_delta": 0
     },
     {
+      "id": "github:bytedance/deer-flow",
+      "name": "deer-flow",
+      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bytedance/deer-flow",
+      "canonical_url": "github.com/bytedance/deer-flow",
+      "also_seen": [],
+      "company": null,
+      "stars": 415,
+      "momentum": 41,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 415
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ZhuLinsen/daily_stock_analysis",
+      "name": "daily_stock_analysis",
+      "description": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
+      "also_seen": [],
+      "company": null,
+      "stars": 519,
+      "momentum": 51,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 519
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:topoteretes/cognee",
+      "name": "cognee",
+      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/topoteretes/cognee",
+      "canonical_url": "github.com/topoteretes/cognee",
+      "also_seen": [],
+      "company": null,
+      "stars": 361,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 361
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mikumifa/biliTickerBuy",
+      "name": "biliTickerBuy",
+      "description": "b\u7ad9\u4f1a\u5458\u8d2d\u8d2d\u7968\u8f85\u52a9\u5de5\u5177",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mikumifa/biliTickerBuy",
+      "canonical_url": "github.com/mikumifa/bilitickerbuy",
+      "also_seen": [],
+      "company": null,
+      "stars": 164,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 164
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:pppscn/SmsForwarder",
       "name": "SmsForwarder",
       "description": "\u77ed\u4fe1\u8f6c\u53d1\u5668\u2014\u2014\u76d1\u63a7Android\u624b\u673a\u77ed\u4fe1\u3001\u6765\u7535\u3001APP\u901a\u77e5\uff0c\u5e76\u6839\u636e\u6307\u5b9a\u89c4\u5219\u8f6c\u53d1\u5230\u5176\u4ed6\u624b\u673a\uff1a\u9489\u9489\u7fa4\u81ea\u5b9a\u4e49\u673a\u5668\u4eba\u3001\u9489\u9489\u4f01\u4e1a\u5185\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u7fa4\u673a\u5668\u4eba\u3001\u98de\u4e66\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u5e94\u7528\u6d88\u606f\u3001\u90ae\u7bb1\u3001bark\u3001webhook\u3001Telegram\u673a\u5668\u4eba\u3001Server\u9171\u3001PushPlus\u3001\u624b\u673a\u77ed\u4fe1\u7b49\u3002\u5305\u62ec\u4e3b\u52a8\u63a7\u5236\u670d\u52a1\u7aef\u4e0e\u5ba2\u6237\u7aef\uff0c\u8ba9\u4f60\u8f7b\u677e\u8fdc\u7a0b\u53d1\u77ed\u4fe1\u3001\u67e5\u77ed\u4fe1\u3001\u67e5\u901a\u8bdd\u3001\u67e5\u8bdd\u7c3f\u3001\u67e5\u7535\u91cf\u7b49\u3002\uff08V3.0 \u65b0\u589e\uff09PS.\u8fd9\u4e2aAPK\u4e3b\u8981\u662f\u5b66\u4e60\u4e0e\u81ea\u7528\uff0c\u5982\u6709BUG\u8bf7\u63d0ISSUE\uff0c\u540c\u65f6\u6b22\u8fce\u5927\u5bb6\u63d0PR\u6307\u6b63",
@@ -128,6 +278,54 @@
       "trend_delta": 0
     },
     {
+      "id": "github:byoungd/English-level-up-tips",
+      "name": "English-level-up-tips",
+      "description": "An advanced guide to learn English which might benefit you a lot \ud83c\udf89 . \u79bb\u8c31\u7684\u82f1\u8bed\u5b66\u4e60\u6307\u5357/\u82f1\u8bed\u5b66\u4e60\u6559\u7a0b/\u82f1\u8bed\u5b66\u4e60/\u5b66\u82f1\u8bed",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/byoungd/English-level-up-tips",
+      "canonical_url": "github.com/byoungd/english-level-up-tips",
+      "also_seen": [],
+      "company": null,
+      "stars": 121,
+      "momentum": 12,
+      "tags": [],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 121
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mukul975/Anthropic-Cybersecurity-Skills",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "description": "754 structured cybersecurity skills for AI agents \u00b7 Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 26 security domains \u00b7 Apache 2.0",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 343,
+      "momentum": 34,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 343
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:koala73/worldmonitor",
       "name": "worldmonitor",
       "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
@@ -139,18 +337,19 @@
       "canonical_url": "github.com/koala73/worldmonitor",
       "also_seen": [],
       "company": null,
-      "stars": 156,
+      "stars": 633,
       "momentum": 15,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
-        "2026-06-20": 156
+        "2026-06-20": 156,
+        "2026-06-21": 633
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 477
     },
     {
       "id": "github:palmier-io/palmier-pro",
@@ -164,7 +363,7 @@
       "canonical_url": "github.com/palmier-io/palmier-pro",
       "also_seen": [],
       "company": null,
-      "stars": 902,
+      "stars": 1829,
       "momentum": 75,
       "tags": [
         "swift"
@@ -173,10 +372,10 @@
       "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-20": 756,
-        "2026-06-21": 902
+        "2026-06-21": 1829
       },
       "trend": "up",
-      "trend_delta": 146
+      "trend_delta": 1073
     },
     {
       "id": "github:aishwaryanr/awesome-generative-ai-guide",
@@ -446,7 +645,7 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1395,
+      "stars": 1441,
       "momentum": 100,
       "tags": [
         "shell"
@@ -456,10 +655,10 @@
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
-        "2026-06-21": 1395
+        "2026-06-21": 1441
       },
       "trend": "down",
-      "trend_delta": -454
+      "trend_delta": -408
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -526,7 +725,7 @@
       "canonical_url": "github.com/penpot/penpot",
       "also_seen": [],
       "company": null,
-      "stars": 420,
+      "stars": 1131,
       "momentum": 9,
       "tags": [
         "clojure"
@@ -537,10 +736,10 @@
         "2026-06-17": 94,
         "2026-06-18": 70,
         "2026-06-20": 85,
-        "2026-06-21": 420
+        "2026-06-21": 1131
       },
       "trend": "up",
-      "trend_delta": 326
+      "trend_delta": 1037
     },
     {
       "id": "github:nautechsystems/nautilus_trader",
@@ -606,7 +805,7 @@
       "canonical_url": "github.com/deusdata/codebase-memory-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 1271,
+      "stars": 1029,
       "momentum": 36,
       "tags": [
         "c"
@@ -618,10 +817,10 @@
         "2026-06-18": 371,
         "2026-06-19": 2322,
         "2026-06-20": 1058,
-        "2026-06-21": 1271
+        "2026-06-21": 1029
       },
       "trend": "up",
-      "trend_delta": 904
+      "trend_delta": 662
     },
     {
       "id": "github:yairm210/Unciv",
@@ -738,7 +937,7 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 677,
+      "stars": 993,
       "momentum": 7,
       "tags": [
         "python"
@@ -749,10 +948,10 @@
         "2026-06-17": 71,
         "2026-06-18": 98,
         "2026-06-20": 156,
-        "2026-06-21": 677
+        "2026-06-21": 993
       },
       "trend": "up",
-      "trend_delta": 606
+      "trend_delta": 922
     },
     {
       "id": "github:alibaba/zvec",
@@ -3228,7 +3427,7 @@
       "canonical_url": "github.com/chopratejas/headroom",
       "also_seen": [],
       "company": null,
-      "stars": 3795,
+      "stars": 2617,
       "momentum": 100,
       "tags": [
         "python"
@@ -3241,10 +3440,10 @@
         "2026-06-05": 3142,
         "2026-06-06": 2473,
         "2026-06-20": 4005,
-        "2026-06-21": 3795
+        "2026-06-21": 2617
       },
       "trend": "up",
-      "trend_delta": 1322
+      "trend_delta": 144
     },
     {
       "id": "github:reconurge/flowsint",

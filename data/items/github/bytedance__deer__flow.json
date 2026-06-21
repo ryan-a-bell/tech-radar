@@ -1,0 +1,23 @@
+{
+  "id": "github:bytedance/deer-flow",
+  "name": "deer-flow",
+  "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/bytedance/deer-flow",
+  "canonical_url": "github.com/bytedance/deer-flow",
+  "also_seen": [],
+  "company": null,
+  "stars": 415,
+  "momentum": 41,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "stars_history": {
+    "2026-06-21": 415
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "github:topoteretes/cognee",
+  "name": "cognee",
+  "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/topoteretes/cognee",
+  "canonical_url": "github.com/topoteretes/cognee",
+  "also_seen": [],
+  "company": null,
+  "stars": 361,
+  "momentum": 36,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "stars_history": {
+    "2026-06-21": 361
+  }
+}
