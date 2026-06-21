@@ -1,7 +1,132 @@
 {
-  "generated": "2026-06-20",
-  "count": 124,
+  "generated": "2026-06-21",
+  "count": 129,
   "items": [
+    {
+      "id": "github:jamiepine/voicebox",
+      "name": "voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jamiepine/voicebox",
+      "canonical_url": "github.com/jamiepine/voicebox",
+      "also_seen": [],
+      "company": null,
+      "stars": 145,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 145
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:twentyhq/twenty",
+      "name": "twenty",
+      "description": "The open alternative to Salesforce, designed for AI.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/twentyhq/twenty",
+      "canonical_url": "github.com/twentyhq/twenty",
+      "also_seen": [],
+      "company": null,
+      "stars": 140,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 140
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tursodatabase/turso",
+      "name": "turso",
+      "description": "Turso is an in-process SQL database, compatible with SQLite.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tursodatabase/turso",
+      "canonical_url": "github.com/tursodatabase/turso",
+      "also_seen": [],
+      "company": "Turso",
+      "stars": 801,
+      "momentum": 80,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 801
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:1jehuang/jcode",
+      "name": "jcode",
+      "description": "Coding Agent Harness",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/1jehuang/jcode",
+      "canonical_url": "github.com/1jehuang/jcode",
+      "also_seen": [],
+      "company": null,
+      "stars": 87,
+      "momentum": 8,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 87
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:pppscn/SmsForwarder",
+      "name": "SmsForwarder",
+      "description": "\u77ed\u4fe1\u8f6c\u53d1\u5668\u2014\u2014\u76d1\u63a7Android\u624b\u673a\u77ed\u4fe1\u3001\u6765\u7535\u3001APP\u901a\u77e5\uff0c\u5e76\u6839\u636e\u6307\u5b9a\u89c4\u5219\u8f6c\u53d1\u5230\u5176\u4ed6\u624b\u673a\uff1a\u9489\u9489\u7fa4\u81ea\u5b9a\u4e49\u673a\u5668\u4eba\u3001\u9489\u9489\u4f01\u4e1a\u5185\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u7fa4\u673a\u5668\u4eba\u3001\u98de\u4e66\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u5e94\u7528\u6d88\u606f\u3001\u90ae\u7bb1\u3001bark\u3001webhook\u3001Telegram\u673a\u5668\u4eba\u3001Server\u9171\u3001PushPlus\u3001\u624b\u673a\u77ed\u4fe1\u7b49\u3002\u5305\u62ec\u4e3b\u52a8\u63a7\u5236\u670d\u52a1\u7aef\u4e0e\u5ba2\u6237\u7aef\uff0c\u8ba9\u4f60\u8f7b\u677e\u8fdc\u7a0b\u53d1\u77ed\u4fe1\u3001\u67e5\u77ed\u4fe1\u3001\u67e5\u901a\u8bdd\u3001\u67e5\u8bdd\u7c3f\u3001\u67e5\u7535\u91cf\u7b49\u3002\uff08V3.0 \u65b0\u589e\uff09PS.\u8fd9\u4e2aAPK\u4e3b\u8981\u662f\u5b66\u4e60\u4e0e\u81ea\u7528\uff0c\u5982\u6709BUG\u8bf7\u63d0ISSUE\uff0c\u540c\u65f6\u6b22\u8fce\u5927\u5bb6\u63d0PR\u6307\u6b63",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pppscn/SmsForwarder",
+      "canonical_url": "github.com/pppscn/smsforwarder",
+      "also_seen": [],
+      "company": null,
+      "stars": 104,
+      "momentum": 10,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 104
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:koala73/worldmonitor",
       "name": "worldmonitor",
@@ -39,18 +164,19 @@
       "canonical_url": "github.com/palmier-io/palmier-pro",
       "also_seen": [],
       "company": null,
-      "stars": 756,
+      "stars": 902,
       "momentum": 75,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
-        "2026-06-20": 756
+        "2026-06-20": 756,
+        "2026-06-21": 902
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 146
     },
     {
       "id": "github:aishwaryanr/awesome-generative-ai-guide",
@@ -114,18 +240,19 @@
       "canonical_url": "github.com/kilo-org/kilocode",
       "also_seen": [],
       "company": null,
-      "stars": 1345,
+      "stars": 513,
       "momentum": 100,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19",
+      "last_seen": "2026-06-21",
       "stars_history": {
-        "2026-06-19": 1345
+        "2026-06-19": 1345,
+        "2026-06-21": 513
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -832
     },
     {
       "id": "github:Kong/insomnia",
@@ -139,19 +266,20 @@
       "canonical_url": "github.com/kong/insomnia",
       "also_seen": [],
       "company": null,
-      "stars": 292,
+      "stars": 329,
       "momentum": 1,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-19": 18,
-        "2026-06-20": 292
+        "2026-06-20": 292,
+        "2026-06-21": 329
       },
       "trend": "up",
-      "trend_delta": 274
+      "trend_delta": 311
     },
     {
       "id": "github:owainlewis/awesome-artificial-intelligence",
@@ -165,16 +293,17 @@
       "canonical_url": "github.com/owainlewis/awesome-artificial-intelligence",
       "also_seen": [],
       "company": null,
-      "stars": 40,
+      "stars": 48,
       "momentum": 4,
       "tags": [],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19",
+      "last_seen": "2026-06-21",
       "stars_history": {
-        "2026-06-19": 40
+        "2026-06-19": 40,
+        "2026-06-21": 48
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:dotnet/aspnetcore",
@@ -288,21 +417,22 @@
       "canonical_url": "github.com/google-research/timesfm",
       "also_seen": [],
       "company": null,
-      "stars": 1510,
+      "stars": 433,
       "momentum": 8,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-17": 84,
         "2026-06-18": 606,
         "2026-06-19": 844,
-        "2026-06-20": 1510
+        "2026-06-20": 1510,
+        "2026-06-21": 433
       },
       "trend": "up",
-      "trend_delta": 1426
+      "trend_delta": 349
     },
     {
       "id": "github:mattpocock/skills",
@@ -316,19 +446,20 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1523,
+      "stars": 1395,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-17": 1849,
-        "2026-06-18": 1523
+        "2026-06-18": 1523,
+        "2026-06-21": 1395
       },
       "trend": "down",
-      "trend_delta": -326
+      "trend_delta": -454
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -395,20 +526,21 @@
       "canonical_url": "github.com/penpot/penpot",
       "also_seen": [],
       "company": null,
-      "stars": 85,
+      "stars": 420,
       "momentum": 9,
       "tags": [
         "clojure"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-17": 94,
         "2026-06-18": 70,
-        "2026-06-20": 85
+        "2026-06-20": 85,
+        "2026-06-21": 420
       },
-      "trend": "down",
-      "trend_delta": -9
+      "trend": "up",
+      "trend_delta": 326
     },
     {
       "id": "github:nautechsystems/nautilus_trader",
@@ -474,21 +606,22 @@
       "canonical_url": "github.com/deusdata/codebase-memory-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 1058,
+      "stars": 1271,
       "momentum": 36,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-17": 367,
         "2026-06-18": 371,
         "2026-06-19": 2322,
-        "2026-06-20": 1058
+        "2026-06-20": 1058,
+        "2026-06-21": 1271
       },
       "trend": "up",
-      "trend_delta": 691
+      "trend_delta": 904
     },
     {
       "id": "github:yairm210/Unciv",
@@ -605,20 +738,21 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 156,
+      "stars": 677,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
-        "2026-06-20": 156
+        "2026-06-20": 156,
+        "2026-06-21": 677
       },
       "trend": "up",
-      "trend_delta": 85
+      "trend_delta": 606
     },
     {
       "id": "github:alibaba/zvec",
@@ -2485,20 +2619,21 @@
       "canonical_url": "github.com/withastro/flue",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 316,
       "momentum": 12,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-06": 126,
         "2026-06-19": 162,
-        "2026-06-20": 309
+        "2026-06-20": 309,
+        "2026-06-21": 316
       },
       "trend": "up",
-      "trend_delta": 183
+      "trend_delta": 190
     },
     {
       "id": "github:santifer/career-ops",
@@ -3093,22 +3228,23 @@
       "canonical_url": "github.com/chopratejas/headroom",
       "also_seen": [],
       "company": null,
-      "stars": 4005,
+      "stars": 3795,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-06-21",
       "stars_history": {
         "2026-06-03": 3530,
         "2026-06-04": 3139,
         "2026-06-05": 3142,
         "2026-06-06": 2473,
-        "2026-06-20": 4005
+        "2026-06-20": 4005,
+        "2026-06-21": 3795
       },
       "trend": "up",
-      "trend_delta": 1532
+      "trend_delta": 1322
     },
     {
       "id": "github:reconurge/flowsint",

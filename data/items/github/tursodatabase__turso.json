@@ -1,0 +1,23 @@
+{
+  "id": "github:tursodatabase/turso",
+  "name": "turso",
+  "description": "Turso is an in-process SQL database, compatible with SQLite.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/tursodatabase/turso",
+  "canonical_url": "github.com/tursodatabase/turso",
+  "also_seen": [],
+  "company": "Turso",
+  "stars": 801,
+  "momentum": 80,
+  "tags": [
+    "rust"
+  ],
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "stars_history": {
+    "2026-06-21": 801
+  }
+}
