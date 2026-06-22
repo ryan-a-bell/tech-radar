@@ -1,0 +1,23 @@
+{
+  "id": "github:firecrawl/firecrawl",
+  "name": "firecrawl",
+  "description": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/firecrawl/firecrawl",
+  "canonical_url": "github.com/firecrawl/firecrawl",
+  "also_seen": [],
+  "company": null,
+  "stars": 513,
+  "momentum": 51,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-22",
+  "last_seen": "2026-06-22",
+  "stars_history": {
+    "2026-06-22": 513
+  }
+}

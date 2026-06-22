@@ -10,17 +10,18 @@
   "canonical_url": "github.com/calesthio/openmontage",
   "also_seen": [],
   "company": null,
-  "stars": 993,
+  "stars": 987,
   "momentum": 7,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-21",
+  "last_seen": "2026-06-22",
   "stars_history": {
     "2026-06-17": 71,
     "2026-06-18": 98,
     "2026-06-20": 156,
-    "2026-06-21": 993
+    "2026-06-21": 993,
+    "2026-06-22": 987
   }
 }

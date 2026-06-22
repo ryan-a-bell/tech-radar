@@ -1,0 +1,23 @@
+{
+  "id": "github:JCodesMore/ai-website-cloner-template",
+  "name": "ai-website-cloner-template",
+  "description": "Clone any website with one command using AI coding agents",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+  "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
+  "also_seen": [],
+  "company": null,
+  "stars": 63,
+  "momentum": 6,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-22",
+  "last_seen": "2026-06-22",
+  "stars_history": {
+    "2026-06-22": 63
+  }
+}

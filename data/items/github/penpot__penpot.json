@@ -10,17 +10,18 @@
   "canonical_url": "github.com/penpot/penpot",
   "also_seen": [],
   "company": null,
-  "stars": 1131,
+  "stars": 1135,
   "momentum": 9,
   "tags": [
     "clojure"
   ],
   "first_seen": "2026-06-17",
-  "last_seen": "2026-06-21",
+  "last_seen": "2026-06-22",
   "stars_history": {
     "2026-06-17": 94,
     "2026-06-18": 70,
     "2026-06-20": 85,
-    "2026-06-21": 1131
+    "2026-06-21": 1131,
+    "2026-06-22": 1135
   }
 }

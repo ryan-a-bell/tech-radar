@@ -10,14 +10,15 @@
   "canonical_url": "github.com/bytedance/deer-flow",
   "also_seen": [],
   "company": null,
-  "stars": 415,
+  "stars": 442,
   "momentum": 41,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-21",
+  "last_seen": "2026-06-22",
   "stars_history": {
-    "2026-06-21": 415
+    "2026-06-21": 415,
+    "2026-06-22": 442
   }
 }

@@ -1,0 +1,23 @@
+{
+  "id": "github:garrytan/gstack",
+  "name": "gstack",
+  "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/garrytan/gstack",
+  "canonical_url": "github.com/garrytan/gstack",
+  "also_seen": [],
+  "company": null,
+  "stars": 454,
+  "momentum": 45,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-22",
+  "last_seen": "2026-06-22",
+  "stars_history": {
+    "2026-06-22": 454
+  }
+}
