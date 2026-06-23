@@ -10,15 +10,16 @@
   "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
   "also_seen": [],
   "company": null,
-  "stars": 568,
+  "stars": 1557,
   "momentum": 51,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
     "2026-06-21": 519,
-    "2026-06-22": 568
+    "2026-06-22": 568,
+    "2026-06-23": 1557
   }
 }

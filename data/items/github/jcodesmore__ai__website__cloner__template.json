@@ -10,14 +10,15 @@
   "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
   "also_seen": [],
   "company": null,
-  "stars": 63,
+  "stars": 100,
   "momentum": 6,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
-    "2026-06-22": 63
+    "2026-06-22": 63,
+    "2026-06-23": 100
   }
 }

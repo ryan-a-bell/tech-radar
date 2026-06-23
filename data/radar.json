@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-22",
+  "generated": "2026-06-23",
   "count": 142,
   "items": [
     {
@@ -14,18 +14,19 @@
       "canonical_url": "github.com/heygen-com/hyperframes",
       "also_seen": [],
       "company": null,
-      "stars": 369,
+      "stars": 395,
       "momentum": 36,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
-        "2026-06-22": 369
+        "2026-06-22": 369,
+        "2026-06-23": 395
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 26
     },
     {
       "id": "github:garrytan/gstack",
@@ -39,18 +40,19 @@
       "canonical_url": "github.com/garrytan/gstack",
       "also_seen": [],
       "company": null,
-      "stars": 454,
+      "stars": 573,
       "momentum": 45,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
-        "2026-06-22": 454
+        "2026-06-22": 454,
+        "2026-06-23": 573
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 119
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -64,18 +66,19 @@
       "canonical_url": "github.com/firecrawl/firecrawl",
       "also_seen": [],
       "company": null,
-      "stars": 513,
+      "stars": 615,
       "momentum": 51,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
-        "2026-06-22": 513
+        "2026-06-22": 513,
+        "2026-06-23": 615
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 102
     },
     {
       "id": "github:JCodesMore/ai-website-cloner-template",
@@ -89,18 +92,19 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 63,
+      "stars": 100,
       "momentum": 6,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
-        "2026-06-22": 63
+        "2026-06-22": 63,
+        "2026-06-23": 100
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 37
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -114,18 +118,19 @@
       "canonical_url": "github.com/stirling-tools/stirling-pdf",
       "also_seen": [],
       "company": null,
-      "stars": 394,
+      "stars": 547,
       "momentum": 39,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
-        "2026-06-22": 394
+        "2026-06-22": 394,
+        "2026-06-23": 547
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 153
     },
     {
       "id": "github:jamiepine/voicebox",
@@ -139,19 +144,20 @@
       "canonical_url": "github.com/jamiepine/voicebox",
       "also_seen": [],
       "company": null,
-      "stars": 614,
+      "stars": 529,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-21": 145,
-        "2026-06-22": 614
+        "2026-06-22": 614,
+        "2026-06-23": 529
       },
       "trend": "up",
-      "trend_delta": 469
+      "trend_delta": 384
     },
     {
       "id": "github:twentyhq/twenty",
@@ -190,19 +196,20 @@
       "canonical_url": "github.com/tursodatabase/turso",
       "also_seen": [],
       "company": "Turso",
-      "stars": 548,
+      "stars": 540,
       "momentum": 80,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-21": 543,
-        "2026-06-22": 548
+        "2026-06-22": 548,
+        "2026-06-23": 540
       },
-      "trend": "up",
-      "trend_delta": 5
+      "trend": "down",
+      "trend_delta": -3
     },
     {
       "id": "github:asgeirtj/system_prompts_leaks",
@@ -291,19 +298,20 @@
       "canonical_url": "github.com/bytedance/deer-flow",
       "also_seen": [],
       "company": null,
-      "stars": 442,
+      "stars": 738,
       "momentum": 41,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-21": 415,
-        "2026-06-22": 442
+        "2026-06-22": 442,
+        "2026-06-23": 738
       },
       "trend": "up",
-      "trend_delta": 27
+      "trend_delta": 323
     },
     {
       "id": "github:ZhuLinsen/daily_stock_analysis",
@@ -317,19 +325,20 @@
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "also_seen": [],
       "company": null,
-      "stars": 568,
+      "stars": 1557,
       "momentum": 51,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-21": 519,
-        "2026-06-22": 568
+        "2026-06-22": 568,
+        "2026-06-23": 1557
       },
       "trend": "up",
-      "trend_delta": 49
+      "trend_delta": 1038
     },
     {
       "id": "github:topoteretes/cognee",
@@ -441,19 +450,20 @@
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "also_seen": [],
       "company": null,
-      "stars": 361,
+      "stars": 956,
       "momentum": 34,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-21": 343,
-        "2026-06-22": 361
+        "2026-06-22": 361,
+        "2026-06-23": 956
       },
       "trend": "up",
-      "trend_delta": 18
+      "trend_delta": 613
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -493,20 +503,21 @@
       "canonical_url": "github.com/palmier-io/palmier-pro",
       "also_seen": [],
       "company": null,
-      "stars": 1834,
+      "stars": 2463,
       "momentum": 75,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-20": 756,
         "2026-06-21": 1829,
-        "2026-06-22": 1834
+        "2026-06-22": 1834,
+        "2026-06-23": 2463
       },
       "trend": "up",
-      "trend_delta": 1078
+      "trend_delta": 1707
     },
     {
       "id": "github:aishwaryanr/awesome-generative-ai-guide",
@@ -776,21 +787,22 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1443,
+      "stars": 2051,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
         "2026-06-21": 1441,
-        "2026-06-22": 1443
+        "2026-06-22": 1443,
+        "2026-06-23": 2051
       },
-      "trend": "down",
-      "trend_delta": -406
+      "trend": "up",
+      "trend_delta": 202
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -857,22 +869,23 @@
       "canonical_url": "github.com/penpot/penpot",
       "also_seen": [],
       "company": null,
-      "stars": 1135,
+      "stars": 728,
       "momentum": 9,
       "tags": [
         "clojure"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-17": 94,
         "2026-06-18": 70,
         "2026-06-20": 85,
         "2026-06-21": 1131,
-        "2026-06-22": 1135
+        "2026-06-22": 1135,
+        "2026-06-23": 728
       },
       "trend": "up",
-      "trend_delta": 1041
+      "trend_delta": 634
     },
     {
       "id": "github:nautechsystems/nautilus_trader",
@@ -938,23 +951,24 @@
       "canonical_url": "github.com/deusdata/codebase-memory-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 1032,
+      "stars": 1185,
       "momentum": 36,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-17": 367,
         "2026-06-18": 371,
         "2026-06-19": 2322,
         "2026-06-20": 1058,
         "2026-06-21": 1029,
-        "2026-06-22": 1032
+        "2026-06-22": 1032,
+        "2026-06-23": 1185
       },
       "trend": "up",
-      "trend_delta": 665
+      "trend_delta": 818
     },
     {
       "id": "github:yairm210/Unciv",
@@ -1071,22 +1085,23 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 987,
+      "stars": 2938,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
         "2026-06-20": 156,
         "2026-06-21": 993,
-        "2026-06-22": 987
+        "2026-06-22": 987,
+        "2026-06-23": 2938
       },
       "trend": "up",
-      "trend_delta": 916
+      "trend_delta": 2867
     },
     {
       "id": "github:alibaba/zvec",
@@ -3644,19 +3659,20 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 453,
+      "stars": 193,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
       "stars_history": {
         "2026-06-03": 208,
-        "2026-06-22": 453
+        "2026-06-22": 453,
+        "2026-06-23": 193
       },
-      "trend": "up",
-      "trend_delta": 245
+      "trend": "down",
+      "trend_delta": -15
     },
     {
       "id": "github:OpenBMB/VoxCPM",

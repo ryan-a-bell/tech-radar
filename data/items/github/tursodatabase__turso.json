@@ -10,15 +10,16 @@
   "canonical_url": "github.com/tursodatabase/turso",
   "also_seen": [],
   "company": "Turso",
-  "stars": 548,
+  "stars": 540,
   "momentum": 80,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
     "2026-06-21": 543,
-    "2026-06-22": 548
+    "2026-06-22": 548,
+    "2026-06-23": 540
   }
 }

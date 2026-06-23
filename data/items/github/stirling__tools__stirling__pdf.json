@@ -10,14 +10,15 @@
   "canonical_url": "github.com/stirling-tools/stirling-pdf",
   "also_seen": [],
   "company": null,
-  "stars": 394,
+  "stars": 547,
   "momentum": 39,
   "tags": [
     "java"
   ],
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
-    "2026-06-22": 394
+    "2026-06-22": 394,
+    "2026-06-23": 547
   }
 }

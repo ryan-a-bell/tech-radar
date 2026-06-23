@@ -9,15 +9,16 @@
   "canonical_url": "github.com/lyogavin/airllm",
   "also_seen": [],
   "company": null,
-  "stars": 453,
+  "stars": 193,
   "momentum": 20,
   "tags": [
     "jupyter notebook"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
     "2026-06-03": 208,
-    "2026-06-22": 453
+    "2026-06-22": 453,
+    "2026-06-23": 193
   }
 }

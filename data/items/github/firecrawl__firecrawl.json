@@ -10,14 +10,15 @@
   "canonical_url": "github.com/firecrawl/firecrawl",
   "also_seen": [],
   "company": null,
-  "stars": 513,
+  "stars": 615,
   "momentum": 51,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
   "stars_history": {
-    "2026-06-22": 513
+    "2026-06-22": 513,
+    "2026-06-23": 615
   }
 }
