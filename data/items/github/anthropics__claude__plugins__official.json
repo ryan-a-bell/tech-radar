@@ -1,0 +1,23 @@
+{
+  "id": "github:anthropics/claude-plugins-official",
+  "name": "claude-plugins-official",
+  "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/anthropics/claude-plugins-official",
+  "canonical_url": "github.com/anthropics/claude-plugins-official",
+  "also_seen": [],
+  "company": "Anthropic",
+  "stars": 77,
+  "momentum": 7,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-24",
+  "stars_history": {
+    "2026-06-24": 77
+  }
+}

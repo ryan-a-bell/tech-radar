@@ -10,15 +10,16 @@
   "canonical_url": "github.com/koala73/worldmonitor",
   "also_seen": [],
   "company": null,
-  "stars": 633,
+  "stars": 294,
   "momentum": 15,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-21",
+  "last_seen": "2026-06-24",
   "stars_history": {
     "2026-06-20": 156,
-    "2026-06-21": 633
+    "2026-06-21": 633,
+    "2026-06-24": 294
   }
 }

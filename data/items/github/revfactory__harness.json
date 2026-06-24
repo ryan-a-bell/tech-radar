@@ -1,0 +1,23 @@
+{
+  "id": "github:revfactory/harness",
+  "name": "harness",
+  "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/revfactory/harness",
+  "canonical_url": "github.com/revfactory/harness",
+  "also_seen": [],
+  "company": null,
+  "stars": 128,
+  "momentum": 12,
+  "tags": [
+    "html"
+  ],
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-24",
+  "stars_history": {
+    "2026-06-24": 128
+  }
+}
