@@ -201,19 +201,21 @@ tech-radar/
 ├── runner.py           # discovery orchestrator — runs scrapers daily
 ├── radar.py            # curation CLI — human triage and ring management
 ├── radar_core.py       # shared library — item schema, dedup, persistence
-├── build_site.py       # static site assembler
-├── edit_server.py      # local server — serves dashboard.jsx with editing on
+├── build_site.py       # static site assembler — bundles web/ → site/
+├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
 │   ├── base.py         # Scraper base class (the discover() contract)
 │   ├── github_trending.py
 │   ├── reddit.py
 │   └── rss_feeds.py    # registered; discover() is still a stub
-├── index.html          # HTML shell — loads config.js + dashboard.jsx via CDN
-├── config.js           # runtime flag — window.RADAR_EDIT (false in the build)
-├── dashboard.jsx       # React dashboard — Atlas/Observatory/Dispatch + edit mode
+├── web/                # the browser frontend (served as-is, no build step)
+│   ├── index.html      # HTML shell — loads config.js + dashboard.jsx via CDN
+│   ├── config.js       # runtime flag — window.RADAR_EDIT (false in the build)
+│   ├── dashboard.jsx   # React dashboard — Atlas/Observatory/Dispatch + edit mode
+│   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
 ├── tests/              # stdlib unittest suite for radar_core
+├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
-├── concept-drawings/   # Prototype dashboard concepts (dashboard2/3.jsx)
 ├── data/
 │   ├── items/          # one .json file per technology (generated)
 │   │   ├── github/

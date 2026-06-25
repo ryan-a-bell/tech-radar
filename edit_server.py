@@ -5,8 +5,9 @@ edit_server.py — local curation server for the technology radar.
   python edit_server.py          # http://localhost:8001/
   python edit_server.py 8080     # custom port
 
-Serves the SAME index.html + dashboard.jsx as the public site, but with one
-difference: it answers GET /config.js with `window.RADAR_EDIT = true`, which
+Serves the SAME web/ bundle (index.html + dashboard.jsx) as the public site —
+/data/* is mapped to the repo-root data/ dir — but with one difference: it
+answers GET /config.js with `window.RADAR_EDIT = true`, which
 unlocks the in-browser ring editor. Ring changes POST to /api/promote and are
 written straight to data/items/*.json, rebuilding radar.json immediately.
 
@@ -18,16 +19,30 @@ editing on, and only on your machine.
 import json
 import os
 import sys
+import urllib.parse
 from datetime import date
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+WEB_DIR = os.path.join(HERE, "web")     # the frontend bundle, served as docroot
 sys.path.insert(0, HERE)
 import radar_core as core
 from runner import build_radar_json
 
 
 class EditHandler(SimpleHTTPRequestHandler):
+
+    def translate_path(self, path):
+        # Serve the web/ bundle as the document root, but resolve /data/*
+        # against the repo-root data/ dir. The dashboard fetches
+        # data/radar.json relative to index.html; in the deployed (flat) site
+        # those sit side by side, so this keeps local serving byte-identical.
+        path = path.split("?", 1)[0].split("#", 1)[0]
+        path = urllib.parse.unquote(path)
+        parts = [p for p in path.split("/") if p and p not in (os.curdir, os.pardir)]
+        if parts and parts[0] == "data":
+            return os.path.join(core.DATA_DIR, *parts[1:])
+        return os.path.join(WEB_DIR, *parts)
 
     def do_OPTIONS(self):
         self._cors(204)
@@ -110,7 +125,7 @@ class EditHandler(SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8001
-    os.chdir(HERE)
+    # no chdir needed — translate_path maps URLs to web/ and data/ absolutely
     server = HTTPServer(("", port), EditHandler)
     print(f"  edit server → http://localhost:{port}/")
     print("  Ctrl+C to stop")

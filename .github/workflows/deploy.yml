@@ -19,9 +19,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
-      - "config.js"
-      - "dashboard.jsx"
+      - "web/**"
       - "build_site.py"
       - "data/**"
       - ".github/workflows/deploy.yml"
