@@ -11,16 +11,20 @@ import React, { useState, useMemo, useEffect } from "react";
    ============================================================ */
 
 const QUADRANTS = ["Techniques", "Tools", "Platforms", "Languages"];
-// Discovered is the outermost ring — staging area for un-triaged tech.
-const RINGS = ["Adopt", "Trial", "Assess", "Hold", "Discovered"];
+// Rings run center→out: Adopted (most confidence) to Archived (retired).
+// Discovered is the runner's inbox; Archived is the dated graveyard.
+const RINGS = ["Adopted", "Trial", "Assess", "Discovered", "Archived"];
+
+// Curated topic vocabulary — mirrors radar_core.TOPICS.
+const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG"];
 
 const RING_COLOR = {
-  Adopt: "#4ade80", Trial: "#38bdf8", Assess: "#fbbf24",
-  Hold: "#f87171", Discovered: "#a78bfa",
+  Adopted: "#4ade80", Trial: "#38bdf8", Assess: "#fbbf24",
+  Discovered: "#a78bfa", Archived: "#94a3b8",
 };
 const RING_INK = {
-  Adopt: "#1a7f4b", Trial: "#1d6fb8", Assess: "#b8841d",
-  Hold: "#b13a3a", Discovered: "#6d4fc4",
+  Adopted: "#1a7f4b", Trial: "#1d6fb8", Assess: "#b8841d",
+  Discovered: "#6d4fc4", Archived: "#64748b",
 };
 
 /* Fallback sample — used if radar.json can't be fetched. */
@@ -28,15 +32,15 @@ const SAMPLE = {
   generated: "2026-05-23",
   items: [
     { id: "github:oven-sh/bun", name: "Bun", description: "All-in-one JavaScript runtime and toolkit with a built-in bundler, test runner, and Node-compatible package manager.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 78900, momentum: 72, tags: ["runtime"], first_seen: "2026-05-21", last_seen: "2026-05-23", discovered_by: "scraper", stars_history: { "2026-05-15": 76800, "2026-05-17": 77300, "2026-05-19": 77900, "2026-05-21": 78400, "2026-05-23": 78900 } },
-    { id: "github:astral-sh/uv", name: "uv", description: "Extremely fast Python package and project manager, written in Rust.", quadrant: "Tools", ring: "Adopt", source: "GitHub", url: "#", stars: 39800, momentum: 76, tags: ["python"], first_seen: "2026-05-14", last_seen: "2026-05-23", discovered_by: "manual", stars_history: { "2026-05-15": 38200, "2026-05-17": 38600, "2026-05-19": 39100, "2026-05-21": 39500, "2026-05-23": 39800 } },
-    { id: "github:modelcontextprotocol/servers", name: "MCP Servers", description: "Reference implementations for the Model Context Protocol, connecting LLMs to tools and data.", quadrant: "Techniques", ring: "Trial", source: "GitHub", url: "#", stars: 28700, momentum: 91, tags: ["llm"], first_seen: "2026-05-22", last_seen: "2026-05-23", discovered_by: "llm", stars_history: { "2026-05-15": 22100, "2026-05-17": 23800, "2026-05-19": 25400, "2026-05-21": 27000, "2026-05-23": 28700 } },
+    { id: "github:astral-sh/uv", name: "uv", description: "Extremely fast Python package and project manager, written in Rust.", quadrant: "Tools", ring: "Adopted", source: "GitHub", url: "#", stars: 39800, momentum: 76, tags: ["python"], topics: [], first_seen: "2026-05-14", last_seen: "2026-05-23", discovered_by: "manual", stars_history: { "2026-05-15": 38200, "2026-05-17": 38600, "2026-05-19": 39100, "2026-05-21": 39500, "2026-05-23": 39800 } },
+    { id: "github:modelcontextprotocol/servers", name: "MCP Servers", description: "Reference implementations for the Model Context Protocol, connecting LLMs to tools and data.", quadrant: "Techniques", ring: "Trial", source: "GitHub", url: "#", stars: 28700, momentum: 91, tags: ["llm"], topics: ["AI", "Agents"], first_seen: "2026-05-22", last_seen: "2026-05-23", discovered_by: "llm", stars_history: { "2026-05-15": 22100, "2026-05-17": 23800, "2026-05-19": 25400, "2026-05-21": 27000, "2026-05-23": 28700 } },
     { id: "github:zed-industries/zed", name: "Zed", description: "High-performance, multiplayer code editor written in Rust with an agentic editing mode.", quadrant: "Tools", ring: "Assess", source: "GitHub", url: "#", stars: 51200, momentum: 64, tags: ["editor"], first_seen: "2026-05-15", last_seen: "2026-05-23" },
     { id: "github:tursodatabase/libsql", name: "libSQL", description: "Open-source fork of SQLite with edge-replicated embedded replicas.", quadrant: "Platforms", ring: "Discovered", source: "GitHub", url: "#", stars: 12800, momentum: 58, tags: ["database"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "github:gleam-lang/gleam", name: "Gleam", description: "Type-safe, friendly language for building scalable systems on the Erlang VM.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 18100, momentum: 44, tags: ["functional"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "hn:valkey-multithread", name: "Valkey", description: "Community-driven Redis fork under the Linux Foundation; multi-threaded core.", quadrant: "Platforms", ring: "Discovered", source: "HackerNews", url: "#", stars: 21500, momentum: 67, tags: ["cache"], first_seen: "2026-05-22", last_seen: "2026-05-23" },
     { id: "github:tauri-apps/tauri", name: "Tauri", description: "Build small, fast desktop and mobile apps with a web frontend and Rust backend.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 89200, momentum: 61, tags: ["desktop"], first_seen: "2026-05-11", last_seen: "2026-05-23" },
     { id: "arxiv:dspy-2026", name: "DSPy", description: "Framework for programming, rather than prompting, language model pipelines.", quadrant: "Techniques", ring: "Discovered", source: "arXiv", url: "#", stars: 19200, momentum: 81, tags: ["llm"], first_seen: "2026-05-23", last_seen: "2026-05-23", discovered_by: "llm" },
-    { id: "github:bigskysoftware/htmx", name: "htmx", description: "Access modern browser features directly from HTML, no build step required.", quadrant: "Tools", ring: "Adopt", source: "GitHub", url: "#", stars: 41000, momentum: 49, tags: ["frontend"], first_seen: "2026-05-10", last_seen: "2026-05-23" },
+    { id: "github:bigskysoftware/htmx", name: "htmx", description: "Access modern browser features directly from HTML, no build step required.", quadrant: "Tools", ring: "Adopted", source: "GitHub", url: "#", stars: 41000, momentum: 49, tags: ["frontend"], topics: [], first_seen: "2026-05-10", last_seen: "2026-05-23" },
     { id: "github:modular/mojo", name: "Mojo", description: "Python-superset language designed for AI hardware, compiling through MLIR.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 23400, momentum: 87, tags: ["ai"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "yt:webgpu-deep-dive", name: "WebGPU", description: "Modern GPU compute and graphics API for the browser, now baseline across engines.", quadrant: "Techniques", ring: "Assess", source: "YouTube", url: "#", stars: 9400, momentum: 53, tags: ["graphics"], first_seen: "2026-05-08", last_seen: "2026-05-23" },
   ],
@@ -83,7 +87,7 @@ function Sparkline({ history, color, w = 54, h = 16 }) {
     `${(i * step).toFixed(1)},${(h - ((v - min) / span) * (h - 2) - 1).toFixed(1)}`
   ).join(" ");
   const up = vals[vals.length - 1] >= vals[0];
-  const stroke = color || (up ? RING_INK.Adopt : RING_INK.Hold);
+  const stroke = color || (up ? RING_INK.Adopted : "#b13a3a");
   return (
     <svg width={w} height={h} style={{ display: "block", overflow: "visible" }}
       aria-label="star history">
@@ -135,6 +139,23 @@ function Pill({ label, active, onClick, color }) {
       padding: "5px 11px", borderRadius: 20, cursor: "pointer",
       marginRight: 6, marginBottom: 6,
     }}>{label}</button>
+  );
+}
+
+/* Curated topic chips for an item's detail. Topics are assigned via the
+   radar.py CLI (`set <item> topics`); this is a read-only display. */
+function TopicChips({ topics }) {
+  if (!topics || !topics.length) return null;
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12 }}>
+      {topics.map((t) => (
+        <span key={t} style={{
+          fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1,
+          color: "#1a1a1a", background: "#efe9da",
+          border: "1px solid #d8d2c4", padding: "3px 8px", borderRadius: 20,
+        }}>{t.toUpperCase()}</span>
+      ))}
+    </div>
   );
 }
 
@@ -225,8 +246,8 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
 
   // geometry — sized to feel like a printed plate
   const size = 540, cx = size / 2, cy = size / 2;
-  const ringRadii = { Adopt: 62, Trial: 112, Assess: 162, Hold: 210, Discovered: 258 };
-  const ringInner = { Adopt: 14, Trial: 62, Assess: 112, Hold: 162, Discovered: 210 };
+  const ringRadii = { Adopted: 62, Trial: 112, Assess: 162, Discovered: 210, Archived: 258 };
+  const ringInner = { Adopted: 14, Trial: 62, Assess: 112, Discovered: 162, Archived: 210 };
 
   const placed = useMemo(() => items.map((d) => {
     const qIdx = QUADRANTS.indexOf(d.quadrant);
@@ -427,6 +448,8 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
                 {activeLive.description}
               </p>
 
+              <TopicChips topics={activeLive.topics} />
+
               {/* meta row */}
               <div style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -473,7 +496,7 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
                 alignItems: "center", marginTop: 6 }}>
                 <span style={{
                   fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                  color: noteStatus === "saved" ? RING_INK.Adopt
+                  color: noteStatus === "saved" ? RING_INK.Adopted
                        : noteStatus === "dirty" ? "#b8841d" : "#6b6456",
                   letterSpacing: 1,
                 }}>
@@ -623,6 +646,8 @@ function Dispatch({ data, status }) {
                 {d.description}
               </p>
 
+              <TopicChips topics={d.topics} />
+
               <div style={{
                 borderTop: "1px solid #d8d2c4", paddingTop: 9,
                 display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -681,7 +706,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   // sort options for the list (radar is unaffected — spatial already)
   const sorted = useMemo(() => {
     const arr = [...filtered];
-    const ringIdx = { Adopt: 0, Trial: 1, Assess: 2, Hold: 3, Discovered: 4 };
+    const ringIdx = { Adopted: 0, Trial: 1, Assess: 2, Discovered: 3, Archived: 4 };
     switch (sortBy) {
       case "momentum":
         return arr.sort((a, b) => b.momentum - a.momentum);
@@ -733,8 +758,8 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
 
   // radar geometry
   const size = 520, cx = size / 2, cy = size / 2;
-  const ringRadii = { Adopt: 58, Trial: 106, Assess: 154, Hold: 202, Discovered: 248 };
-  const ringInner = { Adopt: 12, Trial: 58, Assess: 106, Hold: 154, Discovered: 202 };
+  const ringRadii = { Adopted: 58, Trial: 106, Assess: 154, Discovered: 202, Archived: 248 };
+  const ringInner = { Adopted: 12, Trial: 58, Assess: 106, Discovered: 154, Archived: 202 };
 
   const placed = useMemo(() => filtered.map((d) => {
     const qIdx = QUADRANTS.indexOf(d.quadrant);
@@ -959,6 +984,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                       color: "#33312b", display: "-webkit-box",
                       WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden",
                     }}>{d.description}</p>
+                    <TopicChips topics={d.topics} />
                     <div style={{
                       borderTop: "1px solid #d8d2c4", paddingTop: 7,
                       display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -1045,6 +1071,15 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               }}>OPEN SOURCE ↗</a>
             )}
 
+            <TopicChips topics={activeLive.topics} />
+
+            {activeLive.ring === "Archived" && activeLive.archived_at && (
+              <div style={{
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 10,
+                color: RING_INK.Archived, letterSpacing: 1, marginBottom: 12,
+              }}>ARCHIVED {activeLive.archived_at} · {daysAgo(activeLive.archived_at)}d ago</div>
+            )}
+
             <div style={{
               display: "flex", justifyContent: "space-between", alignItems: "center",
               borderTop: "1px solid #d8d2c4", borderBottom: "1px solid #d8d2c4",
@@ -1089,7 +1124,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               alignItems: "center", marginTop: 7 }}>
               <span style={{
                 fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                color: noteStatus === "saved" ? RING_INK.Adopt
+                color: noteStatus === "saved" ? RING_INK.Adopted
                      : noteStatus === "dirty" ? "#b8841d" : "#6b6456",
                 letterSpacing: 1,
               }}>

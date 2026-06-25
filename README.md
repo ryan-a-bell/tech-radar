@@ -14,7 +14,7 @@ RSS Feeds         ┘                       ▲
 ```
 
 1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one JSON file per technology into `data/items/`.
-2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopt`, and fix metadata. Every change rebuilds `data/radar.json` automatically.
+2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopted`, archive dead tech, assign topics, and fix metadata. Every change rebuilds `data/radar.json` automatically.
 3. **Deploy** — `build_site.py` assembles a self-contained `site/` folder you can push to GitHub Pages, Netlify, or serve locally.
 
 ---
@@ -70,11 +70,14 @@ python radar.py list --ring Discovered        # the review inbox
 python radar.py show <id-or-name>             # full JSON for one item
 python radar.py find <text>                   # search name + description
 
+python radar.py list --topic Agents           # items tagged with a topic
+python radar.py list --ring Archived --older-than 90   # stale archives
 python radar.py promote <id-or-name> Trial    # move to a ring
 python radar.py demote <id-or-name>           # send back to Discovered
 python radar.py set <id-or-name> quadrant Platforms
 python radar.py set <id-or-name> company "Anthropic"
-python radar.py archive <id-or-name>          # Hold + 'archived' tag
+python radar.py set <id-or-name> topics "AI,Agents"   # curated topics
+python radar.py archive <id-or-name>          # move to Archived (dated)
 ```
 
 Items can be referenced by exact id (`github:oven-sh/bun`), exact name (`Bun`), or a unique partial name (`uv`).
@@ -98,14 +101,23 @@ Strips the `export default` from `dashboard.jsx` so it runs under the CDN/Babel 
 | `Discovered` | Found by a scraper; not yet reviewed — the inbox |
 | `Assess` | Worth a closer look or experiment |
 | `Trial` | Actively using on real work |
-| `Adopt` | Recommended default |
-| `Hold` | Avoid / deprecated / not now |
+| `Adopted` | Recommended default |
+| `Archived` | Retired / dead / irrelevant — kept (dated via `archived_at`) so it won't re-surface |
 
 Only a human moves items out of `Discovered`. Scrapers never classify.
+Archiving stamps `archived_at`, so the graveyard can be filtered by age
+(`list --ring Archived --older-than <days>`).
 
 ### Quadrants
 
 `Techniques` · `Tools` · `Platforms` · `Languages`
+
+### Topics
+
+A curated, controlled vocabulary assigned per item, separate from the
+free-form `tags` scrapers emit: `AI` · `ML` · `Agents` · `Skills` ·
+`Prompts` · `Trading` · `Quant` · `RAG` (extend `TOPICS` in `radar_core.py`).
+Filter by topic in the dashboard or with `list --topic <name>`.
 
 ### Item schema
 
