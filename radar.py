@@ -10,6 +10,8 @@ radar.py — manage the technology radar without hand-editing JSON.
   python radar.py set <id-or-name> quadrant Platforms
   python radar.py set <id-or-name> company "Anthropic"
   python radar.py archive <id-or-name>        # mark Hold + tag 'archived'
+  python radar.py stale --days 30             # cold inbox items (archive candidates)
+  python radar.py stale --days 30 --archive   # archive them after a y/N prompt
   python radar.py add "<name>" -q Tools -d "..." -u <url>  # manual add
   python radar.py find <text>                 # search name/description
 
@@ -164,6 +166,49 @@ def _slugify_key(text):
     return re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower() or "item"
 
 
+def cmd_stale(args):
+    """Surface inbox items that have gone cold — discovered once (or long
+    ago) and not seen by any scraper in --days days. These are prime
+    archive candidates. With --archive, archive them after confirmation.
+
+    Only Discovered items are considered stale: once a human has curated
+    an item into a ring, 'not trending anymore' is a different judgement
+    that shouldn't be auto-archived."""
+    items = [it for it in core.load_all_items()
+             if it["ring"] == "Discovered"
+             and core.days_since_seen(it) >= args.days]
+    # coldest-but-least-interesting first: oldest sighting, lowest momentum
+    items.sort(key=lambda it: (-core.days_since_seen(it), it.get("momentum", 0)))
+
+    if not items:
+        print(f"  no Discovered items cold for {args.days}+ days")
+        return
+
+    print(f"\n[stale]  {len(items)} Discovered item(s) not seen in {args.days}+ days\n")
+    for it in items:
+        age = core.days_since_seen(it)
+        co = f" · {it['company']}" if it.get("company") else ""
+        print(f"  {age:>4}d  {it['name']:<28} {it['quadrant']:<11} "
+              f"m{it.get('momentum', 0):<3}{co}")
+    print()
+
+    if not args.archive:
+        print("  re-run with --archive to archive these (Hold + 'archived' tag)")
+        return
+
+    resp = input(f"  archive all {len(items)} item(s)? [y/N] ").strip().lower()
+    if resp != "y":
+        print("  aborted — nothing changed")
+        return
+    for it in items:
+        it["ring"] = "Hold"
+        if "archived" not in it.get("tags", []):
+            it.setdefault("tags", []).append("archived")
+        _write(it)
+    print(f"  archived {len(items)} item(s)")
+    _rebuild()
+
+
 def cmd_find(args):
     n = args.text.lower()
     hits = [it for it in core.load_all_items()
@@ -176,6 +221,13 @@ def cmd_find(args):
 
 
 def main():
+    # restore default SIGPIPE so piping into head/less doesn't traceback
+    try:
+        import signal
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
+    except (ImportError, AttributeError, ValueError):
+        pass  # not available on Windows / non-main thread
+
     ap = argparse.ArgumentParser(description="manage the technology radar")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
@@ -216,6 +268,13 @@ def main():
     p.add_argument("--company", "-c")
     p.add_argument("--momentum", "-m", type=int)
     p.set_defaults(func=cmd_add)
+
+    p = sub.add_parser("stale", help="list cold inbox items (archive candidates)")
+    p.add_argument("--days", type=int, default=30,
+                   help="not seen in this many days (default: 30)")
+    p.add_argument("--archive", action="store_true",
+                   help="archive the listed items after confirmation")
+    p.set_defaults(func=cmd_stale)
 
     p = sub.add_parser("find", help="search name/description")
     p.add_argument("text")
