@@ -1,0 +1,25 @@
+{
+  "id": "github:xbtlin/ai-berkshire",
+  "name": "ai-berkshire",
+  "description": "AI \u65f6\u4ee3\u7684\u4f2f\u514b\u5e0c\u5c14\uff1a\u57fa\u4e8e Claude Code \u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6\u3002\u5df4\u83f2\u7279\u00b7\u8292\u683c\u00b7\u6bb5\u6c38\u5e73\u00b7\u674e\u5f55\u56db\u5927\u5e08\u65b9\u6cd5\u8bba + \u591aAgent\u5e76\u884c\u7814\u7a76\u3002| AI-era Berkshire: a value investing research framework built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/xbtlin/ai-berkshire",
+  "canonical_url": "github.com/xbtlin/ai-berkshire",
+  "also_seen": [],
+  "company": null,
+  "stars": 201,
+  "momentum": 20,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 201
+  }
+}

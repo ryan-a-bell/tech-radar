@@ -1,0 +1,24 @@
+{
+  "id": "github:shanraisshan/claude-code-best-practice",
+  "name": "claude-code-best-practice",
+  "description": "from vibe coding to agentic engineering - practice makes claude perfect",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/shanraisshan/claude-code-best-practice",
+  "canonical_url": "github.com/shanraisshan/claude-code-best-practice",
+  "also_seen": [],
+  "company": null,
+  "stars": 450,
+  "momentum": 34,
+  "tags": [
+    "html"
+  ],
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-24": 344,
+    "2026-06-25": 450
+  }
+}

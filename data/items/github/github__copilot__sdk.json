@@ -1,0 +1,24 @@
+{
+  "id": "github:github/copilot-sdk",
+  "name": "copilot-sdk",
+  "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/github/copilot-sdk",
+  "canonical_url": "github.com/github/copilot-sdk",
+  "also_seen": [],
+  "company": null,
+  "stars": 309,
+  "momentum": 2,
+  "tags": [
+    "java"
+  ],
+  "first_seen": "2026-06-04",
+  "last_seen": "2026-06-06",
+  "stars_history": {
+    "2026-06-04": 25,
+    "2026-06-05": 38,
+    "2026-06-06": 309
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "github:RyanCodrai/turbovec",
+  "name": "turbovec",
+  "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/RyanCodrai/turbovec",
+  "canonical_url": "github.com/ryancodrai/turbovec",
+  "also_seen": [],
+  "company": null,
+  "stars": 1801,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-10",
+  "stars_history": {
+    "2026-06-07": 1533,
+    "2026-06-08": 1730,
+    "2026-06-09": 1800,
+    "2026-06-10": 1801
+  }
+}

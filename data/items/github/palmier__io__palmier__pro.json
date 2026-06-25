@@ -1,0 +1,27 @@
+{
+  "id": "github:palmier-io/palmier-pro",
+  "name": "palmier-pro",
+  "description": "macOS video editor built for AI",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/palmier-io/palmier-pro",
+  "canonical_url": "github.com/palmier-io/palmier-pro",
+  "also_seen": [],
+  "company": null,
+  "stars": 1630,
+  "momentum": 75,
+  "tags": [
+    "swift"
+  ],
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-24",
+  "stars_history": {
+    "2026-06-20": 756,
+    "2026-06-21": 1829,
+    "2026-06-22": 1834,
+    "2026-06-23": 2463,
+    "2026-06-24": 1630
+  }
+}

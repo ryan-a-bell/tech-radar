@@ -1,0 +1,24 @@
+{
+  "id": "github:alexzhang13/rlm",
+  "name": "rlm",
+  "description": "General plug-and-play inference library for Recursive Language Models (RLMs), supporting various sandboxes.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/alexzhang13/rlm",
+  "canonical_url": "github.com/alexzhang13/rlm",
+  "also_seen": [],
+  "company": null,
+  "stars": 43,
+  "momentum": 3,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-17",
+  "last_seen": "2026-06-18",
+  "stars_history": {
+    "2026-06-17": 37,
+    "2026-06-18": 43
+  }
+}

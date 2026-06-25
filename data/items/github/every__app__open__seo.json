@@ -1,0 +1,25 @@
+{
+  "id": "github:every-app/open-seo",
+  "name": "open-seo",
+  "description": "Open source alternative to Semrush and Ahrefs",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/every-app/open-seo",
+  "canonical_url": "github.com/every-app/open-seo",
+  "also_seen": [],
+  "company": null,
+  "stars": 57,
+  "momentum": 5,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 57
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "github:trycua/cua",
+  "name": "cua",
+  "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/trycua/cua",
+  "canonical_url": "github.com/trycua/cua",
+  "also_seen": [],
+  "company": null,
+  "stars": 70,
+  "momentum": 5,
+  "tags": [
+    "html"
+  ],
+  "first_seen": "2026-06-15",
+  "last_seen": "2026-06-16",
+  "stars_history": {
+    "2026-06-15": 57,
+    "2026-06-16": 70
+  }
+}

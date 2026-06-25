@@ -1,0 +1,26 @@
+{
+  "id": "github:withastro/flue",
+  "name": "flue",
+  "description": "The sandbox agent framework.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/withastro/flue",
+  "canonical_url": "github.com/withastro/flue",
+  "also_seen": [],
+  "company": null,
+  "stars": 316,
+  "momentum": 12,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-06",
+  "last_seen": "2026-06-21",
+  "stars_history": {
+    "2026-06-06": 126,
+    "2026-06-19": 162,
+    "2026-06-20": 309,
+    "2026-06-21": 316
+  }
+}

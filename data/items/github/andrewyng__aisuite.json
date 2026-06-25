@@ -1,0 +1,24 @@
+{
+  "id": "github:andrewyng/aisuite",
+  "name": "aisuite",
+  "description": "Simple, unified interface to multiple Generative AI providers",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/andrewyng/aisuite",
+  "canonical_url": "github.com/andrewyng/aisuite",
+  "also_seen": [],
+  "company": null,
+  "stars": 127,
+  "momentum": 13,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-13",
+  "last_seen": "2026-06-14",
+  "stars_history": {
+    "2026-06-13": 132,
+    "2026-06-14": 127
+  }
+}

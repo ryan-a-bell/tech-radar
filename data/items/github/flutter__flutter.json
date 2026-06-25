@@ -1,0 +1,23 @@
+{
+  "id": "github:flutter/flutter",
+  "name": "flutter",
+  "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/flutter/flutter",
+  "canonical_url": "github.com/flutter/flutter",
+  "also_seen": [],
+  "company": null,
+  "stars": 73,
+  "momentum": 7,
+  "tags": [
+    "dart"
+  ],
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 73
+  }
+}

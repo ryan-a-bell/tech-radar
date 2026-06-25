@@ -1,0 +1,26 @@
+{
+  "id": "github:opencv/opencv",
+  "name": "opencv",
+  "description": "Open Source Computer Vision Library",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/opencv/opencv",
+  "canonical_url": "github.com/opencv/opencv",
+  "also_seen": [],
+  "company": null,
+  "stars": 102,
+  "momentum": 5,
+  "tags": [
+    "c++"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-10",
+  "stars_history": {
+    "2026-06-07": 58,
+    "2026-06-08": 65,
+    "2026-06-09": 395,
+    "2026-06-10": 102
+  }
+}

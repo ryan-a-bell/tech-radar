@@ -14,7 +14,7 @@ RSS Feeds         ┘                       ▲
 ```
 
 1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one JSON file per technology into `data/items/`.
-2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopt`, and fix metadata. Every change rebuilds `data/radar.json` automatically.
+2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopted`, archive dead tech, assign topics, and fix metadata. Every change rebuilds `data/radar.json` automatically.
 3. **Deploy** — `build_site.py` assembles a self-contained `site/` folder you can push to GitHub Pages, Netlify, or serve locally.
 
 ---
@@ -70,11 +70,14 @@ python radar.py list --ring Discovered        # the review inbox
 python radar.py show <id-or-name>             # full JSON for one item
 python radar.py find <text>                   # search name + description
 
+python radar.py list --topic Agents           # items tagged with a topic
+python radar.py list --ring Archived --older-than 90   # stale archives
 python radar.py promote <id-or-name> Trial    # move to a ring
 python radar.py demote <id-or-name>           # send back to Discovered
 python radar.py set <id-or-name> quadrant Platforms
 python radar.py set <id-or-name> company "Anthropic"
-python radar.py archive <id-or-name>          # Hold + 'archived' tag
+python radar.py set <id-or-name> topics "AI,Agents"   # curated topics
+python radar.py archive <id-or-name>          # move to Archived (dated)
 ```
 
 Items can be referenced by exact id (`github:oven-sh/bun`), exact name (`Bun`), or a unique partial name (`uv`).
@@ -85,7 +88,41 @@ Items can be referenced by exact id (`github:oven-sh/bun`), exact name (`Bun`), 
 python build_site.py    # produces ./site/ ready for static hosting
 ```
 
-Strips the `export default` from `dashboard.jsx` so it runs under the CDN/Babel setup without a build step.
+Strips the `export default` from `dashboard.jsx` so it runs under the CDN/Babel setup without a build step. It also copies `config.js` (which ships as `window.RADAR_EDIT = false`), keeping the deployed dashboard read-only.
+
+### `edit_server.py` — Curate in the browser
+
+```bash
+python edit_server.py          # http://localhost:8001/
+python edit_server.py 8080     # custom port
+```
+
+Serves the **same** `index.html` + `dashboard.jsx` as the public site, but
+answers `GET /config.js` with `window.RADAR_EDIT = true`. That single flag
+unlocks a ring editor in the detail panels; clicking a ring POSTs to
+`/api/promote`, writes the change to `data/items/*.json`, and rebuilds
+`radar.json` immediately — the same effect as `radar.py promote`, just visual.
+
+There is one dashboard, not two. Edit affordances are gated behind the runtime
+flag, so the deployed GitHub Pages build can't be edited — the flag is `false`
+there and there is no backend to accept a write. Editing exists only on your
+machine, only while `edit_server.py` is running.
+
+---
+
+## Tests
+
+The pure logic in `radar_core.py` — canonical-URL dedup, star-trend, topic
+normalization, id/path mapping — is covered by a stdlib `unittest` suite. No
+third-party packages, nothing touches disk.
+
+```bash
+python -m unittest discover -s tests       # run everything
+python -m unittest tests.test_radar_core   # one module
+```
+
+CI runs these before discovery or deploy, so a regression in the core can't
+ship to the published radar.
 
 ---
 
@@ -98,14 +135,23 @@ Strips the `export default` from `dashboard.jsx` so it runs under the CDN/Babel 
 | `Discovered` | Found by a scraper; not yet reviewed — the inbox |
 | `Assess` | Worth a closer look or experiment |
 | `Trial` | Actively using on real work |
-| `Adopt` | Recommended default |
-| `Hold` | Avoid / deprecated / not now |
+| `Adopted` | Recommended default |
+| `Archived` | Retired / dead / irrelevant — kept (dated via `archived_at`) so it won't re-surface |
 
 Only a human moves items out of `Discovered`. Scrapers never classify.
+Archiving stamps `archived_at`, so the graveyard can be filtered by age
+(`list --ring Archived --older-than <days>`).
 
 ### Quadrants
 
 `Techniques` · `Tools` · `Platforms` · `Languages`
+
+### Topics
+
+A curated, controlled vocabulary assigned per item, separate from the
+free-form `tags` scrapers emit: `AI` · `ML` · `Agents` · `Skills` ·
+`Prompts` · `Trading` · `Quant` · `RAG` (extend `TOPICS` in `radar_core.py`).
+Filter by topic in the dashboard or with `list --topic <name>`.
 
 ### Item schema
 
@@ -155,13 +201,21 @@ tech-radar/
 ├── runner.py           # discovery orchestrator — runs scrapers daily
 ├── radar.py            # curation CLI — human triage and ring management
 ├── radar_core.py       # shared library — item schema, dedup, persistence
-├── build_site.py       # static site assembler
-├── github_trending.py  # GitHub Trending scraper  ← should be scrapers/
-├── reddit.py           # Reddit scraper            ← should be scrapers/
-├── index.html          # HTML shell — loads React + dashboard.jsx via CDN
-├── dashboard.jsx       # React dashboard (Observatory + Dispatch views)
+├── build_site.py       # static site assembler — bundles web/ → site/
+├── edit_server.py      # local server — serves web/ with editing turned on
+├── scrapers/           # discovery sources — one module per source
+│   ├── base.py         # Scraper base class (the discover() contract)
+│   ├── github_trending.py
+│   ├── reddit.py
+│   └── rss_feeds.py    # registered; discover() is still a stub
+├── web/                # the browser frontend (served as-is, no build step)
+│   ├── index.html      # HTML shell — loads config.js + dashboard.jsx via CDN
+│   ├── config.js       # runtime flag — window.RADAR_EDIT (false in the build)
+│   ├── dashboard.jsx   # React dashboard — Atlas/Observatory/Dispatch + edit mode
+│   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
+├── tests/              # stdlib unittest suite for radar_core
+├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
-├── concept-drawings/   # Prototype dashboard concepts (dashboard2/3.jsx)
 ├── data/
 │   ├── items/          # one .json file per technology (generated)
 │   │   ├── github/
@@ -170,6 +224,7 @@ tech-radar/
 │   └── radar.json      # aggregated payload for the dashboard (generated)
 └── site/               # deployable static site (generated by build_site.py)
     ├── index.html
+    ├── config.js        # window.RADAR_EDIT = false → read-only public build
     ├── dashboard.jsx
     └── data/
         └── radar.json
@@ -181,10 +236,8 @@ tech-radar/
 
 | Gap | Status |
 |-----|--------|
-| `scrapers/` package | `runner.py` imports from `scrapers.github_trending` etc. but the files live at the top level. Move `github_trending.py` and `reddit.py` into a `scrapers/` directory and add `scrapers/__init__.py`. |
-| `scrapers/base.py` | The scrapers import `from scrapers.base import Scraper` — this base class needs to be created. |
-| `scrapers/rss_feeds.py` | RSS scraper is registered in `runner.py` but not yet implemented. |
-| `dashboard.jsx` | The build expects `dashboard.jsx` at the root; only prototype versions (`concept-drawings/dashboard2.jsx`, `dashboard3.jsx`) exist. |
+| `scrapers/rss_feeds.py` | Registered in `runner.py` and conforms to the `Scraper` contract, but `discover()` is still a stub that returns `[]`. Fill it in with `urllib` + `xml.etree` to bring the RSS source online. |
+| arXiv source | The `Techniques` quadrant only gets shipped tools, not research. See `TODO.md` for the planned arXiv scraper and the bloat-control decision it requires. |
 
 ---
 

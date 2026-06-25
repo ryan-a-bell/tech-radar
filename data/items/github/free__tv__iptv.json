@@ -1,0 +1,25 @@
+{
+  "id": "github:Free-TV/IPTV",
+  "name": "IPTV",
+  "description": "M3U Playlist for free TV channels",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Free-TV/IPTV",
+  "canonical_url": "github.com/free-tv/iptv",
+  "also_seen": [],
+  "company": null,
+  "stars": 141,
+  "momentum": 7,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-15",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-15": 70,
+    "2026-06-16": 361,
+    "2026-06-25": 141
+  }
+}

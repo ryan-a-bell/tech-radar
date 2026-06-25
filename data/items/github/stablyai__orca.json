@@ -1,0 +1,23 @@
+{
+  "id": "github:stablyai/orca",
+  "name": "orca",
+  "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/stablyai/orca",
+  "canonical_url": "github.com/stablyai/orca",
+  "also_seen": [],
+  "company": null,
+  "stars": 331,
+  "momentum": 33,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 331
+  }
+}

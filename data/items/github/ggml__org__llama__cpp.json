@@ -1,0 +1,24 @@
+{
+  "id": "github:ggml-org/llama.cpp",
+  "name": "llama.cpp",
+  "description": "LLM inference in C/C++",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ggml-org/llama.cpp",
+  "canonical_url": "github.com/ggml-org/llama.cpp",
+  "also_seen": [],
+  "company": null,
+  "stars": 158,
+  "momentum": 19,
+  "tags": [
+    "c++"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-08",
+  "stars_history": {
+    "2026-06-07": 199,
+    "2026-06-08": 158
+  }
+}

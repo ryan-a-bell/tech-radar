@@ -1,0 +1,23 @@
+{
+  "id": "github:interviewstreet/hiring-agent",
+  "name": "hiring-agent",
+  "description": "AI agent to evaluate and score resumes.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/interviewstreet/hiring-agent",
+  "canonical_url": "github.com/interviewstreet/hiring-agent",
+  "also_seen": [],
+  "company": null,
+  "stars": 203,
+  "momentum": 20,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 203
+  }
+}

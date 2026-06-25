@@ -1,0 +1,24 @@
+{
+  "id": "github:heygen-com/hyperframes",
+  "name": "hyperframes",
+  "description": "Write HTML. Render video. Built for agents.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/heygen-com/hyperframes",
+  "canonical_url": "github.com/heygen-com/hyperframes",
+  "also_seen": [],
+  "company": null,
+  "stars": 395,
+  "momentum": 36,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-22",
+  "last_seen": "2026-06-23",
+  "stars_history": {
+    "2026-06-22": 369,
+    "2026-06-23": 395
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "github:openclaw/openclaw-windows-node",
+  "name": "openclaw-windows-node",
+  "description": "Windows companion suite for OpenClaw - System Tray app, Shared library, Node, and PowerToys Command Palette extension",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "url": "https://github.com/openclaw/openclaw-windows-node",
+  "canonical_url": "github.com/openclaw/openclaw-windows-node",
+  "also_seen": [],
+  "company": null,
+  "stars": 326,
+  "momentum": 33,
+  "tags": [
+    "c#"
+  ],
+  "first_seen": "2026-06-04",
+  "last_seen": "2026-06-06",
+  "stars_history": {
+    "2026-06-04": 331,
+    "2026-06-05": 411,
+    "2026-06-06": 326
+  }
+}

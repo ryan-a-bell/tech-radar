@@ -1,0 +1,25 @@
+{
+  "id": "github:opendatalab/MinerU",
+  "name": "MinerU",
+  "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/opendatalab/MinerU",
+  "canonical_url": "github.com/opendatalab/mineru",
+  "also_seen": [],
+  "company": null,
+  "stars": 524,
+  "momentum": 52,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 524
+  }
+}

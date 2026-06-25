@@ -1,0 +1,24 @@
+{
+  "id": "github:nginx/nginx",
+  "name": "nginx",
+  "description": "The official NGINX Open Source repository.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/nginx/nginx",
+  "canonical_url": "github.com/nginx/nginx",
+  "also_seen": [],
+  "company": null,
+  "stars": 20,
+  "momentum": 3,
+  "tags": [
+    "c"
+  ],
+  "first_seen": "2026-06-06",
+  "last_seen": "2026-06-07",
+  "stars_history": {
+    "2026-06-06": 39,
+    "2026-06-07": 20
+  }
+}

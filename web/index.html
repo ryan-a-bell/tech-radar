@@ -17,6 +17,9 @@
 </head>
 <body>
   <div id="root"></div>
+  <!-- Sets window.RADAR_EDIT. This static copy says false (read-only);
+       edit_server.py serves a version that says true to unlock editing. -->
+  <script src="config.js"></script>
   <!-- dashboard.jsx is transformed in-browser by Babel.
        The build script rewrites the `export default` line so it runs here. -->
   <script type="text/babel" data-presets="react" src="dashboard.jsx"></script>

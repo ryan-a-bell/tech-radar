@@ -1,0 +1,26 @@
+{
+  "id": "github:MemPalace/mempalace",
+  "name": "mempalace",
+  "description": "The best-benchmarked open-source AI memory system. And it's free.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/MemPalace/mempalace",
+  "canonical_url": "github.com/mempalace/mempalace",
+  "also_seen": [],
+  "company": null,
+  "stars": 170,
+  "momentum": 22,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-06",
+  "last_seen": "2026-06-09",
+  "stars_history": {
+    "2026-06-06": 441,
+    "2026-06-07": 446,
+    "2026-06-08": 452,
+    "2026-06-09": 170
+  }
+}

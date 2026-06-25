@@ -1,0 +1,25 @@
+{
+  "id": "github:microsoft/PowerToys",
+  "name": "PowerToys",
+  "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/microsoft/PowerToys",
+  "canonical_url": "github.com/microsoft/powertoys",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 370,
+  "momentum": 9,
+  "tags": [
+    "c"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-14",
+  "stars_history": {
+    "2026-06-12": 90,
+    "2026-06-13": 374,
+    "2026-06-14": 370
+  }
+}

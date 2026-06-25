@@ -1,0 +1,25 @@
+{
+  "id": "github:alibaba/page-agent",
+  "name": "page-agent",
+  "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/alibaba/page-agent",
+  "canonical_url": "github.com/alibaba/page-agent",
+  "also_seen": [],
+  "company": null,
+  "stars": 196,
+  "momentum": 19,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 196
+  }
+}

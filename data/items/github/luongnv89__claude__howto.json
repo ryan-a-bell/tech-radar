@@ -1,0 +1,26 @@
+{
+  "id": "github:luongnv89/claude-howto",
+  "name": "claude-howto",
+  "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/luongnv89/claude-howto",
+  "canonical_url": "github.com/luongnv89/claude-howto",
+  "also_seen": [],
+  "company": null,
+  "stars": 211,
+  "momentum": 15,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-08",
+  "last_seen": "2026-06-11",
+  "stars_history": {
+    "2026-06-08": 154,
+    "2026-06-09": 312,
+    "2026-06-10": 204,
+    "2026-06-11": 211
+  }
+}

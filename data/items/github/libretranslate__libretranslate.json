@@ -1,0 +1,23 @@
+{
+  "id": "github:LibreTranslate/LibreTranslate",
+  "name": "LibreTranslate",
+  "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/LibreTranslate/LibreTranslate",
+  "canonical_url": "github.com/libretranslate/libretranslate",
+  "also_seen": [],
+  "company": null,
+  "stars": 51,
+  "momentum": 5,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "stars_history": {
+    "2026-06-19": 51
+  }
+}

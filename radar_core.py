@@ -22,7 +22,34 @@ RAW_DIR = os.path.join(DATA_DIR, "raw")
 RADAR_JSON = os.path.join(DATA_DIR, "radar.json")  # generated for the dashboard
 
 QUADRANTS = ["Techniques", "Tools", "Platforms", "Languages"]
-RINGS = ["Discovered", "Assess", "Trial", "Adopt", "Hold"]
+RINGS = ["Discovered", "Assess", "Trial", "Adopted", "Archived"]
+
+# Curated topic vocabulary. Distinct from the free-form `tags` field that
+# scrapers populate — `topics` is a controlled set a human assigns for
+# cross-quadrant filtering (an Agents tool and an Agents technique share a
+# topic but not a quadrant). Extend by adding to this list; unknown topics
+# are rejected by normalize_topics so the vocabulary stays clean.
+TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG"]
+
+
+def normalize_topics(values):
+    """Validate/canonicalize an iterable of topic strings against TOPICS.
+
+    Matching is case-insensitive ('agents' -> 'Agents'); order is preserved
+    and duplicates dropped. Returns (kept, unknown) so callers can report
+    rejects. A falsy input yields ([], [])."""
+    if not values:
+        return [], []
+    by_lower = {t.lower(): t for t in TOPICS}
+    kept, unknown, seen = [], [], set()
+    for v in values:
+        canon = by_lower.get(str(v).strip().lower())
+        if canon is None:
+            unknown.append(v)
+        elif canon not in seen:
+            seen.add(canon)
+            kept.append(canon)
+    return kept, unknown
 
 
 # --- id + slug helpers -------------------------------------------------
@@ -71,8 +98,10 @@ def canonical_url(*urls):
         if m:
             owner, repo = m.group(1), m.group(2)
             repo = re.sub(r"\.git$", "", repo, flags=re.I)
-            # ignore non-repo paths that look like owner/repo
-            if repo.lower() in ("sponsors", "orgs", "settings", "topics"):
+            # ignore GitHub's reserved namespaces — these are owner-position
+            # paths (github.com/sponsors/<user>, /orgs/<org>, /topics/<t>),
+            # not real repos, so they must not collapse into a canonical id.
+            if owner.lower() in ("sponsors", "orgs", "settings", "topics"):
                 continue
             return f"github.com/{owner.lower()}/{repo.lower()}"
     return None
@@ -81,7 +110,8 @@ def canonical_url(*urls):
 # --- the item schema ---------------------------------------------------
 def new_item(source, key, name, description, url,
              quadrant="Tools", momentum=0, stars=0, tags=None,
-             company=None, linked_url=None):
+             company=None, linked_url=None, discovered_by="scraper",
+             topics=None):
     """Build a fresh discovered item. The runner ALWAYS sets ring=Discovered.
 
     company: the org/vendor behind the tech, if it's a company product
@@ -90,6 +120,10 @@ def new_item(source, key, name, description, url,
     linked_url: a secondary url the source points at (e.g. the GitHub repo
              a Reddit post links to). Used for cross-source dedup — the
              scraper passes it when the source exposes one.
+    discovered_by: provenance of this discovery. One of:
+             "scraper" — found by an automated runner.py scraper (default)
+             "llm"     — found by the weekly LLM organic-discovery routine
+             "manual"  — added by a human
     """
     today = date.today().isoformat()
     return {
@@ -99,6 +133,8 @@ def new_item(source, key, name, description, url,
         "quadrant": quadrant if quadrant in QUADRANTS else "Tools",
         "ring": "Discovered",          # human changes this later
         "source": source,
+        # how this tech entered the radar: scraper | llm | manual
+        "discovered_by": discovered_by,
         "url": url,
         # canonical identity for cross-source merging — None if unknown
         "canonical_url": canonical_url(url, linked_url),
@@ -108,7 +144,12 @@ def new_item(source, key, name, description, url,
         "company": company,            # vendor name, or None if community
         "stars": int(stars or 0),
         "momentum": int(momentum or 0),
-        "tags": tags or [],
+        "tags": tags or [],            # free-form labels from the scraper
+        # curated topic vocabulary (see TOPICS) — human-assigned, validated
+        "topics": normalize_topics(topics)[0],
+        # date this item entered the Archived ring; None while it's live.
+        # Lets the dashboard/CLI filter the graveyard by how long it's sat.
+        "archived_at": None,
         "first_seen": today,           # never changes after creation
         "last_seen": today,            # refreshed every scrape
         # star history: {date: star_count} — only filled for GitHub items.
@@ -175,6 +216,33 @@ def star_trend(item):
     if delta < 0:
         return ("down", delta)
     return ("flat", 0)
+
+
+def days_since_seen(item, today=None):
+    """How many days since this tech was last discovered/seen by a scraper.
+    Used to surface stale inbox items that never panned out. Returns a
+    large number if last_seen is missing or unparseable (treat as stale)."""
+    from datetime import date as _d
+    today = today or _d.today()
+    try:
+        return (today - _d.fromisoformat(item["last_seen"])).days
+    except (KeyError, ValueError, TypeError):
+        return 10**6
+
+
+def days_since_archived(item, today=None):
+    """How many days an item has sat in the Archived ring. Returns None if
+    it isn't archived or has no archived_at stamp — callers filtering the
+    graveyard by age should skip those."""
+    from datetime import date as _d
+    stamp = item.get("archived_at")
+    if not stamp:
+        return None
+    today = today or _d.today()
+    try:
+        return (today - _d.fromisoformat(stamp)).days
+    except (ValueError, TypeError):
+        return None
 
 
 def load_all_items():

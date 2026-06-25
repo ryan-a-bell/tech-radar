@@ -1,0 +1,22 @@
+{
+  "id": "github:zai-org/GLM-5",
+  "name": "GLM-5",
+  "description": "GLM-5: From Vibe Coding to Agentic Engineering",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/zai-org/GLM-5",
+  "canonical_url": "github.com/zai-org/glm-5",
+  "also_seen": [],
+  "company": null,
+  "stars": 480,
+  "momentum": 20,
+  "tags": [],
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-20",
+  "stars_history": {
+    "2026-06-19": 202,
+    "2026-06-20": 480
+  }
+}

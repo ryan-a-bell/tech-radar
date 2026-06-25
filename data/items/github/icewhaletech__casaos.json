@@ -1,0 +1,25 @@
+{
+  "id": "github:IceWhaleTech/CasaOS",
+  "name": "CasaOS",
+  "description": "CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/IceWhaleTech/CasaOS",
+  "canonical_url": "github.com/icewhaletech/casaos",
+  "also_seen": [],
+  "company": null,
+  "stars": 202,
+  "momentum": 20,
+  "tags": [
+    "go"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 202
+  }
+}

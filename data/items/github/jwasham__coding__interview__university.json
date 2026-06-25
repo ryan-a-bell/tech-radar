@@ -9,12 +9,17 @@
   "canonical_url": "github.com/jwasham/coding-interview-university",
   "also_seen": [],
   "company": null,
-  "stars": 330,
+  "stars": 364,
   "momentum": 33,
   "tags": [],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-06-03",
+  "last_seen": "2026-06-16",
   "stars_history": {
-    "2026-06-03": 330
+    "2026-06-03": 330,
+    "2026-06-04": 330,
+    "2026-06-05": 632,
+    "2026-06-06": 745,
+    "2026-06-15": 516,
+    "2026-06-16": 364
   }
 }

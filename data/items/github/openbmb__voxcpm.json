@@ -9,14 +9,16 @@
   "canonical_url": "github.com/openbmb/voxcpm",
   "also_seen": [],
   "company": null,
-  "stars": 713,
+  "stars": 408,
   "momentum": 71,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-06-03",
+  "last_seen": "2026-06-17",
   "stars_history": {
-    "2026-06-03": 713
+    "2026-06-03": 713,
+    "2026-06-16": 413,
+    "2026-06-17": 408
   }
 }

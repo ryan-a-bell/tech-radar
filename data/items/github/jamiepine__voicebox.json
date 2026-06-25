@@ -1,0 +1,26 @@
+{
+  "id": "github:jamiepine/voicebox",
+  "name": "voicebox",
+  "description": "The open-source AI voice studio. Clone, dictate, create.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/jamiepine/voicebox",
+  "canonical_url": "github.com/jamiepine/voicebox",
+  "also_seen": [],
+  "company": null,
+  "stars": 1045,
+  "momentum": 14,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-24",
+  "stars_history": {
+    "2026-06-21": 145,
+    "2026-06-22": 614,
+    "2026-06-23": 529,
+    "2026-06-24": 1045
+  }
+}

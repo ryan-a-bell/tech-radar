@@ -1,0 +1,27 @@
+{
+  "id": "github:NVIDIA/SkillSpector",
+  "name": "SkillSpector",
+  "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/NVIDIA/SkillSpector",
+  "canonical_url": "github.com/nvidia/skillspector",
+  "also_seen": [],
+  "company": "NVIDIA",
+  "stars": 1079,
+  "momentum": 31,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-16",
+  "stars_history": {
+    "2026-06-12": 319,
+    "2026-06-13": 809,
+    "2026-06-14": 804,
+    "2026-06-15": 964,
+    "2026-06-16": 1079
+  }
+}

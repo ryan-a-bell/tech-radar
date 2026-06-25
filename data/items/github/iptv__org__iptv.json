@@ -1,0 +1,28 @@
+{
+  "id": "github:iptv-org/iptv",
+  "name": "iptv",
+  "description": "Collection of publicly available IPTV channels from all over the world",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/iptv-org/iptv",
+  "canonical_url": "github.com/iptv-org/iptv",
+  "also_seen": [],
+  "company": null,
+  "stars": 1197,
+  "momentum": 14,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-12",
+  "last_seen": "2026-06-17",
+  "stars_history": {
+    "2026-06-12": 142,
+    "2026-06-13": 650,
+    "2026-06-14": 530,
+    "2026-06-15": 1528,
+    "2026-06-16": 1196,
+    "2026-06-17": 1197
+  }
+}

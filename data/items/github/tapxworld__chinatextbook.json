@@ -1,0 +1,27 @@
+{
+  "id": "github:TapXWorld/ChinaTextbook",
+  "name": "ChinaTextbook",
+  "description": "\u6240\u6709\u5c0f\u521d\u9ad8\u3001\u5927\u5b66PDF\u6559\u6750\u3002",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/TapXWorld/ChinaTextbook",
+  "canonical_url": "github.com/tapxworld/chinatextbook",
+  "also_seen": [],
+  "company": null,
+  "stars": 88,
+  "momentum": 35,
+  "tags": [
+    "roff"
+  ],
+  "first_seen": "2026-06-07",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-07": 355,
+    "2026-06-08": 593,
+    "2026-06-09": 517,
+    "2026-06-10": 519,
+    "2026-06-12": 88
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "github:mikumifa/biliTickerBuy",
+  "name": "biliTickerBuy",
+  "description": "b\u7ad9\u4f1a\u5458\u8d2d\u8d2d\u7968\u8f85\u52a9\u5de5\u5177",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/mikumifa/biliTickerBuy",
+  "canonical_url": "github.com/mikumifa/bilitickerbuy",
+  "also_seen": [],
+  "company": null,
+  "stars": 164,
+  "momentum": 16,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "stars_history": {
+    "2026-06-21": 164
+  }
+}

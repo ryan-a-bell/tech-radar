@@ -167,7 +167,8 @@
   <h1>Tech Radar — Architecture</h1>
   <p>
     C4 model view of the Tech Radar system: structure diagrams at three levels of zoom,
-    plus behaviour (sequence) diagrams for the three main workflows.
+    plus behaviour (sequence) diagrams for the four main workflows — automated discovery,
+    CLI curation, in-browser curation, and build &amp; deploy.
   </p>
 </header>
 
@@ -178,8 +179,9 @@
   <a href="#component-curation">L3 Curation CLI</a>
   <a href="#component-dashboard">L3 Dashboard</a>
   <a href="#seq-discovery">Seq: Discovery</a>
-  <a href="#seq-curation">Seq: Curation</a>
-  <a href="#seq-build">Seq: Build &amp; View</a>
+  <a href="#seq-curation">Seq: CLI Curation</a>
+  <a href="#seq-edit">Seq: Browser Edit</a>
+  <a href="#seq-build">Seq: Build &amp; Deploy</a>
   <a href="#gaps">Gaps</a>
 </nav>
 
@@ -190,28 +192,34 @@
     <h2><span class="level-badge l1">L1</span>System Context</h2>
     <p class="description">
       Who uses the radar, and what external systems does it depend on?
-      <strong>Two personas</strong> interact with the system: an Engineer who runs and curates it,
-      and a Team Member who views the resulting dashboard. Three external data sources feed the discovery pipeline.
+      <strong>Two personas</strong> interact with the system: an Engineer who runs and curates it
+      (via the CLI <em>or</em> a local edit server in the browser),
+      and a Team Member who views the published dashboard. Three external data sources feed the
+      discovery pipeline, and the static dashboard is hosted on GitHub Pages.
     </p>
     <div class="diagram-card">
       <div class="mermaid">
 C4Context
     title Tech Radar — System Context
 
-    Person(engineer, "Engineer / Architect", "Runs discovery, curates items, builds the site")
-    Person(viewer, "Team Member", "Browses the dashboard to track technology choices")
+    Person(engineer, "Engineer / Architect", "Runs discovery, curates items via CLI or browser, builds the site")
+    Person(viewer, "Team Member", "Browses the published dashboard to track technology choices")
 
     System(radar, "Tech Radar", "Discovers emerging technologies, classifies them through a curation workflow, and serves an interactive static dashboard")
 
     System_Ext(github, "GitHub Trending", "Public trending repos page — no auth required")
     System_Ext(reddit, "Reddit", "Public JSON endpoints for r/programming, r/rust, r/devops, etc.")
-    System_Ext(rss, "RSS / Atom Feeds", "Tech news and blog feeds")
+    System_Ext(rss, "RSS / Atom Feeds", "Tech news and blog feeds (scraper registered; discover() still a stub)")
+    System_Ext(pages, "GitHub Pages", "Static host for the published, read-only dashboard")
+    System_Ext(actions, "GitHub Actions", "Scheduled discovery + auto-build + deploy")
 
-    Rel(engineer, radar, "Runs scripts, curates via CLI")
-    Rel(viewer, radar, "Views dashboard in browser")
+    Rel(engineer, radar, "Runs scripts; curates via CLI or local edit server")
+    Rel(viewer, pages, "Views dashboard in browser")
     Rel(radar, github, "HTTP scrape, daily")
     Rel(radar, reddit, "Public JSON API")
     Rel(radar, rss, "HTTP feed fetch")
+    Rel(actions, radar, "Runs runner.py + build_site.py on a schedule")
+    Rel(radar, pages, "Deploys static site/ bundle")
       </div>
     </div>
   </section>
@@ -220,11 +228,14 @@ C4Context
   <section id="container">
     <h2><span class="level-badge l2">L2</span>Containers</h2>
     <p class="description">
-      The system is made of five distinct runnable/deployable units and two data stores.
-      <strong>Three Python scripts</strong> form the backend pipeline.
-      <strong>radar_core.py</strong> is a shared library used by all three.
-      <strong>data/</strong> is a flat filesystem store (no database).
-      The <strong>Web Dashboard</strong> is a fully static React app served from <code>site/</code>.
+      The system is made of <strong>four Python processes</strong> (runner, curation CLI, site builder,
+      edit server), a shared library, a flat-file data store, and a static React frontend.
+      <strong>radar_core.py</strong> is the shared library every process imports.
+      <strong>data/</strong> is a flat filesystem store — one JSON file per technology, no database.
+      The frontend lives in <strong>web/</strong> and is served two ways: <code>build_site.py</code>
+      bundles it into <code>site/</code> for GitHub Pages (read-only), while <code>edit_server.py</code>
+      serves the same files locally with editing turned on. A single runtime flag in
+      <code>config.js</code> (<code>window.RADAR_EDIT</code>) decides which.
     </p>
     <div class="diagram-card">
       <div class="mermaid">
@@ -236,21 +247,30 @@ C4Container
 
     System_Boundary(sys, "Tech Radar") {
         Container(runner, "Discovery Runner", "Python 3", "Orchestrates all scrapers, deduplicates across sources, persists items, rebuilds the manifest")
-        Container(curation, "Curation CLI", "Python 3 CLI", "Human-in-the-loop triage: promote/demote items between rings, fix metadata, archive stale tech")
-        Container(builder, "Site Builder", "Python 3", "Assembles a deployable static site folder from the manifest and dashboard source")
+        Container(curation, "Curation CLI", "Python 3 CLI", "Human-in-the-loop triage: promote/demote between rings, set metadata/topics, archive, find stale inbox items, manual add")
+        Container(builder, "Site Builder", "Python 3", "Bundles web/ into a deployable static site/ folder; ships config.js as read-only")
+        Container(editsrv, "Edit Server", "Python 3 http.server", "Serves web/ locally with window.RADAR_EDIT=true; ring clicks POST /api/promote and write through to disk")
         ContainerDb(itemstore, "Item Store", "Flat JSON files", "data/items/source/slug.json — one file per technology; the ring field drives dashboard classification")
         ContainerDb(manifest, "Radar Manifest", "Single JSON file", "data/radar.json — aggregated payload with computed trend fields, read by the dashboard")
-        Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "Interactive radar (Observatory view) and editorial list (Dispatch view) — no build step required")
+        Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "web/: Atlas, Observatory, Dispatch views + edit mode — no build step. config.js flag gates editing")
     }
 
     System_Ext(github, "GitHub Trending")
     System_Ext(reddit, "Reddit")
     System_Ext(rss, "RSS Feeds")
+    System_Ext(ci, "GitHub Actions")
+    System_Ext(pages, "GitHub Pages")
 
     Rel(engineer, runner, "python runner.py")
     Rel(engineer, curation, "python radar.py list / promote / set ...")
     Rel(engineer, builder, "python build_site.py")
-    Rel(viewer, dashboard, "HTTP — browser")
+    Rel(engineer, editsrv, "python edit_server.py → curate in browser")
+    Rel(viewer, pages, "HTTP — browser")
+    Rel(pages, dashboard, "serves the static bundle")
+
+    Rel(ci, runner, "scheduled discovery")
+    Rel(ci, builder, "build + deploy site/")
+    Rel(builder, pages, "upload site/ artifact")
 
     Rel(runner, github, "HTTP scrape")
     Rel(runner, reddit, "Public JSON")
@@ -259,9 +279,12 @@ C4Container
     Rel(runner, manifest, "Rebuild radar.json after every run")
     Rel(curation, itemstore, "Read items for display, write ring and metadata changes")
     Rel(curation, manifest, "Trigger rebuild after every change")
+    Rel(editsrv, itemstore, "Write ring changes from the browser")
+    Rel(editsrv, manifest, "Rebuild radar.json after each edit")
     Rel(builder, itemstore, "Read all items to rebuild manifest")
     Rel(builder, manifest, "Copy radar.json into site/data/")
-    Rel(dashboard, manifest, "fetch('/data/radar.json') on page load")
+    Rel(dashboard, manifest, "fetch('data/radar.json') on page load")
+    Rel(dashboard, editsrv, "POST /api/promote (edit mode only)")
       </div>
     </div>
     <div class="legend">
@@ -279,7 +302,8 @@ C4Container
       Inside <code>runner.py</code> and the <code>scrapers/</code> package.
       The <strong>Orchestrator</strong> drives the pipeline: run each scraper, deduplicate via a canonical-URL index
       built from existing items, persist new items, then assemble the dashboard manifest.
-      <em>Note: the RSS scraper is planned but not yet implemented.</em>
+      <em>Note: the RSS scraper is registered and conforms to the Scraper contract, but its
+      <code>discover()</code> is still a stub that returns an empty list.</em>
     </p>
     <div class="diagram-card">
       <div class="mermaid">
@@ -290,7 +314,7 @@ C4Component
         Component(orch, "Orchestrator", "runner.py", "Iterates over registered scrapers, routes results through dedup, triggers the manifest rebuild")
         Component(gh_scraper, "GitHub Trending Scraper", "scrapers/github_trending.py", "Parses github.com/trending HTML with stdlib HTMLParser; extracts name, language, stars gained, description")
         Component(reddit_scraper, "Reddit Scraper", "scrapers/reddit.py", "Calls public Reddit .json endpoints for configured subreddits; extracts linked GitHub repos for cross-source dedup")
-        Component(rss_scraper, "RSS Scraper [planned]", "scrapers/rss_feeds.py", "Will parse RSS/Atom feeds from configured tech news sources")
+        Component(rss_scraper, "RSS Scraper [stub]", "scrapers/rss_feeds.py", "Registered and wired; discover() returns [] until feed parsing is implemented")
         Component(dedup, "Dedup Engine", "radar_core.py", "Builds a canonical-URL index from all stored items; detects when a new discovery is the same repo seen elsewhere")
         Component(persist, "Item Persister", "radar_core.py — save_new, touch_last_seen, record_also_seen", "Writes new items; refreshes last_seen and star history on re-encounters; merges also_seen for cross-source matches")
         Component(builder, "Manifest Builder", "runner.py — build_radar_json", "Walks data/items/, computes star trend for each item, sorts, writes data/radar.json")
@@ -302,7 +326,7 @@ C4Component
 
     Rel(orch, gh_scraper, "discover()")
     Rel(orch, reddit_scraper, "discover()")
-    Rel(orch, rss_scraper, "discover() [planned]")
+    Rel(orch, rss_scraper, "discover() [stub → []]")
     Rel(orch, dedup, "build canonical index; check each result")
     Rel(orch, persist, "save_new / touch_last_seen / record_also_seen")
     Rel(orch, raw, "write raw scrape output for audit")
@@ -329,12 +353,13 @@ C4Component
     title Curation CLI — Components (radar.py)
 
     Container_Boundary(cli_bound, "Curation CLI") {
-        Component(parser, "CLI Argument Parser", "argparse subcommands", "Routes list / show / find / promote / demote / set / archive to the right handler")
+        Component(parser, "CLI Argument Parser", "argparse subcommands", "Routes list / show / find / promote / demote / set / archive / stale / add to the right handler")
         Component(resolver, "Item Resolver", "radar.py — _resolve()", "Finds a single item by exact id, exact name, or unique partial name; exits with an error on ambiguity")
-        Component(viewer, "Viewer", "cmd_list, cmd_show, cmd_find", "Read-only commands: list grouped by ring with momentum sorting; show full JSON; full-text search")
-        Component(ring_mgr, "Ring Manager", "cmd_promote, cmd_demote", "Moves an item between rings; demote always sends back to Discovered")
-        Component(field_editor, "Field Editor", "cmd_set", "Sets quadrant, company, description, or momentum; validates quadrant values against the allowed list")
-        Component(archiver, "Archive Manager", "cmd_archive", "Sets ring to Hold and appends the 'archived' tag so re-discovery is suppressed")
+        Component(viewer, "Viewer", "cmd_list, cmd_show, cmd_find", "Read-only commands: list grouped by ring (filter by --ring / --topic / --older-than); show full JSON; full-text search")
+        Component(ring_mgr, "Ring Manager", "cmd_promote, cmd_demote — _set_ring()", "Moves an item between rings; demote always sends back to Discovered; _set_ring maintains the archived_at stamp")
+        Component(field_editor, "Field Editor", "cmd_set", "Sets quadrant, company, description, momentum, or topics; validates quadrant + topic values against the allowed vocabularies")
+        Component(archiver, "Archive Manager", "cmd_archive, cmd_stale", "Sets ring to Archived and stamps archived_at (dated graveyard); stale surfaces cold Discovered items as archive candidates")
+        Component(adder, "Manual Add", "cmd_add", "Creates a new item with discovered_by='manual' if it doesn't already exist")
         Component(rebuilder, "Radar Rebuilder", "_rebuild() — delegates to runner.build_radar_json", "Regenerates data/radar.json after every mutating command")
     }
 
@@ -345,15 +370,18 @@ C4Component
     Rel(parser, viewer, "read-only queries")
     Rel(parser, ring_mgr, "promote / demote commands")
     Rel(parser, field_editor, "set command")
-    Rel(parser, archiver, "archive command")
+    Rel(parser, archiver, "archive / stale commands")
+    Rel(parser, adder, "add command")
     Rel(resolver, items_c, "load_all_items() — scan all JSON files")
     Rel(viewer, items_c, "read items for display")
     Rel(ring_mgr, items_c, "read item, write updated ring")
     Rel(ring_mgr, rebuilder, "trigger after write")
     Rel(field_editor, items_c, "read item, write updated field")
     Rel(field_editor, rebuilder, "trigger after write")
-    Rel(archiver, items_c, "read item, write Hold + tag")
+    Rel(archiver, items_c, "read item, write ring=Archived + archived_at")
     Rel(archiver, rebuilder, "trigger after write")
+    Rel(adder, items_c, "save_new() if absent")
+    Rel(adder, rebuilder, "trigger after write")
     Rel(rebuilder, manifest_c, "writes radar.json")
       </div>
     </div>
@@ -363,9 +391,11 @@ C4Component
   <section id="component-dashboard">
     <h2><span class="level-badge l3">L3</span>Component — Web Dashboard</h2>
     <p class="description">
-      Inside <code>index.html</code> and <code>dashboard.jsx</code> (browser-side).
+      Inside <code>web/</code>: <code>index.html</code>, <code>config.js</code>, and <code>dashboard.jsx</code>.
       The entire app is a single React component tree compiled in-browser by Babel from CDN — no npm, no bundler.
-      Two view modes share the same data and filter state.
+      <strong>Three view modes</strong> (Atlas is the default) share the same data, ring/quadrant/topic filters,
+      and a detail panel. A single flag — <code>window.RADAR_EDIT</code>, set by <code>config.js</code> — gates
+      <strong>edit mode</strong>: when on, the detail panel grows a Ring Editor that writes through to disk.
     </p>
     <div class="diagram-card">
       <div class="mermaid">
@@ -373,24 +403,35 @@ C4Component
     title Web Dashboard — Components (browser)
 
     Container_Boundary(dash_bound, "Web Dashboard") {
-        Component(shell, "HTML Shell", "index.html", "Loads React 18 + ReactDOM + Babel standalone from CDN; mounts the App component into #root")
-        Component(app, "App Component", "dashboard.jsx — App()", "Top-level component: owns filter state, fetches radar.json on mount, routes between view modes")
-        Component(fetcher, "Data Fetcher", "dashboard.jsx — useEffect + fetch()", "Fetches /data/radar.json once on mount; falls back to hardcoded SAMPLE data if unavailable")
-        Component(filters, "Filter Controls", "dashboard.jsx", "Ring and quadrant toggles; 'hide Discovered' and 'recent only' options; filters items for both views")
-        Component(obs, "Observatory View", "dashboard.jsx", "Dark polar radar plot: concentric rings map to maturity levels, quadrants divide the circle; interactive hover")
-        Component(dispatch, "Dispatch View", "dashboard.jsx", "Light editorial card grid: momentum progress bars, star counts, trend arrows, source attribution")
+        Component(shell, "HTML Shell", "web/index.html", "Loads React 18 + ReactDOM + Babel from CDN; loads config.js then dashboard.jsx; mounts App into #root")
+        Component(flag, "Runtime Flag", "web/config.js", "window.RADAR_EDIT — false in the static build, true when edit_server.py serves it")
+        Component(app, "App Component", "dashboard.jsx — App()", "Owns view + save state, fetches radar.json (cache-busted on edit), routes between views, holds the onSetRing write-through handler")
+        Component(fetcher, "Data Fetcher", "dashboard.jsx — useRadarData()", "Fetches data/radar.json on mount; falls back to hardcoded SAMPLE data if unavailable")
+        Component(filters, "Filter Controls", "dashboard.jsx", "Ring, quadrant, and topic filters; 'hide Discovered' and 'recent only' toggles; feeds all views")
+        Component(atlas, "Atlas View [default]", "dashboard.jsx", "Radar plate + scannable card list; click a card to open the detail panel")
+        Component(obs, "Observatory View", "dashboard.jsx", "Dark polar radar plot: rings map to maturity, quadrants divide the circle")
+        Component(dispatch, "Dispatch View", "dashboard.jsx", "Light editorial card grid: momentum bars, star counts, trend arrows, source attribution")
+        Component(ringedit, "Ring Editor [edit mode]", "dashboard.jsx — RingEditor", "Rendered in the detail panel only when RADAR_EDIT is true; clicking a ring POSTs /api/promote")
     }
 
     ContainerDb(manifest_d, "Radar Manifest", "data/radar.json")
+    Container(editsrv_d, "Edit Server", "edit_server.py")
 
+    Rel(shell, flag, "load config.js")
     Rel(shell, app, "ReactDOM.createRoot().render(App)")
-    Rel(app, fetcher, "useEffect on mount")
-    Rel(fetcher, manifest_d, "fetch('/data/radar.json')")
+    Rel(flag, app, "EDIT_MODE = window.RADAR_EDIT === true")
+    Rel(app, fetcher, "useRadarData(refreshKey)")
+    Rel(fetcher, manifest_d, "fetch('data/radar.json')")
     Rel(app, filters, "render; receive filter state updates")
+    Rel(app, atlas, "render when Atlas mode selected (default)")
     Rel(app, obs, "render when Observatory mode selected")
     Rel(app, dispatch, "render when Dispatch mode selected")
+    Rel(filters, atlas, "filtered item list")
     Rel(filters, obs, "filtered item list")
     Rel(filters, dispatch, "filtered item list")
+    Rel(atlas, ringedit, "detail panel hosts the editor")
+    Rel(obs, ringedit, "detail panel hosts the editor")
+    Rel(ringedit, editsrv_d, "POST /api/promote → write + rebuild")
       </div>
     </div>
   </section>
@@ -451,10 +492,11 @@ sequenceDiagram
 
   <!-- ─── BEHAVIOUR: CURATION ────────────────────────────────────── -->
   <section id="seq-curation">
-    <h2><span class="level-badge lb">Behaviour</span>Sequence — Curation Session</h2>
+    <h2><span class="level-badge lb">Behaviour</span>Sequence — CLI Curation Session</h2>
     <p class="description">
-      A typical weekly triage session. The engineer reviews the <code>Discovered</code> inbox,
+      A typical weekly triage session from the terminal. The engineer reviews the <code>Discovered</code> inbox,
       promotes or archives each item, and the manifest is rebuilt automatically after every change.
+      (The browser path below does the same writes through <code>edit_server.py</code>.)
     </p>
     <div class="diagram-card">
       <div class="mermaid">
@@ -490,10 +532,10 @@ sequenceDiagram
             CLI-->>Eng: "Bun: Discovered → Trial"
         else Archive
             Eng->>CLI: python radar.py archive "StaleTech"
-            CLI->>FS: write ring="Hold", tags+=["archived"]
+            CLI->>FS: write ring="Archived", stamp archived_at=today
             CLI->>Build: build_radar_json()
             Build->>MF: write updated radar.json
-            CLI-->>Eng: "StaleTech: archived"
+            CLI-->>Eng: "StaleTech: archived (Archived ring, 2026-06-25)"
         else Fix metadata
             Eng->>CLI: python radar.py set "Bun" quadrant Tools
             CLI->>FS: write updated quadrant field
@@ -506,50 +548,100 @@ sequenceDiagram
     </div>
   </section>
 
-  <!-- ─── BEHAVIOUR: BUILD & VIEW ────────────────────────────────── -->
-  <section id="seq-build">
-    <h2><span class="level-badge lb">Behaviour</span>Sequence — Build, Deploy &amp; View</h2>
+  <!-- ─── BEHAVIOUR: BROWSER EDIT ────────────────────────────────── -->
+  <section id="seq-edit">
+    <h2><span class="level-badge lb">Behaviour</span>Sequence — Browser Curation (edit_server)</h2>
     <p class="description">
-      How a curated radar becomes a live dashboard — from <code>build_site.py</code> through
-      static hosting to the browser rendering the interactive chart.
+      Curating in the browser instead of the terminal. <code>edit_server.py</code> serves the same
+      <code>web/</code> bundle as production, but intercepts <code>/config.js</code> to flip
+      <code>RADAR_EDIT</code> on and maps <code>/data/*</code> to the repo-root store. Clicking a ring
+      writes through to disk and the dashboard re-fetches — same effect as <code>radar.py promote</code>.
     </p>
     <div class="diagram-card">
       <div class="mermaid">
 sequenceDiagram
     autonumber
     actor Eng as Engineer
+    participant Br as Browser (dashboard.jsx)
+    participant ES as edit_server.py
+    participant Core as radar_core.py
+    participant FS as data/items/
+    participant MF as data/radar.json
+
+    Eng->>ES: python edit_server.py
+    Eng->>Br: open http://localhost:8001/
+    Br->>ES: GET / , /dashboard.jsx
+    ES-->>Br: web/ bundle (translate_path → web/)
+    Br->>ES: GET /config.js
+    ES-->>Br: window.RADAR_EDIT = true  (intercepted)
+    Br->>ES: GET /data/radar.json
+    ES-->>Br: manifest (mapped to repo-root data/)
+    Note over Br: EDIT MODE — detail panels render the Ring Editor
+
+    Eng->>Br: click a ring on an item
+    Br->>ES: POST /api/promote {id, ring}
+    ES->>Core: id_to_path(id), load item
+    ES->>FS: write ring (+ archived_at in/out of Archived)
+    ES->>Core: build_radar_json()
+    Core->>FS: load_all_items()
+    Core->>MF: write radar.json
+    ES-->>Br: {ok, name, ring}
+    Br->>ES: re-fetch data/radar.json?v=N (cache-bust)
+    ES-->>Br: updated manifest
+    Br-->>Eng: detail panel reflects the new ring
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BEHAVIOUR: BUILD & DEPLOY ──────────────────────────────── -->
+  <section id="seq-build">
+    <h2><span class="level-badge lb">Behaviour</span>Sequence — Build, Deploy &amp; View</h2>
+    <p class="description">
+      How a curated radar becomes a live dashboard. <code>build_site.py</code> bundles
+      <code>web/</code> into a flat <code>site/</code>; GitHub Actions runs this on a schedule
+      (and on push to main) and deploys to GitHub Pages. The published <code>config.js</code> ships
+      <code>RADAR_EDIT=false</code>, so the public dashboard is read-only by construction.
+    </p>
+    <div class="diagram-card">
+      <div class="mermaid">
+sequenceDiagram
+    autonumber
+    actor Eng as Engineer
+    participant CI as GitHub Actions
     participant Build as build_site.py
     participant RB as runner.build_radar_json
     participant FS as data/items/
     participant MF as data/radar.json
     participant Site as site/
-    participant Host as Static Host
+    participant Pages as GitHub Pages
     actor User as Team Member
     participant Browser as Browser
-    participant App as React App (dashboard.jsx)
 
-    Eng->>Build: python build_site.py
+    alt Scheduled / on push to main
+        CI->>Build: python build_site.py
+    else Manual
+        Eng->>Build: python build_site.py
+    end
     Build->>RB: build_radar_json()
     RB->>FS: load_all_items()
     RB->>MF: write data/radar.json
-    Build->>Site: clean + recreate site/ directory
-    Build->>Site: copy index.html
-    Build->>Site: copy + transform dashboard.jsx (strip export default, inject React hooks)
+    Build->>Site: clean + recreate site/
+    Build->>Site: copy web/index.html + web/config.js (RADAR_EDIT=false)
+    Build->>Site: copy + transform web/dashboard.jsx (strip export default, inject hooks)
     Build->>Site: copy data/radar.json → site/data/radar.json
-    Build-->>Eng: "site/ ready — preview with python -m http.server 8000"
-
-    Eng->>Host: push site/ (GitHub Pages / Netlify drag-drop)
+    CI->>Pages: upload + deploy site/ artifact
 
     User->>Browser: navigate to radar URL
-    Browser->>Host: GET /index.html
-    Host-->>Browser: index.html (loads React + Babel from CDN)
-    Browser->>Host: GET /dashboard.jsx
-    Host-->>Browser: dashboard.jsx source
+    Browser->>Pages: GET /index.html
+    Pages-->>Browser: index.html (loads React + Babel from CDN)
+    Browser->>Pages: GET /config.js
+    Pages-->>Browser: window.RADAR_EDIT = false (read-only)
+    Browser->>Pages: GET /dashboard.jsx
+    Pages-->>Browser: dashboard.jsx source
     Browser->>Browser: Babel transpiles JSX in-browser
-    Browser->>Host: fetch('/data/radar.json')
-    Host-->>Browser: radar.json payload
-    Browser->>App: React renders with loaded data
-    App-->>User: interactive radar dashboard
+    Browser->>Pages: fetch('data/radar.json')
+    Pages-->>Browser: radar.json payload
+    Browser-->>User: interactive radar dashboard (view-only)
       </div>
     </div>
   </section>
@@ -558,7 +650,9 @@ sequenceDiagram
   <section id="gaps">
     <h2>Known Gaps vs. Intended Architecture</h2>
     <p class="description">
-      Items where the current codebase diverges from what the architecture diagrams describe as the intended design.
+      Open work where the codebase doesn't yet reach the intended design. The structural gaps the
+      earlier version of this page listed (the <code>scrapers/</code> package, <code>base.py</code>,
+      <code>dashboard.jsx</code>, a populated <code>data/</code>) are all resolved.
     </p>
     <div class="diagram-card">
       <table class="gap-table">
@@ -572,34 +666,28 @@ sequenceDiagram
         </thead>
         <tbody>
           <tr>
-            <td>scrapers/ package</td>
-            <td>runner.py imports from scrapers.github_trending, scrapers.rss_feeds, scrapers.reddit</td>
-            <td>github_trending.py and reddit.py live at the project root with no scrapers/ directory</td>
-            <td>Create scrapers/__init__.py and move the two files; add scrapers/base.py with the Scraper base class</td>
-          </tr>
-          <tr>
-            <td>scrapers/base.py</td>
-            <td>A Scraper abstract base class that all scrapers inherit from</td>
-            <td>The file is imported (from scrapers.base import Scraper) but does not exist</td>
-            <td>Create the base class with a discover() → list[dict] interface</td>
-          </tr>
-          <tr>
             <td>scrapers/rss_feeds.py</td>
-            <td>RSS/Atom feed discovery registered as the second scraper in SCRAPERS</td>
-            <td>File does not exist; runner.py will error on import</td>
-            <td>Implement RSSFeedScraper or stub it out so runner.py can load</td>
+            <td>RSS/Atom feed discovery as a live third source feeding the Discovered inbox</td>
+            <td>Registered and wired, but discover() is a stub that returns []</td>
+            <td>Implement discover() with stdlib urllib + xml.etree over a configured feed list</td>
           </tr>
           <tr>
-            <td>dashboard.jsx</td>
-            <td>A finished dashboard component at the project root, referenced by index.html and build_site.py</td>
-            <td>Only prototype concepts exist: concept-drawings/dashboard2.jsx and dashboard3.jsx</td>
-            <td>Finalise one of the concepts as dashboard.jsx at the project root</td>
+            <td>arXiv source</td>
+            <td>A research source so the Techniques quadrant picks up emerging papers, not just shipped tools</td>
+            <td>No arXiv scraper; Techniques is fed only by the other sources / manual + LLM discovery</td>
+            <td>Add an ArxivScraper plus a bloat-control decision (promotion-gated inbox vs. ingest cap) — see TODO.md</td>
           </tr>
           <tr>
-            <td>data/ directory</td>
-            <td>Populated with discovered items and a radar.json after the first runner.py run</td>
-            <td>Directory does not exist yet; build_site.py will fail if run before discovery</td>
-            <td>Run python runner.py (after fixing the scrapers/ gap) to initialise</td>
+            <td>Curation audit log</td>
+            <td>A record of what changed when, across both the CLI and the edit server write paths</td>
+            <td>Ring changes are written in place with no history (only archived_at is dated)</td>
+            <td>Append a per-item or global change log at the shared write point (_set_ring / /api/promote)</td>
+          </tr>
+          <tr>
+            <td>Related-tech / similarity</td>
+            <td>A per-card "related tech" panel (and later an N×N similarity heatmap view)</td>
+            <td>Not built; the dashboard has no notion of item-to-item similarity</td>
+            <td>Precompute BM25 neighbours at build time behind a build_site.py flag, render in the detail panel</td>
           </tr>
         </tbody>
       </table>

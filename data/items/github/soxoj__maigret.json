@@ -1,0 +1,25 @@
+{
+  "id": "github:soxoj/maigret",
+  "name": "maigret",
+  "description": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Collect a dossier on a person by username from 3000+ sites",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/soxoj/maigret",
+  "canonical_url": "github.com/soxoj/maigret",
+  "also_seen": [],
+  "company": null,
+  "stars": 661,
+  "momentum": 26,
+  "tags": [
+    "python"
+  ],
+  "first_seen": "2026-06-10",
+  "last_seen": "2026-06-12",
+  "stars_history": {
+    "2026-06-10": 261,
+    "2026-06-11": 318,
+    "2026-06-12": 661
+  }
+}
