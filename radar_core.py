@@ -183,6 +183,18 @@ def star_trend(item):
     return ("flat", 0)
 
 
+def days_since_seen(item, today=None):
+    """How many days since this tech was last discovered/seen by a scraper.
+    Used to surface stale inbox items that never panned out. Returns a
+    large number if last_seen is missing or unparseable (treat as stale)."""
+    from datetime import date as _d
+    today = today or _d.today()
+    try:
+        return (today - _d.fromisoformat(item["last_seen"])).days
+    except (KeyError, ValueError, TypeError):
+        return 10**6
+
+
 def load_all_items():
     """Walk the items tree and return every technology as a list."""
     out = []
