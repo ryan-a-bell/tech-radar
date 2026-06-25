@@ -1,9 +1,10 @@
 name: Build & Deploy Radar
 
 # Publishes the STATIC, read-only dashboard to GitHub Pages.
-# build_site.py only bundles index.html + dashboard.jsx + radar.json — the
-# editable dashboard (edit.html / dashboard_edit.jsx / edit_server.py) is
-# never deployed, so nobody can edit the public radar.
+# build_site.py bundles index.html + config.js + dashboard.jsx + radar.json.
+# config.js ships as `window.RADAR_EDIT = false` and there is no backend here,
+# so the public radar can't be edited — editing only exists locally, when
+# edit_server.py serves the same dashboard.jsx with the flag flipped on.
 #
 # One-time setup: repo Settings → Pages → Build and deployment →
 #   Source = "GitHub Actions".
@@ -18,8 +19,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "index.html"
-      - "dashboard.jsx"
+      - "web/**"
       - "build_site.py"
       - "data/**"
       - ".github/workflows/deploy.yml"
@@ -45,6 +45,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      # Gate the whole pipeline on the core unit tests. If dedup/trend/topic
+      # logic is broken, don't scrape, commit, or deploy on top of it.
+      - name: Run tests
+        run: python -m unittest discover -s tests
 
       # Discovery only runs on the schedule or a manual trigger — NOT on
       # push. That prevents an infinite commit → push → run loop.

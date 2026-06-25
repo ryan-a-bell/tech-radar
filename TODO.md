@@ -63,8 +63,6 @@ since it shares the same data and scales better.
 
 ## Backlog (from brainstorm, not yet scheduled)
 
-- Consolidate `dashboard.jsx` / `dashboard_edit.jsx` into one file with an
-  edit-mode flag (deferred — keeping them separate for now).
 - Per-card "Related tech" panel (foundation for the heatmap above).
 - Test suite (stdlib `unittest`) for dedup, `canonical_url`, `star_trend`.
 - Scheduled discovery via GitHub Actions + auto-deploy to Pages.

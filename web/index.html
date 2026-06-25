@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology Radar — Edit</title>
+  <title>Technology Radar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     html, body, #root { margin: 0; height: 100%; }
     body { background: #000; }
   </style>
-  <!-- React + Babel from CDN — no build step -->
+  <!-- React + Babel from CDN — no build step, fully static -->
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 </head>
 <body>
   <div id="root"></div>
-  <!-- dashboard_edit.jsx adds the ring editor; changes write through to disk via edit_server.py -->
-  <script type="text/babel" data-presets="react" src="dashboard_edit.jsx"></script>
+  <!-- Sets window.RADAR_EDIT. This static copy says false (read-only);
+       edit_server.py serves a version that says true to unlock editing. -->
+  <script src="config.js"></script>
+  <!-- dashboard.jsx is transformed in-browser by Babel.
+       The build script rewrites the `export default` line so it runs here. -->
+  <script type="text/babel" data-presets="react" src="dashboard.jsx"></script>
   <script type="text/babel" data-presets="react">
     const root = ReactDOM.createRoot(document.getElementById("root"));
     root.render(React.createElement(App));

@@ -1,21 +1,31 @@
 import React, { useState, useMemo, useEffect } from "react";
 
 /* ============================================================
-   TECHNOLOGY RADAR — EDIT DASHBOARD
-   Local-only curation view. Requires edit_server.py to be running.
-   Ring changes POST to /api/promote and write to disk immediately —
-   no copy-paste commands needed. Not for sharing; use index.html for that.
+   TECHNOLOGY RADAR DASHBOARD
+   Reads the runner's data/radar.json. Three views:
+     · Atlas       — radar plate + scannable card list (default)
+     · Observatory — dark polar radar plot
+     · Dispatch    — editorial briefing grid
+   All include the "Discovered" ring (the runner's inbox).
 
-   Start with:  python edit_server.py
-   Then open:   http://localhost:8001/edit.html
+   READ-ONLY by default. When served by edit_server.py (which sets
+   `window.RADAR_EDIT = true`), the detail panels grow a ring editor that
+   writes changes straight to disk via /api/promote. The deployed GitHub
+   Pages build never sets the flag and has no backend, so it can't be
+   edited — one file powers both the public view and local curation.
    ============================================================ */
+
+// True only when edit_server.py injects the flag; the static site leaves it
+// unset, so every edit affordance below stays hidden in the public build.
+const EDIT_MODE = typeof window !== "undefined" && window.RADAR_EDIT === true;
 
 const QUADRANTS = ["Techniques", "Tools", "Platforms", "Languages"];
 // Rings run center→out: Adopted (most confidence) to Archived (retired).
 // Discovered is the runner's inbox; Archived is the dated graveyard.
 const RINGS = ["Adopted", "Trial", "Assess", "Discovered", "Archived"];
 
-// Curated topic vocabulary — mirrors radar_core.TOPICS.
+// Curated topic vocabulary — mirrors radar_core.TOPICS. A controlled set a
+// human assigns, distinct from the free-form per-item `tags` from scrapers.
 const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG"];
 
 const RING_COLOR = {
@@ -39,7 +49,7 @@ const SAMPLE = {
     { id: "github:gleam-lang/gleam", name: "Gleam", description: "Type-safe, friendly language for building scalable systems on the Erlang VM.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 18100, momentum: 44, tags: ["functional"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "hn:valkey-multithread", name: "Valkey", description: "Community-driven Redis fork under the Linux Foundation; multi-threaded core.", quadrant: "Platforms", ring: "Discovered", source: "HackerNews", url: "#", stars: 21500, momentum: 67, tags: ["cache"], first_seen: "2026-05-22", last_seen: "2026-05-23" },
     { id: "github:tauri-apps/tauri", name: "Tauri", description: "Build small, fast desktop and mobile apps with a web frontend and Rust backend.", quadrant: "Platforms", ring: "Trial", source: "GitHub", url: "#", stars: 89200, momentum: 61, tags: ["desktop"], first_seen: "2026-05-11", last_seen: "2026-05-23" },
-    { id: "arxiv:dspy-2026", name: "DSPy", description: "Framework for programming, rather than prompting, language model pipelines.", quadrant: "Techniques", ring: "Discovered", source: "arXiv", url: "#", stars: 19200, momentum: 81, tags: ["llm"], first_seen: "2026-05-23", last_seen: "2026-05-23", discovered_by: "llm" },
+    { id: "arxiv:dspy-2026", name: "DSPy", description: "Framework for programming, rather than prompting, language model pipelines.", quadrant: "Techniques", ring: "Discovered", source: "arXiv", url: "#", stars: 19200, momentum: 81, tags: ["llm"], topics: ["AI", "Prompts", "RAG"], first_seen: "2026-05-23", last_seen: "2026-05-23", discovered_by: "llm" },
     { id: "github:bigskysoftware/htmx", name: "htmx", description: "Access modern browser features directly from HTML, no build step required.", quadrant: "Tools", ring: "Adopted", source: "GitHub", url: "#", stars: 41000, momentum: 49, tags: ["frontend"], topics: [], first_seen: "2026-05-10", last_seen: "2026-05-23" },
     { id: "github:modular/mojo", name: "Mojo", description: "Python-superset language designed for AI hardware, compiling through MLIR.", quadrant: "Languages", ring: "Discovered", source: "GitHub", url: "#", stars: 23400, momentum: 87, tags: ["ai"], first_seen: "2026-05-23", last_seen: "2026-05-23" },
     { id: "yt:webgpu-deep-dive", name: "WebGPU", description: "Modern GPU compute and graphics API for the browser, now baseline across engines.", quadrant: "Techniques", ring: "Assess", source: "YouTube", url: "#", stars: 9400, momentum: 53, tags: ["graphics"], first_seen: "2026-05-08", last_seen: "2026-05-23" },
@@ -104,7 +114,7 @@ function useRadarData(refreshKey = 0) {
   const [status, setStatus] = useState("loading");
   useEffect(() => {
     let alive = true;
-    // cache-bust on refresh so the browser doesn't serve a stale radar.json
+    // cache-bust on refresh so an edit write-through doesn't read stale JSON
     fetch("data/radar.json?v=" + refreshKey)
       .then((r) => { if (!r.ok) throw new Error("no file"); return r.json(); })
       .then((j) => { if (alive) { setData(j); setStatus("live"); } })
@@ -142,8 +152,8 @@ function Pill({ label, active, onClick, color }) {
   );
 }
 
-/* Curated topic chips for an item's detail. Topics are assigned via the
-   radar.py CLI (`set <item> topics`); this is a read-only display. */
+/* Curated topic chips, rendered wherever an item's detail shows. Renders
+   nothing when the item carries no topics. */
 function TopicChips({ topics }) {
   if (!topics || !topics.length) return null;
   return (
@@ -160,9 +170,11 @@ function TopicChips({ topics }) {
 }
 
 /* ===================== RING EDITOR =====================
-   Segmented ring picker used in Atlas modal and Observatory detail panel.
-   Clicking a ring fires onSetRing immediately — no staging, no commands.
-   The App handler POSTs to /api/promote and re-fetches radar.json on success. */
+   Segmented ring picker shown in the Atlas modal and Observatory detail panel,
+   but only when EDIT_MODE is on (edit_server.py running). Clicking a ring fires
+   onSetRing immediately — no staging, no commands. The App handler POSTs to
+   /api/promote and re-fetches radar.json on success. In the static public build
+   EDIT_MODE is false, so this never renders. */
 function RingEditor({ item, onSetRing, saveStatus }) {
   const saving = saveStatus?.activeid === item.id && saveStatus?.status === "saving";
   return (
@@ -231,6 +243,7 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
   const [active, setActive] = useState(null);
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
+  const [topicFilter, setTopicFilter] = useState("All");
   const [recentOnly, setRecentOnly] = useState(false);
   const [showDiscovered, setShowDiscovered] = useState(true);
   const [note, setNote] = useState("");
@@ -240,9 +253,10 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
     if (!showDiscovered && d.ring === "Discovered") return false;
     if (ringFilter !== "All" && d.ring !== ringFilter) return false;
     if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
+    if (topicFilter !== "All" && !(d.topics || []).includes(topicFilter)) return false;
     if (recentOnly && daysAgo(d.first_seen) > 7) return false;
     return true;
-  }), [data, ringFilter, quadFilter, recentOnly, showDiscovered]);
+  }), [data, ringFilter, quadFilter, topicFilter, recentOnly, showDiscovered]);
 
   // geometry — sized to feel like a printed plate
   const size = 540, cx = size / 2, cy = size / 2;
@@ -332,6 +346,13 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
           {QUADRANTS.map((q) => (
             <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
               onClick={() => setQuadFilter(q)} />
+          ))}
+        </div>
+        <div style={{ marginBottom: 4 }}>
+          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
+          {TOPICS.map((t) => (
+            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
+              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
           ))}
         </div>
         <div>
@@ -450,6 +471,13 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
 
               <TopicChips topics={activeLive.topics} />
 
+              {activeLive.ring === "Archived" && activeLive.archived_at && (
+                <div style={{
+                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 10,
+                  color: RING_INK.Archived, letterSpacing: 1, marginBottom: 12,
+                }}>ARCHIVED {activeLive.archived_at} · {daysAgo(activeLive.archived_at)}d ago</div>
+              )}
+
               {/* meta row */}
               <div style={{
                 display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -473,8 +501,10 @@ function Observatory({ data, status, onSetRing, saveStatus }) {
                 </span>
               </div>
 
-              {/* ring editor — saves immediately to disk */}
-              <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+              {/* ring editor — saves immediately to disk (edit mode only) */}
+              {EDIT_MODE && (
+                <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+              )}
 
               {/* notes editor */}
               <div style={{
@@ -543,11 +573,13 @@ function Stat({ label, value, color }) {
 function Dispatch({ data, status }) {
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
+  const [topicFilter, setTopicFilter] = useState("All");
   const [recentOnly, setRecentOnly] = useState(false);
 
   const filtered = data.items.filter((d) =>
     (ringFilter === "All" || d.ring === ringFilter) &&
     (quadFilter === "All" || d.quadrant === quadFilter) &&
+    (topicFilter === "All" || (d.topics || []).includes(topicFilter)) &&
     (!recentOnly || daysAgo(d.first_seen) <= 7)
   ).sort((a, b) => {
     const ra = a.ring === "Discovered" ? 1 : 0;
@@ -600,6 +632,13 @@ function Dispatch({ data, status }) {
           {QUADRANTS.map((q) => (
             <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
               onClick={() => setQuadFilter(q)} />
+          ))}
+        </div>
+        <div style={{ marginBottom: 4 }}>
+          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
+          {TOPICS.map((t) => (
+            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
+              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
           ))}
         </div>
         <div>
@@ -688,6 +727,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   const [hoverId, setHoverId] = useState(null);    // cross-highlight
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
+  const [topicFilter, setTopicFilter] = useState("All");
   const [recentOnly, setRecentOnly] = useState(false);
   const [showDiscovered, setShowDiscovered] = useState(true);
   const [sortBy, setSortBy] = useState("default");
@@ -699,9 +739,10 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
     if (!showDiscovered && d.ring === "Discovered") return false;
     if (ringFilter !== "All" && d.ring !== ringFilter) return false;
     if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
+    if (topicFilter !== "All" && !(d.topics || []).includes(topicFilter)) return false;
     if (recentOnly && daysAgo(d.first_seen) > 7) return false;
     return true;
-  }), [data, ringFilter, quadFilter, recentOnly, showDiscovered]);
+  }), [data, ringFilter, quadFilter, topicFilter, recentOnly, showDiscovered]);
 
   // sort options for the list (radar is unaffected — spatial already)
   const sorted = useMemo(() => {
@@ -800,13 +841,15 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
       </div>
 
       {/* edit mode hint */}
-      <div style={{
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
-        color: "#6b6456", letterSpacing: 0.5, margin: "10px 0 0",
-      }}>
-        Click any card to open the detail panel and move it between rings.
-        Changes save to disk immediately.
-      </div>
+      {EDIT_MODE && (
+        <div style={{
+          fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
+          color: "#6b6456", letterSpacing: 0.5, margin: "10px 0 0",
+        }}>
+          Click any card to open the detail panel and move it between rings.
+          Changes save to disk immediately.
+        </div>
+      )}
 
       {/* summary strip */}
       <div style={{
@@ -834,6 +877,13 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
           {QUADRANTS.map((q) => (
             <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
               onClick={() => setQuadFilter(q)} />
+          ))}
+        </div>
+        <div style={{ marginBottom: 4 }}>
+          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
+          {TOPICS.map((t) => (
+            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
+              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
           ))}
         </div>
         <div style={{ marginBottom: 4 }}>
@@ -984,7 +1034,6 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                       color: "#33312b", display: "-webkit-box",
                       WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden",
                     }}>{d.description}</p>
-                    <TopicChips topics={d.topics} />
                     <div style={{
                       borderTop: "1px solid #d8d2c4", paddingTop: 7,
                       display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -1102,8 +1151,10 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               </span>
             </div>
 
-            {/* ring editor — saves immediately to disk */}
-            <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+            {/* ring editor — saves immediately to disk (edit mode only) */}
+            {EDIT_MODE && (
+              <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+            )}
 
             <div style={{
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
@@ -1154,6 +1205,8 @@ export default function App() {
   // {status: "idle"|"saving"|"saved"|"error", activeid: "", name: ""}
   const [saveStatus, setSaveStatus] = useState({ status: "idle", activeid: "", name: "" });
 
+  // Write-through ring change. Only ever invoked from edit-mode affordances,
+  // and only reaches a live endpoint when edit_server.py is serving the page.
   const onSetRing = async (id, ring) => {
     setSaveStatus({ status: "saving", activeid: id, name: "" });
     try {
@@ -1207,11 +1260,13 @@ export default function App() {
             cursor: "pointer", fontFamily: "inherit",
           }}>{m.label}</button>
         ))}
-        <span style={{
-          fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
-          background: "#1d6fb8", color: "#fff", marginRight: 6,
-        }}>EDIT MODE</span>
-        {saveStatus.status !== "idle" && (
+        {EDIT_MODE && (
+          <span style={{
+            fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
+            background: "#1d6fb8", color: "#fff", marginRight: 6,
+          }}>EDIT MODE</span>
+        )}
+        {EDIT_MODE && saveStatus.status !== "idle" && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
             color: "#1a1a1a",

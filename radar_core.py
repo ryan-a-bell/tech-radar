@@ -98,8 +98,10 @@ def canonical_url(*urls):
         if m:
             owner, repo = m.group(1), m.group(2)
             repo = re.sub(r"\.git$", "", repo, flags=re.I)
-            # ignore non-repo paths that look like owner/repo
-            if repo.lower() in ("sponsors", "orgs", "settings", "topics"):
+            # ignore GitHub's reserved namespaces — these are owner-position
+            # paths (github.com/sponsors/<user>, /orgs/<org>, /topics/<t>),
+            # not real repos, so they must not collapse into a canonical id.
+            if owner.lower() in ("sponsors", "orgs", "settings", "topics"):
                 continue
             return f"github.com/{owner.lower()}/{repo.lower()}"
     return None
