@@ -4,12 +4,15 @@ radar.py — manage the technology radar without hand-editing JSON.
 
   python radar.py list                        # all items, grouped by ring
   python radar.py list --ring Discovered      # just the review queue
+  python radar.py list --topic Agents         # items tagged with a topic
+  python radar.py list --ring Archived --older-than 90   # stale archives
   python radar.py show <id-or-name>           # full detail for one item
   python radar.py promote <id-or-name> Trial  # move an item to a ring
   python radar.py demote <id-or-name>         # send back to Discovered
   python radar.py set <id-or-name> quadrant Platforms
   python radar.py set <id-or-name> company "Anthropic"
-  python radar.py archive <id-or-name>        # mark Hold + tag 'archived'
+  python radar.py set <id-or-name> topics "AI,Agents"   # curated topics
+  python radar.py archive <id-or-name>        # move to Archived (dated)
   python radar.py stale --days 30             # cold inbox items (archive candidates)
   python radar.py stale --days 30 --archive   # archive them after a y/N prompt
   python radar.py add "<name>" -q Tools -d "..." -u <url>  # manual add
@@ -22,12 +25,13 @@ Names are matched case-insensitively; partial matches work if unique.
 import argparse
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import radar_core as core  # noqa: E402
 
-RING_ORDER = ["Adopt", "Trial", "Assess", "Hold", "Discovered"]
+RING_ORDER = ["Adopted", "Trial", "Assess", "Discovered", "Archived"]
 
 
 def _rebuild():
@@ -68,10 +72,34 @@ def _write(item):
         json.dump(item, f, indent=2)
 
 
+def _set_ring(item, ring):
+    """Move an item to a ring, maintaining the archived_at stamp: set it on
+    the way into Archived (preserving an existing stamp), clear it on the
+    way out. Centralizes the one side effect a ring change carries."""
+    from datetime import date
+    if ring == "Archived":
+        item["archived_at"] = item.get("archived_at") or date.today().isoformat()
+    else:
+        item["archived_at"] = None
+    item["ring"] = ring
+
+
 def cmd_list(args):
     items = core.load_all_items()
     if args.ring:
         items = [it for it in items if it["ring"] == args.ring]
+    if args.topic:
+        topic = args.topic.lower()
+        items = [it for it in items
+                 if topic in [t.lower() for t in it.get("topics", [])]]
+    if args.older_than is not None:
+        # only meaningful for archived items — keep those sat for N+ days.
+        # days_since_archived is None for non-archived items (excluded) and
+        # can be 0 (archived today), so test against None explicitly.
+        def _old_enough(it):
+            age = core.days_since_archived(it)
+            return age is not None and age >= args.older_than
+        items = [it for it in items if _old_enough(it)]
     by_ring = {r: [] for r in RING_ORDER}
     for it in items:
         by_ring.setdefault(it["ring"], []).append(it)
@@ -83,8 +111,11 @@ def cmd_list(args):
         for it in sorted(group, key=lambda x: -x.get("momentum", 0)):
             co = f" · {it['company']}" if it.get("company") else ""
             tr = {"up": "▲", "down": "▼"}.get(it.get("trend"), " ")
+            tp = f"  {{{', '.join(it['topics'])}}}" if it.get("topics") else ""
+            age = core.days_since_archived(it)
+            ag = f"  {age}d ago" if ring == "Archived" and age is not None else ""
             print(f"  {tr} {it['name']:<28} {it['quadrant']:<11} "
-                  f"m{it.get('momentum', 0):<3}{co}")
+                  f"m{it.get('momentum', 0):<3}{co}{tp}{ag}")
     print()
 
 
@@ -99,7 +130,7 @@ def cmd_promote(args):
         sys.exit(1)
     it = _resolve(args.item)
     old = it["ring"]
-    it["ring"] = args.ring
+    _set_ring(it, args.ring)
     _write(it)
     print(f"  {it['name']}: {old} → {args.ring}")
     _rebuild()
@@ -108,7 +139,7 @@ def cmd_promote(args):
 def cmd_demote(args):
     it = _resolve(args.item)
     old = it["ring"]
-    it["ring"] = "Discovered"
+    _set_ring(it, "Discovered")
     _write(it)
     print(f"  {it['name']}: {old} → Discovered")
     _rebuild()
@@ -117,12 +148,25 @@ def cmd_demote(args):
 def cmd_set(args):
     it = _resolve(args.item)
     field, value = args.field, args.value
-    if field not in ("quadrant", "company", "description", "momentum"):
-        print("  settable fields: quadrant, company, description, momentum")
+    if field not in ("quadrant", "company", "description", "momentum", "topics"):
+        print("  settable fields: quadrant, company, description, momentum, topics")
         sys.exit(1)
     if field == "quadrant" and value not in core.QUADRANTS:
         print(f"  quadrant must be one of: {', '.join(core.QUADRANTS)}")
         sys.exit(1)
+    if field == "topics":
+        # comma- or space-separated list, validated against the vocabulary
+        raw = [t for t in re.split(r"[,\s]+", value) if t]
+        kept, unknown = core.normalize_topics(raw)
+        if unknown:
+            print(f"  unknown topic(s): {', '.join(map(str, unknown))}")
+            print(f"  valid topics: {', '.join(core.TOPICS)}")
+            sys.exit(1)
+        it["topics"] = kept
+        _write(it)
+        print(f"  {it['name']}: topics = {', '.join(kept) if kept else '(none)'}")
+        _rebuild()
+        return
     it[field] = int(value) if field == "momentum" else value
     _write(it)
     print(f"  {it['name']}: {field} = {value}")
@@ -131,11 +175,9 @@ def cmd_set(args):
 
 def cmd_archive(args):
     it = _resolve(args.item)
-    it["ring"] = "Hold"
-    if "archived" not in it.get("tags", []):
-        it.setdefault("tags", []).append("archived")
+    _set_ring(it, "Archived")
     _write(it)
-    print(f"  {it['name']}: archived (Hold + 'archived' tag)")
+    print(f"  {it['name']}: archived (Archived ring, {it['archived_at']})")
     _rebuild()
 
 
@@ -193,7 +235,7 @@ def cmd_stale(args):
     print()
 
     if not args.archive:
-        print("  re-run with --archive to archive these (Hold + 'archived' tag)")
+        print("  re-run with --archive to archive these (Archived ring, dated)")
         return
 
     resp = input(f"  archive all {len(items)} item(s)? [y/N] ").strip().lower()
@@ -201,9 +243,7 @@ def cmd_stale(args):
         print("  aborted — nothing changed")
         return
     for it in items:
-        it["ring"] = "Hold"
-        if "archived" not in it.get("tags", []):
-            it.setdefault("tags", []).append("archived")
+        _set_ring(it, "Archived")
         _write(it)
     print(f"  archived {len(items)} item(s)")
     _rebuild()
@@ -233,6 +273,11 @@ def main():
 
     p = sub.add_parser("list", help="list items grouped by ring")
     p.add_argument("--ring", choices=RING_ORDER)
+    p.add_argument("--topic", choices=core.TOPICS,
+                   help="only items carrying this topic")
+    p.add_argument("--older-than", type=int, metavar="DAYS",
+                   help="only archived items sat this many+ days "
+                        "(pair with --ring Archived)")
     p.set_defaults(func=cmd_list)
 
     p = sub.add_parser("show", help="show full detail for one item")
@@ -248,13 +293,16 @@ def main():
     p.add_argument("item")
     p.set_defaults(func=cmd_demote)
 
-    p = sub.add_parser("set", help="set a field on an item")
+    p = sub.add_parser("set",
+                       help="set a field (quadrant|company|description|"
+                            "momentum|topics) on an item")
     p.add_argument("item")
     p.add_argument("field")
-    p.add_argument("value")
+    p.add_argument("value", help="for topics: comma/space-separated, "
+                                 "e.g. \"AI,Agents\"")
     p.set_defaults(func=cmd_set)
 
-    p = sub.add_parser("archive", help="archive an item (Hold + tag)")
+    p = sub.add_parser("archive", help="archive an item (Archived ring, dated)")
     p.add_argument("item")
     p.set_defaults(func=cmd_archive)
 

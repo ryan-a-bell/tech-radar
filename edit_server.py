@@ -13,6 +13,7 @@ The shareable site/ output and the static index.html are unaffected.
 import json
 import os
 import sys
+from datetime import date
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -43,6 +44,12 @@ class EditHandler(SimpleHTTPRequestHandler):
                 item = json.load(f)
             old_ring = item["ring"]
             item["ring"] = ring
+            # maintain the archived_at stamp on the way in/out of Archived,
+            # matching radar.py's _set_ring so both curation paths agree
+            if ring == "Archived":
+                item["archived_at"] = item.get("archived_at") or date.today().isoformat()
+            else:
+                item["archived_at"] = None
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(item, f, indent=2)
             build_radar_json()
