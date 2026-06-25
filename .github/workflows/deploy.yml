@@ -48,6 +48,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      # Gate the whole pipeline on the core unit tests. If dedup/trend/topic
+      # logic is broken, don't scrape, commit, or deploy on top of it.
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
       # Discovery only runs on the schedule or a manual trigger — NOT on
       # push. That prevents an infinite commit → push → run loop.
       - name: Run discovery

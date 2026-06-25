@@ -110,6 +110,22 @@ machine, only while `edit_server.py` is running.
 
 ---
 
+## Tests
+
+The pure logic in `radar_core.py` — canonical-URL dedup, star-trend, topic
+normalization, id/path mapping — is covered by a stdlib `unittest` suite. No
+third-party packages, nothing touches disk.
+
+```bash
+python -m unittest discover -s tests       # run everything
+python -m unittest tests.test_radar_core   # one module
+```
+
+CI runs these before discovery or deploy, so a regression in the core can't
+ship to the published radar.
+
+---
+
 ## Data model
 
 ### Rings
@@ -187,11 +203,15 @@ tech-radar/
 ├── radar_core.py       # shared library — item schema, dedup, persistence
 ├── build_site.py       # static site assembler
 ├── edit_server.py      # local server — serves dashboard.jsx with editing on
-├── github_trending.py  # GitHub Trending scraper  ← should be scrapers/
-├── reddit.py           # Reddit scraper            ← should be scrapers/
+├── scrapers/           # discovery sources — one module per source
+│   ├── base.py         # Scraper base class (the discover() contract)
+│   ├── github_trending.py
+│   ├── reddit.py
+│   └── rss_feeds.py    # registered; discover() is still a stub
 ├── index.html          # HTML shell — loads config.js + dashboard.jsx via CDN
 ├── config.js           # runtime flag — window.RADAR_EDIT (false in the build)
 ├── dashboard.jsx       # React dashboard — Atlas/Observatory/Dispatch + edit mode
+├── tests/              # stdlib unittest suite for radar_core
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
 ├── concept-drawings/   # Prototype dashboard concepts (dashboard2/3.jsx)
 ├── data/
@@ -214,10 +234,8 @@ tech-radar/
 
 | Gap | Status |
 |-----|--------|
-| `scrapers/` package | `runner.py` imports from `scrapers.github_trending` etc. but the files live at the top level. Move `github_trending.py` and `reddit.py` into a `scrapers/` directory and add `scrapers/__init__.py`. |
-| `scrapers/base.py` | The scrapers import `from scrapers.base import Scraper` — this base class needs to be created. |
-| `scrapers/rss_feeds.py` | RSS scraper is registered in `runner.py` but not yet implemented. |
-| `dashboard.jsx` | The build expects `dashboard.jsx` at the root; only prototype versions (`concept-drawings/dashboard2.jsx`, `dashboard3.jsx`) exist. |
+| `scrapers/rss_feeds.py` | Registered in `runner.py` and conforms to the `Scraper` contract, but `discover()` is still a stub that returns `[]`. Fill it in with `urllib` + `xml.etree` to bring the RSS source online. |
+| arXiv source | The `Techniques` quadrant only gets shipped tools, not research. See `TODO.md` for the planned arXiv scraper and the bloat-control decision it requires. |
 
 ---
 
