@@ -10,17 +10,18 @@
   "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
   "also_seen": [],
   "company": null,
-  "stars": 1041,
+  "stars": 600,
   "momentum": 34,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-24",
+  "last_seen": "2026-06-25",
   "stars_history": {
     "2026-06-21": 343,
     "2026-06-22": 361,
     "2026-06-23": 956,
-    "2026-06-24": 1041
+    "2026-06-24": 1041,
+    "2026-06-25": 600
   }
 }

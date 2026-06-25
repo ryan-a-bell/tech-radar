@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-25",
-  "count": 152,
+  "count": 160,
   "items": [
     {
       "id": "github:Flowseal/zapret-discord-youtube",
@@ -28,6 +28,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:alibaba/page-agent",
+      "name": "page-agent",
+      "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/page-agent",
+      "canonical_url": "github.com/alibaba/page-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 196
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:stablyai/orca",
       "name": "orca",
       "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
@@ -48,6 +75,33 @@
       "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-25": 331
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:every-app/open-seo",
+      "name": "open-seo",
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/every-app/open-seo",
+      "canonical_url": "github.com/every-app/open-seo",
+      "also_seen": [],
+      "company": null,
+      "stars": 57,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 57
       },
       "trend": "none",
       "trend_delta": 0
@@ -164,7 +218,7 @@
       "canonical_url": "github.com/google-labs-code/design.md",
       "also_seen": [],
       "company": null,
-      "stars": 619,
+      "stars": 1407,
       "momentum": 61,
       "tags": [
         "typescript"
@@ -172,7 +226,169 @@
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
       "stars_history": {
-        "2026-06-25": 619
+        "2026-06-25": 1407
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:xbtlin/ai-berkshire",
+      "name": "ai-berkshire",
+      "description": "AI \u65f6\u4ee3\u7684\u4f2f\u514b\u5e0c\u5c14\uff1a\u57fa\u4e8e Claude Code \u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6\u3002\u5df4\u83f2\u7279\u00b7\u8292\u683c\u00b7\u6bb5\u6c38\u5e73\u00b7\u674e\u5f55\u56db\u5927\u5e08\u65b9\u6cd5\u8bba + \u591aAgent\u5e76\u884c\u7814\u7a76\u3002| AI-era Berkshire: a value investing research framework built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/xbtlin/ai-berkshire",
+      "canonical_url": "github.com/xbtlin/ai-berkshire",
+      "also_seen": [],
+      "company": null,
+      "stars": 201,
+      "momentum": 20,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 201
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:aws/agent-toolkit-for-aws",
+      "name": "agent-toolkit-for-aws",
+      "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "canonical_url": "github.com/aws/agent-toolkit-for-aws",
+      "also_seen": [],
+      "company": "Amazon",
+      "stars": 15,
+      "momentum": 1,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 15
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mauriceboe/TREK",
+      "name": "TREK",
+      "description": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mauriceboe/TREK",
+      "canonical_url": "github.com/mauriceboe/trek",
+      "also_seen": [],
+      "company": null,
+      "stars": 112,
+      "momentum": 11,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 112
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opendatalab/MinerU",
+      "name": "MinerU",
+      "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opendatalab/MinerU",
+      "canonical_url": "github.com/opendatalab/mineru",
+      "also_seen": [],
+      "company": null,
+      "stars": 524,
+      "momentum": 52,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 524
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NanmiCoder/MediaCrawler",
+      "name": "MediaCrawler",
+      "description": "\u5c0f\u7ea2\u4e66\u7b14\u8bb0 | \u8bc4\u8bba\u722c\u866b\u3001\u6296\u97f3\u89c6\u9891 | \u8bc4\u8bba\u722c\u866b\u3001\u5feb\u624b\u89c6\u9891 | \u8bc4\u8bba\u722c\u866b\u3001B \u7ad9\u89c6\u9891 \uff5c \u8bc4\u8bba\u722c\u866b\u3001\u5fae\u535a\u5e16\u5b50 \uff5c \u8bc4\u8bba\u722c\u866b\u3001\u767e\u5ea6\u8d34\u5427\u5e16\u5b50 \uff5c \u767e\u5ea6\u8d34\u5427\u8bc4\u8bba\u56de\u590d\u722c\u866b | \u77e5\u4e4e\u95ee\u7b54\u6587\u7ae0\uff5c\u8bc4\u8bba\u722c\u866b",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NanmiCoder/MediaCrawler",
+      "canonical_url": "github.com/nanmicoder/mediacrawler",
+      "also_seen": [],
+      "company": null,
+      "stars": 347,
+      "momentum": 34,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 347
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:IceWhaleTech/CasaOS",
+      "name": "CasaOS",
+      "description": "CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/IceWhaleTech/CasaOS",
+      "canonical_url": "github.com/icewhaletech/casaos",
+      "also_seen": [],
+      "company": null,
+      "stars": 202,
+      "momentum": 20,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 202
       },
       "trend": "none",
       "trend_delta": 0
@@ -240,18 +456,19 @@
       "canonical_url": "github.com/shanraisshan/claude-code-best-practice",
       "also_seen": [],
       "company": null,
-      "stars": 344,
+      "stars": 450,
       "momentum": 34,
       "tags": [
         "html"
       ],
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
-        "2026-06-24": 344
+        "2026-06-24": 344,
+        "2026-06-25": 450
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 106
     },
     {
       "id": "github:heygen-com/hyperframes",
@@ -291,20 +508,21 @@
       "canonical_url": "github.com/garrytan/gstack",
       "also_seen": [],
       "company": null,
-      "stars": 1011,
+      "stars": 836,
       "momentum": 45,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-22": 454,
         "2026-06-23": 573,
-        "2026-06-24": 1011
+        "2026-06-24": 1011,
+        "2026-06-25": 836
       },
       "trend": "up",
-      "trend_delta": 557
+      "trend_delta": 382
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -344,7 +562,7 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 692,
+      "stars": 1021,
       "momentum": 6,
       "tags": [
         "typescript"
@@ -355,10 +573,10 @@
         "2026-06-22": 63,
         "2026-06-23": 100,
         "2026-06-24": 826,
-        "2026-06-25": 692
+        "2026-06-25": 1021
       },
       "trend": "up",
-      "trend_delta": 629
+      "trend_delta": 958
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -709,21 +927,22 @@
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1041,
+      "stars": 600,
       "momentum": 34,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-21": 343,
         "2026-06-22": 361,
         "2026-06-23": 956,
-        "2026-06-24": 1041
+        "2026-06-24": 1041,
+        "2026-06-25": 600
       },
       "trend": "up",
-      "trend_delta": 698
+      "trend_delta": 257
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -1348,7 +1567,7 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 3719,
+      "stars": 3553,
       "momentum": 7,
       "tags": [
         "python"
@@ -1363,10 +1582,10 @@
         "2026-06-22": 987,
         "2026-06-23": 2938,
         "2026-06-24": 3592,
-        "2026-06-25": 3719
+        "2026-06-25": 3553
       },
       "trend": "up",
-      "trend_delta": 3621
+      "trend_delta": 3455
     },
     {
       "id": "github:alibaba/zvec",
@@ -1810,19 +2029,20 @@
       "canonical_url": "github.com/free-tv/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 361,
+      "stars": 141,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-15": 70,
-        "2026-06-16": 361
+        "2026-06-16": 361,
+        "2026-06-25": 141
       },
-      "trend": "up",
-      "trend_delta": 291
+      "trend": "down",
+      "trend_delta": -220
     },
     {
       "id": "github:swc-project/swc",
@@ -2322,7 +2542,7 @@
       "canonical_url": "github.com/apple/container",
       "also_seen": [],
       "company": "Apple",
-      "stars": 1838,
+      "stars": 1366,
       "momentum": 100,
       "tags": [
         "swift"
@@ -2335,10 +2555,10 @@
         "2026-06-12": 3513,
         "2026-06-13": 1471,
         "2026-06-14": 1487,
-        "2026-06-25": 1838
+        "2026-06-25": 1366
       },
-      "trend": "up",
-      "trend_delta": 351
+      "trend": "down",
+      "trend_delta": -121
     },
     {
       "id": "github:ruvnet/RuView",

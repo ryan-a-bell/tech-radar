@@ -1,0 +1,25 @@
+{
+  "id": "github:mauriceboe/TREK",
+  "name": "TREK",
+  "description": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/mauriceboe/TREK",
+  "canonical_url": "github.com/mauriceboe/trek",
+  "also_seen": [],
+  "company": null,
+  "stars": 112,
+  "momentum": 11,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 112
+  }
+}
