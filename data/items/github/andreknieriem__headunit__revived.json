@@ -1,0 +1,23 @@
+{
+  "id": "github:andreknieriem/headunit-revived",
+  "name": "headunit-revived",
+  "description": "Headunit App for displaying Android Auto",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/andreknieriem/headunit-revived",
+  "canonical_url": "github.com/andreknieriem/headunit-revived",
+  "also_seen": [],
+  "company": null,
+  "stars": 41,
+  "momentum": 4,
+  "tags": [
+    "kotlin"
+  ],
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 41
+  }
+}

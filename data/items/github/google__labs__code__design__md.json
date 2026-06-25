@@ -1,0 +1,23 @@
+{
+  "id": "github:google-labs-code/design.md",
+  "name": "design.md",
+  "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/google-labs-code/design.md",
+  "canonical_url": "github.com/google-labs-code/design.md",
+  "also_seen": [],
+  "company": null,
+  "stars": 619,
+  "momentum": 61,
+  "tags": [
+    "typescript"
+  ],
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "stars_history": {
+    "2026-06-25": 619
+  }
+}

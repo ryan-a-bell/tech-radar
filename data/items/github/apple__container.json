@@ -10,18 +10,19 @@
   "canonical_url": "github.com/apple/container",
   "also_seen": [],
   "company": "Apple",
-  "stars": 1487,
+  "stars": 1838,
   "momentum": 100,
   "tags": [
     "swift"
   ],
   "first_seen": "2026-06-10",
-  "last_seen": "2026-06-14",
+  "last_seen": "2026-06-25",
   "stars_history": {
     "2026-06-10": 1358,
     "2026-06-11": 1611,
     "2026-06-12": 3513,
     "2026-06-13": 1471,
-    "2026-06-14": 1487
+    "2026-06-14": 1487,
+    "2026-06-25": 1838
   }
 }

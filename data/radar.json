@@ -1,7 +1,182 @@
 {
-  "generated": "2026-06-24",
-  "count": 145,
+  "generated": "2026-06-25",
+  "count": 152,
   "items": [
+    {
+      "id": "github:Flowseal/zapret-discord-youtube",
+      "name": "zapret-discord-youtube",
+      "description": "A batchfile project trending on GitHub.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Flowseal/zapret-discord-youtube",
+      "canonical_url": "github.com/flowseal/zapret-discord-youtube",
+      "also_seen": [],
+      "company": null,
+      "stars": 61,
+      "momentum": 6,
+      "tags": [
+        "batchfile"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 61
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:stablyai/orca",
+      "name": "orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/stablyai/orca",
+      "canonical_url": "github.com/stablyai/orca",
+      "also_seen": [],
+      "company": null,
+      "stars": 331,
+      "momentum": 33,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 331
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kunchenguid/no-mistakes",
+      "name": "no-mistakes",
+      "description": "git push no-mistakes",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kunchenguid/no-mistakes",
+      "canonical_url": "github.com/kunchenguid/no-mistakes",
+      "also_seen": [],
+      "company": null,
+      "stars": 110,
+      "momentum": 11,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 110
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:interviewstreet/hiring-agent",
+      "name": "hiring-agent",
+      "description": "AI agent to evaluate and score resumes.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/interviewstreet/hiring-agent",
+      "canonical_url": "github.com/interviewstreet/hiring-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 203,
+      "momentum": 20,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 203
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:andreknieriem/headunit-revived",
+      "name": "headunit-revived",
+      "description": "Headunit App for displaying Android Auto",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/andreknieriem/headunit-revived",
+      "canonical_url": "github.com/andreknieriem/headunit-revived",
+      "also_seen": [],
+      "company": null,
+      "stars": 41,
+      "momentum": 4,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 41
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:flutter/flutter",
+      "name": "flutter",
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/flutter/flutter",
+      "canonical_url": "github.com/flutter/flutter",
+      "also_seen": [],
+      "company": null,
+      "stars": 73,
+      "momentum": 7,
+      "tags": [
+        "dart"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 73
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:google-labs-code/design.md",
+      "name": "design.md",
+      "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-labs-code/design.md",
+      "canonical_url": "github.com/google-labs-code/design.md",
+      "also_seen": [],
+      "company": null,
+      "stars": 619,
+      "momentum": 61,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 619
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:revfactory/harness",
       "name": "harness",
@@ -14,18 +189,19 @@
       "canonical_url": "github.com/revfactory/harness",
       "also_seen": [],
       "company": null,
-      "stars": 128,
+      "stars": 277,
       "momentum": 12,
       "tags": [
         "html"
       ],
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
-        "2026-06-24": 128
+        "2026-06-24": 128,
+        "2026-06-25": 277
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 149
     },
     {
       "id": "github:anthropics/claude-plugins-official",
@@ -168,20 +344,21 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 826,
+      "stars": 692,
       "momentum": 6,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-22": 63,
         "2026-06-23": 100,
-        "2026-06-24": 826
+        "2026-06-24": 826,
+        "2026-06-25": 692
       },
       "trend": "up",
-      "trend_delta": 763
+      "trend_delta": 629
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -404,21 +581,22 @@
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "also_seen": [],
       "company": null,
-      "stars": 1119,
+      "stars": 1468,
       "momentum": 51,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-21": 519,
         "2026-06-22": 568,
         "2026-06-23": 1557,
-        "2026-06-24": 1119
+        "2026-06-24": 1119,
+        "2026-06-25": 1468
       },
       "trend": "up",
-      "trend_delta": 600
+      "trend_delta": 949
     },
     {
       "id": "github:topoteretes/cognee",
@@ -1170,13 +1348,13 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 3592,
+      "stars": 3719,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
@@ -1184,10 +1362,11 @@
         "2026-06-21": 993,
         "2026-06-22": 987,
         "2026-06-23": 2938,
-        "2026-06-24": 3592
+        "2026-06-24": 3592,
+        "2026-06-25": 3719
       },
       "trend": "up",
-      "trend_delta": 3521
+      "trend_delta": 3621
     },
     {
       "id": "github:alibaba/zvec",
@@ -2143,22 +2322,23 @@
       "canonical_url": "github.com/apple/container",
       "also_seen": [],
       "company": "Apple",
-      "stars": 1487,
+      "stars": 1838,
       "momentum": 100,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-10": 1358,
         "2026-06-11": 1611,
         "2026-06-12": 3513,
         "2026-06-13": 1471,
-        "2026-06-14": 1487
+        "2026-06-14": 1487,
+        "2026-06-25": 1838
       },
       "trend": "up",
-      "trend_delta": 129
+      "trend_delta": 351
     },
     {
       "id": "github:ruvnet/RuView",
@@ -3634,13 +3814,13 @@
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "also_seen": [],
       "company": null,
-      "stars": 936,
+      "stars": 1178,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
       "stars_history": {
         "2026-06-03": 1735,
         "2026-06-04": 1735,
@@ -3648,10 +3828,11 @@
         "2026-06-06": 1845,
         "2026-06-07": 1117,
         "2026-06-08": 1112,
-        "2026-06-24": 936
+        "2026-06-24": 936,
+        "2026-06-25": 1178
       },
-      "trend": "down",
-      "trend_delta": -176
+      "trend": "up",
+      "trend_delta": 66
     },
     {
       "id": "github:chopratejas/headroom",
