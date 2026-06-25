@@ -8,7 +8,16 @@ import React, { useState, useMemo, useEffect } from "react";
      · Dispatch    — editorial briefing grid
    All include the "Discovered" ring (the runner's inbox).
 
+   READ-ONLY by default. When served by edit_server.py (which sets
+   `window.RADAR_EDIT = true`), the detail panels grow a ring editor that
+   writes changes straight to disk via /api/promote. The deployed GitHub
+   Pages build never sets the flag and has no backend, so it can't be
+   edited — one file powers both the public view and local curation.
    ============================================================ */
+
+// True only when edit_server.py injects the flag; the static site leaves it
+// unset, so every edit affordance below stays hidden in the public build.
+const EDIT_MODE = typeof window !== "undefined" && window.RADAR_EDIT === true;
 
 const QUADRANTS = ["Techniques", "Tools", "Platforms", "Languages"];
 // Rings run center→out: Adopted (most confidence) to Archived (retired).
@@ -100,17 +109,18 @@ function Sparkline({ history, color, w = 54, h = 16 }) {
   );
 }
 
-function useRadarData() {
+function useRadarData(refreshKey = 0) {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("loading");
   useEffect(() => {
     let alive = true;
-    fetch("data/radar.json")
+    // cache-bust on refresh so an edit write-through doesn't read stale JSON
+    fetch("data/radar.json?v=" + refreshKey)
       .then((r) => { if (!r.ok) throw new Error("no file"); return r.json(); })
       .then((j) => { if (alive) { setData(j); setStatus("live"); } })
       .catch(() => { if (alive) { setData(SAMPLE); setStatus("sample"); } });
     return () => { alive = false; };
-  }, []);
+  }, [refreshKey]);
   return { data, status };
 }
 
@@ -159,6 +169,47 @@ function TopicChips({ topics }) {
   );
 }
 
+/* ===================== RING EDITOR =====================
+   Segmented ring picker shown in the Atlas modal and Observatory detail panel,
+   but only when EDIT_MODE is on (edit_server.py running). Clicking a ring fires
+   onSetRing immediately — no staging, no commands. The App handler POSTs to
+   /api/promote and re-fetches radar.json on success. In the static public build
+   EDIT_MODE is false, so this never renders. */
+function RingEditor({ item, onSetRing, saveStatus }) {
+  const saving = saveStatus?.activeid === item.id && saveStatus?.status === "saving";
+  return (
+    <div style={{ marginBottom: 14 }}>
+      <div style={{
+        fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+        color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
+      }}>MOVE TO RING</div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+        {RINGS.map((r) => {
+          const on = item.ring === r;
+          return (
+            <button key={r} onClick={() => !saving && onSetRing(item.id, r)}
+              disabled={saving}
+              style={{
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, letterSpacing: 0.5,
+                padding: "6px 12px", cursor: saving ? "wait" : "pointer", borderRadius: 4,
+                border: "1.5px solid " + RING_INK[r],
+                background: on ? RING_INK[r] : "transparent",
+                color: on ? "#fff" : RING_INK[r], fontWeight: on ? 700 : 400,
+                opacity: saving ? 0.6 : 1,
+              }}>{r}</button>
+          );
+        })}
+      </div>
+      <div style={{
+        marginTop: 7, fontFamily: "'IBM Plex Mono', monospace",
+        fontSize: 10, color: "#9a9384", lineHeight: 1.5,
+      }}>
+        Click a ring to save immediately to disk.
+      </div>
+    </div>
+  );
+}
+
 /* ===================== NOTES (artifact storage) =====================
    Notes live in the dashboard's per-user storage, NOT in radar.json.
    This keeps the file pipeline read-only for the dashboard and lets
@@ -188,7 +239,7 @@ async function saveNote(id, text) {
    Same editorial visual language as Dispatch: cream paper, hard drop
    shadows, Georgia for body, IBM Plex Mono for meta. The radar plot
    stays as the centerpiece but adapts to the lighter palette. */
-function Observatory({ data, status }) {
+function Observatory({ data, status, onSetRing, saveStatus }) {
   const [active, setActive] = useState(null);
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
@@ -450,6 +501,11 @@ function Observatory({ data, status }) {
                 </span>
               </div>
 
+              {/* ring editor — saves immediately to disk (edit mode only) */}
+              {EDIT_MODE && (
+                <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+              )}
+
               {/* notes editor */}
               <div style={{
                 fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
@@ -666,7 +722,7 @@ function Dispatch({ data, status }) {
      - sortable card list scrolls on the right (scannable detail)
      - click anything -> modal with full detail + ring editor + notes
    Hovering either side highlights the matching item on the other. */
-function Atlas({ data, status }) {
+function Atlas({ data, status, onSetRing, saveStatus }) {
   const [active, setActive] = useState(null);      // selected -> modal
   const [hoverId, setHoverId] = useState(null);    // cross-highlight
   const [ringFilter, setRingFilter] = useState("All");
@@ -783,6 +839,17 @@ function Atlas({ data, status }) {
           </span>
         </div>
       </div>
+
+      {/* edit mode hint */}
+      {EDIT_MODE && (
+        <div style={{
+          fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
+          color: "#6b6456", letterSpacing: 0.5, margin: "10px 0 0",
+        }}>
+          Click any card to open the detail panel and move it between rings.
+          Changes save to disk immediately.
+        </div>
+      )}
 
       {/* summary strip */}
       <div style={{
@@ -1084,6 +1151,11 @@ function Atlas({ data, status }) {
               </span>
             </div>
 
+            {/* ring editor — saves immediately to disk (edit mode only) */}
+            {EDIT_MODE && (
+              <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+            )}
+
             <div style={{
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
               color: "#6b6456", letterSpacing: 1.5, marginBottom: 5,
@@ -1127,7 +1199,31 @@ function Atlas({ data, status }) {
 /* ===================== SHELL ===================== */
 export default function App() {
   const [view, setView] = useState("atlas");
-  const { data, status } = useRadarData();
+  const [refreshKey, setRefreshKey] = useState(0);
+  const { data, status } = useRadarData(refreshKey);
+
+  // {status: "idle"|"saving"|"saved"|"error", activeid: "", name: ""}
+  const [saveStatus, setSaveStatus] = useState({ status: "idle", activeid: "", name: "" });
+
+  // Write-through ring change. Only ever invoked from edit-mode affordances,
+  // and only reaches a live endpoint when edit_server.py is serving the page.
+  const onSetRing = async (id, ring) => {
+    setSaveStatus({ status: "saving", activeid: id, name: "" });
+    try {
+      const r = await fetch("/api/promote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, ring }),
+      });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error || "save failed");
+      setSaveStatus({ status: "saved", activeid: id, name: j.name });
+      setRefreshKey((k) => k + 1);
+      setTimeout(() => setSaveStatus({ status: "idle", activeid: "", name: "" }), 2000);
+    } catch (e) {
+      setSaveStatus({ status: "error", activeid: id, name: e.message });
+    }
+  };
 
   if (!data) {
     return (
@@ -1164,6 +1260,25 @@ export default function App() {
             cursor: "pointer", fontFamily: "inherit",
           }}>{m.label}</button>
         ))}
+        {EDIT_MODE && (
+          <span style={{
+            fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
+            background: "#1d6fb8", color: "#fff", marginRight: 6,
+          }}>EDIT MODE</span>
+        )}
+        {EDIT_MODE && saveStatus.status !== "idle" && (
+          <span style={{
+            fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
+            color: "#1a1a1a",
+            background: saveStatus.status === "saving" ? "#fbbf24"
+                      : saveStatus.status === "saved"  ? "#4ade80"
+                      : "#f87171",
+          }}>
+            {saveStatus.status === "saving" ? "SAVING..."
+             : saveStatus.status === "saved"  ? `✓ ${saveStatus.name}`
+             : `✗ ${saveStatus.name}`}
+          </span>
+        )}
         <span style={{
           marginLeft: "auto", fontSize: 10, letterSpacing: 1,
           color: status === "live" ? "#4ade80" : "#fbbf24",
@@ -1173,9 +1288,9 @@ export default function App() {
       </div>
 
       {view === "atlas"
-        ? <Atlas data={data} status={status} />
+        ? <Atlas data={data} status={status} onSetRing={onSetRing} saveStatus={saveStatus} />
         : view === "observatory"
-        ? <Observatory data={data} status={status} />
+        ? <Observatory data={data} status={status} onSetRing={onSetRing} saveStatus={saveStatus} />
         : <Dispatch data={data} status={status} />}
     </div>
   );

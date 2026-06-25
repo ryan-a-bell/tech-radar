@@ -1,9 +1,10 @@
 name: Build & Deploy Radar
 
 # Publishes the STATIC, read-only dashboard to GitHub Pages.
-# build_site.py only bundles index.html + dashboard.jsx + radar.json — the
-# editable dashboard (edit.html / dashboard_edit.jsx / edit_server.py) is
-# never deployed, so nobody can edit the public radar.
+# build_site.py bundles index.html + config.js + dashboard.jsx + radar.json.
+# config.js ships as `window.RADAR_EDIT = false` and there is no backend here,
+# so the public radar can't be edited — editing only exists locally, when
+# edit_server.py serves the same dashboard.jsx with the flag flipped on.
 #
 # One-time setup: repo Settings → Pages → Build and deployment →
 #   Source = "GitHub Actions".
@@ -19,6 +20,7 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "config.js"
       - "dashboard.jsx"
       - "build_site.py"
       - "data/**"
