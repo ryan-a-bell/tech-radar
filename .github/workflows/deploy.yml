@@ -1,13 +1,13 @@
 name: Build & Deploy Radar
 
-# Publishes the STATIC, read-only dashboard to GitHub Pages.
+# Publishes the STATIC, read-only dashboard to the gh-pages branch.
 # build_site.py bundles index.html + config.js + dashboard.jsx + radar.json.
 # config.js ships as `window.RADAR_EDIT = false` and there is no backend here,
 # so the public radar can't be edited — editing only exists locally, when
 # edit_server.py serves the same dashboard.jsx with the flag flipped on.
 #
 # One-time setup: repo Settings → Pages → Build and deployment →
-#   Source = "GitHub Actions".
+#   Source = "Deploy from a branch", Branch = "gh-pages", Folder = "/ (root)".
 
 on:
   # daily discovery + redeploy
@@ -26,16 +26,14 @@ on:
 
 permissions:
   contents: write     # commit newly discovered items back to the repo
-  pages: write        # publish to GitHub Pages
-  id-token: write     # OIDC token for the Pages deploy
 
 # never run two deploys at once; let an in-progress run finish
 concurrency:
-  group: pages
+  group: gh-pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -73,18 +71,9 @@ jobs:
       - name: Build static site
         run: python build_site.py
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site
