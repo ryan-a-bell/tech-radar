@@ -1,0 +1,25 @@
+{
+  "id": "github:ripienaar/free-for-dev",
+  "name": "free-for-dev",
+  "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ripienaar/free-for-dev",
+  "canonical_url": "github.com/ripienaar/free-for-dev",
+  "also_seen": [],
+  "company": null,
+  "stars": 48,
+  "momentum": 4,
+  "tags": [
+    "html"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-26",
+  "last_seen": "2026-06-26",
+  "stars_history": {
+    "2026-06-26": 48
+  }
+}
