@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-25",
+  "generated": "2026-06-26",
   "count": 160,
   "items": [
     {
@@ -39,7 +39,7 @@
       "canonical_url": "github.com/alibaba/page-agent",
       "also_seen": [],
       "company": null,
-      "stars": 196,
+      "stars": 163,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -47,12 +47,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 196
+        "2026-06-25": 196,
+        "2026-06-26": 163
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -33
     },
     {
       "id": "github:stablyai/orca",
@@ -99,11 +100,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 57
+        "2026-06-25": 57,
+        "2026-06-26": 57
       },
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -218,18 +220,19 @@
       "canonical_url": "github.com/google-labs-code/design.md",
       "also_seen": [],
       "company": null,
-      "stars": 1407,
+      "stars": 1475,
       "momentum": 61,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 1407
+        "2026-06-25": 1407,
+        "2026-06-26": 1475
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 68
     },
     {
       "id": "github:xbtlin/ai-berkshire",
@@ -243,7 +246,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 201,
+      "stars": 309,
       "momentum": 20,
       "tags": [
         "python"
@@ -251,12 +254,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 201
+        "2026-06-25": 201,
+        "2026-06-26": 309
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 108
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -270,7 +274,7 @@
       "canonical_url": "github.com/aws/agent-toolkit-for-aws",
       "also_seen": [],
       "company": "Amazon",
-      "stars": 15,
+      "stars": 47,
       "momentum": 1,
       "tags": [
         "python"
@@ -278,12 +282,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 15
+        "2026-06-25": 15,
+        "2026-06-26": 47
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 32
     },
     {
       "id": "github:mauriceboe/TREK",
@@ -297,7 +302,7 @@
       "canonical_url": "github.com/mauriceboe/trek",
       "also_seen": [],
       "company": null,
-      "stars": 112,
+      "stars": 241,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -305,12 +310,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 112
+        "2026-06-25": 112,
+        "2026-06-26": 241
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 129
     },
     {
       "id": "github:opendatalab/MinerU",
@@ -324,7 +330,7 @@
       "canonical_url": "github.com/opendatalab/mineru",
       "also_seen": [],
       "company": null,
-      "stars": 524,
+      "stars": 644,
       "momentum": 52,
       "tags": [
         "python"
@@ -332,12 +338,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 524
+        "2026-06-25": 524,
+        "2026-06-26": 644
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 120
     },
     {
       "id": "github:NanmiCoder/MediaCrawler",
@@ -351,7 +358,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 347,
+      "stars": 398,
       "momentum": 34,
       "tags": [
         "python"
@@ -359,12 +366,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 347
+        "2026-06-25": 347,
+        "2026-06-26": 398
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 51
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -378,7 +386,7 @@
       "canonical_url": "github.com/icewhaletech/casaos",
       "also_seen": [],
       "company": null,
-      "stars": 202,
+      "stars": 223,
       "momentum": 20,
       "tags": [
         "go"
@@ -386,12 +394,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
-        "2026-06-25": 202
+        "2026-06-25": 202,
+        "2026-06-26": 223
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 21
     },
     {
       "id": "github:revfactory/harness",
@@ -456,19 +465,20 @@
       "canonical_url": "github.com/shanraisshan/claude-code-best-practice",
       "also_seen": [],
       "company": null,
-      "stars": 450,
+      "stars": 287,
       "momentum": 34,
       "tags": [
         "html"
       ],
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-24": 344,
-        "2026-06-25": 450
+        "2026-06-25": 450,
+        "2026-06-26": 287
       },
-      "trend": "up",
-      "trend_delta": 106
+      "trend": "down",
+      "trend_delta": -57
     },
     {
       "id": "github:heygen-com/hyperframes",
@@ -508,21 +518,22 @@
       "canonical_url": "github.com/garrytan/gstack",
       "also_seen": [],
       "company": null,
-      "stars": 836,
+      "stars": 767,
       "momentum": 45,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-22": 454,
         "2026-06-23": 573,
         "2026-06-24": 1011,
-        "2026-06-25": 836
+        "2026-06-25": 836,
+        "2026-06-26": 767
       },
       "trend": "up",
-      "trend_delta": 382
+      "trend_delta": 313
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -562,21 +573,22 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 1021,
+      "stars": 1024,
       "momentum": 6,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-22": 63,
         "2026-06-23": 100,
         "2026-06-24": 826,
-        "2026-06-25": 1021
+        "2026-06-25": 1021,
+        "2026-06-26": 1024
       },
       "trend": "up",
-      "trend_delta": 958
+      "trend_delta": 961
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -927,22 +939,23 @@
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "also_seen": [],
       "company": null,
-      "stars": 600,
+      "stars": 571,
       "momentum": 34,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-21": 343,
         "2026-06-22": 361,
         "2026-06-23": 956,
         "2026-06-24": 1041,
-        "2026-06-25": 600
+        "2026-06-25": 600,
+        "2026-06-26": 571
       },
       "trend": "up",
-      "trend_delta": 257
+      "trend_delta": 228
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -1567,13 +1580,13 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 3553,
+      "stars": 3434,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
@@ -1582,10 +1595,11 @@
         "2026-06-22": 987,
         "2026-06-23": 2938,
         "2026-06-24": 3592,
-        "2026-06-25": 3553
+        "2026-06-25": 3553,
+        "2026-06-26": 3434
       },
       "trend": "up",
-      "trend_delta": 3455
+      "trend_delta": 3336
     },
     {
       "id": "github:alibaba/zvec",
@@ -2029,20 +2043,21 @@
       "canonical_url": "github.com/free-tv/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 141,
+      "stars": 139,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-15": 70,
         "2026-06-16": 361,
-        "2026-06-25": 141
+        "2026-06-25": 141,
+        "2026-06-26": 139
       },
       "trend": "down",
-      "trend_delta": -220
+      "trend_delta": -222
     },
     {
       "id": "github:swc-project/swc",
@@ -2542,23 +2557,24 @@
       "canonical_url": "github.com/apple/container",
       "also_seen": [],
       "company": "Apple",
-      "stars": 1366,
+      "stars": 1351,
       "momentum": 100,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-26",
       "stars_history": {
         "2026-06-10": 1358,
         "2026-06-11": 1611,
         "2026-06-12": 3513,
         "2026-06-13": 1471,
         "2026-06-14": 1487,
-        "2026-06-25": 1366
+        "2026-06-25": 1366,
+        "2026-06-26": 1351
       },
       "trend": "down",
-      "trend_delta": -121
+      "trend_delta": -136
     },
     {
       "id": "github:ruvnet/RuView",

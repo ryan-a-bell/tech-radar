@@ -10,16 +10,17 @@
   "canonical_url": "github.com/free-tv/iptv",
   "also_seen": [],
   "company": null,
-  "stars": 141,
+  "stars": 139,
   "momentum": 7,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-06-25",
+  "last_seen": "2026-06-26",
   "stars_history": {
     "2026-06-15": 70,
     "2026-06-16": 361,
-    "2026-06-25": 141
+    "2026-06-25": 141,
+    "2026-06-26": 139
   }
 }

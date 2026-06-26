@@ -10,7 +10,7 @@
   "canonical_url": "github.com/alibaba/page-agent",
   "also_seen": [],
   "company": null,
-  "stars": 196,
+  "stars": 163,
   "momentum": 19,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-25",
+  "last_seen": "2026-06-26",
   "stars_history": {
-    "2026-06-25": 196
+    "2026-06-25": 196,
+    "2026-06-26": 163
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/icewhaletech/casaos",
   "also_seen": [],
   "company": null,
-  "stars": 202,
+  "stars": 223,
   "momentum": 20,
   "tags": [
     "go"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-25",
+  "last_seen": "2026-06-26",
   "stars_history": {
-    "2026-06-25": 202
+    "2026-06-25": 202,
+    "2026-06-26": 223
   }
 }
