@@ -1,0 +1,4294 @@
+{
+  "generated": "2026-06-26",
+  "count": 160,
+  "items": [
+    {
+      "id": "github:Flowseal/zapret-discord-youtube",
+      "name": "zapret-discord-youtube",
+      "description": "A batchfile project trending on GitHub.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Flowseal/zapret-discord-youtube",
+      "canonical_url": "github.com/flowseal/zapret-discord-youtube",
+      "also_seen": [],
+      "company": null,
+      "stars": 61,
+      "momentum": 6,
+      "tags": [
+        "batchfile"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 61
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alibaba/page-agent",
+      "name": "page-agent",
+      "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/page-agent",
+      "canonical_url": "github.com/alibaba/page-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 196
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:stablyai/orca",
+      "name": "orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/stablyai/orca",
+      "canonical_url": "github.com/stablyai/orca",
+      "also_seen": [],
+      "company": null,
+      "stars": 331,
+      "momentum": 33,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 331
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:every-app/open-seo",
+      "name": "open-seo",
+      "description": "Open source alternative to Semrush and Ahrefs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/every-app/open-seo",
+      "canonical_url": "github.com/every-app/open-seo",
+      "also_seen": [],
+      "company": null,
+      "stars": 57,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 57
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kunchenguid/no-mistakes",
+      "name": "no-mistakes",
+      "description": "git push no-mistakes",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kunchenguid/no-mistakes",
+      "canonical_url": "github.com/kunchenguid/no-mistakes",
+      "also_seen": [],
+      "company": null,
+      "stars": 110,
+      "momentum": 11,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 110
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:interviewstreet/hiring-agent",
+      "name": "hiring-agent",
+      "description": "AI agent to evaluate and score resumes.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/interviewstreet/hiring-agent",
+      "canonical_url": "github.com/interviewstreet/hiring-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 203,
+      "momentum": 20,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 203
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:andreknieriem/headunit-revived",
+      "name": "headunit-revived",
+      "description": "Headunit App for displaying Android Auto",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/andreknieriem/headunit-revived",
+      "canonical_url": "github.com/andreknieriem/headunit-revived",
+      "also_seen": [],
+      "company": null,
+      "stars": 41,
+      "momentum": 4,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 41
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:flutter/flutter",
+      "name": "flutter",
+      "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/flutter/flutter",
+      "canonical_url": "github.com/flutter/flutter",
+      "also_seen": [],
+      "company": null,
+      "stars": 73,
+      "momentum": 7,
+      "tags": [
+        "dart"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 73
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:google-labs-code/design.md",
+      "name": "design.md",
+      "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-labs-code/design.md",
+      "canonical_url": "github.com/google-labs-code/design.md",
+      "also_seen": [],
+      "company": null,
+      "stars": 1407,
+      "momentum": 61,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 1407
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:xbtlin/ai-berkshire",
+      "name": "ai-berkshire",
+      "description": "AI \u65f6\u4ee3\u7684\u4f2f\u514b\u5e0c\u5c14\uff1a\u57fa\u4e8e Claude Code \u7684\u4ef7\u503c\u6295\u8d44\u7814\u7a76\u6846\u67b6\u3002\u5df4\u83f2\u7279\u00b7\u8292\u683c\u00b7\u6bb5\u6c38\u5e73\u00b7\u674e\u5f55\u56db\u5927\u5e08\u65b9\u6cd5\u8bba + \u591aAgent\u5e76\u884c\u7814\u7a76\u3002| AI-era Berkshire: a value investing research framework built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/xbtlin/ai-berkshire",
+      "canonical_url": "github.com/xbtlin/ai-berkshire",
+      "also_seen": [],
+      "company": null,
+      "stars": 201,
+      "momentum": 20,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 201
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:aws/agent-toolkit-for-aws",
+      "name": "agent-toolkit-for-aws",
+      "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "canonical_url": "github.com/aws/agent-toolkit-for-aws",
+      "also_seen": [],
+      "company": "Amazon",
+      "stars": 15,
+      "momentum": 1,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 15
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mauriceboe/TREK",
+      "name": "TREK",
+      "description": "A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mauriceboe/TREK",
+      "canonical_url": "github.com/mauriceboe/trek",
+      "also_seen": [],
+      "company": null,
+      "stars": 112,
+      "momentum": 11,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 112
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opendatalab/MinerU",
+      "name": "MinerU",
+      "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opendatalab/MinerU",
+      "canonical_url": "github.com/opendatalab/mineru",
+      "also_seen": [],
+      "company": null,
+      "stars": 524,
+      "momentum": 52,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 524
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NanmiCoder/MediaCrawler",
+      "name": "MediaCrawler",
+      "description": "\u5c0f\u7ea2\u4e66\u7b14\u8bb0 | \u8bc4\u8bba\u722c\u866b\u3001\u6296\u97f3\u89c6\u9891 | \u8bc4\u8bba\u722c\u866b\u3001\u5feb\u624b\u89c6\u9891 | \u8bc4\u8bba\u722c\u866b\u3001B \u7ad9\u89c6\u9891 \uff5c \u8bc4\u8bba\u722c\u866b\u3001\u5fae\u535a\u5e16\u5b50 \uff5c \u8bc4\u8bba\u722c\u866b\u3001\u767e\u5ea6\u8d34\u5427\u5e16\u5b50 \uff5c \u767e\u5ea6\u8d34\u5427\u8bc4\u8bba\u56de\u590d\u722c\u866b | \u77e5\u4e4e\u95ee\u7b54\u6587\u7ae0\uff5c\u8bc4\u8bba\u722c\u866b",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NanmiCoder/MediaCrawler",
+      "canonical_url": "github.com/nanmicoder/mediacrawler",
+      "also_seen": [],
+      "company": null,
+      "stars": 347,
+      "momentum": 34,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 347
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:IceWhaleTech/CasaOS",
+      "name": "CasaOS",
+      "description": "CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/IceWhaleTech/CasaOS",
+      "canonical_url": "github.com/icewhaletech/casaos",
+      "also_seen": [],
+      "company": null,
+      "stars": 202,
+      "momentum": 20,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-25": 202
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:revfactory/harness",
+      "name": "harness",
+      "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/revfactory/harness",
+      "canonical_url": "github.com/revfactory/harness",
+      "also_seen": [],
+      "company": null,
+      "stars": 277,
+      "momentum": 12,
+      "tags": [
+        "html"
+      ],
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-24": 128,
+        "2026-06-25": 277
+      },
+      "trend": "up",
+      "trend_delta": 149
+    },
+    {
+      "id": "github:anthropics/claude-plugins-official",
+      "name": "claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "canonical_url": "github.com/anthropics/claude-plugins-official",
+      "also_seen": [],
+      "company": "Anthropic",
+      "stars": 77,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-24": 77
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:shanraisshan/claude-code-best-practice",
+      "name": "claude-code-best-practice",
+      "description": "from vibe coding to agentic engineering - practice makes claude perfect",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice",
+      "canonical_url": "github.com/shanraisshan/claude-code-best-practice",
+      "also_seen": [],
+      "company": null,
+      "stars": 450,
+      "momentum": 34,
+      "tags": [
+        "html"
+      ],
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-24": 344,
+        "2026-06-25": 450
+      },
+      "trend": "up",
+      "trend_delta": 106
+    },
+    {
+      "id": "github:heygen-com/hyperframes",
+      "name": "hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "canonical_url": "github.com/heygen-com/hyperframes",
+      "also_seen": [],
+      "company": null,
+      "stars": 395,
+      "momentum": 36,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-22": 369,
+        "2026-06-23": 395
+      },
+      "trend": "up",
+      "trend_delta": 26
+    },
+    {
+      "id": "github:garrytan/gstack",
+      "name": "gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/garrytan/gstack",
+      "canonical_url": "github.com/garrytan/gstack",
+      "also_seen": [],
+      "company": null,
+      "stars": 836,
+      "momentum": 45,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-22": 454,
+        "2026-06-23": 573,
+        "2026-06-24": 1011,
+        "2026-06-25": 836
+      },
+      "trend": "up",
+      "trend_delta": 382
+    },
+    {
+      "id": "github:firecrawl/firecrawl",
+      "name": "firecrawl",
+      "description": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "canonical_url": "github.com/firecrawl/firecrawl",
+      "also_seen": [],
+      "company": null,
+      "stars": 615,
+      "momentum": 51,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-22": 513,
+        "2026-06-23": 615
+      },
+      "trend": "up",
+      "trend_delta": 102
+    },
+    {
+      "id": "github:JCodesMore/ai-website-cloner-template",
+      "name": "ai-website-cloner-template",
+      "description": "Clone any website with one command using AI coding agents",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
+      "also_seen": [],
+      "company": null,
+      "stars": 1021,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-22": 63,
+        "2026-06-23": 100,
+        "2026-06-24": 826,
+        "2026-06-25": 1021
+      },
+      "trend": "up",
+      "trend_delta": 958
+    },
+    {
+      "id": "github:Stirling-Tools/Stirling-PDF",
+      "name": "Stirling-PDF",
+      "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "canonical_url": "github.com/stirling-tools/stirling-pdf",
+      "also_seen": [],
+      "company": null,
+      "stars": 547,
+      "momentum": 39,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-22": 394,
+        "2026-06-23": 547
+      },
+      "trend": "up",
+      "trend_delta": 153
+    },
+    {
+      "id": "github:jamiepine/voicebox",
+      "name": "voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jamiepine/voicebox",
+      "canonical_url": "github.com/jamiepine/voicebox",
+      "also_seen": [],
+      "company": null,
+      "stars": 1045,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-21": 145,
+        "2026-06-22": 614,
+        "2026-06-23": 529,
+        "2026-06-24": 1045
+      },
+      "trend": "up",
+      "trend_delta": 900
+    },
+    {
+      "id": "github:twentyhq/twenty",
+      "name": "twenty",
+      "description": "The open alternative to Salesforce, designed for AI.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/twentyhq/twenty",
+      "canonical_url": "github.com/twentyhq/twenty",
+      "also_seen": [],
+      "company": null,
+      "stars": 140,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 140
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tursodatabase/turso",
+      "name": "turso",
+      "description": "Turso is an in-process SQL database, compatible with SQLite.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tursodatabase/turso",
+      "canonical_url": "github.com/tursodatabase/turso",
+      "also_seen": [],
+      "company": "Turso",
+      "stars": 540,
+      "momentum": 80,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-21": 543,
+        "2026-06-22": 548,
+        "2026-06-23": 540
+      },
+      "trend": "down",
+      "trend_delta": -3
+    },
+    {
+      "id": "github:asgeirtj/system_prompts_leaks",
+      "name": "system_prompts_leaks",
+      "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
+      "also_seen": [],
+      "company": null,
+      "stars": 352,
+      "momentum": 35,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 352
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:smicallef/spiderfoot",
+      "name": "spiderfoot",
+      "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/smicallef/spiderfoot",
+      "canonical_url": "github.com/smicallef/spiderfoot",
+      "also_seen": [],
+      "company": null,
+      "stars": 288,
+      "momentum": 28,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 288
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:1jehuang/jcode",
+      "name": "jcode",
+      "description": "Coding Agent Harness",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/1jehuang/jcode",
+      "canonical_url": "github.com/1jehuang/jcode",
+      "also_seen": [],
+      "company": null,
+      "stars": 87,
+      "momentum": 8,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 87
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bytedance/deer-flow",
+      "name": "deer-flow",
+      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bytedance/deer-flow",
+      "canonical_url": "github.com/bytedance/deer-flow",
+      "also_seen": [],
+      "company": null,
+      "stars": 739,
+      "momentum": 41,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-21": 415,
+        "2026-06-22": 442,
+        "2026-06-23": 738,
+        "2026-06-24": 739
+      },
+      "trend": "up",
+      "trend_delta": 324
+    },
+    {
+      "id": "github:ZhuLinsen/daily_stock_analysis",
+      "name": "daily_stock_analysis",
+      "description": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
+      "also_seen": [],
+      "company": null,
+      "stars": 1468,
+      "momentum": 51,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-21": 519,
+        "2026-06-22": 568,
+        "2026-06-23": 1557,
+        "2026-06-24": 1119,
+        "2026-06-25": 1468
+      },
+      "trend": "up",
+      "trend_delta": 949
+    },
+    {
+      "id": "github:topoteretes/cognee",
+      "name": "cognee",
+      "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/topoteretes/cognee",
+      "canonical_url": "github.com/topoteretes/cognee",
+      "also_seen": [],
+      "company": null,
+      "stars": 361,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 361
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mikumifa/biliTickerBuy",
+      "name": "biliTickerBuy",
+      "description": "b\u7ad9\u4f1a\u5458\u8d2d\u8d2d\u7968\u8f85\u52a9\u5de5\u5177",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mikumifa/biliTickerBuy",
+      "canonical_url": "github.com/mikumifa/bilitickerbuy",
+      "also_seen": [],
+      "company": null,
+      "stars": 164,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 164
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:pppscn/SmsForwarder",
+      "name": "SmsForwarder",
+      "description": "\u77ed\u4fe1\u8f6c\u53d1\u5668\u2014\u2014\u76d1\u63a7Android\u624b\u673a\u77ed\u4fe1\u3001\u6765\u7535\u3001APP\u901a\u77e5\uff0c\u5e76\u6839\u636e\u6307\u5b9a\u89c4\u5219\u8f6c\u53d1\u5230\u5176\u4ed6\u624b\u673a\uff1a\u9489\u9489\u7fa4\u81ea\u5b9a\u4e49\u673a\u5668\u4eba\u3001\u9489\u9489\u4f01\u4e1a\u5185\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u7fa4\u673a\u5668\u4eba\u3001\u98de\u4e66\u673a\u5668\u4eba\u3001\u4f01\u4e1a\u5fae\u4fe1\u5e94\u7528\u6d88\u606f\u3001\u90ae\u7bb1\u3001bark\u3001webhook\u3001Telegram\u673a\u5668\u4eba\u3001Server\u9171\u3001PushPlus\u3001\u624b\u673a\u77ed\u4fe1\u7b49\u3002\u5305\u62ec\u4e3b\u52a8\u63a7\u5236\u670d\u52a1\u7aef\u4e0e\u5ba2\u6237\u7aef\uff0c\u8ba9\u4f60\u8f7b\u677e\u8fdc\u7a0b\u53d1\u77ed\u4fe1\u3001\u67e5\u77ed\u4fe1\u3001\u67e5\u901a\u8bdd\u3001\u67e5\u8bdd\u7c3f\u3001\u67e5\u7535\u91cf\u7b49\u3002\uff08V3.0 \u65b0\u589e\uff09PS.\u8fd9\u4e2aAPK\u4e3b\u8981\u662f\u5b66\u4e60\u4e0e\u81ea\u7528\uff0c\u5982\u6709BUG\u8bf7\u63d0ISSUE\uff0c\u540c\u65f6\u6b22\u8fce\u5927\u5bb6\u63d0PR\u6307\u6b63",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pppscn/SmsForwarder",
+      "canonical_url": "github.com/pppscn/smsforwarder",
+      "also_seen": [],
+      "company": null,
+      "stars": 104,
+      "momentum": 10,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-21": 104
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:byoungd/English-level-up-tips",
+      "name": "English-level-up-tips",
+      "description": "An advanced guide to learn English which might benefit you a lot \ud83c\udf89 . \u79bb\u8c31\u7684\u82f1\u8bed\u5b66\u4e60\u6307\u5357/\u82f1\u8bed\u5b66\u4e60\u6559\u7a0b/\u82f1\u8bed\u5b66\u4e60/\u5b66\u82f1\u8bed",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/byoungd/English-level-up-tips",
+      "canonical_url": "github.com/byoungd/english-level-up-tips",
+      "also_seen": [],
+      "company": null,
+      "stars": 125,
+      "momentum": 12,
+      "tags": [],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-21": 121,
+        "2026-06-24": 125
+      },
+      "trend": "up",
+      "trend_delta": 4
+    },
+    {
+      "id": "github:mukul975/Anthropic-Cybersecurity-Skills",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "description": "754 structured cybersecurity skills for AI agents \u00b7 Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 26 security domains \u00b7 Apache 2.0",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 600,
+      "momentum": 34,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-21",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-21": 343,
+        "2026-06-22": 361,
+        "2026-06-23": 956,
+        "2026-06-24": 1041,
+        "2026-06-25": 600
+      },
+      "trend": "up",
+      "trend_delta": 257
+    },
+    {
+      "id": "github:koala73/worldmonitor",
+      "name": "worldmonitor",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/koala73/worldmonitor",
+      "canonical_url": "github.com/koala73/worldmonitor",
+      "also_seen": [],
+      "company": null,
+      "stars": 294,
+      "momentum": 15,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-20": 156,
+        "2026-06-21": 633,
+        "2026-06-24": 294
+      },
+      "trend": "up",
+      "trend_delta": 138
+    },
+    {
+      "id": "github:palmier-io/palmier-pro",
+      "name": "palmier-pro",
+      "description": "macOS video editor built for AI",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "canonical_url": "github.com/palmier-io/palmier-pro",
+      "also_seen": [],
+      "company": null,
+      "stars": 1630,
+      "momentum": 75,
+      "tags": [
+        "swift"
+      ],
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-20": 756,
+        "2026-06-21": 1829,
+        "2026-06-22": 1834,
+        "2026-06-23": 2463,
+        "2026-06-24": 1630
+      },
+      "trend": "up",
+      "trend_delta": 874
+    },
+    {
+      "id": "github:aishwaryanr/awesome-generative-ai-guide",
+      "name": "awesome-generative-ai-guide",
+      "description": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aishwaryanr/awesome-generative-ai-guide",
+      "canonical_url": "github.com/aishwaryanr/awesome-generative-ai-guide",
+      "also_seen": [],
+      "company": null,
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "html"
+      ],
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-20": 107
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:BuilderIO/agent-native",
+      "name": "agent-native",
+      "description": "A framework for building agent-native applications.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "canonical_url": "github.com/builderio/agent-native",
+      "also_seen": [],
+      "company": null,
+      "stars": 147,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-20",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-20": 147
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Kilo-Org/kilocode",
+      "name": "kilocode",
+      "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "canonical_url": "github.com/kilo-org/kilocode",
+      "also_seen": [],
+      "company": null,
+      "stars": 513,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-19": 1345,
+        "2026-06-21": 513
+      },
+      "trend": "down",
+      "trend_delta": -832
+    },
+    {
+      "id": "github:Kong/insomnia",
+      "name": "insomnia",
+      "description": "The open-source, cross-platform API client for GraphQL, REST, WebSockets, SSE and gRPC. With Cloud, Local and Git storage.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Kong/insomnia",
+      "canonical_url": "github.com/kong/insomnia",
+      "also_seen": [],
+      "company": null,
+      "stars": 329,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-19": 18,
+        "2026-06-20": 292,
+        "2026-06-21": 329
+      },
+      "trend": "up",
+      "trend_delta": 311
+    },
+    {
+      "id": "github:owainlewis/awesome-artificial-intelligence",
+      "name": "awesome-artificial-intelligence",
+      "description": "A curated list of Artificial Intelligence (AI) courses, books, video lectures and papers.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/owainlewis/awesome-artificial-intelligence",
+      "canonical_url": "github.com/owainlewis/awesome-artificial-intelligence",
+      "also_seen": [],
+      "company": null,
+      "stars": 48,
+      "momentum": 4,
+      "tags": [],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-19": 40,
+        "2026-06-21": 48
+      },
+      "trend": "up",
+      "trend_delta": 8
+    },
+    {
+      "id": "github:dotnet/aspnetcore",
+      "name": "aspnetcore",
+      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dotnet/aspnetcore",
+      "canonical_url": "github.com/dotnet/aspnetcore",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 14,
+      "momentum": 1,
+      "tags": [
+        "c#"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-19": 14
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:LibreTranslate/LibreTranslate",
+      "name": "LibreTranslate",
+      "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/LibreTranslate/LibreTranslate",
+      "canonical_url": "github.com/libretranslate/libretranslate",
+      "also_seen": [],
+      "company": null,
+      "stars": 51,
+      "momentum": 5,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-19": 51
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Lightricks/LTX-2",
+      "name": "LTX-2",
+      "description": "Official Python inference and LoRA trainer package for the LTX-2 audio\u2013video generative model.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "canonical_url": "github.com/lightricks/ltx-2",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 5,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-19": 51,
+        "2026-06-20": 196
+      },
+      "trend": "up",
+      "trend_delta": 145
+    },
+    {
+      "id": "github:zai-org/GLM-5",
+      "name": "GLM-5",
+      "description": "GLM-5: From Vibe Coding to Agentic Engineering",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/zai-org/GLM-5",
+      "canonical_url": "github.com/zai-org/glm-5",
+      "also_seen": [],
+      "company": null,
+      "stars": 480,
+      "momentum": 20,
+      "tags": [],
+      "first_seen": "2026-06-19",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-19": 202,
+        "2026-06-20": 480
+      },
+      "trend": "up",
+      "trend_delta": 278
+    },
+    {
+      "id": "github:google-research/timesfm",
+      "name": "timesfm",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-research/timesfm",
+      "canonical_url": "github.com/google-research/timesfm",
+      "also_seen": [],
+      "company": null,
+      "stars": 433,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-17": 84,
+        "2026-06-18": 606,
+        "2026-06-19": 844,
+        "2026-06-20": 1510,
+        "2026-06-21": 433
+      },
+      "trend": "up",
+      "trend_delta": 349
+    },
+    {
+      "id": "github:mattpocock/skills",
+      "name": "skills",
+      "description": "Skills for Real Engineers. Straight from my .claude directory.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mattpocock/skills",
+      "canonical_url": "github.com/mattpocock/skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 2051,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-17": 1849,
+        "2026-06-18": 1523,
+        "2026-06-21": 1441,
+        "2026-06-22": 1443,
+        "2026-06-23": 2051
+      },
+      "trend": "up",
+      "trend_delta": 202
+    },
+    {
+      "id": "github:alexzhang13/rlm",
+      "name": "rlm",
+      "description": "General plug-and-play inference library for Recursive Language Models (RLMs), supporting various sandboxes.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alexzhang13/rlm",
+      "canonical_url": "github.com/alexzhang13/rlm",
+      "also_seen": [],
+      "company": null,
+      "stars": 43,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 37,
+        "2026-06-18": 43
+      },
+      "trend": "up",
+      "trend_delta": 6
+    },
+    {
+      "id": "github:makeplane/plane",
+      "name": "plane",
+      "description": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/makeplane/plane",
+      "canonical_url": "github.com/makeplane/plane",
+      "also_seen": [],
+      "company": null,
+      "stars": 613,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-17": 68,
+        "2026-06-18": 89,
+        "2026-06-19": 613
+      },
+      "trend": "up",
+      "trend_delta": 545
+    },
+    {
+      "id": "github:penpot/penpot",
+      "name": "penpot",
+      "description": "Penpot: The open-source design tool for design and code collaboration",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/penpot/penpot",
+      "canonical_url": "github.com/penpot/penpot",
+      "also_seen": [],
+      "company": null,
+      "stars": 728,
+      "momentum": 9,
+      "tags": [
+        "clojure"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-17": 94,
+        "2026-06-18": 70,
+        "2026-06-20": 85,
+        "2026-06-21": 1131,
+        "2026-06-22": 1135,
+        "2026-06-23": 728
+      },
+      "trend": "up",
+      "trend_delta": 634
+    },
+    {
+      "id": "github:nautechsystems/nautilus_trader",
+      "name": "nautilus_trader",
+      "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "canonical_url": "github.com/nautechsystems/nautilus_trader",
+      "also_seen": [],
+      "company": null,
+      "stars": 98,
+      "momentum": 8,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 86,
+        "2026-06-18": 98
+      },
+      "trend": "up",
+      "trend_delta": 12
+    },
+    {
+      "id": "github:continuedev/continue",
+      "name": "continue",
+      "description": "open-source coding agent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/continuedev/continue",
+      "canonical_url": "github.com/continuedev/continue",
+      "also_seen": [],
+      "company": null,
+      "stars": 49,
+      "momentum": 3,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 38,
+        "2026-06-18": 49
+      },
+      "trend": "up",
+      "trend_delta": 11
+    },
+    {
+      "id": "github:DeusData/codebase-memory-mcp",
+      "name": "codebase-memory-mcp",
+      "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph \u2014 average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "canonical_url": "github.com/deusdata/codebase-memory-mcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 1300,
+      "momentum": 36,
+      "tags": [
+        "c"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-17": 367,
+        "2026-06-18": 371,
+        "2026-06-19": 2322,
+        "2026-06-20": 1058,
+        "2026-06-21": 1029,
+        "2026-06-22": 1032,
+        "2026-06-23": 1185,
+        "2026-06-24": 1300
+      },
+      "trend": "up",
+      "trend_delta": 933
+    },
+    {
+      "id": "github:yairm210/Unciv",
+      "name": "Unciv",
+      "description": "Open-source Android/Desktop remake of Civ V",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yairm210/Unciv",
+      "canonical_url": "github.com/yairm210/unciv",
+      "also_seen": [],
+      "company": null,
+      "stars": 24,
+      "momentum": 4,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 41,
+        "2026-06-18": 24
+      },
+      "trend": "down",
+      "trend_delta": -17
+    },
+    {
+      "id": "github:bytedance/UI-TARS-desktop",
+      "name": "UI-TARS-desktop",
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bytedance/UI-TARS-desktop",
+      "canonical_url": "github.com/bytedance/ui-tars-desktop",
+      "also_seen": [],
+      "company": null,
+      "stars": 150,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 148,
+        "2026-06-18": 150
+      },
+      "trend": "up",
+      "trend_delta": 2
+    },
+    {
+      "id": "github:RocketChat/Rocket.Chat",
+      "name": "Rocket.Chat",
+      "description": "The Secure CommsOS\u2122 for mission-critical operations",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/RocketChat/Rocket.Chat",
+      "canonical_url": "github.com/rocketchat/rocket.chat",
+      "also_seen": [],
+      "company": null,
+      "stars": 22,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-17": 15,
+        "2026-06-18": 22
+      },
+      "trend": "up",
+      "trend_delta": 7
+    },
+    {
+      "id": "github:rmyndharis/OpenWA",
+      "name": "OpenWA",
+      "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rmyndharis/OpenWA",
+      "canonical_url": "github.com/rmyndharis/openwa",
+      "also_seen": [],
+      "company": null,
+      "stars": 185,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-17": 185
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:calesthio/OpenMontage",
+      "name": "OpenMontage",
+      "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "canonical_url": "github.com/calesthio/openmontage",
+      "also_seen": [],
+      "company": null,
+      "stars": 3553,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-17",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-17": 71,
+        "2026-06-18": 98,
+        "2026-06-20": 156,
+        "2026-06-21": 993,
+        "2026-06-22": 987,
+        "2026-06-23": 2938,
+        "2026-06-24": 3592,
+        "2026-06-25": 3553
+      },
+      "trend": "up",
+      "trend_delta": 3455
+    },
+    {
+      "id": "github:alibaba/zvec",
+      "name": "zvec",
+      "description": "A lightweight, lightning-fast, in-process vector database",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/zvec",
+      "canonical_url": "github.com/alibaba/zvec",
+      "also_seen": [],
+      "company": null,
+      "stars": 259,
+      "momentum": 25,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-16": 251,
+        "2026-06-17": 156,
+        "2026-06-19": 259
+      },
+      "trend": "up",
+      "trend_delta": 8
+    },
+    {
+      "id": "github:Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+      "name": "universal-android-debloater-next-generation",
+      "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+      "canonical_url": "github.com/universal-debloater-alliance/universal-android-debloater-next-generation",
+      "also_seen": [],
+      "company": null,
+      "stars": 244,
+      "momentum": 14,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-16": 146,
+        "2026-06-17": 465,
+        "2026-06-18": 457,
+        "2026-06-19": 244
+      },
+      "trend": "up",
+      "trend_delta": 98
+    },
+    {
+      "id": "github:puppeteer/puppeteer",
+      "name": "puppeteer",
+      "description": "JavaScript API for Chrome and Firefox",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/puppeteer/puppeteer",
+      "canonical_url": "github.com/puppeteer/puppeteer",
+      "also_seen": [],
+      "company": null,
+      "stars": 56,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-16": 171,
+        "2026-06-17": 56
+      },
+      "trend": "down",
+      "trend_delta": -115
+    },
+    {
+      "id": "github:n0-computer/iroh",
+      "name": "iroh",
+      "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/n0-computer/iroh",
+      "canonical_url": "github.com/n0-computer/iroh",
+      "also_seen": [],
+      "company": null,
+      "stars": 302,
+      "momentum": 32,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-16": 326,
+        "2026-06-17": 422,
+        "2026-06-18": 421,
+        "2026-06-19": 369,
+        "2026-06-20": 302
+      },
+      "trend": "down",
+      "trend_delta": -24
+    },
+    {
+      "id": "github:cypress-io/cypress",
+      "name": "cypress",
+      "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cypress-io/cypress",
+      "canonical_url": "github.com/cypress-io/cypress",
+      "also_seen": [],
+      "company": null,
+      "stars": 13,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-16",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-16": 11,
+        "2026-06-17": 13
+      },
+      "trend": "up",
+      "trend_delta": 2
+    },
+    {
+      "id": "github:teslamate-org/teslamate",
+      "name": "teslamate",
+      "description": "A self-hosted data logger for your Tesla \ud83d\ude98 [main maintainer= @JakobLichterfeld ]",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/teslamate-org/teslamate",
+      "canonical_url": "github.com/teslamate-org/teslamate",
+      "also_seen": [],
+      "company": null,
+      "stars": 215,
+      "momentum": 3,
+      "tags": [
+        "elixir"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-15": 35,
+        "2026-06-16": 214,
+        "2026-06-17": 215
+      },
+      "trend": "up",
+      "trend_delta": 180
+    },
+    {
+      "id": "github:itsfatduck/optimizerDuck",
+      "name": "optimizerDuck",
+      "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/itsfatduck/optimizerDuck",
+      "canonical_url": "github.com/itsfatduck/optimizerduck",
+      "also_seen": [],
+      "company": null,
+      "stars": 340,
+      "momentum": 32,
+      "tags": [
+        "c#"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 321,
+        "2026-06-16": 340
+      },
+      "trend": "up",
+      "trend_delta": 19
+    },
+    {
+      "id": "github:meshery/meshery",
+      "name": "meshery",
+      "description": "Meshery, the cloud native manager",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/meshery/meshery",
+      "canonical_url": "github.com/meshery/meshery",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 2,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-15": 20,
+        "2026-06-16": 229,
+        "2026-06-17": 199,
+        "2026-06-18": 196
+      },
+      "trend": "up",
+      "trend_delta": 176
+    },
+    {
+      "id": "github:krahets/hello-algo",
+      "name": "hello-algo",
+      "description": "\u300aHello \u7b97\u6cd5\u300b\uff1a\u52a8\u753b\u56fe\u89e3\u3001\u4e00\u952e\u8fd0\u884c\u7684\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5\u6559\u7a0b\u3002\u652f\u6301\u7b80\u4e2d\u3001\u7e41\u4e2d\u3001English\u3001\u65e5\u672c\u8a9e\uff0c\u63d0\u4f9b Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart \u7b49\u4ee3\u7801\u5b9e\u73b0",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/krahets/hello-algo",
+      "canonical_url": "github.com/krahets/hello-algo",
+      "also_seen": [],
+      "company": null,
+      "stars": 96,
+      "momentum": 3,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-15": 34,
+        "2026-06-16": 71,
+        "2026-06-17": 109,
+        "2026-06-18": 96
+      },
+      "trend": "up",
+      "trend_delta": 62
+    },
+    {
+      "id": "github:freeCodeCamp/freeCodeCamp",
+      "name": "freeCodeCamp",
+      "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "canonical_url": "github.com/freecodecamp/freecodecamp",
+      "also_seen": [],
+      "company": null,
+      "stars": 417,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-19",
+      "stars_history": {
+        "2026-06-15": 146,
+        "2026-06-16": 640,
+        "2026-06-17": 764,
+        "2026-06-18": 757,
+        "2026-06-19": 417
+      },
+      "trend": "up",
+      "trend_delta": 271
+    },
+    {
+      "id": "github:trycua/cua",
+      "name": "cua",
+      "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/trycua/cua",
+      "canonical_url": "github.com/trycua/cua",
+      "also_seen": [],
+      "company": null,
+      "stars": 70,
+      "momentum": 5,
+      "tags": [
+        "html"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 57,
+        "2026-06-16": 70
+      },
+      "trend": "up",
+      "trend_delta": 13
+    },
+    {
+      "id": "github:rohitg00/ai-engineering-from-scratch",
+      "name": "ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
+      "also_seen": [],
+      "company": null,
+      "stars": 562,
+      "momentum": 53,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 538,
+        "2026-06-16": 562
+      },
+      "trend": "up",
+      "trend_delta": 24
+    },
+    {
+      "id": "github:Raphire/Win11Debloat",
+      "name": "Win11Debloat",
+      "description": "A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Raphire/Win11Debloat",
+      "canonical_url": "github.com/raphire/win11debloat",
+      "also_seen": [],
+      "company": null,
+      "stars": 112,
+      "momentum": 11,
+      "tags": [
+        "powershell"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 114,
+        "2026-06-16": 112
+      },
+      "trend": "down",
+      "trend_delta": -2
+    },
+    {
+      "id": "github:mikeroyal/Self-Hosting-Guide",
+      "name": "Self-Hosting-Guide",
+      "description": "Self-Hosting Guide. Learn all about locally hosting (on premises & private web servers) and managing software applications by yourself or your organization. Including Cloud, LLMs, WireGuard, Automation, Home Assistant, and Networking.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mikeroyal/Self-Hosting-Guide",
+      "canonical_url": "github.com/mikeroyal/self-hosting-guide",
+      "also_seen": [],
+      "company": null,
+      "stars": 188,
+      "momentum": 12,
+      "tags": [
+        "dockerfile"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 126,
+        "2026-06-16": 188
+      },
+      "trend": "up",
+      "trend_delta": 62
+    },
+    {
+      "id": "github:shiyu-coder/Kronos",
+      "name": "Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "canonical_url": "github.com/shiyu-coder/kronos",
+      "also_seen": [],
+      "company": null,
+      "stars": 396,
+      "momentum": 24,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 244,
+        "2026-06-16": 396
+      },
+      "trend": "up",
+      "trend_delta": 152
+    },
+    {
+      "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
+      "name": "Introduction-to-Autonomous-Robots",
+      "description": "Introduction to Autonomous Robots",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
+      "canonical_url": "github.com/introduction-to-autonomous-robots/introduction-to-autonomous-robots",
+      "also_seen": [],
+      "company": null,
+      "stars": 489,
+      "momentum": 29,
+      "tags": [
+        "tex"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-15": 293,
+        "2026-06-16": 489
+      },
+      "trend": "up",
+      "trend_delta": 196
+    },
+    {
+      "id": "github:Free-TV/IPTV",
+      "name": "IPTV",
+      "description": "M3U Playlist for free TV channels",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Free-TV/IPTV",
+      "canonical_url": "github.com/free-tv/iptv",
+      "also_seen": [],
+      "company": null,
+      "stars": 141,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-15",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-15": 70,
+        "2026-06-16": 361,
+        "2026-06-25": 141
+      },
+      "trend": "down",
+      "trend_delta": -220
+    },
+    {
+      "id": "github:swc-project/swc",
+      "name": "swc",
+      "description": "Rust-based platform for the Web",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/swc-project/swc",
+      "canonical_url": "github.com/swc-project/swc",
+      "also_seen": [],
+      "company": null,
+      "stars": 20,
+      "momentum": 1,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-13": 12,
+        "2026-06-14": 20,
+        "2026-06-16": 21,
+        "2026-06-17": 20
+      },
+      "trend": "up",
+      "trend_delta": 8
+    },
+    {
+      "id": "github:andrewyng/aisuite",
+      "name": "aisuite",
+      "description": "Simple, unified interface to multiple Generative AI providers",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/andrewyng/aisuite",
+      "canonical_url": "github.com/andrewyng/aisuite",
+      "also_seen": [],
+      "company": null,
+      "stars": 127,
+      "momentum": 13,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-13": 132,
+        "2026-06-14": 127
+      },
+      "trend": "down",
+      "trend_delta": -5
+    },
+    {
+      "id": "github:alchaincyf/zhangxuefeng-skill",
+      "name": "zhangxuefeng-skill",
+      "description": "\u5f20\u96ea\u5cf0.skill \u2014 \u5f20\u96ea\u5cf0\u7684\u8ba4\u77e5\u64cd\u4f5c\u7cfb\u7edf\u3002\u9ad8\u8003\u5fd7\u613f/\u8003\u7814/\u804c\u4e1a\u89c4\u5212\u7684\u5b9e\u6218\u601d\u7ef4\u6846\u67b6\u3002\u7531\u5973\u5a32.skill\u751f\u6210\u3002",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
+      "canonical_url": "github.com/alchaincyf/zhangxuefeng-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 89,
+      "momentum": 8,
+      "tags": [],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 89
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hexo-ai/sia",
+      "name": "sia",
+      "description": "SIA is a Self Improving AI framework to autonomously improve the performance of any AI system (Model / Agent) on a benchmark task.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hexo-ai/sia",
+      "canonical_url": "github.com/hexo-ai/sia",
+      "also_seen": [],
+      "company": null,
+      "stars": 199,
+      "momentum": 19,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 199
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:music-assistant/server",
+      "name": "server",
+      "description": "Music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistant and must run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/music-assistant/server",
+      "canonical_url": "github.com/music-assistant/server",
+      "also_seen": [],
+      "company": null,
+      "stars": 157,
+      "momentum": 0,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-12": 6,
+        "2026-06-13": 277,
+        "2026-06-14": 270,
+        "2026-06-15": 197,
+        "2026-06-16": 157,
+        "2026-06-17": 157
+      },
+      "trend": "up",
+      "trend_delta": 151
+    },
+    {
+      "id": "github:restic/restic",
+      "name": "restic",
+      "description": "Fast, secure, efficient backup program",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/restic/restic",
+      "canonical_url": "github.com/restic/restic",
+      "also_seen": [],
+      "company": null,
+      "stars": 61,
+      "momentum": 6,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-12": 61
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mattermost/mattermost",
+      "name": "mattermost",
+      "description": "Mattermost is an open source platform for secure collaboration across the entire software development lifecycle..",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mattermost/mattermost",
+      "canonical_url": "github.com/mattermost/mattermost",
+      "also_seen": [],
+      "company": null,
+      "stars": 388,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-12": 391,
+        "2026-06-13": 388
+      },
+      "trend": "down",
+      "trend_delta": -3
+    },
+    {
+      "id": "github:iptv-org/iptv",
+      "name": "iptv",
+      "description": "Collection of publicly available IPTV channels from all over the world",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/iptv-org/iptv",
+      "canonical_url": "github.com/iptv-org/iptv",
+      "also_seen": [],
+      "company": null,
+      "stars": 1197,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-12": 142,
+        "2026-06-13": 650,
+        "2026-06-14": 530,
+        "2026-06-15": 1528,
+        "2026-06-16": 1196,
+        "2026-06-17": 1197
+      },
+      "trend": "up",
+      "trend_delta": 1055
+    },
+    {
+      "id": "github:bannedbook/fanqiang",
+      "name": "fanqiang",
+      "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "canonical_url": "github.com/bannedbook/fanqiang",
+      "also_seen": [],
+      "company": null,
+      "stars": 93,
+      "momentum": 16,
+      "tags": [
+        "kotlin"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-12": 161,
+        "2026-06-13": 86,
+        "2026-06-14": 93
+      },
+      "trend": "down",
+      "trend_delta": -68
+    },
+    {
+      "id": "github:chatwoot/chatwoot",
+      "name": "chatwoot",
+      "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. \ud83d\udd25\ud83d\udcac",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chatwoot/chatwoot",
+      "canonical_url": "github.com/chatwoot/chatwoot",
+      "also_seen": [],
+      "company": null,
+      "stars": 264,
+      "momentum": 6,
+      "tags": [
+        "ruby"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-12": 67,
+        "2026-06-13": 86,
+        "2026-06-14": 83,
+        "2026-06-15": 400,
+        "2026-06-16": 431,
+        "2026-06-17": 400,
+        "2026-06-18": 264
+      },
+      "trend": "up",
+      "trend_delta": 197
+    },
+    {
+      "id": "github:kenn-io/agentsview",
+      "name": "agentsview",
+      "description": "Local-first session intelligence and analytics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. Also: 100x faster replacement for ccusage!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kenn-io/agentsview",
+      "canonical_url": "github.com/kenn-io/agentsview",
+      "also_seen": [],
+      "company": null,
+      "stars": 190,
+      "momentum": 11,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-12": 114,
+        "2026-06-13": 187,
+        "2026-06-14": 190
+      },
+      "trend": "up",
+      "trend_delta": 76
+    },
+    {
+      "id": "github:msitarzewski/agency-agents",
+      "name": "agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "canonical_url": "github.com/msitarzewski/agency-agents",
+      "also_seen": [],
+      "company": null,
+      "stars": 1026,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-12": 1040,
+        "2026-06-13": 1026
+      },
+      "trend": "down",
+      "trend_delta": -14
+    },
+    {
+      "id": "github:NVIDIA/SkillSpector",
+      "name": "SkillSpector",
+      "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "canonical_url": "github.com/nvidia/skillspector",
+      "also_seen": [],
+      "company": "NVIDIA",
+      "stars": 1079,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-12": 319,
+        "2026-06-13": 809,
+        "2026-06-14": 804,
+        "2026-06-15": 964,
+        "2026-06-16": 1079
+      },
+      "trend": "up",
+      "trend_delta": 760
+    },
+    {
+      "id": "github:microsoft/PowerToys",
+      "name": "PowerToys",
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/PowerToys",
+      "canonical_url": "github.com/microsoft/powertoys",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 370,
+      "momentum": 9,
+      "tags": [
+        "c"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-12": 90,
+        "2026-06-13": 374,
+        "2026-06-14": 370
+      },
+      "trend": "up",
+      "trend_delta": 280
+    },
+    {
+      "id": "github:LMCache/LMCache",
+      "name": "LMCache",
+      "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/LMCache/LMCache",
+      "canonical_url": "github.com/lmcache/lmcache",
+      "also_seen": [],
+      "company": null,
+      "stars": 238,
+      "momentum": 1,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-12",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-12": 17,
+        "2026-06-13": 246,
+        "2026-06-14": 238
+      },
+      "trend": "up",
+      "trend_delta": 221
+    },
+    {
+      "id": "github:FareedKhan-dev/train-llm-from-scratch",
+      "name": "train-llm-from-scratch",
+      "description": "A straightforward method for training your LLM, from downloading data to generating text.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/FareedKhan-dev/train-llm-from-scratch",
+      "canonical_url": "github.com/fareedkhan-dev/train-llm-from-scratch",
+      "also_seen": [],
+      "company": null,
+      "stars": 247,
+      "momentum": 24,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-10": 241,
+        "2026-06-11": 247
+      },
+      "trend": "up",
+      "trend_delta": 6
+    },
+    {
+      "id": "github:soxoj/maigret",
+      "name": "maigret",
+      "description": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Collect a dossier on a person by username from 3000+ sites",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/soxoj/maigret",
+      "canonical_url": "github.com/soxoj/maigret",
+      "also_seen": [],
+      "company": null,
+      "stars": 661,
+      "momentum": 26,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-10": 261,
+        "2026-06-11": 318,
+        "2026-06-12": 661
+      },
+      "trend": "up",
+      "trend_delta": 400
+    },
+    {
+      "id": "github:activeloopai/hivemind",
+      "name": "hivemind",
+      "description": "One brain for all your agents",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/activeloopai/hivemind",
+      "canonical_url": "github.com/activeloopai/hivemind",
+      "also_seen": [],
+      "company": null,
+      "stars": 64,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-10": 47,
+        "2026-06-11": 64
+      },
+      "trend": "up",
+      "trend_delta": 17
+    },
+    {
+      "id": "github:apple/container",
+      "name": "container",
+      "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apple/container",
+      "canonical_url": "github.com/apple/container",
+      "also_seen": [],
+      "company": "Apple",
+      "stars": 1366,
+      "momentum": 100,
+      "tags": [
+        "swift"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-10": 1358,
+        "2026-06-11": 1611,
+        "2026-06-12": 3513,
+        "2026-06-13": 1471,
+        "2026-06-14": 1487,
+        "2026-06-25": 1366
+      },
+      "trend": "down",
+      "trend_delta": -121
+    },
+    {
+      "id": "github:ruvnet/RuView",
+      "name": "RuView",
+      "description": "\u03c0 RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection \u2014 all without a single pixel of video.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ruvnet/RuView",
+      "canonical_url": "github.com/ruvnet/ruview",
+      "also_seen": [],
+      "company": null,
+      "stars": 420,
+      "momentum": 43,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-10": 439,
+        "2026-06-11": 420
+      },
+      "trend": "down",
+      "trend_delta": -19
+    },
+    {
+      "id": "github:harry0703/MoneyPrinterTurbo",
+      "name": "MoneyPrinterTurbo",
+      "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "canonical_url": "github.com/harry0703/moneyprinterturbo",
+      "also_seen": [],
+      "company": null,
+      "stars": 1389,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-10": 1471,
+        "2026-06-11": 1389
+      },
+      "trend": "down",
+      "trend_delta": -82
+    },
+    {
+      "id": "github:masterking32/MasterDnsVPN",
+      "name": "MasterDnsVPN",
+      "description": "Advanced DNS tunneling VPN for censorship bypass, optimized beyond DNSTT and SlipStream with low-overhead ARQ, resolver load balancing, high packet-loss stability and speed.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/masterking32/MasterDnsVPN",
+      "canonical_url": "github.com/masterking32/masterdnsvpn",
+      "also_seen": [],
+      "company": null,
+      "stars": 400,
+      "momentum": 9,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-10",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-10": 92,
+        "2026-06-11": 354,
+        "2026-06-12": 401,
+        "2026-06-13": 400
+      },
+      "trend": "up",
+      "trend_delta": 308
+    },
+    {
+      "id": "github:x1xhlol/system-prompts-and-models-of-ai-tools",
+      "name": "system-prompts-and-models-of-ai-tools",
+      "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "canonical_url": "github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
+      "also_seen": [],
+      "company": null,
+      "stars": 109,
+      "momentum": 6,
+      "tags": [],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-09": 66,
+        "2026-06-10": 397,
+        "2026-06-11": 393,
+        "2026-06-12": 368,
+        "2026-06-13": 107,
+        "2026-06-14": 109
+      },
+      "trend": "up",
+      "trend_delta": 43
+    },
+    {
+      "id": "github:maziyarpanahi/openmed",
+      "name": "openmed",
+      "description": "open-source healthcare ai",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/maziyarpanahi/openmed",
+      "canonical_url": "github.com/maziyarpanahi/openmed",
+      "also_seen": [],
+      "company": null,
+      "stars": 515,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-09": 165,
+        "2026-06-10": 535,
+        "2026-06-11": 527,
+        "2026-06-12": 517,
+        "2026-06-13": 515
+      },
+      "trend": "up",
+      "trend_delta": 350
+    },
+    {
+      "id": "github:francescopace/espectre",
+      "name": "espectre",
+      "description": "\ud83d\udedc ESPectre \ud83d\udc7b - Motion detection system based on Wi-Fi spectre analysis (CSI), with Home Assistant integration.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/francescopace/espectre",
+      "canonical_url": "github.com/francescopace/espectre",
+      "also_seen": [],
+      "company": null,
+      "stars": 134,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-09": 112,
+        "2026-06-10": 134
+      },
+      "trend": "up",
+      "trend_delta": 22
+    },
+    {
+      "id": "github:addyosmani/agent-skills",
+      "name": "agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "canonical_url": "github.com/addyosmani/agent-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 1514,
+      "momentum": 34,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-09",
+      "last_seen": "2026-06-14",
+      "stars_history": {
+        "2026-06-09": 348,
+        "2026-06-10": 781,
+        "2026-06-11": 821,
+        "2026-06-12": 2660,
+        "2026-06-13": 1507,
+        "2026-06-14": 1514
+      },
+      "trend": "up",
+      "trend_delta": 1166
+    },
+    {
+      "id": "github:Andyyyy64/whichllm",
+      "name": "whichllm",
+      "description": "Find the local LLM that actually runs and performs best on your hardware. Ranked by real, recency-aware benchmarks, not parameter count. One command, run it instantly.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Andyyyy64/whichllm",
+      "canonical_url": "github.com/andyyyy64/whichllm",
+      "also_seen": [],
+      "company": null,
+      "stars": 633,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-08": 103,
+        "2026-06-09": 631,
+        "2026-06-10": 633
+      },
+      "trend": "up",
+      "trend_delta": 530
+    },
+    {
+      "id": "github:roboflow/supervision",
+      "name": "supervision",
+      "description": "We write your reusable computer vision tools. \ud83d\udc9c",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/roboflow/supervision",
+      "canonical_url": "github.com/roboflow/supervision",
+      "also_seen": [],
+      "company": null,
+      "stars": 695,
+      "momentum": 95,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-08": 957,
+        "2026-06-09": 735,
+        "2026-06-10": 699,
+        "2026-06-11": 695
+      },
+      "trend": "down",
+      "trend_delta": -262
+    },
+    {
+      "id": "github:google/skills",
+      "name": "skills",
+      "description": "Agent Skills for Google products and technologies",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google/skills",
+      "canonical_url": "github.com/google/skills",
+      "also_seen": [],
+      "company": "Google",
+      "stars": 211,
+      "momentum": 48,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-08": 481,
+        "2026-06-09": 461,
+        "2026-06-10": 680,
+        "2026-06-11": 211
+      },
+      "trend": "down",
+      "trend_delta": -270
+    },
+    {
+      "id": "github:phuryn/pm-skills",
+      "name": "pm-skills",
+      "description": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins \u2014 from discovery to strategy, execution, launch, and growth.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/phuryn/pm-skills",
+      "canonical_url": "github.com/phuryn/pm-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 827,
+      "momentum": 11,
+      "tags": [],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-08": 112,
+        "2026-06-09": 808,
+        "2026-06-10": 775,
+        "2026-06-11": 804,
+        "2026-06-12": 823,
+        "2026-06-13": 827
+      },
+      "trend": "up",
+      "trend_delta": 715
+    },
+    {
+      "id": "github:luongnv89/claude-howto",
+      "name": "claude-howto",
+      "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/luongnv89/claude-howto",
+      "canonical_url": "github.com/luongnv89/claude-howto",
+      "also_seen": [],
+      "company": null,
+      "stars": 211,
+      "momentum": 15,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-08",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-08": 154,
+        "2026-06-09": 312,
+        "2026-06-10": 204,
+        "2026-06-11": 211
+      },
+      "trend": "up",
+      "trend_delta": 57
+    },
+    {
+      "id": "github:RyanCodrai/turbovec",
+      "name": "turbovec",
+      "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/RyanCodrai/turbovec",
+      "canonical_url": "github.com/ryancodrai/turbovec",
+      "also_seen": [],
+      "company": null,
+      "stars": 1801,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-07": 1533,
+        "2026-06-08": 1730,
+        "2026-06-09": 1800,
+        "2026-06-10": 1801
+      },
+      "trend": "up",
+      "trend_delta": 268
+    },
+    {
+      "id": "github:refactoringhq/tolaria",
+      "name": "tolaria",
+      "description": "Desktop app to manage markdown knowledge bases",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/refactoringhq/tolaria",
+      "canonical_url": "github.com/refactoringhq/tolaria",
+      "also_seen": [],
+      "company": null,
+      "stars": 369,
+      "momentum": 24,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-13",
+      "stars_history": {
+        "2026-06-07": 242,
+        "2026-06-08": 649,
+        "2026-06-09": 821,
+        "2026-06-10": 618,
+        "2026-06-11": 612,
+        "2026-06-12": 369,
+        "2026-06-13": 369
+      },
+      "trend": "up",
+      "trend_delta": 127
+    },
+    {
+      "id": "github:Leonxlnx/taste-skill",
+      "name": "taste-skill",
+      "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "canonical_url": "github.com/leonxlnx/taste-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 1103,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-07": 1104,
+        "2026-06-08": 1103
+      },
+      "trend": "down",
+      "trend_delta": -1
+    },
+    {
+      "id": "github:Crosstalk-Solutions/project-nomad",
+      "name": "project-nomad",
+      "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered\u2014anytime, anywhere.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "canonical_url": "github.com/crosstalk-solutions/project-nomad",
+      "also_seen": [],
+      "company": null,
+      "stars": 309,
+      "momentum": 30,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-07": 304,
+        "2026-06-08": 309
+      },
+      "trend": "up",
+      "trend_delta": 5
+    },
+    {
+      "id": "github:microsoft/pg_durable",
+      "name": "pg_durable",
+      "description": "PostgreSQL in-database durable execution",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/pg_durable",
+      "canonical_url": "github.com/microsoft/pg_durable",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 316,
+      "momentum": 31,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-07": 314,
+        "2026-06-08": 316
+      },
+      "trend": "up",
+      "trend_delta": 2
+    },
+    {
+      "id": "github:opencv/opencv",
+      "name": "opencv",
+      "description": "Open Source Computer Vision Library",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opencv/opencv",
+      "canonical_url": "github.com/opencv/opencv",
+      "also_seen": [],
+      "company": null,
+      "stars": 102,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-07": 58,
+        "2026-06-08": 65,
+        "2026-06-09": 395,
+        "2026-06-10": 102
+      },
+      "trend": "up",
+      "trend_delta": 44
+    },
+    {
+      "id": "github:ggml-org/llama.cpp",
+      "name": "llama.cpp",
+      "description": "LLM inference in C/C++",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "canonical_url": "github.com/ggml-org/llama.cpp",
+      "also_seen": [],
+      "company": null,
+      "stars": 158,
+      "momentum": 19,
+      "tags": [
+        "c++"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-07": 199,
+        "2026-06-08": 158
+      },
+      "trend": "down",
+      "trend_delta": -41
+    },
+    {
+      "id": "github:aaif-goose/goose",
+      "name": "goose",
+      "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aaif-goose/goose",
+      "canonical_url": "github.com/aaif-goose/goose",
+      "also_seen": [],
+      "company": null,
+      "stars": 489,
+      "momentum": 26,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-07": 262,
+        "2026-06-08": 699,
+        "2026-06-09": 490,
+        "2026-06-10": 489
+      },
+      "trend": "up",
+      "trend_delta": 227
+    },
+    {
+      "id": "github:HunxByts/GhostTrack",
+      "name": "GhostTrack",
+      "description": "Useful tool to track location or mobile number",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "canonical_url": "github.com/hunxbyts/ghosttrack",
+      "also_seen": [],
+      "company": null,
+      "stars": 28,
+      "momentum": 2,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-07": 21,
+        "2026-06-08": 28
+      },
+      "trend": "up",
+      "trend_delta": 7
+    },
+    {
+      "id": "github:TapXWorld/ChinaTextbook",
+      "name": "ChinaTextbook",
+      "description": "\u6240\u6709\u5c0f\u521d\u9ad8\u3001\u5927\u5b66PDF\u6559\u6750\u3002",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "canonical_url": "github.com/tapxworld/chinatextbook",
+      "also_seen": [],
+      "company": null,
+      "stars": 88,
+      "momentum": 35,
+      "tags": [
+        "roff"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-12",
+      "stars_history": {
+        "2026-06-07": 355,
+        "2026-06-08": 593,
+        "2026-06-09": 517,
+        "2026-06-10": 519,
+        "2026-06-12": 88
+      },
+      "trend": "down",
+      "trend_delta": -267
+    },
+    {
+      "id": "github:yikart/AiToEarn",
+      "name": "AiToEarn",
+      "description": "Let's use AI to Earn!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yikart/AiToEarn",
+      "canonical_url": "github.com/yikart/aitoearn",
+      "also_seen": [],
+      "company": null,
+      "stars": 402,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-07",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-07": 180,
+        "2026-06-08": 183,
+        "2026-06-09": 786,
+        "2026-06-10": 402
+      },
+      "trend": "up",
+      "trend_delta": 222
+    },
+    {
+      "id": "github:openai/whisper",
+      "name": "whisper",
+      "description": "Robust Speech Recognition via Large-Scale Weak Supervision",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openai/whisper",
+      "canonical_url": "github.com/openai/whisper",
+      "also_seen": [],
+      "company": "OpenAI",
+      "stars": 150,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 116,
+        "2026-06-07": 150
+      },
+      "trend": "up",
+      "trend_delta": 34
+    },
+    {
+      "id": "github:vitejs/vite",
+      "name": "vite",
+      "description": "Next generation frontend tooling. It's fast!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vitejs/vite",
+      "canonical_url": "github.com/vitejs/vite",
+      "also_seen": [],
+      "company": null,
+      "stars": 25,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 71,
+        "2026-06-07": 25
+      },
+      "trend": "down",
+      "trend_delta": -46
+    },
+    {
+      "id": "github:sveltejs/svelte",
+      "name": "svelte",
+      "description": "web development for the rest of us",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/sveltejs/svelte",
+      "canonical_url": "github.com/sveltejs/svelte",
+      "also_seen": [],
+      "company": null,
+      "stars": 25,
+      "momentum": 15,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 158,
+        "2026-06-07": 25
+      },
+      "trend": "down",
+      "trend_delta": -133
+    },
+    {
+      "id": "github:obra/superpowers",
+      "name": "superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/obra/superpowers",
+      "canonical_url": "github.com/obra/superpowers",
+      "also_seen": [],
+      "company": null,
+      "stars": 1110,
+      "momentum": 100,
+      "tags": [
+        "shell"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-20",
+      "stars_history": {
+        "2026-06-06": 1008,
+        "2026-06-07": 700,
+        "2026-06-10": 1011,
+        "2026-06-11": 1104,
+        "2026-06-12": 1276,
+        "2026-06-13": 931,
+        "2026-06-14": 924,
+        "2026-06-17": 1109,
+        "2026-06-18": 1129,
+        "2026-06-19": 1429,
+        "2026-06-20": 1110
+      },
+      "trend": "up",
+      "trend_delta": 179
+    },
+    {
+      "id": "github:openai/plugins",
+      "name": "plugins",
+      "description": "OpenAI Plugins",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openai/plugins",
+      "canonical_url": "github.com/openai/plugins",
+      "also_seen": [],
+      "company": "OpenAI",
+      "stars": 284,
+      "momentum": 4,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-06": 215,
+        "2026-06-07": 262,
+        "2026-06-08": 296,
+        "2026-06-09": 284,
+        "2026-06-10": 284
+      },
+      "trend": "up",
+      "trend_delta": 69
+    },
+    {
+      "id": "github:nginx/nginx",
+      "name": "nginx",
+      "description": "The official NGINX Open Source repository.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nginx/nginx",
+      "canonical_url": "github.com/nginx/nginx",
+      "also_seen": [],
+      "company": null,
+      "stars": 20,
+      "momentum": 3,
+      "tags": [
+        "c"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 39,
+        "2026-06-07": 20
+      },
+      "trend": "down",
+      "trend_delta": -19
+    },
+    {
+      "id": "github:microsoft/mxc",
+      "name": "mxc",
+      "description": "Policy-driven, layered isolation and containment",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/mxc",
+      "canonical_url": "github.com/microsoft/mxc",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 64,
+      "momentum": 5,
+      "tags": [
+        "rust"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 57,
+        "2026-06-07": 64
+      },
+      "trend": "up",
+      "trend_delta": 7
+    },
+    {
+      "id": "github:MemPalace/mempalace",
+      "name": "mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MemPalace/mempalace",
+      "canonical_url": "github.com/mempalace/mempalace",
+      "also_seen": [],
+      "company": null,
+      "stars": 170,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-06": 441,
+        "2026-06-07": 446,
+        "2026-06-08": 452,
+        "2026-06-09": 170
+      },
+      "trend": "down",
+      "trend_delta": -271
+    },
+    {
+      "id": "github:golang/go",
+      "name": "go",
+      "description": "The Go programming language",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/golang/go",
+      "canonical_url": "github.com/golang/go",
+      "also_seen": [],
+      "company": null,
+      "stars": 30,
+      "momentum": 2,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 24,
+        "2026-06-07": 30
+      },
+      "trend": "up",
+      "trend_delta": 6
+    },
+    {
+      "id": "github:withastro/flue",
+      "name": "flue",
+      "description": "The sandbox agent framework.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/withastro/flue",
+      "canonical_url": "github.com/withastro/flue",
+      "also_seen": [],
+      "company": null,
+      "stars": 316,
+      "momentum": 12,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-06": 126,
+        "2026-06-19": 162,
+        "2026-06-20": 309,
+        "2026-06-21": 316
+      },
+      "trend": "up",
+      "trend_delta": 190
+    },
+    {
+      "id": "github:santifer/career-ops",
+      "name": "career-ops",
+      "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/santifer/career-ops",
+      "canonical_url": "github.com/santifer/career-ops",
+      "also_seen": [],
+      "company": null,
+      "stars": 1110,
+      "momentum": 18,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-10",
+      "stars_history": {
+        "2026-06-06": 186,
+        "2026-06-07": 193,
+        "2026-06-08": 665,
+        "2026-06-09": 1114,
+        "2026-06-10": 1110
+      },
+      "trend": "up",
+      "trend_delta": 924
+    },
+    {
+      "id": "github:microsoft/VibeVoice",
+      "name": "VibeVoice",
+      "description": "Open-Source Frontier Voice AI",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/VibeVoice",
+      "canonical_url": "github.com/microsoft/vibevoice",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 216,
+      "momentum": 21,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-06": 219,
+        "2026-06-07": 216
+      },
+      "trend": "down",
+      "trend_delta": -3
+    },
+    {
+      "id": "github:danielmiessler/Personal_AI_Infrastructure",
+      "name": "Personal_AI_Infrastructure",
+      "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+      "canonical_url": "github.com/danielmiessler/personal_ai_infrastructure",
+      "also_seen": [],
+      "company": null,
+      "stars": 62,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-06": 63,
+        "2026-06-07": 70,
+        "2026-06-08": 337,
+        "2026-06-09": 62
+      },
+      "trend": "down",
+      "trend_delta": -1
+    },
+    {
+      "id": "github:666ghj/MiroFish",
+      "name": "MiroFish",
+      "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. \u7b80\u6d01\u901a\u7528\u7684\u7fa4\u4f53\u667a\u80fd\u5f15\u64ce\uff0c\u9884\u6d4b\u4e07\u7269",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/666ghj/MiroFish",
+      "canonical_url": "github.com/666ghj/mirofish",
+      "also_seen": [],
+      "company": null,
+      "stars": 320,
+      "momentum": 32,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-06": 320
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:CopilotKit/CopilotKit",
+      "name": "CopilotKit",
+      "description": "The Frontend Stack for Agents & Generative UI. React + Angular. Makers of the AG-UI Protocol",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "canonical_url": "github.com/copilotkit/copilotkit",
+      "also_seen": [],
+      "company": null,
+      "stars": 378,
+      "momentum": 36,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-09",
+      "stars_history": {
+        "2026-06-06": 613,
+        "2026-06-07": 631,
+        "2026-06-08": 578,
+        "2026-06-09": 378
+      },
+      "trend": "down",
+      "trend_delta": -235
+    },
+    {
+      "id": "github:Panniantong/Agent-Reach",
+      "name": "Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "canonical_url": "github.com/panniantong/agent-reach",
+      "also_seen": [],
+      "company": null,
+      "stars": 1161,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-06",
+      "last_seen": "2026-06-18",
+      "stars_history": {
+        "2026-06-06": 700,
+        "2026-06-07": 683,
+        "2026-06-08": 961,
+        "2026-06-09": 679,
+        "2026-06-15": 1045,
+        "2026-06-16": 1100,
+        "2026-06-17": 2025,
+        "2026-06-18": 1161
+      },
+      "trend": "up",
+      "trend_delta": 482
+    },
+    {
+      "id": "github:github/spec-kit",
+      "name": "spec-kit",
+      "description": "\ud83d\udcab Toolkit to help you get started with Spec-Driven Development",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/github/spec-kit",
+      "canonical_url": "github.com/github/spec-kit",
+      "also_seen": [],
+      "company": null,
+      "stars": 321,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-05",
+      "stars_history": {
+        "2026-06-04": 311,
+        "2026-06-05": 321
+      },
+      "trend": "up",
+      "trend_delta": 10
+    },
+    {
+      "id": "github:openclaw/openclaw-windows-node",
+      "name": "openclaw-windows-node",
+      "description": "Windows companion suite for OpenClaw - System Tray app, Shared library, Node, and PowerToys Command Palette extension",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/openclaw/openclaw-windows-node",
+      "canonical_url": "github.com/openclaw/openclaw-windows-node",
+      "also_seen": [],
+      "company": null,
+      "stars": 326,
+      "momentum": 33,
+      "tags": [
+        "c#"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-04": 331,
+        "2026-06-05": 411,
+        "2026-06-06": 326
+      },
+      "trend": "down",
+      "trend_delta": -5
+    },
+    {
+      "id": "github:lfnovo/open-notebook",
+      "name": "open-notebook",
+      "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "canonical_url": "github.com/lfnovo/open-notebook",
+      "also_seen": [],
+      "company": null,
+      "stars": 554,
+      "momentum": 22,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-08",
+      "stars_history": {
+        "2026-06-04": 227,
+        "2026-06-05": 212,
+        "2026-06-06": 783,
+        "2026-06-07": 555,
+        "2026-06-08": 554
+      },
+      "trend": "up",
+      "trend_delta": 327
+    },
+    {
+      "id": "github:mvanhorn/last30days-skill",
+      "name": "last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "canonical_url": "github.com/mvanhorn/last30days-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 2535,
+      "momentum": 17,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-11",
+      "stars_history": {
+        "2026-06-04": 173,
+        "2026-06-05": 199,
+        "2026-06-06": 441,
+        "2026-06-07": 1097,
+        "2026-06-08": 3558,
+        "2026-06-09": 3177,
+        "2026-06-10": 2561,
+        "2026-06-11": 2535
+      },
+      "trend": "up",
+      "trend_delta": 2362
+    },
+    {
+      "id": "github:NVIDIA/cosmos",
+      "name": "cosmos",
+      "description": "NVIDIA Cosmos is an open platform of world models, datasets, and tools that enables developers to build Physical AI for robots, autonomous vehicles, smart infrastructure, and more.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/NVIDIA/cosmos",
+      "canonical_url": "github.com/nvidia/cosmos",
+      "also_seen": [],
+      "company": "NVIDIA",
+      "stars": 479,
+      "momentum": 13,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-04": 138,
+        "2026-06-05": 133,
+        "2026-06-06": 479
+      },
+      "trend": "up",
+      "trend_delta": 341
+    },
+    {
+      "id": "github:github/copilot-sdk",
+      "name": "copilot-sdk",
+      "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/github/copilot-sdk",
+      "canonical_url": "github.com/github/copilot-sdk",
+      "also_seen": [],
+      "company": null,
+      "stars": 309,
+      "momentum": 2,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-06",
+      "stars_history": {
+        "2026-06-04": 25,
+        "2026-06-05": 38,
+        "2026-06-06": 309
+      },
+      "trend": "up",
+      "trend_delta": 284
+    },
+    {
+      "id": "github:PaddlePaddle/PaddleOCR",
+      "name": "PaddleOCR",
+      "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "canonical_url": "github.com/paddlepaddle/paddleocr",
+      "also_seen": [],
+      "company": null,
+      "stars": 433,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-04",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-04": 105,
+        "2026-06-05": 141,
+        "2026-06-06": 449,
+        "2026-06-07": 433
+      },
+      "trend": "up",
+      "trend_delta": 328
+    },
+    {
+      "id": "github:aquasecurity/trivy",
+      "name": "trivy",
+      "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/aquasecurity/trivy",
+      "canonical_url": "github.com/aquasecurity/trivy",
+      "also_seen": [],
+      "company": null,
+      "stars": 159,
+      "momentum": 2,
+      "tags": [
+        "go"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-07",
+      "stars_history": {
+        "2026-06-03": 24,
+        "2026-06-04": 255,
+        "2026-06-05": 255,
+        "2026-06-06": 159,
+        "2026-06-07": 159
+      },
+      "trend": "up",
+      "trend_delta": 135
+    },
+    {
+      "id": "github:supermemoryai/supermemory",
+      "name": "supermemory",
+      "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/supermemoryai/supermemory",
+      "canonical_url": "github.com/supermemoryai/supermemory",
+      "also_seen": [],
+      "company": null,
+      "stars": 600,
+      "momentum": 60,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 600
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jamwithai/production-agentic-rag-course",
+      "name": "production-agentic-rag-course",
+      "description": "A python project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/jamwithai/production-agentic-rag-course",
+      "canonical_url": "github.com/jamwithai/production-agentic-rag-course",
+      "also_seen": [],
+      "company": null,
+      "stars": 372,
+      "momentum": 37,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 372
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opendataloader-project/opendataloader-pdf",
+      "name": "opendataloader-pdf",
+      "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/opendataloader-project/opendataloader-pdf",
+      "canonical_url": "github.com/opendataloader-project/opendataloader-pdf",
+      "also_seen": [],
+      "company": null,
+      "stars": 570,
+      "momentum": 57,
+      "tags": [
+        "java"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 570
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:odoo/odoo",
+      "name": "odoo",
+      "description": "Odoo. Open Source Apps To Grow Your Business.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/odoo/odoo",
+      "canonical_url": "github.com/odoo/odoo",
+      "also_seen": [],
+      "company": null,
+      "stars": 29,
+      "momentum": 2,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 29
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/markitdown",
+      "name": "markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/microsoft/markitdown",
+      "canonical_url": "github.com/microsoft/markitdown",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 1984,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 1984
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:stefan-jansen/machine-learning-for-trading",
+      "name": "machine-learning-for-trading",
+      "description": "Code for Machine Learning for Algorithmic Trading, 2nd edition.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/stefan-jansen/machine-learning-for-trading",
+      "canonical_url": "github.com/stefan-jansen/machine-learning-for-trading",
+      "also_seen": [],
+      "company": null,
+      "stars": 716,
+      "momentum": 71,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 716
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nesquena/hermes-webui",
+      "name": "hermes-webui",
+      "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/nesquena/hermes-webui",
+      "canonical_url": "github.com/nesquena/hermes-webui",
+      "also_seen": [],
+      "company": null,
+      "stars": 719,
+      "momentum": 73,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 719
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NousResearch/hermes-agent",
+      "name": "hermes-agent",
+      "description": "The agent that grows with you",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "canonical_url": "github.com/nousresearch/hermes-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 1178,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-25",
+      "stars_history": {
+        "2026-06-03": 1735,
+        "2026-06-04": 1735,
+        "2026-06-05": 1913,
+        "2026-06-06": 1845,
+        "2026-06-07": 1117,
+        "2026-06-08": 1112,
+        "2026-06-24": 936,
+        "2026-06-25": 1178
+      },
+      "trend": "up",
+      "trend_delta": 66
+    },
+    {
+      "id": "github:chopratejas/headroom",
+      "name": "headroom",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/chopratejas/headroom",
+      "canonical_url": "github.com/chopratejas/headroom",
+      "also_seen": [],
+      "company": null,
+      "stars": 2617,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-21",
+      "stars_history": {
+        "2026-06-03": 3530,
+        "2026-06-04": 3139,
+        "2026-06-05": 3142,
+        "2026-06-06": 2473,
+        "2026-06-20": 4005,
+        "2026-06-21": 2617
+      },
+      "trend": "up",
+      "trend_delta": 144
+    },
+    {
+      "id": "github:reconurge/flowsint",
+      "name": "flowsint",
+      "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/reconurge/flowsint",
+      "canonical_url": "github.com/reconurge/flowsint",
+      "also_seen": [],
+      "company": null,
+      "stars": 308,
+      "momentum": 50,
+      "tags": [
+        "typescript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-05",
+      "stars_history": {
+        "2026-06-03": 509,
+        "2026-06-04": 308,
+        "2026-06-05": 308
+      },
+      "trend": "down",
+      "trend_delta": -201
+    },
+    {
+      "id": "github:jwasham/coding-interview-university",
+      "name": "coding-interview-university",
+      "description": "A complete computer science study plan to become a software engineer.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/jwasham/coding-interview-university",
+      "canonical_url": "github.com/jwasham/coding-interview-university",
+      "also_seen": [],
+      "company": null,
+      "stars": 364,
+      "momentum": 33,
+      "tags": [],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-16",
+      "stars_history": {
+        "2026-06-03": 330,
+        "2026-06-04": 330,
+        "2026-06-05": 632,
+        "2026-06-06": 745,
+        "2026-06-15": 516,
+        "2026-06-16": 364
+      },
+      "trend": "down",
+      "trend_delta": -381
+    },
+    {
+      "id": "github:lyogavin/airllm",
+      "name": "airllm",
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/lyogavin/airllm",
+      "canonical_url": "github.com/lyogavin/airllm",
+      "also_seen": [],
+      "company": null,
+      "stars": 193,
+      "momentum": 20,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-23",
+      "stars_history": {
+        "2026-06-03": 208,
+        "2026-06-22": 453,
+        "2026-06-23": 193
+      },
+      "trend": "down",
+      "trend_delta": -15
+    },
+    {
+      "id": "github:OpenBMB/VoxCPM",
+      "name": "VoxCPM",
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "canonical_url": "github.com/openbmb/voxcpm",
+      "also_seen": [],
+      "company": null,
+      "stars": 408,
+      "momentum": 71,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-17",
+      "stars_history": {
+        "2026-06-03": 713,
+        "2026-06-16": 413,
+        "2026-06-17": 408
+      },
+      "trend": "down",
+      "trend_delta": -305
+    },
+    {
+      "id": "github:HKUDS/Vibe-Trading",
+      "name": "Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "canonical_url": "github.com/hkuds/vibe-trading",
+      "also_seen": [],
+      "company": null,
+      "stars": 197,
+      "momentum": 19,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 197
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:D4Vinci/Scrapling",
+      "name": "Scrapling",
+      "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "canonical_url": "github.com/d4vinci/scrapling",
+      "also_seen": [],
+      "company": null,
+      "stars": 1067,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-03",
+      "stars_history": {
+        "2026-06-03": 1067
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Open-LLM-VTuber/Open-LLM-VTuber",
+      "name": "Open-LLM-VTuber",
+      "description": "Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber",
+      "canonical_url": "github.com/open-llm-vtuber/open-llm-vtuber",
+      "also_seen": [],
+      "company": null,
+      "stars": 581,
+      "momentum": 70,
+      "tags": [
+        "python"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-05",
+      "stars_history": {
+        "2026-06-03": 693,
+        "2026-06-04": 583,
+        "2026-06-05": 581
+      },
+      "trend": "down",
+      "trend_delta": -112
+    },
+    {
+      "id": "github:affaan-m/ECC",
+      "name": "ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "url": "https://github.com/affaan-m/ECC",
+      "canonical_url": "github.com/affaan-m/ecc",
+      "also_seen": [],
+      "company": null,
+      "stars": 593,
+      "momentum": 100,
+      "tags": [
+        "javascript"
+      ],
+      "first_seen": "2026-06-03",
+      "last_seen": "2026-06-24",
+      "stars_history": {
+        "2026-06-03": 2141,
+        "2026-06-04": 1736,
+        "2026-06-05": 1750,
+        "2026-06-06": 1361,
+        "2026-06-24": 593
+      },
+      "trend": "down",
+      "trend_delta": -768
+    }
+  ]
+}
