@@ -10,7 +10,7 @@
   "canonical_url": "github.com/aws/agent-toolkit-for-aws",
   "also_seen": [],
   "company": "Amazon",
-  "stars": 47,
+  "stars": 243,
   "momentum": 1,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-26",
+  "last_seen": "2026-06-27",
   "stars_history": {
     "2026-06-25": 15,
-    "2026-06-26": 47
+    "2026-06-26": 47,
+    "2026-06-27": 243
   }
 }

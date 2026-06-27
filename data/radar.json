@@ -1,7 +1,115 @@
 {
-  "generated": "2026-06-26",
-  "count": 160,
+  "generated": "2026-06-27",
+  "count": 164,
   "items": [
+    {
+      "id": "github:simplex-chat/simplex-chat",
+      "name": "simplex-chat",
+      "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps \ud83d\udcf1!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/simplex-chat/simplex-chat",
+      "canonical_url": "github.com/simplex-chat/simplex-chat",
+      "also_seen": [],
+      "company": null,
+      "stars": 432,
+      "momentum": 43,
+      "tags": [
+        "haskell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 432
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:commaai/openpilot",
+      "name": "openpilot",
+      "description": "openpilot is an operating system for robotics. Currently, it upgrades the driver assistance system on 300+ supported cars.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/commaai/openpilot",
+      "canonical_url": "github.com/commaai/openpilot",
+      "also_seen": [],
+      "company": null,
+      "stars": 80,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 80
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:grafana/grafana",
+      "name": "grafana",
+      "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/grafana/grafana",
+      "canonical_url": "github.com/grafana/grafana",
+      "also_seen": [],
+      "company": "Grafana",
+      "stars": 32,
+      "momentum": 3,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 32
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ripienaar/free-for-dev",
+      "name": "free-for-dev",
+      "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ripienaar/free-for-dev",
+      "canonical_url": "github.com/ripienaar/free-for-dev",
+      "also_seen": [],
+      "company": null,
+      "stars": 90,
+      "momentum": 9,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 90
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Flowseal/zapret-discord-youtube",
       "name": "zapret-discord-youtube",
@@ -120,18 +228,19 @@
       "canonical_url": "github.com/kunchenguid/no-mistakes",
       "also_seen": [],
       "company": null,
-      "stars": 110,
+      "stars": 398,
       "momentum": 11,
       "tags": [
         "go"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-25": 110
+        "2026-06-25": 110,
+        "2026-06-27": 398
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 288
     },
     {
       "id": "github:interviewstreet/hiring-agent",
@@ -220,19 +329,20 @@
       "canonical_url": "github.com/google-labs-code/design.md",
       "also_seen": [],
       "company": null,
-      "stars": 1475,
+      "stars": 2407,
       "momentum": 61,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 1407,
-        "2026-06-26": 1475
+        "2026-06-26": 1475,
+        "2026-06-27": 2407
       },
       "trend": "up",
-      "trend_delta": 68
+      "trend_delta": 1000
     },
     {
       "id": "github:xbtlin/ai-berkshire",
@@ -246,7 +356,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 1274,
       "momentum": 20,
       "tags": [
         "python"
@@ -254,13 +364,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 201,
-        "2026-06-26": 309
+        "2026-06-26": 309,
+        "2026-06-27": 1274
       },
       "trend": "up",
-      "trend_delta": 108
+      "trend_delta": 1073
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -274,7 +385,7 @@
       "canonical_url": "github.com/aws/agent-toolkit-for-aws",
       "also_seen": [],
       "company": "Amazon",
-      "stars": 47,
+      "stars": 243,
       "momentum": 1,
       "tags": [
         "python"
@@ -282,13 +393,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 15,
-        "2026-06-26": 47
+        "2026-06-26": 47,
+        "2026-06-27": 243
       },
       "trend": "up",
-      "trend_delta": 32
+      "trend_delta": 228
     },
     {
       "id": "github:mauriceboe/TREK",
@@ -302,7 +414,7 @@
       "canonical_url": "github.com/mauriceboe/trek",
       "also_seen": [],
       "company": null,
-      "stars": 241,
+      "stars": 1060,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -310,13 +422,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 112,
-        "2026-06-26": 241
+        "2026-06-26": 241,
+        "2026-06-27": 1060
       },
       "trend": "up",
-      "trend_delta": 129
+      "trend_delta": 948
     },
     {
       "id": "github:opendatalab/MinerU",
@@ -330,7 +443,7 @@
       "canonical_url": "github.com/opendatalab/mineru",
       "also_seen": [],
       "company": null,
-      "stars": 644,
+      "stars": 960,
       "momentum": 52,
       "tags": [
         "python"
@@ -338,13 +451,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 524,
-        "2026-06-26": 644
+        "2026-06-26": 644,
+        "2026-06-27": 960
       },
       "trend": "up",
-      "trend_delta": 120
+      "trend_delta": 436
     },
     {
       "id": "github:NanmiCoder/MediaCrawler",
@@ -358,7 +472,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 398,
+      "stars": 673,
       "momentum": 34,
       "tags": [
         "python"
@@ -366,13 +480,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 347,
-        "2026-06-26": 398
+        "2026-06-26": 398,
+        "2026-06-27": 673
       },
       "trend": "up",
-      "trend_delta": 51
+      "trend_delta": 326
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -386,7 +501,7 @@
       "canonical_url": "github.com/icewhaletech/casaos",
       "also_seen": [],
       "company": null,
-      "stars": 223,
+      "stars": 619,
       "momentum": 20,
       "tags": [
         "go"
@@ -394,13 +509,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 202,
-        "2026-06-26": 223
+        "2026-06-26": 223,
+        "2026-06-27": 619
       },
       "trend": "up",
-      "trend_delta": 21
+      "trend_delta": 417
     },
     {
       "id": "github:revfactory/harness",
@@ -518,22 +634,23 @@
       "canonical_url": "github.com/garrytan/gstack",
       "also_seen": [],
       "company": null,
-      "stars": 767,
+      "stars": 950,
       "momentum": 45,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-22": 454,
         "2026-06-23": 573,
         "2026-06-24": 1011,
         "2026-06-25": 836,
-        "2026-06-26": 767
+        "2026-06-26": 767,
+        "2026-06-27": 950
       },
       "trend": "up",
-      "trend_delta": 313
+      "trend_delta": 496
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -573,22 +690,23 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 1024,
+      "stars": 1088,
       "momentum": 6,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-22": 63,
         "2026-06-23": 100,
         "2026-06-24": 826,
         "2026-06-25": 1021,
-        "2026-06-26": 1024
+        "2026-06-26": 1024,
+        "2026-06-27": 1088
       },
       "trend": "up",
-      "trend_delta": 961
+      "trend_delta": 1025
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -1580,13 +1698,13 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 3434,
+      "stars": 1754,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
@@ -1596,10 +1714,11 @@
         "2026-06-23": 2938,
         "2026-06-24": 3592,
         "2026-06-25": 3553,
-        "2026-06-26": 3434
+        "2026-06-26": 3434,
+        "2026-06-27": 1754
       },
       "trend": "up",
-      "trend_delta": 3336
+      "trend_delta": 1598
     },
     {
       "id": "github:alibaba/zvec",
@@ -2125,16 +2244,17 @@
       "canonical_url": "github.com/alchaincyf/zhangxuefeng-skill",
       "also_seen": [],
       "company": null,
-      "stars": 89,
+      "stars": 160,
       "momentum": 8,
       "tags": [],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-12",
+      "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-12": 89
+        "2026-06-12": 89,
+        "2026-06-27": 160
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 71
     },
     {
       "id": "github:hexo-ai/sia",
@@ -3634,13 +3754,13 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 1161,
+      "stars": 1194,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
@@ -3649,10 +3769,11 @@
         "2026-06-15": 1045,
         "2026-06-16": 1100,
         "2026-06-17": 2025,
-        "2026-06-18": 1161
+        "2026-06-18": 1161,
+        "2026-06-27": 1194
       },
       "trend": "up",
-      "trend_delta": 482
+      "trend_delta": 33
     },
     {
       "id": "github:github/spec-kit",

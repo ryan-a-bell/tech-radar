@@ -10,14 +10,15 @@
   "canonical_url": "github.com/kunchenguid/no-mistakes",
   "also_seen": [],
   "company": null,
-  "stars": 110,
+  "stars": 398,
   "momentum": 11,
   "tags": [
     "go"
   ],
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-25",
+  "last_seen": "2026-06-27",
   "stars_history": {
-    "2026-06-25": 110
+    "2026-06-25": 110,
+    "2026-06-27": 398
   }
 }
