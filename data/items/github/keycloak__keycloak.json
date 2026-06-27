@@ -1,0 +1,25 @@
+{
+  "id": "github:keycloak/keycloak",
+  "name": "keycloak",
+  "description": "Open Source Identity and Access Management For Modern Applications and Services",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/keycloak/keycloak",
+  "canonical_url": "github.com/keycloak/keycloak",
+  "also_seen": [],
+  "company": null,
+  "stars": 11,
+  "momentum": 1,
+  "tags": [
+    "java"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-27",
+  "last_seen": "2026-06-27",
+  "stars_history": {
+    "2026-06-27": 11
+  }
+}

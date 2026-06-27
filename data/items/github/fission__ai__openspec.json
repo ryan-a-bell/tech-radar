@@ -1,0 +1,25 @@
+{
+  "id": "github:Fission-AI/OpenSpec",
+  "name": "OpenSpec",
+  "description": "Spec-driven development (SDD) for AI coding assistants.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Fission-AI/OpenSpec",
+  "canonical_url": "github.com/fission-ai/openspec",
+  "also_seen": [],
+  "company": null,
+  "stars": 167,
+  "momentum": 16,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-27",
+  "last_seen": "2026-06-27",
+  "stars_history": {
+    "2026-06-27": 167
+  }
+}

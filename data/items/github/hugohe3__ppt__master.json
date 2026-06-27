@@ -1,0 +1,25 @@
+{
+  "id": "github:hugohe3/ppt-master",
+  "name": "ppt-master",
+  "description": "AI generates a real, editable PowerPoint from any document \u2014 native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images \u00b7 by Hugo He",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/hugohe3/ppt-master",
+  "canonical_url": "github.com/hugohe3/ppt-master",
+  "also_seen": [],
+  "company": null,
+  "stars": 589,
+  "momentum": 58,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-27",
+  "last_seen": "2026-06-27",
+  "stars_history": {
+    "2026-06-27": 589
+  }
+}

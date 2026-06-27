@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-27",
-  "count": 164,
+  "count": 170,
   "items": [
     {
       "id": "github:simplex-chat/simplex-chat",
@@ -14,7 +14,7 @@
       "canonical_url": "github.com/simplex-chat/simplex-chat",
       "also_seen": [],
       "company": null,
-      "stars": 432,
+      "stars": 1470,
       "momentum": 43,
       "tags": [
         "haskell"
@@ -24,7 +24,34 @@
       "first_seen": "2026-06-27",
       "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-27": 432
+        "2026-06-27": 1470
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hugohe3/ppt-master",
+      "name": "ppt-master",
+      "description": "AI generates a real, editable PowerPoint from any document \u2014 native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images \u00b7 by Hugo He",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hugohe3/ppt-master",
+      "canonical_url": "github.com/hugohe3/ppt-master",
+      "also_seen": [],
+      "company": null,
+      "stars": 589,
+      "momentum": 58,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 589
       },
       "trend": "none",
       "trend_delta": 0
@@ -41,7 +68,7 @@
       "canonical_url": "github.com/commaai/openpilot",
       "also_seen": [],
       "company": null,
-      "stars": 80,
+      "stars": 322,
       "momentum": 8,
       "tags": [
         "python"
@@ -51,7 +78,61 @@
       "first_seen": "2026-06-27",
       "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-27": 80
+        "2026-06-27": 322
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anomalyco/opencode",
+      "name": "opencode",
+      "description": "The open source coding agent.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anomalyco/opencode",
+      "canonical_url": "github.com/anomalyco/opencode",
+      "also_seen": [],
+      "company": null,
+      "stars": 573,
+      "momentum": 57,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 573
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:keycloak/keycloak",
+      "name": "keycloak",
+      "description": "Open Source Identity and Access Management For Modern Applications and Services",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/keycloak/keycloak",
+      "canonical_url": "github.com/keycloak/keycloak",
+      "also_seen": [],
+      "company": null,
+      "stars": 11,
+      "momentum": 1,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 11
       },
       "trend": "none",
       "trend_delta": 0
@@ -95,7 +176,7 @@
       "canonical_url": "github.com/ripienaar/free-for-dev",
       "also_seen": [],
       "company": null,
-      "stars": 90,
+      "stars": 459,
       "momentum": 9,
       "tags": [
         "html"
@@ -105,7 +186,88 @@
       "first_seen": "2026-06-27",
       "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-27": 90
+        "2026-06-27": 459
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:dbt-labs/dbt-core",
+      "name": "dbt-core",
+      "description": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dbt-labs/dbt-core",
+      "canonical_url": "github.com/dbt-labs/dbt-core",
+      "also_seen": [],
+      "company": null,
+      "stars": 17,
+      "momentum": 1,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 17
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Fission-AI/OpenSpec",
+      "name": "OpenSpec",
+      "description": "Spec-driven development (SDD) for AI coding assistants.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Fission-AI/OpenSpec",
+      "canonical_url": "github.com/fission-ai/openspec",
+      "also_seen": [],
+      "company": null,
+      "stars": 167,
+      "momentum": 16,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 167
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Anil-matcha/Open-Generative-AI",
+      "name": "Open-Generative-AI",
+      "description": "Unrestricted Open-source alternative to AI video platforms \u2014 Free AI image & video generation studio with 200+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Anil-matcha/Open-Generative-AI",
+      "canonical_url": "github.com/anil-matcha/open-generative-ai",
+      "also_seen": [],
+      "company": null,
+      "stars": 254,
+      "momentum": 25,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-27",
+      "last_seen": "2026-06-27",
+      "stars_history": {
+        "2026-06-27": 254
       },
       "trend": "none",
       "trend_delta": 0
@@ -200,7 +362,7 @@
       "canonical_url": "github.com/every-app/open-seo",
       "also_seen": [],
       "company": null,
-      "stars": 57,
+      "stars": 594,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -208,13 +370,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-25": 57,
-        "2026-06-26": 57
+        "2026-06-26": 57,
+        "2026-06-27": 594
       },
-      "trend": "flat",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 537
     },
     {
       "id": "github:kunchenguid/no-mistakes",
@@ -329,7 +492,7 @@
       "canonical_url": "github.com/google-labs-code/design.md",
       "also_seen": [],
       "company": null,
-      "stars": 2407,
+      "stars": 1542,
       "momentum": 61,
       "tags": [
         "typescript"
@@ -339,10 +502,10 @@
       "stars_history": {
         "2026-06-25": 1407,
         "2026-06-26": 1475,
-        "2026-06-27": 2407
+        "2026-06-27": 1542
       },
       "trend": "up",
-      "trend_delta": 1000
+      "trend_delta": 135
     },
     {
       "id": "github:xbtlin/ai-berkshire",
@@ -356,7 +519,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 1274,
+      "stars": 686,
       "momentum": 20,
       "tags": [
         "python"
@@ -368,10 +531,10 @@
       "stars_history": {
         "2026-06-25": 201,
         "2026-06-26": 309,
-        "2026-06-27": 1274
+        "2026-06-27": 686
       },
       "trend": "up",
-      "trend_delta": 1073
+      "trend_delta": 485
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -472,7 +635,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 673,
+      "stars": 394,
       "momentum": 34,
       "tags": [
         "python"
@@ -484,10 +647,10 @@
       "stars_history": {
         "2026-06-25": 347,
         "2026-06-26": 398,
-        "2026-06-27": 673
+        "2026-06-27": 394
       },
       "trend": "up",
-      "trend_delta": 326
+      "trend_delta": 47
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -501,7 +664,7 @@
       "canonical_url": "github.com/icewhaletech/casaos",
       "also_seen": [],
       "company": null,
-      "stars": 619,
+      "stars": 502,
       "momentum": 20,
       "tags": [
         "go"
@@ -513,10 +676,10 @@
       "stars_history": {
         "2026-06-25": 202,
         "2026-06-26": 223,
-        "2026-06-27": 619
+        "2026-06-27": 502
       },
       "trend": "up",
-      "trend_delta": 417
+      "trend_delta": 300
     },
     {
       "id": "github:revfactory/harness",
@@ -634,7 +797,7 @@
       "canonical_url": "github.com/garrytan/gstack",
       "also_seen": [],
       "company": null,
-      "stars": 950,
+      "stars": 674,
       "momentum": 45,
       "tags": [
         "typescript"
@@ -647,10 +810,10 @@
         "2026-06-24": 1011,
         "2026-06-25": 836,
         "2026-06-26": 767,
-        "2026-06-27": 950
+        "2026-06-27": 674
       },
       "trend": "up",
-      "trend_delta": 496
+      "trend_delta": 220
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -690,7 +853,7 @@
       "canonical_url": "github.com/jcodesmore/ai-website-cloner-template",
       "also_seen": [],
       "company": null,
-      "stars": 1088,
+      "stars": 750,
       "momentum": 6,
       "tags": [
         "typescript"
@@ -703,10 +866,10 @@
         "2026-06-24": 826,
         "2026-06-25": 1021,
         "2026-06-26": 1024,
-        "2026-06-27": 1088
+        "2026-06-27": 750
       },
       "trend": "up",
-      "trend_delta": 1025
+      "trend_delta": 687
     },
     {
       "id": "github:Stirling-Tools/Stirling-PDF",
@@ -958,18 +1121,19 @@
       "canonical_url": "github.com/topoteretes/cognee",
       "also_seen": [],
       "company": null,
-      "stars": 361,
+      "stars": 729,
       "momentum": 36,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-21": 361
+        "2026-06-21": 361,
+        "2026-06-27": 729
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 368
     },
     {
       "id": "github:mikumifa/biliTickerBuy",
@@ -2544,20 +2708,21 @@
       "canonical_url": "github.com/microsoft/powertoys",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 370,
+      "stars": 67,
       "momentum": 9,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-12": 90,
         "2026-06-13": 374,
-        "2026-06-14": 370
+        "2026-06-14": 370,
+        "2026-06-27": 67
       },
-      "trend": "up",
-      "trend_delta": 280
+      "trend": "down",
+      "trend_delta": -303
     },
     {
       "id": "github:LMCache/LMCache",
@@ -3012,21 +3177,22 @@
       "canonical_url": "github.com/luongnv89/claude-howto",
       "also_seen": [],
       "company": null,
-      "stars": 211,
+      "stars": 138,
       "momentum": 15,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-06-27",
       "stars_history": {
         "2026-06-08": 154,
         "2026-06-09": 312,
         "2026-06-10": 204,
-        "2026-06-11": 211
+        "2026-06-11": 211,
+        "2026-06-27": 138
       },
-      "trend": "up",
-      "trend_delta": 57
+      "trend": "down",
+      "trend_delta": -73
     },
     {
       "id": "github:RyanCodrai/turbovec",
@@ -4336,18 +4502,19 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 197,
+      "stars": 83,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-06-27",
       "stars_history": {
-        "2026-06-03": 197
+        "2026-06-03": 197,
+        "2026-06-27": 83
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -114
     },
     {
       "id": "github:D4Vinci/Scrapling",
