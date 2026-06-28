@@ -10,19 +10,20 @@
   "canonical_url": "github.com/garrytan/gstack",
   "also_seen": [],
   "company": null,
-  "stars": 950,
+  "stars": 674,
   "momentum": 45,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-27",
+  "last_seen": "2026-06-28",
   "stars_history": {
     "2026-06-22": 454,
     "2026-06-23": 573,
     "2026-06-24": 1011,
     "2026-06-25": 836,
     "2026-06-26": 767,
-    "2026-06-27": 950
+    "2026-06-27": 950,
+    "2026-06-28": 674
   }
 }

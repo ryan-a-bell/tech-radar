@@ -10,16 +10,17 @@
   "canonical_url": "github.com/google-labs-code/design.md",
   "also_seen": [],
   "company": null,
-  "stars": 2407,
+  "stars": 1541,
   "momentum": 61,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-27",
+  "last_seen": "2026-06-28",
   "stars_history": {
     "2026-06-25": 1407,
     "2026-06-26": 1475,
-    "2026-06-27": 2407
+    "2026-06-27": 2407,
+    "2026-06-28": 1541
   }
 }

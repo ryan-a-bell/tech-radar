@@ -10,7 +10,7 @@
   "canonical_url": "github.com/xbtlin/ai-berkshire",
   "also_seen": [],
   "company": null,
-  "stars": 1274,
+  "stars": 685,
   "momentum": 20,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-27",
+  "last_seen": "2026-06-28",
   "stars_history": {
     "2026-06-25": 201,
     "2026-06-26": 309,
-    "2026-06-27": 1274
+    "2026-06-27": 1274,
+    "2026-06-28": 685
   }
 }

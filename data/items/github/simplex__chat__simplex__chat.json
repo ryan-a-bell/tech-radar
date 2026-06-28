@@ -10,7 +10,7 @@
   "canonical_url": "github.com/simplex-chat/simplex-chat",
   "also_seen": [],
   "company": null,
-  "stars": 432,
+  "stars": 1469,
   "momentum": 43,
   "tags": [
     "haskell"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-27",
+  "last_seen": "2026-06-28",
   "stars_history": {
-    "2026-06-27": 432
+    "2026-06-27": 432,
+    "2026-06-28": 1469
   }
 }
