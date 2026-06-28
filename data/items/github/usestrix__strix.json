@@ -1,0 +1,25 @@
+{
+  "id": "github:usestrix/strix",
+  "name": "strix",
+  "description": "Open-source AI hackers to find and fix your app\u2019s vulnerabilities.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/usestrix/strix",
+  "canonical_url": "github.com/usestrix/strix",
+  "also_seen": [],
+  "company": null,
+  "stars": 88,
+  "momentum": 8,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-28",
+  "last_seen": "2026-06-28",
+  "stars_history": {
+    "2026-06-28": 88
+  }
+}

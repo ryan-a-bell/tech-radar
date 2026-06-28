@@ -1,0 +1,25 @@
+{
+  "id": "github:cupy/cupy",
+  "name": "cupy",
+  "description": "NumPy & SciPy for GPU",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/cupy/cupy",
+  "canonical_url": "github.com/cupy/cupy",
+  "also_seen": [],
+  "company": null,
+  "stars": 172,
+  "momentum": 17,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-28",
+  "last_seen": "2026-06-28",
+  "stars_history": {
+    "2026-06-28": 172
+  }
+}
