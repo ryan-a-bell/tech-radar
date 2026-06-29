@@ -1,6 +1,6 @@
 {
   "generated": "2026-06-29",
-  "count": 176,
+  "count": 180,
   "items": [
     {
       "id": "github:browser-use/video-use",
@@ -14,7 +14,7 @@
       "canonical_url": "github.com/browser-use/video-use",
       "also_seen": [],
       "company": null,
-      "stars": 196,
+      "stars": 976,
       "momentum": 19,
       "tags": [
         "python"
@@ -24,7 +24,7 @@
       "first_seen": "2026-06-29",
       "last_seen": "2026-06-29",
       "stars_history": {
-        "2026-06-29": 196
+        "2026-06-29": 976
       },
       "trend": "none",
       "trend_delta": 0
@@ -82,6 +82,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:logto-io/logto",
+      "name": "logto",
+      "description": "\ud83e\uddd1\u200d\ud83d\ude80 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/logto-io/logto",
+      "canonical_url": "github.com/logto-io/logto",
+      "also_seen": [],
+      "company": null,
+      "stars": 77,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 77
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:Robbyant/lingbot-map",
       "name": "lingbot-map",
       "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
@@ -120,7 +147,7 @@
       "canonical_url": "github.com/cupy/cupy",
       "also_seen": [],
       "company": null,
-      "stars": 174,
+      "stars": 352,
       "momentum": 17,
       "tags": [
         "python"
@@ -130,7 +157,88 @@
       "first_seen": "2026-06-29",
       "last_seen": "2026-06-29",
       "stars_history": {
-        "2026-06-29": 174
+        "2026-06-29": 352
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:0xNyk/council-of-high-intelligence",
+      "name": "council-of-high-intelligence",
+      "description": "18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more \u2014 structured multi-round deliberation with genuine model diversity. One command: /council",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/0xNyk/council-of-high-intelligence",
+      "canonical_url": "github.com/0xnyk/council-of-high-intelligence",
+      "also_seen": [],
+      "company": null,
+      "stars": 323,
+      "momentum": 32,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 323
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Unclecheng-li/VulnClaw",
+      "name": "VulnClaw",
+      "description": "\u57fa\u4e8e AI Agent + MCP \u5de5\u5177\u94fe + \u6e17\u900f Skill \u7f16\u6392\uff0c \u914d\u5408\u5927\u8bed\u8a00\u6a21\u578b\uff0c \u81ea\u7136\u8bed\u8a00\u8f93\u5165 \u2192 \u81ea\u52a8\u5b8c\u6210\u300c\u4fe1\u606f\u6536\u96c6 \u2192 \u6f0f\u6d1e\u53d1\u73b0 \u2192 \u6f0f\u6d1e\u5229\u7528 \u2192 \u62a5\u544a\u751f\u6210\u300d\u5168\u6d41\u7a0b\u3002",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Unclecheng-li/VulnClaw",
+      "canonical_url": "github.com/unclecheng-li/vulnclaw",
+      "also_seen": [],
+      "company": null,
+      "stars": 105,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 105
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:veracrypt/VeraCrypt",
+      "name": "VeraCrypt",
+      "description": "Disk encryption with strong security based on TrueCrypt",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/veracrypt/VeraCrypt",
+      "canonical_url": "github.com/veracrypt/veracrypt",
+      "also_seen": [],
+      "company": null,
+      "stars": 187,
+      "momentum": 18,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 187
       },
       "trend": "none",
       "trend_delta": 0
@@ -147,7 +255,7 @@
       "canonical_url": "github.com/altic-dev/fluidvoice",
       "also_seen": [],
       "company": null,
-      "stars": 365,
+      "stars": 836,
       "momentum": 36,
       "tags": [
         "swift"
@@ -157,7 +265,7 @@
       "first_seen": "2026-06-29",
       "last_seen": "2026-06-29",
       "stars_history": {
-        "2026-06-29": 365
+        "2026-06-29": 836
       },
       "trend": "none",
       "trend_delta": 0
@@ -336,7 +444,7 @@
       "canonical_url": "github.com/simplex-chat/simplex-chat",
       "also_seen": [],
       "company": null,
-      "stars": 1180,
+      "stars": 1611,
       "momentum": 43,
       "tags": [
         "haskell"
@@ -348,10 +456,10 @@
       "stars_history": {
         "2026-06-27": 432,
         "2026-06-28": 1469,
-        "2026-06-29": 1180
+        "2026-06-29": 1611
       },
       "trend": "up",
-      "trend_delta": 748
+      "trend_delta": 1179
     },
     {
       "id": "github:commaai/openpilot",
@@ -365,7 +473,7 @@
       "canonical_url": "github.com/commaai/openpilot",
       "also_seen": [],
       "company": null,
-      "stars": 266,
+      "stars": 465,
       "momentum": 8,
       "tags": [
         "python"
@@ -377,10 +485,10 @@
       "stars_history": {
         "2026-06-27": 80,
         "2026-06-28": 322,
-        "2026-06-29": 266
+        "2026-06-29": 465
       },
       "trend": "up",
-      "trend_delta": 186
+      "trend_delta": 385
     },
     {
       "id": "github:grafana/grafana",
@@ -421,7 +529,7 @@
       "canonical_url": "github.com/ripienaar/free-for-dev",
       "also_seen": [],
       "company": null,
-      "stars": 495,
+      "stars": 1971,
       "momentum": 9,
       "tags": [
         "html"
@@ -433,10 +541,10 @@
       "stars_history": {
         "2026-06-27": 90,
         "2026-06-28": 459,
-        "2026-06-29": 495
+        "2026-06-29": 1971
       },
       "trend": "up",
-      "trend_delta": 405
+      "trend_delta": 1881
     },
     {
       "id": "github:Flowseal/zapret-discord-youtube",
@@ -686,7 +794,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 1445,
+      "stars": 1397,
       "momentum": 20,
       "tags": [
         "python"
@@ -700,10 +808,10 @@
         "2026-06-26": 309,
         "2026-06-27": 1274,
         "2026-06-28": 685,
-        "2026-06-29": 1445
+        "2026-06-29": 1397
       },
       "trend": "up",
-      "trend_delta": 1244
+      "trend_delta": 1196
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -2828,19 +2936,20 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 1026,
+      "stars": 1221,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-12": 1040,
-        "2026-06-13": 1026
+        "2026-06-13": 1026,
+        "2026-06-29": 1221
       },
-      "trend": "down",
-      "trend_delta": -14
+      "trend": "up",
+      "trend_delta": 195
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -2964,20 +3073,21 @@
       "canonical_url": "github.com/soxoj/maigret",
       "also_seen": [],
       "company": null,
-      "stars": 661,
+      "stars": 191,
       "momentum": 26,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-12",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-10": 261,
         "2026-06-11": 318,
-        "2026-06-12": 661
+        "2026-06-12": 661,
+        "2026-06-29": 191
       },
-      "trend": "up",
-      "trend_delta": 400
+      "trend": "down",
+      "trend_delta": -470
     },
     {
       "id": "github:activeloopai/hivemind",
@@ -3409,13 +3519,13 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 369,
+      "stars": 249,
       "momentum": 24,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-13",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-07": 242,
         "2026-06-08": 649,
@@ -3423,10 +3533,11 @@
         "2026-06-10": 618,
         "2026-06-11": 612,
         "2026-06-12": 369,
-        "2026-06-13": 369
+        "2026-06-13": 369,
+        "2026-06-29": 249
       },
-      "trend": "up",
-      "trend_delta": 127
+      "trend": "down",
+      "trend_delta": -120
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -4677,7 +4788,7 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 492,
+      "stars": 840,
       "momentum": 19,
       "tags": [
         "python"
@@ -4687,10 +4798,10 @@
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
-        "2026-06-29": 492
+        "2026-06-29": 840
       },
       "trend": "up",
-      "trend_delta": 295
+      "trend_delta": 643
     },
     {
       "id": "github:D4Vinci/Scrapling",

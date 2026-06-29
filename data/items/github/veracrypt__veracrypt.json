@@ -1,0 +1,25 @@
+{
+  "id": "github:veracrypt/VeraCrypt",
+  "name": "VeraCrypt",
+  "description": "Disk encryption with strong security based on TrueCrypt",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/veracrypt/VeraCrypt",
+  "canonical_url": "github.com/veracrypt/veracrypt",
+  "also_seen": [],
+  "company": null,
+  "stars": 187,
+  "momentum": 18,
+  "tags": [
+    "c"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-29",
+  "last_seen": "2026-06-29",
+  "stars_history": {
+    "2026-06-29": 187
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "github:0xNyk/council-of-high-intelligence",
+  "name": "council-of-high-intelligence",
+  "description": "18 AI personas deliberate your hardest decisions across multiple LLM providers. Aristotle, Feynman, Kahneman, Torvalds & more \u2014 structured multi-round deliberation with genuine model diversity. One command: /council",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/0xNyk/council-of-high-intelligence",
+  "canonical_url": "github.com/0xnyk/council-of-high-intelligence",
+  "also_seen": [],
+  "company": null,
+  "stars": 323,
+  "momentum": 32,
+  "tags": [
+    "shell"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-29",
+  "last_seen": "2026-06-29",
+  "stars_history": {
+    "2026-06-29": 323
+  }
+}
