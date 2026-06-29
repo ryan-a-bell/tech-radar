@@ -1,7 +1,167 @@
 {
-  "generated": "2026-06-28",
-  "count": 170,
+  "generated": "2026-06-29",
+  "count": 176,
   "items": [
+    {
+      "id": "github:browser-use/video-use",
+      "name": "video-use",
+      "description": "Edit videos with coding agents",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/browser-use/video-use",
+      "canonical_url": "github.com/browser-use/video-use",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 19,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 196
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ByteByteGoHq/system-design-101",
+      "name": "system-design-101",
+      "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ByteByteGoHq/system-design-101",
+      "canonical_url": "github.com/bytebytegohq/system-design-101",
+      "also_seen": [],
+      "company": null,
+      "stars": 250,
+      "momentum": 25,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 250
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:usestrix/strix",
+      "name": "strix",
+      "description": "Open-source AI hackers to find and fix your app\u2019s vulnerabilities.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/usestrix/strix",
+      "canonical_url": "github.com/usestrix/strix",
+      "also_seen": [],
+      "company": null,
+      "stars": 122,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 122
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Robbyant/lingbot-map",
+      "name": "lingbot-map",
+      "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Robbyant/lingbot-map",
+      "canonical_url": "github.com/robbyant/lingbot-map",
+      "also_seen": [],
+      "company": null,
+      "stars": 372,
+      "momentum": 37,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 372
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cupy/cupy",
+      "name": "cupy",
+      "description": "NumPy & SciPy for GPU",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cupy/cupy",
+      "canonical_url": "github.com/cupy/cupy",
+      "also_seen": [],
+      "company": null,
+      "stars": 174,
+      "momentum": 17,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 174
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:altic-dev/FluidVoice",
+      "name": "FluidVoice",
+      "description": "FluidVoice - Fastest macOS Offline Dictation app - Voice to Text fully Local. One \u2b50 takes us a long way :))",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/altic-dev/FluidVoice",
+      "canonical_url": "github.com/altic-dev/fluidvoice",
+      "also_seen": [],
+      "company": null,
+      "stars": 365,
+      "momentum": 36,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "stars_history": {
+        "2026-06-29": 365
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:hugohe3/ppt-master",
       "name": "ppt-master",
@@ -176,7 +336,7 @@
       "canonical_url": "github.com/simplex-chat/simplex-chat",
       "also_seen": [],
       "company": null,
-      "stars": 1469,
+      "stars": 1180,
       "momentum": 43,
       "tags": [
         "haskell"
@@ -184,13 +344,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-27": 432,
-        "2026-06-28": 1469
+        "2026-06-28": 1469,
+        "2026-06-29": 1180
       },
       "trend": "up",
-      "trend_delta": 1037
+      "trend_delta": 748
     },
     {
       "id": "github:commaai/openpilot",
@@ -204,7 +365,7 @@
       "canonical_url": "github.com/commaai/openpilot",
       "also_seen": [],
       "company": null,
-      "stars": 322,
+      "stars": 266,
       "momentum": 8,
       "tags": [
         "python"
@@ -212,13 +373,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-27": 80,
-        "2026-06-28": 322
+        "2026-06-28": 322,
+        "2026-06-29": 266
       },
       "trend": "up",
-      "trend_delta": 242
+      "trend_delta": 186
     },
     {
       "id": "github:grafana/grafana",
@@ -259,7 +421,7 @@
       "canonical_url": "github.com/ripienaar/free-for-dev",
       "also_seen": [],
       "company": null,
-      "stars": 459,
+      "stars": 495,
       "momentum": 9,
       "tags": [
         "html"
@@ -267,13 +429,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-27": 90,
-        "2026-06-28": 459
+        "2026-06-28": 459,
+        "2026-06-29": 495
       },
       "trend": "up",
-      "trend_delta": 369
+      "trend_delta": 405
     },
     {
       "id": "github:Flowseal/zapret-discord-youtube",
@@ -523,7 +686,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 685,
+      "stars": 1445,
       "momentum": 20,
       "tags": [
         "python"
@@ -531,15 +694,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-25": 201,
         "2026-06-26": 309,
         "2026-06-27": 1274,
-        "2026-06-28": 685
+        "2026-06-28": 685,
+        "2026-06-29": 1445
       },
       "trend": "up",
-      "trend_delta": 484
+      "trend_delta": 1244
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -611,7 +775,7 @@
       "canonical_url": "github.com/opendatalab/mineru",
       "also_seen": [],
       "company": null,
-      "stars": 960,
+      "stars": 380,
       "momentum": 52,
       "tags": [
         "python"
@@ -619,14 +783,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-25": 524,
         "2026-06-26": 644,
-        "2026-06-27": 960
+        "2026-06-27": 960,
+        "2026-06-29": 380
       },
-      "trend": "up",
-      "trend_delta": 436
+      "trend": "down",
+      "trend_delta": -144
     },
     {
       "id": "github:NanmiCoder/MediaCrawler",
@@ -1736,13 +1901,13 @@
       "canonical_url": "github.com/deusdata/codebase-memory-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 1300,
+      "stars": 2190,
       "momentum": 36,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-17": 367,
         "2026-06-18": 371,
@@ -1751,10 +1916,11 @@
         "2026-06-21": 1029,
         "2026-06-22": 1032,
         "2026-06-23": 1185,
-        "2026-06-24": 1300
+        "2026-06-24": 1300,
+        "2026-06-29": 2190
       },
       "trend": "up",
-      "trend_delta": 933
+      "trend_delta": 1158
     },
     {
       "id": "github:yairm210/Unciv",
@@ -4511,19 +4677,20 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 92,
+      "stars": 492,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-06-29",
       "stars_history": {
         "2026-06-03": 197,
-        "2026-06-28": 92
+        "2026-06-28": 92,
+        "2026-06-29": 492
       },
-      "trend": "down",
-      "trend_delta": -105
+      "trend": "up",
+      "trend_delta": 295
     },
     {
       "id": "github:D4Vinci/Scrapling",
