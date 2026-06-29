@@ -1,0 +1,25 @@
+{
+  "id": "github:Robbyant/lingbot-map",
+  "name": "lingbot-map",
+  "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Robbyant/lingbot-map",
+  "canonical_url": "github.com/robbyant/lingbot-map",
+  "also_seen": [],
+  "company": null,
+  "stars": 372,
+  "momentum": 37,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-29",
+  "last_seen": "2026-06-29",
+  "stars_history": {
+    "2026-06-29": 372
+  }
+}

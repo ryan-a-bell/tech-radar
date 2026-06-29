@@ -10,7 +10,7 @@
   "canonical_url": "github.com/commaai/openpilot",
   "also_seen": [],
   "company": null,
-  "stars": 322,
+  "stars": 266,
   "momentum": 8,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-28",
+  "last_seen": "2026-06-29",
   "stars_history": {
     "2026-06-27": 80,
-    "2026-06-28": 322
+    "2026-06-28": 322,
+    "2026-06-29": 266
   }
 }
