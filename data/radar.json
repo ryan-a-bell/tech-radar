@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29",
+  "generated": "2026-06-30",
   "count": 180,
   "items": [
     {
@@ -14,7 +14,7 @@
       "canonical_url": "github.com/browser-use/video-use",
       "also_seen": [],
       "company": null,
-      "stars": 976,
+      "stars": 967,
       "momentum": 19,
       "tags": [
         "python"
@@ -22,12 +22,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 976
+        "2026-06-29": 976,
+        "2026-06-30": 967
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -9
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
@@ -93,7 +94,7 @@
       "canonical_url": "github.com/logto-io/logto",
       "also_seen": [],
       "company": null,
-      "stars": 77,
+      "stars": 158,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -101,12 +102,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 77
+        "2026-06-29": 77,
+        "2026-06-30": 158
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 81
     },
     {
       "id": "github:Robbyant/lingbot-map",
@@ -155,11 +157,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 352
+        "2026-06-29": 352,
+        "2026-06-30": 352
       },
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -174,7 +177,7 @@
       "canonical_url": "github.com/0xnyk/council-of-high-intelligence",
       "also_seen": [],
       "company": null,
-      "stars": 323,
+      "stars": 331,
       "momentum": 32,
       "tags": [
         "shell"
@@ -182,12 +185,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 323
+        "2026-06-29": 323,
+        "2026-06-30": 331
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:Unclecheng-li/VulnClaw",
@@ -201,7 +205,7 @@
       "canonical_url": "github.com/unclecheng-li/vulnclaw",
       "also_seen": [],
       "company": null,
-      "stars": 105,
+      "stars": 129,
       "momentum": 10,
       "tags": [
         "python"
@@ -209,12 +213,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 105
+        "2026-06-29": 105,
+        "2026-06-30": 129
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 24
     },
     {
       "id": "github:veracrypt/VeraCrypt",
@@ -228,7 +233,7 @@
       "canonical_url": "github.com/veracrypt/veracrypt",
       "also_seen": [],
       "company": null,
-      "stars": 187,
+      "stars": 186,
       "momentum": 18,
       "tags": [
         "c"
@@ -236,12 +241,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 187
+        "2026-06-29": 187,
+        "2026-06-30": 186
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -1
     },
     {
       "id": "github:altic-dev/FluidVoice",
@@ -255,7 +261,7 @@
       "canonical_url": "github.com/altic-dev/fluidvoice",
       "also_seen": [],
       "company": null,
-      "stars": 836,
+      "stars": 830,
       "momentum": 36,
       "tags": [
         "swift"
@@ -263,12 +269,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
-        "2026-06-29": 836
+        "2026-06-29": 836,
+        "2026-06-30": 830
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -6
     },
     {
       "id": "github:hugohe3/ppt-master",
@@ -444,7 +451,7 @@
       "canonical_url": "github.com/simplex-chat/simplex-chat",
       "also_seen": [],
       "company": null,
-      "stars": 1611,
+      "stars": 1607,
       "momentum": 43,
       "tags": [
         "haskell"
@@ -452,14 +459,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-27": 432,
         "2026-06-28": 1469,
-        "2026-06-29": 1611
+        "2026-06-29": 1611,
+        "2026-06-30": 1607
       },
       "trend": "up",
-      "trend_delta": 1179
+      "trend_delta": 1175
     },
     {
       "id": "github:commaai/openpilot",
@@ -473,7 +481,7 @@
       "canonical_url": "github.com/commaai/openpilot",
       "also_seen": [],
       "company": null,
-      "stars": 465,
+      "stars": 458,
       "momentum": 8,
       "tags": [
         "python"
@@ -481,14 +489,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-27": 80,
         "2026-06-28": 322,
-        "2026-06-29": 465
+        "2026-06-29": 465,
+        "2026-06-30": 458
       },
       "trend": "up",
-      "trend_delta": 385
+      "trend_delta": 378
     },
     {
       "id": "github:grafana/grafana",
@@ -529,7 +538,7 @@
       "canonical_url": "github.com/ripienaar/free-for-dev",
       "also_seen": [],
       "company": null,
-      "stars": 1971,
+      "stars": 1935,
       "momentum": 9,
       "tags": [
         "html"
@@ -537,14 +546,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-27": 90,
         "2026-06-28": 459,
-        "2026-06-29": 1971
+        "2026-06-29": 1971,
+        "2026-06-30": 1935
       },
       "trend": "up",
-      "trend_delta": 1881
+      "trend_delta": 1845
     },
     {
       "id": "github:Flowseal/zapret-discord-youtube",
@@ -794,7 +804,7 @@
       "canonical_url": "github.com/xbtlin/ai-berkshire",
       "also_seen": [],
       "company": null,
-      "stars": 1397,
+      "stars": 1386,
       "momentum": 20,
       "tags": [
         "python"
@@ -802,16 +812,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-25": 201,
         "2026-06-26": 309,
         "2026-06-27": 1274,
         "2026-06-28": 685,
-        "2026-06-29": 1397
+        "2026-06-29": 1397,
+        "2026-06-30": 1386
       },
       "trend": "up",
-      "trend_delta": 1196
+      "trend_delta": 1185
     },
     {
       "id": "github:aws/agent-toolkit-for-aws",
@@ -2936,20 +2947,21 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 1221,
+      "stars": 1425,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
-        "2026-06-29": 1221
+        "2026-06-29": 1221,
+        "2026-06-30": 1425
       },
       "trend": "up",
-      "trend_delta": 195
+      "trend_delta": 399
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -3073,21 +3085,22 @@
       "canonical_url": "github.com/soxoj/maigret",
       "also_seen": [],
       "company": null,
-      "stars": 191,
+      "stars": 224,
       "momentum": 26,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-10": 261,
         "2026-06-11": 318,
         "2026-06-12": 661,
-        "2026-06-29": 191
+        "2026-06-29": 191,
+        "2026-06-30": 224
       },
       "trend": "down",
-      "trend_delta": -470
+      "trend_delta": -437
     },
     {
       "id": "github:activeloopai/hivemind",
@@ -3519,13 +3532,13 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 249,
+      "stars": 280,
       "momentum": 24,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-07": 242,
         "2026-06-08": 649,
@@ -3534,10 +3547,11 @@
         "2026-06-11": 612,
         "2026-06-12": 369,
         "2026-06-13": 369,
-        "2026-06-29": 249
+        "2026-06-29": 249,
+        "2026-06-30": 280
       },
       "trend": "down",
-      "trend_delta": -120
+      "trend_delta": -89
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -4788,20 +4802,21 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 840,
+      "stars": 839,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-06-30",
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
-        "2026-06-29": 840
+        "2026-06-29": 840,
+        "2026-06-30": 839
       },
       "trend": "up",
-      "trend_delta": 643
+      "trend_delta": 642
     },
     {
       "id": "github:D4Vinci/Scrapling",
