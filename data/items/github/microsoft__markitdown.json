@@ -3,7 +3,7 @@
   "name": "markitdown",
   "description": "Python tool for converting files and office documents to Markdown.",
   "quadrant": "Languages",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "url": "https://github.com/microsoft/markitdown",
   "canonical_url": "github.com/microsoft/markitdown",
@@ -18,5 +18,6 @@
   "last_seen": "2026-06-03",
   "stars_history": {
     "2026-06-03": 1984
-  }
+  },
+  "archived_at": null
 }

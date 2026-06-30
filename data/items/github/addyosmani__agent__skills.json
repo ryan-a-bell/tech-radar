@@ -3,7 +3,7 @@
   "name": "agent-skills",
   "description": "Production-grade engineering skills for AI coding agents.",
   "quadrant": "Tools",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "discovered_by": "scraper",
   "url": "https://github.com/addyosmani/agent-skills",
@@ -24,5 +24,6 @@
     "2026-06-12": 2660,
     "2026-06-13": 1507,
     "2026-06-14": 1514
-  }
+  },
+  "archived_at": null
 }

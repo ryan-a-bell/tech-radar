@@ -3,7 +3,7 @@
   "name": "continue",
   "description": "open-source coding agent",
   "quadrant": "Languages",
-  "ring": "Discovered",
+  "ring": "Trial",
   "source": "GitHub",
   "discovered_by": "scraper",
   "url": "https://github.com/continuedev/continue",
@@ -20,5 +20,6 @@
   "stars_history": {
     "2026-06-17": 38,
     "2026-06-18": 49
-  }
+  },
+  "archived_at": null
 }

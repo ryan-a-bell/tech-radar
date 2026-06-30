@@ -3,7 +3,7 @@
   "name": "skills",
   "description": "Skills for Real Engineers. Straight from my .claude directory.",
   "quadrant": "Tools",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "discovered_by": "scraper",
   "url": "https://github.com/mattpocock/skills",
@@ -23,5 +23,6 @@
     "2026-06-21": 1441,
     "2026-06-22": 1443,
     "2026-06-23": 2051
-  }
+  },
+  "archived_at": null
 }

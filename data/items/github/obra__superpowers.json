@@ -3,7 +3,7 @@
   "name": "superpowers",
   "description": "An agentic skills framework & software development methodology that works.",
   "quadrant": "Tools",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "discovered_by": "scraper",
   "url": "https://github.com/obra/superpowers",
@@ -29,5 +29,6 @@
     "2026-06-18": 1129,
     "2026-06-19": 1429,
     "2026-06-20": 1110
-  }
+  },
+  "archived_at": null
 }
