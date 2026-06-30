@@ -1,0 +1,21 @@
+{
+  "id": "github:ManimCommunity/manim",
+  "name": "manim",
+  "description": "A community-maintained Python framework for creating mathematical animations",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/ManimCommunity/manim",
+  "canonical_url": "github.com/manimcommunity/manim",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

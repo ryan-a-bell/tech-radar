@@ -1,0 +1,21 @@
+{
+  "id": "github:OpenWhispr/openwhispr",
+  "name": "openwhispr",
+  "description": "Open-source voice-to-text dictation with local Whisper and cloud options",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/OpenWhispr/openwhispr",
+  "canonical_url": "github.com/openwhispr/openwhispr",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

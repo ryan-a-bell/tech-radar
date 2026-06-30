@@ -1,0 +1,21 @@
+{
+  "id": "github:Farama-Foundation/PettingZoo",
+  "name": "PettingZoo",
+  "description": "API standard for multi-agent reinforcement learning environments",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/Farama-Foundation/PettingZoo",
+  "canonical_url": "github.com/farama-foundation/pettingzoo",
+  "also_seen": [],
+  "company": "Farama Foundation",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

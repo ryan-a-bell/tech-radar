@@ -1,0 +1,21 @@
+{
+  "id": "github:eclipse-syson/syson",
+  "name": "syson",
+  "description": "SysON: web-based graphical modelers for SysMLv2",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/eclipse-syson/syson",
+  "canonical_url": "github.com/eclipse-syson/syson",
+  "also_seen": [],
+  "company": "Eclipse Foundation",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

@@ -1,0 +1,21 @@
+{
+  "id": "github:mikeyobrien/ralph-orchestrator",
+  "name": "ralph-orchestrator",
+  "description": "Improved implementation of the Ralph Wiggum technique for autonomous AI agent orchestration",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/mikeyobrien/ralph-orchestrator",
+  "canonical_url": "github.com/mikeyobrien/ralph-orchestrator",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

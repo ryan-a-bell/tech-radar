@@ -3,7 +3,7 @@
   "name": "skills",
   "description": "Agent Skills for Google products and technologies",
   "quadrant": "Languages",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "discovered_by": "scraper",
   "url": "https://github.com/google/skills",
@@ -22,5 +22,6 @@
     "2026-06-09": 461,
     "2026-06-10": 680,
     "2026-06-11": 211
-  }
+  },
+  "archived_at": null
 }
