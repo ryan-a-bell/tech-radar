@@ -3,7 +3,7 @@
   "name": "ECC",
   "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
   "quadrant": "Tools",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "url": "https://github.com/affaan-m/ECC",
   "canonical_url": "github.com/affaan-m/ecc",
@@ -22,5 +22,6 @@
     "2026-06-05": 1750,
     "2026-06-06": 1361,
     "2026-06-24": 593
-  }
+  },
+  "archived_at": null
 }

@@ -1,0 +1,21 @@
+{
+  "id": "github:dolthub/dolt",
+  "name": "dolt",
+  "description": "Git for Data \u2014 version-controlled SQL database",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/dolthub/dolt",
+  "canonical_url": "github.com/dolthub/dolt",
+  "also_seen": [],
+  "company": "DoltHub",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}

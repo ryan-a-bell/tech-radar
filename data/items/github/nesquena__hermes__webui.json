@@ -3,7 +3,7 @@
   "name": "hermes-webui",
   "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
   "quadrant": "Languages",
-  "ring": "Discovered",
+  "ring": "Assess",
   "source": "GitHub",
   "url": "https://github.com/nesquena/hermes-webui",
   "canonical_url": "github.com/nesquena/hermes-webui",
@@ -18,5 +18,6 @@
   "last_seen": "2026-06-03",
   "stars_history": {
     "2026-06-03": 719
-  }
+  },
+  "archived_at": null
 }

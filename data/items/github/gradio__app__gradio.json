@@ -1,0 +1,21 @@
+{
+  "id": "github:gradio-app/gradio",
+  "name": "gradio",
+  "description": "Build and share delightful machine learning apps, all in Python",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "GitHub",
+  "discovered_by": "manual",
+  "url": "https://github.com/gradio-app/gradio",
+  "canonical_url": "github.com/gradio-app/gradio",
+  "also_seen": [],
+  "company": "Gradio",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {}
+}
