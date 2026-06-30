@@ -10,17 +10,18 @@
   "canonical_url": "github.com/soxoj/maigret",
   "also_seen": [],
   "company": null,
-  "stars": 191,
+  "stars": 224,
   "momentum": 26,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-10",
-  "last_seen": "2026-06-29",
+  "last_seen": "2026-06-30",
   "stars_history": {
     "2026-06-10": 261,
     "2026-06-11": 318,
     "2026-06-12": 661,
-    "2026-06-29": 191
+    "2026-06-29": 191,
+    "2026-06-30": 224
   }
 }

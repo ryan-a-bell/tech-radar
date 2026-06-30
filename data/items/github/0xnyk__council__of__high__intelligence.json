@@ -10,7 +10,7 @@
   "canonical_url": "github.com/0xnyk/council-of-high-intelligence",
   "also_seen": [],
   "company": null,
-  "stars": 323,
+  "stars": 331,
   "momentum": 32,
   "tags": [
     "shell"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-29",
-  "last_seen": "2026-06-29",
+  "last_seen": "2026-06-30",
   "stars_history": {
-    "2026-06-29": 323
+    "2026-06-29": 323,
+    "2026-06-30": 331
   }
 }
