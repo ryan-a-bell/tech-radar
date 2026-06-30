@@ -1,0 +1,25 @@
+{
+  "id": "github:diegosouzapw/OmniRoute",
+  "name": "OmniRoute",
+  "description": "Never stop coding. Free AI gateway: one endpoint, 160+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/diegosouzapw/OmniRoute",
+  "canonical_url": "github.com/diegosouzapw/omniroute",
+  "also_seen": [],
+  "company": null,
+  "stars": 617,
+  "momentum": 61,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {
+    "2026-06-30": 617
+  }
+}

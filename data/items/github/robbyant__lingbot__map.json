@@ -10,7 +10,7 @@
   "canonical_url": "github.com/robbyant/lingbot-map",
   "also_seen": [],
   "company": null,
-  "stars": 372,
+  "stars": 465,
   "momentum": 37,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-29",
-  "last_seen": "2026-06-29",
+  "last_seen": "2026-06-30",
   "stars_history": {
-    "2026-06-29": 372
+    "2026-06-29": 372,
+    "2026-06-30": 465
   }
 }

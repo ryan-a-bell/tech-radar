@@ -1,0 +1,25 @@
+{
+  "id": "github:ogulcancelik/herdr",
+  "name": "herdr",
+  "description": "agent multiplexer that lives in your terminal.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ogulcancelik/herdr",
+  "canonical_url": "github.com/ogulcancelik/herdr",
+  "also_seen": [],
+  "company": null,
+  "stars": 467,
+  "momentum": 46,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "stars_history": {
+    "2026-06-30": 467
+  }
+}
