@@ -10,17 +10,18 @@
   "canonical_url": "github.com/msitarzewski/agency-agents",
   "also_seen": [],
   "company": null,
-  "stars": 1425,
+  "stars": 1791,
   "momentum": 100,
   "tags": [
     "shell"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-30",
+  "last_seen": "2026-07-01",
   "stars_history": {
     "2026-06-12": 1040,
     "2026-06-13": 1026,
     "2026-06-29": 1221,
-    "2026-06-30": 1425
+    "2026-06-30": 1425,
+    "2026-07-01": 1791
   }
 }

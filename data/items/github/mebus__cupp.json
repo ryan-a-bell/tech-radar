@@ -1,0 +1,25 @@
+{
+  "id": "github:Mebus/cupp",
+  "name": "cupp",
+  "description": "Common User Passwords Profiler (CUPP)",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Mebus/cupp",
+  "canonical_url": "github.com/mebus/cupp",
+  "also_seen": [],
+  "company": null,
+  "stars": 32,
+  "momentum": 3,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-01",
+  "last_seen": "2026-07-01",
+  "stars_history": {
+    "2026-07-01": 32
+  }
+}
