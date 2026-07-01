@@ -1,17 +1,17 @@
 {
-  "id": "github:Mebus/cupp",
-  "name": "cupp",
-  "description": "Common User Passwords Profiler (CUPP)",
+  "id": "github:allenai/olmocr",
+  "name": "olmocr",
+  "description": "Toolkit for linearizing PDFs for LLM datasets/training",
   "quadrant": "Languages",
   "ring": "Discovered",
   "source": "GitHub",
   "discovered_by": "scraper",
-  "url": "https://github.com/Mebus/cupp",
-  "canonical_url": "github.com/mebus/cupp",
+  "url": "https://github.com/allenai/olmocr",
+  "canonical_url": "github.com/allenai/olmocr",
   "also_seen": [],
   "company": null,
-  "stars": 185,
-  "momentum": 3,
+  "stars": 295,
+  "momentum": 29,
   "tags": [
     "python"
   ],
@@ -20,6 +20,6 @@
   "first_seen": "2026-07-01",
   "last_seen": "2026-07-01",
   "stars_history": {
-    "2026-07-01": 185
+    "2026-07-01": 295
   }
 }

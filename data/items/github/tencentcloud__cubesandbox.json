@@ -1,0 +1,25 @@
+{
+  "id": "github:TencentCloud/CubeSandbox",
+  "name": "CubeSandbox",
+  "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/TencentCloud/CubeSandbox",
+  "canonical_url": "github.com/tencentcloud/cubesandbox",
+  "also_seen": [],
+  "company": null,
+  "stars": 46,
+  "momentum": 4,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-01",
+  "last_seen": "2026-07-01",
+  "stars_history": {
+    "2026-07-01": 46
+  }
+}
