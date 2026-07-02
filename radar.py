@@ -155,8 +155,10 @@ def cmd_set(args):
         print(f"  quadrant must be one of: {', '.join(core.QUADRANTS)}")
         sys.exit(1)
     if field == "topics":
-        # comma- or space-separated list, validated against the vocabulary
-        raw = [t for t in re.split(r"[,\s]+", value) if t]
+        # comma-separated list, validated against the vocabulary. Split on
+        # commas only (not whitespace) so multi-word topics like
+        # "Data Feeds" survive intact.
+        raw = [t.strip() for t in value.split(",") if t.strip()]
         kept, unknown = core.normalize_topics(raw)
         if unknown:
             print(f"  unknown topic(s): {', '.join(map(str, unknown))}")
@@ -298,8 +300,8 @@ def main():
                             "momentum|topics) on an item")
     p.add_argument("item")
     p.add_argument("field")
-    p.add_argument("value", help="for topics: comma/space-separated, "
-                                 "e.g. \"AI,Agents\"")
+    p.add_argument("value", help="for topics: comma-separated, "
+                                 "e.g. \"AI,Agents\" or \"Data Feeds,Trading\"")
     p.set_defaults(func=cmd_set)
 
     p = sub.add_parser("archive", help="archive an item (Archived ring, dated)")

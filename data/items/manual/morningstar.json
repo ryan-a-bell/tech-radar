@@ -1,0 +1,25 @@
+{
+  "id": "manual:morningstar",
+  "name": "Morningstar",
+  "description": "Investment research and financial data provider \u2014 fund and equity ratings, market data, and analytics.",
+  "quadrant": "Platforms",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.morningstar.com/",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Trading",
+    "Quant",
+    "Data Feeds"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}

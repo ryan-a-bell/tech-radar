@@ -1,0 +1,24 @@
+{
+  "id": "manual:riskfolio-lib",
+  "name": "Riskfolio-Lib",
+  "description": "Python library for portfolio optimization and quantitative strategic asset allocation.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/dcajasn/Riskfolio-Lib",
+  "canonical_url": "github.com/dcajasn/riskfolio-lib",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant",
+    "Trading"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}

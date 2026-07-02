@@ -1,0 +1,25 @@
+{
+  "id": "manual:ibkr-tws",
+  "name": "IBKR TWS",
+  "description": "Interactive Brokers' Trader Workstation \u2014 desktop trading platform with API access for market data and order execution.",
+  "quadrant": "Platforms",
+  "ring": "Trial",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.interactivebrokers.com/en/trading/tws.php",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Trading",
+    "Quant",
+    "Data Feeds"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}
