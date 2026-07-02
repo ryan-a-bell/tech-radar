@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-02",
-  "count": 276,
+  "count": 279,
   "items": [
     {
       "id": "manual:willowtree",
@@ -307,6 +307,29 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:selenium",
+      "name": "Selenium",
+      "description": "Umbrella project for browser automation \u2014 WebDriver-based tools and bindings for testing web applications.",
+      "quadrant": "Tools",
+      "ring": "Adopted",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/SeleniumHQ/selenium",
+      "canonical_url": "github.com/seleniumhq/selenium",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:riskfolio-lib",
       "name": "Riskfolio-Lib",
       "description": "Python library for portfolio optimization and quantitative strategic asset allocation.",
@@ -431,6 +454,29 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:playwright",
+      "name": "Playwright",
+      "description": "Cross-browser automation framework for reliable end-to-end testing of web apps.",
+      "quadrant": "Tools",
+      "ring": "Adopted",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/microsoft/playwright",
+      "canonical_url": "github.com/microsoft/playwright",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:playlist-studio",
       "name": "Playlist Studio",
       "description": "Playlist Studio platform",
@@ -520,6 +566,32 @@
       "tags": [],
       "topics": [
         "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:fabric",
+      "name": "Fabric",
+      "description": "Open-source framework for augmenting humans using AI \u2014 a crowdsourced set of AI prompts (Patterns) and a CLI to apply them to any problem.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/danielmiessler/Fabric",
+      "canonical_url": "github.com/danielmiessler/fabric",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Prompts"
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
