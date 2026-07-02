@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-02",
-  "count": 279,
+  "count": 284,
   "items": [
     {
       "id": "manual:willowtree",
@@ -307,6 +307,32 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:thetadata",
+      "name": "ThetaData",
+      "description": "Historical and real-time options, stocks, and index market data API for quants and algo traders.",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.thetadata.net/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:selenium",
       "name": "Selenium",
       "description": "Umbrella project for browser automation \u2014 WebDriver-based tools and bindings for testing web applications.",
@@ -454,6 +480,32 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:polygon-io",
+      "name": "Polygon.io",
+      "description": "Real-time and historical market data API for stocks, options, forex, and crypto.",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://polygon.io/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:playwright",
       "name": "Playwright",
       "description": "Cross-browser automation framework for reliable end-to-end testing of web apps.",
@@ -515,6 +567,58 @@
       "momentum": 0,
       "tags": [],
       "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:morningstar",
+      "name": "Morningstar",
+      "description": "Investment research and financial data provider \u2014 fund and equity ratings, market data, and analytics.",
+      "quadrant": "Platforms",
+      "ring": "Adopted",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.morningstar.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:ibkr-tws",
+      "name": "IBKR TWS",
+      "description": "Interactive Brokers' Trader Workstation \u2014 desktop trading platform with API access for market data and order execution.",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.interactivebrokers.com/en/trading/tws.php",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
         "Quant"
       ],
       "archived_at": null,
@@ -649,6 +753,32 @@
       "stars_history": {
         "2026-07-02": 79
       },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:bloomberg",
+      "name": "Bloomberg",
+      "description": "Institutional-grade financial data, news, and analytics platform (Bloomberg Terminal / Data).",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.bloomberg.com/professional",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
       "trend": "none",
       "trend_delta": 0
     },
