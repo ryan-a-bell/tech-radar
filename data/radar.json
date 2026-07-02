@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-02",
-  "count": 284,
+  "count": 285,
   "items": [
     {
       "id": "manual:willowtree",
@@ -297,6 +297,34 @@
       "momentum": 0,
       "tags": [],
       "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:tradingagents",
+      "name": "TradingAgents",
+      "description": "Multi-agent LLM framework that simulates a trading firm \u2014 specialized agents for fundamentals, sentiment, technicals, trading, and risk management collaborate on trading decisions.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "canonical_url": "github.com/tauricresearch/tradingagents",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Agents",
+        "Trading",
         "Quant"
       ],
       "archived_at": null,
