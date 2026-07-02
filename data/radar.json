@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-02",
-  "count": 255,
+  "count": 256,
   "items": [
     {
       "id": "github:allenai/olmocr",
@@ -53,6 +53,29 @@
       "stars_history": {
         "2026-07-02": 42
       },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:playlist-studio",
+      "name": "Playlist Studio",
+      "description": "Playlist Studio platform",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {},
       "trend": "none",
       "trend_delta": 0
     },
