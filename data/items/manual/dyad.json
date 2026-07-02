@@ -1,0 +1,23 @@
+{
+  "id": "manual:dyad",
+  "name": "Dyad",
+  "description": "Free, local, open-source AI app builder \u2014 build full-stack apps with AI, no lock-in, runs on your machine.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/dyad-sh/dyad",
+  "canonical_url": "github.com/dyad-sh/dyad",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}
