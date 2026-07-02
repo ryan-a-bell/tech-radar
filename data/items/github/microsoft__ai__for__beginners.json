@@ -10,7 +10,7 @@
   "canonical_url": "github.com/microsoft/ai-for-beginners",
   "also_seen": [],
   "company": "Microsoft",
-  "stars": 252,
+  "stars": 1096,
   "momentum": 25,
   "tags": [
     "jupyter notebook"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-01",
+  "last_seen": "2026-07-02",
   "stars_history": {
-    "2026-07-01": 252
+    "2026-07-01": 252,
+    "2026-07-02": 1096
   }
 }

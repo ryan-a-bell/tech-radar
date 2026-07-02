@@ -10,7 +10,7 @@
   "canonical_url": "github.com/unclecheng-li/vulnclaw",
   "also_seen": [],
   "company": null,
-  "stars": 129,
+  "stars": 132,
   "momentum": 10,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-29",
-  "last_seen": "2026-06-30",
+  "last_seen": "2026-07-02",
   "stars_history": {
     "2026-06-29": 105,
-    "2026-06-30": 129
+    "2026-06-30": 129,
+    "2026-07-02": 132
   }
 }

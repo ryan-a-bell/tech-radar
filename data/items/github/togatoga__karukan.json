@@ -1,0 +1,25 @@
+{
+  "id": "github:togatoga/karukan",
+  "name": "karukan",
+  "description": "Japanese Input Method System for Linux, macOS, Neural Kana-Kanji Conversion Engine",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/togatoga/karukan",
+  "canonical_url": "github.com/togatoga/karukan",
+  "also_seen": [],
+  "company": null,
+  "stars": 42,
+  "momentum": 4,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {
+    "2026-07-02": 42
+  }
+}

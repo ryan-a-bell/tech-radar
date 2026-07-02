@@ -1,0 +1,25 @@
+{
+  "id": "github:allenai/olmocr",
+  "name": "olmocr",
+  "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/allenai/olmocr",
+  "canonical_url": "github.com/allenai/olmocr",
+  "also_seen": [],
+  "company": null,
+  "stars": 334,
+  "momentum": 33,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {
+    "2026-07-02": 334
+  }
+}

@@ -10,17 +10,18 @@
   "canonical_url": "github.com/yikart/aitoearn",
   "also_seen": [],
   "company": null,
-  "stars": 402,
+  "stars": 116,
   "momentum": 18,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-10",
+  "last_seen": "2026-07-02",
   "stars_history": {
     "2026-06-07": 180,
     "2026-06-08": 183,
     "2026-06-09": 786,
-    "2026-06-10": 402
+    "2026-06-10": 402,
+    "2026-07-02": 116
   }
 }

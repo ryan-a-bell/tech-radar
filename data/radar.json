@@ -1,7 +1,88 @@
 {
-  "generated": "2026-07-01",
-  "count": 252,
+  "generated": "2026-07-02",
+  "count": 255,
   "items": [
+    {
+      "id": "github:allenai/olmocr",
+      "name": "olmocr",
+      "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/allenai/olmocr",
+      "canonical_url": "github.com/allenai/olmocr",
+      "also_seen": [],
+      "company": null,
+      "stars": 334,
+      "momentum": 33,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {
+        "2026-07-02": 334
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:togatoga/karukan",
+      "name": "karukan",
+      "description": "Japanese Input Method System for Linux, macOS, Neural Kana-Kanji Conversion Engine",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/togatoga/karukan",
+      "canonical_url": "github.com/togatoga/karukan",
+      "also_seen": [],
+      "company": null,
+      "stars": 42,
+      "momentum": 4,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {
+        "2026-07-02": 42
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TencentCloud/CubeSandbox",
+      "name": "CubeSandbox",
+      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "canonical_url": "github.com/tencentcloud/cubesandbox",
+      "also_seen": [],
+      "company": null,
+      "stars": 79,
+      "momentum": 7,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "stars_history": {
+        "2026-07-02": 79
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:ogulcancelik/herdr",
       "name": "herdr",
@@ -14,7 +95,7 @@
       "canonical_url": "github.com/ogulcancelik/herdr",
       "also_seen": [],
       "company": null,
-      "stars": 486,
+      "stars": 609,
       "momentum": 48,
       "tags": [
         "rust"
@@ -22,12 +103,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 486
+        "2026-07-01": 486,
+        "2026-07-02": 609
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 123
     },
     {
       "id": "github:hasaneyldrm/exercises-dataset",
@@ -41,7 +123,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 1343,
+      "stars": 2470,
       "momentum": 100,
       "tags": [
         "html"
@@ -49,12 +131,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 1343
+        "2026-07-01": 1343,
+        "2026-07-02": 2470
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1127
     },
     {
       "id": "github:Mebus/cupp",
@@ -68,7 +151,7 @@
       "canonical_url": "github.com/mebus/cupp",
       "also_seen": [],
       "company": null,
-      "stars": 32,
+      "stars": 184,
       "momentum": 3,
       "tags": [
         "python"
@@ -76,12 +159,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 32
+        "2026-07-01": 32,
+        "2026-07-02": 184
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 152
     },
     {
       "id": "github:facebook/astryx",
@@ -95,7 +179,7 @@
       "canonical_url": "github.com/facebook/astryx",
       "also_seen": [],
       "company": "Meta",
-      "stars": 364,
+      "stars": 708,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -103,12 +187,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 364
+        "2026-07-01": 364,
+        "2026-07-02": 708
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 344
     },
     {
       "id": "github:google/agents-cli",
@@ -149,7 +234,7 @@
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "also_seen": [],
       "company": null,
-      "stars": 387,
+      "stars": 1010,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -157,12 +242,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 387
+        "2026-07-01": 387,
+        "2026-07-02": 1010
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 623
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -176,7 +262,7 @@
       "canonical_url": "github.com/corebunch/instatic",
       "also_seen": [],
       "company": null,
-      "stars": 351,
+      "stars": 508,
       "momentum": 35,
       "tags": [
         "typescript"
@@ -184,12 +270,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 351
+        "2026-07-01": 351,
+        "2026-07-02": 508
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 157
     },
     {
       "id": "github:microsoft/AI-For-Beginners",
@@ -203,7 +290,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 252,
+      "stars": 1096,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -211,12 +298,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
-        "2026-07-01": 252
+        "2026-07-01": 252,
+        "2026-07-02": 1096
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 844
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -1702,7 +1790,7 @@
       "canonical_url": "github.com/browser-use/video-use",
       "also_seen": [],
       "company": null,
-      "stars": 721,
+      "stars": 693,
       "momentum": 19,
       "tags": [
         "python"
@@ -1710,14 +1798,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 976,
         "2026-06-30": 967,
-        "2026-07-01": 721
+        "2026-07-01": 721,
+        "2026-07-02": 693
       },
       "trend": "down",
-      "trend_delta": -255
+      "trend_delta": -283
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
@@ -1756,7 +1845,7 @@
       "canonical_url": "github.com/usestrix/strix",
       "also_seen": [],
       "company": null,
-      "stars": 515,
+      "stars": 1211,
       "momentum": 12,
       "tags": [
         "python"
@@ -1764,13 +1853,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 122,
-        "2026-07-01": 515
+        "2026-07-01": 515,
+        "2026-07-02": 1211
       },
       "trend": "up",
-      "trend_delta": 393
+      "trend_delta": 1089
     },
     {
       "id": "github:logto-io/logto",
@@ -1784,7 +1874,7 @@
       "canonical_url": "github.com/logto-io/logto",
       "also_seen": [],
       "company": null,
-      "stars": 158,
+      "stars": 113,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -1792,13 +1882,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 77,
-        "2026-06-30": 158
+        "2026-06-30": 158,
+        "2026-07-02": 113
       },
       "trend": "up",
-      "trend_delta": 81
+      "trend_delta": 36
     },
     {
       "id": "github:Robbyant/lingbot-map",
@@ -1868,7 +1959,7 @@
       "canonical_url": "github.com/0xnyk/council-of-high-intelligence",
       "also_seen": [],
       "company": null,
-      "stars": 331,
+      "stars": 161,
       "momentum": 32,
       "tags": [
         "shell"
@@ -1876,13 +1967,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 323,
-        "2026-06-30": 331
+        "2026-06-30": 331,
+        "2026-07-02": 161
       },
-      "trend": "up",
-      "trend_delta": 8
+      "trend": "down",
+      "trend_delta": -162
     },
     {
       "id": "github:Unclecheng-li/VulnClaw",
@@ -1896,7 +1988,7 @@
       "canonical_url": "github.com/unclecheng-li/vulnclaw",
       "also_seen": [],
       "company": null,
-      "stars": 129,
+      "stars": 132,
       "momentum": 10,
       "tags": [
         "python"
@@ -1904,13 +1996,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 105,
-        "2026-06-30": 129
+        "2026-06-30": 129,
+        "2026-07-02": 132
       },
       "trend": "up",
-      "trend_delta": 24
+      "trend_delta": 27
     },
     {
       "id": "github:veracrypt/VeraCrypt",
@@ -1952,7 +2045,7 @@
       "canonical_url": "github.com/altic-dev/fluidvoice",
       "also_seen": [],
       "company": null,
-      "stars": 588,
+      "stars": 572,
       "momentum": 36,
       "tags": [
         "swift"
@@ -1960,14 +2053,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-29": 836,
         "2026-06-30": 830,
-        "2026-07-01": 588
+        "2026-07-01": 588,
+        "2026-07-02": 572
       },
       "trend": "down",
-      "trend_delta": -248
+      "trend_delta": -264
     },
     {
       "id": "github:hugohe3/ppt-master",
@@ -4646,22 +4740,23 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 1791,
+      "stars": 2114,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
         "2026-06-29": 1221,
         "2026-06-30": 1425,
-        "2026-07-01": 1791
+        "2026-07-01": 1791,
+        "2026-07-02": 2114
       },
       "trend": "up",
-      "trend_delta": 765
+      "trend_delta": 1088
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -5235,13 +5330,13 @@
       "canonical_url": "github.com/refactoringhq/tolaria",
       "also_seen": [],
       "company": null,
-      "stars": 280,
+      "stars": 150,
       "momentum": 24,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-07": 242,
         "2026-06-08": 649,
@@ -5251,10 +5346,11 @@
         "2026-06-12": 369,
         "2026-06-13": 369,
         "2026-06-29": 249,
-        "2026-06-30": 280
+        "2026-06-30": 280,
+        "2026-07-02": 150
       },
       "trend": "down",
-      "trend_delta": -89
+      "trend_delta": -219
     },
     {
       "id": "github:Leonxlnx/taste-skill",
@@ -5484,21 +5580,22 @@
       "canonical_url": "github.com/yikart/aitoearn",
       "also_seen": [],
       "company": null,
-      "stars": 402,
+      "stars": 116,
       "momentum": 18,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-10",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-07": 180,
         "2026-06-08": 183,
         "2026-06-09": 786,
-        "2026-06-10": 402
+        "2026-06-10": 402,
+        "2026-07-02": 116
       },
-      "trend": "up",
-      "trend_delta": 222
+      "trend": "down",
+      "trend_delta": -286
     },
     {
       "id": "github:openai/whisper",
@@ -6512,22 +6609,23 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 721,
+      "stars": 694,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-02",
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
         "2026-06-29": 840,
         "2026-06-30": 839,
-        "2026-07-01": 721
+        "2026-07-01": 721,
+        "2026-07-02": 694
       },
       "trend": "up",
-      "trend_delta": 524
+      "trend_delta": 497
     },
     {
       "id": "github:D4Vinci/Scrapling",
