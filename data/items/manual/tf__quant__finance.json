@@ -1,0 +1,23 @@
+{
+  "id": "manual:tf-quant-finance",
+  "name": "tf-quant-finance",
+  "description": "High-performance TensorFlow library for quantitative finance.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/google/tf-quant-finance",
+  "canonical_url": "github.com/google/tf-quant-finance",
+  "also_seen": [],
+  "company": "Google",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}

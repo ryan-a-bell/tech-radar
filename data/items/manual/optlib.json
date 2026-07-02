@@ -1,0 +1,23 @@
+{
+  "id": "manual:optlib",
+  "name": "optlib",
+  "description": "Python library for options pricing and analysis.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/dbrojas/optlib",
+  "canonical_url": "github.com/dbrojas/optlib",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}

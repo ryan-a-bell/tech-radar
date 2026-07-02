@@ -1,0 +1,23 @@
+{
+  "id": "manual:gs-quant",
+  "name": "gs-quant",
+  "description": "Goldman Sachs' Python toolkit for quantitative finance, derivatives pricing, and risk analysis.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/goldmansachs/gs-quant",
+  "canonical_url": "github.com/goldmansachs/gs-quant",
+  "also_seen": [],
+  "company": "Goldman Sachs",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}
