@@ -1,0 +1,23 @@
+{
+  "id": "manual:finoptions-dev",
+  "name": "finoptions-dev",
+  "description": "Python library for option pricing models, ported from R's fOptions.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/bbcho/finoptions-dev",
+  "canonical_url": "github.com/bbcho/finoptions-dev",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "stars_history": {}
+}
