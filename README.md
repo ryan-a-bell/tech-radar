@@ -211,7 +211,7 @@ tech-radar/
 ├── web/                # the browser frontend (served as-is, no build step)
 │   ├── index.html      # HTML shell — loads config.js + dashboard.jsx via CDN
 │   ├── config.js       # runtime flag — window.RADAR_EDIT (false in the build)
-│   ├── dashboard.jsx   # React dashboard — Atlas/Observatory/Dispatch + edit mode
+│   ├── dashboard.jsx   # React dashboard — Atlas + Index views + edit mode
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
 ├── tests/              # stdlib unittest suite for radar_core
 ├── docs/               # routine guides + architecture.html diagram
