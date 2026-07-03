@@ -15,6 +15,9 @@ config.js is copied as-is (window.RADAR_EDIT = false), which is what keeps the
 deployed dashboard read-only — edit mode only exists when edit_server.py is the
 one serving the page.
 
+Also copies web/{books.html, books.jsx} and data/books.json — the Reading
+List page, a read-only companion to the tech radar dashboard.
+
 The dashboard stays a plain static page — no bundler, no node_modules.
 """
 
@@ -64,6 +67,21 @@ def main():
     # 5. copy the data the dashboard fetches
     shutil.copy(os.path.join(HERE, "data", "radar.json"),
                 os.path.join(SITE, "data", "radar.json"))
+
+    # 6. Reading List page — books.html is copied as-is; books.jsx gets the
+    #    same export-default strip as dashboard.jsx (expects a global BooksApp).
+    shutil.copy(os.path.join(WEB, "books.html"),
+                os.path.join(SITE, "books.html"))
+    with open(os.path.join(WEB, "books.jsx"), encoding="utf-8") as f:
+        books_src = f.read()
+    books_src = re.sub(r"export\s+default\s+function\s+BooksApp",
+                        "function BooksApp", books_src)
+    books_src = re.sub(r'^import\s+React.*?;\s*$', "", books_src, flags=re.M)
+    with open(os.path.join(SITE, "books.jsx"), "w", encoding="utf-8") as f:
+        f.write(hooks + books_src)
+    books_json = os.path.join(HERE, "data", "books.json")
+    if os.path.exists(books_json):
+        shutil.copy(books_json, os.path.join(SITE, "data", "books.json"))
 
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")
