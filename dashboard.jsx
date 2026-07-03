@@ -1304,9 +1304,21 @@ function Index({ data, status, onSetRing, saveStatus }) {
 
 /* ===================== SHELL ===================== */
 function App() {
-  const [view, setView] = useState("atlas");
+  // initial view honours a #index / #atlas hash so the Reading List page's
+  // INDEX tab can deep-link straight to the Index view (and vice versa)
+  const [view, setView] = useState(
+    () => (typeof window !== "undefined" && window.location.hash.replace("#", "") === "index") ? "index" : "atlas"
+  );
   const [refreshKey, setRefreshKey] = useState(0);
   const { data, status } = useRadarData(refreshKey);
+
+  // keep the URL hash in sync so the current view survives a cross-page hop
+  const selectView = (id) => {
+    setView(id);
+    if (typeof history !== "undefined" && history.replaceState) {
+      history.replaceState(null, "", "#" + id);
+    }
+  };
 
   // {status: "idle"|"saving"|"saved"|"error", activeid: "", name: ""}
   const [saveStatus, setSaveStatus] = useState({ status: "idle", activeid: "", name: "" });
@@ -1357,7 +1369,7 @@ function App() {
           { id: "atlas", label: "ATLAS" },
           { id: "index", label: "INDEX" },
         ].map((m) => (
-          <button key={m.id} onClick={() => setView(m.id)} style={{
+          <button key={m.id} onClick={() => selectView(m.id)} style={{
             background: view === m.id ? "#fff" : "transparent",
             color: view === m.id ? "#000" : "#999",
             border: "1px solid " + (view === m.id ? "#fff" : "#444"),
@@ -1368,7 +1380,7 @@ function App() {
         <a href="books.html" style={{
           color: "#999", textDecoration: "none",
           fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-        }}>READING LIST ▸</a>
+        }}>READING LIST</a>
         {EDIT_MODE && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
