@@ -10,7 +10,7 @@
   "canonical_url": "github.com/usestrix/strix",
   "also_seen": [],
   "company": null,
-  "stars": 1211,
+  "stars": 2137,
   "momentum": 12,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-02",
+  "last_seen": "2026-07-03",
   "stars_history": {
     "2026-06-29": 122,
     "2026-07-01": 515,
-    "2026-07-02": 1211
+    "2026-07-02": 1211,
+    "2026-07-03": 2137
   }
 }

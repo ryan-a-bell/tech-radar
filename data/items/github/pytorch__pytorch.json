@@ -1,0 +1,25 @@
+{
+  "id": "github:pytorch/pytorch",
+  "name": "pytorch",
+  "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/pytorch/pytorch",
+  "canonical_url": "github.com/pytorch/pytorch",
+  "also_seen": [],
+  "company": null,
+  "stars": 65,
+  "momentum": 6,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-03",
+  "last_seen": "2026-07-03",
+  "stars_history": {
+    "2026-07-03": 65
+  }
+}
