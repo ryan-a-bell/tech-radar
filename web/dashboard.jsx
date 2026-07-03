@@ -2,11 +2,10 @@ import React, { useState, useMemo, useEffect } from "react";
 
 /* ============================================================
    TECHNOLOGY RADAR DASHBOARD
-   Reads the runner's data/radar.json. Three views:
-     · Atlas       — radar plate + scannable card list (default)
-     · Observatory — dark polar radar plot
-     · Dispatch    — editorial briefing grid
-   All include the "Discovered" ring (the runner's inbox).
+   Reads the runner's data/radar.json. Two views:
+     · Atlas — radar plate + scannable card list (default)
+     · Index — topic-first sortable table
+   Both include the "Discovered" ring (the runner's inbox).
 
    READ-ONLY by default. When served by edit_server.py (which sets
    `window.RADAR_EDIT = true`), the detail panels grow a ring editor that
@@ -28,10 +27,6 @@ const RINGS = ["Adopted", "Trial", "Assess", "Discovered", "Archived"];
 // human assigns, distinct from the free-form per-item `tags` from scrapers.
 const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG"];
 
-const RING_COLOR = {
-  Adopted: "#4ade80", Trial: "#38bdf8", Assess: "#fbbf24",
-  Discovered: "#a78bfa", Archived: "#94a3b8",
-};
 const RING_INK = {
   Adopted: "#1a7f4b", Trial: "#1d6fb8", Assess: "#b8841d",
   Discovered: "#6d4fc4", Archived: "#64748b",
@@ -60,6 +55,68 @@ function daysAgo(iso) {
   const d = new Date(iso + "T00:00:00");
   return Math.floor((Date.now() - d.getTime()) / 86400000);
 }
+
+/* ===================== FUZZY SEARCH =====================
+   Lightweight subsequence match, no dependencies: query characters must
+   appear in order in the target text, but don't need to be contiguous or
+   exact. An exact substring scores highest; denser, earlier runs of
+   matched characters score higher than sparse ones. */
+function fuzzyScore(query, text) {
+  if (!query) return 0;
+  const q = query.toLowerCase(), t = (text || "").toLowerCase();
+  if (t.includes(q)) return 100 + q.length;
+  let qi = 0, score = 0, streak = 0;
+  for (let ti = 0; ti < t.length && qi < q.length; ti++) {
+    if (t[ti] === q[qi]) { score += 1 + streak * 2; streak++; qi++; }
+    else streak = 0;
+  }
+  return qi === q.length ? score : -1;
+}
+
+// Best weighted match across an item's searchable fields, or -1 if the query
+// doesn't match any of them. 0 (no query) means "everything matches".
+function itemScore(query, d) {
+  if (!query) return 0;
+  const fields = [
+    [d.name, 3], [(d.topics || []).join(" "), 2.2], [(d.tags || []).join(" "), 1.5],
+    [d.quadrant, 1.2], [d.description, 1],
+  ];
+  let best = -1;
+  for (const [text, weight] of fields) {
+    const s = fuzzyScore(query, text || "");
+    if (s >= 0) best = Math.max(best, s * weight);
+  }
+  return best;
+}
+
+// Splits text around the first literal substring match of query, so a
+// result can show *why* it matched. Falls back to plain text otherwise.
+function highlightMatch(text, query) {
+  if (!query || !text) return text;
+  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx === -1) return text;
+  return [
+    text.slice(0, idx),
+    <mark key="hl" style={{ background: "#ffe27a", padding: "0 1px" }}>{text.slice(idx, idx + query.length)}</mark>,
+    text.slice(idx + query.length),
+  ];
+}
+
+// Frequency table for the curated TOPICS vocabulary, over a full item list.
+function topicCounts(items) {
+  const counts = {};
+  TOPICS.forEach((t) => { counts[t] = 0; });
+  items.forEach((d) => (d.topics || []).forEach((t) => { counts[t] = (counts[t] || 0) + 1; }));
+  return counts;
+}
+
+// Sentinel for the "no curated topic" filter bucket. A large share of items
+// carry no topics at all, so they'd be invisible to every topic filter — this
+// makes the untriaged pool selectable like any other topic.
+const NO_TOPIC = " none";
+function hasNoTopics(d) { return !(d.topics && d.topics.length); }
+// Muted ink so the bucket reads as "absence of topic", not a real topic.
+const NO_TOPIC_INK = "#8a8172";
 
 /* ===================== PROVENANCE =====================
    How a technology entered the radar. Older items predate the field, so
@@ -124,21 +181,7 @@ function useRadarData(refreshKey = 0) {
   return { data, status };
 }
 
-function Toggle({ on, set, label, color }) {
-  return (
-    <button onClick={() => set(!on)} style={{
-      fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: 1,
-      padding: "6px 12px", cursor: "pointer", borderRadius: 3,
-      border: "1px solid " + (on ? color : "#2a4060"),
-      background: on ? color + "22" : "transparent",
-      color: on ? color : "#5b7894",
-    }}>
-      {on ? "● " : "○ "}{label}
-    </button>
-  );
-}
-
-/* Shared filter pill — used by both Observatory and Dispatch. */
+/* Shared filter pill — used across the Atlas and Index filter rows. */
 function Pill({ label, active, onClick, color }) {
   return (
     <button onClick={onClick} style={{
@@ -154,23 +197,26 @@ function Pill({ label, active, onClick, color }) {
 
 /* Curated topic chips, rendered wherever an item's detail shows. Renders
    nothing when the item carries no topics. */
-function TopicChips({ topics }) {
+function TopicChips({ topics, onTopicClick }) {
   if (!topics || !topics.length) return null;
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 12 }}>
       {topics.map((t) => (
-        <span key={t} style={{
-          fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1,
-          color: "#1a1a1a", background: "#efe9da",
-          border: "1px solid #d8d2c4", padding: "3px 8px", borderRadius: 20,
-        }}>{t.toUpperCase()}</span>
+        <span key={t}
+          onClick={onTopicClick ? () => onTopicClick(t) : undefined}
+          style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1,
+            color: "#1a1a1a", background: "#efe9da",
+            border: "1px solid #d8d2c4", padding: "3px 8px", borderRadius: 20,
+            cursor: onTopicClick ? "pointer" : "default",
+          }}>{t.toUpperCase()}</span>
       ))}
     </div>
   );
 }
 
 /* ===================== RING EDITOR =====================
-   Segmented ring picker shown in the Atlas modal and Observatory detail panel,
+   Segmented ring picker shown in the Atlas and Index detail modals,
    but only when EDIT_MODE is on (edit_server.py running). Clicking a ring fires
    onSetRing immediately — no staging, no commands. The App handler POSTs to
    /api/promote and re-fetches radar.json on success. In the static public build
@@ -235,327 +281,6 @@ async function saveNote(id, text) {
   } catch (e) { console.error("note save failed", e); return false; }
 }
 
-/* ===================== OBSERVATORY (cream/serif sibling of Dispatch) =====================
-   Same editorial visual language as Dispatch: cream paper, hard drop
-   shadows, Georgia for body, IBM Plex Mono for meta. The radar plot
-   stays as the centerpiece but adapts to the lighter palette. */
-function Observatory({ data, status, onSetRing, saveStatus }) {
-  const [active, setActive] = useState(null);
-  const [ringFilter, setRingFilter] = useState("All");
-  const [quadFilter, setQuadFilter] = useState("All");
-  const [topicFilter, setTopicFilter] = useState("All");
-  const [recentOnly, setRecentOnly] = useState(false);
-  const [showDiscovered, setShowDiscovered] = useState(true);
-  const [note, setNote] = useState("");
-  const [noteStatus, setNoteStatus] = useState(""); // "" | "dirty" | "saved"
-
-  const items = useMemo(() => data.items.filter((d) => {
-    if (!showDiscovered && d.ring === "Discovered") return false;
-    if (ringFilter !== "All" && d.ring !== ringFilter) return false;
-    if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
-    if (topicFilter !== "All" && !(d.topics || []).includes(topicFilter)) return false;
-    if (recentOnly && daysAgo(d.first_seen) > 7) return false;
-    return true;
-  }), [data, ringFilter, quadFilter, topicFilter, recentOnly, showDiscovered]);
-
-  // geometry — sized to feel like a printed plate
-  const size = 540, cx = size / 2, cy = size / 2;
-  const ringRadii = { Adopted: 62, Trial: 112, Assess: 162, Discovered: 210, Archived: 258 };
-  const ringInner = { Adopted: 14, Trial: 62, Assess: 112, Discovered: 162, Archived: 210 };
-
-  const placed = useMemo(() => items.map((d) => {
-    const qIdx = QUADRANTS.indexOf(d.quadrant);
-    const inner = ringInner[d.ring] ?? 210;
-    const outer = ringRadii[d.ring] ?? 258;
-    let h = 0;
-    for (let i = 0; i < d.id.length; i++) h = (h * 31 + d.id.charCodeAt(i)) % 100000;
-    const frac = h / 100000;
-    const ang = (qIdx * Math.PI) / 2 + 0.2 + frac * (Math.PI / 2 - 0.4);
-    const rad = inner + 16 + ((h % 1000) / 1000) * Math.max(8, outer - inner - 30);
-    return { ...d, x: cx + Math.cos(ang) * rad, y: cy - Math.sin(ang) * rad };
-  }), [items]);
-
-  const activeLive = active
-    ? (data.items.find((x) => x.id === active.id) || active)
-    : null;
-
-  // load the note for the active item whenever it changes
-  useEffect(() => {
-    let alive = true;
-    if (!active) { setNote(""); setNoteStatus(""); return; }
-    loadNote(active.id).then((t) => { if (alive) { setNote(t); setNoteStatus(""); } });
-    return () => { alive = false; };
-  }, [active?.id]);
-
-  const onSave = async () => {
-    if (!active) return;
-    const ok = await saveNote(active.id, note);
-    setNoteStatus(ok ? "saved" : "error");
-    if (ok) setTimeout(() => setNoteStatus(""), 2000);
-  };
-
-  // summary stats (computed on the unfiltered set so they don't lie)
-  const total = data.items.length;
-  const discCount = data.items.filter((d) => d.ring === "Discovered").length;
-  const newCount = data.items.filter((d) => daysAgo(d.first_seen) <= 7).length;
-
-  return (
-    <div style={{
-      fontFamily: "Georgia, 'Times New Roman', serif",
-      background: "#f4f0e6", color: "#1a1a1a", minHeight: "100%", padding: "34px 38px",
-    }}>
-      {/* masthead — mirrors Dispatch */}
-      <div style={{ borderBottom: "3px solid #1a1a1a", paddingBottom: 12 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <h1 style={{ margin: 0, fontSize: 44, fontWeight: 800, letterSpacing: -1, lineHeight: 1 }}>
-            The Observatory
-          </h1>
-          <span style={{
-            fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
-            color: "#6b6456", letterSpacing: 1, textAlign: "right",
-          }}>
-            RADAR PLOT VIEW<br />
-            {status === "live" ? "LIVE FEED" : "SAMPLE DATA"} — {data.generated}
-          </span>
-        </div>
-      </div>
-
-      {/* summary strip — counts always reflect the full dataset */}
-      <div style={{
-        display: "flex", gap: 28, margin: "14px 0 18px",
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#6b6456",
-        letterSpacing: 1,
-      }}>
-        <Stat label="SIGNALS" value={total} />
-        <Stat label="AWAITING REVIEW" value={discCount} color={RING_INK.Discovered} />
-        <Stat label="NEW THIS WEEK" value={newCount} color={RING_INK.Trial} />
-        <Stat label="SHOWN" value={placed.length} />
-      </div>
-
-      {/* filters — same pills/idiom as Dispatch */}
-      <div style={{ marginBottom: 18 }}>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL RINGS" active={ringFilter === "All"} onClick={() => setRingFilter("All")} />
-          {RINGS.map((r) => (
-            <Pill key={r} label={r.toUpperCase()} active={ringFilter === r}
-              onClick={() => setRingFilter(r)} color={RING_INK[r]} />
-          ))}
-        </div>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL QUADRANTS" active={quadFilter === "All"} onClick={() => setQuadFilter("All")} />
-          {QUADRANTS.map((q) => (
-            <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
-              onClick={() => setQuadFilter(q)} />
-          ))}
-        </div>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
-          {TOPICS.map((t) => (
-            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
-              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
-          ))}
-        </div>
-        <div>
-          <Pill label={recentOnly ? "✓ NEW THIS WEEK" : "NEW THIS WEEK ONLY"}
-            active={recentOnly} onClick={() => setRecentOnly(!recentOnly)} color={RING_INK.Trial} />
-          <Pill label={showDiscovered ? "✓ DISCOVERED VISIBLE" : "DISCOVERED HIDDEN"}
-            active={showDiscovered} onClick={() => setShowDiscovered(!showDiscovered)}
-            color={RING_INK.Discovered} />
-        </div>
-      </div>
-
-      {/* plot + detail panel */}
-      <div style={{ display: "flex", gap: 24, flexWrap: "wrap", alignItems: "flex-start" }}>
-        {/* radar plate — sits on its own paper card */}
-        <div style={{
-          background: "#fffdf7", border: "1px solid #1a1a1a",
-          boxShadow: "5px 5px 0 #1a1a1a", padding: 14, flex: "0 0 auto",
-        }}>
-          <svg width={size} height={size} style={{ display: "block" }}>
-            {/* rings — thin dark hairlines on cream */}
-            {RINGS.map((r) => (
-              <g key={r}>
-                <circle cx={cx} cy={cy} r={ringRadii[r]} fill="none"
-                  stroke={r === "Discovered" ? RING_INK.Discovered : "#1a1a1a"}
-                  strokeOpacity={r === "Discovered" ? 0.45 : 0.18}
-                  strokeWidth="1"
-                  strokeDasharray={r === "Discovered" ? "3 4" : "0"} />
-                <text x={cx} y={cy - ringRadii[r] + 12} textAnchor="middle"
-                  fill={RING_INK[r]}
-                  style={{ fontFamily: "'IBM Plex Mono', monospace",
-                           fontSize: 9.5, letterSpacing: 1.5, cursor: "pointer" }}
-                  onClick={() => setRingFilter(ringFilter === r ? "All" : r)}>
-                  {r.toUpperCase()}
-                </text>
-              </g>
-            ))}
-            {/* quadrant dividers */}
-            <line x1={cx} y1={cy - 262} x2={cx} y2={cy + 262} stroke="#1a1a1a" strokeOpacity="0.18" />
-            <line x1={cx - 262} y1={cy} x2={cx + 262} y2={cy} stroke="#1a1a1a" strokeOpacity="0.18" />
-            {/* quadrant labels — clickable to filter */}
-            {QUADRANTS.map((q, i) => {
-              const pos = [
-                { x: cx + 140, y: cy - 250 }, { x: cx - 140, y: cy - 250 },
-                { x: cx - 140, y: cy + 258 }, { x: cx + 140, y: cy + 258 },
-              ][i];
-              const on = quadFilter === q;
-              return (
-                <text key={q} x={pos.x} y={pos.y} textAnchor="middle"
-                  fill={on ? "#1a1a1a" : "#6b6456"}
-                  style={{
-                    fontFamily: "'IBM Plex Mono', monospace",
-                    fontSize: 12, letterSpacing: 2, fontWeight: on ? 800 : 600,
-                    cursor: "pointer",
-                  }}
-                  onClick={() => setQuadFilter(on ? "All" : q)}>
-                  {q.toUpperCase()}
-                </text>
-              );
-            })}
-            {/* blips */}
-            {placed.map((d) => {
-              const on = active?.id === d.id;
-              const isNew = daysAgo(d.first_seen) <= 7;
-              return (
-                <g key={d.id} style={{ cursor: "pointer" }}
-                  onMouseEnter={() => setActive(d)} onClick={() => setActive(d)}>
-                  {(d.ring === "Discovered" || isNew) && (
-                    <circle cx={d.x} cy={d.y} r={on ? 14 : 9} fill="none"
-                      stroke={RING_INK[d.ring]} strokeWidth="1" opacity="0.35" />
-                  )}
-                  <circle cx={d.x} cy={d.y} r={on ? 8 : 5}
-                    fill={RING_INK[d.ring]}
-                    stroke={on ? "#1a1a1a" : "#fffdf7"} strokeWidth={on ? 2 : 1.5} />
-                </g>
-              );
-            })}
-          </svg>
-        </div>
-
-        {/* detail card — same hard-shadow card language */}
-        <div style={{ flex: "1 1 320px", minWidth: 300, maxWidth: 460 }}>
-          {activeLive ? (
-            <article style={{
-              background: activeLive.ring === "Discovered" ? "#f6f1ff" : "#fffdf7",
-              border: "1px solid #1a1a1a",
-              boxShadow: activeLive.ring === "Discovered"
-                ? "5px 5px 0 " + RING_INK.Discovered
-                : "5px 5px 0 #1a1a1a",
-              padding: "16px 18px", position: "relative",
-            }}>
-              <div style={{
-                position: "absolute", top: -1, right: -1,
-                background: RING_INK[activeLive.ring], color: "#fff",
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.5,
-                padding: "4px 9px",
-              }}>{activeLive.ring.toUpperCase()}</div>
-
-              <div style={{
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
-              }}>
-                {activeLive.quadrant.toUpperCase()} · {activeLive.source.toUpperCase()}
-                {activeLive.company ? " · " + activeLive.company.toUpperCase() : ""}
-                {daysAgo(activeLive.first_seen) <= 7 && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
-                {" "}<ProvBadge item={activeLive} />
-              </div>
-
-              <h2 style={{
-                margin: "0 0 6px", fontSize: 22, fontWeight: 800,
-                letterSpacing: -0.5, lineHeight: 1.1,
-              }}>{activeLive.name}</h2>
-
-              <p style={{ margin: "0 0 12px", fontSize: 13.5, lineHeight: 1.55, color: "#33312b" }}>
-                {activeLive.description}
-              </p>
-
-              <TopicChips topics={activeLive.topics} />
-
-              {activeLive.ring === "Archived" && activeLive.archived_at && (
-                <div style={{
-                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 10,
-                  color: RING_INK.Archived, letterSpacing: 1, marginBottom: 12,
-                }}>ARCHIVED {activeLive.archived_at} · {daysAgo(activeLive.archived_at)}d ago</div>
-              )}
-
-              {/* meta row */}
-              <div style={{
-                display: "flex", justifyContent: "space-between", alignItems: "center",
-                borderTop: "1px solid #d8d2c4", borderBottom: "1px solid #d8d2c4",
-                padding: "8px 0", marginBottom: 12,
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456",
-              }}>
-                <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  first seen {activeLive.first_seen}
-                  {activeLive.stars ? <span>★{(activeLive.stars / 1000).toFixed(1)}k</span> : null}
-                  <Sparkline history={activeLive.stars_history} />
-                </span>
-                <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
-                  m{activeLive.momentum}
-                  <span style={{ display: "inline-block", width: 50, height: 5, background: "#e3ddcd" }}>
-                    <span style={{
-                      display: "block", height: "100%", width: activeLive.momentum + "%",
-                      background: RING_INK[activeLive.ring],
-                    }} />
-                  </span>
-                </span>
-              </div>
-
-              {/* ring editor — saves immediately to disk (edit mode only) */}
-              {EDIT_MODE && (
-                <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
-              )}
-
-              {/* notes editor */}
-              <div style={{
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                color: "#6b6456", letterSpacing: 1.5, marginBottom: 5,
-              }}>NOTES</div>
-              <textarea
-                value={note}
-                onChange={(e) => { setNote(e.target.value); setNoteStatus("dirty"); }}
-                placeholder="why is this on the radar? what to try? what to watch?"
-                style={{
-                  width: "100%", boxSizing: "border-box", minHeight: 90,
-                  fontFamily: "Georgia, serif", fontSize: 13, lineHeight: 1.5,
-                  color: "#1a1a1a", background: "#fffaf0",
-                  border: "1px solid #c9c0a8", padding: "8px 10px", resize: "vertical",
-                }}
-              />
-              <div style={{ display: "flex", justifyContent: "space-between",
-                alignItems: "center", marginTop: 6 }}>
-                <span style={{
-                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                  color: noteStatus === "saved" ? RING_INK.Adopted
-                       : noteStatus === "dirty" ? "#b8841d" : "#6b6456",
-                  letterSpacing: 1,
-                }}>
-                  {noteStatus === "saved" ? "✓ SAVED"
-                    : noteStatus === "dirty" ? "● UNSAVED"
-                    : "STORED PER USER"}
-                </span>
-                <button onClick={onSave} style={{
-                  background: "#1a1a1a", color: "#fff", border: "none",
-                  padding: "6px 14px", cursor: "pointer",
-                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: 1.5,
-                }}>SAVE NOTE</button>
-              </div>
-            </article>
-          ) : (
-            <div style={{
-              fontFamily: "Georgia, serif", fontSize: 14,
-              color: "#6b6456", fontStyle: "italic", padding: "18px 4px",
-            }}>
-              Hover or tap a blip on the radar to inspect a signal.
-              Click a quadrant or ring label to filter.
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* Small stat block for the summary strip. */
 function Stat({ label, value, color }) {
   return (
@@ -569,154 +294,8 @@ function Stat({ label, value, color }) {
   );
 }
 
-/* ===================== MOCKUP B — DISPATCH ===================== */
-function Dispatch({ data, status }) {
-  const [ringFilter, setRingFilter] = useState("All");
-  const [quadFilter, setQuadFilter] = useState("All");
-  const [topicFilter, setTopicFilter] = useState("All");
-  const [recentOnly, setRecentOnly] = useState(false);
-
-  const filtered = data.items.filter((d) =>
-    (ringFilter === "All" || d.ring === ringFilter) &&
-    (quadFilter === "All" || d.quadrant === quadFilter) &&
-    (topicFilter === "All" || (d.topics || []).includes(topicFilter)) &&
-    (!recentOnly || daysAgo(d.first_seen) <= 7)
-  ).sort((a, b) => {
-    const ra = a.ring === "Discovered" ? 1 : 0;
-    const rb = b.ring === "Discovered" ? 1 : 0;
-    if (ra !== rb) return rb - ra;
-    return b.momentum - a.momentum;
-  });
-
-  const discCount = data.items.filter((d) => d.ring === "Discovered").length;
-  const newCount = data.items.filter((d) => daysAgo(d.first_seen) <= 7).length;
-
-  return (
-    <div style={{
-      fontFamily: "Georgia, 'Times New Roman', serif",
-      background: "#f4f0e6", color: "#1a1a1a", minHeight: "100%", padding: "34px 38px",
-    }}>
-      <div style={{ borderBottom: "3px solid #1a1a1a", paddingBottom: 12 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <h1 style={{ margin: 0, fontSize: 44, fontWeight: 800, letterSpacing: -1, lineHeight: 1 }}>
-            The Dispatch
-          </h1>
-          <span style={{
-            fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
-            color: "#6b6456", letterSpacing: 1, textAlign: "right",
-          }}>
-            TECHNOLOGY RADAR<br />
-            {status === "live" ? "LIVE FEED" : "SAMPLE DATA"} — {data.generated}
-          </span>
-        </div>
-      </div>
-      <div style={{
-        fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, color: "#6b6456",
-        letterSpacing: 1, margin: "10px 0 20px",
-      }}>
-        {filtered.length} of {data.items.length} shown ·
-        <span style={{ color: RING_INK.Discovered }}> {discCount} awaiting review</span> ·
-        {newCount} new this week
-      </div>
-
-      <div style={{ marginBottom: 22 }}>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL RINGS" active={ringFilter === "All"} onClick={() => setRingFilter("All")} />
-          {RINGS.map((r) => (
-            <Pill key={r} label={r.toUpperCase()} active={ringFilter === r}
-              onClick={() => setRingFilter(r)} color={RING_INK[r]} />
-          ))}
-        </div>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL QUADRANTS" active={quadFilter === "All"} onClick={() => setQuadFilter("All")} />
-          {QUADRANTS.map((q) => (
-            <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
-              onClick={() => setQuadFilter(q)} />
-          ))}
-        </div>
-        <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
-          {TOPICS.map((t) => (
-            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
-              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
-          ))}
-        </div>
-        <div>
-          <Pill label={recentOnly ? "✓ NEW THIS WEEK" : "NEW THIS WEEK ONLY"}
-            active={recentOnly} onClick={() => setRecentOnly(!recentOnly)} color="#1d6fb8" />
-        </div>
-      </div>
-
-      <div style={{
-        display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(268px, 1fr))", gap: 18,
-      }}>
-        {filtered.map((d, i) => {
-          const isNew = daysAgo(d.first_seen) <= 7;
-          const isDisc = d.ring === "Discovered";
-          return (
-            <article key={d.id} style={{
-              background: isDisc ? "#f6f1ff" : "#fffdf7",
-              border: "1px solid #1a1a1a",
-              boxShadow: isDisc ? "5px 5px 0 " + RING_INK.Discovered : "5px 5px 0 #1a1a1a",
-              padding: "17px 17px 15px", position: "relative",
-            }}>
-              <div style={{
-                position: "absolute", top: -1, right: -1,
-                background: RING_INK[d.ring], color: "#fff",
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.5,
-                padding: "4px 9px",
-              }}>{d.ring.toUpperCase()}</div>
-
-              <div style={{
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
-                color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
-              }}>
-                № {String(i + 1).padStart(2, "0")} — {d.quadrant.toUpperCase()}
-                {isNew && <span style={{ color: "#1d6fb8" }}> · NEW</span>}
-                {" "}<ProvBadge item={d} />
-              </div>
-
-              <h2 style={{
-                margin: "0 0 8px", fontSize: 21, fontWeight: 800,
-                letterSpacing: -0.5, lineHeight: 1.1,
-              }}>{d.name}</h2>
-
-              <p style={{ margin: "0 0 13px", fontSize: 13.5, lineHeight: 1.55, color: "#33312b" }}>
-                {d.description}
-              </p>
-
-              <TopicChips topics={d.topics} />
-
-              <div style={{
-                borderTop: "1px solid #d8d2c4", paddingTop: 9,
-                display: "flex", justifyContent: "space-between", alignItems: "center",
-                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, color: "#6b6456",
-              }}>
-                <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                  {d.source}{d.stars ? ` · ★${(d.stars / 1000).toFixed(1)}k` : ""}
-                  <Sparkline history={d.stars_history} />
-                </span>
-                <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
-                  m{d.momentum}
-                  <span style={{ display: "inline-block", width: 40, height: 5, background: "#e3ddcd" }}>
-                    <span style={{
-                      display: "block", height: "100%", width: d.momentum + "%",
-                      background: RING_INK[d.ring],
-                    }} />
-                  </span>
-                </span>
-              </div>
-            </article>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-
 /* ===================== ATLAS — radar + list combined =====================
-   The default view. Same editorial language as Observatory and Dispatch.
+   The default view. Same editorial language as Index.
    Layout:
      - radar plate sticks to the left (spatial context)
      - sortable card list scrolls on the right (scannable detail)
@@ -727,48 +306,85 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   const [hoverId, setHoverId] = useState(null);    // cross-highlight
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
-  const [topicFilter, setTopicFilter] = useState("All");
+  const [topicFilters, setTopicFilters] = useState(() => new Set());
   const [recentOnly, setRecentOnly] = useState(false);
   const [showDiscovered, setShowDiscovered] = useState(true);
   const [sortBy, setSortBy] = useState("default");
+  const [searchQuery, setSearchQuery] = useState("");
   const [note, setNote] = useState("");
   const [noteStatus, setNoteStatus] = useState(""); // "" | "dirty" | "saved"
 
-  // shared filter applied to both halves
+  const toggleTopic = (t) => setTopicFilters((prev) => {
+    const next = new Set(prev);
+    next.has(t) ? next.delete(t) : next.add(t);
+    return next;
+  });
+
+  // typing a query auto-switches to relevance sort, but only away from the
+  // default (doesn't clobber a sort the user picked on purpose)
+  const onSearchChange = (v) => {
+    setSearchQuery(v);
+    if (v.trim() && sortBy === "default") setSortBy("relevance");
+  };
+
+  // curated-topic frequency, over the full dataset so counts don't lie
+  const topicFreq = useMemo(() => topicCounts(data.items), [data]);
+  const noTopicCount = useMemo(() => data.items.filter(hasNoTopics).length, [data]);
+
+  // shared filter applied to both halves. Topics are OR-matched; the NO_TOPIC
+  // bucket matches items that carry no curated topics at all.
   const filtered = useMemo(() => data.items.filter((d) => {
     if (!showDiscovered && d.ring === "Discovered") return false;
     if (ringFilter !== "All" && d.ring !== ringFilter) return false;
     if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
-    if (topicFilter !== "All" && !(d.topics || []).includes(topicFilter)) return false;
+    if (topicFilters.size) {
+      const match = (d.topics || []).some((t) => topicFilters.has(t))
+        || (topicFilters.has(NO_TOPIC) && hasNoTopics(d));
+      if (!match) return false;
+    }
     if (recentOnly && daysAgo(d.first_seen) > 7) return false;
     return true;
-  }), [data, ringFilter, quadFilter, topicFilter, recentOnly, showDiscovered]);
+  }), [data, ringFilter, quadFilter, topicFilters, recentOnly, showDiscovered]);
+
+  // fuzzy-score against the search box; a query drops non-matches entirely
+  const query = searchQuery.trim();
+  const scored = useMemo(() => {
+    const withScores = filtered.map((d) => ({ d, score: itemScore(query, d) }));
+    return query ? withScores.filter((x) => x.score >= 0) : withScores;
+  }, [filtered, query]);
 
   // sort options for the list (radar is unaffected — spatial already)
   const sorted = useMemo(() => {
-    const arr = [...filtered];
+    const arr = [...scored];
     const ringIdx = { Adopted: 0, Trial: 1, Assess: 2, Discovered: 3, Archived: 4 };
     switch (sortBy) {
+      case "relevance":
+        return arr.sort((a, b) => query ? b.score - a.score : b.d.momentum - a.d.momentum).map((x) => x.d);
       case "momentum":
-        return arr.sort((a, b) => b.momentum - a.momentum);
+        return arr.sort((a, b) => b.d.momentum - a.d.momentum).map((x) => x.d);
       case "newest":
-        return arr.sort((a, b) => (b.first_seen || "").localeCompare(a.first_seen || ""));
+        return arr.sort((a, b) => (b.d.first_seen || "").localeCompare(a.d.first_seen || "")).map((x) => x.d);
       case "name":
-        return arr.sort((a, b) => a.name.localeCompare(b.name));
+        return arr.sort((a, b) => a.d.name.localeCompare(b.d.name)).map((x) => x.d);
+      case "topic":
+        return arr.sort((a, b) => {
+          const ta = (a.d.topics || [])[0] || "￿", tb = (b.d.topics || [])[0] || "￿";
+          return ta.localeCompare(tb) || b.d.momentum - a.d.momentum;
+        }).map((x) => x.d);
       case "ring":
         return arr.sort((a, b) => {
-          const r = ringIdx[a.ring] - ringIdx[b.ring];
-          return r !== 0 ? r : b.momentum - a.momentum;
-        });
+          const r = ringIdx[a.d.ring] - ringIdx[b.d.ring];
+          return r !== 0 ? r : b.d.momentum - a.d.momentum;
+        }).map((x) => x.d);
       default: /* "default" = Discovered first, then momentum */
         return arr.sort((a, b) => {
-          const ra = a.ring === "Discovered" ? 1 : 0;
-          const rb = b.ring === "Discovered" ? 1 : 0;
+          const ra = a.d.ring === "Discovered" ? 1 : 0;
+          const rb = b.d.ring === "Discovered" ? 1 : 0;
           if (ra !== rb) return rb - ra;
-          return b.momentum - a.momentum;
-        });
+          return b.d.momentum - a.d.momentum;
+        }).map((x) => x.d);
     }
-  }, [filtered, sortBy]);
+  }, [scored, sortBy, query]);
 
   const activeLive = active
     ? (data.items.find((x) => x.id === active.id) || active)
@@ -802,7 +418,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   const ringRadii = { Adopted: 58, Trial: 106, Assess: 154, Discovered: 202, Archived: 248 };
   const ringInner = { Adopted: 12, Trial: 58, Assess: 106, Discovered: 154, Archived: 202 };
 
-  const placed = useMemo(() => filtered.map((d) => {
+  const placed = useMemo(() => scored.map(({ d }) => {
     const qIdx = QUADRANTS.indexOf(d.quadrant);
     const inner = ringInner[d.ring] ?? 202;
     const outer = ringRadii[d.ring] ?? 248;
@@ -812,7 +428,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
     const ang = (qIdx * Math.PI) / 2 + 0.2 + frac * (Math.PI / 2 - 0.4);
     const rad = inner + 16 + ((h % 1000) / 1000) * Math.max(8, outer - inner - 30);
     return { ...d, x: cx + Math.cos(ang) * rad, y: cy - Math.sin(ang) * rad };
-  }), [filtered]);
+  }), [scored]);
 
   // summary stats — full dataset, not filtered (don't lie about totals)
   const total = data.items.length;
@@ -851,6 +467,27 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
         </div>
       )}
 
+      {/* fuzzy search */}
+      <div style={{ margin: "14px 0 4px" }}>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+          placeholder="Search — try a typo, a partial word, or a topic…"
+          style={{
+            width: "100%", boxSizing: "border-box", fontFamily: "Georgia, serif", fontSize: 15,
+            padding: "10px 14px", border: "1.5px solid #1a1a1a", background: "#fffdf7",
+            color: "#1a1a1a",
+          }}
+        />
+        <div style={{
+          fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, color: "#9a9384",
+          letterSpacing: 0.5, marginTop: 4,
+        }}>
+          Fuzzy match across name, description and topics — finds partial or misspelled terms too.
+        </div>
+      </div>
+
       {/* summary strip */}
       <div style={{
         display: "flex", gap: 28, margin: "12px 0 16px",
@@ -860,7 +497,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
         <Stat label="SIGNALS" value={total} />
         <Stat label="AWAITING REVIEW" value={discCount} color={RING_INK.Discovered} />
         <Stat label="NEW THIS WEEK" value={newCount} color={RING_INK.Trial} />
-        <Stat label="SHOWN" value={filtered.length} />
+        <Stat label="SHOWN" value={sorted.length} />
       </div>
 
       {/* filters + sort */}
@@ -880,11 +517,14 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
           ))}
         </div>
         <div style={{ marginBottom: 4 }}>
-          <Pill label="ALL TOPICS" active={topicFilter === "All"} onClick={() => setTopicFilter("All")} />
+          <Pill label={`ALL TOPICS${topicFilters.size ? ` (${topicFilters.size} selected)` : ""}`}
+            active={topicFilters.size === 0} onClick={() => setTopicFilters(new Set())} />
           {TOPICS.map((t) => (
-            <Pill key={t} label={t.toUpperCase()} active={topicFilter === t}
-              onClick={() => setTopicFilter(topicFilter === t ? "All" : t)} />
+            <Pill key={t} label={`${t.toUpperCase()} · ${topicFreq[t] || 0}`} active={topicFilters.has(t)}
+              onClick={() => toggleTopic(t)} />
           ))}
+          <Pill label={`NO TOPIC · ${noTopicCount}`} active={topicFilters.has(NO_TOPIC)}
+            onClick={() => toggleTopic(NO_TOPIC)} color={NO_TOPIC_INK} />
         </div>
         <div style={{ marginBottom: 4 }}>
           <Pill label={recentOnly ? "✓ NEW THIS WEEK" : "NEW THIS WEEK ONLY"}
@@ -905,9 +545,11 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
             appearance: "none", borderRadius: 0,
           }}>
             <option value="default">Discovered first, then momentum</option>
+            <option value="relevance">Search relevance</option>
             <option value="momentum">Momentum (high → low)</option>
             <option value="newest">Recently discovered</option>
             <option value="name">Name (A → Z)</option>
+            <option value="topic">Topic (A → Z)</option>
             <option value="ring">By ring</option>
           </select>
         </div>
@@ -1029,11 +671,12 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                     <h2 style={{
                       margin: "0 0 6px", fontSize: 18, fontWeight: 800,
                       letterSpacing: -0.4, lineHeight: 1.15,
-                    }}>{d.name}</h2>
+                    }}>{highlightMatch(d.name, query)}</h2>
                     <p style={{ margin: "0 0 10px", fontSize: 12.5, lineHeight: 1.5,
                       color: "#33312b", display: "-webkit-box",
                       WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden",
-                    }}>{d.description}</p>
+                    }}>{highlightMatch(d.description, query)}</p>
+                    <TopicChips topics={d.topics} onTopicClick={toggleTopic} />
                     <div style={{
                       borderTop: "1px solid #d8d2c4", paddingTop: 7,
                       display: "flex", justifyContent: "space-between", alignItems: "center",
@@ -1105,10 +748,10 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
             <h2 style={{
               margin: "0 0 8px", fontSize: 26, fontWeight: 800,
               letterSpacing: -0.5, lineHeight: 1.1,
-            }}>{activeLive.name}</h2>
+            }}>{highlightMatch(activeLive.name, query)}</h2>
 
             <p style={{ margin: "0 0 14px", fontSize: 14.5, lineHeight: 1.55, color: "#33312b" }}>
-              {activeLive.description}
+              {highlightMatch(activeLive.description, query)}
             </p>
 
             {activeLive.url && activeLive.url !== "#" && (
@@ -1120,7 +763,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
               }}>OPEN SOURCE ↗</a>
             )}
 
-            <TopicChips topics={activeLive.topics} />
+            <TopicChips topics={activeLive.topics} onTopicClick={toggleTopic} />
 
             {activeLive.ring === "Archived" && activeLive.archived_at && (
               <div style={{
@@ -1152,6 +795,469 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
             </div>
 
             {/* ring editor — saves immediately to disk (edit mode only) */}
+            {EDIT_MODE && (
+              <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
+            )}
+
+            <div style={{
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+              color: "#6b6456", letterSpacing: 1.5, marginBottom: 5,
+            }}>NOTES</div>
+            <textarea
+              value={note}
+              onChange={(e) => { setNote(e.target.value); setNoteStatus("dirty"); }}
+              placeholder="why is this on the radar? what to try? what to watch?"
+              style={{
+                width: "100%", boxSizing: "border-box", minHeight: 110,
+                fontFamily: "Georgia, serif", fontSize: 13.5, lineHeight: 1.5,
+                color: "#1a1a1a", background: "#fffaf0",
+                border: "1px solid #c9c0a8", padding: "9px 11px", resize: "vertical",
+              }}
+            />
+            <div style={{ display: "flex", justifyContent: "space-between",
+              alignItems: "center", marginTop: 7 }}>
+              <span style={{
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+                color: noteStatus === "saved" ? RING_INK.Adopted
+                     : noteStatus === "dirty" ? "#b8841d" : "#6b6456",
+                letterSpacing: 1,
+              }}>
+                {noteStatus === "saved" ? "✓ SAVED"
+                  : noteStatus === "dirty" ? "● UNSAVED"
+                  : "STORED PER USER"}
+              </span>
+              <button onClick={onSave} style={{
+                background: "#1a1a1a", color: "#fff", border: "none",
+                padding: "6px 14px", cursor: "pointer",
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, letterSpacing: 1.5,
+              }}>SAVE NOTE</button>
+            </div>
+          </article>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ===================== INDEX — topic-first sortable table =====================
+   The second view, same cream/serif/mono paper language as Atlas, but built
+   for scanning many signals at once rather than
+   browsing cards: a sortable table (click any column, including Topics) with
+   a topic-frequency sidebar standing in for the radar plate. Row click opens
+   the same kind of detail modal as Atlas — ring editor and notes included. */
+function Index({ data, status, onSetRing, saveStatus }) {
+  const [active, setActive] = useState(null);
+  const [ringFilter, setRingFilter] = useState("All");
+  const [quadFilter, setQuadFilter] = useState("All");
+  const [topicFilters, setTopicFilters] = useState(() => new Set());
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortKey, setSortKey] = useState("momentum");
+  const [sortDir, setSortDir] = useState(-1);
+  const [note, setNote] = useState("");
+  const [noteStatus, setNoteStatus] = useState("");
+
+  const toggleTopic = (t) => setTopicFilters((prev) => {
+    const next = new Set(prev);
+    next.has(t) ? next.delete(t) : next.add(t);
+    return next;
+  });
+
+  const topicFreq = useMemo(() => topicCounts(data.items), [data]);
+  const maxTopicFreq = Math.max(1, ...Object.values(topicFreq));
+  const noTopicCount = useMemo(() => data.items.filter(hasNoTopics).length, [data]);
+
+  const filtered = useMemo(() => data.items.filter((d) => {
+    if (ringFilter !== "All" && d.ring !== ringFilter) return false;
+    if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
+    if (topicFilters.size) {
+      const match = (d.topics || []).some((t) => topicFilters.has(t))
+        || (topicFilters.has(NO_TOPIC) && hasNoTopics(d));
+      if (!match) return false;
+    }
+    return true;
+  }), [data, ringFilter, quadFilter, topicFilters]);
+
+  const query = searchQuery.trim();
+  const scored = useMemo(() => {
+    const withScores = filtered.map((d) => ({ d, score: itemScore(query, d) }));
+    return query ? withScores.filter((x) => x.score >= 0) : withScores;
+  }, [filtered, query]);
+
+  const sorted = useMemo(() => {
+    const arr = [...scored];
+    const ringIdx = { Adopted: 0, Trial: 1, Assess: 2, Discovered: 3, Archived: 4 };
+    arr.sort((a, b) => {
+      if (query && sortKey === "relevance") return (b.score - a.score) * -sortDir;
+      switch (sortKey) {
+        case "name": return a.d.name.localeCompare(b.d.name) * sortDir;
+        case "quadrant": return a.d.quadrant.localeCompare(b.d.quadrant) * sortDir;
+        case "ring": return (ringIdx[a.d.ring] - ringIdx[b.d.ring]) * sortDir;
+        case "topic": {
+          const ta = (a.d.topics || [])[0] || "￿", tb = (b.d.topics || [])[0] || "￿";
+          return ta.localeCompare(tb) * sortDir;
+        }
+        case "stars": return ((a.d.stars || 0) - (b.d.stars || 0)) * sortDir;
+        case "first_seen": return (a.d.first_seen || "").localeCompare(b.d.first_seen || "") * sortDir;
+        default: return ((a.d.momentum || 0) - (b.d.momentum || 0)) * sortDir;
+      }
+    });
+    return arr.map((x) => x.d);
+  }, [scored, sortKey, sortDir, query]);
+
+  const onSort = (key) => {
+    if (sortKey === key) { setSortDir((d) => -d); return; }
+    setSortKey(key);
+    setSortDir(key === "name" || key === "topic" || key === "quadrant" ? 1 : -1);
+  };
+
+  const onSearchChange = (v) => {
+    setSearchQuery(v);
+    if (v.trim()) setSortKey("relevance");
+  };
+
+  const activeLive = active ? (data.items.find((x) => x.id === active.id) || active) : null;
+
+  useEffect(() => {
+    let alive = true;
+    if (!active) { setNote(""); setNoteStatus(""); return; }
+    loadNote(active.id).then((t) => { if (alive) { setNote(t); setNoteStatus(""); } });
+    return () => { alive = false; };
+  }, [active?.id]);
+
+  useEffect(() => {
+    if (!active) return;
+    const onKey = (e) => { if (e.key === "Escape") setActive(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [active]);
+
+  const onSave = async () => {
+    if (!active) return;
+    const ok = await saveNote(active.id, note);
+    setNoteStatus(ok ? "saved" : "error");
+    if (ok) setTimeout(() => setNoteStatus(""), 2000);
+  };
+
+  const total = data.items.length;
+  const discCount = data.items.filter((d) => d.ring === "Discovered").length;
+  const newCount = data.items.filter((d) => daysAgo(d.first_seen) <= 7).length;
+
+  const COLUMNS = [
+    { key: "name", label: "NAME" },
+    { key: "ring", label: "RING" },
+    { key: "quadrant", label: "QUADRANT" },
+    { key: "topic", label: "TOPICS" },
+    { key: "momentum", label: "MOMENTUM" },
+    { key: "stars", label: "STARS" },
+    { key: "first_seen", label: "FIRST SEEN" },
+  ];
+
+  return (
+    <div style={{
+      fontFamily: "Georgia, 'Times New Roman', serif",
+      background: "#f4f0e6", color: "#1a1a1a", minHeight: "100%", padding: "30px 34px",
+    }}>
+      {/* masthead */}
+      <div style={{ borderBottom: "3px solid #1a1a1a", paddingBottom: 12 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <h1 style={{ margin: 0, fontSize: 44, fontWeight: 800, letterSpacing: -1, lineHeight: 1 }}>
+            The Index
+          </h1>
+          <span style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
+            color: "#6b6456", letterSpacing: 1, textAlign: "right",
+          }}>
+            TOPIC INDEX · SORTABLE VIEW<br />
+            {status === "live" ? "LIVE FEED" : "SAMPLE DATA"} — {data.generated}
+          </span>
+        </div>
+      </div>
+
+      {/* fuzzy search */}
+      <div style={{ margin: "14px 0 4px" }}>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+          placeholder="Search — try a typo, a partial word, or a topic…"
+          style={{
+            width: "100%", boxSizing: "border-box", fontFamily: "Georgia, serif", fontSize: 15,
+            padding: "10px 14px", border: "1.5px solid #1a1a1a", background: "#fffdf7",
+            color: "#1a1a1a",
+          }}
+        />
+        <div style={{
+          fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, color: "#9a9384",
+          letterSpacing: 0.5, marginTop: 4,
+        }}>
+          Fuzzy match across name, description and topics — finds partial or misspelled terms too.
+        </div>
+      </div>
+
+      {/* summary strip */}
+      <div style={{
+        display: "flex", gap: 28, margin: "12px 0 16px",
+        fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#6b6456",
+        letterSpacing: 1,
+      }}>
+        <Stat label="SIGNALS" value={total} />
+        <Stat label="AWAITING REVIEW" value={discCount} color={RING_INK.Discovered} />
+        <Stat label="NEW THIS WEEK" value={newCount} color={RING_INK.Trial} />
+        <Stat label="SHOWN" value={sorted.length} />
+      </div>
+
+      {/* sidebar + table */}
+      <div style={{ display: "flex", gap: 22, alignItems: "flex-start", flexWrap: "wrap" }}>
+        {/* sidebar — ring/quadrant facets + topic frequency list, doubles as filters */}
+        <div style={{
+          background: "#fffdf7", border: "1px solid #1a1a1a",
+          boxShadow: "5px 5px 0 #1a1a1a", padding: "16px 16px 18px",
+          flex: "0 0 240px", position: "sticky", top: 12, alignSelf: "flex-start",
+        }}>
+          <div style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+            color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
+          }}>RING</div>
+          <div style={{ marginBottom: 10 }}>
+            <Pill label="ALL" active={ringFilter === "All"} onClick={() => setRingFilter("All")} />
+            {RINGS.map((r) => (
+              <Pill key={r} label={r.toUpperCase()} active={ringFilter === r}
+                onClick={() => setRingFilter(ringFilter === r ? "All" : r)} color={RING_INK[r]} />
+            ))}
+          </div>
+
+          <div style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+            color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
+          }}>QUADRANT</div>
+          <div style={{ marginBottom: 14 }}>
+            <Pill label="ALL" active={quadFilter === "All"} onClick={() => setQuadFilter("All")} />
+            {QUADRANTS.map((q) => (
+              <Pill key={q} label={q.toUpperCase()} active={quadFilter === q}
+                onClick={() => setQuadFilter(quadFilter === q ? "All" : q)} />
+            ))}
+          </div>
+
+          <div style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+            color: "#6b6456", letterSpacing: 1.5, marginBottom: 8,
+            display: "flex", justifyContent: "space-between", alignItems: "baseline",
+          }}>
+            <span>TOPICS {topicFilters.size ? `· ${topicFilters.size} SELECTED` : ""}</span>
+            {topicFilters.size > 0 && (
+              <span onClick={() => setTopicFilters(new Set())} style={{ cursor: "pointer", textDecoration: "underline", opacity: 0.7 }}>
+                clear
+              </span>
+            )}
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+            {TOPICS.map((t) => {
+              const on = topicFilters.has(t);
+              const count = topicFreq[t] || 0;
+              return (
+                <div key={t} onClick={() => toggleTopic(t)} style={{
+                  display: "flex", alignItems: "center", gap: 8, cursor: "pointer",
+                  padding: "4px 6px", borderRadius: 3,
+                  background: on ? "#efe9da" : "transparent",
+                  border: "1px solid " + (on ? "#1a1a1a" : "transparent"),
+                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 11,
+                }}>
+                  <span style={{ flex: "1 1 auto", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{t}</span>
+                  <span style={{ flex: "0 0 46px", height: 5, background: "#e3ddcd", display: "inline-block" }}>
+                    <span style={{ display: "block", height: "100%", width: `${Math.min(100, (count / maxTopicFreq) * 100)}%`, background: on ? "#1a1a1a" : "#a89f8a" }} />
+                  </span>
+                  <span style={{ flex: "0 0 auto", color: "#9a9384", fontSize: 9.5 }}>{count}</span>
+                </div>
+              );
+            })}
+            {/* untriaged pool — items with no curated topic, otherwise invisible
+                to every topic filter. Bar is clamped since it dwarfs the rest. */}
+            <div style={{ borderTop: "1px solid #d8d2c4", margin: "5px 6px 0" }} />
+            {(() => {
+              const on = topicFilters.has(NO_TOPIC);
+              return (
+                <div onClick={() => toggleTopic(NO_TOPIC)} style={{
+                  display: "flex", alignItems: "center", gap: 8, cursor: "pointer",
+                  padding: "4px 6px", borderRadius: 3,
+                  background: on ? "#efe9da" : "transparent",
+                  border: "1px solid " + (on ? "#1a1a1a" : "transparent"),
+                  fontFamily: "'IBM Plex Mono', monospace", fontSize: 11,
+                  fontStyle: "italic", color: NO_TOPIC_INK,
+                }}>
+                  <span style={{ flex: "1 1 auto", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>no topic</span>
+                  <span style={{ flex: "0 0 46px", height: 5, background: "#e3ddcd", display: "inline-block" }}>
+                    <span style={{ display: "block", height: "100%", width: `${Math.min(100, (noTopicCount / maxTopicFreq) * 100)}%`, background: NO_TOPIC_INK }} />
+                  </span>
+                  <span style={{ flex: "0 0 auto", color: "#9a9384", fontSize: 9.5 }}>{noTopicCount}</span>
+                </div>
+              );
+            })()}
+          </div>
+        </div>
+
+        {/* sortable table */}
+        <div style={{
+          flex: "1 1 520px", minWidth: 320, background: "#fffdf7",
+          border: "1px solid #1a1a1a", boxShadow: "5px 5px 0 #1a1a1a",
+          padding: 4, overflowX: "auto",
+        }}>
+          {sorted.length === 0 ? (
+            <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontStyle: "italic", color: "#6b6456", padding: 20 }}>
+              No signals match the current filters.
+            </div>
+          ) : (
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'IBM Plex Mono', monospace", fontSize: 11.5 }}>
+              <thead>
+                <tr>
+                  {COLUMNS.map((c) => (
+                    <th key={c.key} onClick={() => onSort(c.key)} style={{
+                      textAlign: "left", fontSize: 9.5, letterSpacing: 1, color: sortKey === c.key ? "#1a1a1a" : "#6b6456",
+                      fontWeight: sortKey === c.key ? 800 : 600, padding: "8px 10px",
+                      borderBottom: "1.5px solid #1a1a1a", cursor: "pointer", whiteSpace: "nowrap",
+                    }}>
+                      {c.label}{sortKey === c.key ? (sortDir === 1 ? " ▲" : " ▼") : ""}
+                    </th>
+                  ))}
+                  <th style={{ textAlign: "left", fontSize: 9.5, letterSpacing: 1, color: "#6b6456", padding: "8px 10px", borderBottom: "1.5px solid #1a1a1a" }}>
+                    DESCRIPTION
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {sorted.map((d) => (
+                  <tr key={d.id} onClick={() => setActive(d)} style={{ cursor: "pointer", borderBottom: "1px solid #e3ddcd" }}
+                    onMouseEnter={(e) => e.currentTarget.style.background = "#f6f1ea"}
+                    onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}>
+                    <td style={{ padding: "8px 10px", fontFamily: "Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1a1a1a" }}>
+                      {highlightMatch(d.name, query)}
+                    </td>
+                    <td style={{ padding: "8px 10px" }}>
+                      <span style={{
+                        fontSize: 9, letterSpacing: 1, color: "#fff", background: RING_INK[d.ring],
+                        padding: "2px 7px", borderRadius: 3,
+                      }}>{d.ring.toUpperCase()}</span>
+                    </td>
+                    <td style={{ padding: "8px 10px", color: "#6b6456" }}>{d.quadrant}</td>
+                    <td style={{ padding: "8px 10px" }}>
+                      {(d.topics || []).length
+                        ? d.topics.map((t) => (
+                          <span key={t} onClick={(e) => { e.stopPropagation(); toggleTopic(t); }} style={{
+                            fontSize: 9.5, color: "#1a1a1a", background: "#efe9da", border: "1px solid #d8d2c4",
+                            padding: "2px 7px", borderRadius: 20, marginRight: 3, display: "inline-block", cursor: "pointer",
+                          }}>{t.toUpperCase()}</span>
+                        ))
+                        : <span style={{ color: "#c2bba8" }}>—</span>}
+                    </td>
+                    <td style={{ padding: "8px 10px", color: "#6b6456" }}>
+                      {d.momentum}
+                      <span style={{ display: "inline-block", width: 32, height: 4, background: "#e3ddcd", marginLeft: 6, verticalAlign: "middle" }}>
+                        <span style={{ display: "block", height: "100%", width: d.momentum + "%", background: RING_INK[d.ring] }} />
+                      </span>
+                    </td>
+                    <td style={{ padding: "8px 10px", color: "#6b6456" }}>{d.stars ? (d.stars / 1000).toFixed(1) + "k" : "—"}</td>
+                    <td style={{ padding: "8px 10px", color: "#6b6456" }}>{d.first_seen || "—"}</td>
+                    <td style={{
+                      padding: "8px 10px", color: "#33312b", fontFamily: "Georgia, serif", fontSize: 12.5,
+                      maxWidth: 320, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+                    }}>{highlightMatch(d.description, query)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
+
+      {/* modal — same detail/ring-editor/notes idiom as Atlas */}
+      {activeLive && (
+        <div onClick={() => setActive(null)} style={{
+          position: "fixed", inset: 0, background: "rgba(20,18,12,0.55)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          padding: 20, zIndex: 50,
+        }}>
+          <article onClick={(e) => e.stopPropagation()} style={{
+            background: activeLive.ring === "Discovered" ? "#f6f1ff" : "#fffdf7",
+            border: "1px solid #1a1a1a",
+            boxShadow: "8px 8px 0 " + (activeLive.ring === "Discovered" ? RING_INK.Discovered : "#1a1a1a"),
+            padding: "20px 22px", position: "relative",
+            width: "100%", maxWidth: 540, maxHeight: "90vh", overflowY: "auto",
+            fontFamily: "Georgia, serif",
+          }}>
+            <button onClick={() => setActive(null)} aria-label="Close" style={{
+              position: "absolute", top: 8, right: 8,
+              background: "transparent", border: "none", cursor: "pointer",
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 18, color: "#6b6456",
+              padding: "2px 8px", lineHeight: 1,
+            }}>×</button>
+
+            <div style={{
+              position: "absolute", top: -1, left: 22,
+              background: RING_INK[activeLive.ring], color: "#fff",
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.5,
+              padding: "4px 9px",
+            }}>{activeLive.ring.toUpperCase()}</div>
+
+            <div style={{ height: 18 }} />
+
+            <div style={{
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+              color: "#6b6456", letterSpacing: 1.5, marginBottom: 6,
+            }}>
+              {activeLive.quadrant.toUpperCase()} · {activeLive.source.toUpperCase()}
+              {activeLive.company ? " · " + activeLive.company.toUpperCase() : ""}
+              {daysAgo(activeLive.first_seen) <= 7 && <span style={{ color: RING_INK.Trial }}> · NEW</span>}
+              {" "}<ProvBadge item={activeLive} />
+            </div>
+
+            <h2 style={{
+              margin: "0 0 8px", fontSize: 26, fontWeight: 800,
+              letterSpacing: -0.5, lineHeight: 1.1,
+            }}>{highlightMatch(activeLive.name, query)}</h2>
+
+            <p style={{ margin: "0 0 14px", fontSize: 14.5, lineHeight: 1.55, color: "#33312b" }}>
+              {highlightMatch(activeLive.description, query)}
+            </p>
+
+            {activeLive.url && activeLive.url !== "#" && (
+              <a href={activeLive.url} target="_blank" rel="noreferrer" style={{
+                display: "inline-block", fontFamily: "'IBM Plex Mono', monospace",
+                fontSize: 10.5, color: "#1a1a1a", letterSpacing: 1,
+                borderBottom: "1px solid #1a1a1a", textDecoration: "none",
+                marginBottom: 12,
+              }}>OPEN SOURCE ↗</a>
+            )}
+
+            <TopicChips topics={activeLive.topics} onTopicClick={toggleTopic} />
+
+            {activeLive.ring === "Archived" && activeLive.archived_at && (
+              <div style={{
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 10,
+                color: RING_INK.Archived, letterSpacing: 1, marginBottom: 12,
+              }}>ARCHIVED {activeLive.archived_at} · {daysAgo(activeLive.archived_at)}d ago</div>
+            )}
+
+            <div style={{
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+              borderTop: "1px solid #d8d2c4", borderBottom: "1px solid #d8d2c4",
+              padding: "8px 0", marginBottom: 14,
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456",
+            }}>
+              <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                first seen {activeLive.first_seen}
+                {activeLive.stars ? <span>★{(activeLive.stars / 1000).toFixed(1)}k</span> : null}
+                <Sparkline history={activeLive.stars_history} />
+              </span>
+              <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                m{activeLive.momentum}
+                <span style={{ display: "inline-block", width: 56, height: 5, background: "#e3ddcd" }}>
+                  <span style={{
+                    display: "block", height: "100%", width: activeLive.momentum + "%",
+                    background: RING_INK[activeLive.ring],
+                  }} />
+                </span>
+              </span>
+            </div>
+
             {EDIT_MODE && (
               <RingEditor item={activeLive} onSetRing={onSetRing} saveStatus={saveStatus} />
             )}
@@ -1249,8 +1355,7 @@ export default function App() {
         </span>
         {[
           { id: "atlas", label: "ATLAS" },
-          { id: "observatory", label: "OBSERVATORY" },
-          { id: "dispatch", label: "DISPATCH" },
+          { id: "index", label: "INDEX" },
         ].map((m) => (
           <button key={m.id} onClick={() => setView(m.id)} style={{
             background: view === m.id ? "#fff" : "transparent",
@@ -1293,9 +1398,7 @@ export default function App() {
 
       {view === "atlas"
         ? <Atlas data={data} status={status} onSetRing={onSetRing} saveStatus={saveStatus} />
-        : view === "observatory"
-        ? <Observatory data={data} status={status} onSetRing={onSetRing} saveStatus={saveStatus} />
-        : <Dispatch data={data} status={status} />}
+        : <Index data={data} status={status} onSetRing={onSetRing} saveStatus={saveStatus} />}
     </div>
   );
 }

@@ -1,0 +1,25 @@
+{
+  "id": "github:actions/checkout",
+  "name": "checkout",
+  "description": "Action for checking out a repo",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/actions/checkout",
+  "canonical_url": "github.com/actions/checkout",
+  "also_seen": [],
+  "company": null,
+  "stars": 26,
+  "momentum": 2,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-03",
+  "last_seen": "2026-07-03",
+  "stars_history": {
+    "2026-07-03": 26
+  }
+}

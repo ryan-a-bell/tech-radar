@@ -10,12 +10,14 @@
   "canonical_url": "github.com/juliusbrussee/caveman",
   "also_seen": [],
   "company": null,
-  "stars": 0,
+  "stars": 926,
   "momentum": 0,
   "tags": [],
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-30",
-  "last_seen": "2026-06-30",
-  "stars_history": {}
+  "last_seen": "2026-07-03",
+  "stars_history": {
+    "2026-07-03": 926
+  }
 }

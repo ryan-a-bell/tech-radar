@@ -255,7 +255,7 @@ tech-radar/
 ├── web/                # the browser frontend (served as-is, no build step)
 │   ├── index.html      # HTML shell — loads config.js + dashboard.jsx via CDN
 │   ├── config.js       # runtime flag — window.RADAR_EDIT (false in the build)
-│   ├── dashboard.jsx   # React dashboard — Atlas/Observatory/Dispatch + edit mode
+│   ├── dashboard.jsx   # React dashboard — Atlas + Index views + edit mode
 │   ├── books.html      # HTML shell for the Reading List — loads books.jsx via CDN
 │   ├── books.jsx       # React book radar — Atlas-style radar + scrollable list
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)

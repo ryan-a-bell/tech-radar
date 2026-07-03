@@ -1,0 +1,25 @@
+{
+  "id": "github:ChromeDevTools/chrome-devtools-mcp",
+  "name": "chrome-devtools-mcp",
+  "description": "Chrome DevTools for coding agents",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
+  "also_seen": [],
+  "company": null,
+  "stars": 104,
+  "momentum": 10,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-03",
+  "last_seen": "2026-07-03",
+  "stars_history": {
+    "2026-07-03": 104
+  }
+}

@@ -252,7 +252,7 @@ C4Container
         Container(editsrv, "Edit Server", "Python 3 http.server", "Serves web/ locally with window.RADAR_EDIT=true; ring clicks POST /api/promote and write through to disk")
         ContainerDb(itemstore, "Item Store", "Flat JSON files", "data/items/source/slug.json — one file per technology; the ring field drives dashboard classification")
         ContainerDb(manifest, "Radar Manifest", "Single JSON file", "data/radar.json — aggregated payload with computed trend fields, read by the dashboard")
-        Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "web/: Atlas, Observatory, Dispatch views + edit mode — no build step. config.js flag gates editing")
+        Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "web/: Atlas and Index views + edit mode — no build step. config.js flag gates editing")
     }
 
     System_Ext(github, "GitHub Trending")
@@ -407,10 +407,9 @@ C4Component
         Component(flag, "Runtime Flag", "web/config.js", "window.RADAR_EDIT — false in the static build, true when edit_server.py serves it")
         Component(app, "App Component", "dashboard.jsx — App()", "Owns view + save state, fetches radar.json (cache-busted on edit), routes between views, holds the onSetRing write-through handler")
         Component(fetcher, "Data Fetcher", "dashboard.jsx — useRadarData()", "Fetches data/radar.json on mount; falls back to hardcoded SAMPLE data if unavailable")
-        Component(filters, "Filter Controls", "dashboard.jsx", "Ring, quadrant, and topic filters; 'hide Discovered' and 'recent only' toggles; feeds all views")
+        Component(filters, "Filter Controls", "dashboard.jsx", "Ring, quadrant, and multi-select topic filters (incl. a 'no topic' bucket); fuzzy search box; 'hide Discovered' and 'recent only' toggles; feeds all views")
         Component(atlas, "Atlas View [default]", "dashboard.jsx", "Radar plate + scannable card list; click a card to open the detail panel")
-        Component(obs, "Observatory View", "dashboard.jsx", "Dark polar radar plot: rings map to maturity, quadrants divide the circle")
-        Component(dispatch, "Dispatch View", "dashboard.jsx", "Light editorial card grid: momentum bars, star counts, trend arrows, source attribution")
+        Component(index, "Index View", "dashboard.jsx", "Topic-first sortable table with a topic-frequency sidebar; click any column header to sort, row to open the detail panel")
         Component(ringedit, "Ring Editor [edit mode]", "dashboard.jsx — RingEditor", "Rendered in the detail panel only when RADAR_EDIT is true; clicking a ring POSTs /api/promote")
     }
 
@@ -424,13 +423,11 @@ C4Component
     Rel(fetcher, manifest_d, "fetch('data/radar.json')")
     Rel(app, filters, "render; receive filter state updates")
     Rel(app, atlas, "render when Atlas mode selected (default)")
-    Rel(app, obs, "render when Observatory mode selected")
-    Rel(app, dispatch, "render when Dispatch mode selected")
+    Rel(app, index, "render when Index mode selected")
     Rel(filters, atlas, "filtered item list")
-    Rel(filters, obs, "filtered item list")
-    Rel(filters, dispatch, "filtered item list")
+    Rel(filters, index, "filtered item list")
     Rel(atlas, ringedit, "detail panel hosts the editor")
-    Rel(obs, ringedit, "detail panel hosts the editor")
+    Rel(index, ringedit, "detail panel hosts the editor")
     Rel(ringedit, editsrv_d, "POST /api/promote → write + rebuild")
       </div>
     </div>

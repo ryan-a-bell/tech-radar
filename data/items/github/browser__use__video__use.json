@@ -10,7 +10,7 @@
   "canonical_url": "github.com/browser-use/video-use",
   "also_seen": [],
   "company": null,
-  "stars": 693,
+  "stars": 554,
   "momentum": 19,
   "tags": [
     "python"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-02",
+  "last_seen": "2026-07-03",
   "stars_history": {
     "2026-06-29": 976,
     "2026-06-30": 967,
     "2026-07-01": 721,
-    "2026-07-02": 693
+    "2026-07-02": 693,
+    "2026-07-03": 554
   }
 }
