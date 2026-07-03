@@ -62,6 +62,38 @@ function hashStr(s) {
   return h;
 }
 
+/* ===================== FUZZY SEARCH =====================
+   Same lightweight subsequence match as dashboard.jsx's Atlas search:
+   query characters must appear in order in the target, but need not be
+   contiguous or exact. An exact substring scores highest; denser, earlier
+   runs score higher than sparse ones. */
+function fuzzyScore(query, text) {
+  if (!query) return 0;
+  const q = query.toLowerCase(), t = (text || "").toLowerCase();
+  if (t.includes(q)) return 100 + q.length;
+  let qi = 0, score = 0, streak = 0;
+  for (let ti = 0; ti < t.length && qi < q.length; ti++) {
+    if (t[ti] === q[qi]) { score += 1 + streak * 2; streak++; qi++; }
+    else streak = 0;
+  }
+  return qi === q.length ? score : -1;
+}
+
+// Best weighted match across a book's searchable fields, or -1 if the query
+// matches none of them. 0 (no query) means "everything matches".
+function bookScore(query, b) {
+  if (!query) return 0;
+  const fields = [
+    [b.title, 3], [(b.topics || []).join(" "), 2.2], [b.author, 1.5], [b.blurb, 1],
+  ];
+  let best = -1;
+  for (const [text, weight] of fields) {
+    const s = fuzzyScore(query, text || "");
+    if (s >= 0) best = Math.max(best, s * weight);
+  }
+  return best;
+}
+
 function useBooksData() {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("loading");
@@ -348,8 +380,16 @@ function BooksApp() {
   const [statusFilter, setStatusFilter] = useState("All");
   const [topicFilter, setTopicFilter] = useState("All");
   const [sortBy, setSortBy] = useState("default");
+  const [searchQuery, setSearchQuery] = useState("");
   const [hoverId, setHoverId] = useState(null);
   const [active, setActive] = useState(null);
+
+  // typing a query auto-switches to relevance sort, but only away from the
+  // default (doesn't clobber a sort the user picked on purpose)
+  const onSearchChange = (v) => {
+    setSearchQuery(v);
+    if (v.trim() && sortBy === "default") setSortBy("relevance");
+  };
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -359,21 +399,33 @@ function BooksApp() {
     );
   }, [data, statusFilter, topicFilter]);
 
+  // fuzzy-score against the search box; a query drops non-matches entirely
+  const query = searchQuery.trim();
+  const scored = useMemo(() => {
+    const withScores = filtered.map((b) => ({ b, score: bookScore(query, b) }));
+    return query ? withScores.filter((x) => x.score >= 0) : withScores;
+  }, [filtered, query]);
+
+  // book list after search, used for both the radar plot and the card list
+  const searched = useMemo(() => scored.map((x) => x.b), [scored]);
+
   const sorted = useMemo(() => {
-    const arr = [...filtered];
+    const arr = [...scored];
     const rank = { Discovered: 0, Reading: 0, Read: 1 };
     const statusIdx = { Discovered: 0, Reading: 1, Read: 2 };
     switch (sortBy) {
-      case "title": return arr.sort((a, b) => a.title.localeCompare(b.title));
-      case "status": return arr.sort((a, b) => statusIdx[a.status] - statusIdx[b.status] || a.title.localeCompare(b.title));
-      case "recent": return arr.sort((a, b) => touchedDate(b).localeCompare(touchedDate(a)));
+      case "relevance":
+        return arr.sort((a, b) => query ? b.score - a.score : touchedDate(b.b).localeCompare(touchedDate(a.b))).map((x) => x.b);
+      case "title": return arr.sort((a, b) => a.b.title.localeCompare(b.b.title)).map((x) => x.b);
+      case "status": return arr.sort((a, b) => statusIdx[a.b.status] - statusIdx[b.b.status] || a.b.title.localeCompare(b.b.title)).map((x) => x.b);
+      case "recent": return arr.sort((a, b) => touchedDate(b.b).localeCompare(touchedDate(a.b))).map((x) => x.b);
       default:
         return arr.sort((a, b) => {
-          const ra = rank[a.status], rb = rank[b.status];
-          return ra !== rb ? ra - rb : touchedDate(b).localeCompare(touchedDate(a));
-        });
+          const ra = rank[a.b.status], rb = rank[b.b.status];
+          return ra !== rb ? ra - rb : touchedDate(b.b).localeCompare(touchedDate(a.b));
+        }).map((x) => x.b);
     }
-  }, [filtered, sortBy]);
+  }, [scored, sortBy, query]);
 
   if (!data) {
     return (
@@ -433,6 +485,27 @@ function BooksApp() {
           </div>
         </div>
 
+        {/* fuzzy search */}
+        <div style={{ margin: "14px 0 4px" }}>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => onSearchChange(e.target.value)}
+            placeholder="Search — try a typo, a partial word, a topic, or an author…"
+            style={{
+              width: "100%", boxSizing: "border-box", fontFamily: "Georgia, serif", fontSize: 15,
+              padding: "10px 14px", border: "1.5px solid #1a1a1a", background: "#fffdf7",
+              color: "#1a1a1a",
+            }}
+          />
+          <div style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, color: "#9a9384",
+            letterSpacing: 0.5, marginTop: 4,
+          }}>
+            Fuzzy match across title, author, blurb and topics — finds partial or misspelled terms too.
+          </div>
+        </div>
+
         {/* summary stat strip */}
         <div style={{
           display: "flex", gap: 28, margin: "12px 0 16px",
@@ -443,7 +516,7 @@ function BooksApp() {
           <Stat label="DISCOVERED" value={counts.Discovered} color={STATUS_COLOR.Discovered} />
           <Stat label="IN PROGRESS" value={counts.Reading} color={STATUS_COLOR.Reading} />
           <Stat label="READ" value={counts.Read} color={STATUS_COLOR.Read} />
-          <Stat label="SHOWN" value={filtered.length} />
+          <Stat label="SHOWN" value={sorted.length} />
         </div>
 
         {/* filters + sort */}
@@ -470,6 +543,7 @@ function BooksApp() {
               padding: "5px 28px 5px 10px", cursor: "pointer", appearance: "none", borderRadius: 0,
             }}>
               <option value="default">Discovered &amp; reading first, then recent</option>
+              <option value="relevance">Search relevance</option>
               <option value="status">By status</option>
               <option value="title">Title (A → Z)</option>
               <option value="recent">Most recently touched</option>
@@ -484,7 +558,7 @@ function BooksApp() {
             boxShadow: "5px 5px 0 #1a1a1a", padding: 12,
             flex: "0 0 auto", position: "sticky", top: 12, alignSelf: "flex-start",
           }}>
-            <RadarPlot books={filtered} statusFilter={statusFilter} setStatusFilter={setStatusFilter}
+            <RadarPlot books={searched} statusFilter={statusFilter} setStatusFilter={setStatusFilter}
               topicFilter={topicFilter} setTopicFilter={setTopicFilter}
               hoverId={hoverId} setHoverId={setHoverId} onSelect={setActive} />
             <div style={{
