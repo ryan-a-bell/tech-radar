@@ -1365,6 +1365,10 @@ export default function App() {
             cursor: "pointer", fontFamily: "inherit",
           }}>{m.label}</button>
         ))}
+        <a href="books.html" style={{
+          color: "#999", textDecoration: "none",
+          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
+        }}>READING LIST ▸</a>
         {EDIT_MODE && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
@@ -1384,12 +1388,8 @@ export default function App() {
              : `✗ ${saveStatus.name}`}
           </span>
         )}
-        <a href="books.html" style={{
-          marginLeft: "auto", color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-        }}>READING LIST ▸</a>
         <span style={{
-          marginLeft: 14, fontSize: 10, letterSpacing: 1,
+          marginLeft: "auto", fontSize: 10, letterSpacing: 1,
           color: status === "live" ? "#4ade80" : "#fbbf24",
         }}>
           {status === "live" ? "● radar.json loaded" : "● sample data (radar.json not found)"}
