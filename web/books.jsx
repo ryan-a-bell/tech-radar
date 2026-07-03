@@ -442,17 +442,26 @@ export default function BooksApp() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#000" }}>
-      {/* top bar — same dark mono shell as dashboard.jsx, cross-links the two pages */}
+      {/* top bar — one shared tab group with dashboard.jsx: ATLAS / INDEX live
+          on the radar page, READING LIST is the active tab here */}
       <div style={{
-        display: "flex", gap: 10, background: "#1a1a1a", padding: "10px 14px",
+        display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
         fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
         flexWrap: "wrap",
       }}>
-        <a href="index.html" style={{
-          color: "#999", textDecoration: "none", fontSize: 11, letterSpacing: 1,
-          border: "1px solid #444", padding: "6px 14px",
-        }}>◂ TECH RADAR</a>
-        <span style={{ color: "#fff", background: "#fff", opacity: 0, width: 0 }} />
+        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>
+          VIEW:
+        </span>
+        <a href="index.html#atlas" style={{
+          background: "transparent", color: "#999", border: "1px solid #444",
+          textDecoration: "none", padding: "6px 14px", marginRight: 8,
+          fontSize: 11, letterSpacing: 1,
+        }}>ATLAS</a>
+        <a href="index.html#index" style={{
+          background: "transparent", color: "#999", border: "1px solid #444",
+          textDecoration: "none", padding: "6px 14px", marginRight: 8,
+          fontSize: 11, letterSpacing: 1,
+        }}>INDEX</a>
         <span style={{
           background: "#fff", color: "#000", border: "1px solid #fff",
           padding: "6px 14px", fontSize: 11, letterSpacing: 1,
