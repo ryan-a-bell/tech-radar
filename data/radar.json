@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-03",
-  "count": 293,
+  "generated": "2026-07-04",
+  "count": 298,
   "items": [
+    {
+      "id": "github:supabase/supabase",
+      "name": "supabase",
+      "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/supabase/supabase",
+      "canonical_url": "github.com/supabase/supabase",
+      "also_seen": [],
+      "company": "Supabase",
+      "stars": 169,
+      "momentum": 16,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 169
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:rommapp/romm",
+      "name": "romm",
+      "description": "A beautiful, powerful, self-hosted rom manager and player.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rommapp/romm",
+      "canonical_url": "github.com/rommapp/romm",
+      "also_seen": [],
+      "company": null,
+      "stars": 239,
+      "momentum": 23,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 239
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:apache/maven",
+      "name": "maven",
+      "description": "Apache Maven core",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apache/maven",
+      "canonical_url": "github.com/apache/maven",
+      "also_seen": [],
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 58
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:elastic/elasticsearch",
+      "name": "elasticsearch",
+      "description": "Free and Open Source, Distributed, RESTful Search Engine",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elastic/elasticsearch",
+      "canonical_url": "github.com/elastic/elasticsearch",
+      "also_seen": [],
+      "company": "Elastic",
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ansible/ansible",
+      "name": "ansible",
+      "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com .",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ansible/ansible",
+      "canonical_url": "github.com/ansible/ansible",
+      "also_seen": [],
+      "company": null,
+      "stars": 65,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 65
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:pytorch/pytorch",
       "name": "pytorch",
@@ -14,7 +149,7 @@
       "canonical_url": "github.com/pytorch/pytorch",
       "also_seen": [],
       "company": null,
-      "stars": 65,
+      "stars": 293,
       "momentum": 6,
       "tags": [
         "python"
@@ -22,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 65
+        "2026-07-03": 65,
+        "2026-07-04": 293
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 228
     },
     {
       "id": "github:langflow-ai/langflow",
@@ -68,7 +204,7 @@
       "canonical_url": "github.com/harvard-edge/cs249r_book",
       "also_seen": [],
       "company": null,
-      "stars": 68,
+      "stars": 793,
       "momentum": 6,
       "tags": [
         "python"
@@ -76,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 68
+        "2026-07-03": 68,
+        "2026-07-04": 793
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 725
     },
     {
       "id": "github:openai/codex-plugin-cc",
@@ -95,7 +232,7 @@
       "canonical_url": "github.com/openai/codex-plugin-cc",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 352,
+      "stars": 634,
       "momentum": 35,
       "tags": [
         "javascript"
@@ -103,12 +240,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 352
+        "2026-07-03": 352,
+        "2026-07-04": 634
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 282
     },
     {
       "id": "github:ryanmcdermott/clean-code-javascript",
@@ -149,7 +287,7 @@
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 104,
+      "stars": 405,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -157,12 +295,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 104
+        "2026-07-03": 104,
+        "2026-07-04": 405
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 301
     },
     {
       "id": "github:actions/checkout",
@@ -176,7 +315,7 @@
       "canonical_url": "github.com/actions/checkout",
       "also_seen": [],
       "company": null,
-      "stars": 26,
+      "stars": 129,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -184,12 +323,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 26
+        "2026-07-03": 26,
+        "2026-07-04": 129
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 103
     },
     {
       "id": "github:agentskills/agentskills",
@@ -203,7 +343,7 @@
       "canonical_url": "github.com/agentskills/agentskills",
       "also_seen": [],
       "company": null,
-      "stars": 86,
+      "stars": 406,
       "momentum": 8,
       "tags": [
         "python"
@@ -211,12 +351,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 86
+        "2026-07-03": 86,
+        "2026-07-04": 406
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 320
     },
     {
       "id": "manual:willowtree",
@@ -989,7 +1130,7 @@
       "canonical_url": "github.com/tencentcloud/cubesandbox",
       "also_seen": [],
       "company": null,
-      "stars": 79,
+      "stars": 60,
       "momentum": 7,
       "tags": [
         "rust"
@@ -997,12 +1138,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-02": 79
+        "2026-07-02": 79,
+        "2026-07-04": 60
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -19
     },
     {
       "id": "manual:bloomberg",
@@ -1070,7 +1212,7 @@
       "canonical_url": "github.com/ogulcancelik/herdr",
       "also_seen": [],
       "company": null,
-      "stars": 609,
+      "stars": 478,
       "momentum": 48,
       "tags": [
         "rust"
@@ -1078,13 +1220,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-04",
       "stars_history": {
         "2026-07-01": 486,
-        "2026-07-02": 609
+        "2026-07-02": 609,
+        "2026-07-04": 478
       },
-      "trend": "up",
-      "trend_delta": 123
+      "trend": "down",
+      "trend_delta": -8
     },
     {
       "id": "github:hasaneyldrm/exercises-dataset",
@@ -1155,7 +1298,7 @@
       "canonical_url": "github.com/facebook/astryx",
       "also_seen": [],
       "company": "Meta",
-      "stars": 708,
+      "stars": 885,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -1163,13 +1306,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-04",
       "stars_history": {
         "2026-07-01": 364,
-        "2026-07-02": 708
+        "2026-07-02": 708,
+        "2026-07-04": 885
       },
       "trend": "up",
-      "trend_delta": 344
+      "trend_delta": 521
     },
     {
       "id": "github:google/agents-cli",
@@ -2260,14 +2404,16 @@
       "canonical_url": "github.com/anthropics/claude-code",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 0,
+      "stars": 221,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
+      "last_seen": "2026-07-04",
+      "stars_history": {
+        "2026-07-04": 221
+      },
       "trend": "none",
       "trend_delta": 0
     },
@@ -2283,18 +2429,19 @@
       "canonical_url": "github.com/juliusbrussee/caveman",
       "also_seen": [],
       "company": null,
-      "stars": 926,
+      "stars": 2863,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
-        "2026-07-03": 926
+        "2026-07-03": 926,
+        "2026-07-04": 2863
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1937
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -2824,7 +2971,7 @@
       "canonical_url": "github.com/usestrix/strix",
       "also_seen": [],
       "company": null,
-      "stars": 2137,
+      "stars": 2803,
       "momentum": 12,
       "tags": [
         "python"
@@ -2832,15 +2979,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
         "2026-06-29": 122,
         "2026-07-01": 515,
         "2026-07-02": 1211,
-        "2026-07-03": 2137
+        "2026-07-03": 2137,
+        "2026-07-04": 2803
       },
       "trend": "up",
-      "trend_delta": 2015
+      "trend_delta": 2681
     },
     {
       "id": "github:logto-io/logto",
@@ -5720,13 +5868,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 3032,
+      "stars": 1208,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -5734,10 +5882,11 @@
         "2026-06-30": 1425,
         "2026-07-01": 1791,
         "2026-07-02": 2114,
-        "2026-07-03": 3032
+        "2026-07-03": 3032,
+        "2026-07-04": 1208
       },
       "trend": "up",
-      "trend_delta": 2006
+      "trend_delta": 182
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -6668,13 +6817,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 897,
+      "stars": 1209,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-04",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -6688,11 +6837,12 @@
         "2026-06-19": 1429,
         "2026-06-20": 1110,
         "2026-07-01": 890,
-        "2026-07-03": 897
+        "2026-07-03": 897,
+        "2026-07-04": 1209
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -213
+      "trend": "up",
+      "trend_delta": 99
     },
     {
       "id": "github:openai/plugins",
