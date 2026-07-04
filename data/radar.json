@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-04",
-  "count": 300,
+  "count": 302,
   "items": [
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -45,6 +45,29 @@
       "topics": [
         "Skills"
       ],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:marker",
+      "name": "Marker",
+      "description": "Open-source document converter that turns PDFs, images and office files into markdown + JSON quickly and with high accuracy using deep-learning OCR models.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/datalab-to/marker",
+      "canonical_url": "github.com/datalab-to/marker",
+      "also_seen": [],
+      "company": "Datalab",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-04",
@@ -166,6 +189,32 @@
       "topics": [
         "Agents",
         "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "substack:100-papers-an-hour-ai-research-pipeline",
+      "name": "100 Papers an Hour (AI research pipeline)",
+      "description": "Substack write-up on a paper-processing technique: use Marker OCR to convert research PDFs to Markdown, then batch them through an LLM (e.g. Gemini 2.5 Pro) to extract patterns and strategy insights at scale.",
+      "quadrant": "Techniques",
+      "ring": "Discovered",
+      "source": "Substack",
+      "discovered_by": "manual",
+      "url": "https://papertoprofit.substack.com/p/100-papers-an-hour-10xing-your-strategy",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Quant"
       ],
       "archived_at": null,
       "first_seen": "2026-07-04",
