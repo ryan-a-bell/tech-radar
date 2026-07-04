@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-04",
-  "count": 302,
+  "count": 303,
   "items": [
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -53,6 +53,32 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:ollama-ocr",
+      "name": "Ollama-OCR",
+      "description": "OCR package that uses vision language models (LLaVA, Llama 3.2 Vision, Granite3.2-vision, Moondream, MiniCPM-V) via Ollama to extract text from images and PDFs; Python library plus Streamlit app with markdown/JSON/table output.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/imanoop7/Ollama-OCR",
+      "canonical_url": "github.com/imanoop7/ollama-ocr",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "OCR",
+        "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-04",
+      "last_seen": "2026-07-04",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:marker",
       "name": "Marker",
       "description": "Open-source document converter that turns PDFs, images and office files into markdown + JSON quickly and with high accuracy using deep-learning OCR models.",
@@ -67,7 +93,10 @@
       "stars": 0,
       "momentum": 0,
       "tags": [],
-      "topics": [],
+      "topics": [
+        "OCR",
+        "AI"
+      ],
       "archived_at": null,
       "first_seen": "2026-07-04",
       "last_seen": "2026-07-04",
@@ -581,7 +610,10 @@
       "tags": [
         "python"
       ],
-      "topics": [],
+      "topics": [
+        "OCR",
+        "AI"
+      ],
       "archived_at": null,
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-02",
@@ -7435,6 +7467,10 @@
         "2026-06-06": 449,
         "2026-06-07": 433
       },
+      "topics": [
+        "OCR",
+        "AI"
+      ],
       "trend": "up",
       "trend_delta": 328
     },

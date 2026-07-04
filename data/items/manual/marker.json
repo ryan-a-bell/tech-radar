@@ -13,7 +13,10 @@
   "stars": 0,
   "momentum": 0,
   "tags": [],
-  "topics": [],
+  "topics": [
+    "OCR",
+    "AI"
+  ],
   "archived_at": null,
   "first_seen": "2026-07-04",
   "last_seen": "2026-07-04",
