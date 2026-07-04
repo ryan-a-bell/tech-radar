@@ -1,0 +1,25 @@
+{
+  "id": "github:elastic/elasticsearch",
+  "name": "elasticsearch",
+  "description": "Free and Open Source, Distributed, RESTful Search Engine",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/elastic/elasticsearch",
+  "canonical_url": "github.com/elastic/elasticsearch",
+  "also_seen": [],
+  "company": "Elastic",
+  "stars": 91,
+  "momentum": 9,
+  "tags": [
+    "java"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-04",
+  "last_seen": "2026-07-04",
+  "stars_history": {
+    "2026-07-04": 91
+  }
+}
