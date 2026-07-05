@@ -10,7 +10,7 @@
   "canonical_url": "github.com/harvard-edge/cs249r_book",
   "also_seen": [],
   "company": null,
-  "stars": 68,
+  "stars": 793,
   "momentum": 6,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-03",
+  "last_seen": "2026-07-04",
   "stars_history": {
-    "2026-07-03": 68
+    "2026-07-03": 68,
+    "2026-07-04": 793
   }
 }

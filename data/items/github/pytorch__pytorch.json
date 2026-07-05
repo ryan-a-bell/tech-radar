@@ -10,7 +10,7 @@
   "canonical_url": "github.com/pytorch/pytorch",
   "also_seen": [],
   "company": null,
-  "stars": 65,
+  "stars": 293,
   "momentum": 6,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-03",
+  "last_seen": "2026-07-04",
   "stars_history": {
-    "2026-07-03": 65
+    "2026-07-03": 65,
+    "2026-07-04": 293
   }
 }

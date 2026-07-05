@@ -10,7 +10,7 @@
   "canonical_url": "github.com/facebook/astryx",
   "also_seen": [],
   "company": "Meta",
-  "stars": 708,
+  "stars": 885,
   "momentum": 36,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-02",
+  "last_seen": "2026-07-04",
   "stars_history": {
     "2026-07-01": 364,
-    "2026-07-02": 708
+    "2026-07-02": 708,
+    "2026-07-04": 885
   }
 }
