@@ -10,7 +10,7 @@
   "canonical_url": "github.com/agentskills/agentskills",
   "also_seen": [],
   "company": null,
-  "stars": 406,
+  "stars": 351,
   "momentum": 8,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-04",
+  "last_seen": "2026-07-05",
   "stars_history": {
     "2026-07-03": 86,
-    "2026-07-04": 406
+    "2026-07-04": 406,
+    "2026-07-05": 351
   }
 }

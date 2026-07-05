@@ -1,7 +1,196 @@
 {
-  "generated": "2026-07-04",
-  "count": 298,
+  "generated": "2026-07-05",
+  "count": 305,
   "items": [
+    {
+      "id": "github:CoplayDev/unity-mcp",
+      "name": "unity-mcp",
+      "description": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/CoplayDev/unity-mcp",
+      "canonical_url": "github.com/coplaydev/unity-mcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 69,
+      "momentum": 6,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 69
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:crynta/terax-ai",
+      "name": "terax-ai",
+      "description": "Lightweight (7MB) Terminal-first AI-native dev workspace",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/crynta/terax-ai",
+      "canonical_url": "github.com/crynta/terax-ai",
+      "also_seen": [],
+      "company": null,
+      "stars": 62,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 62
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:dotnet/skills",
+      "name": "skills",
+      "description": "Repository for skills to assist AI coding agents with .NET and C#",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dotnet/skills",
+      "canonical_url": "github.com/dotnet/skills",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 59,
+      "momentum": 5,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 59
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Zackriya-Solutions/meetily",
+      "name": "meetily",
+      "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai ) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Zackriya-Solutions/meetily",
+      "canonical_url": "github.com/zackriya-solutions/meetily",
+      "also_seen": [],
+      "company": null,
+      "stars": 718,
+      "momentum": 71,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 718
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:immich-app/immich",
+      "name": "immich",
+      "description": "High performance self-hosted photo and video management solution.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/immich-app/immich",
+      "canonical_url": "github.com/immich-app/immich",
+      "also_seen": [],
+      "company": null,
+      "stars": 201,
+      "momentum": 20,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 201
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chthollyphile/folia-major",
+      "name": "folia-major",
+      "description": "\u4e13\u6ce8\u4e8e\u7eda\u4e3d\u7684\u6b4c\u8bcd\u52a8\u753b\u6548\u679c\u7684\u672c\u5730\u97f3\u4e50/navidrome/\u7b2c\u4e09\u65b9\u7f51\u6613\u4e91\u64ad\u653e\u5668",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chthollyphile/folia-major",
+      "canonical_url": "github.com/chthollyphile/folia-major",
+      "also_seen": [],
+      "company": null,
+      "stars": 175,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 175
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alirezarezvani/claude-skills",
+      "name": "claude-skills",
+      "description": "337 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents \u2014 engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alirezarezvani/claude-skills",
+      "canonical_url": "github.com/alirezarezvani/claude-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 136,
+      "momentum": 13,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-07-05",
+      "stars_history": {
+        "2026-07-05": 136
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:supabase/supabase",
       "name": "supabase",
@@ -41,7 +230,7 @@
       "canonical_url": "github.com/rommapp/romm",
       "also_seen": [],
       "company": null,
-      "stars": 239,
+      "stars": 398,
       "momentum": 23,
       "tags": [
         "python"
@@ -49,12 +238,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
-        "2026-07-04": 239
+        "2026-07-04": 239,
+        "2026-07-05": 398
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 159
     },
     {
       "id": "github:apache/maven",
@@ -204,7 +394,7 @@
       "canonical_url": "github.com/harvard-edge/cs249r_book",
       "also_seen": [],
       "company": null,
-      "stars": 793,
+      "stars": 443,
       "momentum": 6,
       "tags": [
         "python"
@@ -212,13 +402,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-03": 68,
-        "2026-07-04": 793
+        "2026-07-04": 793,
+        "2026-07-05": 443
       },
       "trend": "up",
-      "trend_delta": 725
+      "trend_delta": 375
     },
     {
       "id": "github:openai/codex-plugin-cc",
@@ -232,7 +423,7 @@
       "canonical_url": "github.com/openai/codex-plugin-cc",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 634,
+      "stars": 718,
       "momentum": 35,
       "tags": [
         "javascript"
@@ -240,13 +431,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-03": 352,
-        "2026-07-04": 634
+        "2026-07-04": 634,
+        "2026-07-05": 718
       },
       "trend": "up",
-      "trend_delta": 282
+      "trend_delta": 366
     },
     {
       "id": "github:ryanmcdermott/clean-code-javascript",
@@ -287,7 +479,7 @@
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 405,
+      "stars": 304,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -295,13 +487,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-03": 104,
-        "2026-07-04": 405
+        "2026-07-04": 405,
+        "2026-07-05": 304
       },
       "trend": "up",
-      "trend_delta": 301
+      "trend_delta": 200
     },
     {
       "id": "github:actions/checkout",
@@ -343,7 +536,7 @@
       "canonical_url": "github.com/agentskills/agentskills",
       "also_seen": [],
       "company": null,
-      "stars": 406,
+      "stars": 351,
       "momentum": 8,
       "tags": [
         "python"
@@ -351,13 +544,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-03": 86,
-        "2026-07-04": 406
+        "2026-07-04": 406,
+        "2026-07-05": 351
       },
       "trend": "up",
-      "trend_delta": 320
+      "trend_delta": 265
     },
     {
       "id": "manual:willowtree",
@@ -1212,7 +1406,7 @@
       "canonical_url": "github.com/ogulcancelik/herdr",
       "also_seen": [],
       "company": null,
-      "stars": 478,
+      "stars": 707,
       "momentum": 48,
       "tags": [
         "rust"
@@ -1220,14 +1414,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-01": 486,
         "2026-07-02": 609,
-        "2026-07-04": 478
+        "2026-07-04": 478,
+        "2026-07-05": 707
       },
-      "trend": "down",
-      "trend_delta": -8
+      "trend": "up",
+      "trend_delta": 221
     },
     {
       "id": "github:hasaneyldrm/exercises-dataset",
@@ -2429,19 +2624,20 @@
       "canonical_url": "github.com/juliusbrussee/caveman",
       "also_seen": [],
       "company": null,
-      "stars": 2863,
+      "stars": 1089,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-07-03": 926,
-        "2026-07-04": 2863
+        "2026-07-04": 2863,
+        "2026-07-05": 1089
       },
       "trend": "up",
-      "trend_delta": 1937
+      "trend_delta": 163
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -2971,7 +3167,7 @@
       "canonical_url": "github.com/usestrix/strix",
       "also_seen": [],
       "company": null,
-      "stars": 2803,
+      "stars": 1904,
       "momentum": 12,
       "tags": [
         "python"
@@ -2979,16 +3175,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-06-29": 122,
         "2026-07-01": 515,
         "2026-07-02": 1211,
         "2026-07-03": 2137,
-        "2026-07-04": 2803
+        "2026-07-04": 2803,
+        "2026-07-05": 1904
       },
       "trend": "up",
-      "trend_delta": 2681
+      "trend_delta": 1782
     },
     {
       "id": "github:logto-io/logto",
@@ -3509,7 +3706,7 @@
       "canonical_url": "github.com/alibaba/page-agent",
       "also_seen": [],
       "company": null,
-      "stars": 163,
+      "stars": 742,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -3517,13 +3714,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-06-25": 196,
-        "2026-06-26": 163
+        "2026-06-26": 163,
+        "2026-07-05": 742
       },
-      "trend": "down",
-      "trend_delta": -33
+      "trend": "up",
+      "trend_delta": 579
     },
     {
       "id": "github:stablyai/orca",
@@ -4201,18 +4399,19 @@
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "also_seen": [],
       "company": null,
-      "stars": 352,
+      "stars": 471,
       "momentum": 35,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-07-05",
       "stars_history": {
-        "2026-06-21": 352
+        "2026-06-21": 352,
+        "2026-07-05": 471
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 119
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -4775,23 +4974,24 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 2051,
+      "stars": 973,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-07-05",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
         "2026-06-21": 1441,
         "2026-06-22": 1443,
-        "2026-06-23": 2051
+        "2026-06-23": 2051,
+        "2026-07-05": 973
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 202
+      "trend": "down",
+      "trend_delta": -1078
     },
     {
       "id": "github:alexzhang13/rlm",

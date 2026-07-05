@@ -1,0 +1,25 @@
+{
+  "id": "github:chthollyphile/folia-major",
+  "name": "folia-major",
+  "description": "\u4e13\u6ce8\u4e8e\u7eda\u4e3d\u7684\u6b4c\u8bcd\u52a8\u753b\u6548\u679c\u7684\u672c\u5730\u97f3\u4e50/navidrome/\u7b2c\u4e09\u65b9\u7f51\u6613\u4e91\u64ad\u653e\u5668",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/chthollyphile/folia-major",
+  "canonical_url": "github.com/chthollyphile/folia-major",
+  "also_seen": [],
+  "company": null,
+  "stars": 175,
+  "momentum": 17,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "stars_history": {
+    "2026-07-05": 175
+  }
+}
