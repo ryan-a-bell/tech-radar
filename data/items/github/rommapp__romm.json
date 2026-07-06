@@ -10,7 +10,7 @@
   "canonical_url": "github.com/rommapp/romm",
   "also_seen": [],
   "company": null,
-  "stars": 398,
+  "stars": 410,
   "momentum": 23,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-04",
-  "last_seen": "2026-07-05",
+  "last_seen": "2026-07-06",
   "stars_history": {
     "2026-07-04": 239,
-    "2026-07-05": 398
+    "2026-07-05": 398,
+    "2026-07-06": 410
   }
 }

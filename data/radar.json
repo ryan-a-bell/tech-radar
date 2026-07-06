@@ -1,7 +1,115 @@
 {
   "generated": "2026-07-06",
-  "count": 315,
+  "count": 319,
   "items": [
+    {
+      "id": "github:coreyhaines31/marketingskills",
+      "name": "marketingskills",
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "canonical_url": "github.com/coreyhaines31/marketingskills",
+      "also_seen": [],
+      "company": null,
+      "stars": 145,
+      "momentum": 14,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "stars_history": {
+        "2026-07-06": 145
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:gastownhall/gastown",
+      "name": "gastown",
+      "description": "Gas Town - multi-agent workspace manager",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/gastownhall/gastown",
+      "canonical_url": "github.com/gastownhall/gastown",
+      "also_seen": [],
+      "company": null,
+      "stars": 51,
+      "momentum": 5,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "stars_history": {
+        "2026-07-06": 51
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "description": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "canonical_url": "github.com/hesreallyhim/awesome-claude-code",
+      "also_seen": [],
+      "company": null,
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "stars_history": {
+        "2026-07-06": 148
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:steipete/CodexBar",
+      "name": "CodexBar",
+      "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/steipete/CodexBar",
+      "canonical_url": "github.com/steipete/codexbar",
+      "also_seen": [],
+      "company": null,
+      "stars": 153,
+      "momentum": 15,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "stars_history": {
+        "2026-07-06": 153
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:CoplayDev/unity-mcp",
       "name": "unity-mcp",
@@ -14,7 +122,7 @@
       "canonical_url": "github.com/coplaydev/unity-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 69,
+      "stars": 414,
       "momentum": 6,
       "tags": [
         "c#"
@@ -22,12 +130,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-05": 69
+        "2026-07-05": 69,
+        "2026-07-06": 414
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 345
     },
     {
       "id": "github:crynta/terax-ai",
@@ -68,7 +177,7 @@
       "canonical_url": "github.com/dotnet/skills",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 59,
+      "stars": 246,
       "momentum": 5,
       "tags": [
         "c#"
@@ -76,12 +185,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-05": 59
+        "2026-07-05": 59,
+        "2026-07-06": 246
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 187
     },
     {
       "id": "github:Zackriya-Solutions/meetily",
@@ -95,7 +205,7 @@
       "canonical_url": "github.com/zackriya-solutions/meetily",
       "also_seen": [],
       "company": null,
-      "stars": 718,
+      "stars": 1409,
       "momentum": 71,
       "tags": [
         "rust"
@@ -103,12 +213,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-05": 718
+        "2026-07-05": 718,
+        "2026-07-06": 1409
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 691
     },
     {
       "id": "github:immich-app/immich",
@@ -122,7 +233,7 @@
       "canonical_url": "github.com/immich-app/immich",
       "also_seen": [],
       "company": null,
-      "stars": 201,
+      "stars": 470,
       "momentum": 20,
       "tags": [
         "typescript"
@@ -130,12 +241,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-05": 201
+        "2026-07-05": 201,
+        "2026-07-06": 470
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 269
     },
     {
       "id": "github:chthollyphile/folia-major",
@@ -176,7 +288,7 @@
       "canonical_url": "github.com/alirezarezvani/claude-skills",
       "also_seen": [],
       "company": null,
-      "stars": 136,
+      "stars": 392,
       "momentum": 13,
       "tags": [
         "python"
@@ -184,12 +296,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-05": 136
+        "2026-07-05": 136,
+        "2026-07-06": 392
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 256
     },
     {
       "id": "github:supabase/supabase",
@@ -230,7 +343,7 @@
       "canonical_url": "github.com/rommapp/romm",
       "also_seen": [],
       "company": null,
-      "stars": 398,
+      "stars": 410,
       "momentum": 23,
       "tags": [
         "python"
@@ -238,13 +351,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-04": 239,
-        "2026-07-05": 398
+        "2026-07-05": 398,
+        "2026-07-06": 410
       },
       "trend": "up",
-      "trend_delta": 159
+      "trend_delta": 171
     },
     {
       "id": "github:apache/maven",
@@ -645,7 +759,7 @@
       "canonical_url": "github.com/harvard-edge/cs249r_book",
       "also_seen": [],
       "company": null,
-      "stars": 443,
+      "stars": 329,
       "momentum": 6,
       "tags": [
         "python"
@@ -653,14 +767,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-03": 68,
         "2026-07-04": 793,
-        "2026-07-05": 443
+        "2026-07-05": 443,
+        "2026-07-06": 329
       },
       "trend": "up",
-      "trend_delta": 375
+      "trend_delta": 261
     },
     {
       "id": "github:openai/codex-plugin-cc",
@@ -674,7 +789,7 @@
       "canonical_url": "github.com/openai/codex-plugin-cc",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 718,
+      "stars": 1532,
       "momentum": 35,
       "tags": [
         "javascript"
@@ -682,14 +797,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-03": 352,
         "2026-07-04": 634,
-        "2026-07-05": 718
+        "2026-07-05": 718,
+        "2026-07-06": 1532
       },
       "trend": "up",
-      "trend_delta": 366
+      "trend_delta": 1180
     },
     {
       "id": "github:ryanmcdermott/clean-code-javascript",
@@ -1660,7 +1776,7 @@
       "canonical_url": "github.com/ogulcancelik/herdr",
       "also_seen": [],
       "company": null,
-      "stars": 707,
+      "stars": 651,
       "momentum": 48,
       "tags": [
         "rust"
@@ -1668,15 +1784,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-01": 486,
         "2026-07-02": 609,
         "2026-07-04": 478,
-        "2026-07-05": 707
+        "2026-07-05": 707,
+        "2026-07-06": 651
       },
       "trend": "up",
-      "trend_delta": 221
+      "trend_delta": 165
     },
     {
       "id": "github:hasaneyldrm/exercises-dataset",
@@ -1747,7 +1864,7 @@
       "canonical_url": "github.com/facebook/astryx",
       "also_seen": [],
       "company": "Meta",
-      "stars": 885,
+      "stars": 522,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -1755,14 +1872,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-01": 364,
         "2026-07-02": 708,
-        "2026-07-04": 885
+        "2026-07-04": 885,
+        "2026-07-06": 522
       },
       "trend": "up",
-      "trend_delta": 521
+      "trend_delta": 158
     },
     {
       "id": "github:google/agents-cli",
@@ -2853,18 +2971,19 @@
       "canonical_url": "github.com/anthropics/claude-code",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 221,
+      "stars": 156,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-06",
       "stars_history": {
-        "2026-07-04": 221
+        "2026-07-04": 221,
+        "2026-07-06": 156
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -65
     },
     {
       "id": "github:JuliusBrussee/caveman",
@@ -2878,20 +2997,21 @@
       "canonical_url": "github.com/juliusbrussee/caveman",
       "also_seen": [],
       "company": null,
-      "stars": 1089,
+      "stars": 1052,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-07-03": 926,
         "2026-07-04": 2863,
-        "2026-07-05": 1089
+        "2026-07-05": 1089,
+        "2026-07-06": 1052
       },
       "trend": "up",
-      "trend_delta": 163
+      "trend_delta": 126
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -3421,7 +3541,7 @@
       "canonical_url": "github.com/usestrix/strix",
       "also_seen": [],
       "company": null,
-      "stars": 1904,
+      "stars": 1114,
       "momentum": 12,
       "tags": [
         "python"
@@ -3429,17 +3549,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-06-29": 122,
         "2026-07-01": 515,
         "2026-07-02": 1211,
         "2026-07-03": 2137,
         "2026-07-04": 2803,
-        "2026-07-05": 1904
+        "2026-07-05": 1904,
+        "2026-07-06": 1114
       },
       "trend": "up",
-      "trend_delta": 1782
+      "trend_delta": 992
     },
     {
       "id": "github:logto-io/logto",
@@ -3960,7 +4081,7 @@
       "canonical_url": "github.com/alibaba/page-agent",
       "also_seen": [],
       "company": null,
-      "stars": 742,
+      "stars": 805,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -3968,14 +4089,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-06-25": 196,
         "2026-06-26": 163,
-        "2026-07-05": 742
+        "2026-07-05": 742,
+        "2026-07-06": 805
       },
       "trend": "up",
-      "trend_delta": 579
+      "trend_delta": 642
     },
     {
       "id": "github:stablyai/orca",
@@ -4653,19 +4775,20 @@
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "also_seen": [],
       "company": null,
-      "stars": 471,
+      "stars": 981,
       "momentum": 35,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-06-21": 352,
-        "2026-07-05": 471
+        "2026-07-05": 471,
+        "2026-07-06": 981
       },
       "trend": "up",
-      "trend_delta": 119
+      "trend_delta": 629
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -6550,19 +6673,20 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 420,
+      "stars": 161,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-06-10": 439,
-        "2026-06-11": 420
+        "2026-06-11": 420,
+        "2026-07-06": 161
       },
       "trend": "down",
-      "trend_delta": -19
+      "trend_delta": -259
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -6948,19 +7072,20 @@
       "canonical_url": "github.com/leonxlnx/taste-skill",
       "also_seen": [],
       "company": null,
-      "stars": 1103,
+      "stars": 863,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-07-06",
       "stars_history": {
         "2026-06-07": 1104,
-        "2026-06-08": 1103
+        "2026-06-08": 1103,
+        "2026-07-06": 863
       },
       "trend": "down",
-      "trend_delta": -1
+      "trend_delta": -240
     },
     {
       "id": "github:Crosstalk-Solutions/project-nomad",
