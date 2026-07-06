@@ -1,0 +1,25 @@
+{
+  "id": "github:crynta/terax-ai",
+  "name": "terax-ai",
+  "description": "Lightweight (7MB) Terminal-first AI-native dev workspace",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/crynta/terax-ai",
+  "canonical_url": "github.com/crynta/terax-ai",
+  "also_seen": [],
+  "company": null,
+  "stars": 62,
+  "momentum": 6,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "stars_history": {
+    "2026-07-05": 62
+  }
+}

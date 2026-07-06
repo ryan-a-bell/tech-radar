@@ -1,0 +1,25 @@
+{
+  "id": "github:dotnet/skills",
+  "name": "skills",
+  "description": "Repository for skills to assist AI coding agents with .NET and C#",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/dotnet/skills",
+  "canonical_url": "github.com/dotnet/skills",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 59,
+  "momentum": 5,
+  "tags": [
+    "c#"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "stars_history": {
+    "2026-07-05": 59
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
   "also_seen": [],
   "company": null,
-  "stars": 405,
+  "stars": 304,
   "momentum": 10,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-04",
+  "last_seen": "2026-07-05",
   "stars_history": {
     "2026-07-03": 104,
-    "2026-07-04": 405
+    "2026-07-04": 405,
+    "2026-07-05": 304
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "github:immich-app/immich",
+  "name": "immich",
+  "description": "High performance self-hosted photo and video management solution.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/immich-app/immich",
+  "canonical_url": "github.com/immich-app/immich",
+  "also_seen": [],
+  "company": null,
+  "stars": 201,
+  "momentum": 20,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "stars_history": {
+    "2026-07-05": 201
+  }
+}
