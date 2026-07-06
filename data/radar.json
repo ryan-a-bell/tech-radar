@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-05",
+  "generated": "2026-07-06",
   "count": 305,
   "items": [
     {
@@ -2454,7 +2454,7 @@
       "name": "docling",
       "description": "Document preparation for generative AI",
       "quadrant": "Tools",
-      "ring": "Assess",
+      "ring": "Trial",
       "source": "GitHub",
       "discovered_by": "manual",
       "url": "https://github.com/docling-project/docling",
