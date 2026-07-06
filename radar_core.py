@@ -29,7 +29,7 @@ RINGS = ["Discovered", "Assess", "Trial", "Adopted", "Archived"]
 # cross-quadrant filtering (an Agents tool and an Agents technique share a
 # topic but not a quadrant). Extend by adding to this list; unknown topics
 # are rejected by normalize_topics so the vocabulary stays clean.
-TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Data Feeds"]
+TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Data Feeds", "OCR"]
 
 
 def normalize_topics(values):

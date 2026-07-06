@@ -1,0 +1,25 @@
+{
+  "id": "substack:100-papers-an-hour-ai-research-pipeline",
+  "name": "100 Papers an Hour (AI research pipeline)",
+  "description": "Substack write-up on a paper-processing technique: use Marker OCR to convert research PDFs to Markdown, then batch them through an LLM (e.g. Gemini 2.5 Pro) to extract patterns and strategy insights at scale.",
+  "quadrant": "Techniques",
+  "ring": "Discovered",
+  "source": "Substack",
+  "discovered_by": "manual",
+  "url": "https://papertoprofit.substack.com/p/100-papers-an-hour-10xing-your-strategy",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "OCR",
+    "AI",
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-04",
+  "last_seen": "2026-07-04",
+  "stars_history": {}
+}
