@@ -10,7 +10,7 @@
   "canonical_url": "github.com/openai/codex-plugin-cc",
   "also_seen": [],
   "company": "OpenAI",
-  "stars": 1532,
+  "stars": 906,
   "momentum": 35,
   "tags": [
     "javascript"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-07",
   "stars_history": {
     "2026-07-03": 352,
     "2026-07-04": 634,
     "2026-07-05": 718,
-    "2026-07-06": 1532
+    "2026-07-06": 1532,
+    "2026-07-07": 906
   }
 }

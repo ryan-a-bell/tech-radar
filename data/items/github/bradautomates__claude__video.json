@@ -1,0 +1,25 @@
+{
+  "id": "github:bradautomates/claude-video",
+  "name": "claude-video",
+  "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/bradautomates/claude-video",
+  "canonical_url": "github.com/bradautomates/claude-video",
+  "also_seen": [],
+  "company": null,
+  "stars": 427,
+  "momentum": 42,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-07",
+  "last_seen": "2026-07-07",
+  "stars_history": {
+    "2026-07-07": 427
+  }
+}

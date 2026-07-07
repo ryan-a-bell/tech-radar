@@ -10,7 +10,7 @@
   "canonical_url": "github.com/alirezarezvani/claude-skills",
   "also_seen": [],
   "company": null,
-  "stars": 392,
+  "stars": 610,
   "momentum": 13,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-07",
   "stars_history": {
     "2026-07-05": 136,
-    "2026-07-06": 392
+    "2026-07-06": 392,
+    "2026-07-07": 610
   }
 }

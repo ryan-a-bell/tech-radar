@@ -10,16 +10,17 @@
   "canonical_url": "github.com/ruvnet/ruview",
   "also_seen": [],
   "company": null,
-  "stars": 161,
+  "stars": 470,
   "momentum": 43,
   "tags": [
     "rust"
   ],
   "first_seen": "2026-06-10",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-07",
   "stars_history": {
     "2026-06-10": 439,
     "2026-06-11": 420,
-    "2026-07-06": 161
+    "2026-07-06": 161,
+    "2026-07-07": 470
   }
 }

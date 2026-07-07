@@ -1,0 +1,25 @@
+{
+  "id": "github:karakeep-app/karakeep",
+  "name": "karakeep",
+  "description": "A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/karakeep-app/karakeep",
+  "canonical_url": "github.com/karakeep-app/karakeep",
+  "also_seen": [],
+  "company": null,
+  "stars": 199,
+  "momentum": 19,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-07",
+  "last_seen": "2026-07-07",
+  "stars_history": {
+    "2026-07-07": 199
+  }
+}

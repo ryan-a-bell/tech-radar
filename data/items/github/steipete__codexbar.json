@@ -10,7 +10,7 @@
   "canonical_url": "github.com/steipete/codexbar",
   "also_seen": [],
   "company": null,
-  "stars": 153,
+  "stars": 598,
   "momentum": 15,
   "tags": [
     "swift"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-07",
   "stars_history": {
-    "2026-07-06": 153
+    "2026-07-06": 153,
+    "2026-07-07": 598
   }
 }

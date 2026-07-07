@@ -10,7 +10,7 @@
   "canonical_url": "github.com/ogulcancelik/herdr",
   "also_seen": [],
   "company": null,
-  "stars": 651,
+  "stars": 779,
   "momentum": 48,
   "tags": [
     "rust"
@@ -18,12 +18,13 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-07",
   "stars_history": {
     "2026-07-01": 486,
     "2026-07-02": 609,
     "2026-07-04": 478,
     "2026-07-05": 707,
-    "2026-07-06": 651
+    "2026-07-06": 651,
+    "2026-07-07": 779
   }
 }
