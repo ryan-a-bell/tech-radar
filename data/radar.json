@@ -1,7 +1,115 @@
 {
-  "generated": "2026-07-07",
-  "count": 322,
+  "generated": "2026-07-08",
+  "count": 326,
   "items": [
+    {
+      "id": "github:kyutai-labs/pocket-tts",
+      "name": "pocket-tts",
+      "description": "A TTS that fits in your CPU (and pocket)",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kyutai-labs/pocket-tts",
+      "canonical_url": "github.com/kyutai-labs/pocket-tts",
+      "also_seen": [],
+      "company": null,
+      "stars": 531,
+      "momentum": 53,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "stars_history": {
+        "2026-07-08": 531
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MadsLorentzen/ai-job-search",
+      "name": "ai-job-search",
+      "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MadsLorentzen/ai-job-search",
+      "canonical_url": "github.com/madslorentzen/ai-job-search",
+      "also_seen": [],
+      "company": null,
+      "stars": 2514,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "stars_history": {
+        "2026-07-08": 2514
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AhmadIbrahiim/Website-downloader",
+      "name": "Website-downloader",
+      "description": "\ud83d\udca1 Download the complete source code of any website (including all assets). [ Javascripts, Stylesheets, Images ] using Node.js",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AhmadIbrahiim/Website-downloader",
+      "canonical_url": "github.com/ahmadibrahiim/website-downloader",
+      "also_seen": [],
+      "company": null,
+      "stars": 140,
+      "momentum": 14,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "stars_history": {
+        "2026-07-08": 140
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:iOfficeAI/OfficeCLI",
+      "name": "OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "canonical_url": "github.com/iofficeai/officecli",
+      "also_seen": [],
+      "company": null,
+      "stars": 893,
+      "momentum": 89,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-08",
+      "last_seen": "2026-07-08",
+      "stars_history": {
+        "2026-07-08": 893
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:karakeep-app/karakeep",
       "name": "karakeep",
@@ -41,7 +149,7 @@
       "canonical_url": "github.com/bradautomates/claude-video",
       "also_seen": [],
       "company": null,
-      "stars": 427,
+      "stars": 965,
       "momentum": 42,
       "tags": [
         "python"
@@ -49,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
-        "2026-07-07": 427
+        "2026-07-07": 427,
+        "2026-07-08": 965
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 538
     },
     {
       "id": "github:sindresorhus/awesome",
@@ -148,7 +257,7 @@
       "canonical_url": "github.com/hesreallyhim/awesome-claude-code",
       "also_seen": [],
       "company": null,
-      "stars": 148,
+      "stars": 144,
       "momentum": 14,
       "tags": [
         "python"
@@ -156,12 +265,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-08",
       "stars_history": {
-        "2026-07-06": 148
+        "2026-07-06": 148,
+        "2026-07-08": 144
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -4
     },
     {
       "id": "github:steipete/CodexBar",
@@ -175,7 +285,7 @@
       "canonical_url": "github.com/steipete/codexbar",
       "also_seen": [],
       "company": null,
-      "stars": 598,
+      "stars": 376,
       "momentum": 15,
       "tags": [
         "swift"
@@ -183,13 +293,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-07-06": 153,
-        "2026-07-07": 598
+        "2026-07-07": 598,
+        "2026-07-08": 376
       },
       "trend": "up",
-      "trend_delta": 445
+      "trend_delta": 223
     },
     {
       "id": "github:CoplayDev/unity-mcp",
@@ -258,7 +369,7 @@
       "canonical_url": "github.com/dotnet/skills",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 246,
+      "stars": 64,
       "momentum": 5,
       "tags": [
         "c#"
@@ -266,13 +377,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-07-05": 59,
-        "2026-07-06": 246
+        "2026-07-06": 246,
+        "2026-07-08": 64
       },
       "trend": "up",
-      "trend_delta": 187
+      "trend_delta": 5
     },
     {
       "id": "github:Zackriya-Solutions/meetily",
@@ -286,7 +398,7 @@
       "canonical_url": "github.com/zackriya-solutions/meetily",
       "also_seen": [],
       "company": null,
-      "stars": 2494,
+      "stars": 1777,
       "momentum": 71,
       "tags": [
         "rust"
@@ -294,14 +406,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-07-05": 718,
         "2026-07-06": 1409,
-        "2026-07-07": 2494
+        "2026-07-07": 2494,
+        "2026-07-08": 1777
       },
       "trend": "up",
-      "trend_delta": 1776
+      "trend_delta": 1059
     },
     {
       "id": "github:immich-app/immich",
@@ -1778,7 +1891,7 @@
       "canonical_url": "github.com/tencentcloud/cubesandbox",
       "also_seen": [],
       "company": null,
-      "stars": 60,
+      "stars": 664,
       "momentum": 7,
       "tags": [
         "rust"
@@ -1786,13 +1899,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-07-02": 79,
-        "2026-07-04": 60
+        "2026-07-04": 60,
+        "2026-07-08": 664
       },
-      "trend": "down",
-      "trend_delta": -19
+      "trend": "up",
+      "trend_delta": 585
     },
     {
       "id": "manual:bloomberg",
@@ -4861,21 +4975,22 @@
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "also_seen": [],
       "company": null,
-      "stars": 1378,
+      "stars": 1691,
       "momentum": 35,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-06-21": 352,
         "2026-07-05": 471,
         "2026-07-06": 981,
-        "2026-07-07": 1378
+        "2026-07-07": 1378,
+        "2026-07-08": 1691
       },
       "trend": "up",
-      "trend_delta": 1026
+      "trend_delta": 1339
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -6761,21 +6876,22 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 470,
+      "stars": 1129,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
         "2026-07-06": 161,
-        "2026-07-07": 470
+        "2026-07-07": 470,
+        "2026-07-08": 1129
       },
       "trend": "up",
-      "trend_delta": 50
+      "trend_delta": 709
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -6926,13 +7042,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1112,
+      "stars": 1317,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-08",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -6940,11 +7056,12 @@
         "2026-06-12": 2660,
         "2026-06-13": 1507,
         "2026-06-14": 1514,
-        "2026-07-07": 1112
+        "2026-07-07": 1112,
+        "2026-07-08": 1317
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -402
+      "trend_delta": -197
     },
     {
       "id": "github:Andyyyy64/whichllm",
