@@ -10,7 +10,7 @@
   "canonical_url": "github.com/tencentcloud/cubesandbox",
   "also_seen": [],
   "company": null,
-  "stars": 60,
+  "stars": 664,
   "momentum": 7,
   "tags": [
     "rust"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-04",
+  "last_seen": "2026-07-08",
   "stars_history": {
     "2026-07-02": 79,
-    "2026-07-04": 60
+    "2026-07-04": 60,
+    "2026-07-08": 664
   }
 }

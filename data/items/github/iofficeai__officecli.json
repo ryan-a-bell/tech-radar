@@ -1,0 +1,25 @@
+{
+  "id": "github:iOfficeAI/OfficeCLI",
+  "name": "OfficeCLI",
+  "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/iOfficeAI/OfficeCLI",
+  "canonical_url": "github.com/iofficeai/officecli",
+  "also_seen": [],
+  "company": null,
+  "stars": 893,
+  "momentum": 89,
+  "tags": [
+    "c#"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "stars_history": {
+    "2026-07-08": 893
+  }
+}

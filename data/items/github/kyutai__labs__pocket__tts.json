@@ -1,0 +1,25 @@
+{
+  "id": "github:kyutai-labs/pocket-tts",
+  "name": "pocket-tts",
+  "description": "A TTS that fits in your CPU (and pocket)",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/kyutai-labs/pocket-tts",
+  "canonical_url": "github.com/kyutai-labs/pocket-tts",
+  "also_seen": [],
+  "company": null,
+  "stars": 531,
+  "momentum": 53,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "stars_history": {
+    "2026-07-08": 531
+  }
+}

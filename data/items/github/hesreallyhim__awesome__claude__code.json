@@ -10,7 +10,7 @@
   "canonical_url": "github.com/hesreallyhim/awesome-claude-code",
   "also_seen": [],
   "company": null,
-  "stars": 148,
+  "stars": 144,
   "momentum": 14,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-06",
+  "last_seen": "2026-07-08",
   "stars_history": {
-    "2026-07-06": 148
+    "2026-07-06": 148,
+    "2026-07-08": 144
   }
 }

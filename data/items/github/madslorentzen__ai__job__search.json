@@ -1,0 +1,25 @@
+{
+  "id": "github:MadsLorentzen/ai-job-search",
+  "name": "ai-job-search",
+  "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/MadsLorentzen/ai-job-search",
+  "canonical_url": "github.com/madslorentzen/ai-job-search",
+  "also_seen": [],
+  "company": null,
+  "stars": 2514,
+  "momentum": 100,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "stars_history": {
+    "2026-07-08": 2514
+  }
+}

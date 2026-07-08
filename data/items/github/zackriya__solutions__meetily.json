@@ -10,7 +10,7 @@
   "canonical_url": "github.com/zackriya-solutions/meetily",
   "also_seen": [],
   "company": null,
-  "stars": 2494,
+  "stars": 1777,
   "momentum": 71,
   "tags": [
     "rust"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-07",
+  "last_seen": "2026-07-08",
   "stars_history": {
     "2026-07-05": 718,
     "2026-07-06": 1409,
-    "2026-07-07": 2494
+    "2026-07-07": 2494,
+    "2026-07-08": 1777
   }
 }
