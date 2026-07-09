@@ -10,7 +10,7 @@
   "canonical_url": "github.com/madslorentzen/ai-job-search",
   "also_seen": [],
   "company": null,
-  "stars": 2514,
+  "stars": 5079,
   "momentum": 100,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-08",
-  "last_seen": "2026-07-08",
+  "last_seen": "2026-07-09",
   "stars_history": {
-    "2026-07-08": 2514
+    "2026-07-08": 2514,
+    "2026-07-09": 5079
   }
 }

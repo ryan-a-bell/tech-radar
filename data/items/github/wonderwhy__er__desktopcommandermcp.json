@@ -1,0 +1,25 @@
+{
+  "id": "github:wonderwhy-er/DesktopCommanderMCP",
+  "name": "DesktopCommanderMCP",
+  "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+  "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
+  "also_seen": [],
+  "company": null,
+  "stars": 28,
+  "momentum": 2,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-09",
+  "last_seen": "2026-07-09",
+  "stars_history": {
+    "2026-07-09": 28
+  }
+}
