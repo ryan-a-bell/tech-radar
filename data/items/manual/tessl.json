@@ -1,0 +1,25 @@
+{
+  "id": "manual:tessl",
+  "name": "Tessl",
+  "description": "Agent enablement platform: a management and governance layer for AI agent skills \u2014 security scanning and policy enforcement, a shared skill registry with versioning, and usage/performance monitoring for enterprise teams adopting AI agents.",
+  "quadrant": "Platforms",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://tessl.io/",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Tessl AI Ltd",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI",
+    "Agents",
+    "Skills"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-09",
+  "last_seen": "2026-07-09",
+  "stars_history": {}
+}
