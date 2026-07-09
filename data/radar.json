@@ -1,7 +1,169 @@
 {
-  "generated": "2026-07-08",
-  "count": 326,
+  "generated": "2026-07-09",
+  "count": 332,
   "items": [
+    {
+      "id": "github:prisma/prisma",
+      "name": "prisma",
+      "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/prisma/prisma",
+      "canonical_url": "github.com/prisma/prisma",
+      "also_seen": [],
+      "company": null,
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 46
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:huxingyi/autoremesher",
+      "name": "autoremesher",
+      "description": "Automatic quad remeshing tool",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/huxingyi/autoremesher",
+      "canonical_url": "github.com/huxingyi/autoremesher",
+      "also_seen": [],
+      "company": null,
+      "stars": 296,
+      "momentum": 29,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 296
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:argoproj/argo-cd",
+      "name": "argo-cd",
+      "description": "Declarative Continuous Deployment for Kubernetes",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/argoproj/argo-cd",
+      "canonical_url": "github.com/argoproj/argo-cd",
+      "also_seen": [],
+      "company": null,
+      "stars": 29,
+      "momentum": 2,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 29
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TencentCloud/TencentDB-Agent-Memory",
+      "name": "TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
+      "also_seen": [],
+      "company": null,
+      "stars": 318,
+      "momentum": 31,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 318
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Diolinux/PhotoGIMP",
+      "name": "PhotoGIMP",
+      "description": "A Patch for GIMP 3+ for Photoshop Users",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Diolinux/PhotoGIMP",
+      "canonical_url": "github.com/diolinux/photogimp",
+      "also_seen": [],
+      "company": null,
+      "stars": 1125,
+      "momentum": 100,
+      "tags": [
+        "css"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 1125
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:wonderwhy-er/DesktopCommanderMCP",
+      "name": "DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 28,
+      "momentum": 2,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-09",
+      "stars_history": {
+        "2026-07-09": 28
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:kyutai-labs/pocket-tts",
       "name": "pocket-tts",
@@ -41,7 +203,7 @@
       "canonical_url": "github.com/madslorentzen/ai-job-search",
       "also_seen": [],
       "company": null,
-      "stars": 2514,
+      "stars": 5079,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -49,12 +211,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
-        "2026-07-08": 2514
+        "2026-07-08": 2514,
+        "2026-07-09": 5079
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2565
     },
     {
       "id": "github:AhmadIbrahiim/Website-downloader",
@@ -95,7 +258,7 @@
       "canonical_url": "github.com/iofficeai/officecli",
       "also_seen": [],
       "company": null,
-      "stars": 893,
+      "stars": 1717,
       "momentum": 89,
       "tags": [
         "c#"
@@ -103,12 +266,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
-        "2026-07-08": 893
+        "2026-07-08": 893,
+        "2026-07-09": 1717
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 824
     },
     {
       "id": "github:karakeep-app/karakeep",
@@ -149,7 +313,7 @@
       "canonical_url": "github.com/bradautomates/claude-video",
       "also_seen": [],
       "company": null,
-      "stars": 965,
+      "stars": 951,
       "momentum": 42,
       "tags": [
         "python"
@@ -157,13 +321,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-07-07": 427,
-        "2026-07-08": 965
+        "2026-07-08": 965,
+        "2026-07-09": 951
       },
       "trend": "up",
-      "trend_delta": 538
+      "trend_delta": 524
     },
     {
       "id": "github:sindresorhus/awesome",
@@ -1891,7 +2056,7 @@
       "canonical_url": "github.com/tencentcloud/cubesandbox",
       "also_seen": [],
       "company": null,
-      "stars": 664,
+      "stars": 564,
       "momentum": 7,
       "tags": [
         "rust"
@@ -1899,14 +2064,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-07-02": 79,
         "2026-07-04": 60,
-        "2026-07-08": 664
+        "2026-07-08": 664,
+        "2026-07-09": 564
       },
       "trend": "up",
-      "trend_delta": 585
+      "trend_delta": 485
     },
     {
       "id": "manual:bloomberg",
@@ -4975,22 +5141,23 @@
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "also_seen": [],
       "company": null,
-      "stars": 1691,
+      "stars": 1218,
       "momentum": 35,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-21": 352,
         "2026-07-05": 471,
         "2026-07-06": 981,
         "2026-07-07": 1378,
-        "2026-07-08": 1691
+        "2026-07-08": 1691,
+        "2026-07-09": 1218
       },
       "trend": "up",
-      "trend_delta": 1339
+      "trend_delta": 866
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -5890,21 +6057,22 @@
       "canonical_url": "github.com/alibaba/zvec",
       "also_seen": [],
       "company": null,
-      "stars": 382,
+      "stars": 395,
       "momentum": 25,
       "tags": [
         "c++"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-16": 251,
         "2026-06-17": 156,
         "2026-06-19": 259,
-        "2026-07-07": 382
+        "2026-07-07": 382,
+        "2026-07-09": 395
       },
       "trend": "up",
-      "trend_delta": 123
+      "trend_delta": 136
     },
     {
       "id": "github:Universal-Debloater-Alliance/universal-android-debloater-next-generation",
@@ -6876,22 +7044,23 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 1129,
+      "stars": 799,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
         "2026-07-06": 161,
         "2026-07-07": 470,
-        "2026-07-08": 1129
+        "2026-07-08": 1129,
+        "2026-07-09": 799
       },
       "trend": "up",
-      "trend_delta": 709
+      "trend_delta": 379
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -7042,13 +7211,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1317,
+      "stars": 1297,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -7057,11 +7226,12 @@
         "2026-06-13": 1507,
         "2026-06-14": 1514,
         "2026-07-07": 1112,
-        "2026-07-08": 1317
+        "2026-07-08": 1317,
+        "2026-07-09": 1297
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -197
+      "trend_delta": -217
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -7604,13 +7774,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 1209,
+      "stars": 1116,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -7625,11 +7795,12 @@
         "2026-06-20": 1110,
         "2026-07-01": 890,
         "2026-07-03": 897,
-        "2026-07-04": 1209
+        "2026-07-04": 1209,
+        "2026-07-09": 1116
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 99
+      "trend_delta": 226
     },
     {
       "id": "github:openai/plugins",
@@ -8055,13 +8226,13 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 458,
+      "stars": 352,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-07-09",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
@@ -8071,10 +8242,11 @@
         "2026-06-09": 3177,
         "2026-06-10": 2561,
         "2026-06-11": 2535,
-        "2026-07-07": 458
+        "2026-07-07": 458,
+        "2026-07-09": 352
       },
       "trend": "down",
-      "trend_delta": -2077
+      "trend_delta": -2183
     },
     {
       "id": "github:NVIDIA/cosmos",
