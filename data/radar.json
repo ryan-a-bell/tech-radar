@@ -1,7 +1,165 @@
 {
-  "generated": "2026-07-09",
-  "count": 333,
+  "generated": "2026-07-10",
+  "count": 339,
   "items": [
+    {
+      "id": "github:vxcontrol/pentagi",
+      "name": "pentagi",
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "canonical_url": "github.com/vxcontrol/pentagi",
+      "also_seen": [],
+      "company": null,
+      "stars": 535,
+      "momentum": 53,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 535
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:unclecode/crawl4ai",
+      "name": "crawl4ai",
+      "description": "\ud83d\ude80\ud83e\udd16 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/unclecode/crawl4ai",
+      "canonical_url": "github.com/unclecode/crawl4ai",
+      "also_seen": [],
+      "company": null,
+      "stars": 215,
+      "momentum": 21,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 215
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/claude-cookbooks",
+      "name": "claude-cookbooks",
+      "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "canonical_url": "github.com/anthropics/claude-cookbooks",
+      "also_seen": [],
+      "company": "Anthropic",
+      "stars": 194,
+      "momentum": 19,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 194
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:VoltAgent/awesome-design-md",
+      "name": "awesome-design-md",
+      "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "canonical_url": "github.com/voltagent/awesome-design-md",
+      "also_seen": [],
+      "company": null,
+      "stars": 1391,
+      "momentum": 100,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 1391
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:SmartlyDressedGames/U3-SDK",
+      "name": "U3-SDK",
+      "description": "Source code for Unturned, a free open-world zombie survival sandbox game.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/SmartlyDressedGames/U3-SDK",
+      "canonical_url": "github.com/smartlydressedgames/u3-sdk",
+      "also_seen": [],
+      "company": null,
+      "stars": 524,
+      "momentum": 52,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 524
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:imthenachoman/How-To-Secure-A-Linux-Server",
+      "name": "How-To-Secure-A-Linux-Server",
+      "description": "An evolving how-to guide for securing a Linux server.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server",
+      "canonical_url": "github.com/imthenachoman/how-to-secure-a-linux-server",
+      "also_seen": [],
+      "company": null,
+      "stars": 243,
+      "momentum": 24,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-10",
+      "last_seen": "2026-07-10",
+      "stars_history": {
+        "2026-07-10": 243
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:prisma/prisma",
       "name": "prisma",
@@ -14,7 +172,7 @@
       "canonical_url": "github.com/prisma/prisma",
       "also_seen": [],
       "company": null,
-      "stars": 46,
+      "stars": 376,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -22,12 +180,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
-        "2026-07-09": 46
+        "2026-07-09": 46,
+        "2026-07-10": 376
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 330
     },
     {
       "id": "github:huxingyi/autoremesher",
@@ -41,7 +200,7 @@
       "canonical_url": "github.com/huxingyi/autoremesher",
       "also_seen": [],
       "company": null,
-      "stars": 296,
+      "stars": 403,
       "momentum": 29,
       "tags": [
         "c++"
@@ -49,12 +208,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
-        "2026-07-09": 296
+        "2026-07-09": 296,
+        "2026-07-10": 403
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 107
     },
     {
       "id": "github:argoproj/argo-cd",
@@ -176,7 +336,7 @@
       "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
       "also_seen": [],
       "company": null,
-      "stars": 28,
+      "stars": 185,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -184,12 +344,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
-        "2026-07-09": 28
+        "2026-07-09": 28,
+        "2026-07-10": 185
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 157
     },
     {
       "id": "github:kyutai-labs/pocket-tts",
@@ -203,7 +364,7 @@
       "canonical_url": "github.com/kyutai-labs/pocket-tts",
       "also_seen": [],
       "company": null,
-      "stars": 531,
+      "stars": 235,
       "momentum": 53,
       "tags": [
         "python"
@@ -211,12 +372,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-08",
+      "last_seen": "2026-07-10",
       "stars_history": {
-        "2026-07-08": 531
+        "2026-07-08": 531,
+        "2026-07-10": 235
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -296
     },
     {
       "id": "github:MadsLorentzen/ai-job-search",
@@ -285,7 +447,7 @@
       "canonical_url": "github.com/iofficeai/officecli",
       "also_seen": [],
       "company": null,
-      "stars": 1717,
+      "stars": 1929,
       "momentum": 89,
       "tags": [
         "c#"
@@ -293,13 +455,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
         "2026-07-08": 893,
-        "2026-07-09": 1717
+        "2026-07-09": 1717,
+        "2026-07-10": 1929
       },
       "trend": "up",
-      "trend_delta": 824
+      "trend_delta": 1036
     },
     {
       "id": "github:karakeep-app/karakeep",
@@ -340,7 +503,7 @@
       "canonical_url": "github.com/bradautomates/claude-video",
       "also_seen": [],
       "company": null,
-      "stars": 951,
+      "stars": 718,
       "momentum": 42,
       "tags": [
         "python"
@@ -348,14 +511,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
         "2026-07-07": 427,
         "2026-07-08": 965,
-        "2026-07-09": 951
+        "2026-07-09": 951,
+        "2026-07-10": 718
       },
       "trend": "up",
-      "trend_delta": 524
+      "trend_delta": 291
     },
     {
       "id": "github:sindresorhus/awesome",
@@ -5168,23 +5332,24 @@
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "also_seen": [],
       "company": null,
-      "stars": 1218,
+      "stars": 1125,
       "momentum": 35,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
         "2026-06-21": 352,
         "2026-07-05": 471,
         "2026-07-06": 981,
         "2026-07-07": 1378,
         "2026-07-08": 1691,
-        "2026-07-09": 1218
+        "2026-07-09": 1218,
+        "2026-07-10": 1125
       },
       "trend": "up",
-      "trend_delta": 866
+      "trend_delta": 773
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -7238,13 +7403,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1297,
+      "stars": 2554,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-10",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -7254,11 +7419,12 @@
         "2026-06-14": 1514,
         "2026-07-07": 1112,
         "2026-07-08": 1317,
-        "2026-07-09": 1297
+        "2026-07-09": 1297,
+        "2026-07-10": 2554
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -217
+      "trend": "up",
+      "trend_delta": 1040
     },
     {
       "id": "github:Andyyyy64/whichllm",
