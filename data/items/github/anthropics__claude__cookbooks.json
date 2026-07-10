@@ -1,0 +1,25 @@
+{
+  "id": "github:anthropics/claude-cookbooks",
+  "name": "claude-cookbooks",
+  "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/anthropics/claude-cookbooks",
+  "canonical_url": "github.com/anthropics/claude-cookbooks",
+  "also_seen": [],
+  "company": "Anthropic",
+  "stars": 194,
+  "momentum": 19,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-10",
+  "last_seen": "2026-07-10",
+  "stars_history": {
+    "2026-07-10": 194
+  }
+}

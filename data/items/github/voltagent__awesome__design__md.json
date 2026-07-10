@@ -1,0 +1,23 @@
+{
+  "id": "github:VoltAgent/awesome-design-md",
+  "name": "awesome-design-md",
+  "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/VoltAgent/awesome-design-md",
+  "canonical_url": "github.com/voltagent/awesome-design-md",
+  "also_seen": [],
+  "company": null,
+  "stars": 1391,
+  "momentum": 100,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-10",
+  "last_seen": "2026-07-10",
+  "stars_history": {
+    "2026-07-10": 1391
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/bradautomates/claude-video",
   "also_seen": [],
   "company": null,
-  "stars": 951,
+  "stars": 718,
   "momentum": 42,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-07",
-  "last_seen": "2026-07-09",
+  "last_seen": "2026-07-10",
   "stars_history": {
     "2026-07-07": 427,
     "2026-07-08": 965,
-    "2026-07-09": 951
+    "2026-07-09": 951,
+    "2026-07-10": 718
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/prisma/prisma",
   "also_seen": [],
   "company": null,
-  "stars": 46,
+  "stars": 376,
   "momentum": 4,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-09",
+  "last_seen": "2026-07-10",
   "stars_history": {
-    "2026-07-09": 46
+    "2026-07-09": 46,
+    "2026-07-10": 376
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/huxingyi/autoremesher",
   "also_seen": [],
   "company": null,
-  "stars": 296,
+  "stars": 403,
   "momentum": 29,
   "tags": [
     "c++"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-09",
+  "last_seen": "2026-07-10",
   "stars_history": {
-    "2026-07-09": 296
+    "2026-07-09": 296,
+    "2026-07-10": 403
   }
 }

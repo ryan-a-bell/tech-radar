@@ -10,7 +10,7 @@
   "canonical_url": "github.com/kyutai-labs/pocket-tts",
   "also_seen": [],
   "company": null,
-  "stars": 531,
+  "stars": 235,
   "momentum": 53,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-08",
-  "last_seen": "2026-07-08",
+  "last_seen": "2026-07-10",
   "stars_history": {
-    "2026-07-08": 531
+    "2026-07-08": 531,
+    "2026-07-10": 235
   }
 }

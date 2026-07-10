@@ -10,7 +10,7 @@
   "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
   "also_seen": [],
   "company": null,
-  "stars": 28,
+  "stars": 185,
   "momentum": 2,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-09",
+  "last_seen": "2026-07-10",
   "stars_history": {
-    "2026-07-09": 28
+    "2026-07-09": 28,
+    "2026-07-10": 185
   }
 }
