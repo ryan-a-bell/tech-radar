@@ -1,7 +1,358 @@
 {
-  "generated": "2026-07-10",
-  "count": 339,
+  "generated": "2026-07-11",
+  "count": 352,
   "items": [
+    {
+      "id": "github:jbeder/yaml-cpp",
+      "name": "yaml-cpp",
+      "description": "A YAML parser and emitter in C++",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jbeder/yaml-cpp",
+      "canonical_url": "github.com/jbeder/yaml-cpp",
+      "also_seen": [],
+      "company": null,
+      "stars": 69,
+      "momentum": 6,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 69
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hashicorp/terraform",
+      "name": "terraform",
+      "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hashicorp/terraform",
+      "canonical_url": "github.com/hashicorp/terraform",
+      "also_seen": [],
+      "company": "HashiCorp",
+      "stars": 172,
+      "momentum": 17,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 172
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tailscale/tailscale",
+      "name": "tailscale",
+      "description": "The easiest, most secure way to use WireGuard and 2FA.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tailscale/tailscale",
+      "canonical_url": "github.com/tailscale/tailscale",
+      "also_seen": [],
+      "company": null,
+      "stars": 143,
+      "momentum": 14,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 143
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:google-labs-code/stitch-skills",
+      "name": "stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "canonical_url": "github.com/google-labs-code/stitch-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 117,
+      "momentum": 11,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 117
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vercel/next.js",
+      "name": "next.js",
+      "description": "The React Framework",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vercel/next.js",
+      "canonical_url": "github.com/vercel/next.js",
+      "also_seen": [],
+      "company": "Vercel",
+      "stars": 191,
+      "momentum": 19,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 191
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:zeux/meshoptimizer",
+      "name": "meshoptimizer",
+      "description": "Mesh optimization library that makes meshes smaller and faster to render",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/zeux/meshoptimizer",
+      "canonical_url": "github.com/zeux/meshoptimizer",
+      "also_seen": [],
+      "company": null,
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:grpc/grpc",
+      "name": "grpc",
+      "description": "C++ based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/grpc/grpc",
+      "canonical_url": "github.com/grpc/grpc",
+      "also_seen": [],
+      "company": null,
+      "stars": 78,
+      "momentum": 7,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 78
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:davila7/claude-code-templates",
+      "name": "claude-code-templates",
+      "description": "CLI tool for configuring and monitoring Claude Code",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "canonical_url": "github.com/davila7/claude-code-templates",
+      "also_seen": [],
+      "company": null,
+      "stars": 118,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 118
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:oven-sh/bun",
+      "name": "bun",
+      "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager \u2013 all in one",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/oven-sh/bun",
+      "canonical_url": "github.com/oven-sh/bun",
+      "also_seen": [],
+      "company": "Oven",
+      "stars": 209,
+      "momentum": 20,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 209
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chriskohlhoff/asio",
+      "name": "asio",
+      "description": "Asio C++ Library",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chriskohlhoff/asio",
+      "canonical_url": "github.com/chriskohlhoff/asio",
+      "also_seen": [],
+      "company": null,
+      "stars": 92,
+      "momentum": 9,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 92
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:abseil/abseil-cpp",
+      "name": "abseil-cpp",
+      "description": "Abseil Common Libraries (C++)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/abseil/abseil-cpp",
+      "canonical_url": "github.com/abseil/abseil-cpp",
+      "also_seen": [],
+      "company": null,
+      "stars": 89,
+      "momentum": 8,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 89
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/TypeScript",
+      "name": "TypeScript",
+      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/TypeScript",
+      "canonical_url": "github.com/microsoft/typescript",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 177,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 177
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:catchorg/Catch2",
+      "name": "Catch2",
+      "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/catchorg/Catch2",
+      "canonical_url": "github.com/catchorg/catch2",
+      "also_seen": [],
+      "company": null,
+      "stars": 76,
+      "momentum": 7,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-11",
+      "last_seen": "2026-07-11",
+      "stars_history": {
+        "2026-07-11": 76
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:vxcontrol/pentagi",
       "name": "pentagi",
@@ -282,7 +633,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 318,
+      "stars": 123,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -290,12 +641,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-11",
       "stars_history": {
-        "2026-07-09": 318
+        "2026-07-09": 318,
+        "2026-07-11": 123
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -195
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -336,7 +688,7 @@
       "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
       "also_seen": [],
       "company": null,
-      "stars": 185,
+      "stars": 328,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -344,13 +696,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-11",
       "stars_history": {
         "2026-07-09": 28,
-        "2026-07-10": 185
+        "2026-07-10": 185,
+        "2026-07-11": 328
       },
       "trend": "up",
-      "trend_delta": 157
+      "trend_delta": 300
     },
     {
       "id": "github:kyutai-labs/pocket-tts",
@@ -447,7 +800,7 @@
       "canonical_url": "github.com/iofficeai/officecli",
       "also_seen": [],
       "company": null,
-      "stars": 1929,
+      "stars": 1224,
       "momentum": 89,
       "tags": [
         "c#"
@@ -455,14 +808,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-11",
       "stars_history": {
         "2026-07-08": 893,
         "2026-07-09": 1717,
-        "2026-07-10": 1929
+        "2026-07-10": 1929,
+        "2026-07-11": 1224
       },
       "trend": "up",
-      "trend_delta": 1036
+      "trend_delta": 331
     },
     {
       "id": "github:karakeep-app/karakeep",
@@ -5912,24 +6266,25 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 973,
+      "stars": 1712,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-11",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
         "2026-06-21": 1441,
         "2026-06-22": 1443,
         "2026-06-23": 2051,
-        "2026-07-05": 973
+        "2026-07-05": 973,
+        "2026-07-11": 1712
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -1078
+      "trend_delta": -339
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -7403,13 +7758,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 2554,
+      "stars": 1116,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-11",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -7420,11 +7775,12 @@
         "2026-07-07": 1112,
         "2026-07-08": 1317,
         "2026-07-09": 1297,
-        "2026-07-10": 2554
+        "2026-07-10": 2554,
+        "2026-07-11": 1116
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 1040
+      "trend": "down",
+      "trend_delta": -398
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -7967,13 +8323,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 1116,
+      "stars": 1013,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-11",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -7989,11 +8345,12 @@
         "2026-07-01": 890,
         "2026-07-03": 897,
         "2026-07-04": 1209,
-        "2026-07-09": 1116
+        "2026-07-09": 1116,
+        "2026-07-11": 1013
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 226
+      "trend": "down",
+      "trend_delta": -196
     },
     {
       "id": "github:openai/plugins",

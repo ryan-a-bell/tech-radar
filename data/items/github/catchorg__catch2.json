@@ -1,0 +1,25 @@
+{
+  "id": "github:catchorg/Catch2",
+  "name": "Catch2",
+  "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/catchorg/Catch2",
+  "canonical_url": "github.com/catchorg/catch2",
+  "also_seen": [],
+  "company": null,
+  "stars": 76,
+  "momentum": 7,
+  "tags": [
+    "c++"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-11",
+  "last_seen": "2026-07-11",
+  "stars_history": {
+    "2026-07-11": 76
+  }
+}

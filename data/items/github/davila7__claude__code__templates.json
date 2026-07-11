@@ -1,0 +1,25 @@
+{
+  "id": "github:davila7/claude-code-templates",
+  "name": "claude-code-templates",
+  "description": "CLI tool for configuring and monitoring Claude Code",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/davila7/claude-code-templates",
+  "canonical_url": "github.com/davila7/claude-code-templates",
+  "also_seen": [],
+  "company": null,
+  "stars": 118,
+  "momentum": 11,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-11",
+  "last_seen": "2026-07-11",
+  "stars_history": {
+    "2026-07-11": 118
+  }
+}

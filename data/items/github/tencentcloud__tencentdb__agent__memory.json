@@ -10,7 +10,7 @@
   "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
   "also_seen": [],
   "company": null,
-  "stars": 318,
+  "stars": 123,
   "momentum": 31,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-09",
+  "last_seen": "2026-07-11",
   "stars_history": {
-    "2026-07-09": 318
+    "2026-07-09": 318,
+    "2026-07-11": 123
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "github:chriskohlhoff/asio",
+  "name": "asio",
+  "description": "Asio C++ Library",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/chriskohlhoff/asio",
+  "canonical_url": "github.com/chriskohlhoff/asio",
+  "also_seen": [],
+  "company": null,
+  "stars": 92,
+  "momentum": 9,
+  "tags": [
+    "c++"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-11",
+  "last_seen": "2026-07-11",
+  "stars_history": {
+    "2026-07-11": 92
+  }
+}
