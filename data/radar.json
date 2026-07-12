@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-12",
-  "count": 365,
+  "count": 366,
   "items": [
     {
       "id": "github:malisper/pgrust",
@@ -287,6 +287,29 @@
       "canonical_url": null,
       "also_seen": [],
       "company": "US DoD",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:cameo-magicdraw",
+      "name": "Cameo/MagicDraw",
+      "description": "Cameo Systems Modeler / MagicDraw (No Magic, Dassault Syst\u00e8mes) \u2014 commercial MBSE/UML/SysML modeling tool widely used for systems engineering and enterprise architecture.",
+      "quadrant": "Tools",
+      "ring": "Adopted",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.3ds.com/products/catia/no-magic",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "Dassault Syst\u00e8mes",
       "stars": 0,
       "momentum": 0,
       "tags": [],
