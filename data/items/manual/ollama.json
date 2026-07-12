@@ -1,0 +1,21 @@
+{
+  "id": "manual:ollama",
+  "name": "Ollama",
+  "description": "Local LLM runtime for running models on your own machine, with a simple CLI/API and model library.",
+  "quadrant": "Tools",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://ollama.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}

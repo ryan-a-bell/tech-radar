@@ -1,0 +1,21 @@
+{
+  "id": "manual:lm-studio",
+  "name": "LM Studio",
+  "description": "Desktop app for discovering, downloading, and running local LLMs with a GUI.",
+  "quadrant": "Tools",
+  "ring": "Archived",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://lmstudio.ai",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": "2026-07-12",
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}

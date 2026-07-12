@@ -1,0 +1,21 @@
+{
+  "id": "manual:vllm",
+  "name": "vLLM",
+  "description": "High-throughput, memory-efficient inference and serving engine for LLMs (PagedAttention).",
+  "quadrant": "Tools",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/vllm-project/vllm",
+  "canonical_url": "github.com/vllm-project/vllm",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}
