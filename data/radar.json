@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-11",
-  "count": 352,
+  "generated": "2026-07-12",
+  "count": 357,
   "items": [
+    {
+      "id": "github:malisper/pgrust",
+      "name": "pgrust",
+      "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/malisper/pgrust",
+      "canonical_url": "github.com/malisper/pgrust",
+      "also_seen": [],
+      "company": null,
+      "stars": 774,
+      "momentum": 77,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {
+        "2026-07-12": 774
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nuxt/nuxt",
+      "name": "nuxt",
+      "description": "the full-stack Vue framework",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nuxt/nuxt",
+      "canonical_url": "github.com/nuxt/nuxt",
+      "also_seen": [],
+      "company": null,
+      "stars": 16,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {
+        "2026-07-12": 16
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:DayuanJiang/next-ai-draw-io",
+      "name": "next-ai-draw-io",
+      "description": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+      "canonical_url": "github.com/dayuanjiang/next-ai-draw-io",
+      "also_seen": [],
+      "company": null,
+      "stars": 81,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {
+        "2026-07-12": 81
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nasa/fprime",
+      "name": "fprime",
+      "description": "F\u00b4 - A flight software and embedded systems framework",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nasa/fprime",
+      "canonical_url": "github.com/nasa/fprime",
+      "also_seen": [],
+      "company": null,
+      "stars": 22,
+      "momentum": 2,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {
+        "2026-07-12": 22
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:home-assistant/core",
+      "name": "core",
+      "description": "\ud83c\udfe1 Open source home automation that puts local control and privacy first.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/home-assistant/core",
+      "canonical_url": "github.com/home-assistant/core",
+      "also_seen": [],
+      "company": null,
+      "stars": 80,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-07-12",
+      "stars_history": {
+        "2026-07-12": 80
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:jbeder/yaml-cpp",
       "name": "yaml-cpp",
@@ -41,7 +176,7 @@
       "canonical_url": "github.com/hashicorp/terraform",
       "also_seen": [],
       "company": "HashiCorp",
-      "stars": 172,
+      "stars": 229,
       "momentum": 17,
       "tags": [
         "go"
@@ -49,12 +184,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 172
+        "2026-07-11": 172,
+        "2026-07-12": 229
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 57
     },
     {
       "id": "github:tailscale/tailscale",
@@ -95,7 +231,7 @@
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "also_seen": [],
       "company": null,
-      "stars": 117,
+      "stars": 340,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -103,12 +239,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 117
+        "2026-07-11": 117,
+        "2026-07-12": 340
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 223
     },
     {
       "id": "github:vercel/next.js",
@@ -122,7 +259,7 @@
       "canonical_url": "github.com/vercel/next.js",
       "also_seen": [],
       "company": "Vercel",
-      "stars": 191,
+      "stars": 334,
       "momentum": 19,
       "tags": [
         "javascript"
@@ -130,12 +267,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 191
+        "2026-07-11": 191,
+        "2026-07-12": 334
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 143
     },
     {
       "id": "github:zeux/meshoptimizer",
@@ -149,7 +287,7 @@
       "canonical_url": "github.com/zeux/meshoptimizer",
       "also_seen": [],
       "company": null,
-      "stars": 91,
+      "stars": 110,
       "momentum": 9,
       "tags": [
         "c++"
@@ -157,12 +295,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 91
+        "2026-07-11": 91,
+        "2026-07-12": 110
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 19
     },
     {
       "id": "github:grpc/grpc",
@@ -203,7 +342,7 @@
       "canonical_url": "github.com/davila7/claude-code-templates",
       "also_seen": [],
       "company": null,
-      "stars": 118,
+      "stars": 232,
       "momentum": 11,
       "tags": [
         "python"
@@ -211,12 +350,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 118
+        "2026-07-11": 118,
+        "2026-07-12": 232
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 114
     },
     {
       "id": "github:oven-sh/bun",
@@ -230,7 +370,7 @@
       "canonical_url": "github.com/oven-sh/bun",
       "also_seen": [],
       "company": "Oven",
-      "stars": 209,
+      "stars": 658,
       "momentum": 20,
       "tags": [
         "rust"
@@ -238,12 +378,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 209
+        "2026-07-11": 209,
+        "2026-07-12": 658
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 449
     },
     {
       "id": "github:chriskohlhoff/asio",
@@ -257,7 +398,7 @@
       "canonical_url": "github.com/chriskohlhoff/asio",
       "also_seen": [],
       "company": null,
-      "stars": 92,
+      "stars": 76,
       "momentum": 9,
       "tags": [
         "c++"
@@ -265,12 +406,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 92
+        "2026-07-11": 92,
+        "2026-07-12": 76
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -16
     },
     {
       "id": "github:abseil/abseil-cpp",
@@ -284,7 +426,7 @@
       "canonical_url": "github.com/abseil/abseil-cpp",
       "also_seen": [],
       "company": null,
-      "stars": 89,
+      "stars": 118,
       "momentum": 8,
       "tags": [
         "c++"
@@ -292,12 +434,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 89
+        "2026-07-11": 89,
+        "2026-07-12": 118
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 29
     },
     {
       "id": "github:microsoft/TypeScript",
@@ -338,7 +481,7 @@
       "canonical_url": "github.com/catchorg/catch2",
       "also_seen": [],
       "company": null,
-      "stars": 76,
+      "stars": 113,
       "momentum": 7,
       "tags": [
         "c++"
@@ -346,12 +489,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-11": 76
+        "2026-07-11": 76,
+        "2026-07-12": 113
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 37
     },
     {
       "id": "github:vxcontrol/pentagi",
@@ -419,7 +563,7 @@
       "canonical_url": "github.com/anthropics/claude-cookbooks",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 194,
+      "stars": 219,
       "momentum": 19,
       "tags": [
         "jupyter notebook"
@@ -427,12 +571,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-10": 194
+        "2026-07-10": 194,
+        "2026-07-12": 219
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 25
     },
     {
       "id": "github:VoltAgent/awesome-design-md",
@@ -523,7 +668,7 @@
       "canonical_url": "github.com/prisma/prisma",
       "also_seen": [],
       "company": null,
-      "stars": 376,
+      "stars": 37,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -531,13 +676,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-07-09": 46,
-        "2026-07-10": 376
+        "2026-07-10": 376,
+        "2026-07-12": 37
       },
-      "trend": "up",
-      "trend_delta": 330
+      "trend": "down",
+      "trend_delta": -9
     },
     {
       "id": "github:huxingyi/autoremesher",
@@ -688,7 +834,7 @@
       "canonical_url": "github.com/wonderwhy-er/desktopcommandermcp",
       "also_seen": [],
       "company": null,
-      "stars": 328,
+      "stars": 909,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -696,14 +842,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-07-09": 28,
         "2026-07-10": 185,
-        "2026-07-11": 328
+        "2026-07-11": 328,
+        "2026-07-12": 909
       },
       "trend": "up",
-      "trend_delta": 300
+      "trend_delta": 881
     },
     {
       "id": "github:kyutai-labs/pocket-tts",
@@ -1332,7 +1479,7 @@
       "canonical_url": "github.com/ansible/ansible",
       "also_seen": [],
       "company": null,
-      "stars": 65,
+      "stars": 24,
       "momentum": 6,
       "tags": [
         "python"
@@ -1340,12 +1487,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-07-04": 65
+        "2026-07-04": 65,
+        "2026-07-12": 24
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -41
     },
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -1782,7 +1930,7 @@
       "canonical_url": "github.com/actions/checkout",
       "also_seen": [],
       "company": null,
-      "stars": 129,
+      "stars": 8,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -1790,13 +1938,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-07-03": 26,
-        "2026-07-04": 129
+        "2026-07-04": 129,
+        "2026-07-12": 8
       },
-      "trend": "up",
-      "trend_delta": 103
+      "trend": "down",
+      "trend_delta": -121
     },
     {
       "id": "github:agentskills/agentskills",
@@ -6137,18 +6286,19 @@
       "canonical_url": "github.com/dotnet/aspnetcore",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 14,
+      "stars": 4,
       "momentum": 1,
       "tags": [
         "c#"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-19",
+      "last_seen": "2026-07-12",
       "stars_history": {
-        "2026-06-19": 14
+        "2026-06-19": 14,
+        "2026-07-12": 4
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -10
     },
     {
       "id": "github:LibreTranslate/LibreTranslate",
@@ -6716,19 +6866,20 @@
       "canonical_url": "github.com/cypress-io/cypress",
       "also_seen": [],
       "company": null,
-      "stars": 13,
+      "stars": 19,
       "momentum": 1,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-06-17",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-06-16": 11,
-        "2026-06-17": 13
+        "2026-06-17": 13,
+        "2026-07-12": 19
       },
       "trend": "up",
-      "trend_delta": 2
+      "trend_delta": 6
     },
     {
       "id": "github:teslamate-org/teslamate",
@@ -7424,21 +7575,22 @@
       "canonical_url": "github.com/microsoft/powertoys",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 57,
+      "stars": 39,
       "momentum": 9,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-06-12": 90,
         "2026-06-13": 374,
         "2026-06-14": 370,
-        "2026-06-28": 57
+        "2026-06-28": 57,
+        "2026-07-12": 39
       },
       "trend": "down",
-      "trend_delta": -313
+      "trend_delta": -18
     },
     {
       "id": "github:LMCache/LMCache",
@@ -8323,13 +8475,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 1013,
+      "stars": 740,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -8346,11 +8498,12 @@
         "2026-07-03": 897,
         "2026-07-04": 1209,
         "2026-07-09": 1116,
-        "2026-07-11": 1013
+        "2026-07-11": 1013,
+        "2026-07-12": 740
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -196
+      "trend_delta": -469
     },
     {
       "id": "github:openai/plugins",
@@ -8364,22 +8517,23 @@
       "canonical_url": "github.com/openai/plugins",
       "also_seen": [],
       "company": "OpenAI",
-      "stars": 284,
+      "stars": 29,
       "momentum": 4,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-10",
+      "last_seen": "2026-07-12",
       "stars_history": {
         "2026-06-06": 215,
         "2026-06-07": 262,
         "2026-06-08": 296,
         "2026-06-09": 284,
-        "2026-06-10": 284
+        "2026-06-10": 284,
+        "2026-07-12": 29
       },
-      "trend": "up",
-      "trend_delta": 69
+      "trend": "down",
+      "trend_delta": -255
     },
     {
       "id": "github:nginx/nginx",
