@@ -1,0 +1,21 @@
+{
+  "id": "manual:modelica",
+  "name": "Modelica",
+  "description": "Open, equation-based, object-oriented language for modeling complex multi-domain physical systems (mechanical, electrical, thermal, control).",
+  "quadrant": "Languages",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://modelica.org",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Modelica Association",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}
