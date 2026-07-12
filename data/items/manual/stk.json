@@ -1,0 +1,21 @@
+{
+  "id": "manual:stk",
+  "name": "STK",
+  "description": "Systems Tool Kit (formerly Satellite Tool Kit, AGI, now Ansys) \u2014 physics-based modeling and simulation for space, defense, and aerospace mission analysis.",
+  "quadrant": "Tools",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.ansys.com/products/missions/ansys-stk",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Ansys",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}

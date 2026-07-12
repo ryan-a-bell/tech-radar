@@ -1,0 +1,21 @@
+{
+  "id": "manual:ansys",
+  "name": "ANSYS",
+  "description": "Commercial finite element analysis (FEA) and multiphysics simulation suite \u2014 structural, thermal, fluid, and electromagnetic analysis.",
+  "quadrant": "Tools",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.ansys.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Ansys",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}
