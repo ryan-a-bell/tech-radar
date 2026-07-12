@@ -1,0 +1,25 @@
+{
+  "id": "github:malisper/pgrust",
+  "name": "pgrust",
+  "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/malisper/pgrust",
+  "canonical_url": "github.com/malisper/pgrust",
+  "also_seen": [],
+  "company": null,
+  "stars": 774,
+  "momentum": 77,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {
+    "2026-07-12": 774
+  }
+}

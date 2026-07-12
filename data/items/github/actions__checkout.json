@@ -10,7 +10,7 @@
   "canonical_url": "github.com/actions/checkout",
   "also_seen": [],
   "company": null,
-  "stars": 129,
+  "stars": 8,
   "momentum": 2,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-04",
+  "last_seen": "2026-07-12",
   "stars_history": {
     "2026-07-03": 26,
-    "2026-07-04": 129
+    "2026-07-04": 129,
+    "2026-07-12": 8
   }
 }

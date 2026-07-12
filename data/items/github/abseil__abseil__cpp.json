@@ -10,7 +10,7 @@
   "canonical_url": "github.com/abseil/abseil-cpp",
   "also_seen": [],
   "company": null,
-  "stars": 89,
+  "stars": 118,
   "momentum": 8,
   "tags": [
     "c++"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-11",
-  "last_seen": "2026-07-11",
+  "last_seen": "2026-07-12",
   "stars_history": {
-    "2026-07-11": 89
+    "2026-07-11": 89,
+    "2026-07-12": 118
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/hashicorp/terraform",
   "also_seen": [],
   "company": "HashiCorp",
-  "stars": 172,
+  "stars": 229,
   "momentum": 17,
   "tags": [
     "go"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-11",
-  "last_seen": "2026-07-11",
+  "last_seen": "2026-07-12",
   "stars_history": {
-    "2026-07-11": 172
+    "2026-07-11": 172,
+    "2026-07-12": 229
   }
 }

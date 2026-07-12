@@ -1,0 +1,25 @@
+{
+  "id": "github:nasa/fprime",
+  "name": "fprime",
+  "description": "F\u00b4 - A flight software and embedded systems framework",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/nasa/fprime",
+  "canonical_url": "github.com/nasa/fprime",
+  "also_seen": [],
+  "company": null,
+  "stars": 22,
+  "momentum": 2,
+  "tags": [
+    "c++"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {
+    "2026-07-12": 22
+  }
+}

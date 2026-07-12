@@ -10,14 +10,15 @@
   "canonical_url": "github.com/dotnet/aspnetcore",
   "also_seen": [],
   "company": "Microsoft",
-  "stars": 14,
+  "stars": 4,
   "momentum": 1,
   "tags": [
     "c#"
   ],
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-19",
+  "last_seen": "2026-07-12",
   "stars_history": {
-    "2026-06-19": 14
+    "2026-06-19": 14,
+    "2026-07-12": 4
   }
 }

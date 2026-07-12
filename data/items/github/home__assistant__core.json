@@ -1,0 +1,25 @@
+{
+  "id": "github:home-assistant/core",
+  "name": "core",
+  "description": "\ud83c\udfe1 Open source home automation that puts local control and privacy first.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/home-assistant/core",
+  "canonical_url": "github.com/home-assistant/core",
+  "also_seen": [],
+  "company": null,
+  "stars": 80,
+  "momentum": 8,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {
+    "2026-07-12": 80
+  }
+}

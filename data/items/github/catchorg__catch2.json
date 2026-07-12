@@ -10,7 +10,7 @@
   "canonical_url": "github.com/catchorg/catch2",
   "also_seen": [],
   "company": null,
-  "stars": 76,
+  "stars": 113,
   "momentum": 7,
   "tags": [
     "c++"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-11",
-  "last_seen": "2026-07-11",
+  "last_seen": "2026-07-12",
   "stars_history": {
-    "2026-07-11": 76
+    "2026-07-11": 76,
+    "2026-07-12": 113
   }
 }

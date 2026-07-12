@@ -10,7 +10,7 @@
   "canonical_url": "github.com/vercel/next.js",
   "also_seen": [],
   "company": "Vercel",
-  "stars": 191,
+  "stars": 334,
   "momentum": 19,
   "tags": [
     "javascript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-11",
-  "last_seen": "2026-07-11",
+  "last_seen": "2026-07-12",
   "stars_history": {
-    "2026-07-11": 191
+    "2026-07-11": 191,
+    "2026-07-12": 334
   }
 }
