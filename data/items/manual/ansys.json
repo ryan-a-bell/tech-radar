@@ -1,0 +1,21 @@
+{
+  "id": "manual:ansys",
+  "name": "ANSYS HFSS / AEDT",
+  "description": "Ansys HFSS (High Frequency Structure Simulator) and Ansys Electronics Desktop (AEDT) \u2014 3D electromagnetic and multiphysics FEA simulation for high-frequency RF, microwave, and antenna design.",
+  "quadrant": "Tools",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.ansys.com/products/electronics/ansys-hfss",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Ansys",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}

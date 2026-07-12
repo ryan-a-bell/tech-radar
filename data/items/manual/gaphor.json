@@ -1,0 +1,21 @@
+{
+  "id": "manual:gaphor",
+  "name": "Gaphor",
+  "description": "Open-source UML and SysML modeling application in Python \u2014 lightweight desktop tool for drawing and maintaining system/software models.",
+  "quadrant": "Tools",
+  "ring": "Trial",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/gaphor/gaphor",
+  "canonical_url": "github.com/gaphor/gaphor",
+  "also_seen": [],
+  "company": "Gaphor",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-12",
+  "last_seen": "2026-07-12",
+  "stars_history": {}
+}
