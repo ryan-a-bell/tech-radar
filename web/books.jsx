@@ -466,6 +466,11 @@ export default function BooksApp() {
           background: "#fff", color: "#000", border: "1px solid #fff",
           padding: "6px 14px", fontSize: 11, letterSpacing: 1,
         }}>READING LIST</span>
+        <a href="similarity.html" style={{
+          background: "transparent", color: "#999", border: "1px solid #444",
+          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
+          fontSize: 11, letterSpacing: 1,
+        }}>SIMILARITY</a>
         <span style={{
           marginLeft: "auto", fontSize: 10, letterSpacing: 1,
           color: status === "live" ? "#4ade80" : "#fbbf24",

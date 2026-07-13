@@ -12,9 +12,11 @@ you get true semantic links (competitors that describe themselves with
 different words) rather than just shared vocabulary.
 
 Backends, in order of preference (whatever is installed wins):
-  1. sentence-transformers  (local MiniLM — no API key, best quality)
-  2. scikit-learn TF-IDF     (lexical, but stemmed/tuned)
-  3. pure-python TF-IDF      (always available; mirrors the JS fallback)
+  1. sentence-transformers  (local MiniLM — no API key, highest quality)
+  2. model2vec              (static/distilled embeddings — semantic, no torch,
+                             lightweight; great when torch isn't available)
+  3. scikit-learn TF-IDF     (lexical, but stemmed/tuned)
+  4. pure-python TF-IDF      (always available; mirrors the JS fallback)
 
 The similarity page works fine WITHOUT running this — it just falls back to
 its own client-side TF-IDF. This script is the quality upgrade path.
@@ -70,7 +72,23 @@ def embed_sentence_transformers(texts):
     return sim, "embeddings:all-MiniLM-L6-v2"
 
 
-# --- backend 2: scikit-learn TF-IDF ----------------------------------------
+# --- backend 2: model2vec (static/distilled embeddings, no torch) ----------
+def embed_model2vec(texts):
+    from model2vec import StaticModel  # type: ignore
+    import numpy as np
+
+    # potion-retrieval-32M is tuned for retrieval/similarity — best separation
+    # of the distilled static models, and still loads in seconds without torch.
+    name = "minishlab/potion-retrieval-32M"
+    model = StaticModel.from_pretrained(name)
+    vecs = model.encode(texts, show_progress_bar=True)
+    vecs = np.asarray(vecs, dtype="float32")
+    vecs /= (np.linalg.norm(vecs, axis=1, keepdims=True) + 1e-9)
+    sim = np.clip(vecs @ vecs.T, -1.0, 1.0)
+    return sim, "embeddings:potion-retrieval-32M"
+
+
+# --- backend 3: scikit-learn TF-IDF ----------------------------------------
 def embed_sklearn(texts):
     from sklearn.feature_extraction.text import TfidfVectorizer  # type: ignore
     from sklearn.metrics.pairwise import cosine_similarity  # type: ignore
@@ -126,6 +144,7 @@ def embed_pure(texts):
 
 def choose_backend(texts):
     for fn, name in ((embed_sentence_transformers, "sentence-transformers"),
+                     (embed_model2vec, "model2vec"),
                      (embed_sklearn, "scikit-learn"),
                      (embed_pure, "pure-python")):
         try:
