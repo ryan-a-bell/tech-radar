@@ -1,0 +1,25 @@
+{
+  "id": "github:pingdotgg/t3code",
+  "name": "t3code",
+  "description": "A typescript project trending on GitHub.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/pingdotgg/t3code",
+  "canonical_url": "github.com/pingdotgg/t3code",
+  "also_seen": [],
+  "company": null,
+  "stars": 75,
+  "momentum": 7,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {
+    "2026-07-13": 75
+  }
+}

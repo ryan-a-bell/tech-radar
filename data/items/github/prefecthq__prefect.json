@@ -1,0 +1,25 @@
+{
+  "id": "github:PrefectHQ/prefect",
+  "name": "prefect",
+  "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PrefectHQ/prefect",
+  "canonical_url": "github.com/prefecthq/prefect",
+  "also_seen": [],
+  "company": null,
+  "stars": 66,
+  "momentum": 6,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {
+    "2026-07-13": 66
+  }
+}

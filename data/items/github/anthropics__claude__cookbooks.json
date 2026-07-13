@@ -10,7 +10,7 @@
   "canonical_url": "github.com/anthropics/claude-cookbooks",
   "also_seen": [],
   "company": "Anthropic",
-  "stars": 219,
+  "stars": 459,
   "momentum": 19,
   "tags": [
     "jupyter notebook"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-10",
-  "last_seen": "2026-07-12",
+  "last_seen": "2026-07-13",
   "stars_history": {
     "2026-07-10": 194,
-    "2026-07-12": 219
+    "2026-07-12": 219,
+    "2026-07-13": 459
   }
 }

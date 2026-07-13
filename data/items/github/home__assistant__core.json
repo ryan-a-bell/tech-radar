@@ -10,7 +10,7 @@
   "canonical_url": "github.com/home-assistant/core",
   "also_seen": [],
   "company": null,
-  "stars": 80,
+  "stars": 400,
   "momentum": 8,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-12",
-  "last_seen": "2026-07-12",
+  "last_seen": "2026-07-13",
   "stars_history": {
-    "2026-07-12": 80
+    "2026-07-12": 80,
+    "2026-07-13": 400
   }
 }

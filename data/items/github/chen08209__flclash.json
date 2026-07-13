@@ -1,0 +1,25 @@
+{
+  "id": "github:chen08209/FlClash",
+  "name": "FlClash",
+  "description": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/chen08209/FlClash",
+  "canonical_url": "github.com/chen08209/flclash",
+  "also_seen": [],
+  "company": null,
+  "stars": 154,
+  "momentum": 15,
+  "tags": [
+    "dart"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {
+    "2026-07-13": 154
+  }
+}

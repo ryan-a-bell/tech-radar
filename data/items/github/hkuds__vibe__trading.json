@@ -9,13 +9,13 @@
   "canonical_url": "github.com/hkuds/vibe-trading",
   "also_seen": [],
   "company": null,
-  "stars": 939,
+  "stars": 768,
   "momentum": 19,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-07-03",
+  "last_seen": "2026-07-13",
   "stars_history": {
     "2026-06-03": 197,
     "2026-06-28": 92,
@@ -23,6 +23,7 @@
     "2026-06-30": 839,
     "2026-07-01": 721,
     "2026-07-02": 694,
-    "2026-07-03": 939
+    "2026-07-03": 939,
+    "2026-07-13": 768
   }
 }

@@ -10,15 +10,16 @@
   "canonical_url": "github.com/crosstalk-solutions/project-nomad",
   "also_seen": [],
   "company": null,
-  "stars": 309,
+  "stars": 125,
   "momentum": 30,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-08",
+  "last_seen": "2026-07-13",
   "stars_history": {
     "2026-06-07": 304,
-    "2026-06-08": 309
+    "2026-06-08": 309,
+    "2026-07-13": 125
   }
 }
