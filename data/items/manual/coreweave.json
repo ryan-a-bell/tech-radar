@@ -1,0 +1,23 @@
+{
+  "id": "manual:coreweave",
+  "name": "CoreWeave",
+  "description": "Neo-cloud \u2014 large-scale GPU infrastructure for AI",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.coreweave.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "CoreWeave",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

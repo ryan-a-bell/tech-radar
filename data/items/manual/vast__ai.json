@@ -1,0 +1,23 @@
+{
+  "id": "manual:vast-ai",
+  "name": "Vast.ai",
+  "description": "Neo-cloud \u2014 GPU rental marketplace",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://vast.ai",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Vast.ai",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

@@ -1,0 +1,21 @@
+{
+  "id": "manual:supabase",
+  "name": "Supabase",
+  "description": "Open-source Firebase alternative \u2014 Postgres backend-as-a-service",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://supabase.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Supabase",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

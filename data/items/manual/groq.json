@@ -1,0 +1,23 @@
+{
+  "id": "manual:groq",
+  "name": "Groq",
+  "description": "LPU-based ultra-low-latency inference (GPUaaS)",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://groq.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Groq",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}
