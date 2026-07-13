@@ -1,0 +1,21 @@
+{
+  "id": "manual:notion",
+  "name": "Notion",
+  "description": "All-in-one workspace with kanban boards and task/matrix views for productivity",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://notion.so",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Notion",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}
