@@ -1,0 +1,23 @@
+{
+  "id": "manual:lambda",
+  "name": "Lambda",
+  "description": "Neo-cloud \u2014 GPU cloud and clusters for AI training/inference",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://lambda.ai",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Lambda",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

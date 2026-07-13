@@ -1,0 +1,23 @@
+{
+  "id": "manual:together-ai",
+  "name": "Together AI",
+  "description": "GPU cloud and inference platform for open models",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.together.ai",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Together AI",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

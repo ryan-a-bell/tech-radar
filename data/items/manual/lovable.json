@@ -1,0 +1,23 @@
+{
+  "id": "manual:lovable",
+  "name": "Lovable",
+  "description": "AI app builder \u2014 prompt-to-app",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://lovable.dev",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Lovable",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}

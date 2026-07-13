@@ -1,0 +1,23 @@
+{
+  "id": "manual:runpod",
+  "name": "RunPod",
+  "description": "GPUaaS \u2014 on-demand and serverless GPU cloud for AI",
+  "quadrant": "Platforms",
+  "ring": "Discovered",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.runpod.io",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "RunPod",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "AI"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-13",
+  "last_seen": "2026-07-13",
+  "stars_history": {}
+}
