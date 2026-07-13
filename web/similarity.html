@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tool Similarity — Tech Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- validated dark-mode viz tokens (see dataviz/references/palette.md) ---- */
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255,255,255,0.10);
+      /* categorical: quadrant identity — fixed order, validated (worst adj CVD ΔE 15.7) */
+      --q-tools:      #3987e5;  /* blue   */
+      --q-languages:  #199e70;  /* aqua   */
+      --q-techniques: #c98500;  /* yellow */
+      --q-platforms:  #9085e9;  /* violet */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    #root { height: 100%; }
+    a { color: var(--q-tools); }
+    button { font-family: inherit; font-size: inherit; }
+    .loading { display:flex; height:100%; align-items:center; justify-content:center; color:var(--muted); }
+  </style>
+  <!-- React + Babel from CDN — no build step, fully static. Same setup as index.html. -->
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"><div class="loading">loading radar…</div></div>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useMemo, useEffect, useRef, useCallback } = React;
+
+/* ============================================================================
+ * Tool Similarity prototype
+ *
+ * Loads data/radar.json and builds a tool-to-tool similarity matrix so you can
+ * see which tools compete in the same space. Two similarity sources:
+ *
+ *   1. TF-IDF cosine, computed here in the browser — zero dependencies, works
+ *      the instant the page loads. Lexical: links tools whose descriptions
+ *      share vocabulary.
+ *   2. Precomputed semantic embeddings — if data/similarity.json is present
+ *      (produced by build_similarity.py), the page uses that dense matrix
+ *      instead. Catches competitors that describe themselves with different
+ *      words.
+ *
+ * Four viewing options: force-directed graph, similarity heatmap, per-tool
+ * nearest-neighbours, and a 2-D projection (classical MDS) scatter.
+ * ==========================================================================*/
+
+const QUADRANTS = ["Tools", "Languages", "Techniques", "Platforms"];
+const QUAD_COLOR = {
+  Tools:      "#3987e5",
+  Languages:  "#199e70",
+  Techniques: "#c98500",
+  Platforms:  "#9085e9",
+};
+const quadColor = (q) => QUAD_COLOR[q] || "#898781";
+
+// ---- text prep -------------------------------------------------------------
+const STOP = new Set(("a an the and or of for to in on with without from by is are be " +
+  "this that it its as at into your you our their they we can will use used using " +
+  "via based over under across between not no more most other any all which who whom " +
+  "open source library tool toolkit app application project framework platform " +
+  "github repo repository code python js javascript").split(/\s+/));
+
+function tokenize(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+#.\- ]+/g, " ")
+    .split(/[\s.]+/)
+    .map((t) => t.replace(/^[-+#]+|[-+#]+$/g, ""))
+    .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t));
+}
+
+function docText(it) {
+  const tags = (it.tags || []).join(" ");
+  const topics = (it.topics || []).join(" ");
+  // description carries the semantic weight; name/company/tags add signal
+  return [it.description, it.name, it.company || "", tags, topics].join(" ");
+}
+
+// ---- TF-IDF ----------------------------------------------------------------
+// Returns { vectors, sim(n*n Float32Array) }. Vectors are L2-normalised sparse
+// maps of term -> weight; sim is the dense cosine matrix.
+function buildTfIdf(items) {
+  const n = items.length;
+  const docs = items.map((it) => {
+    const counts = new Map();
+    for (const t of tokenize(docText(it))) counts.set(t, (counts.get(t) || 0) + 1);
+    return counts;
+  });
+  const df = new Map();
+  for (const counts of docs) for (const t of counts.keys()) df.set(t, (df.get(t) || 0) + 1);
+
+  const vectors = docs.map((counts) => {
+    const v = new Map();
+    let norm = 0;
+    for (const [t, c] of counts) {
+      const idf = Math.log((1 + n) / (1 + df.get(t))) + 1;
+      const w = (1 + Math.log(c)) * idf;
+      v.set(t, w);
+      norm += w * w;
+    }
+    norm = Math.sqrt(norm) || 1;
+    for (const [t, w] of v) v.set(t, w / norm);
+    return v;
+  });
+
+  const sim = new Float32Array(n * n);
+  for (let i = 0; i < n; i++) {
+    const vi = vectors[i];
+    sim[i * n + i] = 1;
+    for (let j = i + 1; j < n; j++) {
+      const vj = vectors[j];
+      // iterate the smaller vector
+      const [a, b] = vi.size < vj.size ? [vi, vj] : [vj, vi];
+      let dot = 0;
+      for (const [t, w] of a) { const o = b.get(t); if (o) dot += w * o; }
+      sim[i * n + j] = dot;
+      sim[j * n + i] = dot;
+    }
+  }
+  return { vectors, sim };
+}
+
+// shared terms driving a pair's similarity — for the "why" explanation
+function sharedTerms(vectors, i, j, k = 4) {
+  const vi = vectors[i], vj = vectors[j];
+  if (!vi || !vj) return [];
+  const out = [];
+  for (const [t, w] of vi) { const o = vj.get(t); if (o) out.push([t, w * o]); }
+  out.sort((a, b) => b[1] - a[1]);
+  return out.slice(0, k).map((x) => x[0]);
+}
+
+// ---- classical MDS (2-D projection of the distance matrix) -----------------
+// Double-centre squared distances, then two power-iteration eigenvectors.
+function classicalMDS(sim, n) {
+  const d2 = new Float64Array(n * n);
+  for (let i = 0; i < n; i++)
+    for (let j = 0; j < n; j++) {
+      const d = 1 - sim[i * n + j];
+      d2[i * n + j] = d * d;
+    }
+  const rowMean = new Float64Array(n);
+  let grand = 0;
+  for (let i = 0; i < n; i++) {
+    let s = 0;
+    for (let j = 0; j < n; j++) s += d2[i * n + j];
+    rowMean[i] = s / n;
+    grand += s;
+  }
+  grand /= n * n;
+  const B = new Float64Array(n * n);
+  for (let i = 0; i < n; i++)
+    for (let j = 0; j < n; j++)
+      B[i * n + j] = -0.5 * (d2[i * n + j] - rowMean[i] - rowMean[j] + grand);
+
+  function powerIter(M) {
+    let v = new Float64Array(n);
+    for (let i = 0; i < n; i++) v[i] = Math.random() - 0.5;
+    let lambda = 0;
+    for (let it = 0; it < 100; it++) {
+      const w = new Float64Array(n);
+      for (let i = 0; i < n; i++) {
+        let s = 0;
+        for (let j = 0; j < n; j++) s += M[i * n + j] * v[j];
+        w[i] = s;
+      }
+      let norm = 0;
+      for (let i = 0; i < n; i++) norm += w[i] * w[i];
+      norm = Math.sqrt(norm) || 1;
+      for (let i = 0; i < n; i++) w[i] /= norm;
+      lambda = norm;
+      v = w;
+    }
+    return { vec: v, val: lambda };
+  }
+  const e1 = powerIter(B);
+  // deflate then second component
+  const B2 = B.slice();
+  for (let i = 0; i < n; i++)
+    for (let j = 0; j < n; j++)
+      B2[i * n + j] -= e1.val * e1.vec[i] * e1.vec[j];
+  const e2 = powerIter(B2);
+
+  const pts = [];
+  const s1 = Math.sqrt(Math.max(e1.val, 0));
+  const s2 = Math.sqrt(Math.max(e2.val, 0));
+  for (let i = 0; i < n; i++) pts.push([e1.vec[i] * s1, e2.vec[i] * s2]);
+  return pts;
+}
+
+// sequential blue ramp for the heatmap: surface (low) -> bright blue (high)
+function heatColor(t) {
+  t = Math.max(0, Math.min(1, t));
+  const lo = [26, 26, 25];     // --surface-1
+  const hi = [158, 197, 244];  // blue step 200
+  const g = Math.pow(t, 0.75);
+  const c = lo.map((l, i) => Math.round(l + (hi[i] - l) * g));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+
+// ============================================================================
+function App() {
+  const [items, setItems] = useState(null);
+  const [source, setSource] = useState("tf-idf");  // or "embeddings"
+  const [sim, setSim] = useState(null);
+  const [vectors, setVectors] = useState(null);
+  const [view, setView] = useState("graph");
+  const [threshold, setThreshold] = useState(0.18);
+  const [topK, setTopK] = useState(6);
+  const [quadFilter, setQuadFilter] = useState(() => new Set(QUADRANTS));
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState(null);
+
+  // load data + compute similarity
+  useEffect(() => {
+    (async () => {
+      const rj = await fetch("data/radar.json").then((r) => r.json());
+      const its = (rj.items || rj).filter((x) => x && x.ring !== "Archived");
+      // try precomputed embeddings; fall back to in-browser TF-IDF
+      let embMatrix = null, embIds = null, method = null;
+      try {
+        const s = await fetch("data/similarity.json");
+        if (s.ok) {
+          const j = await s.json();
+          if (j && j.ids && j.matrix) { embIds = j.ids; embMatrix = j.matrix; method = j.method; }
+        }
+      } catch (e) { /* no embeddings file — fine */ }
+
+      const { vectors, sim } = buildTfIdf(its);
+      let finalSim = sim, finalSource = "tf-idf";
+      if (embMatrix && embIds) {
+        // align embedding matrix to our item order by id
+        const idx = new Map(embIds.map((id, i) => [id, i]));
+        const n = its.length;
+        const aligned = new Float32Array(n * n);
+        let ok = true;
+        for (let i = 0; i < n && ok; i++) {
+          const ei = idx.get(its[i].id);
+          if (ei == null) { ok = false; break; }
+          for (let j = 0; j < n; j++) {
+            const ej = idx.get(its[j].id);
+            if (ej == null) { ok = false; break; }
+            aligned[i * n + j] = embMatrix[ei][ej];
+          }
+        }
+        if (ok) { finalSim = aligned; finalSource = "embeddings (" + (method || "precomputed") + ")"; }
+      }
+      setItems(its);
+      setVectors(vectors);
+      setSim(finalSim);
+      setSource(finalSource);
+    })();
+  }, []);
+
+  // NOTE: every hook below must run on every render — no early return above
+  // this line, or React throws "rendered more hooks" (#310).
+  const n = items ? items.length : 0;
+  const visible = useMemo(
+    () => (items ? items.map((_, i) => i).filter((i) => quadFilter.has(items[i].quadrant)) : []),
+    [items, quadFilter]
+  );
+
+  // neighbours for a given item index, above threshold, capped at topK
+  const neighboursOf = useCallback((i, thr = threshold, k = topK) => {
+    if (!items || !sim) return [];
+    const out = [];
+    for (let j = 0; j < n; j++) {
+      if (j === i) continue;
+      if (!quadFilter.has(items[j].quadrant)) continue;
+      const s = sim[i * n + j];
+      if (s >= thr) out.push([j, s]);
+    }
+    out.sort((a, b) => b[1] - a[1]);
+    return out.slice(0, k);
+  }, [sim, n, threshold, topK, quadFilter, items]);
+
+  if (!items || !sim) return <div className="loading">computing similarity…</div>;
+
+  const shell = { display: "flex", flexDirection: "column", height: "100%" };
+  const bar = {
+    display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center",
+    padding: "10px 14px", borderBottom: "1px solid var(--border)", background: "var(--surface-1)",
+  };
+
+  return (
+    <div style={shell}>
+      <Header source={source} count={n} />
+      <div style={bar}>
+        <ViewTabs view={view} setView={setView} />
+        <span style={{ flex: 1 }} />
+        <QuadFilter quadFilter={quadFilter} setQuadFilter={setQuadFilter} items={items} />
+      </div>
+      <Controls
+        view={view} threshold={threshold} setThreshold={setThreshold}
+        topK={topK} setTopK={setTopK} query={query} setQuery={setQuery}
+      />
+      <div style={{ flex: 1, minHeight: 0, position: "relative" }}>
+        {view === "graph" && (
+          <GraphView items={items} sim={sim} n={n} visible={visible}
+            threshold={threshold} topK={topK} quadFilter={quadFilter}
+            selected={selected} setSelected={setSelected} neighboursOf={neighboursOf} />
+        )}
+        {view === "heatmap" && (
+          <HeatmapView items={items} sim={sim} n={n} visible={visible}
+            selected={selected} setSelected={setSelected} />
+        )}
+        {view === "neighbours" && (
+          <NeighboursView items={items} sim={sim} vectors={vectors} n={n}
+            query={query} selected={selected} setSelected={setSelected}
+            neighboursOf={neighboursOf} quadFilter={quadFilter} />
+        )}
+        {view === "projection" && (
+          <ProjectionView items={items} sim={sim} n={n} visible={visible}
+            selected={selected} setSelected={setSelected} />
+        )}
+      </div>
+      <Legend />
+    </div>
+  );
+}
+
+function Header({ source, count }) {
+  return (
+    <div style={{ display: "flex", alignItems: "baseline", gap: 14, padding: "12px 14px 6px" }}>
+      <strong style={{ fontSize: 15 }}>Tool Similarity</strong>
+      <span style={{ color: "var(--muted)" }}>{count} tools · {" "}
+        <a href="index.html" style={{ color: "var(--muted)" }}>← radar</a>
+      </span>
+      <span style={{ flex: 1 }} />
+      <span style={{ color: "var(--muted)" }}>
+        similarity: <span style={{ color: source.startsWith("emb") ? "#199e70" : "#c98500" }}>{source}</span>
+      </span>
+    </div>
+  );
+}
+
+function ViewTabs({ view, setView }) {
+  const tabs = [["graph", "Network"], ["heatmap", "Heatmap"], ["neighbours", "Neighbours"], ["projection", "Projection"]];
+  return (
+    <div style={{ display: "flex", gap: 4 }}>
+      {tabs.map(([id, label]) => (
+        <button key={id} onClick={() => setView(id)}
+          style={{
+            padding: "6px 12px", borderRadius: 6, cursor: "pointer",
+            border: "1px solid " + (view === id ? "var(--q-tools)" : "var(--border)"),
+            background: view === id ? "rgba(57,135,229,0.15)" : "transparent",
+            color: view === id ? "#fff" : "var(--ink-2)",
+          }}>{label}</button>
+      ))}
+    </div>
+  );
+}
+
+function QuadFilter({ quadFilter, setQuadFilter, items }) {
+  const counts = useMemo(() => {
+    const c = {}; for (const it of items) c[it.quadrant] = (c[it.quadrant] || 0) + 1; return c;
+  }, [items]);
+  const toggle = (q) => {
+    const next = new Set(quadFilter);
+    next.has(q) ? next.delete(q) : next.add(q);
+    if (next.size) setQuadFilter(next);
+  };
+  return (
+    <div style={{ display: "flex", gap: 6 }}>
+      {QUADRANTS.map((q) => {
+        const on = quadFilter.has(q);
+        return (
+          <button key={q} onClick={() => toggle(q)} title={`${counts[q] || 0} items`}
+            style={{
+              display: "flex", alignItems: "center", gap: 6, padding: "4px 9px",
+              borderRadius: 6, cursor: "pointer", opacity: on ? 1 : 0.4,
+              border: "1px solid var(--border)", background: "transparent", color: "var(--ink-2)",
+            }}>
+            <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(q) }} />
+            {q}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function Controls({ view, threshold, setThreshold, topK, setTopK, query, setQuery }) {
+  const wrap = { display: "flex", gap: 18, alignItems: "center", padding: "8px 14px",
+    borderBottom: "1px solid var(--border)", color: "var(--muted)" };
+  if (view === "heatmap" || view === "projection") {
+    return <div style={wrap}><span>Hover a {view === "heatmap" ? "cell" : "point"}; click to pin. Ordered by quadrant then similarity.</span></div>;
+  }
+  if (view === "neighbours") {
+    return (
+      <div style={wrap}>
+        <label>search{" "}
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="filter tools…"
+            style={inputStyle} />
+        </label>
+        <label>show top{" "}
+          <input type="range" min="3" max="15" value={topK} onChange={(e) => setTopK(+e.target.value)} />
+          {" "}{topK}</label>
+      </div>
+    );
+  }
+  return (
+    <div style={wrap}>
+      <label>min similarity{" "}
+        <input type="range" min="0.02" max="0.6" step="0.01" value={threshold}
+          onChange={(e) => setThreshold(+e.target.value)} />
+        {" "}{threshold.toFixed(2)}</label>
+      <label>edges per node ≤{" "}
+        <input type="range" min="2" max="12" value={topK} onChange={(e) => setTopK(+e.target.value)} />
+        {" "}{topK}</label>
+      <span>drag nodes · scroll to zoom · click to inspect</span>
+    </div>
+  );
+}
+const inputStyle = { background: "var(--page)", color: "var(--ink)", border: "1px solid var(--border)",
+  borderRadius: 5, padding: "4px 8px", fontFamily: "inherit", fontSize: 12, width: 160 };
+
+// ---- Network (force-directed) ---------------------------------------------
+function GraphView({ items, sim, n, visible, threshold, topK, quadFilter, selected, setSelected, neighboursOf }) {
+  const canvasRef = useRef(null);
+  const stateRef = useRef({ nodes: [], edges: [], cam: { x: 0, y: 0, z: 1 } });
+  const [hover, setHover] = useState(null);
+  const dragRef = useRef(null);
+  const panRef = useRef(null);
+
+  // build the graph (nodes + edges) whenever inputs change
+  const graph = useMemo(() => {
+    const vis = new Set(visible);
+    const nodes = visible.map((i) => ({ i, x: (Math.random() - 0.5) * 400, y: (Math.random() - 0.5) * 400, vx: 0, vy: 0 }));
+    const pos = new Map(nodes.map((nd, k) => [nd.i, k]));
+    const edgeSet = new Set();
+    const edges = [];
+    for (const nd of nodes) {
+      const nbrs = neighboursOf(nd.i, threshold, topK);
+      for (const [j, s] of nbrs) {
+        if (!vis.has(j)) continue;
+        const key = nd.i < j ? nd.i + "-" + j : j + "-" + nd.i;
+        if (edgeSet.has(key)) continue;
+        edgeSet.add(key);
+        edges.push({ a: pos.get(nd.i), b: pos.get(j), s });
+      }
+    }
+    return { nodes, edges };
+  }, [visible, threshold, topK, neighboursOf]);
+
+  useEffect(() => { stateRef.current.nodes = graph.nodes; stateRef.current.edges = graph.edges; }, [graph]);
+
+  // physics + render loop
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let raf, alpha = 1, running = true;
+    const resize = () => {
+      const r = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+      canvas.style.width = r.width + "px"; canvas.style.height = r.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    function step() {
+      const { nodes, edges, cam } = stateRef.current;
+      const N = nodes.length;
+      if (alpha > 0.005 && N) {
+        // repulsion (O(n^2), fine at a few hundred nodes)
+        for (let a = 0; a < N; a++) {
+          const na = nodes[a];
+          for (let b = a + 1; b < N; b++) {
+            const nb = nodes[b];
+            let dx = na.x - nb.x, dy = na.y - nb.y;
+            let d2 = dx * dx + dy * dy || 0.01;
+            const f = 1400 / d2;
+            const d = Math.sqrt(d2);
+            dx /= d; dy /= d;
+            na.vx += dx * f; na.vy += dy * f;
+            nb.vx -= dx * f; nb.vy -= dy * f;
+          }
+        }
+        // springs along edges (stronger edge = shorter rest length)
+        for (const e of edges) {
+          const na = nodes[e.a], nb = nodes[e.b];
+          let dx = nb.x - na.x, dy = nb.y - na.y;
+          const d = Math.hypot(dx, dy) || 0.01;
+          const rest = 40 + (1 - e.s) * 120;
+          const f = (d - rest) * 0.02 * (0.4 + e.s);
+          dx /= d; dy /= d;
+          na.vx += dx * f; na.vy += dy * f;
+          nb.vx -= dx * f; nb.vy -= dy * f;
+        }
+        // gravity to centre + integrate
+        for (const nd of nodes) {
+          nd.vx += -nd.x * 0.002; nd.vy += -nd.y * 0.002;
+          nd.vx *= 0.85; nd.vy *= 0.85;
+          if (dragRef.current && dragRef.current.k === nd) continue;
+          nd.x += nd.vx * alpha; nd.y += nd.vy * alpha;
+        }
+        alpha *= 0.994;
+      }
+      // ---- render ----
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      ctx.save();
+      ctx.translate(w / 2 + cam.x, h / 2 + cam.y);
+      ctx.scale(cam.z, cam.z);
+
+      const hi = hover != null ? hover : (selected != null ? nodes.findIndex((nd) => nd.i === selected) : -1);
+      const hiSet = new Set();
+      if (hi >= 0) { hiSet.add(hi); for (const e of edges) { if (e.a === hi) hiSet.add(e.b); if (e.b === hi) hiSet.add(e.a); } }
+
+      for (const e of edges) {
+        const na = nodes[e.a], nb = nodes[e.b];
+        const on = hi < 0 || e.a === hi || e.b === hi;
+        ctx.strokeStyle = on ? `rgba(180,190,205,${0.15 + e.s * 0.55})` : "rgba(120,125,135,0.06)";
+        ctx.lineWidth = on ? 0.4 + e.s * 2 : 0.4;
+        ctx.beginPath(); ctx.moveTo(na.x, na.y); ctx.lineTo(nb.x, nb.y); ctx.stroke();
+      }
+      for (let k = 0; k < nodes.length; k++) {
+        const nd = nodes[k];
+        const it = items[nd.i];
+        const dim = hi >= 0 && !hiSet.has(k);
+        const r = 3 + Math.min(6, Math.log10((it.stars || 0) + 1) * 2);
+        ctx.globalAlpha = dim ? 0.2 : 1;
+        ctx.fillStyle = quadColor(it.quadrant);
+        ctx.beginPath(); ctx.arc(nd.x, nd.y, r, 0, Math.PI * 2); ctx.fill();
+        if (k === hi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke(); }
+        if ((!dim && cam.z > 1.3) || k === hi) {
+          ctx.globalAlpha = dim ? 0.3 : 1;
+          ctx.fillStyle = "#e8e8e2"; ctx.font = "10px 'IBM Plex Mono', monospace";
+          ctx.fillText(it.name, nd.x + r + 3, nd.y + 3);
+        }
+      }
+      ctx.globalAlpha = 1;
+      ctx.restore();
+      if (running) raf = requestAnimationFrame(step);
+    }
+    step();
+    return () => { running = false; cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, [graph, hover, selected, items]);
+
+  // pointer interaction
+  const toWorld = (ev) => {
+    const canvas = canvasRef.current;
+    const r = canvas.getBoundingClientRect();
+    const { cam } = stateRef.current;
+    const x = (ev.clientX - r.left - r.width / 2 - cam.x) / cam.z;
+    const y = (ev.clientY - r.top - r.height / 2 - cam.y) / cam.z;
+    return { x, y };
+  };
+  const pick = (ev) => {
+    const { x, y } = toWorld(ev);
+    const { nodes } = stateRef.current;
+    let best = -1, bd = 12 * 12;
+    for (let k = 0; k < nodes.length; k++) {
+      const nd = nodes[k];
+      const d = (nd.x - x) ** 2 + (nd.y - y) ** 2;
+      if (d < bd) { bd = d; best = k; }
+    }
+    return best;
+  };
+  const onDown = (ev) => {
+    const k = pick(ev);
+    if (k >= 0) { dragRef.current = { k: stateRef.current.nodes[k] }; }
+    else panRef.current = { x: ev.clientX, y: ev.clientY, cam: { ...stateRef.current.cam } };
+  };
+  const onMove = (ev) => {
+    if (dragRef.current) {
+      const { x, y } = toWorld(ev);
+      dragRef.current.k.x = x; dragRef.current.k.y = y;
+      dragRef.current.k.vx = 0; dragRef.current.k.vy = 0;
+    } else if (panRef.current) {
+      const p = panRef.current;
+      stateRef.current.cam.x = p.cam.x + (ev.clientX - p.x);
+      stateRef.current.cam.y = p.cam.y + (ev.clientY - p.y);
+    } else {
+      const k = pick(ev);
+      setHover(k >= 0 ? k : null);
+      canvasRef.current.style.cursor = k >= 0 ? "pointer" : "grab";
+    }
+  };
+  const onUp = (ev) => {
+    if (dragRef.current) {
+      const moved = false; dragRef.current = null;
+    } else if (panRef.current) {
+      const p = panRef.current;
+      if (Math.hypot(ev.clientX - p.x, ev.clientY - p.y) < 4) setSelected(null);
+      panRef.current = null;
+    }
+  };
+  const onClick = (ev) => {
+    const k = pick(ev);
+    if (k >= 0) setSelected(stateRef.current.nodes[k].i);
+  };
+  const onWheel = (ev) => {
+    ev.preventDefault();
+    const { cam } = stateRef.current;
+    const f = ev.deltaY < 0 ? 1.1 : 1 / 1.1;
+    cam.z = Math.max(0.3, Math.min(6, cam.z * f));
+  };
+
+  const hoverIdx = hover != null ? stateRef.current.nodes[hover]?.i : null;
+  return (
+    <div style={{ position: "absolute", inset: 0 }}>
+      <canvas ref={canvasRef}
+        onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp}
+        onClick={onClick} onWheel={onWheel}
+        style={{ display: "block", width: "100%", height: "100%", touchAction: "none", cursor: "grab" }} />
+      {hoverIdx != null && <NodeTip it={items[hoverIdx]} />}
+      {selected != null &&
+        <SidePanel it={items[selected]} idx={selected} items={items} sim={sim} n={n}
+          neighboursOf={neighboursOf} setSelected={setSelected} onClose={() => setSelected(null)} />}
+    </div>
+  );
+}
+
+function NodeTip({ it }) {
+  return (
+    <div style={{ position: "absolute", left: 12, bottom: 12, maxWidth: 360, pointerEvents: "none",
+      background: "rgba(20,20,19,0.95)", border: "1px solid var(--border)", borderRadius: 8, padding: "8px 10px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(it.quadrant) }} />
+        <strong>{it.name}</strong>
+        <span style={{ color: "var(--muted)" }}>· {it.quadrant} · {it.ring}</span>
+      </div>
+      <div style={{ color: "var(--ink-2)", marginTop: 3 }}>{it.description}</div>
+    </div>
+  );
+}
+
+// ---- shared side panel: a tool + its nearest competitors -------------------
+function SidePanel({ it, idx, items, sim, n, neighboursOf, setSelected, onClose }) {
+  const nbrs = neighboursOf(idx, 0.02, 10);
+  return (
+    <div style={{ position: "absolute", top: 12, right: 12, width: 320, maxHeight: "calc(100% - 24px)",
+      overflow: "auto", background: "rgba(20,20,19,0.97)", border: "1px solid var(--border)",
+      borderRadius: 10, padding: 14 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
+        <div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ width: 10, height: 10, borderRadius: 2, background: quadColor(it.quadrant) }} />
+            <strong style={{ fontSize: 14 }}>{it.name}</strong>
+          </div>
+          <div style={{ color: "var(--muted)", fontSize: 12 }}>{it.quadrant} · {it.ring}{it.company ? " · " + it.company : ""}</div>
+        </div>
+        <button onClick={onClose} style={{ background: "none", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: 16 }}>×</button>
+      </div>
+      <div style={{ color: "var(--ink-2)", margin: "8px 0" }}>{it.description}</div>
+      {it.url && <a href={it.url} target="_blank" style={{ fontSize: 12 }}>{it.canonical_url || it.url}</a>}
+      <div style={{ marginTop: 12, color: "var(--muted)", fontSize: 12, textTransform: "uppercase", letterSpacing: 0.5 }}>Closest tools</div>
+      <div style={{ marginTop: 6 }}>
+        {nbrs.map(([j, s]) => (
+          <div key={j} onClick={() => setSelected(j)}
+            style={{ cursor: "pointer", padding: "5px 0", borderTop: "1px solid var(--border)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <span style={{ width: 8, height: 8, borderRadius: 2, background: quadColor(items[j].quadrant) }} />
+              <span>{items[j].name}</span>
+              <span style={{ flex: 1 }} />
+              <span style={{ color: "var(--ink-2)", fontVariantNumeric: "tabular-nums" }}>{s.toFixed(2)}</span>
+            </div>
+            <div style={{ height: 3, background: "var(--grid)", borderRadius: 2, marginTop: 3 }}>
+              <div style={{ height: "100%", width: (s * 100) + "%", background: quadColor(items[j].quadrant), borderRadius: 2 }} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ---- Heatmap ---------------------------------------------------------------
+function HeatmapView({ items, sim, n, visible, selected, setSelected }) {
+  const canvasRef = useRef(null);
+  const [hover, setHover] = useState(null);
+
+  // order visible items by quadrant, then greedily by similarity within quadrant
+  const order = useMemo(() => {
+    const byQuad = {};
+    for (const i of visible) (byQuad[items[i].quadrant] ||= []).push(i);
+    const out = [];
+    for (const q of QUADRANTS) {
+      const g = byQuad[q] || [];
+      if (!g.length) continue;
+      // greedy nearest-neighbour chain for a readable block
+      const used = new Set();
+      let cur = g[0]; used.add(cur); out.push(cur);
+      while (used.size < g.length) {
+        let best = -1, bs = -1;
+        for (const j of g) { if (used.has(j)) continue; const s = sim[cur * n + j]; if (s > bs) { bs = s; best = j; } }
+        used.add(best); out.push(best); cur = best;
+      }
+    }
+    return out;
+  }, [visible, items, sim, n]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const m = order.length;
+    const size = Math.max(1, Math.min(6, Math.floor(760 / m)));
+    const dim = m * size;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = dim * dpr; canvas.height = dim * dpr;
+    canvas.style.width = dim + "px"; canvas.style.height = dim + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (let a = 0; a < m; a++)
+      for (let b = 0; b < m; b++) {
+        const s = sim[order[a] * n + order[b]];
+        ctx.fillStyle = a === b ? "#2c2c2a" : heatColor(s);
+        ctx.fillRect(b * size, a * size, size, size);
+      }
+    // quadrant boundary rules
+    ctx.strokeStyle = "rgba(255,255,255,0.35)"; ctx.lineWidth = 1;
+    let acc = 0;
+    for (const q of QUADRANTS) {
+      const cnt = order.filter((i) => items[i].quadrant === q).length;
+      if (!cnt) continue;
+      acc += cnt;
+      const p = acc * size;
+      ctx.beginPath(); ctx.moveTo(0, p); ctx.lineTo(dim, p); ctx.moveTo(p, 0); ctx.lineTo(p, dim); ctx.stroke();
+    }
+    canvas._meta = { size, m };
+  }, [order, sim, n, items]);
+
+  const onMove = (ev) => {
+    const canvas = canvasRef.current;
+    const meta = canvas._meta; if (!meta) return;
+    const r = canvas.getBoundingClientRect();
+    const b = Math.floor((ev.clientX - r.left) / meta.size);
+    const a = Math.floor((ev.clientY - r.top) / meta.size);
+    if (a >= 0 && a < meta.m && b >= 0 && b < meta.m)
+      setHover({ a: order[a], b: order[b], s: sim[order[a] * n + order[b]] });
+    else setHover(null);
+  };
+
+  return (
+    <div style={{ position: "absolute", inset: 0, overflow: "auto", padding: 16 }}>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexWrap: "wrap" }}>
+        <canvas ref={canvasRef} onMouseMove={onMove} onMouseLeave={() => setHover(null)}
+          onClick={() => hover && setSelected(hover.a)}
+          style={{ imageRendering: "pixelated", border: "1px solid var(--border)", cursor: "crosshair" }} />
+        <div style={{ minWidth: 220 }}>
+          <div style={{ color: "var(--muted)", fontSize: 12 }}>
+            Each cell is one tool-pair; brighter = more similar. Blocks are quadrants; bright squares off the diagonal are cross-cutting clusters — competing tools.
+          </div>
+          <div style={{ marginTop: 14, height: 10, borderRadius: 3,
+            background: "linear-gradient(90deg, " + heatColor(0) + "," + heatColor(0.5) + "," + heatColor(1) + ")" }} />
+          <div style={{ display: "flex", justifyContent: "space-between", color: "var(--muted)", fontSize: 11 }}>
+            <span>0</span><span>similarity</span><span>1</span>
+          </div>
+          {hover && (
+            <div style={{ marginTop: 16, borderTop: "1px solid var(--border)", paddingTop: 10 }}>
+              <div><strong>{items[hover.a].name}</strong></div>
+              <div style={{ color: "var(--muted)" }}>× {items[hover.b].name}</div>
+              <div style={{ marginTop: 4, fontSize: 20, fontVariantNumeric: "tabular-nums" }}>{hover.s.toFixed(3)}</div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---- Neighbours (per-tool competitor list) ---------------------------------
+function NeighboursView({ items, sim, vectors, n, query, selected, setSelected, neighboursOf, quadFilter }) {
+  const list = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return items.map((it, i) => i)
+      .filter((i) => quadFilter.has(items[i].quadrant))
+      .filter((i) => !q || items[i].name.toLowerCase().includes(q) || (items[i].description || "").toLowerCase().includes(q))
+      .sort((a, b) => items[a].name.localeCompare(items[b].name));
+  }, [items, query, quadFilter]);
+
+  const cur = selected != null ? selected : (list[0] ?? 0);
+  const nbrs = neighboursOf(cur, 0.02, 12);
+
+  return (
+    <div style={{ position: "absolute", inset: 0, display: "flex" }}>
+      <div style={{ width: 240, borderRight: "1px solid var(--border)", overflow: "auto" }}>
+        {list.map((i) => (
+          <div key={i} onClick={() => setSelected(i)}
+            style={{ padding: "7px 12px", cursor: "pointer", display: "flex", alignItems: "center", gap: 7,
+              background: i === cur ? "rgba(57,135,229,0.15)" : "transparent",
+              borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: quadColor(items[i].quadrant) }} />
+            <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{items[i].name}</span>
+          </div>
+        ))}
+        {!list.length && <div style={{ padding: 12, color: "var(--muted)" }}>no matches</div>}
+      </div>
+      <div style={{ flex: 1, overflow: "auto", padding: 20 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={{ width: 12, height: 12, borderRadius: 3, background: quadColor(items[cur].quadrant) }} />
+          <strong style={{ fontSize: 18 }}>{items[cur].name}</strong>
+          <span style={{ color: "var(--muted)" }}>{items[cur].quadrant} · {items[cur].ring}</span>
+        </div>
+        <div style={{ color: "var(--ink-2)", margin: "8px 0 4px", maxWidth: 640 }}>{items[cur].description}</div>
+        {items[cur].url && <a href={items[cur].url} target="_blank" style={{ fontSize: 12 }}>{items[cur].canonical_url || items[cur].url}</a>}
+        <div style={{ marginTop: 22, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5, fontSize: 12 }}>
+          Most similar tools — likely competing in the same space
+        </div>
+        <div style={{ marginTop: 8, maxWidth: 720 }}>
+          {nbrs.map(([j, s]) => {
+            const terms = vectors ? sharedTerms(vectors, cur, j) : [];
+            return (
+              <div key={j} onClick={() => setSelected(j)}
+                style={{ padding: "10px 0", borderTop: "1px solid var(--border)", cursor: "pointer" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(items[j].quadrant) }} />
+                  <strong>{items[j].name}</strong>
+                  <span style={{ color: "var(--muted)", fontSize: 12 }}>{items[j].quadrant} · {items[j].ring}</span>
+                  <span style={{ flex: 1 }} />
+                  <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{s.toFixed(3)}</span>
+                </div>
+                <div style={{ height: 4, background: "var(--grid)", borderRadius: 2, margin: "5px 0" }}>
+                  <div style={{ height: "100%", width: (Math.min(1, s) * 100) + "%", background: quadColor(items[j].quadrant), borderRadius: 2 }} />
+                </div>
+                <div style={{ color: "var(--muted)", fontSize: 12 }}>
+                  {items[j].description}
+                  {terms.length ? <span style={{ color: "#6da7ec" }}>  · shared: {terms.join(", ")}</span> : null}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---- Projection (classical MDS scatter) ------------------------------------
+function ProjectionView({ items, sim, n, visible, selected, setSelected }) {
+  const canvasRef = useRef(null);
+  const [hover, setHover] = useState(null);
+  const camRef = useRef({ x: 0, y: 0, z: 1 });
+  const panRef = useRef(null);
+
+  const pts = useMemo(() => {
+    // MDS over the visible submatrix
+    const idx = visible;
+    const m = idx.length;
+    const sub = new Float32Array(m * m);
+    for (let a = 0; a < m; a++) for (let b = 0; b < m; b++) sub[a * m + b] = sim[idx[a] * n + idx[b]];
+    const raw = classicalMDS(sub, m);
+    // normalise to a comfortable pixel spread
+    let minx = Infinity, maxx = -Infinity, miny = Infinity, maxy = -Infinity;
+    for (const [x, y] of raw) { minx = Math.min(minx, x); maxx = Math.max(maxx, x); miny = Math.min(miny, y); maxy = Math.max(maxy, y); }
+    const sx = 700 / ((maxx - minx) || 1), sy = 500 / ((maxy - miny) || 1);
+    const sc = Math.min(sx, sy);
+    return raw.map(([x, y], k) => ({ i: idx[k], x: (x - (minx + maxx) / 2) * sc, y: (y - (miny + maxy) / 2) * sc }));
+  }, [visible, sim, n]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let raf, running = true;
+    const resize = () => {
+      const r = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+      canvas.style.width = r.width + "px"; canvas.style.height = r.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize(); window.addEventListener("resize", resize);
+    const draw = () => {
+      const cam = camRef.current;
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      ctx.save();
+      ctx.translate(w / 2 + cam.x, h / 2 + cam.y); ctx.scale(cam.z, cam.z);
+      for (let k = 0; k < pts.length; k++) {
+        const p = pts[k], it = items[p.i];
+        const isHi = hover === k || selected === p.i;
+        ctx.globalAlpha = hover != null && hover !== k ? 0.5 : 1;
+        ctx.fillStyle = quadColor(it.quadrant);
+        ctx.beginPath(); ctx.arc(p.x, p.y, isHi ? 6 : 3.5, 0, Math.PI * 2); ctx.fill();
+        if (isHi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke(); }
+        if (isHi || cam.z > 1.6) {
+          ctx.fillStyle = "#e8e8e2"; ctx.font = "10px 'IBM Plex Mono', monospace";
+          ctx.fillText(it.name, p.x + 6, p.y + 3);
+        }
+      }
+      ctx.globalAlpha = 1; ctx.restore();
+      if (running) raf = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => { running = false; cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, [pts, hover, selected, items]);
+
+  const toWorld = (ev) => {
+    const canvas = canvasRef.current, r = canvas.getBoundingClientRect(), cam = camRef.current;
+    return { x: (ev.clientX - r.left - r.width / 2 - cam.x) / cam.z, y: (ev.clientY - r.top - r.height / 2 - cam.y) / cam.z };
+  };
+  const pick = (ev) => {
+    const { x, y } = toWorld(ev); let best = -1, bd = 10 * 10;
+    for (let k = 0; k < pts.length; k++) { const d = (pts[k].x - x) ** 2 + (pts[k].y - y) ** 2; if (d < bd) { bd = d; best = k; } }
+    return best;
+  };
+  const onMove = (ev) => {
+    if (panRef.current) { const p = panRef.current; camRef.current.x = p.cam.x + (ev.clientX - p.x); camRef.current.y = p.cam.y + (ev.clientY - p.y); return; }
+    const k = pick(ev); setHover(k >= 0 ? k : null);
+  };
+  const onDown = (ev) => { if (pick(ev) < 0) panRef.current = { x: ev.clientX, y: ev.clientY, cam: { ...camRef.current } }; };
+  const onUp = () => { panRef.current = null; };
+  const onClick = (ev) => { const k = pick(ev); if (k >= 0) setSelected(pts[k].i); };
+  const onWheel = (ev) => { ev.preventDefault(); const c = camRef.current; c.z = Math.max(0.3, Math.min(6, c.z * (ev.deltaY < 0 ? 1.1 : 1 / 1.1))); };
+
+  return (
+    <div style={{ position: "absolute", inset: 0 }}>
+      <canvas ref={canvasRef} onPointerMove={onMove} onPointerDown={onDown} onPointerUp={onUp}
+        onClick={onClick} onWheel={onWheel}
+        style={{ display: "block", width: "100%", height: "100%", touchAction: "none", cursor: "grab" }} />
+      <div style={{ position: "absolute", left: 12, top: 12, color: "var(--muted)", fontSize: 12, maxWidth: 320 }}>
+        2-D map (classical MDS). Distance ≈ dissimilarity — tools that sit together describe themselves alike. Scroll to zoom, drag to pan.
+      </div>
+      {hover != null && <NodeTip it={items[pts[hover].i]} />}
+    </div>
+  );
+}
+
+function Legend() {
+  return (
+    <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "8px 14px",
+      borderTop: "1px solid var(--border)", background: "var(--surface-1)", color: "var(--muted)", fontSize: 12 }}>
+      <span>quadrant:</span>
+      {QUADRANTS.map((q) => (
+        <span key={q} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <span style={{ width: 10, height: 10, borderRadius: 2, background: quadColor(q) }} />{q}
+        </span>
+      ))}
+      <span style={{ flex: 1 }} />
+      <span>node size ≈ log(stars) · prototype</span>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+  </script>
+</body>
+</html>

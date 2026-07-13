@@ -83,6 +83,17 @@ def main():
     if os.path.exists(books_json):
         shutil.copy(books_json, os.path.join(SITE, "data", "books.json"))
 
+    # 7. Tool Similarity page — self-contained (inline JSX), copied as-is.
+    #    Reads data/radar.json and, if present, data/similarity.json (the
+    #    precomputed semantic matrix from build_similarity.py). Without that
+    #    file the page falls back to in-browser TF-IDF, so shipping it is
+    #    optional.
+    shutil.copy(os.path.join(WEB, "similarity.html"),
+                os.path.join(SITE, "similarity.html"))
+    sim_json = os.path.join(HERE, "data", "similarity.json")
+    if os.path.exists(sim_json):
+        shutil.copy(sim_json, os.path.join(SITE, "data", "similarity.json"))
+
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")
     print("deploy: push site/ to GitHub Pages, or drag it onto Netlify")
