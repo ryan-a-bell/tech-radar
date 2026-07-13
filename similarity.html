@@ -223,8 +223,8 @@ function heatColor(t) {
 // ============================================================================
 function App() {
   const [items, setItems] = useState(null);
-  const [source, setSource] = useState("tf-idf");  // or "embeddings"
-  const [sim, setSim] = useState(null);
+  const [methods, setMethods] = useState(null);   // [{key,label,kind,sim}] — selectable
+  const [methodKey, setMethodKey] = useState(null);
   const [vectors, setVectors] = useState(null);
   const [view, setView] = useState("graph");
   const [threshold, setThreshold] = useState(0.18);
@@ -233,50 +233,58 @@ function App() {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(null);
 
-  // load data + compute similarity
+  // load data + assemble the list of available similarity methods
   useEffect(() => {
     (async () => {
       const rj = await fetch("data/radar.json").then((r) => r.json());
       const its = (rj.items || rj).filter((x) => x && x.ring !== "Archived");
-      // try precomputed embeddings; fall back to in-browser TF-IDF
-      let embMatrix = null, embIds = null, method = null;
+      const n = its.length;
+
+      // method 1: always-available in-browser TF-IDF (lexical)
+      const { vectors, sim } = buildTfIdf(its);
+      const list = [{ key: "tfidf", label: "TF-IDF · in-browser", kind: "lexical", sim }];
+
+      // method 2 (if present): precomputed matrix from build_similarity.py —
+      // could be semantic embeddings or a tuned lexical backend
       try {
         const s = await fetch("data/similarity.json");
         if (s.ok) {
           const j = await s.json();
-          if (j && j.ids && j.matrix) { embIds = j.ids; embMatrix = j.matrix; method = j.method; }
-        }
-      } catch (e) { /* no embeddings file — fine */ }
-
-      const { vectors, sim } = buildTfIdf(its);
-      let finalSim = sim, finalSource = "tf-idf";
-      if (embMatrix && embIds) {
-        // align embedding matrix to our item order by id
-        const idx = new Map(embIds.map((id, i) => [id, i]));
-        const n = its.length;
-        const aligned = new Float32Array(n * n);
-        let ok = true;
-        for (let i = 0; i < n && ok; i++) {
-          const ei = idx.get(its[i].id);
-          if (ei == null) { ok = false; break; }
-          for (let j = 0; j < n; j++) {
-            const ej = idx.get(its[j].id);
-            if (ej == null) { ok = false; break; }
-            aligned[i * n + j] = embMatrix[ei][ej];
+          if (j && j.ids && j.matrix) {
+            const idx = new Map(j.ids.map((id, i) => [id, i]));
+            const aligned = new Float32Array(n * n);
+            let ok = true;
+            for (let i = 0; i < n && ok; i++) {
+              const ei = idx.get(its[i].id);
+              if (ei == null) { ok = false; break; }
+              for (let jj = 0; jj < n; jj++) {
+                const ej = idx.get(its[jj].id);
+                if (ej == null) { ok = false; break; }
+                aligned[i * n + jj] = j.matrix[ei][ej];
+              }
+            }
+            if (ok) {
+              const kind = (j.method || "").startsWith("embeddings") ? "semantic" : "lexical";
+              list.push({ key: "precomputed", label: prettyMethod(j.method), kind, sim: aligned });
+            }
           }
         }
-        if (ok) { finalSim = aligned; finalSource = "embeddings (" + (method || "precomputed") + ")"; }
-      }
+      } catch (e) { /* no precomputed file — TF-IDF still works */ }
+
+      // default to the "maximum available": a semantic method if we have one
+      const best = list.find((m) => m.kind === "semantic") || list[list.length - 1];
       setItems(its);
       setVectors(vectors);
-      setSim(finalSim);
-      setSource(finalSource);
+      setMethods(list);
+      setMethodKey(best.key);
     })();
   }, []);
 
   // NOTE: every hook below must run on every render — no early return above
   // this line, or React throws "rendered more hooks" (#310).
   const n = items ? items.length : 0;
+  const active = methods ? (methods.find((m) => m.key === methodKey) || methods[0]) : null;
+  const sim = active ? active.sim : null;
   const visible = useMemo(
     () => (items ? items.map((_, i) => i).filter((i) => quadFilter.has(items[i].quadrant)) : []),
     [items, quadFilter]
@@ -296,7 +304,7 @@ function App() {
     return out.slice(0, k);
   }, [sim, n, threshold, topK, quadFilter, items]);
 
-  if (!items || !sim) return <div className="loading">computing similarity…</div>;
+  if (!items || !methods || !sim) return <div className="loading">computing similarity…</div>;
 
   const shell = { display: "flex", flexDirection: "column", height: "100%" };
   const bar = {
@@ -306,9 +314,10 @@ function App() {
 
   return (
     <div style={shell}>
-      <Header source={source} count={n} />
+      <TopBar active={active} count={n} />
       <div style={bar}>
         <ViewTabs view={view} setView={setView} />
+        <MethodSelect methods={methods} methodKey={methodKey} setMethodKey={setMethodKey} />
         <span style={{ flex: 1 }} />
         <QuadFilter quadFilter={quadFilter} setQuadFilter={setQuadFilter} items={items} />
       </div>
@@ -341,17 +350,71 @@ function App() {
   );
 }
 
-function Header({ source, count }) {
+// human-readable name for a precomputed backend, e.g.
+//   "embeddings:potion-retrieval-32M" -> "Embeddings · potion-retrieval-32M"
+function prettyMethod(m) {
+  if (!m) return "Precomputed";
+  const [a, b] = m.split(":");
+  if (a === "embeddings") return "Embeddings · " + b;
+  if (a === "tf-idf") return "TF-IDF · " + b + " (precomputed)";
+  return m;
+}
+
+// Shared top nav — identical tab group to dashboard.jsx / books.jsx, so the
+// name and back buttons stay consistent across the site. SIMILARITY is active.
+function TopBar({ active, count }) {
+  const tab = {
+    background: "transparent", color: "#999", border: "1px solid #444",
+    textDecoration: "none", padding: "6px 14px", marginRight: 8,
+    fontSize: 11, letterSpacing: 1,
+  };
+  const semantic = active && active.kind === "semantic";
   return (
-    <div style={{ display: "flex", alignItems: "baseline", gap: 14, padding: "12px 14px 6px" }}>
-      <strong style={{ fontSize: 15 }}>Tool Similarity</strong>
-      <span style={{ color: "var(--muted)" }}>{count} tools · {" "}
-        <a href="index.html" style={{ color: "var(--muted)" }}>← radar</a>
+    <div style={{
+      display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
+      fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap",
+    }}>
+      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+      <a href="index.html#atlas" style={tab}>ATLAS</a>
+      <a href="index.html#index" style={tab}>INDEX</a>
+      <a href="books.html" style={tab}>READING LIST</a>
+      <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+        padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>SIMILARITY</span>
+      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1,
+        color: semantic ? "#4ade80" : "#fbbf24" }}>
+        {count} tools · {semantic ? "● " : "○ "}{active ? active.label : "loading"}
       </span>
-      <span style={{ flex: 1 }} />
-      <span style={{ color: "var(--muted)" }}>
-        similarity: <span style={{ color: source.startsWith("emb") ? "#199e70" : "#c98500" }}>{source}</span>
-      </span>
+    </div>
+  );
+}
+
+// Similarity-method selector. Renders every method that loaded; the active one
+// is highlighted. With only one available it collapses to a static label.
+function MethodSelect({ methods, methodKey, setMethodKey }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <span style={{ color: "var(--muted)" }}>method:</span>
+      {methods.length < 2 ? (
+        <span style={{ color: "var(--ink-2)" }}>{methods[0].label}</span>
+      ) : (
+        <div style={{ display: "flex", gap: 4 }}>
+          {methods.map((m) => {
+            const on = m.key === methodKey;
+            return (
+              <button key={m.key} onClick={() => setMethodKey(m.key)}
+                title={m.kind === "semantic" ? "semantic embeddings — best signal" : "lexical / shared-vocabulary"}
+                style={{
+                  padding: "5px 11px", borderRadius: 6, cursor: "pointer",
+                  border: "1px solid " + (on ? "var(--q-tools)" : "var(--border)"),
+                  background: on ? "rgba(57,135,229,0.15)" : "transparent",
+                  color: on ? "#fff" : "var(--ink-2)",
+                }}>
+                {m.label}{m.kind === "semantic" ? " ✦" : ""}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
