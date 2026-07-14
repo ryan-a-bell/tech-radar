@@ -1,7 +1,88 @@
 {
-  "generated": "2026-07-13",
-  "count": 409,
+  "generated": "2026-07-14",
+  "count": 412,
   "items": [
+    {
+      "id": "github:Graphify-Labs/graphify",
+      "name": "graphify",
+      "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "canonical_url": "github.com/graphify-labs/graphify",
+      "also_seen": [],
+      "company": null,
+      "stars": 1095,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-14",
+      "last_seen": "2026-07-14",
+      "stars_history": {
+        "2026-07-14": 1095
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:moeru-ai/airi",
+      "name": "airi",
+      "description": "\ud83d\udc96\ud83e\uddf8 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/moeru-ai/airi",
+      "canonical_url": "github.com/moeru-ai/airi",
+      "also_seen": [],
+      "company": null,
+      "stars": 78,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-14",
+      "last_seen": "2026-07-14",
+      "stars_history": {
+        "2026-07-14": 78
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:OpenCut-app/OpenCut",
+      "name": "OpenCut",
+      "description": "The open-source CapCut alternative",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "canonical_url": "github.com/opencut-app/opencut",
+      "also_seen": [],
+      "company": null,
+      "stars": 1229,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-14",
+      "last_seen": "2026-07-14",
+      "stars_history": {
+        "2026-07-14": 1229
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
       "name": "whisper.cpp",
@@ -141,7 +222,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 155,
+      "stars": 794,
       "momentum": 15,
       "tags": [
         "css"
@@ -149,12 +230,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "stars_history": {
-        "2026-07-13": 155
+        "2026-07-13": 155,
+        "2026-07-14": 794
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 639
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -191,7 +273,7 @@
       "canonical_url": "github.com/dicklesworthstone/destructive_command_guard",
       "also_seen": [],
       "company": null,
-      "stars": 444,
+      "stars": 1295,
       "momentum": 44,
       "tags": [
         "rust"
@@ -199,12 +281,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "stars_history": {
-        "2026-07-13": 444
+        "2026-07-13": 444,
+        "2026-07-14": 1295
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 851
     },
     {
       "id": "github:ColeMurray/background-agents",
@@ -245,7 +328,7 @@
       "canonical_url": "github.com/shubhamsaboo/awesome-llm-apps",
       "also_seen": [],
       "company": null,
-      "stars": 408,
+      "stars": 996,
       "momentum": 40,
       "tags": [
         "python"
@@ -253,12 +336,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "stars_history": {
-        "2026-07-13": 408
+        "2026-07-13": 408,
+        "2026-07-14": 996
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 588
     },
     {
       "id": "github:virattt/ai-hedge-fund",
@@ -2328,7 +2412,7 @@
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "also_seen": [],
       "company": null,
-      "stars": 145,
+      "stars": 299,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -2336,12 +2420,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-07-14",
       "stars_history": {
-        "2026-07-06": 145
+        "2026-07-06": 145,
+        "2026-07-14": 299
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 154
     },
     {
       "id": "github:gastownhall/gastown",
@@ -4135,7 +4220,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 938,
+      "stars": 451,
       "momentum": 100,
       "tags": [
         "html"
@@ -4143,14 +4228,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-14",
       "stars_history": {
         "2026-07-01": 1343,
         "2026-07-02": 2470,
-        "2026-07-03": 938
+        "2026-07-03": 938,
+        "2026-07-14": 451
       },
       "trend": "down",
-      "trend_delta": -405
+      "trend_delta": -487
     },
     {
       "id": "github:Mebus/cupp",
@@ -8352,19 +8438,20 @@
       "canonical_url": "github.com/raphire/win11debloat",
       "also_seen": [],
       "company": null,
-      "stars": 112,
+      "stars": 118,
       "momentum": 11,
       "tags": [
         "powershell"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-14",
       "stars_history": {
         "2026-06-15": 114,
-        "2026-06-16": 112
+        "2026-06-16": 112,
+        "2026-07-14": 118
       },
-      "trend": "down",
-      "trend_delta": -2
+      "trend": "up",
+      "trend_delta": 6
     },
     {
       "id": "github:mikeroyal/Self-Hosting-Guide",
@@ -10120,20 +10207,21 @@
       "canonical_url": "github.com/github/spec-kit",
       "also_seen": [],
       "company": null,
-      "stars": 321,
+      "stars": 543,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-07-14",
       "stars_history": {
         "2026-06-04": 311,
-        "2026-06-05": 321
+        "2026-06-05": 321,
+        "2026-07-14": 543
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 10
+      "trend_delta": 222
     },
     {
       "id": "github:openclaw/openclaw-windows-node",
@@ -10680,13 +10768,13 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 768,
+      "stars": 1153,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-14",
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
@@ -10695,10 +10783,11 @@
         "2026-07-01": 721,
         "2026-07-02": 694,
         "2026-07-03": 939,
-        "2026-07-13": 768
+        "2026-07-13": 768,
+        "2026-07-14": 1153
       },
-      "trend": "down",
-      "trend_delta": -171
+      "trend": "up",
+      "trend_delta": 214
     },
     {
       "id": "github:D4Vinci/Scrapling",
