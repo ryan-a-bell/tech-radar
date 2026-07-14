@@ -1,0 +1,25 @@
+{
+  "id": "github:moeru-ai/airi",
+  "name": "airi",
+  "description": "\ud83d\udc96\ud83e\uddf8 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/moeru-ai/airi",
+  "canonical_url": "github.com/moeru-ai/airi",
+  "also_seen": [],
+  "company": null,
+  "stars": 78,
+  "momentum": 7,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-14",
+  "last_seen": "2026-07-14",
+  "stars_history": {
+    "2026-07-14": 78
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "github:Graphify-Labs/graphify",
+  "name": "graphify",
+  "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Graphify-Labs/graphify",
+  "canonical_url": "github.com/graphify-labs/graphify",
+  "also_seen": [],
+  "company": null,
+  "stars": 1095,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-14",
+  "last_seen": "2026-07-14",
+  "stars_history": {
+    "2026-07-14": 1095
+  }
+}

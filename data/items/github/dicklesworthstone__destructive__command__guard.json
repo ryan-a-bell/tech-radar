@@ -10,7 +10,7 @@
   "canonical_url": "github.com/dicklesworthstone/destructive_command_guard",
   "also_seen": [],
   "company": null,
-  "stars": 444,
+  "stars": 1295,
   "momentum": 44,
   "tags": [
     "rust"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-13",
-  "last_seen": "2026-07-13",
+  "last_seen": "2026-07-14",
   "stars_history": {
-    "2026-07-13": 444
+    "2026-07-13": 444,
+    "2026-07-14": 1295
   }
 }
