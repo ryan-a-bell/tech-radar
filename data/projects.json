@@ -66,7 +66,7 @@
       ],
       "repo": "https://github.com/you/portfolio-optimizer",
       "blurb": "A backtesting harness for portfolio construction. It takes a universe of tickers and a set of constraints, then compares allocation methods — mean variance, hierarchical risk parity, and a few risk-budgeting schemes — on the same out-of-sample window so the tradeoffs are visible side by side.",
-      "body": "A backtesting harness for portfolio construction. It takes a universe of\ntickers and a set of constraints, then compares allocation methods — mean\nvariance, hierarchical risk parity, and a few risk-budgeting schemes — on the\nsame out-of-sample window so the tradeoffs are visible side by side.\n\nCurrently uses one optimization library for the allocation math. Paused while I\ndecide whether to add a broader financial-analytics layer for the pricing and\nrisk pieces, and a proper market-data source instead of the CSVs it reads today.",
+      "body": "A backtesting harness for portfolio construction. It takes a universe of\ntickers and a set of constraints, then compares allocation methods — mean\nvariance, hierarchical risk parity, and a few risk-budgeting schemes — on the\nsame out-of-sample window so the tradeoffs are visible side by side.\n\nUses a dedicated optimization library for the allocation math and gs-quant for\nthe risk and pricing pieces. Paused while I decide whether to add a proper\nmarket-data source instead of the CSVs it reads today.",
       "stack": [
         {
           "id": "manual:riskfolio-lib",
@@ -75,6 +75,14 @@
           "ring": "Assess",
           "url": "https://github.com/dcajasn/Riskfolio-Lib",
           "canonical_url": "github.com/dcajasn/riskfolio-lib"
+        },
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
         }
       ],
       "stack_unresolved": []

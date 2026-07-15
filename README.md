@@ -242,14 +242,23 @@ technology radar — a hybrid of two ideas:
   the stack. For an `Idea` with no stack, this **is** the suggested tech stack,
   inferred purely from the description.
 
-The detail panel has a **Show** toggle for two lenses:
+The page has three views (top-left switch):
 
-- **Recommended tools** — the project→tool suggestions above.
-- **Similar projects** — project→project neighbours, so two projects find each
-  other by what they *do*. A **Rank by** toggle switches between **Semantic**
-  (cosine on the descriptions — spots kinship across different topic areas, e.g.
-  a trading time-series project and a sensor-telemetry project that share the
-  same temporal machinery) and **Topics** (Jaccard overlap of the topic tags).
+- **Projects** — a filterable list (by status and topic, with sort) beside a
+  detail panel. The panel has a **Show** toggle:
+  - **Recommended tools** — with a **Rank by** switch: **Semantic** (description
+    similarity) or **Peers** (tools that *structurally similar projects actually
+    use* — collaborative filtering over the neighbours' declared stacks, so it
+    catches tools your prose never mentions).
+  - **Similar projects** — project→project neighbours, **Rank by** **Semantic**
+    (cosine on the descriptions — spots kinship across different topic areas,
+    e.g. a trading time-series project and a sensor-telemetry project that share
+    the same temporal machinery) or **Topics** (Jaccard overlap of the tags).
+- **Map** — a constellation: a force-directed graph over project↔project
+  similarity, nodes colored by status and sized by stack, so clusters of related
+  projects show at a glance.
+- **Tools** — the reverse index: every declared tool and the projects that
+  depend on it, so a tool used across several projects reads as load-bearing.
 
 Projects live in their own directory, separate from the scraped technology
 JSON under `data/` — hand-written prose, not discovery output. See
