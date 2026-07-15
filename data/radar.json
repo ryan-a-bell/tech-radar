@@ -3081,7 +3081,7 @@
       "name": "CodeMap",
       "description": "Code visualization tool that renders codebase structure as interactive graphs to aid understanding.",
       "quadrant": "Techniques",
-      "ring": "Discovered",
+      "ring": "Assess",
       "source": "Manual",
       "discovered_by": "manual",
       "url": "https://codemap.app/",
