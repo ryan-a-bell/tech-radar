@@ -1,0 +1,137 @@
+{
+  "generated": "2026-07-15",
+  "projects": [
+    {
+      "id": "gsd-core-app",
+      "name": "GSD Core App",
+      "status": "Active",
+      "topics": [
+        "Quant",
+        "Agents"
+      ],
+      "repo": "https://github.com/open-gsd/gsd-core",
+      "blurb": "A local-first \"get stuff done\" runner that turns a plain-language goal into a sequence of executed steps. It plans a task graph, routes each step to a local model, and keeps the whole loop on the machine so nothing leaves the laptop.",
+      "body": "A local-first \"get stuff done\" runner that turns a plain-language goal into a\nsequence of executed steps. It plans a task graph, routes each step to a local\nmodel, and keeps the whole loop on the machine so nothing leaves the laptop.\n\nThe core is a small library that other tools build on: a scheduler, a tool\nregistry, and a persistence layer for run history. Day-to-day development leans\non an AI editor for the glue code and a local model server for the planning and\nreflection calls, so the whole thing runs without an API key.",
+      "stack": [
+        {
+          "id": "manual:gsd-core",
+          "name": "gsd-core",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/open-gsd/gsd-core",
+          "canonical_url": "github.com/open-gsd/gsd-core"
+        },
+        {
+          "id": "manual:cursor",
+          "name": "Cursor",
+          "quadrant": "Tools",
+          "ring": "Discovered",
+          "url": "https://cursor.com",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "options-vol-surface",
+      "name": "Options Vol-Surface Lab",
+      "status": "Idea",
+      "topics": [
+        "Quant",
+        "Trading",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "An idea, no code yet. I want to build and calibrate an implied-volatility surface for equity options: pull an options chain, fit a no-arbitrage surface across strikes and expiries, and price exotic payoffs off it. The interesting part is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to interpolate the surface for pricing.",
+      "body": "An idea, no code yet. I want to build and calibrate an implied-volatility\nsurface for equity options: pull an options chain, fit a no-arbitrage surface\nacross strikes and expiries, and price exotic payoffs off it. The interesting\npart is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to\ninterpolate the surface for pricing.\n\nBecause there is no declared stack, the recommendations below are the whole\nsuggested tech stack, inferred purely from this description — option pricing\nlibraries, a quant analytics toolkit, and a market-data feed for the chains.",
+      "stack": [],
+      "stack_unresolved": []
+    },
+    {
+      "id": "radar-portfolio-optimizer",
+      "name": "Portfolio Optimizer",
+      "status": "Paused",
+      "topics": [
+        "Quant",
+        "Trading",
+        "ML"
+      ],
+      "repo": "https://github.com/you/portfolio-optimizer",
+      "blurb": "A backtesting harness for portfolio construction. It takes a universe of tickers and a set of constraints, then compares allocation methods — mean variance, hierarchical risk parity, and a few risk-budgeting schemes — on the same out-of-sample window so the tradeoffs are visible side by side.",
+      "body": "A backtesting harness for portfolio construction. It takes a universe of\ntickers and a set of constraints, then compares allocation methods — mean\nvariance, hierarchical risk parity, and a few risk-budgeting schemes — on the\nsame out-of-sample window so the tradeoffs are visible side by side.\n\nUses a dedicated optimization library for the allocation math and gs-quant for\nthe risk and pricing pieces. Paused while I decide whether to add a proper\nmarket-data source instead of the CSVs it reads today.",
+      "stack": [
+        {
+          "id": "manual:riskfolio-lib",
+          "name": "Riskfolio-Lib",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/dcajasn/Riskfolio-Lib",
+          "canonical_url": "github.com/dcajasn/riskfolio-lib"
+        },
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sensor-anomalies",
+      "name": "Sensor Telemetry Anomalies",
+      "status": "Idea",
+      "topics": [
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "An idea for detecting anomalies in industrial sensor streams over time. The plan: ingest telemetry from many sensors, resample the irregular timestamps onto a regular grid, decompose trend and seasonality, and fit a rolling forecast so points that break the predicted band get flagged.",
+      "body": "An idea for detecting anomalies in industrial sensor streams over time. The\nplan: ingest telemetry from many sensors, resample the irregular timestamps\nonto a regular grid, decompose trend and seasonality, and fit a rolling forecast\nso points that break the predicted band get flagged.\n\nStructurally this is the same shape as forecasting a financial series — lagged\nfeatures, rolling windows, drift as the distribution shifts over time, and a\nsignal that fires when the observed value leaves the forecast window. Different\ndomain, same temporal machinery, so the tooling should overlap heavily.",
+      "stack": [],
+      "stack_unresolved": []
+    },
+    {
+      "id": "trading-timeseries",
+      "name": "Trading Time-Series Forecaster",
+      "status": "Active",
+      "topics": [
+        "Quant",
+        "Trading",
+        "ML"
+      ],
+      "repo": "https://github.com/you/ts-forecaster",
+      "blurb": "Walk-forward forecasting of equity price series. It builds lagged features and rolling-window statistics from the raw series, trains a model per volatility regime, and validates strictly out-of-sample so nothing leaks from the future.",
+      "body": "Walk-forward forecasting of equity price series. It builds lagged features and\nrolling-window statistics from the raw series, trains a model per volatility\nregime, and validates strictly out-of-sample so nothing leaks from the future.\n\nThe interesting problems are all temporal: resampling to a regular grid,\nhandling gaps and irregular timestamps, decomposing trend and seasonality, and\nmeasuring drift as the distribution shifts over time. The output is a forecast\nband and a signal that fires when the observed value breaks the predicted\nwindow.",
+      "stack": [
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
+        },
+        {
+          "id": "manual:quantpy",
+          "name": "QuantPy",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/jsmidt/QuantPy",
+          "canonical_url": "github.com/jsmidt/quantpy"
+        }
+      ],
+      "stack_unresolved": []
+    }
+  ]
+}
