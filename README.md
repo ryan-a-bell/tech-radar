@@ -242,6 +242,15 @@ technology radar — a hybrid of two ideas:
   the stack. For an `Idea` with no stack, this **is** the suggested tech stack,
   inferred purely from the description.
 
+The detail panel has a **Show** toggle for two lenses:
+
+- **Recommended tools** — the project→tool suggestions above.
+- **Similar projects** — project→project neighbours, so two projects find each
+  other by what they *do*. A **Rank by** toggle switches between **Semantic**
+  (cosine on the descriptions — spots kinship across different topic areas, e.g.
+  a trading time-series project and a sensor-telemetry project that share the
+  same temporal machinery) and **Topics** (Jaccard overlap of the topic tags).
+
 Projects live in their own directory, separate from the scraped technology
 JSON under `data/` — hand-written prose, not discovery output. See
 `projects/README.md` for the full file format.
@@ -267,12 +276,13 @@ List, so a project, a book, and a technology can share a topic tag.
 
 ### Recommender quality
 
-The recommendations work out of the box using **in-browser TF-IDF** — no build
-step, no dependencies. Running `build_similarity.py` upgrades them to semantic
-embeddings: it embeds projects and tools in one space and writes
-`data/project_similarity.json` (the same optional quality path as the Tool
-Similarity page's `data/similarity.json`). When that file is present the
-PROJECTS tab prefers it; otherwise it falls back to TF-IDF.
+Both the tool recommendations and the semantic "Similar projects" ranking work
+out of the box using **in-browser TF-IDF** — no build step, no dependencies.
+Running `build_similarity.py` upgrades them to semantic embeddings: it embeds
+projects and tools in one space and writes `data/project_similarity.json` —
+project→tool scores *and* a project→project matrix (the same optional quality
+path as the Tool Similarity page's `data/similarity.json`). When that file is
+present the PROJECTS tab prefers it; otherwise it falls back to TF-IDF.
 
 ```bash
 python build_projects.py     # projects/*.md -> data/projects.json

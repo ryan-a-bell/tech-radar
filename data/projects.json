@@ -78,6 +78,52 @@
         }
       ],
       "stack_unresolved": []
+    },
+    {
+      "id": "sensor-anomalies",
+      "name": "Sensor Telemetry Anomalies",
+      "status": "Idea",
+      "topics": [
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "An idea for detecting anomalies in industrial sensor streams over time. The plan: ingest telemetry from many sensors, resample the irregular timestamps onto a regular grid, decompose trend and seasonality, and fit a rolling forecast so points that break the predicted band get flagged.",
+      "body": "An idea for detecting anomalies in industrial sensor streams over time. The\nplan: ingest telemetry from many sensors, resample the irregular timestamps\nonto a regular grid, decompose trend and seasonality, and fit a rolling forecast\nso points that break the predicted band get flagged.\n\nStructurally this is the same shape as forecasting a financial series — lagged\nfeatures, rolling windows, drift as the distribution shifts over time, and a\nsignal that fires when the observed value leaves the forecast window. Different\ndomain, same temporal machinery, so the tooling should overlap heavily.",
+      "stack": [],
+      "stack_unresolved": []
+    },
+    {
+      "id": "trading-timeseries",
+      "name": "Trading Time-Series Forecaster",
+      "status": "Active",
+      "topics": [
+        "Quant",
+        "Trading",
+        "ML"
+      ],
+      "repo": "https://github.com/you/ts-forecaster",
+      "blurb": "Walk-forward forecasting of equity price series. It builds lagged features and rolling-window statistics from the raw series, trains a model per volatility regime, and validates strictly out-of-sample so nothing leaks from the future.",
+      "body": "Walk-forward forecasting of equity price series. It builds lagged features and\nrolling-window statistics from the raw series, trains a model per volatility\nregime, and validates strictly out-of-sample so nothing leaks from the future.\n\nThe interesting problems are all temporal: resampling to a regular grid,\nhandling gaps and irregular timestamps, decomposing trend and seasonality, and\nmeasuring drift as the distribution shifts over time. The output is a forecast\nband and a signal that fires when the observed value breaks the predicted\nwindow.",
+      "stack": [
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
+        },
+        {
+          "id": "manual:quantpy",
+          "name": "QuantPy",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/jsmidt/QuantPy",
+          "canonical_url": "github.com/jsmidt/quantpy"
+        }
+      ],
+      "stack_unresolved": []
     }
   ]
 }

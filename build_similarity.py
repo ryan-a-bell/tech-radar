@@ -186,9 +186,11 @@ def project_doc_text(p):
 
 def build_project_similarity(items):
     """Embed projects + tools in one space and write data/project_similarity.json:
-    for each project, its cosine similarity to every non-archived tool. This is
-    what powers the PROJECTS tab's "recommended tools". Skipped if there are no
-    projects. The tool-vs-tool similarity.json is left untouched.
+    for each project, its cosine similarity to every non-archived tool
+    (`projects`) AND to every other project (`project_matrix`). These power the
+    PROJECTS tab's "recommended tools" and "similar projects" respectively.
+    Skipped if there are no projects. The tool-vs-tool similarity.json is left
+    untouched.
     """
     try:
         import build_projects
@@ -208,16 +210,21 @@ def build_project_similarity(items):
     sim, method = choose_backend(tool_texts + proj_texts)
 
     tool_ids = [it["id"] for it in items]
-    proj_scores = {}
+    proj_ids = [p["id"] for p in projects]
+    proj_scores = {}          # project -> [cosine to each tool]
+    proj_matrix = []          # project x project cosine (for "similar projects")
     for pi, p in enumerate(projects):
         row = _row_floats(sim, n_tools + pi)
         proj_scores[p["id"]] = [round(row[j], 3) for j in range(n_tools)]
+        proj_matrix.append([round(row[n_tools + pj], 3) for pj in range(len(projects))])
 
     payload = {
         "method": method,
         "generated": _dt.date.today().isoformat(),
         "tool_ids": tool_ids,
         "projects": proj_scores,
+        "project_ids": proj_ids,
+        "project_matrix": proj_matrix,
     }
     with open(PROJ_OUT, "w", encoding="utf-8") as f:
         json.dump(payload, f, separators=(",", ":"))

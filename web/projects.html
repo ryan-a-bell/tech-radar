@@ -56,9 +56,13 @@ const { useState, useMemo, useEffect } = React;
  *      every tool's description. Surfaces tools NOT already in the stack; for
  *      an Idea with no stack, this IS the suggested tech stack.
  *
+ * The detail panel toggles between two lenses:
+ *   - Recommended tools  (project -> tool)
+ *   - Similar projects   (project -> project) ranked by Semantic or Topics
+ *
  * Similarity sources, best-available wins:
  *   1. Precomputed embeddings — data/project_similarity.json from
- *      build_similarity.py (semantic; catches tools described in other words).
+ *      build_similarity.py (semantic; project x tool AND project x project).
  *   2. In-browser TF-IDF over tools + projects — zero deps, always works.
  * ==========================================================================*/
 
@@ -82,7 +86,7 @@ const STATUS_COLOR = {
 const STOP = new Set(("a an the and or of for to in on with without from by is are be " +
   "this that it its as at into your you our their they we can will use used using " +
   "via based over under across between not no more most other any all which who whom " +
-  "open source library tool toolkit app application project framework platform " +
+  "open source library tool toolkit app application project framework platform so " +
   "github repo repository code python js javascript want build no yet").split(/\s+/));
 
 function tokenize(s) {
@@ -102,8 +106,8 @@ function projectText(p) {
   return [p.name, p.blurb, p.body, (p.topics || []).join(" ")].join(" ");
 }
 
-/* One TF-IDF space over BOTH corpora (tools + projects) so a project vector and
- * a tool vector are directly comparable. Returns L2-normalised sparse maps. */
+/* One TF-IDF space over BOTH corpora (tools + projects) so project vectors and
+ * tool vectors — and projects with each other — are directly comparable. */
 function buildTfIdf(toolTexts, projTexts) {
   const all = toolTexts.concat(projTexts);
   const n = all.length;
@@ -147,14 +151,28 @@ function sharedTerms(a, b, k = 4) {
   out.sort((x, y) => y[1] - x[1]);
   return out.slice(0, k).map((x) => x[0]);
 }
+function jaccard(a, b) {
+  const A = new Set(a || []), B = new Set(b || []);
+  if (!A.size && !B.size) return 0;
+  let inter = 0;
+  for (const x of A) if (B.has(x)) inter++;
+  const uni = new Set([...(a || []), ...(b || [])]).size || 1;
+  return inter / uni;
+}
+function sharedTopics(a, b) {
+  const B = new Set(b || []);
+  return (a || []).filter((x) => B.has(x));
+}
 
 // ============================================================================
 function App() {
   const [tools, setTools] = useState(null);
   const [projects, setProjects] = useState(null);
   const [tfidf, setTfidf] = useState(null);
-  const [precomp, setPrecomp] = useState(null);   // {method, scores: Map(projId -> Map(toolIdx -> score))}
+  const [precomp, setPrecomp] = useState(null);   // {method, toolScores, projScores}
   const [method, setMethod] = useState("tfidf");   // "tfidf" | "precomputed"
+  const [mode, setMode] = useState("tools");       // "tools" | "projects"
+  const [rankBy, setRankBy] = useState("semantic"); // "semantic" | "topics" (projects mode)
   const [selId, setSelId] = useState(null);
   const [topK, setTopK] = useState(6);
 
@@ -171,7 +189,7 @@ function App() {
       // always-available lexical recommender
       const tf = buildTfIdf(its.map(toolText), projs.map(projectText));
 
-      // optional precomputed semantic scores: project -> [scores over tool_ids]
+      // optional precomputed semantic scores (project x tool AND project x project)
       let pc = null;
       try {
         const s = await fetch("data/project_similarity.json");
@@ -180,13 +198,25 @@ function App() {
           if (j && j.tool_ids && j.projects) {
             const toolIdx = new Map(its.map((it, i) => [it.id, i]));
             const idAlign = j.tool_ids.map((id) => toolIdx.has(id) ? toolIdx.get(id) : -1);
-            const scores = new Map();
+            const toolScores = new Map();
             for (const [pid, row] of Object.entries(j.projects)) {
               const m = new Map();
               row.forEach((v, k) => { const ti = idAlign[k]; if (ti >= 0) m.set(ti, v); });
-              scores.set(pid, m);
+              toolScores.set(pid, m);
             }
-            pc = { method: j.method || "embeddings", scores };
+            // project x project block (added alongside the tool block)
+            const projScores = new Map();
+            if (j.project_ids && j.project_matrix) {
+              j.project_ids.forEach((pid, i) => {
+                const m = new Map();
+                (j.project_matrix[i] || []).forEach((v, k) => {
+                  const other = j.project_ids[k];
+                  if (other !== pid) m.set(other, v);
+                });
+                projScores.set(pid, m);
+              });
+            }
+            pc = { method: j.method || "embeddings", toolScores, projScores };
           }
         }
       } catch (e) { /* no precomputed file — TF-IDF still works */ }
@@ -200,19 +230,14 @@ function App() {
     })();
   }, []);
 
-  const toolIndexById = useMemo(
-    () => (tools ? new Map(tools.map((it, i) => [it.id, i])) : new Map()),
-    [tools]
-  );
-
-  // recommendations for one project: [{ idx, score, why }], stack excluded
-  const recommend = useMemo(() => {
+  // tool recommendations for one project: [{ idx, score, why }], stack excluded
+  const recommendTools = useMemo(() => {
     if (!tools || !projects) return () => [];
     return (proj, pIdx) => {
       const stackIds = new Set((proj.stack || []).map((s) => s.id));
       const out = [];
       if (method === "precomputed" && precomp) {
-        const row = precomp.scores.get(proj.id);
+        const row = precomp.toolScores.get(proj.id);
         if (row) for (const [ti, sc] of row) {
           if (stackIds.has(tools[ti].id)) continue;
           out.push({ idx: ti, score: sc, why: [] });
@@ -230,6 +255,36 @@ function App() {
     };
   }, [tools, projects, tfidf, precomp, method, topK]);
 
+  // similar-projects for one project: [{ proj, score, why }], self excluded
+  const recommendProjects = useMemo(() => {
+    if (!projects) return () => [];
+    const byId = new Map(projects.map((p) => [p.id, p]));
+    return (proj, pIdx) => {
+      const out = [];
+      if (rankBy === "topics") {
+        projects.forEach((p, j) => {
+          if (j === pIdx) return;
+          const sc = jaccard(proj.topics, p.topics);
+          if (sc > 0) out.push({ proj: p, score: sc, why: sharedTopics(proj.topics, p.topics), topic: true });
+        });
+      } else if (method === "precomputed" && precomp && precomp.projScores.has(proj.id)) {
+        for (const [pid, sc] of precomp.projScores.get(proj.id)) {
+          const p = byId.get(pid);
+          if (p) out.push({ proj: p, score: sc, why: [] });
+        }
+      } else {
+        const pv = tfidf.projVecs[pIdx];
+        projects.forEach((p, j) => {
+          if (j === pIdx) return;
+          const sc = cosine(pv, tfidf.projVecs[j]);
+          if (sc > 0.001) out.push({ proj: p, score: sc, why: sharedTerms(pv, tfidf.projVecs[j]) });
+        });
+      }
+      out.sort((a, b) => b.score - a.score);
+      return out.slice(0, topK);
+    };
+  }, [projects, tfidf, precomp, method, rankBy, topK]);
+
   if (!tools || !projects) return <div className="loading">building recommendations…</div>;
 
   const semantic = method === "precomputed" && precomp;
@@ -241,6 +296,7 @@ function App() {
       <TopBar count={projects.length} semantic={semantic}
         label={semantic ? prettyMethod(precomp.method) : "TF-IDF · in-browser"} />
       <Controls
+        mode={mode} setMode={setMode} rankBy={rankBy} setRankBy={setRankBy}
         hasPrecomp={!!precomp} method={method} setMethod={setMethod}
         precompLabel={precomp ? prettyMethod(precomp.method) : ""}
         topK={topK} setTopK={setTopK} />
@@ -248,15 +304,17 @@ function App() {
         <ProjectList projects={projects} selId={selId} setSelId={setSelId} />
         <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
           {sel
-            ? <ProjectDetail proj={sel} tools={tools} recs={recommend(sel, selIdx)}
-                toolIndexById={toolIndexById} setSelId={setSelId} projects={projects} />
+            ? <ProjectDetail proj={sel} tools={tools} mode={mode} rankBy={rankBy}
+                toolRecs={recommendTools(sel, selIdx)}
+                projRecs={recommendProjects(sel, selIdx)}
+                setSelId={setSelId} />
             : <div style={{ color: "var(--muted)" }}>
                 No projects yet. Add a Markdown file under <code>projects/</code> and run{" "}
                 <code>python build_projects.py</code>.
               </div>}
         </div>
       </div>
-      <Legend />
+      <Legend mode={mode} />
     </div>
   );
 }
@@ -297,30 +355,59 @@ function TopBar({ count, semantic, label }) {
   );
 }
 
-function Controls({ hasPrecomp, method, setMethod, precompLabel, topK, setTopK }) {
+// segmented button group
+function Seg({ options, value, onChange, disabled }) {
+  return (
+    <div style={{ display: "inline-flex", border: "1px solid var(--border)", borderRadius: 8,
+      overflow: "hidden", opacity: disabled ? 0.4 : 1, pointerEvents: disabled ? "none" : "auto" }}>
+      {options.map(([k, lbl], i) => {
+        const on = k === value;
+        return (
+          <button key={k} onClick={() => onChange(k)} aria-pressed={on}
+            style={{ padding: "6px 12px", fontSize: 12, cursor: "pointer",
+              border: 0, borderRight: i < options.length - 1 ? "1px solid var(--border)" : 0,
+              background: on ? "rgba(57,135,229,0.16)" : "transparent",
+              color: on ? "#fff" : "var(--ink-2)",
+              boxShadow: on ? "inset 0 -2px 0 var(--q-tools)" : "none" }}>{lbl}</button>
+        );
+      })}
+    </div>
+  );
+}
+
+function Controls({ mode, setMode, rankBy, setRankBy, hasPrecomp, method, setMethod, precompLabel, topK, setTopK }) {
   const wrap = { display: "flex", gap: 18, alignItems: "center", padding: "8px 14px",
     borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" };
+  const k = { fontSize: 12, textTransform: "uppercase", letterSpacing: 0.5 };
   return (
     <div style={wrap}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={k}>Show</span>
+        <Seg options={[["tools", "Recommended tools"], ["projects", "Similar projects"]]}
+          value={mode} onChange={setMode} />
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={k}>Rank by</span>
+        <Seg options={[["semantic", "Semantic"], ["topics", "Topics"]]}
+          value={rankBy} onChange={setRankBy} disabled={mode !== "projects"} />
+      </div>
       {hasPrecomp && (
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <span>recommender:</span>
-          {[["precomputed", precompLabel + " ✦"], ["tfidf", "TF-IDF"]].map(([k, lbl]) => {
-            const on = method === k;
-            return (
-              <button key={k} onClick={() => setMethod(k)}
-                style={{ padding: "5px 11px", borderRadius: 6, cursor: "pointer",
-                  border: "1px solid " + (on ? "var(--q-tools)" : "var(--border)"),
-                  background: on ? "rgba(57,135,229,0.15)" : "transparent",
-                  color: on ? "#fff" : "var(--ink-2)" }}>{lbl}</button>
-            );
-          })}
+          <span style={k}>Semantic src</span>
+          <Seg options={[["precomputed", precompLabel + " ✦"], ["tfidf", "TF-IDF"]]}
+            value={method} onChange={setMethod} />
         </div>
       )}
-      <label>recommend top{" "}
+      <label>top{" "}
         <input type="range" min="3" max="12" value={topK}
           onChange={(e) => setTopK(+e.target.value)} /> {topK}</label>
-      <span style={{ fontSize: 12 }}>declared stack = tools in use · recommendations = semantic matches</span>
+      <span style={{ fontSize: 12 }}>
+        {mode === "tools"
+          ? "tools ranked by similarity to the description; declared stack excluded"
+          : (rankBy === "semantic"
+              ? "projects that resemble this one — semantic match spots kinship across topic areas"
+              : "projects sharing topic tags (Jaccard overlap)")}
+      </span>
     </div>
   );
 }
@@ -365,15 +452,7 @@ function StatusBadge({ status }) {
   );
 }
 
-function ProjectDetail({ proj, tools, recs, toolIndexById, setSelId, projects }) {
-  const related = useMemo(() => {
-    // other projects sharing a topic — a light Pattern-B "similar projects" cue
-    const mine = new Set(proj.topics || []);
-    if (!mine.size) return [];
-    return projects.filter((p) => p.id !== proj.id &&
-      (p.topics || []).some((t) => mine.has(t)));
-  }, [proj, projects]);
-
+function ProjectDetail({ proj, tools, mode, rankBy, toolRecs, projRecs, setSelId }) {
   return (
     <div style={{ maxWidth: 760 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
@@ -415,7 +494,17 @@ function ProjectDetail({ proj, tools, recs, toolIndexById, setSelId, projects })
         </div>
       )}
 
-      {/* --- recommended tools (Pattern C) --- */}
+      {/* --- toggled lens: recommended tools (C) OR similar projects --- */}
+      {mode === "tools"
+        ? <ToolRecs proj={proj} tools={tools} recs={toolRecs} />
+        : <ProjectRecs proj={proj} recs={projRecs} rankBy={rankBy} setSelId={setSelId} />}
+    </div>
+  );
+}
+
+function ToolRecs({ proj, tools, recs }) {
+  return (
+    <>
       <SectionTitle>
         {proj.stack && proj.stack.length ? "Recommended — tools you might add" : "Recommended tech stack"}
       </SectionTitle>
@@ -448,24 +537,43 @@ function ProjectDetail({ proj, tools, recs, toolIndexById, setSelId, projects })
         })}
         {!recs.length && <div style={{ color: "var(--muted)" }}>no recommendations — add more detail to the project description.</div>}
       </div>
+    </>
+  );
+}
 
-      {/* --- similar projects (light Pattern B) --- */}
-      {related.length > 0 && (
-        <>
-          <SectionTitle>Related projects — shared topics</SectionTitle>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
-            {related.map((p) => (
-              <button key={p.id} onClick={() => setSelId(p.id)}
-                style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "5px 11px",
-                  borderRadius: 8, cursor: "pointer", color: "var(--ink-2)",
-                  border: "1px solid var(--border)", background: "transparent" }}>
-                <StatusDot status={p.status} />{p.name}
-              </button>
-            ))}
+function ProjectRecs({ proj, recs, rankBy, setSelId }) {
+  const src = rankBy === "semantic" ? "semantic similarity" : "topic overlap";
+  return (
+    <>
+      <SectionTitle>Similar projects <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— ranked by {src}</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map(({ proj: p, score, why, topic }) => (
+          <div key={p.id} onClick={() => setSelId(p.id)}
+            style={{ padding: "10px 0", borderTop: "1px solid var(--border)", cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <StatusDot status={p.status} />
+              <strong>{p.name}</strong>
+              <span style={{ color: "var(--muted)", fontSize: 12 }}>{p.status} · {(p.topics || []).join(", ") || "no topics"}</span>
+              <span style={{ flex: 1 }} />
+              <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{score.toFixed(2)}</span>
+            </div>
+            <div style={{ height: 4, background: "var(--grid)", borderRadius: 2, margin: "5px 0" }}>
+              <div style={{ height: "100%", width: (Math.min(1, score) * 100) + "%",
+                background: "var(--q-tools)", borderRadius: 2 }} />
+            </div>
+            <div style={{ color: "var(--muted)", fontSize: 12 }}>
+              {(p.blurb || "").slice(0, 110)}{(p.blurb || "").length > 110 ? "…" : ""}
+              {why && why.length
+                ? <span style={{ color: "#6da7ec" }}>  · {topic ? "shared topics" : "shared"}: {why.join(", ")}</span>
+                : null}
+            </div>
           </div>
-        </>
-      )}
-    </div>
+        ))}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>
+          no similar projects{rankBy === "topics" ? " share a topic tag" : " yet — add more projects or detail"}.
+        </div>}
+      </div>
+    </>
   );
 }
 
@@ -476,7 +584,7 @@ function SectionTitle({ children }) {
   );
 }
 
-function Legend() {
+function Legend({ mode }) {
   return (
     <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "8px 14px",
       borderTop: "1px solid var(--border)", background: "var(--surface-1)", color: "var(--muted)", fontSize: 12, flexWrap: "wrap" }}>
@@ -487,7 +595,9 @@ function Legend() {
         </span>
       ))}
       <span style={{ flex: 1 }} />
-      <span>declared stack = using · recommended = semantic match · prototype</span>
+      <span>{mode === "tools"
+        ? "declared stack = using · recommended = semantic match · prototype"
+        : "bar = project-to-project similarity · click a project to open it · prototype"}</span>
     </div>
   );
 }
