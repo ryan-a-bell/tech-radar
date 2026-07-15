@@ -228,6 +228,79 @@ so a book and a technology tagged e.g. `RAG` are easy to spot together.
 
 ---
 
+## Projects
+
+A companion page (`web/projects.html`) that maps **personal projects** to the
+technology radar — a hybrid of two ideas:
+
+- **Declared stack (what you ARE using)** — each project is one Markdown file in
+  `projects/`, with a `stack:` list in its front-matter referencing tools by
+  radar id (`manual:cursor`) or name (`Cursor`). `build_projects.py` resolves
+  these against the radar and writes `data/projects.json`.
+- **Recommended tools (what MIGHT be useful)** — cosine similarity between the
+  project's prose and every tool's description surfaces tools *not* already in
+  the stack. For an `Idea` with no stack, this **is** the suggested tech stack,
+  inferred purely from the description.
+
+The page has three views (top-left switch):
+
+- **Projects** — a filterable list (by status and topic, with sort) beside a
+  detail panel. The panel has a **Show** toggle:
+  - **Recommended tools** — with a **Rank by** switch: **Semantic** (description
+    similarity) or **Peers** (tools that *structurally similar projects actually
+    use* — collaborative filtering over the neighbours' declared stacks, so it
+    catches tools your prose never mentions).
+  - **Similar projects** — project→project neighbours, **Rank by** **Semantic**
+    (cosine on the descriptions — spots kinship across different topic areas,
+    e.g. a trading time-series project and a sensor-telemetry project that share
+    the same temporal machinery) or **Topics** (Jaccard overlap of the tags).
+- **Map** — a constellation: a force-directed graph over project↔project
+  similarity, nodes colored by status and sized by stack, so clusters of related
+  projects show at a glance.
+- **Tools** — the reverse index: every declared tool and the projects that
+  depend on it, so a tool used across several projects reads as load-bearing.
+
+Projects live in their own directory, separate from the scraped technology
+JSON under `data/` — hand-written prose, not discovery output. See
+`projects/README.md` for the full file format.
+
+### Project schema (Markdown front-matter)
+
+```markdown
+---
+id: options-vol-surface
+name: Options Vol-Surface Lab
+status: Idea                       # Idea | Active | Paused | Shipped | Archived
+topics: [Quant, Trading, Data Feeds]
+stack: [manual:financepy, QuantPy] # tools in use — radar id or name
+repo: https://github.com/you/vol-surface
+---
+
+Prose body — what the project does. This is the text the recommender embeds,
+and its first paragraph becomes the card blurb.
+```
+
+`topics` draws from the same `TOPICS` vocabulary as the tech radar and Reading
+List, so a project, a book, and a technology can share a topic tag.
+
+### Recommender quality
+
+Both the tool recommendations and the semantic "Similar projects" ranking work
+out of the box using **in-browser TF-IDF** — no build step, no dependencies.
+Running `build_similarity.py` upgrades them to semantic embeddings: it embeds
+projects and tools in one space and writes `data/project_similarity.json` —
+project→tool scores *and* a project→project matrix (the same optional quality
+path as the Tool Similarity page's `data/similarity.json`). When that file is
+present the PROJECTS tab prefers it; otherwise it falls back to TF-IDF.
+
+```bash
+python build_projects.py     # projects/*.md -> data/projects.json
+python build_similarity.py   # optional — semantic project→tool recommendations
+python build_site.py         # build_site also refreshes projects.json
+```
+
+---
+
 ## Deployment
 
 | Target | Command |
@@ -246,6 +319,8 @@ tech-radar/
 ├── radar.py            # curation CLI — human triage and ring management
 ├── radar_core.py       # shared library — item schema, dedup, persistence
 ├── build_site.py       # static site assembler — bundles web/ → site/
+├── build_projects.py   # projects/*.md → data/projects.json (declared stacks)
+├── build_similarity.py # optional — precompute semantic similarity matrices
 ├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
 │   ├── base.py         # Scraper base class (the discover() contract)
@@ -258,7 +333,10 @@ tech-radar/
 │   ├── dashboard.jsx   # React dashboard — Atlas + Index views + edit mode
 │   ├── books.html      # HTML shell for the Reading List — loads books.jsx via CDN
 │   ├── books.jsx       # React book radar — Atlas-style radar + scrollable list
+│   ├── similarity.html # Tool Similarity page — self-contained inline JSX
+│   ├── projects.html   # Projects page — declared stack + recommended tools
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
+├── projects/           # personal projects — one Markdown file each (hand-written)
 ├── tests/              # stdlib unittest suite for radar_core
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
@@ -268,6 +346,7 @@ tech-radar/
 │   │   └── reddit/
 │   ├── raw/            # audit trail of raw scrape output (generated)
 │   ├── radar.json      # aggregated payload for the dashboard (generated)
+│   ├── projects.json   # aggregated projects payload (generated from projects/)
 │   └── books.json       # hand-curated Reading List — { generated, books: [...] }
 └── site/               # deployable static site (generated by build_site.py)
     ├── index.html

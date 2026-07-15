@@ -37,6 +37,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 ITEMS_DIR = os.path.join(HERE, "data", "items")
 OUT = os.path.join(HERE, "data", "similarity.json")
+PROJ_OUT = os.path.join(HERE, "data", "project_similarity.json")
 
 
 def load_items():
@@ -164,6 +165,75 @@ def to_lists(sim):
         return [[round(float(x), 3) for x in list(row)] for row in list(sim)]
 
 
+def _row_floats(sim, i):
+    """One row of a numpy-or-list similarity matrix as python floats."""
+    r = sim[i]
+    try:
+        return [float(x) for x in r]
+    except TypeError:
+        return [float(x) for x in list(r)]
+
+
+def project_doc_text(p):
+    """Embedding text for a project record from build_projects."""
+    return " ".join([
+        p.get("name") or "",
+        p.get("blurb") or "",
+        p.get("body") or "",
+        " ".join(p.get("topics") or []),
+    ]).strip()
+
+
+def build_project_similarity(items):
+    """Embed projects + tools in one space and write data/project_similarity.json:
+    for each project, its cosine similarity to every non-archived tool
+    (`projects`) AND to every other project (`project_matrix`). These power the
+    PROJECTS tab's "recommended tools" and "similar projects" respectively.
+    Skipped if there are no projects. The tool-vs-tool similarity.json is left
+    untouched.
+    """
+    try:
+        import build_projects
+    except Exception as e:  # pragma: no cover - defensive
+        print(f"skipping project_similarity.json — build_projects unavailable ({e})")
+        return
+    projects = build_projects.build_project_records()
+    if not projects:
+        print("no projects — skipping project_similarity.json")
+        return
+
+    tool_texts = [doc_text(it) for it in items]
+    proj_texts = [project_doc_text(p) for p in projects]
+    n_tools = len(tool_texts)
+    print(f"embedding {len(projects)} projects against {n_tools} tools")
+    # one shared space so a project vector and a tool vector are comparable
+    sim, method = choose_backend(tool_texts + proj_texts)
+
+    tool_ids = [it["id"] for it in items]
+    proj_ids = [p["id"] for p in projects]
+    proj_scores = {}          # project -> [cosine to each tool]
+    proj_matrix = []          # project x project cosine (for "similar projects")
+    for pi, p in enumerate(projects):
+        row = _row_floats(sim, n_tools + pi)
+        proj_scores[p["id"]] = [round(row[j], 3) for j in range(n_tools)]
+        proj_matrix.append([round(row[n_tools + pj], 3) for pj in range(len(projects))])
+
+    payload = {
+        "method": method,
+        "generated": _dt.date.today().isoformat(),
+        "tool_ids": tool_ids,
+        "projects": proj_scores,
+        "project_ids": proj_ids,
+        "project_matrix": proj_matrix,
+    }
+    with open(PROJ_OUT, "w", encoding="utf-8") as f:
+        json.dump(payload, f, separators=(",", ":"))
+    size_kb = os.path.getsize(PROJ_OUT) / 1024
+    print(f"wrote {PROJ_OUT}  ({len(projects)} projects x {n_tools} tools, "
+          f"{size_kb:.0f} KB, method={method})")
+    print("the PROJECTS tab will now use this instead of client-side TF-IDF.")
+
+
 def main():
     items = load_items()
     texts = [doc_text(it) for it in items]
@@ -180,6 +250,9 @@ def main():
     size_kb = os.path.getsize(OUT) / 1024
     print(f"wrote {OUT}  ({len(items)}x{len(items)} matrix, {size_kb:.0f} KB, method={method})")
     print("the similarity page will now use this instead of client-side TF-IDF.")
+
+    # project -> tool recommendations (semantic upgrade for the PROJECTS tab)
+    build_project_similarity(items)
 
 
 if __name__ == "__main__":
