@@ -1,7 +1,61 @@
 {
   "generated": "2026-07-15",
-  "count": 414,
+  "count": 417,
   "items": [
+    {
+      "id": "github:HenryNdubuaku/maths-cs-ai-compendium",
+      "name": "maths-cs-ai-compendium",
+      "description": "Become a cracked AI/ML Research Engineer",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
+      "canonical_url": "github.com/henryndubuaku/maths-cs-ai-compendium",
+      "also_seen": [],
+      "company": null,
+      "stars": 112,
+      "momentum": 11,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "stars_history": {
+        "2026-07-15": 112
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chenyme/grok2api",
+      "name": "grok2api",
+      "description": "\u9762\u5411 Grok Build\u3001Grok Web \u4e0e Grok Console \u7684\u591a\u8d26\u53f7 API \u7f51\u5173",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chenyme/grok2api",
+      "canonical_url": "github.com/chenyme/grok2api",
+      "also_seen": [],
+      "company": null,
+      "stars": 186,
+      "momentum": 18,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "stars_history": {
+        "2026-07-15": 186
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:open-connector",
       "name": "Open Connector",
@@ -24,6 +78,33 @@
       "first_seen": "2026-07-15",
       "last_seen": "2026-07-15",
       "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AIEraDev/Clypra",
+      "name": "Clypra",
+      "description": "A modern video editor built with Tauri, React, and TypeScript. Focus on building free capabilities of premium capcut functionalities",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AIEraDev/Clypra",
+      "canonical_url": "github.com/aieradev/clypra",
+      "also_seen": [],
+      "company": null,
+      "stars": 85,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-15",
+      "last_seen": "2026-07-15",
+      "stars_history": {
+        "2026-07-15": 85
+      },
       "trend": "none",
       "trend_delta": 0
     },
@@ -66,7 +147,7 @@
       "canonical_url": "github.com/graphify-labs/graphify",
       "also_seen": [],
       "company": null,
-      "stars": 1095,
+      "stars": 1851,
       "momentum": 100,
       "tags": [
         "python"
@@ -74,12 +155,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
-        "2026-07-14": 1095
+        "2026-07-14": 1095,
+        "2026-07-15": 1851
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 756
     },
     {
       "id": "github:moeru-ai/airi",
@@ -120,7 +202,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 1229,
+      "stars": 4276,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -128,12 +210,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
-        "2026-07-14": 1229
+        "2026-07-14": 1229,
+        "2026-07-15": 4276
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 3047
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -220,7 +303,7 @@
       "canonical_url": "github.com/par274/sharpemu",
       "also_seen": [],
       "company": null,
-      "stars": 314,
+      "stars": 332,
       "momentum": 31,
       "tags": [
         "c#"
@@ -228,12 +311,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-15",
       "stars_history": {
-        "2026-07-13": 314
+        "2026-07-13": 314,
+        "2026-07-15": 332
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 18
     },
     {
       "id": "github:PrefectHQ/prefect",
@@ -274,7 +358,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 794,
+      "stars": 1015,
       "momentum": 15,
       "tags": [
         "css"
@@ -282,13 +366,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-07-13": 155,
-        "2026-07-14": 794
+        "2026-07-14": 794,
+        "2026-07-15": 1015
       },
       "trend": "up",
-      "trend_delta": 639
+      "trend_delta": 860
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -380,7 +465,7 @@
       "canonical_url": "github.com/shubhamsaboo/awesome-llm-apps",
       "also_seen": [],
       "company": null,
-      "stars": 996,
+      "stars": 1106,
       "momentum": 40,
       "tags": [
         "python"
@@ -388,13 +473,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-07-13": 408,
-        "2026-07-14": 996
+        "2026-07-14": 996,
+        "2026-07-15": 1106
       },
       "trend": "up",
-      "trend_delta": 588
+      "trend_delta": 698
     },
     {
       "id": "github:virattt/ai-hedge-fund",
@@ -408,7 +494,7 @@
       "canonical_url": "github.com/virattt/ai-hedge-fund",
       "also_seen": [],
       "company": null,
-      "stars": 115,
+      "stars": 109,
       "momentum": 11,
       "tags": [
         "python"
@@ -416,12 +502,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-15",
       "stars_history": {
-        "2026-07-13": 115
+        "2026-07-13": 115,
+        "2026-07-15": 109
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -6
     },
     {
       "id": "manual:zapier",
@@ -4272,7 +4359,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 451,
+      "stars": 851,
       "momentum": 100,
       "tags": [
         "html"
@@ -4280,15 +4367,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-07-01": 1343,
         "2026-07-02": 2470,
         "2026-07-03": 938,
-        "2026-07-14": 451
+        "2026-07-14": 451,
+        "2026-07-15": 851
       },
       "trend": "down",
-      "trend_delta": -487
+      "trend_delta": -87
     },
     {
       "id": "github:Mebus/cupp",
@@ -7823,13 +7911,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1712,
+      "stars": 1679,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -7837,11 +7925,12 @@
         "2026-06-22": 1443,
         "2026-06-23": 2051,
         "2026-07-05": 973,
-        "2026-07-11": 1712
+        "2026-07-11": 1712,
+        "2026-07-15": 1679
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -339
+      "trend": "up",
+      "trend_delta": 706
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -7908,23 +7997,24 @@
       "canonical_url": "github.com/penpot/penpot",
       "also_seen": [],
       "company": null,
-      "stars": 728,
+      "stars": 395,
       "momentum": 9,
       "tags": [
         "clojure"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-06-17": 94,
         "2026-06-18": 70,
         "2026-06-20": 85,
         "2026-06-21": 1131,
         "2026-06-22": 1135,
-        "2026-06-23": 728
+        "2026-06-23": 728,
+        "2026-07-15": 395
       },
-      "trend": "up",
-      "trend_delta": 634
+      "trend": "down",
+      "trend_delta": -333
     },
     {
       "id": "github:nautechsystems/nautilus_trader",
@@ -8490,20 +8580,21 @@
       "canonical_url": "github.com/raphire/win11debloat",
       "also_seen": [],
       "company": null,
-      "stars": 118,
+      "stars": 783,
       "momentum": 11,
       "tags": [
         "powershell"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-06-15": 114,
         "2026-06-16": 112,
-        "2026-07-14": 118
+        "2026-07-14": 118,
+        "2026-07-15": 783
       },
       "trend": "up",
-      "trend_delta": 6
+      "trend_delta": 671
     },
     {
       "id": "github:mikeroyal/Self-Hosting-Guide",
@@ -10820,13 +10911,13 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 1153,
+      "stars": 1256,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-15",
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
@@ -10836,10 +10927,11 @@
         "2026-07-02": 694,
         "2026-07-03": 939,
         "2026-07-13": 768,
-        "2026-07-14": 1153
+        "2026-07-14": 1153,
+        "2026-07-15": 1256
       },
       "trend": "up",
-      "trend_delta": 214
+      "trend_delta": 317
     },
     {
       "id": "github:D4Vinci/Scrapling",
