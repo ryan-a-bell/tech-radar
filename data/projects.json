@@ -1,0 +1,83 @@
+{
+  "generated": "2026-07-15",
+  "projects": [
+    {
+      "id": "gsd-core-app",
+      "name": "GSD Core App",
+      "status": "Active",
+      "topics": [
+        "Quant",
+        "Agents"
+      ],
+      "repo": "https://github.com/open-gsd/gsd-core",
+      "blurb": "A local-first \"get stuff done\" runner that turns a plain-language goal into a sequence of executed steps. It plans a task graph, routes each step to a local model, and keeps the whole loop on the machine so nothing leaves the laptop.",
+      "body": "A local-first \"get stuff done\" runner that turns a plain-language goal into a\nsequence of executed steps. It plans a task graph, routes each step to a local\nmodel, and keeps the whole loop on the machine so nothing leaves the laptop.\n\nThe core is a small library that other tools build on: a scheduler, a tool\nregistry, and a persistence layer for run history. Day-to-day development leans\non an AI editor for the glue code and a local model server for the planning and\nreflection calls, so the whole thing runs without an API key.",
+      "stack": [
+        {
+          "id": "manual:gsd-core",
+          "name": "gsd-core",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/open-gsd/gsd-core",
+          "canonical_url": "github.com/open-gsd/gsd-core"
+        },
+        {
+          "id": "manual:cursor",
+          "name": "Cursor",
+          "quadrant": "Tools",
+          "ring": "Discovered",
+          "url": "https://cursor.com",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "options-vol-surface",
+      "name": "Options Vol-Surface Lab",
+      "status": "Idea",
+      "topics": [
+        "Quant",
+        "Trading",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "An idea, no code yet. I want to build and calibrate an implied-volatility surface for equity options: pull an options chain, fit a no-arbitrage surface across strikes and expiries, and price exotic payoffs off it. The interesting part is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to interpolate the surface for pricing.",
+      "body": "An idea, no code yet. I want to build and calibrate an implied-volatility\nsurface for equity options: pull an options chain, fit a no-arbitrage surface\nacross strikes and expiries, and price exotic payoffs off it. The interesting\npart is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to\ninterpolate the surface for pricing.\n\nBecause there is no declared stack, the recommendations below are the whole\nsuggested tech stack, inferred purely from this description — option pricing\nlibraries, a quant analytics toolkit, and a market-data feed for the chains.",
+      "stack": [],
+      "stack_unresolved": []
+    },
+    {
+      "id": "radar-portfolio-optimizer",
+      "name": "Portfolio Optimizer",
+      "status": "Paused",
+      "topics": [
+        "Quant",
+        "Trading",
+        "ML"
+      ],
+      "repo": "https://github.com/you/portfolio-optimizer",
+      "blurb": "A backtesting harness for portfolio construction. It takes a universe of tickers and a set of constraints, then compares allocation methods — mean variance, hierarchical risk parity, and a few risk-budgeting schemes — on the same out-of-sample window so the tradeoffs are visible side by side.",
+      "body": "A backtesting harness for portfolio construction. It takes a universe of\ntickers and a set of constraints, then compares allocation methods — mean\nvariance, hierarchical risk parity, and a few risk-budgeting schemes — on the\nsame out-of-sample window so the tradeoffs are visible side by side.\n\nCurrently uses one optimization library for the allocation math. Paused while I\ndecide whether to add a broader financial-analytics layer for the pricing and\nrisk pieces, and a proper market-data source instead of the CSVs it reads today.",
+      "stack": [
+        {
+          "id": "manual:riskfolio-lib",
+          "name": "Riskfolio-Lib",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/dcajasn/Riskfolio-Lib",
+          "canonical_url": "github.com/dcajasn/riskfolio-lib"
+        }
+      ],
+      "stack_unresolved": []
+    }
+  ]
+}

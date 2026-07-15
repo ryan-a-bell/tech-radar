@@ -471,6 +471,11 @@ export default function BooksApp() {
           textDecoration: "none", padding: "6px 14px", marginLeft: 8,
           fontSize: 11, letterSpacing: 1,
         }}>SIMILARITY</a>
+        <a href="projects.html" style={{
+          background: "transparent", color: "#999", border: "1px solid #444",
+          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
+          fontSize: 11, letterSpacing: 1,
+        }}>PROJECTS</a>
         <span style={{
           marginLeft: "auto", fontSize: 10, letterSpacing: 1,
           color: status === "live" ? "#4ade80" : "#fbbf24",

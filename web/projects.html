@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Tech Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- validated dark-mode viz tokens (shared with similarity.html) ---- */
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --q-tools:      #3987e5;  /* blue   */
+      --q-languages:  #199e70;  /* aqua   */
+      --q-techniques: #c98500;  /* yellow */
+      --q-platforms:  #9085e9;  /* violet */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    #root { height: 100%; }
+    a { color: var(--q-tools); }
+    button { font-family: inherit; font-size: inherit; }
+    .loading { display:flex; height:100%; align-items:center; justify-content:center; color:var(--muted); }
+  </style>
+  <!-- React + Babel from CDN — no build step, fully static. Same setup as similarity.html. -->
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"><div class="loading">loading projects…</div></div>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useMemo, useEffect } = React;
+
+/* ============================================================================
+ * Projects — map personal projects to the technology radar (hybrid A + C)
+ *
+ *   A. Declared stack   — the tools a project IS using, authored in the
+ *      project's Markdown front-matter (projects/*.md -> data/projects.json).
+ *      Deterministic, human-owned.
+ *   C. Recommended tools — cosine similarity between the project's prose and
+ *      every tool's description. Surfaces tools NOT already in the stack; for
+ *      an Idea with no stack, this IS the suggested tech stack.
+ *
+ * Similarity sources, best-available wins:
+ *   1. Precomputed embeddings — data/project_similarity.json from
+ *      build_similarity.py (semantic; catches tools described in other words).
+ *   2. In-browser TF-IDF over tools + projects — zero deps, always works.
+ * ==========================================================================*/
+
+const QUAD_COLOR = {
+  Tools:      "#3987e5",
+  Languages:  "#199e70",
+  Techniques: "#c98500",
+  Platforms:  "#9085e9",
+};
+const quadColor = (q) => QUAD_COLOR[q] || "#898781";
+
+const STATUS_COLOR = {
+  Idea:     "#c98500",
+  Active:   "#199e70",
+  Paused:   "#898781",
+  Shipped:  "#3987e5",
+  Archived: "#6b6b68",
+};
+
+// ---- text prep (mirrors similarity.html so the two pages agree) ------------
+const STOP = new Set(("a an the and or of for to in on with without from by is are be " +
+  "this that it its as at into your you our their they we can will use used using " +
+  "via based over under across between not no more most other any all which who whom " +
+  "open source library tool toolkit app application project framework platform " +
+  "github repo repository code python js javascript want build no yet").split(/\s+/));
+
+function tokenize(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+#.\- ]+/g, " ")
+    .split(/[\s.]+/)
+    .map((t) => t.replace(/^[-+#]+|[-+#]+$/g, ""))
+    .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t));
+}
+
+function toolText(it) {
+  return [it.description, it.name, it.company || "",
+    (it.tags || []).join(" "), (it.topics || []).join(" ")].join(" ");
+}
+function projectText(p) {
+  return [p.name, p.blurb, p.body, (p.topics || []).join(" ")].join(" ");
+}
+
+/* One TF-IDF space over BOTH corpora (tools + projects) so a project vector and
+ * a tool vector are directly comparable. Returns L2-normalised sparse maps. */
+function buildTfIdf(toolTexts, projTexts) {
+  const all = toolTexts.concat(projTexts);
+  const n = all.length;
+  const docs = all.map((t) => {
+    const counts = new Map();
+    for (const tk of tokenize(t)) counts.set(tk, (counts.get(tk) || 0) + 1);
+    return counts;
+  });
+  const df = new Map();
+  for (const counts of docs) for (const t of counts.keys()) df.set(t, (df.get(t) || 0) + 1);
+
+  const vecs = docs.map((counts) => {
+    const v = new Map();
+    let norm = 0;
+    for (const [t, c] of counts) {
+      const idf = Math.log((1 + n) / (1 + df.get(t))) + 1;
+      const w = (1 + Math.log(c)) * idf;
+      v.set(t, w);
+      norm += w * w;
+    }
+    norm = Math.sqrt(norm) || 1;
+    for (const [t, w] of v) v.set(t, w / norm);
+    return v;
+  });
+  return {
+    toolVecs: vecs.slice(0, toolTexts.length),
+    projVecs: vecs.slice(toolTexts.length),
+  };
+}
+
+function cosine(a, b) {
+  const [s, l] = a.size < b.size ? [a, b] : [b, a];
+  let dot = 0;
+  for (const [t, w] of s) { const o = l.get(t); if (o) dot += w * o; }
+  return dot;
+}
+function sharedTerms(a, b, k = 4) {
+  if (!a || !b) return [];
+  const out = [];
+  for (const [t, w] of a) { const o = b.get(t); if (o) out.push([t, w * o]); }
+  out.sort((x, y) => y[1] - x[1]);
+  return out.slice(0, k).map((x) => x[0]);
+}
+
+// ============================================================================
+function App() {
+  const [tools, setTools] = useState(null);
+  const [projects, setProjects] = useState(null);
+  const [tfidf, setTfidf] = useState(null);
+  const [precomp, setPrecomp] = useState(null);   // {method, scores: Map(projId -> Map(toolIdx -> score))}
+  const [method, setMethod] = useState("tfidf");   // "tfidf" | "precomputed"
+  const [selId, setSelId] = useState(null);
+  const [topK, setTopK] = useState(6);
+
+  useEffect(() => {
+    (async () => {
+      const rj = await fetch("data/radar.json").then((r) => r.json());
+      const its = (rj.items || rj).filter((x) => x && x.ring !== "Archived");
+      let projs = [];
+      try {
+        const pj = await fetch("data/projects.json");
+        if (pj.ok) projs = (await pj.json()).projects || [];
+      } catch (e) { /* no projects file */ }
+
+      // always-available lexical recommender
+      const tf = buildTfIdf(its.map(toolText), projs.map(projectText));
+
+      // optional precomputed semantic scores: project -> [scores over tool_ids]
+      let pc = null;
+      try {
+        const s = await fetch("data/project_similarity.json");
+        if (s.ok) {
+          const j = await s.json();
+          if (j && j.tool_ids && j.projects) {
+            const toolIdx = new Map(its.map((it, i) => [it.id, i]));
+            const idAlign = j.tool_ids.map((id) => toolIdx.has(id) ? toolIdx.get(id) : -1);
+            const scores = new Map();
+            for (const [pid, row] of Object.entries(j.projects)) {
+              const m = new Map();
+              row.forEach((v, k) => { const ti = idAlign[k]; if (ti >= 0) m.set(ti, v); });
+              scores.set(pid, m);
+            }
+            pc = { method: j.method || "embeddings", scores };
+          }
+        }
+      } catch (e) { /* no precomputed file — TF-IDF still works */ }
+
+      setTools(its);
+      setProjects(projs);
+      setTfidf(tf);
+      setPrecomp(pc);
+      setMethod(pc ? "precomputed" : "tfidf");
+      setSelId(projs.length ? projs[0].id : null);
+    })();
+  }, []);
+
+  const toolIndexById = useMemo(
+    () => (tools ? new Map(tools.map((it, i) => [it.id, i])) : new Map()),
+    [tools]
+  );
+
+  // recommendations for one project: [{ idx, score, why }], stack excluded
+  const recommend = useMemo(() => {
+    if (!tools || !projects) return () => [];
+    return (proj, pIdx) => {
+      const stackIds = new Set((proj.stack || []).map((s) => s.id));
+      const out = [];
+      if (method === "precomputed" && precomp) {
+        const row = precomp.scores.get(proj.id);
+        if (row) for (const [ti, sc] of row) {
+          if (stackIds.has(tools[ti].id)) continue;
+          out.push({ idx: ti, score: sc, why: [] });
+        }
+      } else {
+        const pv = tfidf.projVecs[pIdx];
+        tools.forEach((it, ti) => {
+          if (stackIds.has(it.id)) return;
+          const sc = cosine(pv, tfidf.toolVecs[ti]);
+          if (sc > 0.001) out.push({ idx: ti, score: sc, why: sharedTerms(pv, tfidf.toolVecs[ti]) });
+        });
+      }
+      out.sort((a, b) => b.score - a.score);
+      return out.slice(0, topK);
+    };
+  }, [tools, projects, tfidf, precomp, method, topK]);
+
+  if (!tools || !projects) return <div className="loading">building recommendations…</div>;
+
+  const semantic = method === "precomputed" && precomp;
+  const selIdx = projects.findIndex((p) => p.id === selId);
+  const sel = selIdx >= 0 ? projects[selIdx] : null;
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <TopBar count={projects.length} semantic={semantic}
+        label={semantic ? prettyMethod(precomp.method) : "TF-IDF · in-browser"} />
+      <Controls
+        hasPrecomp={!!precomp} method={method} setMethod={setMethod}
+        precompLabel={precomp ? prettyMethod(precomp.method) : ""}
+        topK={topK} setTopK={setTopK} />
+      <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
+        <ProjectList projects={projects} selId={selId} setSelId={setSelId} />
+        <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
+          {sel
+            ? <ProjectDetail proj={sel} tools={tools} recs={recommend(sel, selIdx)}
+                toolIndexById={toolIndexById} setSelId={setSelId} projects={projects} />
+            : <div style={{ color: "var(--muted)" }}>
+                No projects yet. Add a Markdown file under <code>projects/</code> and run{" "}
+                <code>python build_projects.py</code>.
+              </div>}
+        </div>
+      </div>
+      <Legend />
+    </div>
+  );
+}
+
+function prettyMethod(m) {
+  if (!m) return "Precomputed";
+  const [a, b] = m.split(":");
+  if (a === "embeddings") return "Embeddings · " + b;
+  if (a === "tf-idf") return "TF-IDF · " + b + " (precomputed)";
+  return m;
+}
+
+// Shared top nav — identical tab group to dashboard.jsx / books.jsx /
+// similarity.html. PROJECTS is the active tab here.
+function TopBar({ count, semantic, label }) {
+  const tab = {
+    background: "transparent", color: "#999", border: "1px solid #444",
+    textDecoration: "none", padding: "6px 14px", marginRight: 8,
+    fontSize: 11, letterSpacing: 1,
+  };
+  return (
+    <div style={{
+      display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
+      fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap",
+    }}>
+      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+      <a href="index.html#atlas" style={tab}>ATLAS</a>
+      <a href="index.html#index" style={tab}>INDEX</a>
+      <a href="books.html" style={tab}>READING LIST</a>
+      <a href="similarity.html" style={tab}>SIMILARITY</a>
+      <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+        padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>PROJECTS</span>
+      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1,
+        color: semantic ? "#4ade80" : "#fbbf24" }}>
+        {count} project{count === 1 ? "" : "s"} · {semantic ? "● " : "○ "}{label}
+      </span>
+    </div>
+  );
+}
+
+function Controls({ hasPrecomp, method, setMethod, precompLabel, topK, setTopK }) {
+  const wrap = { display: "flex", gap: 18, alignItems: "center", padding: "8px 14px",
+    borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" };
+  return (
+    <div style={wrap}>
+      {hasPrecomp && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span>recommender:</span>
+          {[["precomputed", precompLabel + " ✦"], ["tfidf", "TF-IDF"]].map(([k, lbl]) => {
+            const on = method === k;
+            return (
+              <button key={k} onClick={() => setMethod(k)}
+                style={{ padding: "5px 11px", borderRadius: 6, cursor: "pointer",
+                  border: "1px solid " + (on ? "var(--q-tools)" : "var(--border)"),
+                  background: on ? "rgba(57,135,229,0.15)" : "transparent",
+                  color: on ? "#fff" : "var(--ink-2)" }}>{lbl}</button>
+            );
+          })}
+        </div>
+      )}
+      <label>recommend top{" "}
+        <input type="range" min="3" max="12" value={topK}
+          onChange={(e) => setTopK(+e.target.value)} /> {topK}</label>
+      <span style={{ fontSize: 12 }}>declared stack = tools in use · recommendations = semantic matches</span>
+    </div>
+  );
+}
+
+function ProjectList({ projects, selId, setSelId }) {
+  return (
+    <div style={{ width: 250, borderRight: "1px solid var(--border)", overflow: "auto" }}>
+      {projects.map((p) => {
+        const on = p.id === selId;
+        return (
+          <div key={p.id} onClick={() => setSelId(p.id)}
+            style={{ padding: "10px 12px", cursor: "pointer",
+              background: on ? "rgba(57,135,229,0.15)" : "transparent",
+              borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+              <StatusDot status={p.status} />
+              <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</span>
+            </div>
+            <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 2 }}>
+              {p.status}{p.stack && p.stack.length ? " · " + p.stack.length + " tools" : " · no stack"}
+            </div>
+          </div>
+        );
+      })}
+      {!projects.length && <div style={{ padding: 12, color: "var(--muted)" }}>no projects</div>}
+    </div>
+  );
+}
+
+function StatusDot({ status }) {
+  return <span style={{ width: 9, height: 9, borderRadius: "50%",
+    background: STATUS_COLOR[status] || "#898781", flex: "0 0 auto" }} />;
+}
+
+function StatusBadge({ status }) {
+  const c = STATUS_COLOR[status] || "#898781";
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 9px",
+      borderRadius: 20, border: "1px solid " + c, color: c, fontSize: 11, letterSpacing: 0.5 }}>
+      <span style={{ width: 7, height: 7, borderRadius: "50%", background: c }} />{status}
+    </span>
+  );
+}
+
+function ProjectDetail({ proj, tools, recs, toolIndexById, setSelId, projects }) {
+  const related = useMemo(() => {
+    // other projects sharing a topic — a light Pattern-B "similar projects" cue
+    const mine = new Set(proj.topics || []);
+    if (!mine.size) return [];
+    return projects.filter((p) => p.id !== proj.id &&
+      (p.topics || []).some((t) => mine.has(t)));
+  }, [proj, projects]);
+
+  return (
+    <div style={{ maxWidth: 760 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+        <strong style={{ fontSize: 20 }}>{proj.name}</strong>
+        <StatusBadge status={proj.status} />
+      </div>
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0" }}>
+        {(proj.topics || []).map((t) => (
+          <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)",
+            borderRadius: 20, padding: "2px 9px" }}>{t}</span>
+        ))}
+      </div>
+      {proj.repo && <a href={proj.repo} target="_blank" style={{ fontSize: 12 }}>{proj.repo}</a>}
+      <div style={{ color: "var(--ink-2)", margin: "12px 0 4px" }}>{proj.blurb}</div>
+
+      {/* --- declared stack (Pattern A) --- */}
+      <SectionTitle>Stack — tools in use</SectionTitle>
+      {proj.stack && proj.stack.length ? (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+          {proj.stack.map((s) => (
+            <a key={s.id} href={s.url || "#"} target={s.url ? "_blank" : undefined}
+              style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 11px",
+                borderRadius: 8, textDecoration: "none", color: "var(--ink)",
+                border: "1px solid " + quadColor(s.quadrant), background: "rgba(255,255,255,0.02)" }}>
+              <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(s.quadrant) }} />
+              <span>{s.name}</span>
+              <span style={{ color: "var(--muted)", fontSize: 11 }}>{s.ring}</span>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div style={{ color: "var(--muted)", marginTop: 8 }}>
+          No declared stack — the recommendations below are the suggested stack, inferred from the description.
+        </div>
+      )}
+      {proj.stack_unresolved && proj.stack_unresolved.length > 0 && (
+        <div style={{ color: "#fbbf24", fontSize: 12, marginTop: 8 }}>
+          Not on the radar yet: {proj.stack_unresolved.join(", ")}
+        </div>
+      )}
+
+      {/* --- recommended tools (Pattern C) --- */}
+      <SectionTitle>
+        {proj.stack && proj.stack.length ? "Recommended — tools you might add" : "Recommended tech stack"}
+      </SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map(({ idx, score, why }) => {
+          const it = tools[idx];
+          const topicMatch = (it.topics || []).some((t) => (proj.topics || []).includes(t));
+          return (
+            <div key={it.id} style={{ padding: "10px 0", borderTop: "1px solid var(--border)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(it.quadrant) }} />
+                <strong>{it.name}</strong>
+                <span style={{ color: "var(--muted)", fontSize: 12 }}>{it.quadrant} · {it.ring}</span>
+                {topicMatch && <span style={{ fontSize: 10, color: "#4ade80",
+                  border: "1px solid rgba(74,222,128,0.4)", borderRadius: 10, padding: "1px 6px" }}>topic match</span>}
+                <span style={{ flex: 1 }} />
+                <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{score.toFixed(3)}</span>
+              </div>
+              <div style={{ height: 4, background: "var(--grid)", borderRadius: 2, margin: "5px 0" }}>
+                <div style={{ height: "100%", width: (Math.min(1, score) * 100) + "%",
+                  background: quadColor(it.quadrant), borderRadius: 2 }} />
+              </div>
+              <div style={{ color: "var(--muted)", fontSize: 12 }}>
+                {it.description}
+                {why && why.length ? <span style={{ color: "#6da7ec" }}>  · shared: {why.join(", ")}</span> : null}
+                {it.url ? <span>  · <a href={it.url} target="_blank" style={{ fontSize: 12 }}>{it.canonical_url || it.url}</a></span> : null}
+              </div>
+            </div>
+          );
+        })}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>no recommendations — add more detail to the project description.</div>}
+      </div>
+
+      {/* --- similar projects (light Pattern B) --- */}
+      {related.length > 0 && (
+        <>
+          <SectionTitle>Related projects — shared topics</SectionTitle>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+            {related.map((p) => (
+              <button key={p.id} onClick={() => setSelId(p.id)}
+                style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "5px 11px",
+                  borderRadius: 8, cursor: "pointer", color: "var(--ink-2)",
+                  border: "1px solid var(--border)", background: "transparent" }}>
+                <StatusDot status={p.status} />{p.name}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+function SectionTitle({ children }) {
+  return (
+    <div style={{ marginTop: 22, color: "var(--muted)", textTransform: "uppercase",
+      letterSpacing: 0.5, fontSize: 12 }}>{children}</div>
+  );
+}
+
+function Legend() {
+  return (
+    <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "8px 14px",
+      borderTop: "1px solid var(--border)", background: "var(--surface-1)", color: "var(--muted)", fontSize: 12, flexWrap: "wrap" }}>
+      <span>status:</span>
+      {Object.keys(STATUS_COLOR).map((s) => (
+        <span key={s} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <span style={{ width: 9, height: 9, borderRadius: "50%", background: STATUS_COLOR[s] }} />{s}
+        </span>
+      ))}
+      <span style={{ flex: 1 }} />
+      <span>declared stack = using · recommended = semantic match · prototype</span>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+  </script>
+</body>
+</html>

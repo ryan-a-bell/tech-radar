@@ -94,6 +94,22 @@ def main():
     if os.path.exists(sim_json):
         shutil.copy(sim_json, os.path.join(SITE, "data", "similarity.json"))
 
+    # 8. Projects page — self-contained (inline JSX), copied as-is. Rebuild
+    #    data/projects.json from projects/*.md first, then ship it. The optional
+    #    data/project_similarity.json (from build_similarity.py) upgrades the
+    #    tool recommendations from in-browser TF-IDF to semantic embeddings.
+    from build_projects import build_projects_json
+    n_proj = build_projects_json()
+    print(f"built projects.json ({n_proj} projects)")
+    shutil.copy(os.path.join(WEB, "projects.html"),
+                os.path.join(SITE, "projects.html"))
+    proj_json = os.path.join(HERE, "data", "projects.json")
+    if os.path.exists(proj_json):
+        shutil.copy(proj_json, os.path.join(SITE, "data", "projects.json"))
+    proj_sim = os.path.join(HERE, "data", "project_similarity.json")
+    if os.path.exists(proj_sim):
+        shutil.copy(proj_sim, os.path.join(SITE, "data", "project_similarity.json"))
+
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")
     print("deploy: push site/ to GitHub Pages, or drag it onto Netlify")

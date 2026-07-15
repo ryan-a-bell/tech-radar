@@ -21,6 +21,8 @@ on:
     paths:
       - "web/**"
       - "build_site.py"
+      - "build_projects.py"
+      - "projects/**"
       - "data/**"
       - ".github/workflows/deploy.yml"
 
