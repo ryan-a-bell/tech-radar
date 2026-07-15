@@ -1,0 +1,25 @@
+{
+  "id": "github:chenyme/grok2api",
+  "name": "grok2api",
+  "description": "\u9762\u5411 Grok Build\u3001Grok Web \u4e0e Grok Console \u7684\u591a\u8d26\u53f7 API \u7f51\u5173",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/chenyme/grok2api",
+  "canonical_url": "github.com/chenyme/grok2api",
+  "also_seen": [],
+  "company": null,
+  "stars": 186,
+  "momentum": 18,
+  "tags": [
+    "go"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-15",
+  "last_seen": "2026-07-15",
+  "stars_history": {
+    "2026-07-15": 186
+  }
+}

@@ -10,16 +10,17 @@
   "canonical_url": "github.com/raphire/win11debloat",
   "also_seen": [],
   "company": null,
-  "stars": 118,
+  "stars": 783,
   "momentum": 11,
   "tags": [
     "powershell"
   ],
   "first_seen": "2026-06-15",
-  "last_seen": "2026-07-14",
+  "last_seen": "2026-07-15",
   "stars_history": {
     "2026-06-15": 114,
     "2026-06-16": 112,
-    "2026-07-14": 118
+    "2026-07-14": 118,
+    "2026-07-15": 783
   }
 }

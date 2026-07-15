@@ -10,7 +10,7 @@
   "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
   "also_seen": [],
   "company": null,
-  "stars": 451,
+  "stars": 851,
   "momentum": 100,
   "tags": [
     "html"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-14",
+  "last_seen": "2026-07-15",
   "stars_history": {
     "2026-07-01": 1343,
     "2026-07-02": 2470,
     "2026-07-03": 938,
-    "2026-07-14": 451
+    "2026-07-14": 451,
+    "2026-07-15": 851
   }
 }

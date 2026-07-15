@@ -10,7 +10,7 @@
   "canonical_url": "github.com/par274/sharpemu",
   "also_seen": [],
   "company": null,
-  "stars": 314,
+  "stars": 332,
   "momentum": 31,
   "tags": [
     "c#"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-13",
-  "last_seen": "2026-07-13",
+  "last_seen": "2026-07-15",
   "stars_history": {
-    "2026-07-13": 314
+    "2026-07-13": 314,
+    "2026-07-15": 332
   }
 }
