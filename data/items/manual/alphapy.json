@@ -1,0 +1,25 @@
+{
+  "id": "manual:alphapy",
+  "name": "AlphaPy",
+  "description": "Python automated machine learning framework for financial trading and sports prediction, with MarketFlow and SportFlow pipelines built on scikit-learn, Keras, XGBoost, LightGBM, and CatBoost.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/ScottfreeLLC/AlphaPy",
+  "canonical_url": "github.com/scottfreellc/alphapy",
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "ML",
+    "Trading",
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-15",
+  "last_seen": "2026-07-15",
+  "stars_history": {}
+}
