@@ -110,6 +110,23 @@ def main():
     if os.path.exists(proj_sim):
         shutil.copy(proj_sim, os.path.join(SITE, "data", "project_similarity.json"))
 
+    # 9. People page — self-contained (inline JSX), copied as-is. Rebuild
+    #    data/people.json from people/*.md first, then ship it. The page reuses
+    #    the Projects recommender in-browser (TF-IDF), and also reads the
+    #    radar.json + projects.json already copied above for tech and staffing
+    #    recommendations — no extra precomputed file required.
+    from build_people import build_people_json
+    n_people = build_people_json()
+    print(f"built people.json ({n_people} {'person' if n_people == 1 else 'people'})")
+    shutil.copy(os.path.join(WEB, "people.html"),
+                os.path.join(SITE, "people.html"))
+    people_json = os.path.join(HERE, "data", "people.json")
+    if os.path.exists(people_json):
+        shutil.copy(people_json, os.path.join(SITE, "data", "people.json"))
+    people_sim = os.path.join(HERE, "data", "people_similarity.json")
+    if os.path.exists(people_sim):
+        shutil.copy(people_sim, os.path.join(SITE, "data", "people_similarity.json"))
+
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")
     print("deploy: push site/ to GitHub Pages, or drag it onto Netlify")

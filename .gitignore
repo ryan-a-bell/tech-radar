@@ -1,6 +1,13 @@
 # Tech radar — raw scrape audit logs (replay buffer, not curated state)
 data/raw/
 
+# Tech radar — optional precomputed semantic matrices for the PROJECTS and
+# PEOPLE tabs. Regenerable build outputs (python build_similarity.py); the pages
+# fall back to in-browser TF-IDF without them, so they're not tracked. The tool
+# matrix data/similarity.json IS tracked and is intentionally not matched here.
+data/project_similarity.json
+data/people_similarity.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
