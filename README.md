@@ -189,9 +189,33 @@ technology can share a topic tag.
 ## Reading List
 
 A companion page (`web/books.html` + `web/books.jsx`) for tracking books
-alongside the technologies they relate to. Hand-curated in `data/books.json`
-(no scraper — add entries by editing the file directly). Read-only, same as
-the deployed dashboard.
+alongside the technologies they relate to. Backed by `data/books.json`, which
+you can hand-curate *or* sync from a [Calibre](https://calibre-ebook.com/)
+library (see below). Read-only, same as the deployed dashboard.
+
+### Syncing from Calibre
+
+`build_books.py` pulls a Calibre library through the official `calibredb` CLI
+and rewrites `data/books.json`:
+
+```bash
+python build_books.py                     # default local library
+python build_books.py --library /path/lib # a specific library folder
+python build_books.py --library http://host:8080/#Lib   # a Content Server
+python build_books.py --dry-run           # pull + report, write nothing
+```
+
+Calibre owns the *facts* (title, author, year, rating, blurb, tags→topics,
+date added). *Reading state* (`status`, `pages_read`, `started`, `finished`)
+comes from Calibre custom columns (`#status`, `#pages_read`, `#started`,
+`#finished`, `#pages`) when they exist, and is otherwise **preserved from the
+existing `data/books.json`** — so curated status and blurbs are never
+clobbered. New library books default to `Discovered`; books in `books.json`
+but not in the library are kept and reported (use `--drop-orphans` to prune).
+
+`notebooks/calibre_sync.ipynb` drives the same flow from Jupyter, running the
+Calibre pull asynchronously (it awaits the `calibredb` subprocess) and
+decoupled from the site build.
 
 ### Status
 
@@ -394,6 +418,7 @@ tech-radar/
 ├── build_site.py       # static site assembler — bundles web/ → site/
 ├── build_projects.py   # projects/*.md → data/projects.json (declared stacks)
 ├── build_people.py     # people/*.md → data/people.json (skills + interests)
+├── build_books.py      # Calibre (calibredb) → data/books.json (Reading List)
 ├── build_similarity.py # optional — precompute semantic similarity matrices
 ├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
@@ -413,6 +438,7 @@ tech-radar/
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
 ├── projects/           # personal projects — one Markdown file each (hand-written)
 ├── people/             # people + their skills — one Markdown file each (hand-written)
+├── notebooks/          # calibre_sync.ipynb — async Calibre pull + site build
 ├── tests/              # stdlib unittest suite for radar_core
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
