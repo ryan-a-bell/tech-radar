@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15",
+  "generated": "2026-07-16",
   "projects": [
     {
       "id": "gsd-core-app",
@@ -83,6 +83,216 @@
           "ring": "Assess",
           "url": "https://github.com/goldmansachs/gs-quant",
           "canonical_url": "github.com/goldmansachs/gs-quant"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sar-contested-comms-mesh",
+      "name": "Contested-Comms SAR Mesh",
+      "status": "Idea",
+      "topics": [
+        "Agents",
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "The same rescue fleet, but assuming the radios drop. This project layers a resilient communications mesh over the SAR fleet so vessels and drones keep sharing a common operating picture when the link to shore is jammed, over the horizon, or saturated. Craft relay for each other, buffer telemetry through outages, and fall back to intermittent satellite passes — and the task allocator has to keep planning while it only sometimes knows where everyone is.",
+      "body": "The same rescue fleet, but assuming the radios drop. This project layers a\nresilient communications mesh over the SAR fleet so vessels and drones keep\nsharing a common operating picture when the link to shore is jammed, over the\nhorizon, or saturated. Craft relay for each other, buffer telemetry through\noutages, and fall back to intermittent satellite passes — and the task allocator\nhas to keep planning while it only sometimes knows where everyone is.\n\nThis one is genuinely multi-disciplinary. Antenna patterns and link budgets are\nmodeled in HFSS and CST, satellite relay windows and line-of-sight come from STK,\nthe peer-to-peer sync layer is built on iroh, and a UAF architecture ties the\noperational, system, and resource views together so the comms design traces back\nto the mission. The open research question is decentralized task allocation under\npartial observability: agents that commit to a search plan, degrade gracefully as\nneighbors go dark, and reconcile the picture when the mesh heals.",
+      "stack": [
+        {
+          "id": "manual:ansys",
+          "name": "ANSYS HFSS / AEDT",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/electronics/ansys-hfss",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:cst-studio-suite",
+          "name": "CST Studio Suite",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://www.3ds.com/products/simulia/cst-studio-suite",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:n0-computer/iroh",
+          "name": "iroh",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/n0-computer/iroh",
+          "canonical_url": "github.com/n0-computer/iroh"
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:uaf",
+          "name": "UAF",
+          "quadrant": "Techniques",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/UAF/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sar-fleet-coordinator",
+      "name": "SAR Fleet Coordinator",
+      "status": "Active",
+      "topics": [
+        "AI",
+        "ML",
+        "Agents",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/sar-fleet-coordinator",
+      "blurb": "Coordination software for search-and-rescue missions flown by a mixed fleet of unmanned surface vessels and UAVs. An incident commander drops a last-known position and a drift model; the planner divides the search area into cells, assigns each craft a sweep pattern sized to its sensor footprint and endurance, and re-tasks the fleet live as the probability-of-detection map updates from every pass.",
+      "body": "Coordination software for search-and-rescue missions flown by a mixed fleet of\nunmanned surface vessels and UAVs. An incident commander drops a last-known\nposition and a drift model; the planner divides the search area into cells,\nassigns each craft a sweep pattern sized to its sensor footprint and endurance,\nand re-tasks the fleet live as the probability-of-detection map updates from\nevery pass.\n\nThe hard part is the joint plan: many craft, overlapping sensor coverage, comms\nand fuel limits, and a survivor whose position drifts with wind and current. A\nmulti-agent policy handles the task allocation, STK supplies the sensor- and\ncomms-coverage geometry, and the whole system-of-systems — vehicle, payload, and\nground-station interfaces — is specified in SysML so the pieces stay consistent\nas the fleet grows. An on-board local model turns messy radio traffic into\nstructured tasking, and the ground station watches fleet health on a live\ndashboard.",
+      "stack": [
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:sysml-v2",
+          "name": "SysML v2",
+          "quadrant": "Languages",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/SysML/",
+          "canonical_url": null
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sar-swarm-digital-twin",
+      "name": "SAR Swarm Digital Twin",
+      "status": "Idea",
+      "topics": [
+        "AI",
+        "ML",
+        "Agents",
+        "RAG"
+      ],
+      "repo": null,
+      "blurb": "A model-based digital twin for designing and rehearsing heterogeneous rescue swarms before anything gets wet or leaves the ground. You specify the fleet — hull and airframe classes, sensor payloads, endurance, comms — as a SysML model, then fly whole missions in simulation to see how many survivors the swarm finds under different sea states, fleet mixes, and search doctrines.",
+      "body": "A model-based digital twin for designing and rehearsing heterogeneous rescue\nswarms before anything gets wet or leaves the ground. You specify the fleet —\nhull and airframe classes, sensor payloads, endurance, comms — as a SysML model,\nthen fly whole missions in simulation to see how many survivors the swarm finds\nunder different sea states, fleet mixes, and search doctrines.\n\nThe point is to close the loop between architecture and performance. The system\nmodel in Cameo drives a ModelCenter trade study that sweeps fleet composition and\npayload choices, STK provides the physics for sensor coverage and comms, and an\nagent-based model in Mesa plus a multi-agent policy exercises the swarm behavior\nacross thousands of scenarios. A locally hosted model acts as a co-pilot for the\nincident commander, reading doctrine and standard procedures and turning a\nplain-language intent into a candidate mission plan the twin can score — so a new\nconcept of operations can be evaluated in an afternoon instead of a field trial.",
+      "stack": [
+        {
+          "id": "manual:sysml-v2",
+          "name": "SysML v2",
+          "quadrant": "Languages",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/SysML/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:cameo-magicdraw",
+          "name": "Cameo/MagicDraw",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.3ds.com/products/catia/no-magic",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:modelcenter",
+          "name": "ModelCenter",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.phoenix-int.com/modelcenter/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:mesa/mesa",
+          "name": "mesa",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/mesa/mesa",
+          "canonical_url": "github.com/mesa/mesa"
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:vllm",
+          "name": "vLLM",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/vllm-project/vllm",
+          "canonical_url": "github.com/vllm-project/vllm"
         }
       ],
       "stack_unresolved": []
