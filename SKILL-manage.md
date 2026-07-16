@@ -45,11 +45,34 @@ python radar.py set <id-or-name> quadrant Platforms
 python radar.py set <id-or-name> company "Anthropic"
 python radar.py set <id-or-name> topics "AI,Agents"   # curated topics
 python radar.py archive <id-or-name>        # move to Archived (dated)
+
+python radar.py add "<Name>" --url <url> --quadrant <quadrant> \
+  --description "<summary>" [--company <vendor>] [--momentum N]  # manually add
 ```
 
 Items can be named by exact id (`github:oven-sh/bun`), exact name
 (`Bun`), or a unique partial name (`uv`). Ambiguous partials are
 rejected with the list of matches.
+
+## Adding a technology by hand
+
+`add` is for tech the user names directly rather than something a scraper
+found — e.g. "add this GitHub repo to Assess." Before running `add`, actually
+go check the source: open the URL (README, docs site, package page — whatever
+`show`/`find` would have surfaced for a scraped item) and read enough to
+understand what it is and does. Do not add an item with a placeholder or
+empty `--description`.
+
+1. Fetch and read the source (repo README, docs, landing page).
+2. Write a real one-to-two sentence `--description` summarizing what it is
+   and why it's relevant to the radar (not a copy-pasted tagline).
+3. Set `--quadrant` (`Techniques`, `Tools`, `Platforms`, `Languages`) and
+   `--company` if there's a vendor behind it.
+4. Run `add`, then `promote <item> <Ring>` to put it directly into the ring
+   the user asked for (`add` alone lands in Discovered by default via
+   `new_item`'s default ring — confirm with `show` and promote if needed).
+5. Tell the user what you found, in a short summary, not just that the item
+   was added.
 
 ## Typical weekly review
 
