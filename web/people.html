@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People — Tech Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- validated dark-mode viz tokens (shared with projects.html) ---- */
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --q-tools:      #3987e5;  /* blue   */
+      --q-languages:  #199e70;  /* aqua   */
+      --q-techniques: #c98500;  /* yellow */
+      --q-platforms:  #9085e9;  /* violet */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    #root { height: 100%; }
+    a { color: var(--q-tools); }
+    button { font-family: inherit; font-size: inherit; }
+    .loading { display:flex; height:100%; align-items:center; justify-content:center; color:var(--muted); }
+  </style>
+  <!-- React + Babel from CDN — no build step, fully static. Same setup as projects.html. -->
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"><div class="loading">loading people…</div></div>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useMemo, useEffect, useRef } = React;
+
+/* ============================================================================
+ * People — map people and their skills against the technology radar and the
+ * projects board. The People page is the Projects page with the noun swapped:
+ * a person's `skills` resolve to radar refs exactly like a project's `stack`,
+ * and the same TF-IDF recommender drives three cross-links.
+ *
+ * Three in-page views:
+ *   People — the board: a filterable list + a detail panel that toggles between
+ *            Recommended tech (semantic OR peer-based), Matching projects
+ *            (staffing — semantic OR skill overlap), and Similar people.
+ *   Map    — a constellation: force-directed graph over person↔person skill
+ *            similarity, coloured by role, sized by skill count.
+ *   Skills — the reverse index / bus factor: every skill and who holds it. A
+ *            skill only one person has is a single point of failure.
+ *
+ * Hybrid framing: a person carries current `skills` AND growth `interests`.
+ * The bio text folds interests in, so semantic tech recommendations lean toward
+ * where the person wants to go; a "growth" badge flags tools whose topics match
+ * a declared interest.
+ * ==========================================================================*/
+
+const QUAD_COLOR = { Tools: "#3987e5", Languages: "#199e70", Techniques: "#c98500", Platforms: "#9085e9" };
+const quadColor = (q) => QUAD_COLOR[q] || "#898781";
+
+// role → colour, assigned deterministically from the set of roles present
+const ROLE_PALETTE = ["#3987e5", "#199e70", "#c98500", "#9085e9", "#e05a8a", "#38b9c9", "#d9663b", "#7c9c3a"];
+
+// ---- text prep (mirrors projects.html / similarity.html so pages agree) ----
+const STOP = new Set(("a an the and or of for to in on with without from by is are be " +
+  "this that it its as at into your you our their they we can will use used using " +
+  "via based over under across between not no more most other any all which who whom " +
+  "open source library tool toolkit app application project framework platform so " +
+  "github repo repository code python js javascript want build no yet").split(/\s+/));
+
+function tokenize(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9+#.\- ]+/g, " ")
+    .split(/[\s.]+/)
+    .map((t) => t.replace(/^[-+#]+|[-+#]+$/g, ""))
+    .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t));
+}
+function toolText(it) {
+  return [it.description, it.name, it.company || "", (it.tags || []).join(" "), (it.topics || []).join(" ")].join(" ");
+}
+function personText(p) {
+  return [p.name, p.role, p.blurb, p.body,
+    (p.topics || []).join(" "), (p.interests || []).join(" "),
+    (p.skills || []).map((s) => s.name).join(" "), (p.skills_freeform || []).join(" ")].join(" ");
+}
+function projectText(pr) {
+  return [pr.name, pr.blurb, pr.body, (pr.topics || []).join(" ")].join(" ");
+}
+
+/* One TF-IDF space over ALL THREE corpora so tool, person, and project vectors
+ * are directly comparable — and people with each other. */
+function buildTfIdf(toolTexts, personTexts, projTexts) {
+  const all = toolTexts.concat(personTexts, projTexts);
+  const n = all.length;
+  const docs = all.map((t) => {
+    const counts = new Map();
+    for (const tk of tokenize(t)) counts.set(tk, (counts.get(tk) || 0) + 1);
+    return counts;
+  });
+  const df = new Map();
+  for (const counts of docs) for (const t of counts.keys()) df.set(t, (df.get(t) || 0) + 1);
+  const vecs = docs.map((counts) => {
+    const v = new Map();
+    let norm = 0;
+    for (const [t, c] of counts) {
+      const idf = Math.log((1 + n) / (1 + df.get(t))) + 1;
+      const w = (1 + Math.log(c)) * idf;
+      v.set(t, w); norm += w * w;
+    }
+    norm = Math.sqrt(norm) || 1;
+    for (const [t, w] of v) v.set(t, w / norm);
+    return v;
+  });
+  const a = toolTexts.length, b = a + personTexts.length;
+  return { toolVecs: vecs.slice(0, a), personVecs: vecs.slice(a, b), projVecs: vecs.slice(b) };
+}
+function cosine(a, b) {
+  const [s, l] = a.size < b.size ? [a, b] : [b, a];
+  let dot = 0;
+  for (const [t, w] of s) { const o = l.get(t); if (o) dot += w * o; }
+  return dot;
+}
+function sharedTerms(a, b, k = 4) {
+  if (!a || !b) return [];
+  const out = [];
+  for (const [t, w] of a) { const o = b.get(t); if (o) out.push([t, w * o]); }
+  out.sort((x, y) => y[1] - x[1]);
+  return out.slice(0, k).map((x) => x[0]);
+}
+function jaccard(aSet, bSet) {
+  if (!aSet.size && !bSet.size) return 0;
+  let inter = 0;
+  for (const x of aSet) if (bSet.has(x)) inter++;
+  const uni = new Set([...aSet, ...bSet]).size || 1;
+  return inter / uni;
+}
+// every skill a person holds, as a label set: radar tool ids + free-form (lowercased)
+function skillKeys(p) {
+  const s = new Set((p.skills || []).map((x) => x.id));
+  for (const f of p.skills_freeform || []) s.add("free:" + f.toLowerCase());
+  return s;
+}
+function skillLabel(key, p) {
+  if (key.startsWith("free:")) {
+    const lc = key.slice(5);
+    return (p.skills_freeform || []).find((f) => f.toLowerCase() === lc) || lc;
+  }
+  const hit = (p.skills || []).find((x) => x.id === key);
+  return hit ? hit.name : key;
+}
+
+// ============================================================================
+function App() {
+  const [tools, setTools] = useState(null);
+  const [people, setPeople] = useState(null);
+  const [projects, setProjects] = useState(null);   // may be [] if no projects.json
+  const [tfidf, setTfidf] = useState(null);
+  const [view, setView] = useState("board");         // "board" | "map" | "skills"
+  const [mode, setMode] = useState("tech");          // board: "tech" | "projects" | "people"
+  const [rankBy, setRankBy] = useState("semantic");  // board rank source
+  const [selId, setSelId] = useState(null);
+  const [topK, setTopK] = useState(6);
+  const [roleFilter, setRoleFilter] = useState(null);      // null = all; else Set
+  const [topicFilter, setTopicFilter] = useState(() => new Set());
+  const [sortBy, setSortBy] = useState("role");
+  const [skillSort, setSkillSort] = useState("rare");
+  const [mapThreshold, setMapThreshold] = useState(0.05);
+
+  useEffect(() => {
+    (async () => {
+      const rj = await fetch("data/radar.json").then((r) => r.json());
+      const its = (rj.items || rj).filter((x) => x && x.ring !== "Archived");
+      let ppl = [], projs = [];
+      try {
+        const p = await fetch("data/people.json");
+        if (p.ok) ppl = (await p.json()).people || [];
+      } catch (e) { /* no people file */ }
+      try {
+        const pj = await fetch("data/projects.json");
+        if (pj.ok) projs = (await pj.json()).projects || [];
+      } catch (e) { /* no projects file — staffing view degrades gracefully */ }
+
+      setTools(its);
+      setPeople(ppl);
+      setProjects(projs);
+      setTfidf(buildTfIdf(its.map(toolText), ppl.map(personText), projs.map(projectText)));
+      setRoleFilter(new Set(ppl.map((p) => p.role || "—")));
+      setSelId(ppl.length ? ppl[0].id : null);
+    })();
+  }, []);
+
+  // stable role → colour map
+  const roleColor = useMemo(() => {
+    const m = new Map();
+    if (people) {
+      let i = 0;
+      for (const r of [...new Set(people.map((p) => p.role || "—"))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
+    }
+    return m;
+  }, [people]);
+
+  // person×person semantic similarity (TF-IDF cosine)
+  const personSem = useMemo(() => {
+    if (!people || !tfidf) return [];
+    const N = people.length, M = [];
+    for (let i = 0; i < N; i++) {
+      const row = new Float64Array(N);
+      for (let j = 0; j < N; j++) row[j] = i === j ? 1 : cosine(tfidf.personVecs[i], tfidf.personVecs[j]);
+      M.push(row);
+    }
+    return M;
+  }, [people, tfidf]);
+
+  // reverse index — every skill and who holds it (bus factor)
+  const skillIndex = useMemo(() => {
+    const m = new Map();  // key -> { key, label, ref (radar item|null), holders:[person] }
+    if (!people) return m;
+    for (const p of people) {
+      for (const s of p.skills || []) {
+        const e = m.get(s.id) || { key: s.id, label: s.name, ref: s, holders: [] };
+        e.holders.push(p); m.set(s.id, e);
+      }
+      for (const f of p.skills_freeform || []) {
+        const key = "free:" + f.toLowerCase();
+        const e = m.get(key) || { key, label: f, ref: null, holders: [] };
+        // keep the first-seen casing for the label
+        e.holders.push(p); m.set(key, e);
+      }
+    }
+    return m;
+  }, [people]);
+
+  // tech recommendations — semantic bio match, declared skills excluded
+  const recommendTech = useMemo(() => {
+    if (!tools || !people || !tfidf) return () => [];
+    return (person, pIdx) => {
+      const have = new Set((person.skills || []).map((s) => s.id));
+      const pv = tfidf.personVecs[pIdx];
+      const out = [];
+      tools.forEach((it, ti) => {
+        if (have.has(it.id)) return;
+        const sc = cosine(pv, tfidf.toolVecs[ti]);
+        if (sc > 0.001) out.push({ it, score: sc, why: sharedTerms(pv, tfidf.toolVecs[ti]) });
+      });
+      out.sort((a, b) => b.score - a.score);
+      return out.slice(0, topK);
+    };
+  }, [tools, people, tfidf, topK]);
+
+  // peer tech — skills that similar people ACTUALLY have, that this person lacks
+  const recommendPeers = useMemo(() => {
+    if (!people) return () => [];
+    return (person, pIdx) => {
+      const peers = people.map((q, j) => ({ q, j, s: personSem[pIdx] ? personSem[pIdx][j] : 0 }))
+        .filter((x) => x.j !== pIdx && x.s >= 0.03)
+        .sort((a, b) => b.s - a.s).slice(0, 8);
+      const have = new Set((person.skills || []).map((s) => s.id));
+      const agg = new Map();
+      for (const { q, s: ps } of peers) {
+        for (const t of q.skills || []) {
+          if (have.has(t.id)) continue;
+          const e = agg.get(t.id) || { tool: t, score: 0, peers: [] };
+          e.score += ps; e.peers.push({ name: q.name, id: q.id, score: ps });
+          agg.set(t.id, e);
+        }
+      }
+      return [...agg.values()]
+        .map((e) => ({ ...e, peers: e.peers.sort((a, b) => b.score - a.score) }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, topK);
+    };
+  }, [people, personSem, topK]);
+
+  // matching projects — staffing. Semantic (bio↔prose) or Skills (stack overlap)
+  const recommendProjects = useMemo(() => {
+    if (!projects || !tfidf) return () => [];
+    return (person, pIdx, rankMode) => {
+      const mySkills = new Set((person.skills || []).map((s) => s.id));
+      const out = [];
+      projects.forEach((pr, j) => {
+        const stackIds = (pr.stack || []).map((s) => s.id);
+        if (rankMode === "skills") {
+          const shared = stackIds.filter((id) => mySkills.has(id));
+          if (!shared.length) return;
+          const score = jaccard(mySkills, new Set(stackIds));
+          const names = (pr.stack || []).filter((s) => mySkills.has(s.id)).map((s) => s.name);
+          out.push({ proj: pr, score, why: names, skills: true });
+        } else {
+          const sc = cosine(tfidf.personVecs[pIdx], tfidf.projVecs[j]);
+          if (sc <= 0.001) return;
+          out.push({ proj: pr, score: sc, why: sharedTerms(tfidf.personVecs[pIdx], tfidf.projVecs[j]) });
+        }
+      });
+      out.sort((a, b) => b.score - a.score);
+      return out.slice(0, topK);
+    };
+  }, [projects, tfidf, topK]);
+
+  // similar people — Semantic (bio) or Skills (skill-set Jaccard)
+  const recommendPeople = useMemo(() => {
+    if (!people) return () => [];
+    return (person, pIdx, rankMode) => {
+      const mine = skillKeys(person);
+      const out = [];
+      people.forEach((q, j) => {
+        if (j === pIdx) return;
+        if (rankMode === "skills") {
+          const theirs = skillKeys(q);
+          const score = jaccard(mine, theirs);
+          if (score <= 0) return;
+          const why = [...mine].filter((k) => theirs.has(k)).map((k) => skillLabel(k, mine.has(k) ? person : q));
+          out.push({ person: q, idx: j, score, why, skills: true });
+        } else {
+          const score = personSem[pIdx] ? personSem[pIdx][j] : 0;
+          if (score <= 0.001) return;
+          out.push({ person: q, idx: j, score, why: sharedTerms(tfidf.personVecs[pIdx], tfidf.personVecs[j]) });
+        }
+      });
+      out.sort((a, b) => b.score - a.score);
+      return out.slice(0, topK);
+    };
+  }, [people, personSem, tfidf, topK]);
+
+  const visibleIdx = useMemo(() => {
+    if (!people) return [];
+    return people.map((_, i) => i).filter((i) => {
+      const p = people[i];
+      if (roleFilter && roleFilter.size && !roleFilter.has(p.role || "—")) return false;
+      if (topicFilter.size && ![...(p.topics || []), ...(p.interests || [])].some((t) => topicFilter.has(t))) return false;
+      return true;
+    });
+  }, [people, roleFilter, topicFilter]);
+
+  if (!tools || !people || !tfidf) return <div className="loading">building recommendations…</div>;
+
+  if (!people.length) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+        <TopBar count={0} />
+        <div style={{ padding: 24, color: "var(--muted)" }}>
+          No people yet. Add a Markdown file under <code>people/</code> and run{" "}
+          <code>python build_people.py</code>. See <code>people/README.md</code> for the format.
+        </div>
+      </div>
+    );
+  }
+
+  const selIdx = people.findIndex((p) => p.id === selId);
+  const sel = selIdx >= 0 ? people[selIdx] : null;
+
+  const rankOptions = mode === "tech"
+    ? [["semantic", "Semantic"], ["peers", "Peers"]]
+    : [["semantic", "Semantic"], ["skills", "Skills"]];
+  const effRank = rankOptions.some((o) => o[0] === rankBy) ? rankBy : "semantic";
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <TopBar count={people.length} />
+      <Controls
+        view={view} setView={setView}
+        mode={mode} setMode={setMode} hasProjects={projects.length > 0}
+        rankOptions={rankOptions} rankBy={effRank} setRankBy={setRankBy}
+        topK={topK} setTopK={setTopK}
+        mapThreshold={mapThreshold} setMapThreshold={setMapThreshold}
+        skillSort={skillSort} setSkillSort={setSkillSort} />
+      {(view === "board" || view === "map") && (
+        <Filters people={people} roleColor={roleColor}
+          roleFilter={roleFilter} setRoleFilter={setRoleFilter}
+          topicFilter={topicFilter} setTopicFilter={setTopicFilter}
+          sortBy={sortBy} setSortBy={setSortBy} showSort={view === "board"}
+          visibleCount={visibleIdx.length} />
+      )}
+
+      <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
+        {view === "board" && (
+          <>
+            <PeopleList people={people} visibleIdx={visibleIdx} sortBy={sortBy}
+              roleColor={roleColor} selId={selId} setSelId={setSelId} />
+            <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
+              {sel && <PersonDetail person={sel} roleColor={roleColor}
+                mode={mode} rankBy={effRank} hasProjects={projects.length > 0}
+                techRecs={recommendTech(sel, selIdx)}
+                peerRecs={recommendPeers(sel, selIdx)}
+                projRecs={recommendProjects(sel, selIdx, effRank)}
+                peopleRecs={recommendPeople(sel, selIdx, effRank)}
+                setSelId={setSelId} />}
+            </div>
+          </>
+        )}
+        {view === "map" && (
+          <MapView people={people} personSem={personSem} visibleIdx={visibleIdx}
+            roleColor={roleColor} threshold={mapThreshold} topK={topK}
+            selId={selId} setSelId={setSelId} openBoard={() => setView("board")} />
+        )}
+        {view === "skills" && (
+          <SkillsView skillIndex={skillIndex} skillSort={skillSort}
+            roleColor={roleColor} openPerson={(id) => { setSelId(id); setView("board"); }} />
+        )}
+      </div>
+      <Legend view={view} mode={mode} people={people} roleColor={roleColor} />
+    </div>
+  );
+}
+
+// Shared top nav — identical tab group to dashboard.jsx / books.jsx / projects.html.
+function TopBar({ count }) {
+  const tab = { background: "transparent", color: "#999", border: "1px solid #444",
+    textDecoration: "none", padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 };
+  return (
+    <div style={{ display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
+      fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap" }}>
+      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+      <a href="index.html#atlas" style={tab}>ATLAS</a>
+      <a href="index.html#index" style={tab}>INDEX</a>
+      <a href="books.html" style={tab}>READING LIST</a>
+      <a href="similarity.html" style={tab}>SIMILARITY</a>
+      <a href="projects.html" style={tab}>PROJECTS</a>
+      <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+        padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>PEOPLE</span>
+      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: "#4ade80" }}>
+        {count} {count === 1 ? "person" : "people"} · ○ TF-IDF · in-browser
+      </span>
+    </div>
+  );
+}
+
+function Seg({ options, value, onChange, disabled }) {
+  return (
+    <div style={{ display: "inline-flex", border: "1px solid var(--border)", borderRadius: 8,
+      overflow: "hidden", opacity: disabled ? 0.4 : 1, pointerEvents: disabled ? "none" : "auto" }}>
+      {options.map(([k, lbl], i) => {
+        const on = k === value;
+        return (
+          <button key={k} onClick={() => onChange(k)} aria-pressed={on}
+            style={{ padding: "6px 12px", fontSize: 12, cursor: "pointer", border: 0,
+              borderRight: i < options.length - 1 ? "1px solid var(--border)" : 0,
+              background: on ? "rgba(57,135,229,0.16)" : "transparent",
+              color: on ? "#fff" : "var(--ink-2)",
+              boxShadow: on ? "inset 0 -2px 0 var(--q-tools)" : "none" }}>{lbl}</button>
+        );
+      })}
+    </div>
+  );
+}
+
+function Controls({ view, setView, mode, setMode, hasProjects, rankOptions, rankBy, setRankBy,
+  topK, setTopK, mapThreshold, setMapThreshold, skillSort, setSkillSort }) {
+  const wrap = { display: "flex", gap: 18, alignItems: "center", padding: "8px 14px",
+    borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" };
+  const k = { fontSize: 12, textTransform: "uppercase", letterSpacing: 0.5 };
+  const showOpts = [["tech", "Recommended tech"], ["projects", "Matching projects"], ["people", "Similar people"]];
+  return (
+    <div style={wrap}>
+      <Seg options={[["board", "People"], ["map", "Map"], ["skills", "Skills"]]} value={view} onChange={setView} />
+      <span style={{ width: 1, alignSelf: "stretch", background: "var(--border)" }} />
+
+      {view === "board" && (
+        <>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={k}>Show</span>
+            <Seg options={showOpts} value={mode} onChange={setMode} />
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={k}>Rank by</span>
+            <Seg options={rankOptions} value={rankBy} onChange={setRankBy} />
+          </div>
+        </>
+      )}
+
+      {view === "map" && (
+        <label>min link{" "}
+          <input type="range" min="0.02" max="0.6" step="0.01" value={mapThreshold}
+            onChange={(e) => setMapThreshold(+e.target.value)} /> {mapThreshold.toFixed(2)}</label>
+      )}
+
+      {view === "skills" && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={k}>Sort</span>
+          <Seg options={[["rare", "Rarest first"], ["count", "Most held"], ["name", "Name"]]} value={skillSort} onChange={setSkillSort} />
+        </div>
+      )}
+
+      {view === "board" && (
+        <label>top{" "}
+          <input type="range" min="3" max="12" value={topK} onChange={(e) => setTopK(+e.target.value)} /> {topK}</label>
+      )}
+
+      <span style={{ fontSize: 12, marginLeft: "auto" }}>{controlHint(view, mode, rankBy, hasProjects)}</span>
+    </div>
+  );
+}
+function controlHint(view, mode, rankBy, hasProjects) {
+  if (view === "map") return "each node is a person; links connect people with similar skills — drag, scroll to zoom";
+  if (view === "skills") return "every skill and who holds it — a skill only one person has is a single point of failure";
+  if (mode === "tech") return rankBy === "peers"
+    ? "skills that people similar to this one have, that this person doesn't yet"
+    : "tools ranked by match to the bio + interests; skills already held excluded";
+  if (mode === "projects") return !hasProjects ? "no projects.json — run python build_projects.py"
+    : rankBy === "skills" ? "projects whose declared stack overlaps this person's skills"
+    : "projects whose description resembles what this person works on";
+  return rankBy === "skills" ? "people with overlapping skill sets (Jaccard)"
+    : "people who resemble this one — semantic match on the bios";
+}
+
+// ---- filters ---------------------------------------------------------------
+function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, setTopicFilter, sortBy, setSortBy, showSort, visibleCount }) {
+  const roles = useMemo(() => [...new Set(people.map((p) => p.role || "—"))].sort(), [people]);
+  const topics = useMemo(() =>
+    [...new Set(people.flatMap((p) => [...(p.topics || []), ...(p.interests || [])]))].sort(), [people]);
+
+  const toggleRole = (r) => {
+    const base = roleFilter || new Set(roles);
+    const next = new Set(base);
+    next.has(r) ? next.delete(r) : next.add(r);
+    if (next.size) setRoleFilter(next);   // never empty
+  };
+  const toggleTopic = (t) => {
+    const next = new Set(topicFilter);
+    next.has(t) ? next.delete(t) : next.add(t);
+    setTopicFilter(next);
+  };
+  const active = roleFilter || new Set(roles);
+
+  const pill = (on, color) => ({
+    display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 9px", borderRadius: 20,
+    cursor: "pointer", fontSize: 11, opacity: on ? 1 : 0.4,
+    border: "1px solid " + (color || "var(--border)"), background: "transparent", color: "var(--ink-2)",
+  });
+
+  return (
+    <div style={{ display: "flex", gap: 14, alignItems: "center", padding: "8px 14px",
+      borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" }}>
+      <span style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 }}>role</span>
+      {roles.map((r) => (
+        <button key={r} onClick={() => toggleRole(r)} style={pill(active.has(r), roleColor.get(r))}>
+          <span style={{ width: 8, height: 8, borderRadius: "50%", background: roleColor.get(r) }} />{r}
+        </button>
+      ))}
+      {topics.length > 0 && <span style={{ width: 1, alignSelf: "stretch", background: "var(--border)" }} />}
+      {topics.length > 0 && <span style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 }}>topic / interest</span>}
+      {topics.map((t) => (
+        <button key={t} onClick={() => toggleTopic(t)} style={pill(topicFilter.size === 0 || topicFilter.has(t))}>{t}</button>
+      ))}
+      <span style={{ marginLeft: "auto", display: "flex", gap: 12, alignItems: "center" }}>
+        <span style={{ fontSize: 11 }}>{visibleCount} shown</span>
+        {showSort && (
+          <label style={{ fontSize: 12 }}>sort{" "}
+            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
+              style={{ background: "var(--page)", color: "var(--ink)", border: "1px solid var(--border)",
+                borderRadius: 5, padding: "3px 6px", fontFamily: "inherit", fontSize: 12 }}>
+              <option value="role">Role</option>
+              <option value="name">Name</option>
+              <option value="skills">Skill count</option>
+            </select>
+          </label>
+        )}
+      </span>
+    </div>
+  );
+}
+
+function skillCount(p) { return (p.skills || []).length + (p.skills_freeform || []).length; }
+
+function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId }) {
+  const ordered = useMemo(() => {
+    const idx = [...visibleIdx];
+    idx.sort((a, b) => {
+      const pa = people[a], pb = people[b];
+      if (sortBy === "name") return pa.name.localeCompare(pb.name);
+      if (sortBy === "skills") return skillCount(pb) - skillCount(pa);
+      return (pa.role || "").localeCompare(pb.role || "") || pa.name.localeCompare(pb.name);
+    });
+    return idx;
+  }, [visibleIdx, sortBy, people]);
+
+  return (
+    <div style={{ width: 250, borderRight: "1px solid var(--border)", overflow: "auto" }}>
+      {ordered.map((i) => {
+        const p = people[i];
+        const on = p.id === selId;
+        return (
+          <div key={p.id} onClick={() => setSelId(p.id)}
+            style={{ padding: "10px 12px", cursor: "pointer",
+              background: on ? "rgba(57,135,229,0.15)" : "transparent",
+              borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+              <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(p.role || "—"), flex: "0 0 auto" }} />
+              <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</span>
+            </div>
+            <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 2 }}>
+              {p.role || "—"} · {skillCount(p)} skill{skillCount(p) === 1 ? "" : "s"}
+            </div>
+          </div>
+        );
+      })}
+      {!ordered.length && <div style={{ padding: 12, color: "var(--muted)" }}>no people match the filter</div>}
+    </div>
+  );
+}
+
+function RoleBadge({ role, roleColor }) {
+  const c = roleColor.get(role || "—") || "#898781";
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 9px",
+      borderRadius: 20, border: "1px solid " + c, color: c, fontSize: 11, letterSpacing: 0.5 }}>
+      <span style={{ width: 7, height: 7, borderRadius: "50%", background: c }} />{role || "—"}
+    </span>
+  );
+}
+
+function PersonDetail({ person, roleColor, mode, rankBy, hasProjects, techRecs, peerRecs, projRecs, peopleRecs, setSelId }) {
+  return (
+    <div style={{ maxWidth: 760 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+        <strong style={{ fontSize: 20 }}>{person.name}</strong>
+        <RoleBadge role={person.role} roleColor={roleColor} />
+      </div>
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0" }}>
+        {(person.topics || []).map((t) => (
+          <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)", borderRadius: 20, padding: "2px 9px" }}>{t}</span>
+        ))}
+        {(person.interests || []).map((t) => (
+          <span key={"i" + t} title="growth interest"
+            style={{ fontSize: 11, color: "#4ade80", border: "1px dashed rgba(74,222,128,0.5)", borderRadius: 20, padding: "2px 9px" }}>↗ {t}</span>
+        ))}
+      </div>
+      <div style={{ color: "var(--ink-2)", margin: "12px 0 4px" }}>{person.blurb}</div>
+
+      <SectionTitle>Skills</SectionTitle>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+        {(person.skills || []).map((s) => (
+          <a key={s.id} href={s.url || "#"} target={s.url ? "_blank" : undefined}
+            style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 8,
+              textDecoration: "none", color: "var(--ink)", border: "1px solid " + quadColor(s.quadrant), background: "rgba(255,255,255,0.02)" }}>
+            <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(s.quadrant) }} />
+            <span>{s.name}</span>
+            <span style={{ color: "var(--muted)", fontSize: 11 }}>{s.ring}</span>
+          </a>
+        ))}
+        {(person.skills_freeform || []).map((f) => (
+          <span key={f} style={{ display: "inline-flex", alignItems: "center", padding: "6px 11px", borderRadius: 8,
+            color: "var(--ink-2)", border: "1px solid var(--border)", background: "transparent" }}>{f}</span>
+        ))}
+      </div>
+      <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 8 }}>
+        colour-bordered = on the radar (links to the tool) · plain = free-form skill
+      </div>
+
+      {mode === "tech" && (rankBy === "peers"
+        ? <PeerRecs recs={peerRecs} setSelId={setSelId} />
+        : <TechRecs person={person} recs={techRecs} setSelId={setSelId} />)}
+      {mode === "projects" && <ProjectRecs recs={projRecs} rankBy={rankBy} hasProjects={hasProjects} />}
+      {mode === "people" && <PeopleRecs recs={peopleRecs} rankBy={rankBy} roleColor={roleColor} setSelId={setSelId} />}
+    </div>
+  );
+}
+
+function ScoreBar({ score, color }) {
+  return (
+    <div style={{ height: 4, background: "var(--grid)", borderRadius: 2, margin: "5px 0" }}>
+      <div style={{ height: "100%", width: (Math.min(1, score) * 100) + "%", background: color || "var(--q-tools)", borderRadius: 2 }} />
+    </div>
+  );
+}
+
+function TechRecs({ person, recs, setSelId }) {
+  return (
+    <>
+      <SectionTitle>Recommended tech <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— tools to check out, ranked by match to the bio + interests</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map((r) => <TechRow key={r.it.id} r={r} person={person} />)}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>no recommendations — add more detail to the bio.</div>}
+      </div>
+    </>
+  );
+}
+function TechRow({ r, person }) {
+  const it = r.it;
+  const growth = it && (it.topics || []).some((t) => (person.interests || []).includes(t));
+  const topicMatch = it && (it.topics || []).some((t) => (person.topics || []).includes(t));
+  return (
+    <div style={{ padding: "10px 0", borderTop: "1px solid var(--border)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(it.quadrant) }} />
+        {it.url ? <a href={it.url} target="_blank"><strong>{it.name}</strong></a> : <strong>{it.name}</strong>}
+        <span style={{ color: "var(--muted)", fontSize: 12 }}>{it.quadrant} · {it.ring}</span>
+        {growth && <span style={{ fontSize: 10, color: "#4ade80", border: "1px solid rgba(74,222,128,0.4)", borderRadius: 10, padding: "1px 6px" }}>↗ growth</span>}
+        {!growth && topicMatch && <span style={{ fontSize: 10, color: "#6da7ec", border: "1px solid rgba(109,167,236,0.4)", borderRadius: 10, padding: "1px 6px" }}>topic match</span>}
+        <span style={{ flex: 1 }} />
+        <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{r.score.toFixed(3)}</span>
+      </div>
+      <ScoreBar score={r.score} color={quadColor(it.quadrant)} />
+      <div style={{ color: "var(--muted)", fontSize: 12 }}>
+        {it.description}
+        {r.why && r.why.length ? <span style={{ color: "#6da7ec" }}>  · shared: {r.why.join(", ")}</span> : null}
+      </div>
+    </div>
+  );
+}
+
+function PeerRecs({ recs, setSelId }) {
+  return (
+    <>
+      <SectionTitle>Peer skills <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— what people with similar skills know</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map(({ tool, score, peers }) => (
+          <div key={tool.id} style={{ padding: "10px 0", borderTop: "1px solid var(--border)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(tool.quadrant) }} />
+              {tool.url ? <a href={tool.url} target="_blank"><strong>{tool.name}</strong></a> : <strong>{tool.name}</strong>}
+              <span style={{ color: "var(--muted)", fontSize: 12 }}>{tool.quadrant} · {tool.ring}</span>
+              <span style={{ flex: 1 }} />
+              <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{score.toFixed(2)}</span>
+            </div>
+            <ScoreBar score={score} color={quadColor(tool.quadrant)} />
+            <div style={{ color: "var(--muted)", fontSize: 12 }}>
+              known by {peers.map((pe, i) => (
+                <span key={pe.id}>
+                  <a onClick={(e) => { e.preventDefault(); setSelId(pe.id); }} href="#" style={{ fontSize: 12 }}>{pe.name}</a>
+                  <span style={{ color: "var(--muted)" }}> ({pe.score.toFixed(2)})</span>{i < peers.length - 1 ? ", " : ""}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>no peer skills — the people most similar to this one have no radar-backed skills yet.</div>}
+      </div>
+    </>
+  );
+}
+
+function ProjectRecs({ recs, rankBy, hasProjects }) {
+  if (!hasProjects) {
+    return (
+      <>
+        <SectionTitle>Matching projects</SectionTitle>
+        <div style={{ color: "var(--muted)", marginTop: 8 }}>
+          No <code>data/projects.json</code> — add projects under <code>projects/</code> and run{" "}
+          <code>python build_projects.py</code> to enable staffing suggestions.
+        </div>
+      </>
+    );
+  }
+  const src = rankBy === "skills" ? "skill overlap with the declared stack" : "semantic match on the description";
+  return (
+    <>
+      <SectionTitle>Matching projects <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— staffing fit, ranked by {src}</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map(({ proj, score, why, skills }) => (
+          <div key={proj.id} style={{ padding: "10px 0", borderTop: "1px solid var(--border)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <a href="projects.html" title="open the Projects page"><strong>{proj.name}</strong></a>
+              <span style={{ color: "var(--muted)", fontSize: 12 }}>{proj.status} · {(proj.topics || []).join(", ") || "no topics"}</span>
+              <span style={{ flex: 1 }} />
+              <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{score.toFixed(2)}</span>
+            </div>
+            <ScoreBar score={score} />
+            <div style={{ color: "var(--muted)", fontSize: 12 }}>
+              {(proj.blurb || "").slice(0, 120)}{(proj.blurb || "").length > 120 ? "…" : ""}
+              {why && why.length ? <span style={{ color: skills ? "#4ade80" : "#6da7ec" }}>  · {skills ? "shared skills" : "shared"}: {why.join(", ")}</span> : null}
+            </div>
+          </div>
+        ))}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>no matching projects{rankBy === "skills" ? " share a skill with this person" : " yet"}.</div>}
+      </div>
+    </>
+  );
+}
+
+function PeopleRecs({ recs, rankBy, roleColor, setSelId }) {
+  const src = rankBy === "skills" ? "skill-set overlap" : "semantic similarity";
+  return (
+    <>
+      <SectionTitle>Similar people <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— ranked by {src}</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {recs.map(({ person: q, score, why, skills }) => (
+          <div key={q.id} onClick={() => setSelId(q.id)} style={{ padding: "10px 0", borderTop: "1px solid var(--border)", cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(q.role || "—") }} />
+              <strong>{q.name}</strong>
+              <span style={{ color: "var(--muted)", fontSize: 12 }}>{q.role || "—"}</span>
+              <span style={{ flex: 1 }} />
+              <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)" }}>{score.toFixed(2)}</span>
+            </div>
+            <ScoreBar score={score} />
+            <div style={{ color: "var(--muted)", fontSize: 12 }}>
+              {(q.blurb || "").slice(0, 110)}{(q.blurb || "").length > 110 ? "…" : ""}
+              {why && why.length ? <span style={{ color: skills ? "#4ade80" : "#6da7ec" }}>  · {skills ? "shared skills" : "shared"}: {why.join(", ")}</span> : null}
+            </div>
+          </div>
+        ))}
+        {!recs.length && <div style={{ color: "var(--muted)" }}>no similar people{rankBy === "skills" ? " share a skill" : " yet"}.</div>}
+      </div>
+    </>
+  );
+}
+
+// ---- reverse index / bus factor --------------------------------------------
+function SkillsView({ skillIndex, skillSort, roleColor, openPerson }) {
+  const rows = useMemo(() => {
+    const arr = [...skillIndex.values()];
+    arr.sort((a, b) => {
+      if (skillSort === "name") return a.label.localeCompare(b.label);
+      if (skillSort === "count") return (b.holders.length - a.holders.length) || a.label.localeCompare(b.label);
+      return (a.holders.length - b.holders.length) || a.label.localeCompare(b.label); // rare
+    });
+    return arr;
+  }, [skillIndex, skillSort]);
+
+  return (
+    <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
+      <div style={{ color: "var(--muted)", maxWidth: 720, marginBottom: 12 }}>
+        Every skill and who holds it. A skill only <strong style={{ color: "#fbbf24" }}>one</strong> person has is a
+        single point of failure — the bus factor. Radar-backed skills link to the tool.
+      </div>
+      {rows.map((e) => {
+        const solo = e.holders.length === 1;
+        return (
+          <div key={e.key} style={{ padding: "11px 0", borderTop: "1px solid var(--border)", maxWidth: 760 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ width: 10, height: 10, borderRadius: e.ref ? 2 : "50%",
+                background: e.ref ? quadColor(e.ref.quadrant) : "var(--muted)" }} />
+              {e.ref && e.ref.url ? <a href={e.ref.url} target="_blank"><strong>{e.label}</strong></a> : <strong>{e.label}</strong>}
+              {e.ref && <span style={{ color: "var(--muted)", fontSize: 12 }}>{e.ref.quadrant} · {e.ref.ring}</span>}
+              {!e.ref && <span style={{ color: "var(--muted)", fontSize: 11 }}>free-form</span>}
+              <span style={{ flex: 1 }} />
+              <span style={{ fontSize: 11, color: solo ? "#fbbf24" : "var(--ink-2)",
+                border: "1px solid " + (solo ? "rgba(251,191,36,0.5)" : "var(--border)"), borderRadius: 20, padding: "1px 9px" }}>
+                {e.holders.length} {e.holders.length === 1 ? "holder" : "holders"}{solo ? " · bus factor 1" : ""}
+              </span>
+            </div>
+            <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 8 }}>
+              {e.holders.map((p) => (
+                <button key={p.id} onClick={() => openPerson(p.id)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "4px 10px", borderRadius: 8,
+                    cursor: "pointer", color: "var(--ink-2)", border: "1px solid var(--border)", background: "transparent" }}>
+                  <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(p.role || "—") }} />{p.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+      {!rows.length && <div style={{ color: "var(--muted)" }}>No skills yet — add a <code>skills:</code> list to a person.</div>}
+    </div>
+  );
+}
+
+// ---- constellation map -----------------------------------------------------
+function MapView({ people, personSem, visibleIdx, roleColor, threshold, topK, selId, setSelId, openBoard }) {
+  const canvasRef = useRef(null);
+  const stateRef = useRef({ nodes: [], edges: [], cam: { x: 0, y: 0, z: 1 } });
+  const [hover, setHover] = useState(null);
+  const dragRef = useRef(null);
+  const panRef = useRef(null);
+
+  const graph = useMemo(() => {
+    const vis = visibleIdx;
+    const visSet = new Set(vis);
+    const nodes = vis.map((i) => ({ i, x: (Math.random() - 0.5) * 300, y: (Math.random() - 0.5) * 300, vx: 0, vy: 0 }));
+    const pos = new Map(nodes.map((nd, k) => [nd.i, k]));
+    const edgeSet = new Set();
+    const edges = [];
+    for (const nd of nodes) {
+      const nbrs = vis.filter((j) => j !== nd.i)
+        .map((j) => [j, personSem[nd.i] ? personSem[nd.i][j] : 0])
+        .filter(([, s]) => s >= threshold)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, topK);
+      for (const [j, s] of nbrs) {
+        if (!visSet.has(j)) continue;
+        const key = nd.i < j ? nd.i + "-" + j : j + "-" + nd.i;
+        if (edgeSet.has(key)) continue;
+        edgeSet.add(key);
+        edges.push({ a: pos.get(nd.i), b: pos.get(j), s });
+      }
+    }
+    return { nodes, edges };
+  }, [visibleIdx, personSem, threshold, topK]);
+
+  useEffect(() => { stateRef.current.nodes = graph.nodes; stateRef.current.edges = graph.edges; }, [graph]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let raf, alpha = 1, running = true;
+    const resize = () => {
+      const r = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+      canvas.style.width = r.width + "px"; canvas.style.height = r.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    function step() {
+      const { nodes, edges, cam } = stateRef.current;
+      const N = nodes.length;
+      if (alpha > 0.004 && N) {
+        for (let a = 0; a < N; a++) {
+          const na = nodes[a];
+          for (let b = a + 1; b < N; b++) {
+            const nb = nodes[b];
+            let dx = na.x - nb.x, dy = na.y - nb.y;
+            let d2 = dx * dx + dy * dy || 0.01;
+            const f = 5200 / d2;
+            const d = Math.sqrt(d2);
+            dx /= d; dy /= d;
+            na.vx += dx * f; na.vy += dy * f;
+            nb.vx -= dx * f; nb.vy -= dy * f;
+          }
+        }
+        for (const e of edges) {
+          const na = nodes[e.a], nb = nodes[e.b];
+          let dx = nb.x - na.x, dy = nb.y - na.y;
+          const d = Math.hypot(dx, dy) || 0.01;
+          const rest = 70 + (1 - e.s) * 150;
+          const f = (d - rest) * 0.02 * (0.4 + e.s);
+          dx /= d; dy /= d;
+          na.vx += dx * f; na.vy += dy * f;
+          nb.vx -= dx * f; nb.vy -= dy * f;
+        }
+        for (const nd of nodes) {
+          nd.vx += -nd.x * 0.003; nd.vy += -nd.y * 0.003;
+          nd.vx *= 0.85; nd.vy *= 0.85;
+          if (dragRef.current && dragRef.current.k === nd) continue;
+          nd.x += nd.vx * alpha; nd.y += nd.vy * alpha;
+        }
+        alpha *= 0.992;
+      }
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      ctx.clearRect(0, 0, w, h);
+      ctx.save();
+      ctx.translate(w / 2 + cam.x, h / 2 + cam.y);
+      ctx.scale(cam.z, cam.z);
+
+      const hi = hover != null ? hover : (selId != null ? nodes.findIndex((nd) => people[nd.i].id === selId) : -1);
+      const hiSet = new Set();
+      if (hi >= 0) { hiSet.add(hi); for (const e of edges) { if (e.a === hi) hiSet.add(e.b); if (e.b === hi) hiSet.add(e.a); } }
+
+      for (const e of edges) {
+        const na = nodes[e.a], nb = nodes[e.b];
+        const on = hi < 0 || e.a === hi || e.b === hi;
+        ctx.strokeStyle = on ? `rgba(180,190,205,${0.14 + e.s * 0.6})` : "rgba(120,125,135,0.06)";
+        ctx.lineWidth = on ? 0.5 + e.s * 2.5 : 0.4;
+        ctx.beginPath(); ctx.moveTo(na.x, na.y); ctx.lineTo(nb.x, nb.y); ctx.stroke();
+      }
+      for (let k = 0; k < nodes.length; k++) {
+        const nd = nodes[k];
+        const p = people[nd.i];
+        const dim = hi >= 0 && !hiSet.has(k);
+        const r = 6 + Math.min(10, skillCount(p) * 1.2);
+        ctx.globalAlpha = dim ? 0.25 : 1;
+        ctx.fillStyle = roleColor.get(p.role || "—") || "#898781";
+        ctx.beginPath(); ctx.arc(nd.x, nd.y, r, 0, Math.PI * 2); ctx.fill();
+        if (k === hi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke(); }
+        ctx.globalAlpha = dim ? 0.35 : 1;
+        ctx.fillStyle = "#e8e8e2";
+        ctx.font = (k === hi ? "600 " : "") + "11px 'IBM Plex Mono', monospace";
+        ctx.fillText(p.name, nd.x + r + 4, nd.y + 3);
+      }
+      ctx.globalAlpha = 1;
+      ctx.restore();
+      if (running) raf = requestAnimationFrame(step);
+    }
+    step();
+    return () => { running = false; cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, [graph, hover, selId, people, roleColor]);
+
+  const toWorld = (ev) => {
+    const canvas = canvasRef.current;
+    const r = canvas.getBoundingClientRect();
+    const { cam } = stateRef.current;
+    return { x: (ev.clientX - r.left - r.width / 2 - cam.x) / cam.z, y: (ev.clientY - r.top - r.height / 2 - cam.y) / cam.z };
+  };
+  const pick = (ev) => {
+    const { x, y } = toWorld(ev);
+    const { nodes } = stateRef.current;
+    let best = -1, bd = 16 * 16;
+    for (let k = 0; k < nodes.length; k++) {
+      const nd = nodes[k];
+      const d = (nd.x - x) ** 2 + (nd.y - y) ** 2;
+      if (d < bd) { bd = d; best = k; }
+    }
+    return best;
+  };
+  const onDown = (ev) => {
+    const k = pick(ev);
+    if (k >= 0) dragRef.current = { k: stateRef.current.nodes[k], moved: false, x: ev.clientX, y: ev.clientY };
+    else panRef.current = { x: ev.clientX, y: ev.clientY, cam: { ...stateRef.current.cam } };
+  };
+  const onMove = (ev) => {
+    if (dragRef.current) {
+      const { x, y } = toWorld(ev);
+      dragRef.current.k.x = x; dragRef.current.k.y = y; dragRef.current.k.vx = 0; dragRef.current.k.vy = 0;
+      if (Math.hypot(ev.clientX - dragRef.current.x, ev.clientY - dragRef.current.y) > 4) dragRef.current.moved = true;
+    } else if (panRef.current) {
+      const p = panRef.current;
+      stateRef.current.cam.x = p.cam.x + (ev.clientX - p.x);
+      stateRef.current.cam.y = p.cam.y + (ev.clientY - p.y);
+    } else {
+      const k = pick(ev);
+      setHover(k >= 0 ? k : null);
+      canvasRef.current.style.cursor = k >= 0 ? "pointer" : "grab";
+    }
+  };
+  const onUp = (ev) => {
+    if (dragRef.current) {
+      if (!dragRef.current.moved) setSelId(people[dragRef.current.k.i].id);
+      dragRef.current = null;
+    } else if (panRef.current) panRef.current = null;
+  };
+  const onWheel = (ev) => {
+    ev.preventDefault();
+    const { cam } = stateRef.current;
+    cam.z = Math.max(0.3, Math.min(6, cam.z * (ev.deltaY < 0 ? 1.1 : 1 / 1.1)));
+  };
+
+  const hoverIdx = hover != null ? stateRef.current.nodes[hover]?.i : null;
+  return (
+    <div style={{ position: "relative", flex: 1, minHeight: 0 }}>
+      <canvas ref={canvasRef}
+        onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onWheel={onWheel}
+        style={{ display: "block", width: "100%", height: "100%", touchAction: "none", cursor: "grab" }} />
+      {hoverIdx != null && (
+        <div style={{ position: "absolute", left: 12, bottom: 12, maxWidth: 380, pointerEvents: "none",
+          background: "rgba(20,20,19,0.95)", border: "1px solid var(--border)", borderRadius: 8, padding: "8px 10px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(people[hoverIdx].role || "—") }} />
+            <strong>{people[hoverIdx].name}</strong>
+            <span style={{ color: "var(--muted)" }}>· {people[hoverIdx].role || "—"}</span>
+          </div>
+          <div style={{ color: "var(--ink-2)", marginTop: 3 }}>{people[hoverIdx].blurb}</div>
+        </div>
+      )}
+      {selId != null && (
+        <div style={{ position: "absolute", right: 12, top: 12 }}>
+          <button onClick={openBoard} style={{ padding: "5px 11px", borderRadius: 6, cursor: "pointer",
+            border: "1px solid var(--border)", background: "rgba(20,20,19,0.9)", color: "var(--ink-2)" }}>
+            open selected →
+          </button>
+        </div>
+      )}
+      {visibleIdx.length < 2 && (
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "var(--muted)" }}>
+          need at least two people in view to draw a constellation
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SectionTitle({ children }) {
+  return <div style={{ marginTop: 22, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5, fontSize: 12 }}>{children}</div>;
+}
+
+function Legend({ view, mode, people, roleColor }) {
+  const roles = [...new Set(people.map((p) => p.role || "—"))];
+  const note = view === "map" ? "node size ≈ skill count · links = shared skills · drag / scroll to explore"
+    : view === "skills" ? "count = people who hold the skill · amber = bus factor 1 · click a person to open"
+    : mode === "tech" ? "skills held excluded · ↗ growth = matches a declared interest"
+    : mode === "projects" ? "staffing fit — semantic on the bio, or overlap with the declared stack"
+    : "bar = person-to-person similarity · click a person to open";
+  return (
+    <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "8px 14px",
+      borderTop: "1px solid var(--border)", background: "var(--surface-1)", color: "var(--muted)", fontSize: 12, flexWrap: "wrap" }}>
+      <span>role:</span>
+      {roles.map((r) => (
+        <span key={r} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(r) }} />{r}
+        </span>
+      ))}
+      <span style={{ flex: 1 }} />
+      <span>{note} · prototype</span>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+  </script>
+</body>
+</html>

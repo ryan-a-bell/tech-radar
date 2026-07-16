@@ -1391,6 +1391,11 @@ export default function App() {
           fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
           marginLeft: 8,
         }}>PROJECTS</a>
+        <a href="people.html" style={{
+          color: "#999", textDecoration: "none",
+          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
+          marginLeft: 8,
+        }}>PEOPLE</a>
         {EDIT_MODE && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,

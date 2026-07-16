@@ -1,0 +1,302 @@
+{
+  "generated": "2026-07-16",
+  "people": [
+    {
+      "id": "devin-cross",
+      "name": "Devin Cross",
+      "role": "Platform Engineer",
+      "topics": [
+        "Data Feeds"
+      ],
+      "interests": [
+        "ML"
+      ],
+      "blurb": "Keeps the data platform standing — the pipelines, schedulers, and clusters everything else runs on. Orchestrates batch and streaming jobs, models the warehouse so analysts trust the numbers, and instruments the whole thing so a broken feed pages a human before it corrupts a downstream table.",
+      "body": "Keeps the data platform standing — the pipelines, schedulers, and clusters\neverything else runs on. Orchestrates batch and streaming jobs, models the\nwarehouse so analysts trust the numbers, and instruments the whole thing so a\nbroken feed pages a human before it corrupts a downstream table.\n\nThinks about reliability, cost, and blast radius first. Increasingly pulled into\nthe ML side — the model teams want reproducible training data and somewhere to\nrun jobs, and that infrastructure problem is squarely his.",
+      "skills": [
+        {
+          "id": "manual:kubernetes",
+          "name": "Kubernetes",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://kubernetes.io",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        },
+        {
+          "id": "github:PrefectHQ/prefect",
+          "name": "prefect",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/PrefectHQ/prefect",
+          "canonical_url": "github.com/prefecthq/prefect"
+        },
+        {
+          "id": "github:dbt-labs/dbt-core",
+          "name": "dbt-core",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/dbt-labs/dbt-core",
+          "canonical_url": "github.com/dbt-labs/dbt-core"
+        },
+        {
+          "id": "github:hashicorp/terraform",
+          "name": "terraform",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/hashicorp/terraform",
+          "canonical_url": "github.com/hashicorp/terraform"
+        },
+        {
+          "id": "github:golang/go",
+          "name": "go",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/golang/go",
+          "canonical_url": "github.com/golang/go"
+        }
+      ],
+      "skills_freeform": [
+        "observability",
+        "CI/CD"
+      ]
+    },
+    {
+      "id": "maya-okafor",
+      "name": "Maya Okafor",
+      "role": "ML Engineer",
+      "topics": [
+        "ML",
+        "AI",
+        "RAG"
+      ],
+      "interests": [
+        "Agents"
+      ],
+      "blurb": "Serves and adapts large language models for production — quantising checkpoints to fit the hardware, standing up high-throughput inference, and wiring retrieval so answers stay grounded in a private corpus. Spends a lot of time on the unglamorous middle: chunking, embedding, evaluating whether a retrieval change actually helped, and keeping latency inside budget.",
+      "body": "Serves and adapts large language models for production — quantising checkpoints\nto fit the hardware, standing up high-throughput inference, and wiring\nretrieval so answers stay grounded in a private corpus. Spends a lot of time on\nthe unglamorous middle: chunking, embedding, evaluating whether a retrieval\nchange actually helped, and keeping latency inside budget.\n\nWants to push past single-shot retrieval into systems that plan, call tools,\nand check their own work — agentic loops on top of the serving stack she\nalready runs.",
+      "skills": [
+        {
+          "id": "github:pytorch/pytorch",
+          "name": "pytorch",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/pytorch/pytorch",
+          "canonical_url": "github.com/pytorch/pytorch"
+        },
+        {
+          "id": "manual:vllm",
+          "name": "vLLM",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/vllm-project/vllm",
+          "canonical_url": "github.com/vllm-project/vllm"
+        },
+        {
+          "id": "github:ggml-org/llama.cpp",
+          "name": "llama.cpp",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "canonical_url": "github.com/ggml-org/llama.cpp"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "skills_freeform": [
+        "Python",
+        "embeddings",
+        "fine-tuning",
+        "retrieval"
+      ]
+    },
+    {
+      "id": "priya-nair",
+      "name": "Priya Nair",
+      "role": "AI Agents Engineer",
+      "topics": [
+        "Agents",
+        "AI",
+        "Prompts"
+      ],
+      "interests": [
+        "Quant",
+        "RAG"
+      ],
+      "blurb": "Builds multi-agent systems — teams of models that divide a task, argue, and get reconciled by a supervisor. Designs the tool interfaces they call, the prompts that keep them on task, and the guardrails that stop a confident wrong answer from propagating. Ships most experiments behind a quick Gradio front end so non-engineers can poke at them.",
+      "body": "Builds multi-agent systems — teams of models that divide a task, argue, and get\nreconciled by a supervisor. Designs the tool interfaces they call, the prompts\nthat keep them on task, and the guardrails that stop a confident wrong answer\nfrom propagating. Ships most experiments behind a quick Gradio front end so\nnon-engineers can poke at them.\n\nDrawn to problems where autonomous actors operate under hard constraints —\ntrading desks and other high-stakes, many-agent domains — and wants deeper\ngrounding in the quant and retrieval machinery those systems lean on.",
+      "skills": [
+        {
+          "id": "manual:tradingagents",
+          "name": "TradingAgents",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "canonical_url": "github.com/tauricresearch/tradingagents"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:gradio-app/gradio",
+          "name": "gradio",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/gradio-app/gradio",
+          "canonical_url": "github.com/gradio-app/gradio"
+        }
+      ],
+      "skills_freeform": [
+        "LangGraph",
+        "prompt engineering",
+        "tool use",
+        "MCP",
+        "Python"
+      ]
+    },
+    {
+      "id": "ryan-bell",
+      "name": "Ryan Bell",
+      "role": "Quant Developer",
+      "topics": [
+        "Quant",
+        "Trading",
+        "Data Feeds"
+      ],
+      "interests": [
+        "Agents",
+        "ML"
+      ],
+      "blurb": "Builds systematic trading systems end to end — pulling market data, pricing derivatives, constructing portfolios under risk limits, and routing the resulting orders to a broker. Most of the day is spent on the vol surface: calibrating models to option chains, hunting for mispricings, and stress-testing the book before anything goes live.",
+      "body": "Builds systematic trading systems end to end — pulling market data, pricing\nderivatives, constructing portfolios under risk limits, and routing the\nresulting orders to a broker. Most of the day is spent on the vol surface:\ncalibrating models to option chains, hunting for mispricings, and stress-testing\nthe book before anything goes live.\n\nComfortable owning the whole pipeline from data feed to execution, but the part\nthat scales worst is research throughput — every new thesis is hand-built. Keen\nto hand more of the generate-and-test loop to agents, and to replace hand-tuned\nsignals with learned ones where the data supports it.",
+      "skills": [
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
+        },
+        {
+          "id": "manual:riskfolio-lib",
+          "name": "Riskfolio-Lib",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/dcajasn/Riskfolio-Lib",
+          "canonical_url": "github.com/dcajasn/riskfolio-lib"
+        },
+        {
+          "id": "manual:polygon-io",
+          "name": "Polygon.io",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://polygon.io/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:financepy",
+          "name": "FinancePy",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/domokane/FinancePy",
+          "canonical_url": "github.com/domokane/financepy"
+        },
+        {
+          "id": "manual:ibkr-tws",
+          "name": "IBKR TWS",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://www.interactivebrokers.com/en/trading/tws.php",
+          "canonical_url": null
+        }
+      ],
+      "skills_freeform": [
+        "Python",
+        "pandas",
+        "options pricing",
+        "backtesting"
+      ]
+    },
+    {
+      "id": "sam-reyes",
+      "name": "Sam Reyes",
+      "role": "Full-Stack Engineer",
+      "topics": [
+        "AI"
+      ],
+      "interests": [
+        "ML",
+        "Agents"
+      ],
+      "blurb": "Turns models and pipelines into things people can actually use — dashboards, internal tools, and product surfaces. Cares about the last mile: fast pages, legible data visualisation, and interfaces that make a complex system feel obvious. Often the person who takes a research demo and makes it presentable.",
+      "body": "Turns models and pipelines into things people can actually use — dashboards,\ninternal tools, and product surfaces. Cares about the last mile: fast pages,\nlegible data visualisation, and interfaces that make a complex system feel\nobvious. Often the person who takes a research demo and makes it presentable.\n\nFluent on the front end and comfortable enough on the back end to wire an API,\nbut wants to understand the model and agent layers well enough to design better\ninterfaces for them rather than treating them as a black box.",
+      "skills": [
+        {
+          "id": "github:vercel/next.js",
+          "name": "next.js",
+          "quadrant": "Tools",
+          "ring": "Discovered",
+          "url": "https://github.com/vercel/next.js",
+          "canonical_url": "github.com/vercel/next.js"
+        },
+        {
+          "id": "github:oven-sh/bun",
+          "name": "bun",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/oven-sh/bun",
+          "canonical_url": "github.com/oven-sh/bun"
+        },
+        {
+          "id": "github:gradio-app/gradio",
+          "name": "gradio",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/gradio-app/gradio",
+          "canonical_url": "github.com/gradio-app/gradio"
+        },
+        {
+          "id": "github:microsoft/TypeScript",
+          "name": "TypeScript",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/microsoft/TypeScript",
+          "canonical_url": "github.com/microsoft/typescript"
+        }
+      ],
+      "skills_freeform": [
+        "React",
+        "data visualization",
+        "UI design",
+        "Python"
+      ]
+    }
+  ]
+}

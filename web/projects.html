@@ -418,6 +418,7 @@ function TopBar({ count, semantic, label }) {
       <a href="similarity.html" style={tab}>SIMILARITY</a>
       <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
         padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>PROJECTS</span>
+      <a href="people.html" style={{ ...tab, marginLeft: 8 }}>PEOPLE</a>
       <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: semantic ? "#4ade80" : "#fbbf24" }}>
         {count} project{count === 1 ? "" : "s"} · {semantic ? "● " : "○ "}{label}
       </span>
