@@ -1,6 +1,136 @@
 {
-  "generated": "2026-07-15",
+  "generated": "2026-07-16",
   "projects": [
+    {
+      "id": "autonomous-trading-desk",
+      "name": "Autonomous Trading Desk",
+      "status": "Idea",
+      "topics": [
+        "Trading",
+        "Quant",
+        "Agents",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "A multi-agent trading desk — a hedge fund in a box. Research agents surface theses from the news and price action, a quant agent prices and backtests them, a risk agent vetoes anything that breaches position or drawdown limits, and an execution agent works the resulting orders — all supervised by a human and every decision logged for the post-mortem.",
+      "body": "A multi-agent trading desk — a hedge fund in a box. Research agents surface\ntheses from the news and price action, a quant agent prices and backtests them,\na risk agent vetoes anything that breaches position or drawdown limits, and an\nexecution agent works the resulting orders — all supervised by a human and every\ndecision logged for the post-mortem.\n\nStructurally this is the same problem as coordinating a rescue fleet: many\nautonomous actors sharing one picture, disagreeing, and being reconciled under\nhard constraints — here the constraint is risk and capital instead of fuel and\ncomms. Market data feeds the picture through Polygon, gs-quant handles the\npricing and risk analytics, a dedicated library builds the portfolio, and orders\nreach the market through the broker gateway. A local model runs the agent loop so\nno thesis or position leaves the desk.",
+      "stack": [
+        {
+          "id": "manual:tradingagents",
+          "name": "TradingAgents",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "canonical_url": "github.com/tauricresearch/tradingagents"
+        },
+        {
+          "id": "manual:gs-quant",
+          "name": "gs-quant",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/goldmansachs/gs-quant",
+          "canonical_url": "github.com/goldmansachs/gs-quant"
+        },
+        {
+          "id": "manual:riskfolio-lib",
+          "name": "Riskfolio-Lib",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/dcajasn/Riskfolio-Lib",
+          "canonical_url": "github.com/dcajasn/riskfolio-lib"
+        },
+        {
+          "id": "manual:polygon-io",
+          "name": "Polygon.io",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://polygon.io/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:ibkr-tws",
+          "name": "IBKR TWS",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://www.interactivebrokers.com/en/trading/tws.php",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "document-intelligence-engine",
+      "name": "Technical-Document Intelligence Engine",
+      "status": "Idea",
+      "topics": [
+        "OCR",
+        "RAG",
+        "AI",
+        "Agents"
+      ],
+      "repo": null,
+      "blurb": "An engine that turns a wall of scanned specifications, drawings, and PDFs into a queryable knowledge base. It runs OCR over the scans, recovers document structure and tables, and builds a knowledge graph you can ask engineering questions against — with every answer citing the exact source document and page it came from.",
+      "body": "An engine that turns a wall of scanned specifications, drawings, and PDFs into a\nqueryable knowledge base. It runs OCR over the scans, recovers document structure\nand tables, and builds a knowledge graph you can ask engineering questions\nagainst — with every answer citing the exact source document and page it came\nfrom.\n\nThe hard part is trust: turning messy, unstructured, often hand-marked documents\ninto a grounded knowledge base an engineer will actually rely on. OCR and layout\nrecovery lift text and tables off the page, a document parser reconstructs the\nlogical structure, and a graph-backed retrieval layer stores the relationships so\nretrieval is grounded rather than a bag of chunks. A local model does the reading\nand answering, keeping proprietary documents on-premises. It is the same\n\"structure the chaos\" theme as parsing radio traffic in the rescue fleet, aimed\nat a filing cabinet instead of a radio net.",
+      "stack": [
+        {
+          "id": "github:PaddlePaddle/PaddleOCR",
+          "name": "PaddleOCR",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "canonical_url": "github.com/paddlepaddle/paddleocr"
+        },
+        {
+          "id": "github:docling-project/docling",
+          "name": "docling",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/docling-project/docling",
+          "canonical_url": "github.com/docling-project/docling"
+        },
+        {
+          "id": "github:opendatalab/MinerU",
+          "name": "MinerU",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/opendatalab/MinerU",
+          "canonical_url": "github.com/opendatalab/mineru"
+        },
+        {
+          "id": "github:topoteretes/cognee",
+          "name": "cognee",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/topoteretes/cognee",
+          "canonical_url": "github.com/topoteretes/cognee"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": []
+    },
     {
       "id": "gsd-core-app",
       "name": "GSD Core App",
@@ -36,6 +166,62 @@
           "ring": "Adopted",
           "url": "https://ollama.com",
           "canonical_url": null
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "microgrid-dispatch-optimizer",
+      "name": "Microgrid Dispatch & Resilience Optimizer",
+      "status": "Idea",
+      "topics": [
+        "ML",
+        "Agents",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "A dispatch optimizer for a campus microgrid — solar, battery storage, a diesel backup, and a mix of controllable loads. It forecasts demand and generation for the day ahead, then schedules storage and generation to ride through grid outages at least cost, re-planning as the weather and the load actually unfold.",
+      "body": "A dispatch optimizer for a campus microgrid — solar, battery storage, a diesel\nbackup, and a mix of controllable loads. It forecasts demand and generation for\nthe day ahead, then schedules storage and generation to ride through grid\noutages at least cost, re-planning as the weather and the load actually unfold.\n\nThe complexity is closing the loop between a continuous physical model and a\ndiscrete scheduling problem. The plant is modeled in Modelica so the physics of\nbatteries and inverters are honest, a ModelCenter study sweeps the sizing and\ndispatch trade space, and an agent-based model of prosumers reacting to price\nsignals stresses the schedule against selfish behavior. A forecasting model\ndrives the day-ahead plan, and operators watch state of charge and reserve margin\non a live dashboard.",
+      "stack": [
+        {
+          "id": "manual:modelica",
+          "name": "Modelica",
+          "quadrant": "Languages",
+          "ring": "Assess",
+          "url": "https://modelica.org",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:modelcenter",
+          "name": "ModelCenter",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.phoenix-int.com/modelcenter/",
+          "canonical_url": null
+        },
+        {
+          "id": "github:mesa/mesa",
+          "name": "mesa",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/mesa/mesa",
+          "canonical_url": "github.com/mesa/mesa"
+        },
+        {
+          "id": "manual:vllm",
+          "name": "vLLM",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/vllm-project/vllm",
+          "canonical_url": "github.com/vllm-project/vllm"
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
         }
       ],
       "stack_unresolved": []
@@ -83,6 +269,143 @@
           "ring": "Assess",
           "url": "https://github.com/goldmansachs/gs-quant",
           "canonical_url": "github.com/goldmansachs/gs-quant"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sar-contested-comms-mesh",
+      "name": "Contested-Comms SAR Mesh",
+      "status": "Idea",
+      "topics": [
+        "Agents",
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "The same rescue fleet, but assuming the radios drop. This project layers a resilient communications mesh over the SAR fleet so vessels and drones keep sharing a common operating picture when the link to shore is jammed, over the horizon, or saturated. Craft relay for each other, buffer telemetry through outages, and fall back to intermittent satellite passes — and the task allocator has to keep planning while it only sometimes knows where everyone is.",
+      "body": "The same rescue fleet, but assuming the radios drop. This project layers a\nresilient communications mesh over the SAR fleet so vessels and drones keep\nsharing a common operating picture when the link to shore is jammed, over the\nhorizon, or saturated. Craft relay for each other, buffer telemetry through\noutages, and fall back to intermittent satellite passes — and the task allocator\nhas to keep planning while it only sometimes knows where everyone is.\n\nThis one is genuinely multi-disciplinary. Antenna patterns and link budgets are\nmodeled in HFSS and CST, satellite relay windows and line-of-sight come from STK,\nthe peer-to-peer sync layer is built on iroh, and a UAF architecture ties the\noperational, system, and resource views together so the comms design traces back\nto the mission. The open research question is decentralized task allocation under\npartial observability: agents that commit to a search plan, degrade gracefully as\nneighbors go dark, and reconcile the picture when the mesh heals.",
+      "stack": [
+        {
+          "id": "manual:ansys",
+          "name": "ANSYS HFSS / AEDT",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/electronics/ansys-hfss",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:cst-studio-suite",
+          "name": "CST Studio Suite",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://www.3ds.com/products/simulia/cst-studio-suite",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:n0-computer/iroh",
+          "name": "iroh",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/n0-computer/iroh",
+          "canonical_url": "github.com/n0-computer/iroh"
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:uaf",
+          "name": "UAF",
+          "quadrant": "Techniques",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/UAF/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        }
+      ],
+      "stack_unresolved": []
+    },
+    {
+      "id": "sar-fleet-coordinator",
+      "name": "SAR Fleet Coordinator",
+      "status": "Active",
+      "topics": [
+        "AI",
+        "ML",
+        "Agents",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/sar-fleet-coordinator",
+      "blurb": "Coordination software for search-and-rescue missions flown by a mixed fleet of unmanned surface vessels and UAVs. An incident commander drops a last-known position and a drift model; the planner divides the search area into cells, assigns each craft a sweep pattern sized to its sensor footprint and endurance, and re-tasks the fleet live as the probability-of-detection map updates from every pass.",
+      "body": "Coordination software for search-and-rescue missions flown by a mixed fleet of\nunmanned surface vessels and UAVs. An incident commander drops a last-known\nposition and a drift model; the planner divides the search area into cells,\nassigns each craft a sweep pattern sized to its sensor footprint and endurance,\nand re-tasks the fleet live as the probability-of-detection map updates from\nevery pass.\n\nThe hard part is the joint plan: many craft, overlapping sensor coverage, comms\nand fuel limits, and a survivor whose position drifts with wind and current. A\nmulti-agent policy handles the task allocation, STK supplies the sensor- and\ncomms-coverage geometry, and the whole system-of-systems — vehicle, payload, and\nground-station interfaces — is specified in SysML so the pieces stay consistent\nas the fleet grows. An on-board local model turns messy radio traffic into\nstructured tasking, and the ground station watches fleet health on a live\ndashboard.",
+      "stack": [
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:sysml-v2",
+          "name": "SysML v2",
+          "quadrant": "Languages",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/SysML/",
+          "canonical_url": null
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
         }
       ],
       "stack_unresolved": []
