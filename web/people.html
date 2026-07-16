@@ -168,6 +168,8 @@ function App() {
   const [people, setPeople] = useState(null);
   const [projects, setProjects] = useState(null);   // may be [] if no projects.json
   const [tfidf, setTfidf] = useState(null);
+  const [precomp, setPrecomp] = useState(null);      // {method, techScores, projScores, personMatrix}
+  const [method, setMethod] = useState("tfidf");     // "tfidf" | "precomputed"
   const [view, setView] = useState("board");         // "board" | "map" | "skills"
   const [mode, setMode] = useState("tech");          // board: "tech" | "projects" | "people"
   const [rankBy, setRankBy] = useState("semantic");  // board rank source
@@ -193,10 +195,51 @@ function App() {
         if (pj.ok) projs = (await pj.json()).projects || [];
       } catch (e) { /* no projects file — staffing view degrades gracefully */ }
 
+      // optional semantic upgrade — data/people_similarity.json from
+      // build_similarity.py. Aligns its ids to the arrays we just loaded so a
+      // dropped/renamed tool can't shift a column. Falls back to TF-IDF when
+      // absent or unusable.
+      let pc = null;
+      try {
+        const s = await fetch("data/people_similarity.json");
+        if (s.ok) {
+          const j = await s.json();
+          if (j && j.tool_ids && j.people) {
+            const toolIdx = new Map(its.map((it, i) => [it.id, i]));
+            const toolAlign = j.tool_ids.map((id) => toolIdx.has(id) ? toolIdx.get(id) : -1);
+            const techScores = new Map();
+            for (const [pid, row] of Object.entries(j.people)) {
+              const m = new Map();
+              row.forEach((v, k) => { const ti = toolAlign[k]; if (ti >= 0) m.set(ti, v); });
+              techScores.set(pid, m);
+            }
+            const projIdx = new Map(projs.map((p, i) => [p.id, i]));
+            const projAlign = (j.project_ids || []).map((id) => projIdx.has(id) ? projIdx.get(id) : -1);
+            const projScores = new Map();
+            for (const [pid, row] of Object.entries(j.person_projects || {})) {
+              const m = new Map();
+              row.forEach((v, k) => { const pj = projAlign[k]; if (pj >= 0) m.set(pj, v); });
+              projScores.set(pid, m);
+            }
+            const personIdx = new Map(ppl.map((p, i) => [p.id, i]));
+            const pmAlign = (j.person_ids || []).map((id) => personIdx.has(id) ? personIdx.get(id) : -1);
+            const personMatrix = Array.from({ length: ppl.length }, () => new Float64Array(ppl.length));
+            (j.person_matrix || []).forEach((row, a) => {
+              const ia = pmAlign[a]; if (ia < 0) return;
+              personMatrix[ia][ia] = 1;
+              row.forEach((v, b) => { const ib = pmAlign[b]; if (ib >= 0 && ib !== ia) personMatrix[ia][ib] = v; });
+            });
+            pc = { method: j.method || "embeddings", techScores, projScores, personMatrix };
+          }
+        }
+      } catch (e) { /* no precomputed file — TF-IDF still works */ }
+
       setTools(its);
       setPeople(ppl);
       setProjects(projs);
       setTfidf(buildTfIdf(its.map(toolText), ppl.map(personText), projs.map(projectText)));
+      setPrecomp(pc);
+      setMethod(pc ? "precomputed" : "tfidf");
       setRoleFilter(new Set(ppl.map((p) => p.role || "—")));
       setSelId(ppl.length ? ppl[0].id : null);
     })();
@@ -212,9 +255,10 @@ function App() {
     return m;
   }, [people]);
 
-  // person×person semantic similarity (TF-IDF cosine)
+  // person×person semantic similarity (precomputed embeddings or TF-IDF cosine)
   const personSem = useMemo(() => {
     if (!people || !tfidf) return [];
+    if (method === "precomputed" && precomp && precomp.personMatrix.length) return precomp.personMatrix;
     const N = people.length, M = [];
     for (let i = 0; i < N; i++) {
       const row = new Float64Array(N);
@@ -222,7 +266,7 @@ function App() {
       M.push(row);
     }
     return M;
-  }, [people, tfidf]);
+  }, [people, tfidf, precomp, method]);
 
   // reverse index — every skill and who holds it (bus factor)
   const skillIndex = useMemo(() => {
@@ -250,15 +294,23 @@ function App() {
       const have = new Set((person.skills || []).map((s) => s.id));
       const pv = tfidf.personVecs[pIdx];
       const out = [];
-      tools.forEach((it, ti) => {
-        if (have.has(it.id)) return;
-        const sc = cosine(pv, tfidf.toolVecs[ti]);
-        if (sc > 0.001) out.push({ it, score: sc, why: sharedTerms(pv, tfidf.toolVecs[ti]) });
-      });
+      if (method === "precomputed" && precomp) {
+        const row = precomp.techScores.get(person.id);
+        if (row) for (const [ti, sc] of row) {
+          if (have.has(tools[ti].id)) continue;
+          out.push({ it: tools[ti], score: sc, why: sharedTerms(pv, tfidf.toolVecs[ti]) });
+        }
+      } else {
+        tools.forEach((it, ti) => {
+          if (have.has(it.id)) return;
+          const sc = cosine(pv, tfidf.toolVecs[ti]);
+          if (sc > 0.001) out.push({ it, score: sc, why: sharedTerms(pv, tfidf.toolVecs[ti]) });
+        });
+      }
       out.sort((a, b) => b.score - a.score);
       return out.slice(0, topK);
     };
-  }, [tools, people, tfidf, topK]);
+  }, [tools, people, tfidf, precomp, method, topK]);
 
   // peer tech — skills that similar people ACTUALLY have, that this person lacks
   const recommendPeers = useMemo(() => {
@@ -299,7 +351,9 @@ function App() {
           const names = (pr.stack || []).filter((s) => mySkills.has(s.id)).map((s) => s.name);
           out.push({ proj: pr, score, why: names, skills: true });
         } else {
-          const sc = cosine(tfidf.personVecs[pIdx], tfidf.projVecs[j]);
+          const sc = (method === "precomputed" && precomp)
+            ? (precomp.projScores.get(person.id) ? (precomp.projScores.get(person.id).get(j) ?? 0) : 0)
+            : cosine(tfidf.personVecs[pIdx], tfidf.projVecs[j]);
           if (sc <= 0.001) return;
           out.push({ proj: pr, score: sc, why: sharedTerms(tfidf.personVecs[pIdx], tfidf.projVecs[j]) });
         }
@@ -307,7 +361,7 @@ function App() {
       out.sort((a, b) => b.score - a.score);
       return out.slice(0, topK);
     };
-  }, [projects, tfidf, topK]);
+  }, [projects, tfidf, precomp, method, topK]);
 
   // similar people — Semantic (bio) or Skills (skill-set Jaccard)
   const recommendPeople = useMemo(() => {
@@ -368,11 +422,14 @@ function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <TopBar count={people.length} />
+      <TopBar count={people.length} semantic={method === "precomputed" && !!precomp}
+        label={precomp ? prettyMethod(precomp.method) : "TF-IDF · in-browser"} />
       <Controls
         view={view} setView={setView}
         mode={mode} setMode={setMode} hasProjects={projects.length > 0}
         rankOptions={rankOptions} rankBy={effRank} setRankBy={setRankBy}
+        hasPrecomp={!!precomp} method={method} setMethod={setMethod}
+        precompLabel={precomp ? prettyMethod(precomp.method) : ""}
         topK={topK} setTopK={setTopK}
         mapThreshold={mapThreshold} setMapThreshold={setMapThreshold}
         skillSort={skillSort} setSkillSort={setSkillSort} />
@@ -415,8 +472,16 @@ function App() {
   );
 }
 
+function prettyMethod(m) {
+  if (!m) return "Precomputed";
+  const [a, b] = m.split(":");
+  if (a === "embeddings") return "Embeddings · " + b;
+  if (a === "tf-idf") return "TF-IDF · " + b + " (precomputed)";
+  return m;
+}
+
 // Shared top nav — identical tab group to dashboard.jsx / books.jsx / projects.html.
-function TopBar({ count }) {
+function TopBar({ count, semantic, label = "TF-IDF · in-browser" }) {
   const tab = { background: "transparent", color: "#999", border: "1px solid #444",
     textDecoration: "none", padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 };
   return (
@@ -430,8 +495,8 @@ function TopBar({ count }) {
       <a href="projects.html" style={tab}>PROJECTS</a>
       <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
         padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>PEOPLE</span>
-      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: "#4ade80" }}>
-        {count} {count === 1 ? "person" : "people"} · ○ TF-IDF · in-browser
+      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: semantic ? "#4ade80" : "#fbbf24" }}>
+        {count} {count === 1 ? "person" : "people"} · {semantic ? "● " : "○ "}{label}
       </span>
     </div>
   );
@@ -457,7 +522,7 @@ function Seg({ options, value, onChange, disabled }) {
 }
 
 function Controls({ view, setView, mode, setMode, hasProjects, rankOptions, rankBy, setRankBy,
-  topK, setTopK, mapThreshold, setMapThreshold, skillSort, setSkillSort }) {
+  hasPrecomp, method, setMethod, precompLabel, topK, setTopK, mapThreshold, setMapThreshold, skillSort, setSkillSort }) {
   const wrap = { display: "flex", gap: 18, alignItems: "center", padding: "8px 14px",
     borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" };
   const k = { fontSize: 12, textTransform: "uppercase", letterSpacing: 0.5 };
@@ -490,6 +555,13 @@ function Controls({ view, setView, mode, setMode, hasProjects, rankOptions, rank
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <span style={k}>Sort</span>
           <Seg options={[["rare", "Rarest first"], ["count", "Most held"], ["name", "Name"]]} value={skillSort} onChange={setSkillSort} />
+        </div>
+      )}
+
+      {hasPrecomp && view !== "skills" && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={k}>Semantic src</span>
+          <Seg options={[["precomputed", precompLabel + " ✦"], ["tfidf", "TF-IDF"]]} value={method} onChange={setMethod} />
         </div>
       )}
 

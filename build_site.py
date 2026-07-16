@@ -123,6 +123,9 @@ def main():
     people_json = os.path.join(HERE, "data", "people.json")
     if os.path.exists(people_json):
         shutil.copy(people_json, os.path.join(SITE, "data", "people.json"))
+    people_sim = os.path.join(HERE, "data", "people_similarity.json")
+    if os.path.exists(people_sim):
+        shutil.copy(people_sim, os.path.join(SITE, "data", "people_similarity.json"))
 
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")

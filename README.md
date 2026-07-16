@@ -361,8 +361,16 @@ format.
 
 ```bash
 python build_people.py       # people/*.md -> data/people.json
+python build_similarity.py   # optional — semantic person→tool/project/person matrices
 python build_site.py         # build_site also refreshes people.json
 ```
+
+Like the Projects page, all three cross-links work out of the box on in-browser
+TF-IDF. Running `build_similarity.py` upgrades them: it embeds people, tools,
+and projects in one space and writes `data/people_similarity.json`
+(person→tool, person→project, and person→person scores). When that file is
+present the PEOPLE tab prefers it — toggle **Semantic src** in the controls to
+compare against the TF-IDF fallback — otherwise it falls back automatically.
 
 ---
 

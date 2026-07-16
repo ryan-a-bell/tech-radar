@@ -21,6 +21,14 @@ Backends, in order of preference (whatever is installed wins):
 The similarity page works fine WITHOUT running this — it just falls back to
 its own client-side TF-IDF. This script is the quality upgrade path.
 
+It also writes two companion matrices when the data exists, using the same
+backend and one shared embedding space:
+  - data/project_similarity.json  — project -> tool + project -> project
+  - data/people_similarity.json    — person -> tool + person -> project +
+                                      person -> person
+The PROJECTS and PEOPLE tabs prefer these when present, else fall back to their
+own in-browser TF-IDF.
+
 Output shape:
   { "method": "embeddings:all-MiniLM-L6-v2",
     "generated": "2026-07-13",
@@ -38,6 +46,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ITEMS_DIR = os.path.join(HERE, "data", "items")
 OUT = os.path.join(HERE, "data", "similarity.json")
 PROJ_OUT = os.path.join(HERE, "data", "project_similarity.json")
+PEOPLE_OUT = os.path.join(HERE, "data", "people_similarity.json")
 
 
 def load_items():
@@ -234,6 +243,84 @@ def build_project_similarity(items):
     print("the PROJECTS tab will now use this instead of client-side TF-IDF.")
 
 
+def person_doc_text(p):
+    """Embedding text for a person record from build_people. Mirrors the
+    browser's personText() so the precomputed scores agree with the fallback."""
+    return " ".join([
+        p.get("name") or "",
+        p.get("role") or "",
+        p.get("blurb") or "",
+        p.get("body") or "",
+        " ".join(p.get("topics") or []),
+        " ".join(p.get("interests") or []),
+        " ".join(s.get("name") or "" for s in p.get("skills") or []),
+        " ".join(p.get("skills_freeform") or []),
+    ]).strip()
+
+
+def build_people_similarity(items):
+    """Embed people + tools + projects in one space and write
+    data/people_similarity.json. For each person it records cosine similarity to
+    every non-archived tool (`people`, powering "recommended tech"), to every
+    project (`person_projects`, powering the "matching projects" staffing rank),
+    and to every other person (`person_matrix`, powering "peers" and "similar
+    people" + the Map). Skipped if there are no people. The tool-vs-tool
+    similarity.json and project_similarity.json are left untouched.
+    """
+    try:
+        import build_people
+    except Exception as e:  # pragma: no cover - defensive
+        print(f"skipping people_similarity.json — build_people unavailable ({e})")
+        return
+    people = build_people.build_person_records()
+    if not people:
+        print("no people — skipping people_similarity.json")
+        return
+
+    # projects share the space so person->project staffing scores are comparable
+    projects = []
+    try:
+        import build_projects
+        projects = build_projects.build_project_records()
+    except Exception as e:  # pragma: no cover - defensive
+        print(f"  (no projects in the people space: {e})")
+
+    tool_texts = [doc_text(it) for it in items]
+    proj_texts = [project_doc_text(p) for p in projects]
+    person_texts = [person_doc_text(p) for p in people]
+    n_tools, n_proj = len(tool_texts), len(proj_texts)
+    base = n_tools + n_proj
+    print(f"embedding {len(people)} people against {n_tools} tools + {n_proj} projects")
+    # one shared space so person, tool, and project vectors are all comparable
+    sim, method = choose_backend(tool_texts + proj_texts + person_texts)
+
+    people_scores = {}        # person -> [cosine to each tool]
+    person_projects = {}      # person -> [cosine to each project]
+    person_matrix = []        # person x person cosine
+    for pi, p in enumerate(people):
+        row = _row_floats(sim, base + pi)
+        people_scores[p["id"]] = [round(row[j], 3) for j in range(n_tools)]
+        person_projects[p["id"]] = [round(row[n_tools + j], 3) for j in range(n_proj)]
+        person_matrix.append([round(row[base + pj], 3) for pj in range(len(people))])
+
+    payload = {
+        "method": method,
+        "generated": _dt.date.today().isoformat(),
+        "tool_ids": [it["id"] for it in items],
+        "project_ids": [p["id"] for p in projects],
+        "person_ids": [p["id"] for p in people],
+        "people": people_scores,
+        "person_projects": person_projects,
+        "person_matrix": person_matrix,
+    }
+    with open(PEOPLE_OUT, "w", encoding="utf-8") as f:
+        json.dump(payload, f, separators=(",", ":"))
+    size_kb = os.path.getsize(PEOPLE_OUT) / 1024
+    print(f"wrote {PEOPLE_OUT}  ({len(people)} people x {n_tools} tools + "
+          f"{n_proj} projects, {size_kb:.0f} KB, method={method})")
+    print("the PEOPLE tab will now use this instead of client-side TF-IDF.")
+
+
 def main():
     items = load_items()
     texts = [doc_text(it) for it in items]
@@ -253,6 +340,9 @@ def main():
 
     # project -> tool recommendations (semantic upgrade for the PROJECTS tab)
     build_project_similarity(items)
+
+    # person -> tool / project / person (semantic upgrade for the PEOPLE tab)
+    build_people_similarity(items)
 
 
 if __name__ == "__main__":
