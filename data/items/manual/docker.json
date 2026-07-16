@@ -1,0 +1,21 @@
+{
+  "id": "manual:docker",
+  "name": "Docker",
+  "description": "Platform for building, shipping, and running applications in containers.",
+  "quadrant": "Platforms",
+  "ring": "Adopted",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://www.docker.com",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "Docker, Inc.",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-16",
+  "last_seen": "2026-07-16",
+  "stars_history": {}
+}
