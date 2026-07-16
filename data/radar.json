@@ -1,7 +1,88 @@
 {
   "generated": "2026-07-16",
-  "count": 419,
+  "count": 423,
   "items": [
+    {
+      "id": "github:injaneity/pi-computer-use",
+      "name": "pi-computer-use",
+      "description": "Let Pi control your apps on MacOS & Windows",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/injaneity/pi-computer-use",
+      "canonical_url": "github.com/injaneity/pi-computer-use",
+      "also_seen": [],
+      "company": null,
+      "stars": 103,
+      "momentum": 10,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {
+        "2026-07-16": 103
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:openinterpreter/openinterpreter",
+      "name": "openinterpreter",
+      "description": "A coding agent for low-cost models",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openinterpreter/openinterpreter",
+      "canonical_url": "github.com/openinterpreter/openinterpreter",
+      "also_seen": [],
+      "company": null,
+      "stars": 299,
+      "momentum": 29,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {
+        "2026-07-16": 299
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:YimMenu/YimMenuV2",
+      "name": "YimMenuV2",
+      "description": "Experimental menu for GTA 5: Enhanced",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/YimMenu/YimMenuV2",
+      "canonical_url": "github.com/yimmenu/yimmenuv2",
+      "also_seen": [],
+      "company": null,
+      "stars": 38,
+      "momentum": 3,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {
+        "2026-07-16": 38
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:kubernetes",
       "name": "Kubernetes",
@@ -49,6 +130,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:HKUDS/DeepTutor",
+      "name": "DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "canonical_url": "github.com/hkuds/deeptutor",
+      "also_seen": [],
+      "company": null,
+      "stars": 172,
+      "momentum": 17,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {
+        "2026-07-16": 172
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:HenryNdubuaku/maths-cs-ai-compendium",
       "name": "maths-cs-ai-compendium",
       "description": "Become a cracked AI/ML Research Engineer",
@@ -60,7 +168,7 @@
       "canonical_url": "github.com/henryndubuaku/maths-cs-ai-compendium",
       "also_seen": [],
       "company": null,
-      "stars": 112,
+      "stars": 725,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -68,12 +176,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
-        "2026-07-15": 112
+        "2026-07-15": 112,
+        "2026-07-16": 725
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 613
     },
     {
       "id": "github:chenyme/grok2api",
@@ -221,7 +330,7 @@
       "canonical_url": "github.com/moeru-ai/airi",
       "also_seen": [],
       "company": null,
-      "stars": 78,
+      "stars": 110,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -229,12 +338,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-16",
       "stars_history": {
-        "2026-07-14": 78
+        "2026-07-14": 78,
+        "2026-07-16": 110
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 32
     },
     {
       "id": "github:OpenCut-app/OpenCut",
@@ -248,7 +358,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 4276,
+      "stars": 1664,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -256,13 +366,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-14": 1229,
-        "2026-07-15": 4276
+        "2026-07-15": 4276,
+        "2026-07-16": 1664
       },
       "trend": "up",
-      "trend_delta": 3047
+      "trend_delta": 435
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -404,7 +515,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 1015,
+      "stars": 1277,
       "momentum": 15,
       "tags": [
         "css"
@@ -412,14 +523,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-13": 155,
         "2026-07-14": 794,
-        "2026-07-15": 1015
+        "2026-07-15": 1015,
+        "2026-07-16": 1277
       },
       "trend": "up",
-      "trend_delta": 860
+      "trend_delta": 1122
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -456,7 +568,7 @@
       "canonical_url": "github.com/dicklesworthstone/destructive_command_guard",
       "also_seen": [],
       "company": null,
-      "stars": 1295,
+      "stars": 471,
       "momentum": 44,
       "tags": [
         "rust"
@@ -464,13 +576,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-13": 444,
-        "2026-07-14": 1295
+        "2026-07-14": 1295,
+        "2026-07-16": 471
       },
       "trend": "up",
-      "trend_delta": 851
+      "trend_delta": 27
     },
     {
       "id": "github:ColeMurray/background-agents",
@@ -511,7 +624,7 @@
       "canonical_url": "github.com/shubhamsaboo/awesome-llm-apps",
       "also_seen": [],
       "company": null,
-      "stars": 1106,
+      "stars": 1236,
       "momentum": 40,
       "tags": [
         "python"
@@ -519,14 +632,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-13": 408,
         "2026-07-14": 996,
-        "2026-07-15": 1106
+        "2026-07-15": 1106,
+        "2026-07-16": 1236
       },
       "trend": "up",
-      "trend_delta": 698
+      "trend_delta": 828
     },
     {
       "id": "github:virattt/ai-hedge-fund",
@@ -2597,7 +2711,7 @@
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "also_seen": [],
       "company": null,
-      "stars": 299,
+      "stars": 340,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -2605,13 +2719,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-06": 145,
-        "2026-07-14": 299
+        "2026-07-14": 299,
+        "2026-07-16": 340
       },
       "trend": "up",
-      "trend_delta": 154
+      "trend_delta": 195
     },
     {
       "id": "github:gastownhall/gastown",
@@ -4405,7 +4520,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 851,
+      "stars": 949,
       "momentum": 100,
       "tags": [
         "html"
@@ -4413,16 +4528,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-07-01": 1343,
         "2026-07-02": 2470,
         "2026-07-03": 938,
         "2026-07-14": 451,
-        "2026-07-15": 851
+        "2026-07-15": 851,
+        "2026-07-16": 949
       },
-      "trend": "down",
-      "trend_delta": -87
+      "trend": "up",
+      "trend_delta": 11
     },
     {
       "id": "github:Mebus/cupp",
@@ -4732,17 +4848,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:anthropics/skills",
+      "id": "github:openai/skills",
       "name": "skills",
-      "description": "Public repository for Agent Skills",
+      "description": "Skills Catalog for Codex",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/anthropics/skills",
-      "canonical_url": "github.com/anthropics/skills",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
       "also_seen": [],
-      "company": "Anthropic",
+      "company": "OpenAI",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -4755,17 +4871,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:openai/skills",
+      "id": "github:anthropics/skills",
       "name": "skills",
-      "description": "Skills Catalog for Codex",
+      "description": "Public repository for Agent Skills",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
+      "url": "https://github.com/anthropics/skills",
+      "canonical_url": "github.com/anthropics/skills",
       "also_seen": [],
-      "company": "OpenAI",
+      "company": "Anthropic",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -5660,17 +5776,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:travisvn/awesome-claude-skills",
+      "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "quadrant": "Techniques",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "also_seen": [],
-      "company": null,
+      "company": "Composio",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -5683,17 +5799,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:ComposioHQ/awesome-claude-skills",
+      "id": "github:travisvn/awesome-claude-skills",
       "name": "awesome-claude-skills",
-      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
       "quadrant": "Techniques",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
-      "canonical_url": "github.com/composiohq/awesome-claude-skills",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
       "also_seen": [],
-      "company": "Composio",
+      "company": null,
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -7957,13 +8073,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1679,
+      "stars": 2130,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -7972,11 +8088,12 @@
         "2026-06-23": 2051,
         "2026-07-05": 973,
         "2026-07-11": 1712,
-        "2026-07-15": 1679
+        "2026-07-15": 1679,
+        "2026-07-16": 2130
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 706
+      "trend_delta": 1157
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -10957,13 +11074,13 @@
       "canonical_url": "github.com/hkuds/vibe-trading",
       "also_seen": [],
       "company": null,
-      "stars": 1256,
+      "stars": 915,
       "momentum": 19,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-16",
       "stars_history": {
         "2026-06-03": 197,
         "2026-06-28": 92,
@@ -10974,10 +11091,11 @@
         "2026-07-03": 939,
         "2026-07-13": 768,
         "2026-07-14": 1153,
-        "2026-07-15": 1256
+        "2026-07-15": 1256,
+        "2026-07-16": 915
       },
-      "trend": "up",
-      "trend_delta": 317
+      "trend": "down",
+      "trend_delta": -24
     },
     {
       "id": "github:D4Vinci/Scrapling",
