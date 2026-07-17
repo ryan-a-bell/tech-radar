@@ -1,6 +1,21 @@
 {
-  "generated": "2026-07-16",
+  "generated": "2026-07-17",
   "books": [
+    {
+      "id": "ssml-trading",
+      "title": "Statistically Sound Machine Learning for Automated Trading of Financial Instruments",
+      "author": "David Aronson & Timothy Masters",
+      "year": 2013,
+      "status": "Discovered",
+      "topics": ["Trading", "Quant", "ML"],
+      "pages": 244,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "Building predictive-model trading systems with the TSSB platform, with a hard focus on avoiding overfit and validating that an edge is real rather than data-mined noise."
+    },
     {
       "id": "ddia",
       "title": "Designing Data-Intensive Applications",
