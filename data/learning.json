@@ -1,8 +1,9 @@
 {
   "generated": "2026-07-17",
-  "books": [
+  "items": [
     {
       "id": "ssml-trading",
+      "type": "book",
       "title": "Statistically Sound Machine Learning for Automated Trading of Financial Instruments",
       "author": "David Aronson & Timothy Masters",
       "year": 2013,
@@ -18,6 +19,7 @@
     },
     {
       "id": "ddia",
+      "type": "book",
       "title": "Designing Data-Intensive Applications",
       "author": "Martin Kleppmann",
       "year": 2017,
@@ -33,6 +35,7 @@
     },
     {
       "id": "deep-learning",
+      "type": "book",
       "title": "Deep Learning",
       "author": "Goodfellow, Bengio & Courville",
       "year": 2016,
@@ -48,6 +51,7 @@
     },
     {
       "id": "afml",
+      "type": "book",
       "title": "Advances in Financial Machine Learning",
       "author": "Marcos López de Prado",
       "year": 2018,
@@ -63,6 +67,7 @@
     },
     {
       "id": "building-llm-apps",
+      "type": "book",
       "title": "Building Applications with Large Language Models",
       "author": "Valentina Alto",
       "year": 2024,
@@ -78,6 +83,7 @@
     },
     {
       "id": "rag-in-practice",
+      "type": "book",
       "title": "Retrieval-Augmented Generation in Practice",
       "author": "Keith Bourne",
       "year": 2024,
@@ -93,6 +99,7 @@
     },
     {
       "id": "prompt-engineering",
+      "type": "book",
       "title": "Prompt Engineering for Generative AI",
       "author": "James Phoenix & Mike Taylor",
       "year": 2024,
@@ -108,6 +115,7 @@
     },
     {
       "id": "algo-trading",
+      "type": "book",
       "title": "Algorithmic Trading",
       "author": "Ernest P. Chan",
       "year": 2013,
@@ -123,6 +131,7 @@
     },
     {
       "id": "rl-intro",
+      "type": "book",
       "title": "Reinforcement Learning: An Introduction",
       "author": "Sutton & Barto",
       "year": 2018,
@@ -138,6 +147,7 @@
     },
     {
       "id": "agentic-design-patterns",
+      "type": "book",
       "title": "Agentic Design Patterns",
       "author": "Antonio Gulli",
       "year": 2025,
@@ -153,6 +163,7 @@
     },
     {
       "id": "hull-derivatives",
+      "type": "book",
       "title": "Options, Futures, and Other Derivatives",
       "author": "John C. Hull",
       "year": 2021,
@@ -168,6 +179,7 @@
     },
     {
       "id": "team-topologies",
+      "type": "book",
       "title": "Team Topologies",
       "author": "Matthew Skelton & Manuel Pais",
       "year": 2019,
@@ -183,6 +195,7 @@
     },
     {
       "id": "streaming-systems",
+      "type": "book",
       "title": "Streaming Systems",
       "author": "Tyler Akidau, Slava Chernyak & Reuven Lax",
       "year": 2018,
@@ -198,6 +211,7 @@
     },
     {
       "id": "understanding-deep-learning",
+      "type": "book",
       "title": "Understanding Deep Learning",
       "author": "Simon J.D. Prince",
       "year": 2023,
@@ -210,6 +224,40 @@
       "started": null,
       "finished": null,
       "blurb": "A newer, more visual take on the deep learning fundamentals — queued as a companion to the Goodfellow text."
+    },
+    {
+      "id": "attention-is-all-you-need",
+      "type": "article",
+      "title": "Attention Is All You Need",
+      "author": "Vaswani et al.",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "year": 2017,
+      "status": "Read",
+      "topics": ["ML", "AI"],
+      "minutes": 40,
+      "rating": 5,
+      "added": null,
+      "started": null,
+      "finished": "2025-08-11",
+      "blurb": "The transformer paper. Worth reading in the original once — every later 'attention' explainer is a gloss on this."
+    },
+    {
+      "id": "karpathy-gpt-from-scratch",
+      "type": "video",
+      "title": "Let's build GPT: from scratch, in code, spelled out",
+      "author": "Andrej Karpathy",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+      "year": 2023,
+      "status": "Reading",
+      "topics": ["ML", "AI"],
+      "duration": "1h 56m",
+      "rating": null,
+      "added": null,
+      "started": "2026-07-10",
+      "finished": null,
+      "blurb": "Hands-on build of a GPT from the ground up — the clearest walk from bigram model to a working transformer you can find."
     }
   ]
 }

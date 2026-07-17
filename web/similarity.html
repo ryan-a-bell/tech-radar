@@ -360,7 +360,7 @@ function prettyMethod(m) {
   return m;
 }
 
-// Shared top nav — identical tab group to dashboard.jsx / books.jsx, so the
+// Shared top nav — identical tab group to dashboard.jsx / learning.jsx, so the
 // name and back buttons stay consistent across the site. SIMILARITY is active.
 function TopBar({ active, count }) {
   const tab = {
@@ -377,7 +377,7 @@ function TopBar({ active, count }) {
       <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
       <a href="index.html#atlas" style={tab}>ATLAS</a>
       <a href="index.html#index" style={tab}>INDEX</a>
-      <a href="books.html" style={tab}>READING LIST</a>
+      <a href="learning.html" style={tab}>LEARNING</a>
       <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
         padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>SIMILARITY</span>
       <a href="projects.html" style={{ ...tab, marginLeft: 8 }}>PROJECTS</a>
