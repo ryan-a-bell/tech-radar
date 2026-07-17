@@ -1,7 +1,169 @@
 {
   "generated": "2026-07-17",
-  "count": 445,
+  "count": 452,
   "items": [
+    {
+      "id": "github:ibelick/ui-skills",
+      "name": "ui-skills",
+      "description": "Skills for Design Engineers",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ibelick/ui-skills",
+      "canonical_url": "github.com/ibelick/ui-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 178,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 178
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PostHog/posthog",
+      "name": "posthog",
+      "description": "\ud83e\udd94 PostHog is the leading platform for building self-driving products. Our developer tools \u2013 AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more \u2013 capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PostHog/posthog",
+      "canonical_url": "github.com/posthog/posthog",
+      "also_seen": [],
+      "company": null,
+      "stars": 77,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 77
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:apache/ossie",
+      "name": "ossie",
+      "description": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apache/ossie",
+      "canonical_url": "github.com/apache/ossie",
+      "also_seen": [],
+      "company": null,
+      "stars": 60,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 60
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:lobehub/lobehub",
+      "name": "lobehub",
+      "description": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/lobehub/lobehub",
+      "canonical_url": "github.com/lobehub/lobehub",
+      "also_seen": [],
+      "company": null,
+      "stars": 71,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 71
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ossu/computer-science",
+      "name": "computer-science",
+      "description": "\ud83c\udf93 Path to a free self-taught education in Computer Science!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ossu/computer-science",
+      "canonical_url": "github.com/ossu/computer-science",
+      "also_seen": [],
+      "company": null,
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 107
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:codecrafters-io/build-your-own-x",
+      "name": "build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "canonical_url": "github.com/codecrafters-io/build-your-own-x",
+      "also_seen": [],
+      "company": null,
+      "stars": 435,
+      "momentum": 43,
+      "tags": [
+        "markdown"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 435
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:trendshift",
       "name": "Trendshift",
@@ -256,6 +418,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:PrismML-Eng/Bonsai-demo",
+      "name": "Bonsai-demo",
+      "description": "Bonsai Demo",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "canonical_url": "github.com/prismml-eng/bonsai-demo",
+      "also_seen": [],
+      "company": null,
+      "stars": 196,
+      "momentum": 19,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 196
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:blankly-os",
       "name": "Blankly OS",
       "description": "An open-source quantitative operations platform (the previously closed-source Blankly stack, now a monorepo) for building, backtesting, deploying, and monitoring trading strategies on self-hosted or cloud infrastructure.",
@@ -389,7 +578,7 @@
       "canonical_url": "github.com/openinterpreter/openinterpreter",
       "also_seen": [],
       "company": null,
-      "stars": 299,
+      "stars": 661,
       "momentum": 29,
       "tags": [
         "rust"
@@ -397,12 +586,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
-        "2026-07-16": 299
+        "2026-07-16": 299,
+        "2026-07-17": 661
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 362
     },
     {
       "id": "manual:zipline",
@@ -441,7 +631,7 @@
       "canonical_url": "github.com/yimmenu/yimmenuv2",
       "also_seen": [],
       "company": null,
-      "stars": 38,
+      "stars": 128,
       "momentum": 3,
       "tags": [
         "c++"
@@ -449,12 +639,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
-        "2026-07-16": 38
+        "2026-07-16": 38,
+        "2026-07-17": 128
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 90
     },
     {
       "id": "manual:statsmodels",
@@ -640,7 +831,7 @@
       "canonical_url": "github.com/hkuds/deeptutor",
       "also_seen": [],
       "company": null,
-      "stars": 172,
+      "stars": 656,
       "momentum": 17,
       "tags": [
         "python"
@@ -648,12 +839,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
-        "2026-07-16": 172
+        "2026-07-16": 172,
+        "2026-07-17": 656
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 484
     },
     {
       "id": "manual:alphalens",
@@ -826,7 +1018,7 @@
       "canonical_url": "github.com/graphify-labs/graphify",
       "also_seen": [],
       "company": null,
-      "stars": 1851,
+      "stars": 1107,
       "momentum": 100,
       "tags": [
         "python"
@@ -834,13 +1026,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-14": 1095,
-        "2026-07-15": 1851
+        "2026-07-15": 1851,
+        "2026-07-17": 1107
       },
       "trend": "up",
-      "trend_delta": 756
+      "trend_delta": 12
     },
     {
       "id": "github:moeru-ai/airi",
@@ -882,7 +1075,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 1664,
+      "stars": 3537,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -890,14 +1083,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-14": 1229,
         "2026-07-15": 4276,
-        "2026-07-16": 1664
+        "2026-07-16": 1664,
+        "2026-07-17": 3537
       },
       "trend": "up",
-      "trend_delta": 435
+      "trend_delta": 2308
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -1039,7 +1233,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 1277,
+      "stars": 3372,
       "momentum": 15,
       "tags": [
         "css"
@@ -1047,15 +1241,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-13": 155,
         "2026-07-14": 794,
         "2026-07-15": 1015,
-        "2026-07-16": 1277
+        "2026-07-16": 1277,
+        "2026-07-17": 3372
       },
       "trend": "up",
-      "trend_delta": 1122
+      "trend_delta": 3217
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -1148,7 +1343,7 @@
       "canonical_url": "github.com/shubhamsaboo/awesome-llm-apps",
       "also_seen": [],
       "company": null,
-      "stars": 1236,
+      "stars": 923,
       "momentum": 40,
       "tags": [
         "python"
@@ -1156,15 +1351,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-13": 408,
         "2026-07-14": 996,
         "2026-07-15": 1106,
-        "2026-07-16": 1236
+        "2026-07-16": 1236,
+        "2026-07-17": 923
       },
       "trend": "up",
-      "trend_delta": 828
+      "trend_delta": 515
     },
     {
       "id": "github:virattt/ai-hedge-fund",
@@ -5044,7 +5240,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 949,
+      "stars": 710,
       "momentum": 100,
       "tags": [
         "html"
@@ -5052,17 +5248,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-01": 1343,
         "2026-07-02": 2470,
         "2026-07-03": 938,
         "2026-07-14": 451,
         "2026-07-15": 851,
-        "2026-07-16": 949
+        "2026-07-16": 949,
+        "2026-07-17": 710
       },
-      "trend": "up",
-      "trend_delta": 11
+      "trend": "down",
+      "trend_delta": -228
     },
     {
       "id": "github:Mebus/cupp",
@@ -8597,13 +8794,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 2130,
+      "stars": 2060,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -8613,11 +8810,12 @@
         "2026-07-05": 973,
         "2026-07-11": 1712,
         "2026-07-15": 1679,
-        "2026-07-16": 2130
+        "2026-07-16": 2130,
+        "2026-07-17": 2060
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 1157
+      "trend_delta": 1087
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -11177,20 +11375,21 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 13,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-06",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
-        "2026-06-06": 309
+        "2026-06-06": 309,
+        "2026-07-17": 13
       },
-      "trend": "up",
-      "trend_delta": 284
+      "trend": "down",
+      "trend_delta": -296
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
