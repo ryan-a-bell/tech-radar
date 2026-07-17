@@ -1,0 +1,21 @@
+{
+  "id": "manual:realtest",
+  "name": "RealTest",
+  "description": "Multi-strategy, portfolio-level backtesting and trading-system software (by Marsten Parker / MHP Trading) that combines strategies, runs walk-forward optimization, and generates next-day order lists \u2014 a one-time-purchase desktop tool with no broker lock-in.",
+  "quadrant": "Platforms",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://mhptrading.com/",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": "MHP Trading",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {}
+}
