@@ -1,0 +1,21 @@
+{
+  "id": "manual:apidog",
+  "name": "Apidog",
+  "description": "An all-in-one API design, documentation, mocking, and testing platform positioned as a Postman/Swagger alternative, combining spec authoring, automated testing, and generated docs in one tool.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://apidog.com/",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {}
+}
