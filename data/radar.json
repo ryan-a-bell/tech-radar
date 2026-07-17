@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-17",
-  "count": 452,
+  "count": 453,
   "items": [
     {
       "id": "github:ibelick/ui-skills",
@@ -337,6 +337,29 @@
       "canonical_url": "github.com/microsoft/qlib",
       "also_seen": [],
       "company": "Microsoft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:microsoft-to-do-export",
+      "name": "Microsoft-To-Do-Export",
+      "description": "A Go CLI that pulls lists, tasks, notes, sub-tasks, and attachments out of Microsoft To Do via the Graph API and exports them to Todoist CSV, JSON, generic CSV, SuperProductivity, or Joplin JEX formats, enabling migration away from Microsoft To Do.",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/daylamtayari/Microsoft-To-Do-Export",
+      "canonical_url": "github.com/daylamtayari/microsoft-to-do-export",
+      "also_seen": [],
+      "company": null,
       "stars": 0,
       "momentum": 0,
       "tags": [],
