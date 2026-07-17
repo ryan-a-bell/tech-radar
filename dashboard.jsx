@@ -1377,10 +1377,10 @@ function App() {
             cursor: "pointer", fontFamily: "inherit",
           }}>{m.label}</button>
         ))}
-        <a href="books.html" style={{
+        <a href="learning.html" style={{
           color: "#999", textDecoration: "none",
           fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-        }}>READING LIST</a>
+        }}>LEARNING</a>
         <a href="similarity.html" style={{
           color: "#999", textDecoration: "none",
           fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reading List</title>
+  <title>Learning Library</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -17,12 +17,12 @@
 </head>
 <body>
   <div id="root"></div>
-  <!-- books.jsx is transformed in-browser by Babel.
+  <!-- learning.jsx is transformed in-browser by Babel.
        build_site.py rewrites the `export default` line so it runs here. -->
-  <script type="text/babel" data-presets="react" src="books.jsx"></script>
+  <script type="text/babel" data-presets="react" src="learning.jsx"></script>
   <script type="text/babel" data-presets="react">
     const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(React.createElement(BooksApp));
+    root.render(React.createElement(LearningApp));
   </script>
 </body>
 </html>
