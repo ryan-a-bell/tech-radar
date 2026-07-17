@@ -1,0 +1,25 @@
+{
+  "id": "github:ibelick/ui-skills",
+  "name": "ui-skills",
+  "description": "Skills for Design Engineers",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ibelick/ui-skills",
+  "canonical_url": "github.com/ibelick/ui-skills",
+  "also_seen": [],
+  "company": null,
+  "stars": 178,
+  "momentum": 17,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {
+    "2026-07-17": 178
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/graphify-labs/graphify",
   "also_seen": [],
   "company": null,
-  "stars": 1851,
+  "stars": 1107,
   "momentum": 100,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-14",
-  "last_seen": "2026-07-15",
+  "last_seen": "2026-07-17",
   "stars_history": {
     "2026-07-14": 1095,
-    "2026-07-15": 1851
+    "2026-07-15": 1851,
+    "2026-07-17": 1107
   }
 }

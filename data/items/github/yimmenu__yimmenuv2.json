@@ -10,7 +10,7 @@
   "canonical_url": "github.com/yimmenu/yimmenuv2",
   "also_seen": [],
   "company": null,
-  "stars": 38,
+  "stars": 128,
   "momentum": 3,
   "tags": [
     "c++"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-16",
-  "last_seen": "2026-07-16",
+  "last_seen": "2026-07-17",
   "stars_history": {
-    "2026-07-16": 38
+    "2026-07-16": 38,
+    "2026-07-17": 128
   }
 }

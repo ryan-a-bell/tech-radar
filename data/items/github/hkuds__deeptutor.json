@@ -10,7 +10,7 @@
   "canonical_url": "github.com/hkuds/deeptutor",
   "also_seen": [],
   "company": null,
-  "stars": 172,
+  "stars": 656,
   "momentum": 17,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-16",
-  "last_seen": "2026-07-16",
+  "last_seen": "2026-07-17",
   "stars_history": {
-    "2026-07-16": 172
+    "2026-07-16": 172,
+    "2026-07-17": 656
   }
 }

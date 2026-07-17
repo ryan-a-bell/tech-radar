@@ -1,0 +1,25 @@
+{
+  "id": "github:PostHog/posthog",
+  "name": "posthog",
+  "description": "\ud83e\udd94 PostHog is the leading platform for building self-driving products. Our developer tools \u2013 AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more \u2013 capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PostHog/posthog",
+  "canonical_url": "github.com/posthog/posthog",
+  "also_seen": [],
+  "company": null,
+  "stars": 77,
+  "momentum": 7,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {
+    "2026-07-17": 77
+  }
+}

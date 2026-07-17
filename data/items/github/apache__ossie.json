@@ -1,0 +1,25 @@
+{
+  "id": "github:apache/ossie",
+  "name": "ossie",
+  "description": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/apache/ossie",
+  "canonical_url": "github.com/apache/ossie",
+  "also_seen": [],
+  "company": null,
+  "stars": 60,
+  "momentum": 6,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {
+    "2026-07-17": 60
+  }
+}

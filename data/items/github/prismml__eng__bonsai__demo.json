@@ -1,0 +1,25 @@
+{
+  "id": "github:PrismML-Eng/Bonsai-demo",
+  "name": "Bonsai-demo",
+  "description": "Bonsai Demo",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+  "canonical_url": "github.com/prismml-eng/bonsai-demo",
+  "also_seen": [],
+  "company": null,
+  "stars": 196,
+  "momentum": 19,
+  "tags": [
+    "shell"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {
+    "2026-07-17": 196
+  }
+}
