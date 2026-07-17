@@ -1,0 +1,21 @@
+{
+  "id": "manual:blankly-os",
+  "name": "Blankly OS",
+  "description": "An open-source quantitative operations platform (the previously closed-source Blankly stack, now a monorepo) for building, backtesting, deploying, and monitoring trading strategies on self-hosted or cloud infrastructure.",
+  "quadrant": "Platforms",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/blankly-finance/blankly-os",
+  "canonical_url": "github.com/blankly-finance/blankly-os",
+  "also_seen": [],
+  "company": "Blankly Finance",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {}
+}

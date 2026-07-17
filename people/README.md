@@ -54,5 +54,5 @@ that don't resolve (`Python`, `options pricing`, `LangGraph`) are kept as
 linked to a radar item. Free-form skills are expected and normal, not an error.
 
 `topics` and `interests` both draw from the same `TOPICS` vocabulary as the
-tech radar, Reading List, and Projects — so a person, a project, a book, and a
-technology can all share a topic tag.
+tech radar, Learning Library, and Projects — so a person, a project, a book,
+and a technology can all share a topic tag.

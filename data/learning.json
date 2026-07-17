@@ -1,8 +1,25 @@
 {
-  "generated": "2026-07-16",
-  "books": [
+  "generated": "2026-07-17",
+  "items": [
+    {
+      "id": "ssml-trading",
+      "type": "book",
+      "title": "Statistically Sound Machine Learning for Automated Trading of Financial Instruments",
+      "author": "David Aronson & Timothy Masters",
+      "year": 2013,
+      "status": "Discovered",
+      "topics": ["Trading", "Quant", "ML"],
+      "pages": 244,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "Building predictive-model trading systems with the TSSB platform, with a hard focus on avoiding overfit and validating that an edge is real rather than data-mined noise."
+    },
     {
       "id": "ddia",
+      "type": "book",
       "title": "Designing Data-Intensive Applications",
       "author": "Martin Kleppmann",
       "year": 2017,
@@ -18,6 +35,7 @@
     },
     {
       "id": "deep-learning",
+      "type": "book",
       "title": "Deep Learning",
       "author": "Goodfellow, Bengio & Courville",
       "year": 2016,
@@ -33,6 +51,7 @@
     },
     {
       "id": "afml",
+      "type": "book",
       "title": "Advances in Financial Machine Learning",
       "author": "Marcos López de Prado",
       "year": 2018,
@@ -48,6 +67,7 @@
     },
     {
       "id": "building-llm-apps",
+      "type": "book",
       "title": "Building Applications with Large Language Models",
       "author": "Valentina Alto",
       "year": 2024,
@@ -63,6 +83,7 @@
     },
     {
       "id": "rag-in-practice",
+      "type": "book",
       "title": "Retrieval-Augmented Generation in Practice",
       "author": "Keith Bourne",
       "year": 2024,
@@ -78,6 +99,7 @@
     },
     {
       "id": "prompt-engineering",
+      "type": "book",
       "title": "Prompt Engineering for Generative AI",
       "author": "James Phoenix & Mike Taylor",
       "year": 2024,
@@ -93,6 +115,7 @@
     },
     {
       "id": "algo-trading",
+      "type": "book",
       "title": "Algorithmic Trading",
       "author": "Ernest P. Chan",
       "year": 2013,
@@ -108,6 +131,7 @@
     },
     {
       "id": "rl-intro",
+      "type": "book",
       "title": "Reinforcement Learning: An Introduction",
       "author": "Sutton & Barto",
       "year": 2018,
@@ -123,6 +147,7 @@
     },
     {
       "id": "agentic-design-patterns",
+      "type": "book",
       "title": "Agentic Design Patterns",
       "author": "Antonio Gulli",
       "year": 2025,
@@ -138,6 +163,7 @@
     },
     {
       "id": "hull-derivatives",
+      "type": "book",
       "title": "Options, Futures, and Other Derivatives",
       "author": "John C. Hull",
       "year": 2021,
@@ -153,6 +179,7 @@
     },
     {
       "id": "team-topologies",
+      "type": "book",
       "title": "Team Topologies",
       "author": "Matthew Skelton & Manuel Pais",
       "year": 2019,
@@ -168,6 +195,7 @@
     },
     {
       "id": "streaming-systems",
+      "type": "book",
       "title": "Streaming Systems",
       "author": "Tyler Akidau, Slava Chernyak & Reuven Lax",
       "year": 2018,
@@ -183,6 +211,7 @@
     },
     {
       "id": "understanding-deep-learning",
+      "type": "book",
       "title": "Understanding Deep Learning",
       "author": "Simon J.D. Prince",
       "year": 2023,
@@ -195,6 +224,108 @@
       "started": null,
       "finished": null,
       "blurb": "A newer, more visual take on the deep learning fundamentals — queued as a companion to the Goodfellow text."
+    },
+    {
+      "id": "attention-is-all-you-need",
+      "type": "article",
+      "title": "Attention Is All You Need",
+      "author": "Vaswani et al.",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "year": 2017,
+      "status": "Read",
+      "topics": ["ML", "AI"],
+      "minutes": 40,
+      "rating": 5,
+      "added": null,
+      "started": null,
+      "finished": "2025-08-11",
+      "blurb": "The transformer paper. Worth reading in the original once — every later 'attention' explainer is a gloss on this."
+    },
+    {
+      "id": "karpathy-gpt-from-scratch",
+      "type": "video",
+      "title": "Let's build GPT: from scratch, in code, spelled out",
+      "author": "Andrej Karpathy",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+      "year": 2023,
+      "status": "Reading",
+      "topics": ["ML", "AI"],
+      "duration": "1h 56m",
+      "rating": null,
+      "added": null,
+      "started": "2026-07-10",
+      "finished": null,
+      "blurb": "Hands-on build of a GPT from the ground up — the clearest walk from bigram model to a working transformer you can find."
+    },
+    {
+      "id": "quant-galore-trading-infrastructure",
+      "type": "article",
+      "title": "A No-BS Look at Quantitative Trading Infrastructure",
+      "author": "Quant Galore",
+      "source": "Quant Galore",
+      "url": "https://www.quant-galore.com/p/a-no-bs-look-at-quantitative-trading",
+      "year": 2024,
+      "status": "Discovered",
+      "topics": ["Trading", "Quant", "Data Feeds"],
+      "minutes": 12,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "How a medium-frequency shop should actually lay out its data stack — cloud object storage (S3), Parquet, and a sane folder hierarchy instead of giant local files — to make backtesting fast."
+    },
+    {
+      "id": "quant-galore-chasing-vol-shorting",
+      "type": "article",
+      "title": "A Junior Quant's Guide to Chasing Vol and Shorting Stocks",
+      "author": "Quant Galore",
+      "source": "Quant Galore",
+      "url": "https://www.quant-galore.com/p/a-junior-quants-guide-to-chasing",
+      "year": 2024,
+      "status": "Discovered",
+      "topics": ["Trading", "Quant"],
+      "minutes": 14,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "Building a short-selling hedge for a long momentum book, arguing that borrow fees dominate — so the edge comes from finding high-realized-vol names and calling short, one-day directional moves that beat the cost to borrow."
+    },
+    {
+      "id": "pca-clustering-grouping-stocks",
+      "type": "article",
+      "title": "Unmasking the Market's Hidden Dances: Grouping Stocks with PCA & Clustering",
+      "author": "Unicorn Day",
+      "source": "Medium",
+      "url": "https://medium.com/@wl8380/unmasking-the-markets-hidden-dances-grouping-stocks-with-pca-clustering-0c7046a9b7a0",
+      "year": 2024,
+      "status": "Discovered",
+      "topics": ["Quant", "ML"],
+      "minutes": 10,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "An accessible walk through using PCA and clustering to find which stocks move together, reducing messy market data to the underlying factors that group names into cohorts."
+    },
+    {
+      "id": "pca-time-series-structure",
+      "type": "article",
+      "title": "PCA in Time Series: Finding Structure in a Moving World",
+      "author": "Sofien Kaabar, CFA",
+      "source": "Medium",
+      "url": "https://kaabar-sofien.medium.com/pca-in-time-series-finding-structure-in-a-moving-world-05db54ebf76c",
+      "year": 2024,
+      "status": "Discovered",
+      "topics": ["Quant", "ML"],
+      "minutes": 9,
+      "rating": null,
+      "added": "2026-07-17",
+      "started": null,
+      "finished": null,
+      "blurb": "How PCA turns a set of correlated time series into uncorrelated components, cutting noise and surfacing the shared common factors that drive financial series — a preprocessing step before modeling."
     }
   ]
 }
