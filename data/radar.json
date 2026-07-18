@@ -1,7 +1,115 @@
 {
-  "generated": "2026-07-17",
-  "count": 453,
+  "generated": "2026-07-18",
+  "count": 457,
   "items": [
+    {
+      "id": "github:protocolbuffers/protobuf",
+      "name": "protobuf",
+      "description": "Protocol Buffers - Google's data interchange format",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "canonical_url": "github.com/protocolbuffers/protobuf",
+      "also_seen": [],
+      "company": null,
+      "stars": 11,
+      "momentum": 1,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 11
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:docusealco/docuseal",
+      "name": "docuseal",
+      "description": "Open source DocuSign alternative. Create, fill, and sign digital documents \u270d\ufe0f",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/docusealco/docuseal",
+      "canonical_url": "github.com/docusealco/docuseal",
+      "also_seen": [],
+      "company": null,
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "ruby"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/cwc-workshops",
+      "name": "cwc-workshops",
+      "description": "A typescript project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/cwc-workshops",
+      "canonical_url": "github.com/anthropics/cwc-workshops",
+      "also_seen": [],
+      "company": "Anthropic",
+      "stars": 45,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 45
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tirth8205/code-review-graph",
+      "name": "code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "canonical_url": "github.com/tirth8205/code-review-graph",
+      "also_seen": [],
+      "company": null,
+      "stars": 74,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 74
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:ibelick/ui-skills",
       "name": "ui-skills",
@@ -41,7 +149,7 @@
       "canonical_url": "github.com/posthog/posthog",
       "also_seen": [],
       "company": null,
-      "stars": 77,
+      "stars": 438,
       "momentum": 7,
       "tags": [
         "python"
@@ -49,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
-        "2026-07-17": 77
+        "2026-07-17": 77,
+        "2026-07-18": 438
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 361
     },
     {
       "id": "github:apache/ossie",
@@ -149,7 +258,7 @@
       "canonical_url": "github.com/codecrafters-io/build-your-own-x",
       "also_seen": [],
       "company": null,
-      "stars": 435,
+      "stars": 1068,
       "momentum": 43,
       "tags": [
         "markdown"
@@ -157,12 +266,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
-        "2026-07-17": 435
+        "2026-07-17": 435,
+        "2026-07-18": 1068
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 633
     },
     {
       "id": "manual:trendshift",
@@ -452,7 +562,7 @@
       "canonical_url": "github.com/prismml-eng/bonsai-demo",
       "also_seen": [],
       "company": null,
-      "stars": 196,
+      "stars": 278,
       "momentum": 19,
       "tags": [
         "shell"
@@ -460,12 +570,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
-        "2026-07-17": 196
+        "2026-07-17": 196,
+        "2026-07-18": 278
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 82
     },
     {
       "id": "manual:blankly-os",
@@ -601,7 +712,7 @@
       "canonical_url": "github.com/openinterpreter/openinterpreter",
       "also_seen": [],
       "company": null,
-      "stars": 661,
+      "stars": 431,
       "momentum": 29,
       "tags": [
         "rust"
@@ -609,13 +720,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-16": 299,
-        "2026-07-17": 661
+        "2026-07-17": 661,
+        "2026-07-18": 431
       },
       "trend": "up",
-      "trend_delta": 362
+      "trend_delta": 132
     },
     {
       "id": "manual:zipline",
@@ -854,7 +966,7 @@
       "canonical_url": "github.com/hkuds/deeptutor",
       "also_seen": [],
       "company": null,
-      "stars": 656,
+      "stars": 531,
       "momentum": 17,
       "tags": [
         "python"
@@ -862,13 +974,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-16": 172,
-        "2026-07-17": 656
+        "2026-07-17": 656,
+        "2026-07-18": 531
       },
       "trend": "up",
-      "trend_delta": 484
+      "trend_delta": 359
     },
     {
       "id": "manual:alphalens",
@@ -907,7 +1020,7 @@
       "canonical_url": "github.com/henryndubuaku/maths-cs-ai-compendium",
       "also_seen": [],
       "company": null,
-      "stars": 725,
+      "stars": 200,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -915,13 +1028,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-15": 112,
-        "2026-07-16": 725
+        "2026-07-16": 725,
+        "2026-07-18": 200
       },
       "trend": "up",
-      "trend_delta": 613
+      "trend_delta": 88
     },
     {
       "id": "github:chenyme/grok2api",
@@ -1098,7 +1212,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 3537,
+      "stars": 1074,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -1106,15 +1220,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-14": 1229,
         "2026-07-15": 4276,
         "2026-07-16": 1664,
-        "2026-07-17": 3537
+        "2026-07-17": 3537,
+        "2026-07-18": 1074
       },
-      "trend": "up",
-      "trend_delta": 2308
+      "trend": "down",
+      "trend_delta": -155
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -1256,7 +1371,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 3372,
+      "stars": 1485,
       "momentum": 15,
       "tags": [
         "css"
@@ -1264,16 +1379,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-13": 155,
         "2026-07-14": 794,
         "2026-07-15": 1015,
         "2026-07-16": 1277,
-        "2026-07-17": 3372
+        "2026-07-17": 3372,
+        "2026-07-18": 1485
       },
       "trend": "up",
-      "trend_delta": 3217
+      "trend_delta": 1330
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -10495,21 +10611,22 @@
       "canonical_url": "github.com/ryancodrai/turbovec",
       "also_seen": [],
       "company": null,
-      "stars": 1801,
+      "stars": 280,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-10",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-06-07": 1533,
         "2026-06-08": 1730,
         "2026-06-09": 1800,
-        "2026-06-10": 1801
+        "2026-06-10": 1801,
+        "2026-07-18": 280
       },
-      "trend": "up",
-      "trend_delta": 268
+      "trend": "down",
+      "trend_delta": -1521
     },
     {
       "id": "github:refactoringhq/tolaria",
@@ -11398,21 +11515,22 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 13,
+      "stars": 233,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
         "2026-06-06": 309,
-        "2026-07-17": 13
+        "2026-07-17": 13,
+        "2026-07-18": 233
       },
       "trend": "down",
-      "trend_delta": -296
+      "trend_delta": -76
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
