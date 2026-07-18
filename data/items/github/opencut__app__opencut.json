@@ -10,7 +10,7 @@
   "canonical_url": "github.com/opencut-app/opencut",
   "also_seen": [],
   "company": null,
-  "stars": 3537,
+  "stars": 1074,
   "momentum": 100,
   "tags": [
     "typescript"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-14",
-  "last_seen": "2026-07-17",
+  "last_seen": "2026-07-18",
   "stars_history": {
     "2026-07-14": 1229,
     "2026-07-15": 4276,
     "2026-07-16": 1664,
-    "2026-07-17": 3537
+    "2026-07-17": 3537,
+    "2026-07-18": 1074
   }
 }

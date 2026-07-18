@@ -10,7 +10,7 @@
   "canonical_url": "github.com/nutlope/hallmark",
   "also_seen": [],
   "company": null,
-  "stars": 3372,
+  "stars": 1485,
   "momentum": 15,
   "tags": [
     "css"
@@ -18,12 +18,13 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-13",
-  "last_seen": "2026-07-17",
+  "last_seen": "2026-07-18",
   "stars_history": {
     "2026-07-13": 155,
     "2026-07-14": 794,
     "2026-07-15": 1015,
     "2026-07-16": 1277,
-    "2026-07-17": 3372
+    "2026-07-17": 3372,
+    "2026-07-18": 1485
   }
 }

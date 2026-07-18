@@ -1,0 +1,25 @@
+{
+  "id": "github:docusealco/docuseal",
+  "name": "docuseal",
+  "description": "Open source DocuSign alternative. Create, fill, and sign digital documents \u270d\ufe0f",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/docusealco/docuseal",
+  "canonical_url": "github.com/docusealco/docuseal",
+  "also_seen": [],
+  "company": null,
+  "stars": 91,
+  "momentum": 9,
+  "tags": [
+    "ruby"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-18",
+  "last_seen": "2026-07-18",
+  "stars_history": {
+    "2026-07-18": 91
+  }
+}

@@ -10,17 +10,18 @@
   "canonical_url": "github.com/ryancodrai/turbovec",
   "also_seen": [],
   "company": null,
-  "stars": 1801,
+  "stars": 280,
   "momentum": 100,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-07",
-  "last_seen": "2026-06-10",
+  "last_seen": "2026-07-18",
   "stars_history": {
     "2026-06-07": 1533,
     "2026-06-08": 1730,
     "2026-06-09": 1800,
-    "2026-06-10": 1801
+    "2026-06-10": 1801,
+    "2026-07-18": 280
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/prismml-eng/bonsai-demo",
   "also_seen": [],
   "company": null,
-  "stars": 196,
+  "stars": 278,
   "momentum": 19,
   "tags": [
     "shell"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-17",
-  "last_seen": "2026-07-17",
+  "last_seen": "2026-07-18",
   "stars_history": {
-    "2026-07-17": 196
+    "2026-07-17": 196,
+    "2026-07-18": 278
   }
 }

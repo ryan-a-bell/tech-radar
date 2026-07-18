@@ -10,7 +10,7 @@
   "canonical_url": "github.com/openinterpreter/openinterpreter",
   "also_seen": [],
   "company": null,
-  "stars": 661,
+  "stars": 431,
   "momentum": 29,
   "tags": [
     "rust"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-16",
-  "last_seen": "2026-07-17",
+  "last_seen": "2026-07-18",
   "stars_history": {
     "2026-07-16": 299,
-    "2026-07-17": 661
+    "2026-07-17": 661,
+    "2026-07-18": 431
   }
 }
