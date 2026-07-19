@@ -1,7 +1,88 @@
 {
-  "generated": "2026-07-18",
-  "count": 457,
+  "generated": "2026-07-19",
+  "count": 460,
   "items": [
+    {
+      "id": "github:KnockOutEZ/wigolo",
+      "name": "wigolo",
+      "description": "The go-to web for your AI coding agent \u2014 local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/KnockOutEZ/wigolo",
+      "canonical_url": "github.com/knockoutez/wigolo",
+      "also_seen": [],
+      "company": null,
+      "stars": 203,
+      "momentum": 20,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-19": 203
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MoonshotAI/kimi-cli",
+      "name": "kimi-cli",
+      "description": "Kimi Code CLI is your next CLI agent.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MoonshotAI/kimi-cli",
+      "canonical_url": "github.com/moonshotai/kimi-cli",
+      "also_seen": [],
+      "company": null,
+      "stars": 65,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-19": 65
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:elder-plinius/G0DM0D3",
+      "name": "G0DM0D3",
+      "description": "LIBERATED AI CHAT",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elder-plinius/G0DM0D3",
+      "canonical_url": "github.com/elder-plinius/g0dm0d3",
+      "also_seen": [],
+      "company": null,
+      "stars": 69,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-19": 69
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:protocolbuffers/protobuf",
       "name": "protobuf",
@@ -95,7 +176,7 @@
       "canonical_url": "github.com/tirth8205/code-review-graph",
       "also_seen": [],
       "company": null,
-      "stars": 74,
+      "stars": 355,
       "momentum": 7,
       "tags": [
         "python"
@@ -103,12 +184,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-07-19",
       "stars_history": {
-        "2026-07-18": 74
+        "2026-07-18": 74,
+        "2026-07-19": 355
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 281
     },
     {
       "id": "github:ibelick/ui-skills",
@@ -122,7 +204,7 @@
       "canonical_url": "github.com/ibelick/ui-skills",
       "also_seen": [],
       "company": null,
-      "stars": 178,
+      "stars": 123,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -130,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-19",
       "stars_history": {
-        "2026-07-17": 178
+        "2026-07-17": 178,
+        "2026-07-19": 123
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -55
     },
     {
       "id": "github:PostHog/posthog",
@@ -149,7 +232,7 @@
       "canonical_url": "github.com/posthog/posthog",
       "also_seen": [],
       "company": null,
-      "stars": 438,
+      "stars": 338,
       "momentum": 7,
       "tags": [
         "python"
@@ -157,13 +240,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-07-19",
       "stars_history": {
         "2026-07-17": 77,
-        "2026-07-18": 438
+        "2026-07-18": 438,
+        "2026-07-19": 338
       },
       "trend": "up",
-      "trend_delta": 361
+      "trend_delta": 261
     },
     {
       "id": "github:apache/ossie",
@@ -177,7 +261,7 @@
       "canonical_url": "github.com/apache/ossie",
       "also_seen": [],
       "company": null,
-      "stars": 60,
+      "stars": 47,
       "momentum": 6,
       "tags": [
         "python"
@@ -185,12 +269,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-07-19",
       "stars_history": {
-        "2026-07-17": 60
+        "2026-07-17": 60,
+        "2026-07-19": 47
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -13
     },
     {
       "id": "github:lobehub/lobehub",
@@ -258,7 +343,7 @@
       "canonical_url": "github.com/codecrafters-io/build-your-own-x",
       "also_seen": [],
       "company": null,
-      "stars": 1068,
+      "stars": 1126,
       "momentum": 43,
       "tags": [
         "markdown"
@@ -266,13 +351,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-07-19",
       "stars_history": {
         "2026-07-17": 435,
-        "2026-07-18": 1068
+        "2026-07-18": 1068,
+        "2026-07-19": 1126
       },
       "trend": "up",
-      "trend_delta": 633
+      "trend_delta": 691
     },
     {
       "id": "manual:trendshift",
@@ -7179,7 +7265,7 @@
       "canonical_url": "github.com/robbyant/lingbot-map",
       "also_seen": [],
       "company": null,
-      "stars": 189,
+      "stars": 831,
       "momentum": 37,
       "tags": [
         "python"
@@ -7187,13 +7273,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-19",
       "stars_history": {
         "2026-06-29": 372,
-        "2026-07-01": 189
+        "2026-07-01": 189,
+        "2026-07-19": 831
       },
-      "trend": "down",
-      "trend_delta": -183
+      "trend": "up",
+      "trend_delta": 642
     },
     {
       "id": "github:cupy/cupy",
@@ -9578,19 +9665,20 @@
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "also_seen": [],
       "company": null,
-      "stars": 562,
+      "stars": 191,
       "momentum": 53,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-19",
       "stars_history": {
         "2026-06-15": 538,
-        "2026-06-16": 562
+        "2026-06-16": 562,
+        "2026-07-19": 191
       },
-      "trend": "up",
-      "trend_delta": 24
+      "trend": "down",
+      "trend_delta": -371
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -11886,20 +11974,21 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 193,
+      "stars": 161,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-07-19",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
-        "2026-06-23": 193
+        "2026-06-23": 193,
+        "2026-07-19": 161
       },
       "trend": "down",
-      "trend_delta": -15
+      "trend_delta": -32
     },
     {
       "id": "github:OpenBMB/VoxCPM",

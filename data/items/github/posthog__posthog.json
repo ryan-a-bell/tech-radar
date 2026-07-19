@@ -10,7 +10,7 @@
   "canonical_url": "github.com/posthog/posthog",
   "also_seen": [],
   "company": null,
-  "stars": 438,
+  "stars": 338,
   "momentum": 7,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-17",
-  "last_seen": "2026-07-18",
+  "last_seen": "2026-07-19",
   "stars_history": {
     "2026-07-17": 77,
-    "2026-07-18": 438
+    "2026-07-18": 438,
+    "2026-07-19": 338
   }
 }
