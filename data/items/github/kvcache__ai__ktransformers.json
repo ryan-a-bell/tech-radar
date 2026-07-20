@@ -1,0 +1,25 @@
+{
+  "id": "github:kvcache-ai/ktransformers",
+  "name": "ktransformers",
+  "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/kvcache-ai/ktransformers",
+  "canonical_url": "github.com/kvcache-ai/ktransformers",
+  "also_seen": [],
+  "company": null,
+  "stars": 360,
+  "momentum": 36,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-20",
+  "last_seen": "2026-07-20",
+  "stars_history": {
+    "2026-07-20": 360
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/codecrafters-io/build-your-own-x",
   "also_seen": [],
   "company": null,
-  "stars": 1126,
+  "stars": 754,
   "momentum": 43,
   "tags": [
     "markdown"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-17",
-  "last_seen": "2026-07-19",
+  "last_seen": "2026-07-20",
   "stars_history": {
     "2026-07-17": 435,
     "2026-07-18": 1068,
-    "2026-07-19": 1126
+    "2026-07-19": 1126,
+    "2026-07-20": 754
   }
 }

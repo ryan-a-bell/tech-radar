@@ -1,7 +1,169 @@
 {
-  "generated": "2026-07-19",
-  "count": 460,
+  "generated": "2026-07-20",
+  "count": 466,
   "items": [
+    {
+      "id": "github:microsoft/terminal",
+      "name": "terminal",
+      "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/terminal",
+      "canonical_url": "github.com/microsoft/terminal",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 59,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 59
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kvcache-ai/ktransformers",
+      "name": "ktransformers",
+      "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kvcache-ai/ktransformers",
+      "canonical_url": "github.com/kvcache-ai/ktransformers",
+      "also_seen": [],
+      "company": null,
+      "stars": 360,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 360
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:andrewrabert/jellium-desktop",
+      "name": "jellium-desktop",
+      "description": "An unofficial desktop client for Jellyfin",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/andrewrabert/jellium-desktop",
+      "canonical_url": "github.com/andrewrabert/jellium-desktop",
+      "also_seen": [],
+      "company": null,
+      "stars": 43,
+      "momentum": 4,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 43
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PKUFlyingPig/cs-self-learning",
+      "name": "cs-self-learning",
+      "description": "\u8ba1\u7b97\u673a\u81ea\u5b66\u6307\u5357",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PKUFlyingPig/cs-self-learning",
+      "canonical_url": "github.com/pkuflyingpig/cs-self-learning",
+      "also_seen": [],
+      "company": null,
+      "stars": 134,
+      "momentum": 13,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 134
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Canner/WrenAI",
+      "name": "WrenAI",
+      "description": "GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Canner/WrenAI",
+      "canonical_url": "github.com/canner/wrenai",
+      "also_seen": [],
+      "company": null,
+      "stars": 121,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 121
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AstrBotDevs/AstrBot",
+      "name": "AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. \u2728",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "canonical_url": "github.com/astrbotdevs/astrbot",
+      "also_seen": [],
+      "company": null,
+      "stars": 83,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 83
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:KnockOutEZ/wigolo",
       "name": "wigolo",
@@ -14,7 +176,7 @@
       "canonical_url": "github.com/knockoutez/wigolo",
       "also_seen": [],
       "company": null,
-      "stars": 203,
+      "stars": 595,
       "momentum": 20,
       "tags": [
         "typescript"
@@ -22,12 +184,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-19",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
-        "2026-07-19": 203
+        "2026-07-19": 203,
+        "2026-07-20": 595
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 392
     },
     {
       "id": "github:MoonshotAI/kimi-cli",
@@ -41,7 +204,7 @@
       "canonical_url": "github.com/moonshotai/kimi-cli",
       "also_seen": [],
       "company": null,
-      "stars": 65,
+      "stars": 410,
       "momentum": 6,
       "tags": [
         "python"
@@ -49,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-19",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
-        "2026-07-19": 65
+        "2026-07-19": 65,
+        "2026-07-20": 410
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 345
     },
     {
       "id": "github:elder-plinius/G0DM0D3",
@@ -176,7 +340,7 @@
       "canonical_url": "github.com/tirth8205/code-review-graph",
       "also_seen": [],
       "company": null,
-      "stars": 355,
+      "stars": 663,
       "momentum": 7,
       "tags": [
         "python"
@@ -184,13 +348,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-07-18": 74,
-        "2026-07-19": 355
+        "2026-07-19": 355,
+        "2026-07-20": 663
       },
       "trend": "up",
-      "trend_delta": 281
+      "trend_delta": 589
     },
     {
       "id": "github:ibelick/ui-skills",
@@ -232,7 +397,7 @@
       "canonical_url": "github.com/posthog/posthog",
       "also_seen": [],
       "company": null,
-      "stars": 338,
+      "stars": 411,
       "momentum": 7,
       "tags": [
         "python"
@@ -240,14 +405,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-07-17": 77,
         "2026-07-18": 438,
-        "2026-07-19": 338
+        "2026-07-19": 338,
+        "2026-07-20": 411
       },
       "trend": "up",
-      "trend_delta": 261
+      "trend_delta": 334
     },
     {
       "id": "github:apache/ossie",
@@ -343,7 +509,7 @@
       "canonical_url": "github.com/codecrafters-io/build-your-own-x",
       "also_seen": [],
       "company": null,
-      "stars": 1126,
+      "stars": 754,
       "momentum": 43,
       "tags": [
         "markdown"
@@ -351,14 +517,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-07-17": 435,
         "2026-07-18": 1068,
-        "2026-07-19": 1126
+        "2026-07-19": 1126,
+        "2026-07-20": 754
       },
       "trend": "up",
-      "trend_delta": 691
+      "trend_delta": 319
     },
     {
       "id": "manual:trendshift",
@@ -7719,18 +7886,19 @@
       "canonical_url": "github.com/flowseal/zapret-discord-youtube",
       "also_seen": [],
       "company": null,
-      "stars": 61,
+      "stars": 106,
       "momentum": 6,
       "tags": [
         "batchfile"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-20",
       "stars_history": {
-        "2026-06-25": 61
+        "2026-06-25": 61,
+        "2026-07-20": 106
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 45
     },
     {
       "id": "github:alibaba/page-agent",
@@ -8359,21 +8527,22 @@
       "canonical_url": "github.com/jamiepine/voicebox",
       "also_seen": [],
       "company": null,
-      "stars": 1045,
+      "stars": 610,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-21": 145,
         "2026-06-22": 614,
         "2026-06-23": 529,
-        "2026-06-24": 1045
+        "2026-06-24": 1045,
+        "2026-07-20": 610
       },
-      "trend": "up",
-      "trend_delta": 900
+      "trend": "down",
+      "trend_delta": -435
     },
     {
       "id": "github:twentyhq/twenty",
@@ -8495,18 +8664,19 @@
       "canonical_url": "github.com/1jehuang/jcode",
       "also_seen": [],
       "company": null,
-      "stars": 87,
+      "stars": 235,
       "momentum": 8,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-07-20",
       "stars_history": {
-        "2026-06-21": 87
+        "2026-06-21": 87,
+        "2026-07-20": 235
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 148
     },
     {
       "id": "github:bytedance/deer-flow",
@@ -9639,19 +9809,20 @@
       "canonical_url": "github.com/trycua/cua",
       "also_seen": [],
       "company": null,
-      "stars": 70,
+      "stars": 64,
       "momentum": 5,
       "tags": [
         "html"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-15": 57,
-        "2026-06-16": 70
+        "2026-06-16": 70,
+        "2026-07-20": 64
       },
-      "trend": "up",
-      "trend_delta": 13
+      "trend": "down",
+      "trend_delta": -6
     },
     {
       "id": "github:rohitg00/ai-engineering-from-scratch",
@@ -9665,20 +9836,21 @@
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "also_seen": [],
       "company": null,
-      "stars": 191,
+      "stars": 501,
       "momentum": 53,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-15": 538,
         "2026-06-16": 562,
-        "2026-07-19": 191
+        "2026-07-19": 191,
+        "2026-07-20": 501
       },
       "trend": "down",
-      "trend_delta": -371
+      "trend_delta": -61
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -11603,22 +11775,23 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 233,
+      "stars": 39,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
         "2026-06-06": 309,
         "2026-07-17": 13,
-        "2026-07-18": 233
+        "2026-07-18": 233,
+        "2026-07-20": 39
       },
       "trend": "down",
-      "trend_delta": -76
+      "trend_delta": -270
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
@@ -11974,21 +12147,22 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 161,
+      "stars": 358,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-19",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
         "2026-06-23": 193,
-        "2026-07-19": 161
+        "2026-07-19": 161,
+        "2026-07-20": 358
       },
-      "trend": "down",
-      "trend_delta": -32
+      "trend": "up",
+      "trend_delta": 165
     },
     {
       "id": "github:OpenBMB/VoxCPM",

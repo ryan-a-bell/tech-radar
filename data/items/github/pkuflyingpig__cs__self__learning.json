@@ -1,0 +1,25 @@
+{
+  "id": "github:PKUFlyingPig/cs-self-learning",
+  "name": "cs-self-learning",
+  "description": "\u8ba1\u7b97\u673a\u81ea\u5b66\u6307\u5357",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PKUFlyingPig/cs-self-learning",
+  "canonical_url": "github.com/pkuflyingpig/cs-self-learning",
+  "also_seen": [],
+  "company": null,
+  "stars": 134,
+  "momentum": 13,
+  "tags": [
+    "html"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-20",
+  "last_seen": "2026-07-20",
+  "stars_history": {
+    "2026-07-20": 134
+  }
+}
