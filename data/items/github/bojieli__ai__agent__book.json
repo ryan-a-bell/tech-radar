@@ -1,0 +1,25 @@
+{
+  "id": "github:bojieli/ai-agent-book",
+  "name": "ai-agent-book",
+  "description": "\u300a\u6df1\u5165\u7406\u89e3 AI Agent\uff1a\u8bbe\u8ba1\u539f\u7406\u4e0e\u5de5\u7a0b\u5b9e\u8df5\u300b\uff08\u674e\u535a\u6770 \u8457\uff09\u5f00\u6e90\u4e3b\u4ed3\u5e93\uff1a\u5168\u4e66\u6b63\u6587\u3001\u7f16\u8bd1\u7248 PDF \u4e0e\u6309\u7ae0\u914d\u5957\u4ee3\u7801",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/bojieli/ai-agent-book",
+  "canonical_url": "github.com/bojieli/ai-agent-book",
+  "also_seen": [],
+  "company": null,
+  "stars": 4434,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-21",
+  "last_seen": "2026-07-21",
+  "stars_history": {
+    "2026-07-21": 4434
+  }
+}

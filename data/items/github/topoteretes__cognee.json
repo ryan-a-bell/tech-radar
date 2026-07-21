@@ -10,15 +10,16 @@
   "canonical_url": "github.com/topoteretes/cognee",
   "also_seen": [],
   "company": null,
-  "stars": 780,
+  "stars": 234,
   "momentum": 36,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-28",
+  "last_seen": "2026-07-21",
   "stars_history": {
     "2026-06-21": 361,
-    "2026-06-28": 780
+    "2026-06-28": 780,
+    "2026-07-21": 234
   }
 }

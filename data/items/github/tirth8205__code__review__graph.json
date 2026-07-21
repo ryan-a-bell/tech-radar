@@ -10,7 +10,7 @@
   "canonical_url": "github.com/tirth8205/code-review-graph",
   "also_seen": [],
   "company": null,
-  "stars": 663,
+  "stars": 1833,
   "momentum": 7,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-18",
-  "last_seen": "2026-07-20",
+  "last_seen": "2026-07-21",
   "stars_history": {
     "2026-07-18": 74,
     "2026-07-19": 355,
-    "2026-07-20": 663
+    "2026-07-20": 663,
+    "2026-07-21": 1833
   }
 }

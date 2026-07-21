@@ -1,0 +1,25 @@
+{
+  "id": "github:PrefectHQ/fastmcp",
+  "name": "fastmcp",
+  "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PrefectHQ/fastmcp",
+  "canonical_url": "github.com/prefecthq/fastmcp",
+  "also_seen": [],
+  "company": null,
+  "stars": 96,
+  "momentum": 9,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-21",
+  "last_seen": "2026-07-21",
+  "stars_history": {
+    "2026-07-21": 96
+  }
+}
