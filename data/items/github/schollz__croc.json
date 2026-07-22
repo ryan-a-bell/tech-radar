@@ -1,0 +1,25 @@
+{
+  "id": "github:schollz/croc",
+  "name": "croc",
+  "description": "Easily and securely send things from one computer to another \ud83d\udc0a \ud83d\udce6",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/schollz/croc",
+  "canonical_url": "github.com/schollz/croc",
+  "also_seen": [],
+  "company": null,
+  "stars": 361,
+  "momentum": 36,
+  "tags": [
+    "go"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 361
+  }
+}

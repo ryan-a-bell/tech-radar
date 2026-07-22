@@ -1,0 +1,25 @@
+{
+  "id": "github:DioxusLabs/dioxus",
+  "name": "dioxus",
+  "description": "Fullstack app framework for web, desktop, and mobile.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/DioxusLabs/dioxus",
+  "canonical_url": "github.com/dioxuslabs/dioxus",
+  "also_seen": [],
+  "company": null,
+  "stars": 271,
+  "momentum": 27,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 271
+  }
+}

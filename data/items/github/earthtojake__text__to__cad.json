@@ -1,0 +1,25 @@
+{
+  "id": "github:earthtojake/text-to-cad",
+  "name": "text-to-cad",
+  "description": "A collection of agent skills for CAD, robotics and hardware design",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/earthtojake/text-to-cad",
+  "canonical_url": "github.com/earthtojake/text-to-cad",
+  "also_seen": [],
+  "company": null,
+  "stars": 291,
+  "momentum": 29,
+  "tags": [
+    "javascript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 291
+  }
+}

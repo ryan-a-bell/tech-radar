@@ -10,7 +10,7 @@
   "canonical_url": "github.com/microsoft/ontology-playground",
   "also_seen": [],
   "company": "Microsoft",
-  "stars": 464,
+  "stars": 355,
   "momentum": 46,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-21",
-  "last_seen": "2026-07-21",
+  "last_seen": "2026-07-22",
   "stars_history": {
-    "2026-07-21": 464
+    "2026-07-21": 464,
+    "2026-07-22": 355
   }
 }

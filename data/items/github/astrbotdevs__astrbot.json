@@ -10,7 +10,7 @@
   "canonical_url": "github.com/astrbotdevs/astrbot",
   "also_seen": [],
   "company": null,
-  "stars": 317,
+  "stars": 416,
   "momentum": 8,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-20",
-  "last_seen": "2026-07-21",
+  "last_seen": "2026-07-22",
   "stars_history": {
     "2026-07-20": 83,
-    "2026-07-21": 317
+    "2026-07-21": 317,
+    "2026-07-22": 416
   }
 }

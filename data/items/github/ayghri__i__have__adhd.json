@@ -1,0 +1,25 @@
+{
+  "id": "github:ayghri/i-have-adhd",
+  "name": "i-have-adhd",
+  "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/ayghri/i-have-adhd",
+  "canonical_url": "github.com/ayghri/i-have-adhd",
+  "also_seen": [],
+  "company": null,
+  "stars": 1866,
+  "momentum": 100,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 1866
+  }
+}
