@@ -1,7 +1,304 @@
 {
-  "generated": "2026-07-21",
-  "count": 473,
+  "generated": "2026-07-22",
+  "count": 484,
   "items": [
+    {
+      "id": "github:tradesdontlie/tradingview-mcp",
+      "name": "tradingview-mcp",
+      "description": "AI-assisted TradingView chart analysis \u2014 connect Claude Code to your TradingView Desktop for personal workflow automation",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tradesdontlie/tradingview-mcp",
+      "canonical_url": "github.com/tradesdontlie/tradingview-mcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 114,
+      "momentum": 11,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 114
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:earthtojake/text-to-cad",
+      "name": "text-to-cad",
+      "description": "A collection of agent skills for CAD, robotics and hardware design",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "canonical_url": "github.com/earthtojake/text-to-cad",
+      "also_seen": [],
+      "company": null,
+      "stars": 291,
+      "momentum": 29,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 291
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:agegr/pi-web",
+      "name": "pi-web",
+      "description": "Web UI for the pi coding agent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/agegr/pi-web",
+      "canonical_url": "github.com/agegr/pi-web",
+      "also_seen": [],
+      "company": null,
+      "stars": 298,
+      "momentum": 29,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 298
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:dottxt-ai/outlines",
+      "name": "outlines",
+      "description": "Structured Outputs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dottxt-ai/outlines",
+      "canonical_url": "github.com/dottxt-ai/outlines",
+      "also_seen": [],
+      "company": null,
+      "stars": 65,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 65
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:langchain-ai/open_deep_research",
+      "name": "open_deep_research",
+      "description": "A python project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/langchain-ai/open_deep_research",
+      "canonical_url": "github.com/langchain-ai/open_deep_research",
+      "also_seen": [],
+      "company": null,
+      "stars": 23,
+      "momentum": 2,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 23
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AlexsJones/llmfit",
+      "name": "llmfit",
+      "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "canonical_url": "github.com/alexsjones/llmfit",
+      "also_seen": [],
+      "company": null,
+      "stars": 129,
+      "momentum": 12,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 129
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ayghri/i-have-adhd",
+      "name": "i-have-adhd",
+      "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "canonical_url": "github.com/ayghri/i-have-adhd",
+      "also_seen": [],
+      "company": null,
+      "stars": 1866,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 1866
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:DioxusLabs/dioxus",
+      "name": "dioxus",
+      "description": "Fullstack app framework for web, desktop, and mobile.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "canonical_url": "github.com/dioxuslabs/dioxus",
+      "also_seen": [],
+      "company": null,
+      "stars": 271,
+      "momentum": 27,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 271
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:schollz/croc",
+      "name": "croc",
+      "description": "Easily and securely send things from one computer to another \ud83d\udc0a \ud83d\udce6",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/schollz/croc",
+      "canonical_url": "github.com/schollz/croc",
+      "also_seen": [],
+      "company": null,
+      "stars": 361,
+      "momentum": 36,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 361
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:hyprwm/Hyprland",
+      "name": "Hyprland",
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "canonical_url": "github.com/hyprwm/hyprland",
+      "also_seen": [],
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 58
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:chrislgarry/Apollo-11",
+      "name": "Apollo-11",
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "canonical_url": "github.com/chrislgarry/apollo-11",
+      "also_seen": [],
+      "company": null,
+      "stars": 1235,
+      "momentum": 100,
+      "tags": [
+        "assembly"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 1235
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:handy-computer/transcribe.cpp",
       "name": "transcribe.cpp",
@@ -68,7 +365,7 @@
       "canonical_url": "github.com/oblien/openship",
       "also_seen": [],
       "company": null,
-      "stars": 1641,
+      "stars": 1562,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -76,12 +373,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
-        "2026-07-21": 1641
+        "2026-07-21": 1641,
+        "2026-07-22": 1562
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -79
     },
     {
       "id": "github:moonshine-ai/moonshine",
@@ -149,7 +447,7 @@
       "canonical_url": "github.com/bojieli/ai-agent-book",
       "also_seen": [],
       "company": null,
-      "stars": 4434,
+      "stars": 4624,
       "momentum": 100,
       "tags": [
         "python"
@@ -157,12 +455,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
-        "2026-07-21": 4434
+        "2026-07-21": 4434,
+        "2026-07-22": 4624
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 190
     },
     {
       "id": "github:microsoft/Ontology-Playground",
@@ -176,7 +475,7 @@
       "canonical_url": "github.com/microsoft/ontology-playground",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 464,
+      "stars": 355,
       "momentum": 46,
       "tags": [
         "typescript"
@@ -184,12 +483,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
-        "2026-07-21": 464
+        "2026-07-21": 464,
+        "2026-07-22": 355
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -109
     },
     {
       "id": "github:microsoft/terminal",
@@ -339,7 +639,7 @@
       "canonical_url": "github.com/astrbotdevs/astrbot",
       "also_seen": [],
       "company": null,
-      "stars": 317,
+      "stars": 416,
       "momentum": 8,
       "tags": [
         "python"
@@ -347,13 +647,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-20",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-07-20": 83,
-        "2026-07-21": 317
+        "2026-07-21": 317,
+        "2026-07-22": 416
       },
       "trend": "up",
-      "trend_delta": 234
+      "trend_delta": 333
     },
     {
       "id": "github:KnockOutEZ/wigolo",
@@ -367,7 +668,7 @@
       "canonical_url": "github.com/knockoutez/wigolo",
       "also_seen": [],
       "company": null,
-      "stars": 689,
+      "stars": 642,
       "momentum": 20,
       "tags": [
         "typescript"
@@ -375,14 +676,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-19",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-07-19": 203,
         "2026-07-20": 595,
-        "2026-07-21": 689
+        "2026-07-21": 689,
+        "2026-07-22": 642
       },
       "trend": "up",
-      "trend_delta": 486
+      "trend_delta": 439
     },
     {
       "id": "github:MoonshotAI/kimi-cli",
@@ -533,7 +835,7 @@
       "canonical_url": "github.com/tirth8205/code-review-graph",
       "also_seen": [],
       "company": null,
-      "stars": 1833,
+      "stars": 1925,
       "momentum": 7,
       "tags": [
         "python"
@@ -541,15 +843,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-07-18": 74,
         "2026-07-19": 355,
         "2026-07-20": 663,
-        "2026-07-21": 1833
+        "2026-07-21": 1833,
+        "2026-07-22": 1925
       },
       "trend": "up",
-      "trend_delta": 1759
+      "trend_delta": 1851
     },
     {
       "id": "github:ibelick/ui-skills",
@@ -5944,7 +6247,7 @@
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "also_seen": [],
       "company": null,
-      "stars": 1107,
+      "stars": 2034,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -5952,14 +6255,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-07-01": 387,
         "2026-07-02": 1010,
-        "2026-07-21": 1107
+        "2026-07-21": 1107,
+        "2026-07-22": 2034
       },
       "trend": "up",
-      "trend_delta": 97
+      "trend_delta": 1024
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -8163,7 +8467,7 @@
       "canonical_url": "github.com/every-app/open-seo",
       "also_seen": [],
       "company": null,
-      "stars": 939,
+      "stars": 849,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -8171,15 +8475,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-06-25": 57,
         "2026-06-26": 57,
         "2026-06-28": 239,
-        "2026-07-21": 939
+        "2026-07-21": 939,
+        "2026-07-22": 849
       },
       "trend": "up",
-      "trend_delta": 700
+      "trend_delta": 610
     },
     {
       "id": "github:kunchenguid/no-mistakes",
@@ -8862,20 +9167,21 @@
       "canonical_url": "github.com/1jehuang/jcode",
       "also_seen": [],
       "company": null,
-      "stars": 568,
+      "stars": 843,
       "momentum": 8,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-06-21": 87,
         "2026-07-20": 235,
-        "2026-07-21": 568
+        "2026-07-21": 568,
+        "2026-07-22": 843
       },
       "trend": "up",
-      "trend_delta": 481
+      "trend_delta": 756
     },
     {
       "id": "github:bytedance/deer-flow",
@@ -9077,20 +9383,21 @@
       "canonical_url": "github.com/koala73/worldmonitor",
       "also_seen": [],
       "company": null,
-      "stars": 294,
+      "stars": 1295,
       "momentum": 15,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-06-20": 156,
         "2026-06-21": 633,
-        "2026-06-24": 294
+        "2026-06-24": 294,
+        "2026-07-22": 1295
       },
       "trend": "up",
-      "trend_delta": 138
+      "trend_delta": 1001
     },
     {
       "id": "github:palmier-io/palmier-pro",
