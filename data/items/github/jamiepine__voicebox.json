@@ -10,19 +10,20 @@
   "canonical_url": "github.com/jamiepine/voicebox",
   "also_seen": [],
   "company": null,
-  "stars": 821,
+  "stars": 557,
   "momentum": 14,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-07-21",
+  "last_seen": "2026-07-23",
   "stars_history": {
     "2026-06-21": 145,
     "2026-06-22": 614,
     "2026-06-23": 529,
     "2026-06-24": 1045,
     "2026-07-20": 610,
-    "2026-07-21": 821
+    "2026-07-21": 821,
+    "2026-07-23": 557
   }
 }

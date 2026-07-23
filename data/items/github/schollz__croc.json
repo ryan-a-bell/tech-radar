@@ -10,7 +10,7 @@
   "canonical_url": "github.com/schollz/croc",
   "also_seen": [],
   "company": null,
-  "stars": 361,
+  "stars": 739,
   "momentum": 36,
   "tags": [
     "go"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-22",
+  "last_seen": "2026-07-23",
   "stars_history": {
-    "2026-07-22": 361
+    "2026-07-22": 361,
+    "2026-07-23": 739
   }
 }

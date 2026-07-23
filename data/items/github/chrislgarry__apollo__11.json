@@ -10,7 +10,7 @@
   "canonical_url": "github.com/chrislgarry/apollo-11",
   "also_seen": [],
   "company": null,
-  "stars": 1235,
+  "stars": 768,
   "momentum": 100,
   "tags": [
     "assembly"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-22",
+  "last_seen": "2026-07-23",
   "stars_history": {
-    "2026-07-22": 1235
+    "2026-07-22": 1235,
+    "2026-07-23": 768
   }
 }

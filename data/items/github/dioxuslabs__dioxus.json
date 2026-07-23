@@ -10,7 +10,7 @@
   "canonical_url": "github.com/dioxuslabs/dioxus",
   "also_seen": [],
   "company": null,
-  "stars": 271,
+  "stars": 420,
   "momentum": 27,
   "tags": [
     "rust"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-22",
+  "last_seen": "2026-07-23",
   "stars_history": {
-    "2026-07-22": 271
+    "2026-07-22": 271,
+    "2026-07-23": 420
   }
 }

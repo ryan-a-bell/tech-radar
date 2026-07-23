@@ -1,7 +1,88 @@
 {
-  "generated": "2026-07-22",
-  "count": 484,
+  "generated": "2026-07-23",
+  "count": 487,
   "items": [
+    {
+      "id": "github:likec4/likec4",
+      "name": "likec4",
+      "description": "Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/likec4/likec4",
+      "canonical_url": "github.com/likec4/likec4",
+      "also_seen": [],
+      "company": null,
+      "stars": 80,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-23": 80
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:dreamhunter2333/cloudflare_temp_email",
+      "name": "cloudflare_temp_email",
+      "description": "CloudFlare free temp domain email \u514d\u8d39\u6536\u53d1 \u4e34\u65f6\u57df\u540d\u90ae\u7bb1 \u652f\u6301\u9644\u4ef6 IMAP SMTP TelegramBot",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dreamhunter2333/cloudflare_temp_email",
+      "canonical_url": "github.com/dreamhunter2333/cloudflare_temp_email",
+      "also_seen": [],
+      "company": null,
+      "stars": 68,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-23": 68
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Pumpkin-MC/Pumpkin",
+      "name": "Pumpkin",
+      "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Pumpkin-MC/Pumpkin",
+      "canonical_url": "github.com/pumpkin-mc/pumpkin",
+      "also_seen": [],
+      "company": null,
+      "stars": 108,
+      "momentum": 10,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-23": 108
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:tradesdontlie/tradingview-mcp",
       "name": "tradingview-mcp",
@@ -68,7 +149,7 @@
       "canonical_url": "github.com/agegr/pi-web",
       "also_seen": [],
       "company": null,
-      "stars": 298,
+      "stars": 314,
       "momentum": 29,
       "tags": [
         "typescript"
@@ -76,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 298
+        "2026-07-22": 298,
+        "2026-07-23": 314
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 16
     },
     {
       "id": "github:dottxt-ai/outlines",
@@ -95,7 +177,7 @@
       "canonical_url": "github.com/dottxt-ai/outlines",
       "also_seen": [],
       "company": null,
-      "stars": 65,
+      "stars": 364,
       "momentum": 6,
       "tags": [
         "python"
@@ -103,12 +185,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 65
+        "2026-07-22": 65,
+        "2026-07-23": 364
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 299
     },
     {
       "id": "github:langchain-ai/open_deep_research",
@@ -176,7 +259,7 @@
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "also_seen": [],
       "company": null,
-      "stars": 1866,
+      "stars": 1699,
       "momentum": 100,
       "tags": [
         "python"
@@ -184,12 +267,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 1866
+        "2026-07-22": 1866,
+        "2026-07-23": 1699
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -167
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -203,7 +287,7 @@
       "canonical_url": "github.com/dioxuslabs/dioxus",
       "also_seen": [],
       "company": null,
-      "stars": 271,
+      "stars": 420,
       "momentum": 27,
       "tags": [
         "rust"
@@ -211,12 +295,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 271
+        "2026-07-22": 271,
+        "2026-07-23": 420
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 149
     },
     {
       "id": "github:schollz/croc",
@@ -230,7 +315,7 @@
       "canonical_url": "github.com/schollz/croc",
       "also_seen": [],
       "company": null,
-      "stars": 361,
+      "stars": 739,
       "momentum": 36,
       "tags": [
         "go"
@@ -238,12 +323,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 361
+        "2026-07-22": 361,
+        "2026-07-23": 739
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 378
     },
     {
       "id": "github:hyprwm/Hyprland",
@@ -257,7 +343,7 @@
       "canonical_url": "github.com/hyprwm/hyprland",
       "also_seen": [],
       "company": null,
-      "stars": 58,
+      "stars": 356,
       "momentum": 5,
       "tags": [
         "c++"
@@ -265,12 +351,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 58
+        "2026-07-22": 58,
+        "2026-07-23": 356
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 298
     },
     {
       "id": "github:chrislgarry/Apollo-11",
@@ -284,7 +371,7 @@
       "canonical_url": "github.com/chrislgarry/apollo-11",
       "also_seen": [],
       "company": null,
-      "stars": 1235,
+      "stars": 768,
       "momentum": 100,
       "tags": [
         "assembly"
@@ -292,12 +379,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
-        "2026-07-22": 1235
+        "2026-07-22": 1235,
+        "2026-07-23": 768
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -467
     },
     {
       "id": "github:handy-computer/transcribe.cpp",
@@ -365,7 +453,7 @@
       "canonical_url": "github.com/oblien/openship",
       "also_seen": [],
       "company": null,
-      "stars": 1562,
+      "stars": 1302,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -373,13 +461,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-07-21": 1641,
-        "2026-07-22": 1562
+        "2026-07-22": 1562,
+        "2026-07-23": 1302
       },
       "trend": "down",
-      "trend_delta": -79
+      "trend_delta": -339
     },
     {
       "id": "github:moonshine-ai/moonshine",
@@ -835,7 +924,7 @@
       "canonical_url": "github.com/tirth8205/code-review-graph",
       "also_seen": [],
       "company": null,
-      "stars": 1925,
+      "stars": 882,
       "momentum": 7,
       "tags": [
         "python"
@@ -843,16 +932,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-07-18": 74,
         "2026-07-19": 355,
         "2026-07-20": 663,
         "2026-07-21": 1833,
-        "2026-07-22": 1925
+        "2026-07-22": 1925,
+        "2026-07-23": 882
       },
       "trend": "up",
-      "trend_delta": 1851
+      "trend_delta": 808
     },
     {
       "id": "github:ibelick/ui-skills",
@@ -6247,7 +6337,7 @@
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "also_seen": [],
       "company": null,
-      "stars": 2034,
+      "stars": 1651,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -6255,15 +6345,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-07-01": 387,
         "2026-07-02": 1010,
         "2026-07-21": 1107,
-        "2026-07-22": 2034
+        "2026-07-22": 2034,
+        "2026-07-23": 1651
       },
       "trend": "up",
-      "trend_delta": 1024
+      "trend_delta": 641
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -7399,14 +7490,16 @@
       "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "also_seen": [],
       "company": "Composio",
-      "stars": 0,
+      "stars": 163,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-23": 163
+      },
       "trend": "none",
       "trend_delta": 0
     },
@@ -9029,23 +9122,24 @@
       "canonical_url": "github.com/jamiepine/voicebox",
       "also_seen": [],
       "company": null,
-      "stars": 821,
+      "stars": 557,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-21": 145,
         "2026-06-22": 614,
         "2026-06-23": 529,
         "2026-06-24": 1045,
         "2026-07-20": 610,
-        "2026-07-21": 821
+        "2026-07-21": 821,
+        "2026-07-23": 557
       },
       "trend": "down",
-      "trend_delta": -224
+      "trend_delta": -488
     },
     {
       "id": "github:twentyhq/twenty",
@@ -9383,21 +9477,22 @@
       "canonical_url": "github.com/koala73/worldmonitor",
       "also_seen": [],
       "company": null,
-      "stars": 1295,
+      "stars": 4139,
       "momentum": 15,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-20": 156,
         "2026-06-21": 633,
         "2026-06-24": 294,
-        "2026-07-22": 1295
+        "2026-07-22": 1295,
+        "2026-07-23": 4139
       },
       "trend": "up",
-      "trend_delta": 1001
+      "trend_delta": 3845
     },
     {
       "id": "github:palmier-io/palmier-pro",
@@ -10343,22 +10438,23 @@
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "also_seen": [],
       "company": null,
-      "stars": 823,
+      "stars": 652,
       "momentum": 53,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-15": 538,
         "2026-06-16": 562,
         "2026-07-19": 191,
         "2026-07-20": 501,
-        "2026-07-21": 823
+        "2026-07-21": 823,
+        "2026-07-23": 652
       },
       "trend": "up",
-      "trend_delta": 261
+      "trend_delta": 90
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -10426,19 +10522,20 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 396,
+      "stars": 137,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-15": 244,
-        "2026-06-16": 396
+        "2026-06-16": 396,
+        "2026-07-23": 137
       },
-      "trend": "up",
-      "trend_delta": 152
+      "trend": "down",
+      "trend_delta": -259
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -11036,23 +11133,24 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 799,
+      "stars": 741,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
         "2026-07-06": 161,
         "2026-07-07": 470,
         "2026-07-08": 1129,
-        "2026-07-09": 799
+        "2026-07-09": 799,
+        "2026-07-23": 741
       },
-      "trend": "up",
-      "trend_delta": 379
+      "trend": "down",
+      "trend_delta": -58
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",

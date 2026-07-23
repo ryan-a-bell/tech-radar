@@ -10,7 +10,7 @@
   "canonical_url": "github.com/ayghri/i-have-adhd",
   "also_seen": [],
   "company": null,
-  "stars": 1866,
+  "stars": 1699,
   "momentum": 100,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-22",
+  "last_seen": "2026-07-23",
   "stars_history": {
-    "2026-07-22": 1866
+    "2026-07-22": 1866,
+    "2026-07-23": 1699
   }
 }

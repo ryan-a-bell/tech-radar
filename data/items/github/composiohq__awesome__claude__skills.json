@@ -10,12 +10,14 @@
   "canonical_url": "github.com/composiohq/awesome-claude-skills",
   "also_seen": [],
   "company": "Composio",
-  "stars": 0,
+  "stars": 163,
   "momentum": 0,
   "tags": [],
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-30",
-  "last_seen": "2026-06-30",
-  "stars_history": {}
+  "last_seen": "2026-07-23",
+  "stars_history": {
+    "2026-07-23": 163
+  }
 }
