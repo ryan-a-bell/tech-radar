@@ -10,7 +10,7 @@
   "canonical_url": "github.com/agegr/pi-web",
   "also_seen": [],
   "company": null,
-  "stars": 314,
+  "stars": 315,
   "momentum": 29,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-23",
+  "last_seen": "2026-07-24",
   "stars_history": {
     "2026-07-22": 298,
-    "2026-07-23": 314
+    "2026-07-23": 314,
+    "2026-07-24": 315
   }
 }

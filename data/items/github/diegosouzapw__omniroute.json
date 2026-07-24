@@ -10,7 +10,7 @@
   "canonical_url": "github.com/diegosouzapw/omniroute",
   "also_seen": [],
   "company": null,
-  "stars": 1651,
+  "stars": 1929,
   "momentum": 38,
   "tags": [
     "typescript"
@@ -18,12 +18,13 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-23",
+  "last_seen": "2026-07-24",
   "stars_history": {
     "2026-07-01": 387,
     "2026-07-02": 1010,
     "2026-07-21": 1107,
     "2026-07-22": 2034,
-    "2026-07-23": 1651
+    "2026-07-23": 1651,
+    "2026-07-24": 1929
   }
 }

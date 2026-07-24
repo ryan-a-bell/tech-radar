@@ -1,0 +1,25 @@
+{
+  "id": "github:block/buzz",
+  "name": "buzz",
+  "description": "A hive mind communication platform",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/block/buzz",
+  "canonical_url": "github.com/block/buzz",
+  "also_seen": [],
+  "company": null,
+  "stars": 2162,
+  "momentum": 100,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-24",
+  "last_seen": "2026-07-24",
+  "stars_history": {
+    "2026-07-24": 2162
+  }
+}

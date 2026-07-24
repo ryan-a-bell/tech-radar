@@ -10,7 +10,7 @@
   "canonical_url": "github.com/pumpkin-mc/pumpkin",
   "also_seen": [],
   "company": null,
-  "stars": 108,
+  "stars": 565,
   "momentum": 10,
   "tags": [
     "rust"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-23",
-  "last_seen": "2026-07-23",
+  "last_seen": "2026-07-24",
   "stars_history": {
-    "2026-07-23": 108
+    "2026-07-23": 108,
+    "2026-07-24": 565
   }
 }

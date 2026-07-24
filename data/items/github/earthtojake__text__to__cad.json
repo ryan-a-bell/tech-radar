@@ -10,7 +10,7 @@
   "canonical_url": "github.com/earthtojake/text-to-cad",
   "also_seen": [],
   "company": null,
-  "stars": 291,
+  "stars": 230,
   "momentum": 29,
   "tags": [
     "javascript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-22",
+  "last_seen": "2026-07-24",
   "stars_history": {
-    "2026-07-22": 291
+    "2026-07-22": 291,
+    "2026-07-24": 230
   }
 }

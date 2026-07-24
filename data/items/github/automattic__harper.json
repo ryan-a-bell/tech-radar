@@ -1,0 +1,25 @@
+{
+  "id": "github:Automattic/harper",
+  "name": "harper",
+  "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Automattic/harper",
+  "canonical_url": "github.com/automattic/harper",
+  "also_seen": [],
+  "company": null,
+  "stars": 624,
+  "momentum": 62,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-24",
+  "last_seen": "2026-07-24",
+  "stars_history": {
+    "2026-07-24": 624
+  }
+}

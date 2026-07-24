@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-23",
-  "count": 487,
+  "generated": "2026-07-24",
+  "count": 492,
   "items": [
+    {
+      "id": "github:alibaba/open-code-review",
+      "name": "open-code-review",
+      "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/open-code-review",
+      "canonical_url": "github.com/alibaba/open-code-review",
+      "also_seen": [],
+      "company": null,
+      "stars": 180,
+      "momentum": 18,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 180
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jellyfin/jellyfin",
+      "name": "jellyfin",
+      "description": "The Free Software Media System - Server Backend & API",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jellyfin/jellyfin",
+      "canonical_url": "github.com/jellyfin/jellyfin",
+      "also_seen": [],
+      "company": null,
+      "stars": 66,
+      "momentum": 6,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 66
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Automattic/harper",
+      "name": "harper",
+      "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Automattic/harper",
+      "canonical_url": "github.com/automattic/harper",
+      "also_seen": [],
+      "company": null,
+      "stars": 624,
+      "momentum": 62,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 624
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:citrolabs/ego-lite",
+      "name": "ego-lite",
+      "description": "The best browser for both you and your AI agents work in parallel.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "canonical_url": "github.com/citrolabs/ego-lite",
+      "also_seen": [],
+      "company": null,
+      "stars": 247,
+      "momentum": 24,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 247
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:block/buzz",
+      "name": "buzz",
+      "description": "A hive mind communication platform",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/block/buzz",
+      "canonical_url": "github.com/block/buzz",
+      "also_seen": [],
+      "company": null,
+      "stars": 2162,
+      "momentum": 100,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 2162
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:likec4/likec4",
       "name": "likec4",
@@ -14,7 +149,7 @@
       "canonical_url": "github.com/likec4/likec4",
       "also_seen": [],
       "company": null,
-      "stars": 80,
+      "stars": 472,
       "momentum": 8,
       "tags": [
         "typescript"
@@ -22,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
-        "2026-07-23": 80
+        "2026-07-23": 80,
+        "2026-07-24": 472
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 392
     },
     {
       "id": "github:dreamhunter2333/cloudflare_temp_email",
@@ -68,7 +204,7 @@
       "canonical_url": "github.com/pumpkin-mc/pumpkin",
       "also_seen": [],
       "company": null,
-      "stars": 108,
+      "stars": 565,
       "momentum": 10,
       "tags": [
         "rust"
@@ -76,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
-        "2026-07-23": 108
+        "2026-07-23": 108,
+        "2026-07-24": 565
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 457
     },
     {
       "id": "github:tradesdontlie/tradingview-mcp",
@@ -122,7 +259,7 @@
       "canonical_url": "github.com/earthtojake/text-to-cad",
       "also_seen": [],
       "company": null,
-      "stars": 291,
+      "stars": 230,
       "momentum": 29,
       "tags": [
         "javascript"
@@ -130,12 +267,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-24",
       "stars_history": {
-        "2026-07-22": 291
+        "2026-07-22": 291,
+        "2026-07-24": 230
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -61
     },
     {
       "id": "github:agegr/pi-web",
@@ -149,7 +287,7 @@
       "canonical_url": "github.com/agegr/pi-web",
       "also_seen": [],
       "company": null,
-      "stars": 314,
+      "stars": 315,
       "momentum": 29,
       "tags": [
         "typescript"
@@ -157,13 +295,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-07-22": 298,
-        "2026-07-23": 314
+        "2026-07-23": 314,
+        "2026-07-24": 315
       },
       "trend": "up",
-      "trend_delta": 16
+      "trend_delta": 17
     },
     {
       "id": "github:dottxt-ai/outlines",
@@ -371,7 +510,7 @@
       "canonical_url": "github.com/chrislgarry/apollo-11",
       "also_seen": [],
       "company": null,
-      "stars": 768,
+      "stars": 592,
       "momentum": 100,
       "tags": [
         "assembly"
@@ -379,13 +518,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-07-22": 1235,
-        "2026-07-23": 768
+        "2026-07-23": 768,
+        "2026-07-24": 592
       },
       "trend": "down",
-      "trend_delta": -467
+      "trend_delta": -643
     },
     {
       "id": "github:handy-computer/transcribe.cpp",
@@ -6337,7 +6477,7 @@
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "also_seen": [],
       "company": null,
-      "stars": 1651,
+      "stars": 1929,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -6345,16 +6485,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-07-01": 387,
         "2026-07-02": 1010,
         "2026-07-21": 1107,
         "2026-07-22": 2034,
-        "2026-07-23": 1651
+        "2026-07-23": 1651,
+        "2026-07-24": 1929
       },
       "trend": "up",
-      "trend_delta": 641
+      "trend_delta": 919
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -7490,18 +7631,19 @@
       "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "also_seen": [],
       "company": "Composio",
-      "stars": 163,
+      "stars": 636,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
-        "2026-07-23": 163
+        "2026-07-23": 163,
+        "2026-07-24": 636
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 473
     },
     {
       "id": "github:travisvn/awesome-claude-skills",
@@ -9477,22 +9619,23 @@
       "canonical_url": "github.com/koala73/worldmonitor",
       "also_seen": [],
       "company": null,
-      "stars": 4139,
+      "stars": 3175,
       "momentum": 15,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-06-20": 156,
         "2026-06-21": 633,
         "2026-06-24": 294,
         "2026-07-22": 1295,
-        "2026-07-23": 4139
+        "2026-07-23": 4139,
+        "2026-07-24": 3175
       },
       "trend": "up",
-      "trend_delta": 3845
+      "trend_delta": 2881
     },
     {
       "id": "github:palmier-io/palmier-pro",
@@ -10522,20 +10665,21 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 137,
+      "stars": 401,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-06-15": 244,
         "2026-06-16": 396,
-        "2026-07-23": 137
+        "2026-07-23": 137,
+        "2026-07-24": 401
       },
-      "trend": "down",
-      "trend_delta": -259
+      "trend": "up",
+      "trend_delta": 5
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -11133,13 +11277,13 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 741,
+      "stars": 1708,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-07-24",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
@@ -11147,10 +11291,11 @@
         "2026-07-07": 470,
         "2026-07-08": 1129,
         "2026-07-09": 799,
-        "2026-07-23": 741
+        "2026-07-23": 741,
+        "2026-07-24": 1708
       },
-      "trend": "down",
-      "trend_delta": -58
+      "trend": "up",
+      "trend_delta": 909
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
