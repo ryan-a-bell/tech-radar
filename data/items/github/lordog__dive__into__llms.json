@@ -1,0 +1,25 @@
+{
+  "id": "github:Lordog/dive-into-llms",
+  "name": "dive-into-llms",
+  "description": "\u300a\u52a8\u624b\u5b66\u5927\u6a21\u578bDive into LLMs\u300b\u7cfb\u5217\u7f16\u7a0b\u5b9e\u8df5\u6559\u7a0b",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/Lordog/dive-into-llms",
+  "canonical_url": "github.com/lordog/dive-into-llms",
+  "also_seen": [],
+  "company": null,
+  "stars": 328,
+  "momentum": 32,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-25",
+  "last_seen": "2026-07-25",
+  "stars_history": {
+    "2026-07-25": 328
+  }
+}

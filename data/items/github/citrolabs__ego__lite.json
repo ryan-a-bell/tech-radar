@@ -10,7 +10,7 @@
   "canonical_url": "github.com/citrolabs/ego-lite",
   "also_seen": [],
   "company": null,
-  "stars": 247,
+  "stars": 880,
   "momentum": 24,
   "tags": [
     "javascript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-24",
+  "last_seen": "2026-07-25",
   "stars_history": {
-    "2026-07-24": 247
+    "2026-07-24": 247,
+    "2026-07-25": 880
   }
 }

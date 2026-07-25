@@ -10,7 +10,7 @@
   "canonical_url": "github.com/block/buzz",
   "also_seen": [],
   "company": null,
-  "stars": 2162,
+  "stars": 3270,
   "momentum": 100,
   "tags": [
     "rust"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-24",
+  "last_seen": "2026-07-25",
   "stars_history": {
-    "2026-07-24": 2162
+    "2026-07-24": 2162,
+    "2026-07-25": 3270
   }
 }
