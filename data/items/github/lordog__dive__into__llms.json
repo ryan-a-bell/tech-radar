@@ -10,7 +10,7 @@
   "canonical_url": "github.com/lordog/dive-into-llms",
   "also_seen": [],
   "company": null,
-  "stars": 328,
+  "stars": 408,
   "momentum": 32,
   "tags": [
     "jupyter notebook"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-25",
-  "last_seen": "2026-07-25",
+  "last_seen": "2026-07-26",
   "stars_history": {
-    "2026-07-25": 328
+    "2026-07-25": 328,
+    "2026-07-26": 408
   }
 }

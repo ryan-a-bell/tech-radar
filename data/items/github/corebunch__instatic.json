@@ -10,7 +10,7 @@
   "canonical_url": "github.com/corebunch/instatic",
   "also_seen": [],
   "company": null,
-  "stars": 201,
+  "stars": 426,
   "momentum": 35,
   "tags": [
     "typescript"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-25",
+  "last_seen": "2026-07-26",
   "stars_history": {
     "2026-07-01": 351,
     "2026-07-02": 508,
-    "2026-07-25": 201
+    "2026-07-25": 201,
+    "2026-07-26": 426
   }
 }
