@@ -1,0 +1,25 @@
+{
+  "id": "github:nodejs/node",
+  "name": "node",
+  "description": "Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/nodejs/node",
+  "canonical_url": "github.com/nodejs/node",
+  "also_seen": [],
+  "company": null,
+  "stars": 36,
+  "momentum": 3,
+  "tags": [
+    "javascript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-27",
+  "last_seen": "2026-07-27",
+  "stars_history": {
+    "2026-07-27": 36
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/ottermind/chat2db",
   "also_seen": [],
   "company": null,
-  "stars": 360,
+  "stars": 398,
   "momentum": 8,
   "tags": [
     "java"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-25",
-  "last_seen": "2026-07-26",
+  "last_seen": "2026-07-27",
   "stars_history": {
     "2026-07-25": 82,
-    "2026-07-26": 360
+    "2026-07-26": 360,
+    "2026-07-27": 398
   }
 }

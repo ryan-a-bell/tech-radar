@@ -1,0 +1,25 @@
+{
+  "id": "github:jenkinsci/jenkins",
+  "name": "jenkins",
+  "description": "Jenkins automation server",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/jenkinsci/jenkins",
+  "canonical_url": "github.com/jenkinsci/jenkins",
+  "also_seen": [],
+  "company": null,
+  "stars": 18,
+  "momentum": 1,
+  "tags": [
+    "java"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-27",
+  "last_seen": "2026-07-27",
+  "stars_history": {
+    "2026-07-27": 18
+  }
+}
