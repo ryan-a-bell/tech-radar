@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-26",
-  "count": 496,
+  "generated": "2026-07-27",
+  "count": 501,
   "items": [
+    {
+      "id": "github:nodejs/node",
+      "name": "node",
+      "description": "Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nodejs/node",
+      "canonical_url": "github.com/nodejs/node",
+      "also_seen": [],
+      "company": null,
+      "stars": 36,
+      "momentum": 3,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 36
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jenkinsci/jenkins",
+      "name": "jenkins",
+      "description": "Jenkins automation server",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "canonical_url": "github.com/jenkinsci/jenkins",
+      "also_seen": [],
+      "company": null,
+      "stars": 18,
+      "momentum": 1,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 18
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:pbakaus/impeccable",
+      "name": "impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pbakaus/impeccable",
+      "canonical_url": "github.com/pbakaus/impeccable",
+      "also_seen": [],
+      "company": null,
+      "stars": 413,
+      "momentum": 41,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 413
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:permissionlesstech/bitchat-android",
+      "name": "bitchat-android",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/permissionlesstech/bitchat-android",
+      "canonical_url": "github.com/permissionlesstech/bitchat-android",
+      "also_seen": [],
+      "company": null,
+      "stars": 260,
+      "momentum": 26,
+      "tags": [
+        "kotlin"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 260
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:amnezia-vpn/amnezia-client",
+      "name": "amnezia-client",
+      "description": "Amnezia VPN Client (Desktop+Mobile)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/amnezia-vpn/amnezia-client",
+      "canonical_url": "github.com/amnezia-vpn/amnezia-client",
+      "also_seen": [],
+      "company": null,
+      "stars": 35,
+      "momentum": 3,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 35
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:permissionlesstech/bitchat",
       "name": "bitchat",
@@ -14,7 +149,7 @@
       "canonical_url": "github.com/permissionlesstech/bitchat",
       "also_seen": [],
       "company": null,
-      "stars": 1720,
+      "stars": 1166,
       "momentum": 100,
       "tags": [
         "swift"
@@ -22,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
-        "2026-07-26": 1720
+        "2026-07-26": 1720,
+        "2026-07-27": 1166
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -554
     },
     {
       "id": "github:yorukot/superfile",
@@ -41,7 +177,7 @@
       "canonical_url": "github.com/yorukot/superfile",
       "also_seen": [],
       "company": null,
-      "stars": 338,
+      "stars": 131,
       "momentum": 33,
       "tags": [
         "go"
@@ -49,12 +185,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-07-27",
       "stars_history": {
-        "2026-07-25": 338
+        "2026-07-25": 338,
+        "2026-07-27": 131
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -207
     },
     {
       "id": "github:Lordog/dive-into-llms",
@@ -96,7 +233,7 @@
       "canonical_url": "github.com/ottermind/chat2db",
       "also_seen": [],
       "company": null,
-      "stars": 360,
+      "stars": 398,
       "momentum": 8,
       "tags": [
         "java"
@@ -104,13 +241,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-25": 82,
-        "2026-07-26": 360
+        "2026-07-26": 360,
+        "2026-07-27": 398
       },
       "trend": "up",
-      "trend_delta": 278
+      "trend_delta": 316
     },
     {
       "id": "github:alibaba/open-code-review",
@@ -124,7 +262,7 @@
       "canonical_url": "github.com/alibaba/open-code-review",
       "also_seen": [],
       "company": null,
-      "stars": 431,
+      "stars": 832,
       "momentum": 18,
       "tags": [
         "go"
@@ -132,13 +270,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-24": 180,
-        "2026-07-26": 431
+        "2026-07-26": 431,
+        "2026-07-27": 832
       },
       "trend": "up",
-      "trend_delta": 251
+      "trend_delta": 652
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -208,7 +347,7 @@
       "canonical_url": "github.com/citrolabs/ego-lite",
       "also_seen": [],
       "company": null,
-      "stars": 986,
+      "stars": 900,
       "momentum": 24,
       "tags": [
         "javascript"
@@ -216,14 +355,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-24": 247,
         "2026-07-25": 880,
-        "2026-07-26": 986
+        "2026-07-26": 986,
+        "2026-07-27": 900
       },
       "trend": "up",
-      "trend_delta": 739
+      "trend_delta": 653
     },
     {
       "id": "github:block/buzz",
@@ -237,7 +377,7 @@
       "canonical_url": "github.com/block/buzz",
       "also_seen": [],
       "company": null,
-      "stars": 2491,
+      "stars": 1710,
       "momentum": 100,
       "tags": [
         "rust"
@@ -245,14 +385,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-24": 2162,
         "2026-07-25": 3270,
-        "2026-07-26": 2491
+        "2026-07-26": 2491,
+        "2026-07-27": 1710
       },
-      "trend": "up",
-      "trend_delta": 329
+      "trend": "down",
+      "trend_delta": -452
     },
     {
       "id": "github:likec4/likec4",
@@ -322,7 +463,7 @@
       "canonical_url": "github.com/pumpkin-mc/pumpkin",
       "also_seen": [],
       "company": null,
-      "stars": 358,
+      "stars": 338,
       "momentum": 10,
       "tags": [
         "rust"
@@ -330,15 +471,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-23",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-23": 108,
         "2026-07-24": 565,
         "2026-07-25": 473,
-        "2026-07-26": 358
+        "2026-07-26": 358,
+        "2026-07-27": 338
       },
       "trend": "up",
-      "trend_delta": 250
+      "trend_delta": 230
     },
     {
       "id": "github:tradesdontlie/tradingview-mcp",
@@ -2367,7 +2509,7 @@
       "canonical_url": "github.com/pingdotgg/t3code",
       "also_seen": [],
       "company": null,
-      "stars": 75,
+      "stars": 149,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -2375,12 +2517,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-27",
       "stars_history": {
-        "2026-07-13": 75
+        "2026-07-13": 75,
+        "2026-07-27": 149
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 74
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -4173,7 +4316,7 @@
       "canonical_url": "github.com/anthropics/claude-cookbooks",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 132,
+      "stars": 379,
       "momentum": 19,
       "tags": [
         "jupyter notebook"
@@ -4181,15 +4324,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-10": 194,
         "2026-07-12": 219,
         "2026-07-13": 459,
-        "2026-07-26": 132
+        "2026-07-26": 132,
+        "2026-07-27": 379
       },
       "trend": "down",
-      "trend_delta": -327
+      "trend_delta": -80
     },
     {
       "id": "github:VoltAgent/awesome-design-md",
@@ -6632,7 +6776,7 @@
       "canonical_url": "github.com/corebunch/instatic",
       "also_seen": [],
       "company": null,
-      "stars": 426,
+      "stars": 888,
       "momentum": 35,
       "tags": [
         "typescript"
@@ -6640,15 +6784,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-01": 351,
         "2026-07-02": 508,
         "2026-07-25": 201,
-        "2026-07-26": 426
+        "2026-07-26": 426,
+        "2026-07-27": 888
       },
-      "trend": "down",
-      "trend_delta": -82
+      "trend": "up",
+      "trend_delta": 380
     },
     {
       "id": "github:microsoft/AI-For-Beginners",
@@ -10796,23 +10941,24 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 319,
+      "stars": 321,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-06-15": 244,
         "2026-06-16": 396,
         "2026-07-23": 137,
         "2026-07-24": 401,
         "2026-07-25": 499,
-        "2026-07-26": 319
+        "2026-07-26": 319,
+        "2026-07-27": 321
       },
       "trend": "down",
-      "trend_delta": -77
+      "trend_delta": -75
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -10908,20 +11054,21 @@
       "canonical_url": "github.com/andrewyng/aisuite",
       "also_seen": [],
       "company": null,
-      "stars": 77,
+      "stars": 187,
       "momentum": 13,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-06-13": 132,
         "2026-06-14": 127,
-        "2026-07-26": 77
+        "2026-07-26": 77,
+        "2026-07-27": 187
       },
-      "trend": "down",
-      "trend_delta": -50
+      "trend": "up",
+      "trend_delta": 60
     },
     {
       "id": "github:alchaincyf/zhangxuefeng-skill",
