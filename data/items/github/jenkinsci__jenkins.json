@@ -10,7 +10,7 @@
   "canonical_url": "github.com/jenkinsci/jenkins",
   "also_seen": [],
   "company": null,
-  "stars": 18,
+  "stars": 180,
   "momentum": 1,
   "tags": [
     "java"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-27",
-  "last_seen": "2026-07-27",
+  "last_seen": "2026-07-28",
   "stars_history": {
-    "2026-07-27": 18
+    "2026-07-27": 18,
+    "2026-07-28": 180
   }
 }

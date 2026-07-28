@@ -10,7 +10,7 @@
   "canonical_url": "github.com/permissionlesstech/bitchat",
   "also_seen": [],
   "company": null,
-  "stars": 1166,
+  "stars": 2346,
   "momentum": 100,
   "tags": [
     "swift"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-26",
-  "last_seen": "2026-07-27",
+  "last_seen": "2026-07-28",
   "stars_history": {
     "2026-07-26": 1720,
-    "2026-07-27": 1166
+    "2026-07-27": 1166,
+    "2026-07-28": 2346
   }
 }
