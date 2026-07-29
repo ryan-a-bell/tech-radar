@@ -9,13 +9,13 @@
   "canonical_url": "github.com/affaan-m/ecc",
   "also_seen": [],
   "company": null,
-  "stars": 377,
+  "stars": 636,
   "momentum": 100,
   "tags": [
     "javascript"
   ],
   "first_seen": "2026-06-03",
-  "last_seen": "2026-07-26",
+  "last_seen": "2026-07-29",
   "stars_history": {
     "2026-06-03": 2141,
     "2026-06-04": 1736,
@@ -23,7 +23,8 @@
     "2026-06-06": 1361,
     "2026-06-24": 593,
     "2026-07-03": 486,
-    "2026-07-26": 377
+    "2026-07-26": 377,
+    "2026-07-29": 636
   },
   "archived_at": null
 }
