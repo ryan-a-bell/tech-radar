@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-28",
-  "count": 505,
+  "generated": "2026-07-29",
+  "count": 510,
   "items": [
+    {
+      "id": "github:huggingface/speech-to-speech",
+      "name": "speech-to-speech",
+      "description": "Build local voice agents with open-source models",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "canonical_url": "github.com/huggingface/speech-to-speech",
+      "also_seen": [],
+      "company": "Hugging Face",
+      "stars": 227,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 227
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:pascalorg/editor",
+      "name": "editor",
+      "description": "Create and share 3D architectural projects.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pascalorg/editor",
+      "canonical_url": "github.com/pascalorg/editor",
+      "also_seen": [],
+      "company": null,
+      "stars": 341,
+      "momentum": 34,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 341
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:virgiliojr94/book-to-skill",
+      "name": "book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill \u2014 ready to study, reference, and use while you work.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "canonical_url": "github.com/virgiliojr94/book-to-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 423,
+      "momentum": 42,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 423
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:paperswithbacktest/awesome-systematic-trading",
+      "name": "awesome-systematic-trading",
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
+      "also_seen": [],
+      "company": null,
+      "stars": 309,
+      "momentum": 30,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 309
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/agent-governance-toolkit",
+      "name": "agent-governance-toolkit",
+      "description": "AI Agent Governance Toolkit \u2014 Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "canonical_url": "github.com/microsoft/agent-governance-toolkit",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 46
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:ocornut/imgui",
       "name": "imgui",
@@ -95,7 +230,7 @@
       "canonical_url": "github.com/opengeos/geolibre",
       "also_seen": [],
       "company": null,
-      "stars": 420,
+      "stars": 607,
       "momentum": 42,
       "tags": [
         "typescript"
@@ -103,12 +238,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "stars_history": {
-        "2026-07-28": 420
+        "2026-07-28": 420,
+        "2026-07-29": 607
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 187
     },
     {
       "id": "github:nodejs/node",
@@ -157,10 +293,11 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-07-27": 18,
-        "2026-07-28": 180
+        "2026-07-28": 180,
+        "2026-07-29": 180
       },
       "trend": "up",
       "trend_delta": 162
@@ -289,7 +426,7 @@
       "canonical_url": "github.com/yorukot/superfile",
       "also_seen": [],
       "company": null,
-      "stars": 600,
+      "stars": 662,
       "momentum": 33,
       "tags": [
         "go"
@@ -297,14 +434,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-25",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-07-25": 338,
         "2026-07-27": 131,
-        "2026-07-28": 600
+        "2026-07-28": 600,
+        "2026-07-29": 662
       },
       "trend": "up",
-      "trend_delta": 262
+      "trend_delta": 324
     },
     {
       "id": "github:Lordog/dive-into-llms",
@@ -2541,7 +2679,7 @@
       "canonical_url": "github.com/moeru-ai/airi",
       "also_seen": [],
       "company": null,
-      "stars": 572,
+      "stars": 797,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -2549,14 +2687,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-07-14": 78,
         "2026-07-16": 110,
-        "2026-07-28": 572
+        "2026-07-28": 572,
+        "2026-07-29": 797
       },
       "trend": "up",
-      "trend_delta": 462
+      "trend_delta": 687
     },
     {
       "id": "github:OpenCut-app/OpenCut",
@@ -4876,7 +5015,7 @@
       "canonical_url": "github.com/bradautomates/claude-video",
       "also_seen": [],
       "company": null,
-      "stars": 434,
+      "stars": 988,
       "momentum": 42,
       "tags": [
         "python"
@@ -4884,16 +5023,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-07-07": 427,
         "2026-07-08": 965,
         "2026-07-09": 951,
         "2026-07-10": 718,
-        "2026-07-28": 434
+        "2026-07-28": 434,
+        "2026-07-29": 988
       },
-      "trend": "down",
-      "trend_delta": -284
+      "trend": "up",
+      "trend_delta": 270
     },
     {
       "id": "github:sindresorhus/awesome",
@@ -11172,21 +11312,22 @@
       "canonical_url": "github.com/andrewyng/aisuite",
       "also_seen": [],
       "company": null,
-      "stars": 187,
+      "stars": 62,
       "momentum": 13,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-06-13": 132,
         "2026-06-14": 127,
         "2026-07-26": 77,
-        "2026-07-27": 187
+        "2026-07-27": 187,
+        "2026-07-29": 62
       },
-      "trend": "up",
-      "trend_delta": 60
+      "trend": "down",
+      "trend_delta": -65
     },
     {
       "id": "github:alchaincyf/zhangxuefeng-skill",
@@ -13441,13 +13582,13 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 377,
+      "stars": 636,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-06-03": 2141,
         "2026-06-04": 1736,
@@ -13455,11 +13596,12 @@
         "2026-06-06": 1361,
         "2026-06-24": 593,
         "2026-07-03": 486,
-        "2026-07-26": 377
+        "2026-07-26": 377,
+        "2026-07-29": 636
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -109
+      "trend": "up",
+      "trend_delta": 150
     }
   ]
 }
