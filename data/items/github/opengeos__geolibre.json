@@ -10,7 +10,7 @@
   "canonical_url": "github.com/opengeos/geolibre",
   "also_seen": [],
   "company": null,
-  "stars": 607,
+  "stars": 671,
   "momentum": 42,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-28",
-  "last_seen": "2026-07-29",
+  "last_seen": "2026-07-30",
   "stars_history": {
     "2026-07-28": 420,
-    "2026-07-29": 607
+    "2026-07-29": 607,
+    "2026-07-30": 671
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/huggingface/speech-to-speech",
   "also_seen": [],
   "company": "Hugging Face",
-  "stars": 227,
+  "stars": 827,
   "momentum": 22,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-29",
-  "last_seen": "2026-07-29",
+  "last_seen": "2026-07-30",
   "stars_history": {
-    "2026-07-29": 227
+    "2026-07-29": 227,
+    "2026-07-30": 827
   }
 }

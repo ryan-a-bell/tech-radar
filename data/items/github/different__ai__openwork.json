@@ -1,0 +1,25 @@
+{
+  "id": "github:different-ai/openwork",
+  "name": "openwork",
+  "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/different-ai/openwork",
+  "canonical_url": "github.com/different-ai/openwork",
+  "also_seen": [],
+  "company": null,
+  "stars": 97,
+  "momentum": 9,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-30",
+  "last_seen": "2026-07-30",
+  "stars_history": {
+    "2026-07-30": 97
+  }
+}

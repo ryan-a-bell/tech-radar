@@ -10,7 +10,7 @@
   "canonical_url": "github.com/moeru-ai/airi",
   "also_seen": [],
   "company": null,
-  "stars": 797,
+  "stars": 682,
   "momentum": 7,
   "tags": [
     "typescript"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-14",
-  "last_seen": "2026-07-29",
+  "last_seen": "2026-07-30",
   "stars_history": {
     "2026-07-14": 78,
     "2026-07-16": 110,
     "2026-07-28": 572,
-    "2026-07-29": 797
+    "2026-07-29": 797,
+    "2026-07-30": 682
   }
 }

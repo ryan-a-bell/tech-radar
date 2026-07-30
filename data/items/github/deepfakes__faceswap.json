@@ -1,0 +1,25 @@
+{
+  "id": "github:deepfakes/faceswap",
+  "name": "faceswap",
+  "description": "Deepfakes Software For All",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/deepfakes/faceswap",
+  "canonical_url": "github.com/deepfakes/faceswap",
+  "also_seen": [],
+  "company": null,
+  "stars": 166,
+  "momentum": 16,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-30",
+  "last_seen": "2026-07-30",
+  "stars_history": {
+    "2026-07-30": 166
+  }
+}
