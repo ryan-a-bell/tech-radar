@@ -1,7 +1,142 @@
 {
-  "generated": "2026-07-29",
-  "count": 510,
+  "generated": "2026-07-30",
+  "count": 515,
   "items": [
+    {
+      "id": "github:grokability/snipe-it",
+      "name": "snipe-it",
+      "description": "A free open source IT asset/license management system",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/grokability/snipe-it",
+      "canonical_url": "github.com/grokability/snipe-it",
+      "also_seen": [],
+      "company": null,
+      "stars": 164,
+      "momentum": 16,
+      "tags": [
+        "php"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 164
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:different-ai/openwork",
+      "name": "openwork",
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/different-ai/openwork",
+      "canonical_url": "github.com/different-ai/openwork",
+      "also_seen": [],
+      "company": null,
+      "stars": 97,
+      "momentum": 9,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 97
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:deepfakes/faceswap",
+      "name": "faceswap",
+      "description": "Deepfakes Software For All",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/deepfakes/faceswap",
+      "canonical_url": "github.com/deepfakes/faceswap",
+      "also_seen": [],
+      "company": null,
+      "stars": 166,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 166
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MoonshotAI/FlashKDA",
+      "name": "FlashKDA",
+      "description": "FlashKDA: high-performance Kimi Delta Attention kernels",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MoonshotAI/FlashKDA",
+      "canonical_url": "github.com/moonshotai/flashkda",
+      "also_seen": [],
+      "company": null,
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "cuda"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:maderix/ANE",
+      "name": "ANE",
+      "description": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/maderix/ANE",
+      "canonical_url": "github.com/maderix/ane",
+      "also_seen": [],
+      "company": null,
+      "stars": 22,
+      "momentum": 2,
+      "tags": [
+        "objective-c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 22
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:huggingface/speech-to-speech",
       "name": "speech-to-speech",
@@ -14,7 +149,7 @@
       "canonical_url": "github.com/huggingface/speech-to-speech",
       "also_seen": [],
       "company": "Hugging Face",
-      "stars": 227,
+      "stars": 827,
       "momentum": 22,
       "tags": [
         "python"
@@ -22,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
-        "2026-07-29": 227
+        "2026-07-29": 227,
+        "2026-07-30": 827
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 600
     },
     {
       "id": "github:pascalorg/editor",
@@ -41,7 +177,7 @@
       "canonical_url": "github.com/pascalorg/editor",
       "also_seen": [],
       "company": null,
-      "stars": 341,
+      "stars": 1022,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -49,12 +185,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
-        "2026-07-29": 341
+        "2026-07-29": 341,
+        "2026-07-30": 1022
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 681
     },
     {
       "id": "github:virgiliojr94/book-to-skill",
@@ -68,7 +205,7 @@
       "canonical_url": "github.com/virgiliojr94/book-to-skill",
       "also_seen": [],
       "company": null,
-      "stars": 423,
+      "stars": 1421,
       "momentum": 42,
       "tags": [
         "python"
@@ -76,12 +213,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
-        "2026-07-29": 423
+        "2026-07-29": 423,
+        "2026-07-30": 1421
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 998
     },
     {
       "id": "github:paperswithbacktest/awesome-systematic-trading",
@@ -95,7 +233,7 @@
       "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 945,
       "momentum": 30,
       "tags": [
         "python"
@@ -103,12 +241,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
-        "2026-07-29": 309
+        "2026-07-29": 309,
+        "2026-07-30": 945
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 636
     },
     {
       "id": "github:microsoft/agent-governance-toolkit",
@@ -230,7 +369,7 @@
       "canonical_url": "github.com/opengeos/geolibre",
       "also_seen": [],
       "company": null,
-      "stars": 607,
+      "stars": 671,
       "momentum": 42,
       "tags": [
         "typescript"
@@ -238,13 +377,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-07-28": 420,
-        "2026-07-29": 607
+        "2026-07-29": 607,
+        "2026-07-30": 671
       },
       "trend": "up",
-      "trend_delta": 187
+      "trend_delta": 251
     },
     {
       "id": "github:nodejs/node",
@@ -513,7 +653,7 @@
       "canonical_url": "github.com/alibaba/open-code-review",
       "also_seen": [],
       "company": null,
-      "stars": 979,
+      "stars": 359,
       "momentum": 18,
       "tags": [
         "go"
@@ -521,15 +661,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-07-24": 180,
         "2026-07-26": 431,
         "2026-07-27": 832,
-        "2026-07-28": 979
+        "2026-07-28": 979,
+        "2026-07-30": 359
       },
       "trend": "up",
-      "trend_delta": 799
+      "trend_delta": 179
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -2679,7 +2820,7 @@
       "canonical_url": "github.com/moeru-ai/airi",
       "also_seen": [],
       "company": null,
-      "stars": 797,
+      "stars": 682,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -2687,15 +2828,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-07-14": 78,
         "2026-07-16": 110,
         "2026-07-28": 572,
-        "2026-07-29": 797
+        "2026-07-29": 797,
+        "2026-07-30": 682
       },
       "trend": "up",
-      "trend_delta": 687
+      "trend_delta": 572
     },
     {
       "id": "github:OpenCut-app/OpenCut",
@@ -9511,7 +9653,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 362,
+      "stars": 154,
       "momentum": 34,
       "tags": [
         "python"
@@ -9519,16 +9661,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-25": 347,
         "2026-06-26": 398,
         "2026-06-27": 673,
         "2026-06-28": 394,
-        "2026-07-28": 362
+        "2026-07-28": 362,
+        "2026-07-30": 154
       },
       "trend": "down",
-      "trend_delta": -32
+      "trend_delta": -240
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -9932,21 +10075,22 @@
       "canonical_url": "github.com/1jehuang/jcode",
       "also_seen": [],
       "company": null,
-      "stars": 843,
+      "stars": 640,
       "momentum": 8,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-21": 87,
         "2026-07-20": 235,
         "2026-07-21": 568,
-        "2026-07-22": 843
+        "2026-07-22": 843,
+        "2026-07-30": 640
       },
-      "trend": "up",
-      "trend_delta": 756
+      "trend": "down",
+      "trend_delta": -203
     },
     {
       "id": "github:bytedance/deer-flow",
@@ -12555,13 +12699,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 479,
+      "stars": 616,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-26",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -12580,11 +12724,12 @@
         "2026-07-09": 1116,
         "2026-07-11": 1013,
         "2026-07-12": 740,
-        "2026-07-26": 479
+        "2026-07-26": 479,
+        "2026-07-30": 616
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -261
+      "trend_delta": -124
     },
     {
       "id": "github:openai/plugins",
@@ -12792,19 +12937,20 @@
       "canonical_url": "github.com/microsoft/vibevoice",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 216,
+      "stars": 336,
       "momentum": 21,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-07",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-06": 219,
-        "2026-06-07": 216
+        "2026-06-07": 216,
+        "2026-07-30": 336
       },
-      "trend": "down",
-      "trend_delta": -3
+      "trend": "up",
+      "trend_delta": 120
     },
     {
       "id": "github:danielmiessler/Personal_AI_Infrastructure",
@@ -13582,13 +13728,13 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 636,
+      "stars": 857,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-03": 2141,
         "2026-06-04": 1736,
@@ -13597,11 +13743,12 @@
         "2026-06-24": 593,
         "2026-07-03": 486,
         "2026-07-26": 377,
-        "2026-07-29": 636
+        "2026-07-29": 636,
+        "2026-07-30": 857
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 150
+      "trend_delta": 371
     }
   ]
 }
