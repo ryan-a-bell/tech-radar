@@ -1,7 +1,61 @@
 {
-  "generated": "2026-07-30",
-  "count": 515,
+  "generated": "2026-07-31",
+  "count": 517,
   "items": [
+    {
+      "id": "github:agavra/tuicr",
+      "name": "tuicr",
+      "description": "a code review TUI with vim keybindings",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/agavra/tuicr",
+      "canonical_url": "github.com/agavra/tuicr",
+      "also_seen": [],
+      "company": null,
+      "stars": 190,
+      "momentum": 19,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "stars_history": {
+        "2026-07-31": 190
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:WhiskeySockets/Baileys",
+      "name": "Baileys",
+      "description": "Socket-based TS/JavaScript API for WhatsApp Web",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/WhiskeySockets/Baileys",
+      "canonical_url": "github.com/whiskeysockets/baileys",
+      "also_seen": [],
+      "company": null,
+      "stars": 19,
+      "momentum": 1,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "stars_history": {
+        "2026-07-31": 19
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:grokability/snipe-it",
       "name": "snipe-it",
@@ -41,7 +95,7 @@
       "canonical_url": "github.com/different-ai/openwork",
       "also_seen": [],
       "company": null,
-      "stars": 97,
+      "stars": 915,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -49,12 +103,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "stars_history": {
-        "2026-07-30": 97
+        "2026-07-30": 97,
+        "2026-07-31": 915
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 818
     },
     {
       "id": "github:deepfakes/faceswap",
@@ -149,7 +204,7 @@
       "canonical_url": "github.com/huggingface/speech-to-speech",
       "also_seen": [],
       "company": "Hugging Face",
-      "stars": 827,
+      "stars": 628,
       "momentum": 22,
       "tags": [
         "python"
@@ -157,13 +212,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-29": 227,
-        "2026-07-30": 827
+        "2026-07-30": 827,
+        "2026-07-31": 628
       },
       "trend": "up",
-      "trend_delta": 600
+      "trend_delta": 401
     },
     {
       "id": "github:pascalorg/editor",
@@ -177,7 +233,7 @@
       "canonical_url": "github.com/pascalorg/editor",
       "also_seen": [],
       "company": null,
-      "stars": 1022,
+      "stars": 625,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -185,13 +241,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-29": 341,
-        "2026-07-30": 1022
+        "2026-07-30": 1022,
+        "2026-07-31": 625
       },
       "trend": "up",
-      "trend_delta": 681
+      "trend_delta": 284
     },
     {
       "id": "github:virgiliojr94/book-to-skill",
@@ -233,7 +290,7 @@
       "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
       "also_seen": [],
       "company": null,
-      "stars": 945,
+      "stars": 621,
       "momentum": 30,
       "tags": [
         "python"
@@ -241,13 +298,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-29": 309,
-        "2026-07-30": 945
+        "2026-07-30": 945,
+        "2026-07-31": 621
       },
       "trend": "up",
-      "trend_delta": 636
+      "trend_delta": 312
     },
     {
       "id": "github:microsoft/agent-governance-toolkit",
@@ -425,7 +483,7 @@
       "canonical_url": "github.com/jenkinsci/jenkins",
       "also_seen": [],
       "company": null,
-      "stars": 180,
+      "stars": 25,
       "momentum": 1,
       "tags": [
         "java"
@@ -433,14 +491,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-27": 18,
         "2026-07-28": 180,
-        "2026-07-29": 180
+        "2026-07-29": 180,
+        "2026-07-31": 25
       },
       "trend": "up",
-      "trend_delta": 162
+      "trend_delta": 7
     },
     {
       "id": "github:pbakaus/impeccable",
@@ -5636,7 +5695,7 @@
       "canonical_url": "github.com/ansible/ansible",
       "also_seen": [],
       "company": null,
-      "stars": 24,
+      "stars": 29,
       "momentum": 6,
       "tags": [
         "python"
@@ -5644,13 +5703,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-04": 65,
-        "2026-07-12": 24
+        "2026-07-12": 24,
+        "2026-07-31": 29
       },
-      "trend": "down",
-      "trend_delta": -41
+      "trend": "up",
+      "trend_delta": 5
     },
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -6058,7 +6118,7 @@
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 304,
+      "stars": 80,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -6066,14 +6126,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-03": 104,
         "2026-07-04": 405,
-        "2026-07-05": 304
+        "2026-07-05": 304,
+        "2026-07-31": 80
       },
-      "trend": "up",
-      "trend_delta": 200
+      "trend": "down",
+      "trend_delta": -224
     },
     {
       "id": "github:actions/checkout",
@@ -7205,7 +7266,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 1096,
+      "stars": 155,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -7213,13 +7274,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-01": 252,
-        "2026-07-02": 1096
+        "2026-07-02": 1096,
+        "2026-07-31": 155
       },
-      "trend": "up",
-      "trend_delta": 844
+      "trend": "down",
+      "trend_delta": -941
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -10480,19 +10542,20 @@
       "canonical_url": "github.com/dotnet/aspnetcore",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 4,
+      "stars": 7,
       "momentum": 1,
       "tags": [
         "c#"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-19": 14,
-        "2026-07-12": 4
+        "2026-07-12": 4,
+        "2026-07-31": 7
       },
-      "trend": "down",
-      "trend_delta": -10
+      "trend": "up",
+      "trend_delta": 3
     },
     {
       "id": "github:LibreTranslate/LibreTranslate",
@@ -11793,22 +11856,23 @@
       "canonical_url": "github.com/microsoft/powertoys",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 39,
+      "stars": 70,
       "momentum": 9,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-12": 90,
         "2026-06-13": 374,
         "2026-06-14": 370,
         "2026-06-28": 57,
-        "2026-07-12": 39
+        "2026-07-12": 39,
+        "2026-07-31": 70
       },
-      "trend": "down",
-      "trend_delta": -18
+      "trend": "up",
+      "trend_delta": 31
     },
     {
       "id": "github:LMCache/LMCache",
@@ -13158,13 +13222,13 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 240,
+      "stars": 378,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
@@ -13176,10 +13240,11 @@
         "2026-06-11": 2535,
         "2026-07-07": 458,
         "2026-07-09": 352,
-        "2026-07-28": 240
+        "2026-07-28": 240,
+        "2026-07-31": 378
       },
-      "trend": "down",
-      "trend_delta": -112
+      "trend": "up",
+      "trend_delta": 26
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -13728,13 +13793,13 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 857,
+      "stars": 804,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-03": 2141,
         "2026-06-04": 1736,
@@ -13744,11 +13809,12 @@
         "2026-07-03": 486,
         "2026-07-26": 377,
         "2026-07-29": 636,
-        "2026-07-30": 857
+        "2026-07-30": 857,
+        "2026-07-31": 804
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 371
+      "trend_delta": 318
     }
   ]
 }
