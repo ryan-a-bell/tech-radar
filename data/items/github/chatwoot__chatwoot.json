@@ -10,13 +10,13 @@
   "canonical_url": "github.com/chatwoot/chatwoot",
   "also_seen": [],
   "company": null,
-  "stars": 264,
+  "stars": 35,
   "momentum": 6,
   "tags": [
     "ruby"
   ],
   "first_seen": "2026-06-12",
-  "last_seen": "2026-06-18",
+  "last_seen": "2026-08-01",
   "stars_history": {
     "2026-06-12": 67,
     "2026-06-13": 86,
@@ -24,6 +24,7 @@
     "2026-06-15": 400,
     "2026-06-16": 431,
     "2026-06-17": 400,
-    "2026-06-18": 264
+    "2026-06-18": 264,
+    "2026-08-01": 35
   }
 }

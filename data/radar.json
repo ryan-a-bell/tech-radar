@@ -1,7 +1,88 @@
 {
-  "generated": "2026-07-31",
-  "count": 517,
+  "generated": "2026-08-01",
+  "count": 520,
   "items": [
+    {
+      "id": "github:zhaoxuya520/reverse-skill",
+      "name": "reverse-skill",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients \u9006\u5411/\u6e17\u900f/\u5b89\u5168\u6280\u80fd\u8def\u7531\u5305 - AI \u81ea\u52a8\u8def\u7531 + \u6309\u9700\u81ea\u4e3e\u5de5\u5177\u94fe + \u81ea\u52a8\u8fdb\u5316\u7ecf\u9a8c\u5e93 | \u652f\u6301 Claude Code / Kiro / Cursor / Cline \u7b49\u4ee3\u7801 AI \u5ba2\u6237\u7aef",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "canonical_url": "github.com/zhaoxuya520/reverse-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 335,
+      "momentum": 33,
+      "tags": [
+        "powershell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-08-01": 335
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:usekaneo/kaneo",
+      "name": "kaneo",
+      "description": "\ud83c\udfaf All you need. Nothing you don't. Open source project management that works for you, not against you.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/usekaneo/kaneo",
+      "canonical_url": "github.com/usekaneo/kaneo",
+      "also_seen": [],
+      "company": null,
+      "stars": 194,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-08-01": 194
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:geo-tp/ESP32-Bit-Pirate",
+      "name": "ESP32-Bit-Pirate",
+      "description": "A Hardware Hacking Tool with Web-Based CLI That Speaks Every Protocol",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+      "canonical_url": "github.com/geo-tp/esp32-bit-pirate",
+      "also_seen": [],
+      "company": null,
+      "stars": 83,
+      "momentum": 8,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-08-01": 83
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:agavra/tuicr",
       "name": "tuicr",
@@ -14,7 +95,7 @@
       "canonical_url": "github.com/agavra/tuicr",
       "also_seen": [],
       "company": null,
-      "stars": 190,
+      "stars": 335,
       "momentum": 19,
       "tags": [
         "rust"
@@ -22,12 +103,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-31",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
       "stars_history": {
-        "2026-07-31": 190
+        "2026-07-31": 190,
+        "2026-08-01": 335
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 145
     },
     {
       "id": "github:WhiskeySockets/Baileys",
@@ -95,7 +177,7 @@
       "canonical_url": "github.com/different-ai/openwork",
       "also_seen": [],
       "company": null,
-      "stars": 915,
+      "stars": 806,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -103,13 +185,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-07-30": 97,
-        "2026-07-31": 915
+        "2026-07-31": 915,
+        "2026-08-01": 806
       },
       "trend": "up",
-      "trend_delta": 818
+      "trend_delta": 709
     },
     {
       "id": "github:deepfakes/faceswap",
@@ -123,7 +206,7 @@
       "canonical_url": "github.com/deepfakes/faceswap",
       "also_seen": [],
       "company": null,
-      "stars": 166,
+      "stars": 93,
       "momentum": 16,
       "tags": [
         "python"
@@ -131,12 +214,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-01",
       "stars_history": {
-        "2026-07-30": 166
+        "2026-07-30": 166,
+        "2026-08-01": 93
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -73
     },
     {
       "id": "github:MoonshotAI/FlashKDA",
@@ -290,7 +374,7 @@
       "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
       "also_seen": [],
       "company": null,
-      "stars": 621,
+      "stars": 763,
       "momentum": 30,
       "tags": [
         "python"
@@ -298,14 +382,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-07-29": 309,
         "2026-07-30": 945,
-        "2026-07-31": 621
+        "2026-07-31": 621,
+        "2026-08-01": 763
       },
       "trend": "up",
-      "trend_delta": 312
+      "trend_delta": 454
     },
     {
       "id": "github:microsoft/agent-governance-toolkit",
@@ -7266,7 +7351,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 155,
+      "stars": 1592,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -7274,14 +7359,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-07-01": 252,
         "2026-07-02": 1096,
-        "2026-07-31": 155
+        "2026-07-31": 155,
+        "2026-08-01": 1592
       },
-      "trend": "down",
-      "trend_delta": -941
+      "trend": "up",
+      "trend_delta": 496
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -10137,22 +10223,23 @@
       "canonical_url": "github.com/1jehuang/jcode",
       "also_seen": [],
       "company": null,
-      "stars": 640,
+      "stars": 527,
       "momentum": 8,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-06-21": 87,
         "2026-07-20": 235,
         "2026-07-21": 568,
         "2026-07-22": 843,
-        "2026-07-30": 640
+        "2026-07-30": 640,
+        "2026-08-01": 527
       },
       "trend": "down",
-      "trend_delta": -203
+      "trend_delta": -316
     },
     {
       "id": "github:bytedance/deer-flow",
@@ -11736,13 +11823,13 @@
       "canonical_url": "github.com/chatwoot/chatwoot",
       "also_seen": [],
       "company": null,
-      "stars": 264,
+      "stars": 35,
       "momentum": 6,
       "tags": [
         "ruby"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-06-12": 67,
         "2026-06-13": 86,
@@ -11750,10 +11837,11 @@
         "2026-06-15": 400,
         "2026-06-16": 431,
         "2026-06-17": 400,
-        "2026-06-18": 264
+        "2026-06-18": 264,
+        "2026-08-01": 35
       },
-      "trend": "up",
-      "trend_delta": 197
+      "trend": "down",
+      "trend_delta": -229
     },
     {
       "id": "github:kenn-io/agentsview",
@@ -13222,13 +13310,13 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 378,
+      "stars": 658,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
@@ -13241,10 +13329,11 @@
         "2026-07-07": 458,
         "2026-07-09": 352,
         "2026-07-28": 240,
-        "2026-07-31": 378
+        "2026-07-31": 378,
+        "2026-08-01": 658
       },
       "trend": "up",
-      "trend_delta": 26
+      "trend_delta": 306
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -13283,23 +13372,24 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 39,
+      "stars": 7,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
         "2026-06-06": 309,
         "2026-07-17": 13,
         "2026-07-18": 233,
-        "2026-07-20": 39
+        "2026-07-20": 39,
+        "2026-08-01": 7
       },
       "trend": "down",
-      "trend_delta": -270
+      "trend_delta": -32
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",

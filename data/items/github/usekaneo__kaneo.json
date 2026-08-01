@@ -1,0 +1,25 @@
+{
+  "id": "github:usekaneo/kaneo",
+  "name": "kaneo",
+  "description": "\ud83c\udfaf All you need. Nothing you don't. Open source project management that works for you, not against you.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/usekaneo/kaneo",
+  "canonical_url": "github.com/usekaneo/kaneo",
+  "also_seen": [],
+  "company": null,
+  "stars": 194,
+  "momentum": 19,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-01",
+  "last_seen": "2026-08-01",
+  "stars_history": {
+    "2026-08-01": 194
+  }
+}
