@@ -6,7 +6,8 @@ import React, { useState, useMemo, useEffect } from "react";
    (snapshot of everything at once) pinned beside a scrollable, readable
    card list — same idea as dashboard.jsx's Atlas view, adapted so a
    glance replaces "quadrant" with "topic" and "ring" with consumption
-   status (Discovered → Reading → Read).
+   status (Discovered → Queued → Reading → Read, with Shelved as the
+   deliberate "not for now, maybe later" set-aside).
 
    Holds mixed learning content — books, articles, and videos — in one
    list, each item carrying a `type`. Reuses the same curated TOPICS
@@ -21,11 +22,15 @@ import React, { useState, useMemo, useEffect } from "react";
 const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Data Feeds"];
 
 // Status radius order mirrors the tech radar: the most "resolved" state
-// sits innermost (Read ~ Adopted), the inbox sits outermost (Discovered).
-const STATUS_ORDER = ["Read", "Reading", "Discovered"];
-const STATUS_COLOR = { Discovered: "#6d4fc4", Reading: "#1d6fb8", Read: "#1a7f4b" };
-const STATUS_BG = { Discovered: "#f6f1ff", Reading: "#eef6ff", Read: "#eefbf3" };
-const STATUS_LABEL = { Discovered: "Discovered", Reading: "In Progress", Read: "Done" };
+// sits innermost (Read ~ Adopted), the inbox sits outermost (Discovered),
+// and Shelved sits furthest out of all — a deliberate "not now" set-aside,
+// same role Archived plays on the tech radar's own RING_ORDER. Queued sits
+// between Discovered and Reading: found it AND decided to read it, just
+// hasn't started — distinct from Shelved, which is "not for now."
+const STATUS_ORDER = ["Read", "Reading", "Queued", "Discovered", "Shelved"];
+const STATUS_COLOR = { Discovered: "#6d4fc4", Queued: "#c17a1a", Reading: "#1d6fb8", Read: "#1a7f4b", Shelved: "#7a7364" };
+const STATUS_BG = { Discovered: "#f6f1ff", Queued: "#fdf3e6", Reading: "#eef6ff", Read: "#eefbf3", Shelved: "#efece2" };
+const STATUS_LABEL = { Discovered: "Discovered", Queued: "Queued", Reading: "In Progress", Read: "Done", Shelved: "Shelved" };
 
 // Content types. A small glyph + label brands each card so books,
 // articles and videos are distinguishable at a glance without color
@@ -40,6 +45,8 @@ const SAMPLE = {
   items: [
     { id: "ddia", type: "book", title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", year: 2017, status: "Read", topics: ["Data Feeds", "Skills"], pages: 616, rating: 5, finished: "2026-03-02", blurb: "The reference for how reliable, scalable systems actually store and move data — replication, partitioning, and the tradeoffs behind every database pitch deck." },
     { id: "afml", type: "book", title: "Advances in Financial Machine Learning", author: "Marcos López de Prado", year: 2018, status: "Reading", topics: ["Quant", "ML", "Trading"], pages: 400, pages_read: 210, started: "2026-06-01", blurb: "Why most backtests lie, and a rebuild of the ML pipeline for finance from labeling to cross-validation." },
+    { id: "team-topologies", type: "book", title: "Team Topologies", author: "Matthew Skelton & Manuel Pais", year: 2019, status: "Queued", topics: ["Skills"], pages: 245, added: "2026-06-15", queued: "2026-07-25", blurb: "Recommended by three separate engineers this quarter — finally queuing it." },
+    { id: "ssml-trading", type: "book", title: "Statistically Sound Machine Learning for Automated Trading of Financial Instruments", author: "David Aronson & Timothy Masters", year: 2013, status: "Shelved", topics: ["Trading", "Quant", "ML"], pages: 244, added: "2026-07-17", shelved: "2026-07-28", shelved_note: "Skimmed the first two chapters — solid on avoiding overfit, but heavier stats-textbook density than useful right now. Revisit once actively building a walk-forward validation pipeline.", blurb: "Building predictive-model trading systems with the TSSB platform, with a hard focus on avoiding overfit and validating that an edge is real rather than data-mined noise." },
     { id: "attention", type: "article", title: "Attention Is All You Need", author: "Vaswani et al.", source: "arXiv", url: "https://arxiv.org/abs/1706.03762", year: 2017, status: "Read", topics: ["ML", "AI"], minutes: 40, rating: 5, finished: "2025-08-11", blurb: "The transformer paper. Worth reading in the original once — every later 'attention' explainer is a gloss on this." },
     { id: "karpathy-gpt", type: "video", title: "Let's build GPT: from scratch, in code, spelled out", author: "Andrej Karpathy", source: "YouTube", url: "https://www.youtube.com/watch?v=kCc8FmEb1nY", year: 2023, status: "Reading", topics: ["ML", "AI"], duration: "1h 56m", started: "2026-07-10", blurb: "Hands-on build of a GPT from the ground up — the clearest walk from bigram model to a working transformer you can find." },
   ],
@@ -52,7 +59,7 @@ function daysAgo(iso) {
 
 /* The date an item was last "touched" by its current status — used for
    the default sort and the "recently touched" sort option. */
-function touchedDate(b) { return b.finished || b.started || b.added || "0000-00-00"; }
+function touchedDate(b) { return b.finished || b.started || b.shelved || b.queued || b.added || "0000-00-00"; }
 
 /* Human "length" label per content type — pages for books, read-time for
    articles, runtime for videos. Returns "" if the item carries no length. */
@@ -225,28 +232,38 @@ function CardFoot({ b }) {
   if (b.status === "Read") {
     return (<><span>finished {b.finished}</span>{b.rating ? <Stars rating={b.rating} /> : (b.url ? <OpenLink url={b.url} small /> : <span>{len}</span>)}</>);
   }
+  if (b.status === "Queued") {
+    return (<><span>{b.queued ? `queued ${b.queued} · ${daysAgo(b.queued)}d ago` : "queued to read"}</span><span>{b.url ? <OpenLink url={b.url} small /> : len}</span></>);
+  }
+  if (b.status === "Shelved") {
+    return (<><span>{b.shelved ? `shelved ${b.shelved}` : "shelved"}</span><span>{b.url ? <OpenLink url={b.url} small /> : len}</span></>);
+  }
   return (<><span>{b.added ? `added ${b.added} · ${daysAgo(b.added)}d ago` : len}</span><span>{b.url ? <OpenLink url={b.url} small /> : len}</span></>);
 }
 
 /* ===================== RADAR PLOT =====================
-   Rings encode consumption status (Read innermost, Discovered outermost —
-   the same "most resolved sits closest to center" logic as the tech
-   radar's Adopted→Archived ordering). Sectors encode topic, one per
-   entry in TOPICS, instead of the tech radar's 4 quadrants. */
+   Rings encode consumption status, most-resolved sits closest to center —
+   the same logic as the tech radar's Adopted→Archived ordering:
+     Read (done) → Reading (active) → Queued (decided to read, not started)
+     → Discovered (inbox, undecided) → Shelved (decided NOT for now).
+   Shelved sits furthest out — a deliberate set-aside, not a "less far
+   along" state, mirroring Archived's spot at the end of the tech radar's
+   own RING_ORDER. Sectors encode topic, one per entry in TOPICS, instead
+   of the tech radar's 4 quadrants. */
 function RadarPlot({ items, statusFilter, setStatusFilter, topicFilter, setTopicFilter, hoverId, setHoverId, onSelect }) {
   // Extra horizontal/vertical margin (beyond the label radius) so topic
   // labels near 0°/180°/90°/270° have room for their full text instead of
   // clipping against the SVG edge — works for any topic count, odd or even.
-  const width = 600, height = 560, cx = 300, cy = 280;
-  const ringR = { Read: 68, Reading: 148, Discovered: 214 };
-  const ringInner = { Read: 12, Reading: 68, Discovered: 148 };
-  const labelR = 228;
+  const width = 720, height = 640, cx = 360, cy = 310;
+  const ringR = { Read: 60, Reading: 112, Queued: 164, Discovered: 216, Shelved: 268 };
+  const ringInner = { Read: 12, Reading: 60, Queued: 112, Discovered: 164, Shelved: 216 };
+  const labelR = 284;
   const sectorSpan = (Math.PI * 2) / TOPICS.length;
 
   const placed = useMemo(() => items.map((b) => {
     const topicIdx = Math.max(0, TOPICS.indexOf((b.topics || [])[0]));
-    const inner = ringInner[b.status] ?? 148;
-    const outer = ringR[b.status] ?? 214;
+    const inner = ringInner[b.status] ?? 164;
+    const outer = ringR[b.status] ?? 216;
     const h = hashStr(b.id);
     const pad = sectorSpan * 0.16;
     const frac = (h % 1000) / 1000;
@@ -261,10 +278,10 @@ function RadarPlot({ items, statusFilter, setStatusFilter, topicFilter, setTopic
       {STATUS_ORDER.map((key) => (
         <g key={key}>
           <circle cx={cx} cy={cy} r={ringR[key]} fill="none"
-            stroke={key === "Discovered" ? STATUS_COLOR.Discovered : "#1a1a1a"}
-            strokeOpacity={key === "Discovered" ? 0.45 : 0.18}
+            stroke={key === "Shelved" ? STATUS_COLOR.Shelved : "#1a1a1a"}
+            strokeOpacity={key === "Shelved" ? 0.45 : 0.18}
             strokeWidth="1"
-            strokeDasharray={key === "Discovered" ? "3 4" : "0"} />
+            strokeDasharray={key === "Shelved" ? "3 4" : "0"} />
           <text x={cx} y={cy - ringR[key] + 12} textAnchor="middle"
             fill={STATUS_COLOR[key]}
             style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.5, cursor: "pointer" }}
@@ -281,7 +298,7 @@ function RadarPlot({ items, statusFilter, setStatusFilter, topicFilter, setTopic
         return (
           <line key={i}
             x1={cx} y1={cy}
-            x2={cx + Math.cos(ang) * 220} y2={cy - Math.sin(ang) * 220}
+            x2={cx + Math.cos(ang) * 272} y2={cy - Math.sin(ang) * 272}
             stroke="#1a1a1a" strokeOpacity="0.14" />
         );
       })}
@@ -316,7 +333,8 @@ function RadarPlot({ items, statusFilter, setStatusFilter, topicFilter, setTopic
                 stroke={color} strokeWidth={isHover ? 1.5 : 1} opacity={isHover ? 0.7 : 0.35} />
             )}
             <circle cx={b.x} cy={b.y} r={isHover ? 7 : 5} fill={color}
-              stroke={isHover ? "#1a1a1a" : "#fffdf7"} strokeWidth={isHover ? 2 : 1.5} />
+              stroke={isHover ? "#1a1a1a" : "#fffdf7"} strokeWidth={isHover ? 2 : 1.5}
+              opacity={!isHover && b.status === "Shelved" ? 0.55 : 1} />
           </g>
         );
       })}
@@ -355,6 +373,12 @@ function ItemCard({ b, hoverId, setHoverId, onSelect }) {
         margin: "0 0 10px", fontSize: 12.5, lineHeight: 1.5, color: "#33312b",
         display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden",
       }}>{b.blurb}</p>
+      {b.status === "Shelved" && b.shelved_note && (
+        <p style={{
+          margin: "0 0 10px", fontSize: 11.5, lineHeight: 1.5, fontStyle: "italic",
+          color: STATUS_COLOR.Shelved, borderLeft: `2px solid ${STATUS_COLOR.Shelved}`, paddingLeft: 8,
+        }}>{b.shelved_note}</p>
+      )}
       <TopicChips topics={b.topics} />
       <div style={{
         borderTop: "1px solid #d8d2c4", paddingTop: 8,
@@ -406,6 +430,12 @@ function DetailModal({ item, onClose }) {
           {byline(b)}
         </div>
         <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#33312b", margin: "0 0 14px" }}>{b.blurb}</p>
+        {b.status === "Shelved" && b.shelved_note && (
+          <p style={{
+            fontSize: 13, lineHeight: 1.6, fontStyle: "italic", color: STATUS_COLOR.Shelved,
+            borderLeft: `2px solid ${STATUS_COLOR.Shelved}`, paddingLeft: 10, margin: "0 0 14px",
+          }}>{b.shelved_note}</p>
+        )}
         {b.url && (
           <div style={{ margin: "0 0 14px" }}><OpenLink url={b.url} /></div>
         )}
@@ -422,8 +452,14 @@ function DetailModal({ item, onClose }) {
           {b.status === "Read" && (
             <><span>finished {b.finished}{len ? ` · ${len}` : ""}</span><Stars rating={b.rating} /></>
           )}
+          {b.status === "Queued" && (
+            <span>{b.queued ? `queued ${b.queued}` : "queued to read"}{len ? ` · ${len}` : ""}</span>
+          )}
           {b.status === "Discovered" && (
-            <span>{b.added ? `added ${b.added}` : "queued"}{len ? ` · ${len}` : ""}</span>
+            <span>{b.added ? `added ${b.added}` : "discovered"}{len ? ` · ${len}` : ""}</span>
+          )}
+          {b.status === "Shelved" && (
+            <span>{b.shelved ? `shelved ${b.shelved}` : "shelved"}{len ? ` · ${len}` : ""}</span>
           )}
         </div>
       </article>
@@ -472,8 +508,11 @@ export default function LearningApp() {
 
   const sorted = useMemo(() => {
     const arr = [...scored];
-    const rank = { Discovered: 0, Reading: 0, Read: 1 };
-    const statusIdx = { Discovered: 0, Reading: 1, Read: 2 };
+    // default sort buckets: active/inbox items first (Discovered, Queued,
+    // Reading), then Read, then Shelved last — parked out of the way, still
+    // reachable via filter or the "By status" sort.
+    const rank = { Discovered: 0, Queued: 0, Reading: 0, Read: 1, Shelved: 2 };
+    const statusIdx = { Discovered: 0, Queued: 1, Reading: 2, Read: 3, Shelved: 4 };
     switch (sortBy) {
       case "relevance":
         return arr.sort((a, b) => query ? b.score - a.score : touchedDate(b.b).localeCompare(touchedDate(a.b))).map((x) => x.b);
@@ -498,7 +537,7 @@ export default function LearningApp() {
     );
   }
 
-  const counts = { Discovered: 0, Reading: 0, Read: 0 };
+  const counts = { Discovered: 0, Queued: 0, Reading: 0, Read: 0, Shelved: 0 };
   allItems.forEach((b) => { if (counts[b.status] !== undefined) counts[b.status]++; });
   const typeCounts = { book: 0, article: 0, video: 0 };
   allItems.forEach((b) => { if (typeCounts[b.type] !== undefined) typeCounts[b.type]++; });
@@ -604,8 +643,10 @@ export default function LearningApp() {
           <Stat label="ARTICLES" value={typeCounts.article} />
           <Stat label="VIDEOS" value={typeCounts.video} />
           <Stat label="DISCOVERED" value={counts.Discovered} color={STATUS_COLOR.Discovered} />
+          <Stat label="QUEUED" value={counts.Queued} color={STATUS_COLOR.Queued} />
           <Stat label="IN PROGRESS" value={counts.Reading} color={STATUS_COLOR.Reading} />
           <Stat label="DONE" value={counts.Read} color={STATUS_COLOR.Read} />
+          <Stat label="SHELVED" value={counts.Shelved} color={STATUS_COLOR.Shelved} />
           <Stat label="SHOWN" value={sorted.length} />
         </div>
 
@@ -639,7 +680,7 @@ export default function LearningApp() {
               background: "#fffdf7", border: "1.5px solid #1a1a1a", color: "#1a1a1a",
               padding: "5px 28px 5px 10px", cursor: "pointer", appearance: "none", borderRadius: 0,
             }}>
-              <option value="default">Discovered &amp; in progress first, then recent</option>
+              <option value="default">Active first (discovered, queued, reading), then recent</option>
               <option value="relevance">Search relevance</option>
               <option value="status">By status</option>
               <option value="title">Title (A → Z)</option>
