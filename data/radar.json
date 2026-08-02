@@ -1,7 +1,169 @@
 {
-  "generated": "2026-08-01",
-  "count": 520,
+  "generated": "2026-08-02",
+  "count": 526,
   "items": [
+    {
+      "id": "github:abus-aikorea/voice-pro",
+      "name": "voice-pro",
+      "description": "Gradio WebUI for creators and developers, featuring key TTS (Edge-TTS, kokoro) and zero-shot Voice Cloning (E2 & F5-TTS, CosyVoice), with Whisper audio processing, YouTube download, Demucs vocal isolation, and multilingual translation.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/abus-aikorea/voice-pro",
+      "canonical_url": "github.com/abus-aikorea/voice-pro",
+      "also_seen": [],
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 58
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NomaDamas/k-skill",
+      "name": "k-skill",
+      "description": "\ud55c\uad6d\uc778\uc744 \uc704\ud55c \uc2a4\ud0ac \ubaa8\uc74c\uc9d1 - \uc5d0\uc774\uc804\ud2b8\ub97c \ud55c\uad6d\uc778\uc73c\ub85c",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "canonical_url": "github.com/nomadamas/k-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 53,
+      "momentum": 5,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 53
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:iv-org/invidious",
+      "name": "invidious",
+      "description": "Invidious is an alternative front-end to YouTube",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/iv-org/invidious",
+      "canonical_url": "github.com/iv-org/invidious",
+      "also_seen": [],
+      "company": null,
+      "stars": 435,
+      "momentum": 43,
+      "tags": [
+        "crystal"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 435
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:github/gh-stack",
+      "name": "gh-stack",
+      "description": "GitHub Stacked PRs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/github/gh-stack",
+      "canonical_url": "github.com/github/gh-stack",
+      "also_seen": [],
+      "company": null,
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 46
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/generative-ai-for-beginners",
+      "name": "generative-ai-for-beginners",
+      "description": "21 Lessons, Get Started Building with Generative AI",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 108,
+      "momentum": 10,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 108
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/TRELLIS.2",
+      "name": "TRELLIS.2",
+      "description": "Native and Compact Structured Latents for 3D Generation",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/TRELLIS.2",
+      "canonical_url": "github.com/microsoft/trellis.2",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 107
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:zhaoxuya520/reverse-skill",
       "name": "reverse-skill",
@@ -14,7 +176,7 @@
       "canonical_url": "github.com/zhaoxuya520/reverse-skill",
       "also_seen": [],
       "company": null,
-      "stars": 335,
+      "stars": 1320,
       "momentum": 33,
       "tags": [
         "powershell"
@@ -22,12 +184,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-02",
       "stars_history": {
-        "2026-08-01": 335
+        "2026-08-01": 335,
+        "2026-08-02": 1320
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 985
     },
     {
       "id": "github:usekaneo/kaneo",
@@ -41,7 +204,7 @@
       "canonical_url": "github.com/usekaneo/kaneo",
       "also_seen": [],
       "company": null,
-      "stars": 194,
+      "stars": 760,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -49,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-02",
       "stars_history": {
-        "2026-08-01": 194
+        "2026-08-01": 194,
+        "2026-08-02": 760
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 566
     },
     {
       "id": "github:geo-tp/ESP32-Bit-Pirate",
@@ -288,7 +452,7 @@
       "canonical_url": "github.com/huggingface/speech-to-speech",
       "also_seen": [],
       "company": "Hugging Face",
-      "stars": 628,
+      "stars": 442,
       "momentum": 22,
       "tags": [
         "python"
@@ -296,14 +460,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-29": 227,
         "2026-07-30": 827,
-        "2026-07-31": 628
+        "2026-07-31": 628,
+        "2026-08-02": 442
       },
       "trend": "up",
-      "trend_delta": 401
+      "trend_delta": 215
     },
     {
       "id": "github:pascalorg/editor",
@@ -374,7 +539,7 @@
       "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
       "also_seen": [],
       "company": null,
-      "stars": 763,
+      "stars": 523,
       "momentum": 30,
       "tags": [
         "python"
@@ -382,15 +547,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-29": 309,
         "2026-07-30": 945,
         "2026-07-31": 621,
-        "2026-08-01": 763
+        "2026-08-01": 763,
+        "2026-08-02": 523
       },
       "trend": "up",
-      "trend_delta": 454
+      "trend_delta": 214
     },
     {
       "id": "github:microsoft/agent-governance-toolkit",
@@ -5075,7 +5241,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 123,
+      "stars": 227,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -5083,13 +5249,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-09": 318,
-        "2026-07-11": 123
+        "2026-07-11": 123,
+        "2026-08-02": 227
       },
-      "trend": "down",
-      "trend_delta": -195
+      "trend": "up",
+      "trend_delta": 104
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -5780,7 +5947,7 @@
       "canonical_url": "github.com/ansible/ansible",
       "also_seen": [],
       "company": null,
-      "stars": 29,
+      "stars": 30,
       "momentum": 6,
       "tags": [
         "python"
@@ -5788,14 +5955,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-04": 65,
         "2026-07-12": 24,
-        "2026-07-31": 29
+        "2026-07-31": 29,
+        "2026-08-02": 30
       },
       "trend": "up",
-      "trend_delta": 5
+      "trend_delta": 6
     },
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -7351,7 +7519,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 1592,
+      "stars": 949,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -7359,15 +7527,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-01": 252,
         "2026-07-02": 1096,
         "2026-07-31": 155,
-        "2026-08-01": 1592
+        "2026-08-01": 1592,
+        "2026-08-02": 949
       },
-      "trend": "up",
-      "trend_delta": 496
+      "trend": "down",
+      "trend_delta": -147
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -10253,21 +10422,22 @@
       "canonical_url": "github.com/bytedance/deer-flow",
       "also_seen": [],
       "company": null,
-      "stars": 739,
+      "stars": 209,
       "momentum": 41,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-06-21": 415,
         "2026-06-22": 442,
         "2026-06-23": 738,
-        "2026-06-24": 739
+        "2026-06-24": 739,
+        "2026-08-02": 209
       },
-      "trend": "up",
-      "trend_delta": 324
+      "trend": "down",
+      "trend_delta": -530
     },
     {
       "id": "github:ZhuLinsen/daily_stock_analysis",
@@ -13372,13 +13542,13 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 7,
+      "stars": 142,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
@@ -13386,10 +13556,11 @@
         "2026-07-17": 13,
         "2026-07-18": 233,
         "2026-07-20": 39,
-        "2026-08-01": 7
+        "2026-08-01": 7,
+        "2026-08-02": 142
       },
-      "trend": "down",
-      "trend_delta": -32
+      "trend": "up",
+      "trend_delta": 103
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
