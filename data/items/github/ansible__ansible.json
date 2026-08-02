@@ -10,7 +10,7 @@
   "canonical_url": "github.com/ansible/ansible",
   "also_seen": [],
   "company": null,
-  "stars": 29,
+  "stars": 30,
   "momentum": 6,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-04",
-  "last_seen": "2026-07-31",
+  "last_seen": "2026-08-02",
   "stars_history": {
     "2026-07-04": 65,
     "2026-07-12": 24,
-    "2026-07-31": 29
+    "2026-07-31": 29,
+    "2026-08-02": 30
   }
 }

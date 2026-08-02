@@ -1,0 +1,25 @@
+{
+  "id": "github:microsoft/generative-ai-for-beginners",
+  "name": "generative-ai-for-beginners",
+  "description": "21 Lessons, Get Started Building with Generative AI",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/microsoft/generative-ai-for-beginners",
+  "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 108,
+  "momentum": 10,
+  "tags": [
+    "jupyter notebook"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-02",
+  "last_seen": "2026-08-02",
+  "stars_history": {
+    "2026-08-02": 108
+  }
+}

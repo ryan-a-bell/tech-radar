@@ -9,13 +9,13 @@
   "canonical_url": "github.com/github/copilot-sdk",
   "also_seen": [],
   "company": null,
-  "stars": 7,
+  "stars": 142,
   "momentum": 2,
   "tags": [
     "java"
   ],
   "first_seen": "2026-06-04",
-  "last_seen": "2026-08-01",
+  "last_seen": "2026-08-02",
   "stars_history": {
     "2026-06-04": 25,
     "2026-06-05": 38,
@@ -23,6 +23,7 @@
     "2026-07-17": 13,
     "2026-07-18": 233,
     "2026-07-20": 39,
-    "2026-08-01": 7
+    "2026-08-01": 7,
+    "2026-08-02": 142
   }
 }
