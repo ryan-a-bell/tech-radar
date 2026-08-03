@@ -2,7 +2,7 @@
   "id": "github:dbt-labs/dbt-core",
   "name": "dbt-core",
   "description": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
-  "quadrant": "Languages",
+  "quadrant": "Tools",
   "ring": "Discovered",
   "source": "GitHub",
   "discovered_by": "scraper",
@@ -15,7 +15,10 @@
   "tags": [
     "rust"
   ],
-  "topics": [],
+  "topics": [
+    "Data Feeds",
+    "Skills"
+  ],
   "archived_at": null,
   "first_seen": "2026-06-28",
   "last_seen": "2026-06-28",
