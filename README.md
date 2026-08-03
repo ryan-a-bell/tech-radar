@@ -191,8 +191,19 @@ article, video, and a technology can share a topic tag.
 A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
 learning content — **books, articles, videos, and certifications** —
 alongside the technologies they relate to. Hand-curated in
-`data/learning.json` (no scraper — add entries by editing the file
-directly). Read-only, same as the deployed dashboard.
+`data/learning.json` (no scraper). Manage it with `learning.py` (the
+`learning-manage` skill) rather than editing the file by hand:
+
+```bash
+python learning.py list --status Reading    # what's in progress
+python learning.py status <id-or-title> Read
+python learning.py rate <id-or-title> 5
+python learning.py add "<Title>" --type book --author "..." --topics "ML,AI"
+```
+
+Writing `data/learning.json` publishes immediately — the page reads it
+directly, so there's no separate build step. Read-only in the browser, same
+as the deployed dashboard.
 
 ### Status
 
