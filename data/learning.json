@@ -1072,6 +1072,25 @@
       "blurb": "The official MLflow open-source project channel — tutorials, release walkthroughs, and talks straight from the maintainers. Queued to work through after the NeuralNine crash course."
     },
     {
+      "id": "kaabar-entry-price-doesnt-matter",
+      "type": "article",
+      "title": "The Market Does Not Care About Your Entry Price",
+      "author": "Sofien Kaabar, CFA",
+      "source": "Medium",
+      "url": "https://kaabar-sofien.medium.com/the-market-does-not-care-about-your-entry-price-8775ece620b1",
+      "year": 2026,
+      "status": "Read",
+      "topics": ["Trading"],
+      "minutes": null,
+      "rating": null,
+      "added": "2026-08-03",
+      "started": null,
+      "queued": null,
+      "finished": "2026-08-03",
+      "shelved": null,
+      "blurb": "A trading-psychology piece on the 'breakeven trap' — the market has no idea what you paid, so anchoring exits to entry price instead of current prospects is a purely emotional, costly habit."
+    },
+    {
       "id": "cfa",
       "type": "certification",
       "title": "Chartered Financial Analyst (CFA)",
