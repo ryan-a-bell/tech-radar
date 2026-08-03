@@ -10,7 +10,7 @@
   "canonical_url": "github.com/usekaneo/kaneo",
   "also_seen": [],
   "company": null,
-  "stars": 760,
+  "stars": 496,
   "momentum": 19,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-01",
-  "last_seen": "2026-08-02",
+  "last_seen": "2026-08-03",
   "stars_history": {
     "2026-08-01": 194,
-    "2026-08-02": 760
+    "2026-08-02": 760,
+    "2026-08-03": 496
   }
 }

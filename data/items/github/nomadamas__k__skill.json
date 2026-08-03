@@ -10,7 +10,7 @@
   "canonical_url": "github.com/nomadamas/k-skill",
   "also_seen": [],
   "company": null,
-  "stars": 53,
+  "stars": 177,
   "momentum": 5,
   "tags": [
     "javascript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-02",
-  "last_seen": "2026-08-02",
+  "last_seen": "2026-08-03",
   "stars_history": {
-    "2026-08-02": 53
+    "2026-08-02": 53,
+    "2026-08-03": 177
   }
 }

@@ -1,7 +1,88 @@
 {
-  "generated": "2026-08-02",
-  "count": 526,
+  "generated": "2026-08-03",
+  "count": 529,
   "items": [
+    {
+      "id": "github:antirez/ds4",
+      "name": "ds4",
+      "description": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/antirez/ds4",
+      "canonical_url": "github.com/antirez/ds4",
+      "also_seen": [],
+      "company": null,
+      "stars": 139,
+      "momentum": 13,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-08-03": 139
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:HarbourMasters/Lighthouse",
+      "name": "Lighthouse",
+      "description": "A c project trending on GitHub.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HarbourMasters/Lighthouse",
+      "canonical_url": "github.com/harbourmasters/lighthouse",
+      "also_seen": [],
+      "company": null,
+      "stars": 65,
+      "momentum": 6,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-08-03": 65
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:esengine/DeepSeek-Reasonix",
+      "name": "DeepSeek-Reasonix",
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability \u2014 leave it running.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "canonical_url": "github.com/esengine/deepseek-reasonix",
+      "also_seen": [],
+      "company": null,
+      "stars": 333,
+      "momentum": 33,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-08-03": 333
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:abus-aikorea/voice-pro",
       "name": "voice-pro",
@@ -41,7 +122,7 @@
       "canonical_url": "github.com/nomadamas/k-skill",
       "also_seen": [],
       "company": null,
-      "stars": 53,
+      "stars": 177,
       "momentum": 5,
       "tags": [
         "javascript"
@@ -49,12 +130,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
-        "2026-08-02": 53
+        "2026-08-02": 53,
+        "2026-08-03": 177
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 124
     },
     {
       "id": "github:iv-org/invidious",
@@ -68,7 +150,7 @@
       "canonical_url": "github.com/iv-org/invidious",
       "also_seen": [],
       "company": null,
-      "stars": 435,
+      "stars": 305,
       "momentum": 43,
       "tags": [
         "crystal"
@@ -76,12 +158,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
-        "2026-08-02": 435
+        "2026-08-02": 435,
+        "2026-08-03": 305
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -130
     },
     {
       "id": "github:github/gh-stack",
@@ -122,7 +205,7 @@
       "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 108,
+      "stars": 588,
       "momentum": 10,
       "tags": [
         "jupyter notebook"
@@ -130,12 +213,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
-        "2026-08-02": 108
+        "2026-08-02": 108,
+        "2026-08-03": 588
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 480
     },
     {
       "id": "github:microsoft/TRELLIS.2",
@@ -176,7 +260,7 @@
       "canonical_url": "github.com/zhaoxuya520/reverse-skill",
       "also_seen": [],
       "company": null,
-      "stars": 1320,
+      "stars": 1141,
       "momentum": 33,
       "tags": [
         "powershell"
@@ -184,13 +268,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-08-01": 335,
-        "2026-08-02": 1320
+        "2026-08-02": 1320,
+        "2026-08-03": 1141
       },
       "trend": "up",
-      "trend_delta": 985
+      "trend_delta": 806
     },
     {
       "id": "github:usekaneo/kaneo",
@@ -204,7 +289,7 @@
       "canonical_url": "github.com/usekaneo/kaneo",
       "also_seen": [],
       "company": null,
-      "stars": 760,
+      "stars": 496,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -212,13 +297,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-08-01": 194,
-        "2026-08-02": 760
+        "2026-08-02": 760,
+        "2026-08-03": 496
       },
       "trend": "up",
-      "trend_delta": 566
+      "trend_delta": 302
     },
     {
       "id": "github:geo-tp/ESP32-Bit-Pirate",
@@ -341,7 +427,7 @@
       "canonical_url": "github.com/different-ai/openwork",
       "also_seen": [],
       "company": null,
-      "stars": 806,
+      "stars": 280,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -349,14 +435,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-07-30": 97,
         "2026-07-31": 915,
-        "2026-08-01": 806
+        "2026-08-01": 806,
+        "2026-08-03": 280
       },
       "trend": "up",
-      "trend_delta": 709
+      "trend_delta": 183
     },
     {
       "id": "github:deepfakes/faceswap",
@@ -2202,7 +2289,7 @@
       "canonical_url": "github.com/codecrafters-io/build-your-own-x",
       "also_seen": [],
       "company": null,
-      "stars": 754,
+      "stars": 674,
       "momentum": 43,
       "tags": [
         "markdown"
@@ -2210,15 +2297,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-07-17": 435,
         "2026-07-18": 1068,
         "2026-07-19": 1126,
-        "2026-07-20": 754
+        "2026-07-20": 754,
+        "2026-08-03": 674
       },
-      "trend": "up",
-      "trend_delta": 319
+      "trend": "down",
+      "trend_delta": -80
     },
     {
       "id": "manual:trendshift",
@@ -5241,7 +5329,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 227,
+      "stars": 602,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -5249,14 +5337,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-07-09": 318,
         "2026-07-11": 123,
-        "2026-08-02": 227
+        "2026-08-02": 227,
+        "2026-08-03": 602
       },
       "trend": "up",
-      "trend_delta": 104
+      "trend_delta": 479
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -7519,7 +7608,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 949,
+      "stars": 2629,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -7527,16 +7616,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-07-01": 252,
         "2026-07-02": 1096,
         "2026-07-31": 155,
         "2026-08-01": 1592,
-        "2026-08-02": 949
+        "2026-08-02": 949,
+        "2026-08-03": 2629
       },
-      "trend": "down",
-      "trend_delta": -147
+      "trend": "up",
+      "trend_delta": 1533
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -13367,13 +13457,13 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 1194,
+      "stars": 659,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
@@ -13383,10 +13473,11 @@
         "2026-06-16": 1100,
         "2026-06-17": 2025,
         "2026-06-18": 1161,
-        "2026-06-27": 1194
+        "2026-06-27": 1194,
+        "2026-08-03": 659
       },
-      "trend": "up",
-      "trend_delta": 33
+      "trend": "down",
+      "trend_delta": -535
     },
     {
       "id": "github:github/spec-kit",
@@ -13480,13 +13571,13 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 658,
+      "stars": 206,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-08-01",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
@@ -13500,10 +13591,11 @@
         "2026-07-09": 352,
         "2026-07-28": 240,
         "2026-07-31": 378,
-        "2026-08-01": 658
+        "2026-08-01": 658,
+        "2026-08-03": 206
       },
-      "trend": "up",
-      "trend_delta": 306
+      "trend": "down",
+      "trend_delta": -146
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -13916,22 +14008,23 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 358,
+      "stars": 819,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-20",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
         "2026-06-23": 193,
         "2026-07-19": 161,
-        "2026-07-20": 358
+        "2026-07-20": 358,
+        "2026-08-03": 819
       },
       "trend": "up",
-      "trend_delta": 165
+      "trend_delta": 461
     },
     {
       "id": "github:OpenBMB/VoxCPM",

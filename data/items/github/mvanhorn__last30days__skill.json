@@ -9,13 +9,13 @@
   "canonical_url": "github.com/mvanhorn/last30days-skill",
   "also_seen": [],
   "company": null,
-  "stars": 658,
+  "stars": 206,
   "momentum": 17,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-04",
-  "last_seen": "2026-08-01",
+  "last_seen": "2026-08-03",
   "stars_history": {
     "2026-06-04": 173,
     "2026-06-05": 199,
@@ -29,6 +29,7 @@
     "2026-07-09": 352,
     "2026-07-28": 240,
     "2026-07-31": 378,
-    "2026-08-01": 658
+    "2026-08-01": 658,
+    "2026-08-03": 206
   }
 }
