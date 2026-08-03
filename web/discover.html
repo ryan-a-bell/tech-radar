@@ -260,6 +260,7 @@ function TopBar({ live, total, view }) {
       fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap" }}>
       <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
       <a href="index.html#atlas" style={tab}>ATLAS</a>
+      <a href="index.html#index" style={tab}>INDEX</a>
       <a href="learning.html" style={tab}>LEARNING</a>
       <a href="similarity.html" style={tab}>SIMILARITY</a>
       <a href="projects.html" style={tab}>PROJECTS</a>
@@ -680,7 +681,7 @@ function Footer({ live, view }) {
           <span style={{ width: 9, height: 9, borderRadius: 2, background: c.accent }} />{c.label}
         </span>
       ))}
-      <span style={{ marginLeft: "auto" }}>{view} view · {live ? "live data" : "60-tool sample"} · prototype</span>
+      <span style={{ marginLeft: "auto" }}>{view} view · {live ? "live data" : "60-tool sample"} · TF-IDF (semantic embeddings next)</span>
     </div>
   );
 }

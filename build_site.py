@@ -129,6 +129,15 @@ def main():
     if os.path.exists(people_sim):
         shutil.copy(people_sim, os.path.join(SITE, "data", "people_similarity.json"))
 
+    # 10. Discover page — self-contained (inline JSX), copied as-is. Paste a
+    #     description and it finds the closest technology, projects, people and
+    #     learning across the corpora already copied above (radar.json,
+    #     projects.json, people.json, learning.json) using in-browser TF-IDF —
+    #     no extra precomputed file required. Ships with an inline sample as an
+    #     offline fallback; the live data/ files replace it when served.
+    shutil.copy(os.path.join(WEB, "discover.html"),
+                os.path.join(SITE, "discover.html"))
+
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")
     print("deploy: push site/ to GitHub Pages, or drag it onto Netlify")
