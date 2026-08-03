@@ -49,7 +49,7 @@
         {
           "id": "github:dbt-labs/dbt-core",
           "name": "dbt-core",
-          "quadrant": "Languages",
+          "quadrant": "Tools",
           "ring": "Discovered",
           "url": "https://github.com/dbt-labs/dbt-core",
           "canonical_url": "github.com/dbt-labs/dbt-core"
