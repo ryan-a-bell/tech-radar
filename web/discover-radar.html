@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover — Radar scope (prototype) — Tech Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --q-tools:      #3987e5;  /* blue   → Technology       */
+      --q-languages:  #199e70;  /* aqua   → Similar projects */
+      --q-techniques: #c98500;  /* yellow → People           */
+      --q-platforms:  #9085e9;  /* violet → Learning         */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    #root { height: 100%; }
+    a { color: var(--q-tools); }
+    button { font-family: inherit; font-size: inherit; }
+    .loading { display:flex; height:100vh; align-items:center; justify-content:center; color:var(--muted); }
+    textarea { font-family: inherit; }
+    textarea::placeholder { color: #5c5b56; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: #2c2c2a; border-radius: 6px; }
+  </style>
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"><div class="loading">loading discover…</div></div>
+
+  <script type="application/json" id="seed">{"tools":[{"id":"manual:tradingagents","name":"TradingAgents","description":"Multi-agent LLM framework that simulates a trading firm — specialized agents for fundamentals, sentiment, technicals, trading, and risk management collaborate on trading decisions.","quadrant":"Platforms","ring":"Assess","url":"https://github.com/TauricResearch/TradingAgents","company":null,"topics":["AI","Agents","Trading","Quant"]},{"id":"manual:tessl","name":"Tessl","description":"Agent enablement platform: a management and governance layer for AI agent skills — security scanning and policy enforcement, a shared skill registry with versioning, and usage/performance monitoring for enterprise teams adopting AI agents.","quadrant":"Platforms","ring":"Assess","url":"https://tessl.io/","company":"Tessl AI Ltd","topics":["AI","Agents","Skills"]},{"id":"github:Graphify-Labs/graphify","name":"graphify","description":"AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.","quadrant":"Tools","ring":"Assess","url":"https://github.com/Graphify-Labs/graphify","company":null,"topics":["Agents","Skills","RAG"]},{"id":"substack:100-papers-an-hour-ai-research-pipeline","name":"100 Papers an Hour (AI research pipeline)","description":"Substack write-up on a paper-processing technique: use Marker OCR to convert research PDFs to Markdown, then batch them through an LLM (e.g. Gemini 2.5 Pro) to extract patterns and strategy insights at scale.","quadrant":"Techniques","ring":"Discovered","url":"https://papertoprofit.substack.com/p/100-papers-an-hour-10xing-your-strategy","company":null,"topics":["OCR","AI","Quant"]},{"id":"manual:context7","name":"Context7","description":"MCP server that pulls up-to-date, version-specific documentation and code examples into LLM context.","quadrant":"Tools","ring":"Assess","url":"https://github.com/upstash/context7","company":"Upstash","topics":["AI","Agents","RAG"]},{"id":"manual:alphapy","name":"AlphaPy","description":"Python automated machine learning framework for financial trading and sports prediction, with MarketFlow and SportFlow pipelines built on scikit-learn, Keras, XGBoost, LightGBM, and CatBoost.","quadrant":"Tools","ring":"Assess","url":"https://github.com/ScottfreeLLC/AlphaPy","company":null,"topics":["ML","Trading","Quant"]},{"id":"manual:archon","name":"Archon","description":"Command center for AI coding assistants — knowledge management, task tracking, and MCP integration for agentic workflows.","quadrant":"Platforms","ring":"Assess","url":"https://github.com/coleam00/Archon","company":null,"topics":["AI","Agents","RAG"]},{"id":"manual:ibkr-tws","name":"IBKR TWS","description":"Interactive Brokers' Trader Workstation — desktop trading platform with API access for market data and order execution.","quadrant":"Platforms","ring":"Trial","url":"https://www.interactivebrokers.com/en/trading/tws.php","company":null,"topics":["Trading","Quant","Data Feeds"]},{"id":"manual:morningstar","name":"Morningstar","description":"Investment research and financial data provider — fund and equity ratings, market data, and analytics.","quadrant":"Platforms","ring":"Adopted","url":"https://www.morningstar.com/","company":null,"topics":["Trading","Quant","Data Feeds"]},{"id":"manual:thetadata","name":"ThetaData","description":"Historical and real-time options, stocks, and index market data API for quants and algo traders.","quadrant":"Platforms","ring":"Trial","url":"https://www.thetadata.net/","company":null,"topics":["Trading","Quant","Data Feeds"]},{"id":"manual:bloomberg","name":"Bloomberg","description":"Institutional-grade financial data, news, and analytics platform (Bloomberg Terminal / Data).","quadrant":"Platforms","ring":"Assess","url":"https://www.bloomberg.com/professional","company":null,"topics":["Trading","Quant","Data Feeds"]},{"id":"manual:polygon-io","name":"Polygon.io","description":"Real-time and historical market data API for stocks, options, forex, and crypto.","quadrant":"Platforms","ring":"Trial","url":"https://polygon.io/","company":null,"topics":["Trading","Quant","Data Feeds"]},{"id":"manual:realtest","name":"RealTest","description":"Multi-strategy, portfolio-level backtesting and trading-system software (by Marsten Parker / MHP Trading) that combines strategies, runs walk-forward optimization, and generates next-day order lists — a one-time-purchase desktop tool with no broker lock-in.","quadrant":"Platforms","ring":"Assess","url":"https://mhptrading.com/","company":"MHP Trading","topics":["Trading","Quant"]},{"id":"manual:paperclip","name":"Paperclip","description":"Open-source orchestration platform (Node.js server + React dashboard) that wraps multiple AI coding agents (Claude Code, Codex, Cursor, etc.) into a company-like structure — org chart, roles, budgets, goals, task tracking, and audit logs — so several agents can work toward a shared objective without duplicated effort…","quadrant":"Platforms","ring":"Discovered","url":"https://paperclip.ing/","company":null,"topics":["Agents","AI"]},{"id":"manual:qc-options-framework","name":"qc-options-framework","description":"Options trading framework for QuantConnect's Lean platform providing modular, inheritable base classes for alpha models, execution, and portfolio monitoring, enabling more sophisticated options strategies than the stock framework supports.","quadrant":"Tools","ring":"Assess","url":"https://github.com/Chocksy/qc-options-framework","company":"Chocksy","topics":["Quant","Trading"]},{"id":"manual:databento","name":"Databento","description":"Market data provider offering real-time and historical APIs for equities, futures, and options, built on normalized direct-exchange feeds for low-latency access — an alternative to legacy market-data vendors for quant/trading firms.","quadrant":"Platforms","ring":"Discovered","url":"https://databento.com/","company":"Databento","topics":["Trading","Quant"]},{"id":"manual:marker","name":"Marker","description":"Open-source document converter that turns PDFs, images and office files into markdown + JSON quickly and with high accuracy using deep-learning OCR models.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/datalab-to/marker","company":"Datalab","topics":["OCR","AI"]},{"id":"manual:agor","name":"Agor","description":"Self-hosted, multiplayer web workspace that orchestrates coding agents (Claude Code, Codex, Gemini) on isolated git worktrees with real-time collaboration.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/preset-io/agor","company":"Preset","topics":["Agents","AI"]},{"id":"manual:ollama-ocr","name":"Ollama-OCR","description":"OCR package that uses vision language models (LLaVA, Llama 3.2 Vision, Granite3.2-vision, Moondream, MiniCPM-V) via Ollama to extract text from images and PDFs; Python library plus Streamlit app with markdown/JSON/table output.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/imanoop7/Ollama-OCR","company":null,"topics":["OCR","AI"]},{"id":"github:PaddlePaddle/PaddleOCR","name":"PaddleOCR","description":"Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/PaddlePaddle/PaddleOCR","company":null,"topics":["OCR","AI"]},{"id":"manual:qc-strategybacktest","name":"QC-StrategyBacktest","description":"Python backtesting tool for the QuantConnect platform; runs historical strategy validation via a single main script plus supporting library modules.","quadrant":"Tools","ring":"Assess","url":"https://github.com/rccannizzaro/QC-StrategyBacktest","company":"","topics":["Quant","Trading"]},{"id":"github:dbt-labs/dbt-core","name":"dbt-core","description":"dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/dbt-labs/dbt-core","company":null,"topics":["Data Feeds","Skills"]},{"id":"manual:fabric","name":"Fabric","description":"Open-source framework for augmenting humans using AI — a crowdsourced set of AI prompts (Patterns) and a CLI to apply them to any problem.","quadrant":"Tools","ring":"Assess","url":"https://github.com/danielmiessler/Fabric","company":null,"topics":["AI","Prompts"]},{"id":"manual:riskfolio-lib","name":"Riskfolio-Lib","description":"Python library for portfolio optimization and quantitative strategic asset allocation.","quadrant":"Tools","ring":"Assess","url":"https://github.com/dcajasn/Riskfolio-Lib","company":null,"topics":["Quant","Trading"]},{"id":"github:allenai/olmocr","name":"olmocr","description":"Toolkit for linearizing PDFs for LLM datasets/training","quadrant":"Languages","ring":"Discovered","url":"https://github.com/allenai/olmocr","company":null,"topics":["OCR","AI"]},{"id":"manual:open-connector","name":"Open Connector","description":"Open-source authentication gateway connecting AI agents/apps to 1,000+ SaaS providers through a unified interface, with MCP support and SDKs/CLI.","quadrant":"Platforms","ring":"Trial","url":"https://github.com/oomol-lab/open-connector","company":"OOMOL","topics":["Agents"]},{"id":"manual:ui-bakery-build-with-ai","name":"UI Bakery Build with AI","description":"Low-code internal-tools platform whose Build with AI feature creates and customizes apps from natural-language prompts.","quadrant":"Platforms","ring":"Discovered","url":"https://docs.uibakery.io/build-with-ai","company":"UI Bakery","topics":["AI"]},{"id":"manual:scipy","name":"SciPy","description":"Foundational Python library for scientific computing, providing optimization, integration, statistics, linear algebra, and differential-equation routines built on high-performance Fortran/C++ implementations.","quadrant":"Tools","ring":"Assess","url":"https://scipy.org","company":null,"topics":["Quant"]},{"id":"manual:openbb","name":"OpenBB","description":"Open source investment research platform aggregating financial data, analytics, and Python tooling.","quadrant":"Tools","ring":"Trial","url":"https://github.com/OpenBB-finance/OpenBB","company":"OpenBB-finance","topics":["Quant"]},{"id":"manual:gs-quant","name":"gs-quant","description":"Goldman Sachs' Python toolkit for quantitative finance, derivatives pricing, and risk analysis.","quadrant":"Tools","ring":"Assess","url":"https://github.com/goldmansachs/gs-quant","company":"Goldman Sachs","topics":["Quant"]},{"id":"manual:alphalens","name":"AlphaLens","description":"Python library for performance analysis of predictive (alpha) stock factors, producing returns, information-coefficient, and turnover statistics; in maintenance mode since 2020.","quadrant":"Tools","ring":"Assess","url":"https://github.com/quantopian/alphalens","company":null,"topics":["Quant"]},{"id":"manual:zipline","name":"Zipline","description":"Pythonic, event-driven backtesting library originally powering Quantopian's platform; no longer actively maintained but still widely used as a reference backtesting engine.","quadrant":"Tools","ring":"Assess","url":"https://github.com/quantopian/zipline","company":null,"topics":["Quant"]},{"id":"manual:statsmodels","name":"Statsmodels","description":"Python library complementing SciPy with statistical computation: regression, time series modeling, generalized linear models, survival analysis, and hypothesis testing.","quadrant":"Tools","ring":"Assess","url":"https://github.com/statsmodels/statsmodels","company":null,"topics":["Quant"]},{"id":"manual:pyql","name":"PyQL","description":"Cython wrapper exposing QuantLib to Python for quantitative finance.","quadrant":"Tools","ring":"Assess","url":"https://github.com/enthought/pyql","company":"enthought","topics":["Quant"]},{"id":"manual:tf-quant-finance","name":"tf-quant-finance","description":"High-performance TensorFlow library for quantitative finance.","quadrant":"Tools","ring":"Assess","url":"https://github.com/google/tf-quant-finance","company":"Google","topics":["Quant"]},{"id":"manual:lambda","name":"Lambda","description":"Neo-cloud — GPU cloud and clusters for AI training/inference","quadrant":"Platforms","ring":"Discovered","url":"https://lambda.ai","company":"Lambda","topics":["AI"]},{"id":"manual:streak-claude-code-accountability-skill","name":"Streak (Claude Code accountability skill)","description":"A Claude Code skill that acts as an accountability buddy, tracking personal progress with adaptive, type-specific structures (dev.to write-up by yooi).","quadrant":"Techniques","ring":"Discovered","url":"https://dev.to/yooi/beyond-coding-your-accountability-buddy-with-claude-code-skill-4omh","company":null,"topics":["Skills"]},{"id":"manual:runpod","name":"RunPod","description":"GPUaaS — on-demand and serverless GPU cloud for AI","quadrant":"Platforms","ring":"Discovered","url":"https://www.runpod.io","company":"RunPod","topics":["AI"]},{"id":"manual:empyrical","name":"Empyrical","description":"Library of common financial risk and performance metrics used under the hood by Zipline and PyFolio; in maintenance mode since its last 2020 release.","quadrant":"Tools","ring":"Assess","url":"https://github.com/quantopian/empyrical","company":null,"topics":["Quant"]},{"id":"manual:coreweave","name":"CoreWeave","description":"Neo-cloud — large-scale GPU infrastructure for AI","quadrant":"Platforms","ring":"Discovered","url":"https://www.coreweave.com","company":"CoreWeave","topics":["AI"]},{"id":"manual:pyfolio","name":"PyFolio","description":"Python library for performance and risk analysis of financial portfolios, generating tear sheets; in maintenance mode with its last release in 2019.","quadrant":"Tools","ring":"Assess","url":"https://github.com/quantopian/pyfolio","company":null,"topics":["Quant"]},{"id":"manual:together-ai","name":"Together AI","description":"GPU cloud and inference platform for open models","quadrant":"Platforms","ring":"Discovered","url":"https://www.together.ai","company":"Together AI","topics":["AI"]},{"id":"manual:replicate","name":"Replicate","description":"Run and fine-tune models via API on managed GPUs","quadrant":"Platforms","ring":"Discovered","url":"https://replicate.com","company":"Replicate","topics":["AI"]},{"id":"manual:groq","name":"Groq","description":"LPU-based ultra-low-latency inference (GPUaaS)","quadrant":"Platforms","ring":"Discovered","url":"https://groq.com","company":"Groq","topics":["AI"]},{"id":"manual:baseten","name":"Baseten","description":"Model deployment and inference on managed GPUs","quadrant":"Platforms","ring":"Discovered","url":"https://www.baseten.co","company":"Baseten","topics":["AI"]},{"id":"manual:crusoe","name":"Crusoe","description":"Neo-cloud — energy-first GPU cloud for AI","quadrant":"Platforms","ring":"Discovered","url":"https://crusoe.ai","company":"Crusoe","topics":["AI"]},{"id":"manual:fireworks-ai","name":"Fireworks AI","description":"Fast inference platform for open models","quadrant":"Platforms","ring":"Discovered","url":"https://fireworks.ai","company":"Fireworks AI","topics":["AI"]},{"id":"manual:gsd-core","name":"gsd-core","description":"Core library for the open-gsd project.","quadrant":"Tools","ring":"Assess","url":"https://github.com/open-gsd/gsd-core","company":"open-gsd","topics":["Quant"]},{"id":"manual:vercel","name":"Vercel","description":"Frontend cloud / deployment platform for web apps, now expanding into agentic infrastructure — sandboxed environments, durable orchestration, and AI model integration for building and running autonomous agents alongside traditional sites.","quadrant":"Platforms","ring":"Trial","url":"https://vercel.com","company":"Vercel","topics":[]},{"id":"github:esengine/DeepSeek-Reasonix","name":"DeepSeek-Reasonix","description":"DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/esengine/DeepSeek-Reasonix","company":null,"topics":[]},{"id":"github:huggingface/speech-to-speech","name":"speech-to-speech","description":"Build local voice agents with open-source models","quadrant":"Languages","ring":"Discovered","url":"https://github.com/huggingface/speech-to-speech","company":"Hugging Face","topics":[]},{"id":"github:paperswithbacktest/awesome-systematic-trading","name":"awesome-systematic-trading","description":"A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/paperswithbacktest/awesome-systematic-trading","company":null,"topics":[]},{"id":"github:microsoft/agent-governance-toolkit","name":"agent-governance-toolkit","description":"AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/microsoft/agent-governance-toolkit","company":"Microsoft","topics":[]},{"id":"github:apache/cassandra","name":"cassandra","description":"Open source transactional distributed database. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/apache/cassandra","company":null,"topics":[]},{"id":"github:opengeos/GeoLibre","name":"GeoLibre","description":"A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/opengeos/GeoLibre","company":null,"topics":[]},{"id":"github:Lordog/dive-into-llms","name":"dive-into-llms","description":"《动手学大模型Dive into LLMs》系列编程实践教程","quadrant":"Tools","ring":"Discovered","url":"https://github.com/Lordog/dive-into-llms","company":null,"topics":[]},{"id":"github:OtterMind/Chat2DB","name":"Chat2DB","description":"🔥🔥🔥 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/OtterMind/Chat2DB","company":null,"topics":[]},{"id":"github:alibaba/open-code-review","name":"open-code-review","description":"Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.","quadrant":"Languages","ring":"Discovered","url":"https://github.com/alibaba/open-code-review","company":null,"topics":[]},{"id":"github:jellyfin/jellyfin","name":"jellyfin","description":"The Free Software Media System - Server Backend & API","quadrant":"Tools","ring":"Discovered","url":"https://github.com/jellyfin/jellyfin","company":null,"topics":[]},{"id":"github:citrolabs/ego-lite","name":"ego-lite","description":"The best browser for both you and your AI agents work in parallel.","quadrant":"Tools","ring":"Discovered","url":"https://github.com/citrolabs/ego-lite","company":null,"topics":[]}],"projects":[{"id":"autonomous-trading-desk","name":"Autonomous Trading Desk","status":"Idea","topics":["Trading","Quant","Agents","Data Feeds"],"blurb":"A multi-agent trading desk — a hedge fund in a box. Research agents surface theses from the news and price action, a quant agent prices and backtests them, a risk agent vetoes anything that breaches position or drawdown limits, and an execution agent works the resulting orders — all supervised by a human and every decision logged for the post-mortem.","stack":["TradingAgents","gs-quant","Riskfolio-Lib","Polygon.io","IBKR TWS","Ollama","grafana"]},{"id":"document-intelligence-engine","name":"Technical-Document Intelligence Engine","status":"Idea","topics":["OCR","RAG","AI","Agents"],"blurb":"An engine that turns a wall of scanned specifications, drawings, and PDFs into a queryable knowledge base. It runs OCR over the scans, recovers document structure and tables, and builds a knowledge graph you can ask engineering questions against — with every answer citing the exact source document and page it came from.","stack":["PaddleOCR","docling","MinerU","cognee","Ollama"]},{"id":"gsd-core-app","name":"GSD Core App","status":"Active","topics":["Quant","Agents"],"blurb":"A local-first \"get stuff done\" runner that turns a plain-language goal into a sequence of executed steps. It plans a task graph, routes each step to a local model, and keeps the whole loop on the machine so nothing leaves the laptop.","stack":["gsd-core","Cursor","Ollama"]},{"id":"microgrid-dispatch-optimizer","name":"Microgrid Dispatch & Resilience Optimizer","status":"Idea","topics":["ML","Agents","Data Feeds"],"blurb":"A dispatch optimizer for a campus microgrid — solar, battery storage, a diesel backup, and a mix of controllable loads. It forecasts demand and generation for the day ahead, then schedules storage and generation to ride through grid outages at least cost, re-planning as the weather and the load actually unfold.","stack":["Modelica","ModelCenter","mesa","vLLM","grafana"]},{"id":"options-vol-surface","name":"Options Vol-Surface Lab","status":"Idea","topics":["Quant","Trading","Data Feeds"],"blurb":"An idea, no code yet. I want to build and calibrate an implied-volatility surface for equity options: pull an options chain, fit a no-arbitrage surface across strikes and expiries, and price exotic payoffs off it. The interesting part is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to interpolate the surface for pricing.","stack":[]},{"id":"radar-portfolio-optimizer","name":"Portfolio Optimizer","status":"Paused","topics":["Quant","Trading","ML"],"blurb":"A backtesting harness for portfolio construction. It takes a universe of tickers and a set of constraints, then compares allocation methods — mean variance, hierarchical risk parity, and a few risk-budgeting schemes — on the same out-of-sample window so the tradeoffs are visible side by side.","stack":["Riskfolio-Lib","gs-quant"]},{"id":"sar-contested-comms-mesh","name":"Contested-Comms SAR Mesh","status":"Idea","topics":["Agents","ML","Data Feeds"],"blurb":"The same rescue fleet, but assuming the radios drop. This project layers a resilient communications mesh over the SAR fleet so vessels and drones keep sharing a common operating picture when the link to shore is jammed, over the horizon, or saturated. Craft relay for each other, buffer telemetry through outages, and fall back to intermittent satellite passes — and the task allocator has to keep…","stack":["ANSYS HFSS / AEDT","CST Studio Suite","STK","iroh","PettingZoo","UAF","OpenObserve"]},{"id":"sar-fleet-coordinator","name":"SAR Fleet Coordinator","status":"Active","topics":["AI","ML","Agents","Data Feeds"],"blurb":"Coordination software for search-and-rescue missions flown by a mixed fleet of unmanned surface vessels and UAVs. An incident commander drops a last-known position and a drift model; the planner divides the search area into cells, assigns each craft a sweep pattern sized to its sensor footprint and endurance, and re-tasks the fleet live as the probability-of-detection map updates from every pass.","stack":["STK","SysML v2","PettingZoo","Ollama","grafana","Docker"]},{"id":"sensor-anomalies","name":"Sensor Telemetry Anomalies","status":"Idea","topics":["ML","Data Feeds"],"blurb":"An idea for detecting anomalies in industrial sensor streams over time. The plan: ingest telemetry from many sensors, resample the irregular timestamps onto a regular grid, decompose trend and seasonality, and fit a rolling forecast so points that break the predicted band get flagged.","stack":[]},{"id":"trading-timeseries","name":"Trading Time-Series Forecaster","status":"Active","topics":["Quant","Trading","ML"],"blurb":"Walk-forward forecasting of equity price series. It builds lagged features and rolling-window statistics from the raw series, trains a model per volatility regime, and validates strictly out-of-sample so nothing leaks from the future.","stack":["gs-quant","QuantPy"]}],"people":[{"id":"devin-cross","name":"Devin Cross","role":"Platform Engineer","topics":["Data Feeds"],"interests":["ML"],"blurb":"Keeps the data platform standing — the pipelines, schedulers, and clusters everything else runs on. Orchestrates batch and streaming jobs, models the warehouse so analysts trust the numbers, and instruments the whole thing so a broken feed pages a human before it corrupts a downstream table.","skills":["Kubernetes","Docker","grafana","prefect","dbt-core","terraform","go","observability","CI/CD"]},{"id":"maya-okafor","name":"Maya Okafor","role":"ML Engineer","topics":["ML","AI","RAG"],"interests":["Agents"],"blurb":"Serves and adapts large language models for production — quantising checkpoints to fit the hardware, standing up high-throughput inference, and wiring retrieval so answers stay grounded in a private corpus. Spends a lot of time on the unglamorous middle: chunking, embedding, evaluating whether a retrieval change actually helped, and keeping latency inside budget.","skills":["pytorch","vLLM","llama.cpp","Ollama","Python","embeddings","fine-tuning","retrieval"]},{"id":"priya-nair","name":"Priya Nair","role":"AI Agents Engineer","topics":["Agents","AI","Prompts"],"interests":["Quant","RAG"],"blurb":"Builds multi-agent systems — teams of models that divide a task, argue, and get reconciled by a supervisor. Designs the tool interfaces they call, the prompts that keep them on task, and the guardrails that stop a confident wrong answer from propagating. Ships most experiments behind a quick Gradio front end so non-engineers can poke at them.","skills":["TradingAgents","Ollama","gradio","LangGraph","prompt engineering","tool use","MCP","Python"]},{"id":"ryan-bell","name":"Ryan Bell","role":"Quant Developer","topics":["Quant","Trading","Data Feeds"],"interests":["Agents","ML"],"blurb":"Builds systematic trading systems end to end — pulling market data, pricing derivatives, constructing portfolios under risk limits, and routing the resulting orders to a broker. Most of the day is spent on the vol surface: calibrating models to option chains, hunting for mispricings, and stress-testing the book before anything goes live.","skills":["gs-quant","Riskfolio-Lib","Polygon.io","FinancePy","IBKR TWS","Python","pandas","options pricing","backtesting"]},{"id":"sam-reyes","name":"Sam Reyes","role":"Full-Stack Engineer","topics":["AI"],"interests":["ML","Agents"],"blurb":"Turns models and pipelines into things people can actually use — dashboards, internal tools, and product surfaces. Cares about the last mile: fast pages, legible data visualisation, and interfaces that make a complex system feel obvious. Often the person who takes a research demo and makes it presentable.","skills":["next.js","bun","gradio","TypeScript","React","data visualization","UI design","Python"]}],"learning":[{"id":"ssml-trading","type":"book","title":"Statistically Sound Machine Learning for Automated Trading of Financial Instruments","author":"David Aronson & Timothy Masters","year":2013,"status":"Shelved","rating":null,"topics":["Trading","Quant","ML"],"blurb":"Building predictive-model trading systems with the TSSB platform, with a hard focus on avoiding overfit and validating that an edge is real rather than data-mined noise."},{"id":"ddia","type":"book","title":"Designing Data-Intensive Applications","author":"Martin Kleppmann","year":2017,"status":"Read","rating":5,"topics":["Data Feeds","Skills"],"blurb":"The reference for how reliable, scalable systems actually store and move data — replication, partitioning, and the tradeoffs behind every database pitch deck."},{"id":"deep-learning","type":"book","title":"Deep Learning","author":"Goodfellow, Bengio & Courville","year":2016,"status":"Read","rating":4,"topics":["ML","AI"],"blurb":"The textbook. Dense, but it's the reason 'backprop through a transformer' stops being a black box."},{"id":"afml","type":"book","title":"Advances in Financial Machine Learning","author":"Marcos López de Prado","year":2018,"status":"Reading","rating":null,"topics":["Quant","ML","Trading"],"blurb":"Why most backtests lie, and a rebuild of the ML pipeline for finance from labeling to cross-validation."},{"id":"building-llm-apps","type":"book","title":"Building Applications with Large Language Models","author":"Valentina Alto","year":2024,"status":"Reading","rating":null,"topics":["AI","Prompts","Agents"],"blurb":"Practical patterns for wiring LLMs into real products — retrieval, tool use, and the glue code nobody puts in the paper."},{"id":"rag-in-practice","type":"book","title":"Retrieval-Augmented Generation in Practice","author":"Keith Bourne","year":2024,"status":"Discovered","rating":null,"topics":["AI","RAG"],"blurb":"Came up twice this month scouting the RAG topic on the tech radar — queued to see if it's worth the reading time."},{"id":"prompt-engineering","type":"book","title":"Prompt Engineering for Generative AI","author":"James Phoenix & Mike Taylor","year":2024,"status":"Read","rating":3,"topics":["Prompts","AI"],"blurb":"Solid primer, aged fast — useful for the fundamentals, less so for anything model-specific."},{"id":"algo-trading","type":"book","title":"Algorithmic Trading","author":"Ernest P. Chan","year":2013,"status":"Read","rating":4,"topics":["Trading","Quant"],"blurb":"Mean reversion, momentum, and the unglamorous plumbing of actually running a strategy live."},{"id":"rl-intro","type":"book","title":"Reinforcement Learning: An Introduction","author":"Sutton & Barto","year":2018,"status":"Discovered","rating":null,"topics":["ML"],"blurb":"The canonical RL text — added after it kept getting cited in agent-training threads."},{"id":"agentic-design-patterns","type":"book","title":"Agentic Design Patterns","author":"Antonio Gulli","year":2025,"status":"Reading","rating":null,"topics":["Agents","Skills"],"blurb":"A pattern catalog for multi-step agent workflows — planning, reflection, tool routing."},{"id":"hull-derivatives","type":"book","title":"Options, Futures, and Other Derivatives","author":"John C. Hull","year":2021,"status":"Read","rating":5,"topics":["Quant"],"blurb":"Still the derivatives bible. Long, but every chapter earns its place."},{"id":"team-topologies","type":"book","title":"Team Topologies","author":"Matthew Skelton & Manuel Pais","year":2019,"status":"Queued","rating":null,"topics":["Skills"],"blurb":"Recommended by three separate engineers this quarter — finally queuing it."},{"id":"streaming-systems","type":"book","title":"Streaming Systems","author":"Tyler Akidau, Slava Chernyak & Reuven Lax","year":2018,"status":"Discovered","rating":null,"topics":["Data Feeds"],"blurb":"Windowing, watermarks, and exactly-once semantics — relevant to the scraper pipeline's next rewrite."},{"id":"understanding-deep-learning","type":"book","title":"Understanding Deep Learning","author":"Simon J.D. Prince","year":2023,"status":"Discovered","rating":null,"topics":["ML","AI"],"blurb":"A newer, more visual take on the deep learning fundamentals — queued as a companion to the Goodfellow text."},{"id":"attention-is-all-you-need","type":"article","title":"Attention Is All You Need","author":"Vaswani et al.","year":2017,"status":"Read","rating":5,"topics":["ML","AI"],"blurb":"The transformer paper. Worth reading in the original once — every later 'attention' explainer is a gloss on this."},{"id":"karpathy-gpt-from-scratch","type":"video","title":"Let's build GPT: from scratch, in code, spelled out","author":"Andrej Karpathy","year":2023,"status":"Reading","rating":null,"topics":["ML","AI"],"blurb":"Hands-on build of a GPT from the ground up — the clearest walk from bigram model to a working transformer you can find."},{"id":"quant-galore-trading-infrastructure","type":"article","title":"A No-BS Look at Quantitative Trading Infrastructure","author":"Quant Galore","year":2024,"status":"Discovered","rating":null,"topics":["Trading","Quant","Data Feeds"],"blurb":"How a medium-frequency shop should actually lay out its data stack — cloud object storage (S3), Parquet, and a sane folder hierarchy instead of giant local files — to make backtesting fast."},{"id":"quant-galore-chasing-vol-shorting","type":"article","title":"A Junior Quant's Guide to Chasing Vol and Shorting Stocks","author":"Quant Galore","year":2024,"status":"Discovered","rating":null,"topics":["Trading","Quant"],"blurb":"Building a short-selling hedge for a long momentum book, arguing that borrow fees dominate — so the edge comes from finding high-realized-vol names and calling short, one-day directional moves that beat the cost to borrow."},{"id":"pca-clustering-grouping-stocks","type":"article","title":"Unmasking the Market's Hidden Dances: Grouping Stocks with PCA & Clustering","author":"Unicorn Day","year":2024,"status":"Discovered","rating":null,"topics":["Quant","ML"],"blurb":"An accessible walk through using PCA and clustering to find which stocks move together, reducing messy market data to the underlying factors that group names into cohorts."},{"id":"pca-time-series-structure","type":"article","title":"PCA in Time Series: Finding Structure in a Moving World","author":"Sofien Kaabar, CFA","year":2024,"status":"Discovered","rating":null,"topics":["Quant","ML"],"blurb":"How PCA turns a set of correlated time series into uncorrelated components, cutting noise and surfacing the shared common factors that drive financial series — a preprocessing step before modeling."},{"id":"nvidia-ncp-aai","type":"certification","title":"NVIDIA-Certified Professional: Agentic AI","author":"NVIDIA","year":null,"status":"Discovered","rating":null,"topics":["Agents","AI"],"blurb":"Covers agent architecture, orchestration, multi-agent systems, evaluation, guardrails, deployment, and governance. Registration was listed as coming soon as of the last check."},{"id":"databricks-genai-engineer-associate","type":"certification","title":"Databricks Certified Generative AI Engineer Associate","author":"Databricks","year":null,"status":"Queued","rating":null,"topics":["AI","RAG","Skills"],"blurb":"Validates RAG, LLM applications, AI Search, Model Serving, MLflow, Unity Catalog, deployment, governance, and evaluation."},{"id":"azure-ai-103-apps-agents-associate","type":"certification","title":"Microsoft Certified: Azure AI Apps and Agents Developer Associate","author":"Microsoft","year":null,"status":"Discovered","rating":null,"topics":["Agents","AI"],"blurb":"Covers Microsoft Foundry, generative and agentic solutions, computer vision, text analysis, information extraction, deployment, and management."},{"id":"aws-genai-developer-professional","type":"certification","title":"AWS Certified Generative AI Developer – Professional","author":"AWS","year":null,"status":"Discovered","rating":null,"topics":["AI","Skills"],"blurb":"Validates production GenAI applications built on Bedrock, including security, observability, infrastructure, cost, and deployment."},{"id":"iapp-aigp","type":"certification","title":"Artificial Intelligence Governance Professional","author":"IAPP","year":null,"status":"Discovered","rating":null,"topics":["AI","Skills"],"blurb":"Covers responsible AI governance, risk management, laws, policy, and safe, trustworthy AI deployment."},{"id":"nvidia-ncp-genl","type":"certification","title":"NVIDIA-Certified Professional: Generative AI LLMs","author":"NVIDIA","year":null,"status":"Discovered","rating":null,"topics":["AI","ML"],"blurb":"Covers LLM architecture, prompting, fine-tuning, distributed training, RAG, evaluation, deployment, monitoring, and responsible AI. Registration was listed as coming soon as of the last check."},{"id":"snowpro-specialty-genai","type":"certification","title":"SnowPro Specialty: Gen AI","author":"Snowflake","year":null,"status":"Discovered","rating":null,"topics":["AI","Data Feeds"],"blurb":"Validates Cortex AI, LLM use cases, open models, Snowpark Container Services, and Model Registry."},{"id":"gcp-professional-ml-engineer","type":"certification","title":"Professional Machine Learning Engineer","author":"Google Cloud","year":null,"status":"Discovered","rating":null,"topics":["ML","AI"],"blurb":"Covers Vertex AI, Agent Builder, generative-AI evaluation, production ML, orchestration, serving, and monitoring."},{"id":"azure-ab-620-ai-agent-builder-associate","type":"certification","title":"Microsoft Certified: AI Agent Builder Associate","author":"Microsoft","year":null,"status":"Discovered","rating":null,"topics":["Agents","RAG"],"blurb":"Covers RAG, MCP, A2A, multi-agent solutions, APIs, enterprise knowledge sources, and computer use in Copilot Studio."},{"id":"azure-ai-200-cloud-developer-associate","type":"certification","title":"Microsoft Certified: Azure AI Cloud Developer Associate","author":"Microsoft","year":null,"status":"Discovered","rating":null,"topics":["AI","Skills"],"blurb":"Focuses on containerized AI solutions, Azure data services, back-end architecture, security, and monitoring across the full development lifecycle."},{"id":"aws-ml-engineer-associate","type":"certification","title":"AWS Certified Machine Learning Engineer – Associate","author":"AWS","year":null,"status":"Discovered","rating":null,"topics":["ML","Skills"],"blurb":"Covers production ML and MLOps on AWS. The exam is being refreshed in September 2026."},{"id":"databricks-ml-professional","type":"certification","title":"Databricks Certified Machine Learning Professional","author":"Databricks","year":null,"status":"Queued","rating":null,"topics":["ML","Skills"],"blurb":"Covers enterprise ML pipelines, distributed training, advanced MLflow, feature pipelines, retraining, monitoring, deployment, and rollout management."},{"id":"azure-solutions-architect-expert","type":"certification","title":"Microsoft Certified: Azure Solutions Architect Expert","author":"Microsoft","year":null,"status":"Discovered","rating":null,"topics":["Skills"],"blurb":"Broad Azure architecture credential covering security, governance, networking, storage, resilience, and cost. Requires Azure Administrator Associate plus AZ-305."},{"id":"aws-solutions-architect-associate","type":"certification","title":"AWS Certified Solutions Architect – Associate","author":"AWS","year":null,"status":"Discovered","rating":null,"topics":["Skills"],"blurb":"Covers secure, resilient, performant, and cost-optimized cloud solution design on AWS."},{"id":"aws-solutions-architect-professional","type":"certification","title":"AWS Certified Solutions Architect – Professional","author":"AWS","year":null,"status":"Discovered","rating":null,"topics":["Skills"],"blurb":"Advanced AWS architecture credential covering complex, multi-account, hybrid solution design."},{"id":"gcp-professional-cloud-architect","type":"certification","title":"Professional Cloud Architect","author":"Google Cloud","year":null,"status":"Discovered","rating":null,"topics":["Skills"],"blurb":"Validates enterprise solution architecture, stakeholder requirements, security, compliance, cost, implementation, and operations on GCP."},{"id":"snowpro-advanced-architect","type":"certification","title":"SnowPro Advanced: Architect","author":"Snowflake","year":null,"status":"Discovered","rating":null,"topics":["Data Feeds","Skills"],"blurb":"Covers end-to-end data architecture, business and compliance requirements, performance, security, and integration decisions on Snowflake."},{"id":"snowpro-advanced-data-scientist","type":"certification","title":"SnowPro Advanced: Data Scientist","author":"Snowflake","year":null,"status":"Discovered","rating":null,"topics":["ML","Data Feeds"],"blurb":"Covers feature engineering, model training, ML, GenAI, and LLMs within the Snowflake platform."},{"id":"nvidia-nca-genm","type":"certification","title":"NVIDIA-Certified Associate: Generative AI Multimodal","author":"NVIDIA","year":null,"status":"Discovered","rating":null,"topics":["AI"],"blurb":"Covers text, image, and audio AI concepts, plus multimodal and computer-vision fundamentals."},{"id":"databricks-data-engineer-professional","type":"certification","title":"Databricks Certified Data Engineer Professional","author":"Databricks","year":null,"status":"Queued","rating":null,"topics":["Data Feeds","Skills"],"blurb":"Covers pipeline design, governance, streaming, CI/CD, observability, and optimization on Databricks."},{"id":"gcp-professional-data-engineer","type":"certification","title":"Professional Data Engineer","author":"Google Cloud","year":null,"status":"Discovered","rating":null,"topics":["Data Feeds"],"blurb":"Covers designing and securing the data systems that feed analytics, ML, RAG, and agent applications on GCP."},{"id":"databricks-data-engineer-associate","type":"certification","title":"Databricks Certified Data Engineer Associate","author":"Databricks","year":null,"status":"Queued","rating":null,"topics":["Data Feeds"],"blurb":"Databricks platform fundamentals for data engineering."},{"id":"databricks-ml-associate","type":"certification","title":"Databricks Certified Machine Learning Associate","author":"Databricks","year":null,"status":"Queued","rating":null,"topics":["ML"],"blurb":"Covers basic MLflow, AutoML, model development, and deployment on Databricks."},{"id":"snowpro-core","type":"certification","title":"SnowPro Core","author":"Snowflake","year":null,"status":"Discovered","rating":null,"topics":["Data Feeds"],"blurb":"Establishes general Snowflake platform fluency."},{"id":"nvidia-nca-genl","type":"certification","title":"NVIDIA-Certified Associate: Generative AI LLMs","author":"NVIDIA","year":null,"status":"Discovered","rating":null,"topics":["AI"],"blurb":"Introductory credential covering NVIDIA's generative AI and LLM ecosystem."},{"id":"nvidia-nca-accelerated-data-science","type":"certification","title":"NVIDIA-Certified Associate: Accelerated Data Science","author":"NVIDIA","year":null,"status":"Discovered","rating":null,"topics":["ML","Data Feeds"],"blurb":"Covers GPU-accelerated data pipelines and introductory MLOps."},{"id":"gcp-genai-leader","type":"certification","title":"Generative AI Leader","author":"Google Cloud","year":null,"status":"Discovered","rating":null,"topics":["AI"],"blurb":"Business-oriented credential covering generative AI concepts; does not require hands-on technical experience."},{"id":"aws-ai-practitioner","type":"certification","title":"AWS Certified AI Practitioner","author":"AWS","year":null,"status":"Discovered","rating":null,"topics":["AI"],"blurb":"Foundational credential covering AI/ML concepts for people who use AI systems without necessarily building them."},{"id":"azure-ai-901-fundamentals","type":"certification","title":"Microsoft Certified: Azure AI Fundamentals","author":"Microsoft","year":null,"status":"Discovered","rating":null,"topics":["AI"],"blurb":"Beginner credential covering AI concepts and basic Microsoft Foundry implementation."},{"id":"quantconnect-bootcamp","type":"certification","title":"QuantConnect Boot Camp","author":"QuantConnect","year":null,"status":"Discovered","rating":null,"topics":["Trading","Quant"],"blurb":"Self-paced courses covering LEAN, Python/C#, backtesting, universes, portfolio management, and the Algorithm Framework — completions generate QuantConnect certificates."},{"id":"epat-algo-trading","type":"certification","title":"Executive Programme in Algorithmic Trading (EPAT)","author":"QuantInsti","year":null,"status":"Discovered","rating":null,"topics":["Trading","Quant","ML"],"blurb":"Six-month, live-instructor program covering Python, statistics, econometrics, market microstructure, machine learning, backtesting, and trading technology, capped with a final project."},{"id":"wqu-mscfe","type":"certification","title":"MSc in Financial Engineering","author":"WorldQuant University","year":null,"status":"Discovered","rating":null,"topics":["Quant","ML"],"blurb":"Tuition-free, accredited two-year online master's degree covering financial engineering, econometrics, derivatives, stochastic modeling, machine learning, risk, and portfolio management."},{"id":"cqf","type":"certification","title":"Certificate in Quantitative Finance (CQF)","author":"CQF Institute","year":null,"status":"Discovered","rating":null,"topics":["Quant","ML"],"blurb":"Six-month, master's-level qualification in mathematical finance — derivatives pricing, computational finance, Python, and machine learning — built around six core modules, electives, module exams, and a final project."},{"id":"frm","type":"certification","title":"Financial Risk Manager (FRM)","author":"GARP","year":null,"status":"Discovered","rating":null,"topics":["Quant","Skills"],"blurb":"Two-exam certification in market, credit, liquidity, operational, and model risk, requiring two years of qualifying risk-related work experience."},{"id":"cmt","type":"certification","title":"Chartered Market Technician (CMT)","author":"CMT Association","year":null,"status":"Discovered","rating":null,"topics":["Trading","Skills"],"blurb":"Three-exam charter in technical analysis, behavioral finance, and systematic trading, requiring qualifying professional experience and CMT Association membership."},{"id":"neuralnine-mlflow-crash-course","type":"video","title":"MLFlow Crash Course: MLOps in Python","author":"NeuralNine","year":null,"status":"Read","rating":null,"topics":["ML","Skills"],"blurb":"MLflow fundamentals for MLOps in Python — tracking, projects, and model registry — capped off with an Optuna + MLflow integration for running and logging hyperparameter search trials."},{"id":"mlflow-youtube-channel","type":"video","title":"MLflow (official channel)","author":"MLflow","year":null,"status":"Queued","rating":null,"topics":["ML","Skills"],"blurb":"The official MLflow open-source project channel — tutorials, release walkthroughs, and talks straight from the maintainers. Queued to work through after the NeuralNine crash course."},{"id":"kaabar-entry-price-doesnt-matter","type":"article","title":"The Market Does Not Care About Your Entry Price","author":"Sofien Kaabar, CFA","year":2026,"status":"Read","rating":null,"topics":["Trading"],"blurb":"A trading-psychology piece on the 'breakeven trap' — the market has no idea what you paid, so anchoring exits to entry price instead of current prospects is a purely emotional, costly habit."},{"id":"cfa","type":"certification","title":"Chartered Financial Analyst (CFA)","author":"CFA Institute","year":null,"status":"Discovered","rating":null,"topics":["Quant","Skills"],"blurb":"Three-level charter in investment analysis, accounting, valuation, and portfolio management."}]}</script>
+
+  <script type="text/babel" data-presets="react">
+const { useState, useMemo, useEffect, useRef } = React;
+
+/* ============================================================================
+ * DISCOVER — "paste a description, find what's most similar"   (OPTION B)
+ *
+ * Same engine as Option A, different display. Your pasted idea sits at the
+ * CENTRE of a radar scope. Every strong match is a blip:
+ *   · which 90° sector it lands in  = its category (tech / projects / people / learning)
+ *   · how close to the centre it is  = how strongly it matches (nearer = better)
+ *   · blip size                      = match score
+ * A sweep line rotates over the scope; hover or click a blip to inspect it.
+ * On the right, an auto-assembled "build kit" reads the single best pick from
+ * each category as one recommendation — the columns of Option A, folded into a
+ * single briefing.
+ * ==========================================================================*/
+
+const CATS = [
+  { key: "tools",    label: "Technology",       accent: "#3987e5", a0: -Math.PI / 2 },        // top sector
+  { key: "projects", label: "Similar projects", accent: "#199e70", a0: 0 },                    // right sector
+  { key: "people",   label: "People",           accent: "#c98500", a0: Math.PI / 2 },          // bottom sector
+  { key: "learning", label: "Learning",         accent: "#9085e9", a0: Math.PI },              // left sector
+];
+const ACCENT = Object.fromEntries(CATS.map((c) => [c.key, c.accent]));
+const LABEL = Object.fromEntries(CATS.map((c) => [c.key, c.label]));
+
+const EXAMPLE = "I want to build a system that watches market news and price action, where one agent forms trade theses, another prices and backtests them, a risk agent enforces drawdown and position limits, and an execution agent places the orders — all supervised by a human, with every decision logged for a post-mortem.";
+
+// ---- text prep (identical to Option A / the rest of the site) --------------
+const STOP = new Set(("a an the and or of for to in on with without from by is are be " +
+  "this that it its as at into your you our their they we can will use used using " +
+  "via based over under across between not no more most other any all which who whom " +
+  "open source library tool toolkit app application project framework platform so " +
+  "github repo repository code want build yet i").split(/\s+/));
+function tokenize(s) {
+  return (s || "").toLowerCase().replace(/[^a-z0-9+#.\- ]+/g, " ").split(/[\s.]+/)
+    .map((t) => t.replace(/^[-+#]+|[-+#]+$/g, ""))
+    .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t));
+}
+const toolText     = (t) => [t.description, t.name, t.company || "", (t.topics || []).join(" ")].join(" ");
+const projectText  = (p) => [p.name, p.blurb, (p.topics || []).join(" "), (p.stack || []).join(" ")].join(" ");
+const personText   = (p) => [p.name, p.role, p.blurb, (p.topics || []).join(" "), (p.interests || []).join(" "), (p.skills || []).join(" ")].join(" ");
+const learningText = (l) => [l.title, l.author || "", l.blurb, (l.topics || []).join(" ")].join(" ");
+const TEXT = { tools: toolText, projects: projectText, people: personText, learning: learningText };
+
+function buildEngine(data) {
+  const cats = CATS.map((c) => ({ ...c, items: data[c.key] || [] }));
+  const allTokens = [];
+  for (const c of cats) for (const it of c.items) allTokens.push(tokenize(TEXT[c.key](it)));
+  const n = allTokens.length || 1;
+  const df = new Map();
+  for (const toks of allTokens) for (const t of new Set(toks)) df.set(t, (df.get(t) || 0) + 1);
+  const idf = (t) => Math.log((1 + n) / (1 + (df.get(t) || 0))) + 1;
+  const vecFromTokens = (toks) => {
+    const counts = new Map();
+    for (const t of toks) counts.set(t, (counts.get(t) || 0) + 1);
+    const v = new Map(); let norm = 0;
+    for (const [t, c] of counts) { const w = (1 + Math.log(c)) * idf(t); v.set(t, w); norm += w * w; }
+    norm = Math.sqrt(norm) || 1;
+    for (const [t, w] of v) v.set(t, w / norm);
+    return v;
+  };
+  let k = 0;
+  for (const c of cats) for (const it of c.items) it._vec = vecFromTokens(allTokens[k++]);
+  return { cats, vecFromTokens };
+}
+function cosine(a, b) {
+  const [s, l] = a.size < b.size ? [a, b] : [b, a];
+  let dot = 0;
+  for (const [t, w] of s) { const o = l.get(t); if (o) dot += w * o; }
+  return dot;
+}
+function sharedTerms(a, b, k = 5) {
+  const out = [];
+  for (const [t, w] of a) { const o = b.get(t); if (o) out.push([t, w * o]); }
+  out.sort((x, y) => y[1] - x[1]);
+  return out.slice(0, k).map((x) => x[0]);
+}
+
+async function loadData() {
+  const seed = JSON.parse(document.getElementById("seed").textContent);
+  const tryFetch = async (paths) => {
+    for (const p of paths) { try { const r = await fetch(p); if (r.ok) return await r.json(); } catch (e) {} }
+    return null;
+  };
+  try {
+    const [radar, proj, ppl, learn] = await Promise.all([
+      tryFetch(["data/radar.json", "../data/radar.json"]),
+      tryFetch(["data/projects.json", "../data/projects.json"]),
+      tryFetch(["data/people.json", "../data/people.json"]),
+      tryFetch(["data/learning.json", "../data/learning.json"]),
+    ]);
+    if (radar && proj && ppl && learn) {
+      const tools = (radar.items || radar).filter((x) => x && x.ring !== "Archived" && (x.description || "").trim())
+        .map((t) => ({ id: t.id, name: t.name, description: t.description, quadrant: t.quadrant, ring: t.ring, url: t.url, company: t.company, topics: t.topics || [] }));
+      const projects = (proj.projects || []).map((p) => ({ id: p.id, name: p.name, status: p.status, topics: p.topics || [], blurb: p.blurb, stack: (p.stack || []).map((s) => s.name) }));
+      const people = (ppl.people || []).map((p) => ({ id: p.id, name: p.name, role: p.role, topics: p.topics || [], interests: p.interests || [], blurb: p.blurb, skills: (p.skills || []).map((s) => s.name).concat(p.skills_freeform || []) }));
+      const learning = (learn.items || []).map((l) => ({ id: l.id, type: l.type, title: l.title, author: l.author, year: l.year, status: l.status, rating: l.rating, topics: l.topics || [], blurb: l.blurb }));
+      return { tools, projects, people, learning, live: true };
+    }
+  } catch (e) { /* seed */ }
+  return { ...seed, live: false };
+}
+
+const nameOf = (key, it) => (key === "learning" ? it.title : it.name);
+function metaSub(key, it) {
+  if (key === "tools") return [it.quadrant, it.ring, it.company].filter(Boolean).join(" · ");
+  if (key === "projects") return [it.status, (it.topics || []).join(", ")].filter(Boolean).join(" · ");
+  if (key === "people") return [it.role, (it.interests || []).join(", ")].filter(Boolean).join(" · ");
+  if (key === "learning") return [it.type, it.author, it.status].filter(Boolean).join(" · ") + (it.rating ? " · " + "★".repeat(it.rating) : "");
+  return "";
+}
+const blurbOf = (key, it) => (key === "tools" ? it.description : it.blurb) || "";
+
+// ============================================================================
+function App() {
+  const [data, setData] = useState(null);
+  const [query, setQuery] = useState(EXAMPLE);
+  const [perCat, setPerCat] = useState(5);         // blips per sector
+  const [sel, setSel] = useState(null);            // selected blip id
+
+  useEffect(() => { loadData().then(setData); }, []);
+  const engine = useMemo(() => (data ? buildEngine(data) : null), [data]);
+
+  // rank each corpus, keep top-N per category, normalise scores to [0,1] globally
+  const model = useMemo(() => {
+    if (!engine) return null;
+    const qv = engine.vecFromTokens(tokenize(query));
+    const hasQuery = qv.size > 0;
+    const byCat = {};
+    let gmax = 0;
+    for (const c of engine.cats) {
+      const scored = c.items.map((it) => ({
+        key: c.key, item: it, id: c.key + ":" + (it.id || nameOf(c.key, it)),
+        score: hasQuery ? cosine(qv, it._vec) : 0,
+        why: hasQuery ? sharedTerms(qv, it._vec) : [],
+      })).filter((x) => x.score > 0.001).sort((a, b) => b.score - a.score);
+      byCat[c.key] = scored;
+      if (scored.length) gmax = Math.max(gmax, scored[0].score);
+    }
+    gmax = gmax || 1;
+    const blips = [];
+    for (const c of engine.cats) {
+      const list = byCat[c.key].slice(0, perCat);
+      list.forEach((r, i) => blips.push({ ...r, rel: r.score / gmax, rank: i, sectorCount: list.length }));
+    }
+    const top = CATS.map((c) => (byCat[c.key][0] ? { ...byCat[c.key][0], rel: byCat[c.key][0].score / gmax } : null));
+    return { byCat, blips, top, gmax, hasQuery };
+  }, [engine, query, perCat]);
+
+  if (!data || !engine || !model) return <div className="loading">building the index…</div>;
+
+  const selBlip = sel ? model.blips.find((b) => b.id === sel) : null;
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <TopBar live={data.live} total={engine.cats.reduce((a, c) => a + c.items.length, 0)} />
+      <QueryBox query={query} setQuery={setQuery} perCat={perCat} setPerCat={setPerCat}
+        onExample={() => setQuery(EXAMPLE)} onClear={() => setQuery("")} />
+      <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
+        <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
+          {model.hasQuery
+            ? <Scope blips={model.blips} sel={sel} setSel={setSel} selBlip={selBlip} />
+            : <Empty />}
+        </div>
+        <BuildKit top={model.top} hasQuery={model.hasQuery} sel={sel} setSel={setSel} />
+      </div>
+      <Footer live={data.live} />
+    </div>
+  );
+}
+
+function TopBar({ live, total }) {
+  const tab = { background: "transparent", color: "#999", border: "1px solid #444",
+    textDecoration: "none", padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 };
+  return (
+    <div style={{ display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
+      fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap" }}>
+      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+      <a href="index.html#atlas" style={tab}>ATLAS</a>
+      <a href="learning.html" style={tab}>LEARNING</a>
+      <a href="similarity.html" style={tab}>SIMILARITY</a>
+      <a href="projects.html" style={tab}>PROJECTS</a>
+      <a href="people.html" style={tab}>PEOPLE</a>
+      <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+        padding: "6px 14px", fontSize: 11, letterSpacing: 1, marginLeft: 8 }}>DISCOVER</span>
+      <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: live ? "#4ade80" : "#fbbf24" }}>
+        {live ? "● live corpora" : "○ sample corpora"} · {total} items · radar scope
+      </span>
+    </div>
+  );
+}
+
+function QueryBox({ query, setQuery, perCat, setPerCat, onExample, onClear }) {
+  return (
+    <div style={{ padding: "16px 20px 10px", borderBottom: "1px solid var(--border)", background: "var(--surface-1)" }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
+        <strong style={{ fontSize: 15 }}>Describe what you're trying to build</strong>
+        <span style={{ color: "var(--muted)", fontSize: 12 }}>your idea sits at the centre — matches orbit closer as they get stronger</span>
+        <span style={{ marginLeft: "auto", display: "flex", gap: 12, alignItems: "center" }}>
+          <label style={{ color: "var(--muted)", fontSize: 12 }}>blips/sector{" "}
+            <input type="range" min="1" max="8" value={perCat} onChange={(e) => setPerCat(+e.target.value)} /> {perCat}</label>
+          <button onClick={onExample} style={ghostBtn}>example</button>
+          <button onClick={onClear} style={ghostBtn}>clear</button>
+        </span>
+      </div>
+      <textarea value={query} onChange={(e) => setQuery(e.target.value)}
+        placeholder="e.g. A pipeline that ingests streaming sensor data, detects anomalies with a small on-device model, and pages a human when something drifts…"
+        style={{ width: "100%", minHeight: 116, resize: "vertical", background: "var(--page)", color: "var(--ink)",
+          border: "1px solid var(--border)", borderRadius: 10, padding: "12px 14px", fontSize: 14, lineHeight: 1.6, outline: "none" }} />
+    </div>
+  );
+}
+const ghostBtn = { padding: "5px 12px", borderRadius: 6, cursor: "pointer",
+  border: "1px solid var(--border)", background: "transparent", color: "var(--ink-2)", fontSize: 12 };
+
+function Empty() {
+  return <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center",
+    justifyContent: "center", color: "var(--muted)", padding: 40 }}>Type or paste a description above to light up the scope.</div>;
+}
+
+// ---- the radar scope (canvas) ----------------------------------------------
+function Scope({ blips, sel, setSel, selBlip }) {
+  const canvasRef = useRef(null);
+  const layoutRef = useRef({ blips: [], cx: 0, cy: 0, r: 0 });
+  const [hover, setHover] = useState(null);
+
+  // place each blip: angle within its category's sector, radius from match
+  const placed = useMemo(() => {
+    return blips.map((b) => {
+      const cat = CATS.find((c) => c.key === b.key);
+      const span = Math.PI / 2 * 0.74;                       // fill ~74% of the 90° sector
+      const t = b.sectorCount > 1 ? b.rank / (b.sectorCount - 1) : 0.5;
+      const angle = cat.a0 + (t - 0.5) * span;
+      const radiusFrac = 0.16 + (1 - b.rel) * 0.72;          // near centre = strong
+      return { ...b, angle, radiusFrac, accent: cat.accent };
+    });
+  }, [blips]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    let raf, running = true, sweep = 0;
+
+    const resize = () => {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = rect.width * dpr; canvas.height = rect.height * dpr;
+      canvas.style.width = rect.width + "px"; canvas.style.height = rect.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const draw = () => {
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      const cx = w / 2, cy = h / 2;
+      const r = Math.min(w, h) / 2 - 46;
+      ctx.clearRect(0, 0, w, h);
+
+      // rings
+      ctx.strokeStyle = "rgba(255,255,255,0.08)"; ctx.lineWidth = 1;
+      for (let k = 1; k <= 4; k++) {
+        ctx.beginPath(); ctx.arc(cx, cy, r * k / 4, 0, Math.PI * 2); ctx.stroke();
+      }
+      // sector dividers (diagonals) + labels
+      ctx.strokeStyle = "rgba(255,255,255,0.06)";
+      for (const ang of [Math.PI / 4, 3 * Math.PI / 4, 5 * Math.PI / 4, 7 * Math.PI / 4]) {
+        ctx.beginPath(); ctx.moveTo(cx, cy);
+        ctx.lineTo(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r); ctx.stroke();
+      }
+      ctx.font = "600 11px 'IBM Plex Mono', monospace"; ctx.textAlign = "center";
+      for (const c of CATS) {
+        const lx = cx + Math.cos(c.a0) * (r + 26);
+        const ly = cy + Math.sin(c.a0) * (r + 26);
+        ctx.fillStyle = c.accent;
+        ctx.fillText(c.label.toUpperCase(), lx, ly + 4);
+      }
+
+      // sweep wedge
+      sweep += 0.012;
+      const grad = ctx.createConicGradient ? null : null;
+      ctx.save();
+      ctx.translate(cx, cy);
+      const seg = 44;
+      for (let i = 0; i < seg; i++) {
+        const a1 = sweep - (i / seg) * 0.9;
+        ctx.beginPath(); ctx.moveTo(0, 0);
+        ctx.arc(0, 0, r, a1, a1 + 0.05);
+        ctx.closePath();
+        ctx.fillStyle = `rgba(120,180,255,${0.05 * (1 - i / seg)})`;
+        ctx.fill();
+      }
+      ctx.strokeStyle = "rgba(150,200,255,0.35)"; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(Math.cos(sweep) * r, Math.sin(sweep) * r); ctx.stroke();
+      ctx.restore();
+
+      // centre: the idea
+      ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff"; ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,0.25)"; ctx.lineWidth = 8;
+      ctx.beginPath(); ctx.arc(cx, cy, 9, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = "var(--muted)"; ctx.fillStyle = "#c3c2b7";
+      ctx.font = "10px 'IBM Plex Mono', monospace"; ctx.textAlign = "center";
+      ctx.fillText("YOUR IDEA", cx, cy + 26);
+
+      // blips
+      const laid = [];
+      const hiId = hover || sel;
+      for (const b of placed) {
+        const bx = cx + Math.cos(b.angle) * r * b.radiusFrac;
+        const by = cy + Math.sin(b.angle) * r * b.radiusFrac;
+        const size = 4 + b.rel * 7;
+        laid.push({ ...b, x: bx, y: by, size });
+        const isHi = b.id === hiId;
+        // connector to centre
+        ctx.strokeStyle = isHi ? b.accent : "rgba(140,150,165,0.14)";
+        ctx.lineWidth = isHi ? 1.6 : 0.8;
+        ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(bx, by); ctx.stroke();
+        // glow for the top pick of each sector
+        if (b.rank === 0) {
+          ctx.beginPath(); ctx.arc(bx, by, size + 5, 0, Math.PI * 2);
+          ctx.fillStyle = b.accent + "22"; ctx.fill();
+        }
+        ctx.beginPath(); ctx.arc(bx, by, size, 0, Math.PI * 2);
+        ctx.fillStyle = b.accent; ctx.globalAlpha = isHi ? 1 : 0.9; ctx.fill(); ctx.globalAlpha = 1;
+        if (isHi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.stroke(); }
+        // label the sector leaders (or the hovered/selected)
+        if (b.rank === 0 || isHi) {
+          ctx.fillStyle = "#e8e8e2"; ctx.textAlign = "left";
+          ctx.font = (isHi ? "600 " : "") + "10px 'IBM Plex Mono', monospace";
+          const nm = nameOf(b.key, b.item);
+          ctx.fillText(nm.length > 22 ? nm.slice(0, 21) + "…" : nm, bx + size + 5, by + 3);
+        }
+      }
+      layoutRef.current = { blips: laid, cx, cy, r };
+      if (running) raf = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => { running = false; cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, [placed, hover, sel]);
+
+  const pick = (ev) => {
+    const canvas = canvasRef.current, rect = canvas.getBoundingClientRect();
+    const x = ev.clientX - rect.left, y = ev.clientY - rect.top;
+    let best = null, bd = 16 * 16;
+    for (const b of layoutRef.current.blips) {
+      const d = (b.x - x) ** 2 + (b.y - y) ** 2;
+      if (d < bd + b.size * b.size) { bd = d; best = b; }
+    }
+    return best;
+  };
+
+  return (
+    <div style={{ position: "absolute", inset: 0 }}>
+      <canvas ref={canvasRef}
+        onMouseMove={(e) => { const b = pick(e); setHover(b ? b.id : null); e.currentTarget.style.cursor = b ? "pointer" : "default"; }}
+        onMouseLeave={() => setHover(null)}
+        onClick={(e) => { const b = pick(e); setSel(b ? b.id : null); }}
+        style={{ display: "block", width: "100%", height: "100%" }} />
+      {(selBlip || (hover && layoutRef.current.blips.find((b) => b.id === hover))) &&
+        <BlipCard b={selBlip || layoutRef.current.blips.find((b) => b.id === hover)} pinned={!!selBlip} onClose={() => setSel(null)} />}
+    </div>
+  );
+}
+
+function BlipCard({ b, pinned, onClose }) {
+  return (
+    <div style={{ position: "absolute", left: 14, bottom: 14, maxWidth: 380,
+      background: "rgba(20,20,19,0.96)", border: "1px solid var(--border)", borderRadius: 10, padding: "11px 13px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={{ width: 10, height: 10, borderRadius: 2, background: b.accent }} />
+        <span style={{ fontSize: 10, letterSpacing: 1, color: b.accent, textTransform: "uppercase" }}>{LABEL[b.key]}</span>
+        <strong style={{ fontSize: 14 }}>{nameOf(b.key, b.item)}</strong>
+        <span style={{ marginLeft: "auto", color: "var(--ink-2)", fontVariantNumeric: "tabular-nums", fontSize: 12 }}>{Math.round(b.rel * 100)}%</span>
+        {pinned && <button onClick={onClose} style={{ background: "none", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: 16, marginLeft: 4 }}>×</button>}
+      </div>
+      <div style={{ color: "var(--muted)", fontSize: 11.5, marginTop: 2 }}>{metaSub(b.key, b.item)}</div>
+      <div style={{ color: "var(--ink-2)", fontSize: 12, marginTop: 7 }}>
+        {blurbOf(b.key, b.item).slice(0, 200)}{blurbOf(b.key, b.item).length > 200 ? "…" : ""}
+      </div>
+      {b.why && b.why.length > 0 && <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 7 }}>why: <span style={{ color: b.accent }}>{b.why.join(" · ")}</span></div>}
+      {b.key === "tools" && b.item.url && <div style={{ marginTop: 7 }}><a href={b.item.url} target="_blank" style={{ fontSize: 11.5 }}>{b.item.url.replace(/^https?:\/\//, "")}</a></div>}
+    </div>
+  );
+}
+
+// ---- right rail: the assembled recommendation ------------------------------
+function BuildKit({ top, hasQuery, sel, setSel }) {
+  return (
+    <div style={{ width: 320, flex: "0 0 320px", borderLeft: "1px solid var(--border)",
+      overflow: "auto", padding: "16px 16px 24px", background: "var(--surface-1)" }}>
+      <div style={{ fontSize: 12, letterSpacing: 1, textTransform: "uppercase", color: "var(--ink)", marginBottom: 4 }}>Your build kit</div>
+      <div style={{ color: "var(--muted)", fontSize: 11.5, marginBottom: 14 }}>the single strongest match in each category, assembled into one recommendation</div>
+      {!hasQuery && <div style={{ color: "var(--muted)", fontSize: 12 }}>—</div>}
+      {hasQuery && top.map((r, i) => {
+        const cat = CATS[i];
+        if (!r) return (
+          <div key={cat.key} style={{ padding: "12px 0", borderTop: "1px solid var(--border)" }}>
+            <SectionLead accent={cat.accent} label={cat.label} />
+            <div style={{ color: "var(--muted)", fontSize: 12, marginTop: 6 }}>no strong match</div>
+          </div>
+        );
+        const id = cat.key + ":" + (r.item.id || nameOf(cat.key, r.item));
+        const on = sel === id;
+        return (
+          <div key={cat.key} onClick={() => setSel(on ? null : id)}
+            style={{ padding: "12px 0", borderTop: "1px solid var(--border)", cursor: "pointer",
+              background: on ? "rgba(255,255,255,0.03)" : "transparent" }}>
+            <SectionLead accent={cat.accent} label={cat.label} pct={Math.round(r.rel * 100)} />
+            <div style={{ fontSize: 14, fontWeight: 600, marginTop: 6 }}>{nameOf(cat.key, r.item)}</div>
+            <div style={{ color: "var(--muted)", fontSize: 11.5, marginTop: 2 }}>{metaSub(cat.key, r.item)}</div>
+            <div style={{ color: "var(--ink-2)", fontSize: 12, marginTop: 6 }}>
+              {blurbOf(cat.key, r.item).slice(0, 150)}{blurbOf(cat.key, r.item).length > 150 ? "…" : ""}
+            </div>
+            {cat.key === "tools" && r.item.url &&
+              <div style={{ marginTop: 6 }}><a href={r.item.url} target="_blank" onClick={(e) => e.stopPropagation()} style={{ fontSize: 11.5 }}>{r.item.url.replace(/^https?:\/\//, "")}</a></div>}
+          </div>
+        );
+      })}
+      {hasQuery && (
+        <div style={{ marginTop: 16, padding: "12px 13px", border: "1px dashed var(--border)", borderRadius: 10, color: "var(--ink-2)", fontSize: 12 }}>
+          <span style={{ color: "var(--muted)" }}>Reads as:</span> build it with{" "}
+          <KitPhrase top={top} />.
+        </div>
+      )}
+    </div>
+  );
+}
+function SectionLead({ accent, label, pct }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <span style={{ width: 9, height: 9, borderRadius: 2, background: accent }} />
+      <span style={{ fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", color: "var(--muted)" }}>{label}</span>
+      {pct != null && <span style={{ marginLeft: "auto", fontSize: 11, color: accent, fontVariantNumeric: "tabular-nums" }}>{pct}%</span>}
+    </div>
+  );
+}
+function KitPhrase({ top }) {
+  const t = top[0], p = top[1], pe = top[2], l = top[3];
+  const parts = [];
+  if (t) parts.push(<b key="t" style={{ color: ACCENT.tools }}>{t.item.name}</b>);
+  if (pe) parts.push(<span key="pe">, talk to <b style={{ color: ACCENT.people }}>{pe.item.name}</b></span>);
+  if (p) parts.push(<span key="p">, study <b style={{ color: ACCENT.projects }}>{p.item.name}</b></span>);
+  if (l) parts.push(<span key="l">, and read <b style={{ color: ACCENT.learning }}>{l.item.title}</b></span>);
+  return <span>{parts}</span>;
+}
+
+function Footer({ live }) {
+  return (
+    <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "9px 16px",
+      borderTop: "1px solid var(--border)", background: "var(--surface-1)", color: "var(--muted)", fontSize: 11.5, flexWrap: "wrap" }}>
+      {CATS.map((c) => (
+        <span key={c.key} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ width: 9, height: 9, borderRadius: 2, background: c.accent }} />{c.label}
+        </span>
+      ))}
+      <span style={{ color: "var(--muted)" }}>· nearer centre = stronger match · size = score</span>
+      <span style={{ marginLeft: "auto" }}>Option B · radar scope + build kit · {live ? "live data" : "60-tool sample"} · prototype</span>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+  </script>
+</body>
+</html>
