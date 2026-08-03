@@ -9,8 +9,9 @@ import React, { useState, useMemo, useEffect } from "react";
    status (Discovered → Queued → Reading → Read, with Shelved as the
    deliberate "not for now, maybe later" set-aside).
 
-   Holds mixed learning content — books, articles, and videos — in one
-   list, each item carrying a `type`. Reuses the same curated TOPICS
+   Holds mixed learning content — books, articles, videos, and
+   certifications — in one list, each item carrying a `type`. Reuses the
+   same curated TOPICS
    vocabulary as radar_core.TOPICS / dashboard.jsx, so an item and a
    technology can share a topic tag (e.g. both tagged "RAG" or "Quant").
 
@@ -35,9 +36,9 @@ const STATUS_LABEL = { Discovered: "Discovered", Queued: "Queued", Reading: "In 
 // Content types. A small glyph + label brands each card so books,
 // articles and videos are distinguishable at a glance without color
 // (color is reserved for status, as on the tech radar).
-const TYPES = ["book", "article", "video"];
-const TYPE_LABEL = { book: "Book", article: "Article", video: "Video" };
-const TYPE_ICON = { book: "▣", article: "❡", video: "▶" };
+const TYPES = ["book", "article", "video", "certification"];
+const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification" };
+const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡" };
 
 /* Fallback sample — used if data/learning.json can't be fetched. */
 const SAMPLE = {
@@ -67,6 +68,7 @@ function lengthLabel(b) {
   if (b.type === "book") return b.pages ? b.pages + "p" : "";
   if (b.type === "article") return b.minutes ? b.minutes + " min read" : "";
   if (b.type === "video") return b.duration || "";
+  if (b.type === "certification") return b.code || "";
   return "";
 }
 
@@ -539,7 +541,7 @@ export default function LearningApp() {
 
   const counts = { Discovered: 0, Queued: 0, Reading: 0, Read: 0, Shelved: 0 };
   allItems.forEach((b) => { if (counts[b.status] !== undefined) counts[b.status]++; });
-  const typeCounts = { book: 0, article: 0, video: 0 };
+  const typeCounts = { book: 0, article: 0, video: 0, certification: 0 };
   allItems.forEach((b) => { if (typeCounts[b.type] !== undefined) typeCounts[b.type]++; });
 
   return (
@@ -605,7 +607,7 @@ export default function LearningApp() {
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
               color: "#6b6456", letterSpacing: 1, textAlign: "right",
             }}>
-              BOOKS · ARTICLES · VIDEOS — ATLAS VIEW<br />
+              BOOKS · ARTICLES · VIDEOS · CERTIFICATIONS — ATLAS VIEW<br />
               {data.generated}
             </span>
           </div>
@@ -642,6 +644,7 @@ export default function LearningApp() {
           <Stat label="BOOKS" value={typeCounts.book} />
           <Stat label="ARTICLES" value={typeCounts.article} />
           <Stat label="VIDEOS" value={typeCounts.video} />
+          <Stat label="CERTIFICATIONS" value={typeCounts.certification} />
           <Stat label="DISCOVERED" value={counts.Discovered} color={STATUS_COLOR.Discovered} />
           <Stat label="QUEUED" value={counts.Queued} color={STATUS_COLOR.Queued} />
           <Stat label="IN PROGRESS" value={counts.Reading} color={STATUS_COLOR.Reading} />

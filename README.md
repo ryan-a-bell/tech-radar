@@ -189,29 +189,34 @@ article, video, and a technology can share a topic tag.
 ## Learning Library
 
 A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
-learning content — **books, articles, and videos** — alongside the
-technologies they relate to. Hand-curated in `data/learning.json` (no
-scraper — add entries by editing the file directly). Read-only, same as the
-deployed dashboard.
+learning content — **books, articles, videos, and certifications** —
+alongside the technologies they relate to. Hand-curated in
+`data/learning.json` (no scraper — add entries by editing the file
+directly). Read-only, same as the deployed dashboard.
 
 ### Status
 
 | Status | Meaning |
 |--------|---------|
 | `Discovered` | On the list, not started |
+| `Queued` | Decided to pursue it, hasn't started — tracks `queued` date |
 | `Reading` | In progress — books track `pages_read` |
 | `Read` | Finished — tracks `rating` (1–5) |
+| `Shelved` | Deliberate "not now" set-aside — tracks `shelved` date and optional `shelved_note` |
 
-Status is content-neutral: for an article or video, `Reading`/`Read` simply
-mean "in progress" / "done" (shown in the UI as *In Progress* / *Done*).
+Status is content-neutral: for an article, video, or certification,
+`Reading`/`Read` simply mean "in progress" / "done" (shown in the UI as
+*In Progress* / *Done*).
 
 ### Item schema
 
-Every item carries a `type` (`book` · `article` · `video`) plus the shared
-fields below. Type-specific "length" fields differ: books use
-`pages`/`pages_read`, articles use `minutes` (read time), videos use
-`duration`. Articles and videos also carry a `url` and a `source`
-(publication / channel).
+Every item carries a `type` (`book` · `article` · `video` ·
+`certification`) plus the shared fields below. Type-specific "length"
+fields differ: books use `pages`/`pages_read`, articles use `minutes`
+(read time), videos use `duration`, certifications use `code` (exam code,
+where one exists). Articles and videos also carry a `url` and a `source`
+(publication / channel); certifications use `author` for the issuing
+organization.
 
 ```json
 {
@@ -246,6 +251,23 @@ fields below. Type-specific "length" fields differ: books use
   "minutes": 40,
   "rating": 5,
   "finished": "2025-08-11",
+  "blurb": "..."
+}
+```
+
+```json
+{
+  "id": "databricks-genai-engineer-associate",
+  "type": "certification",
+  "title": "Databricks Certified Generative AI Engineer Associate",
+  "author": "Databricks",
+  "code": null,
+  "year": null,
+  "status": "Queued",
+  "topics": ["AI", "RAG", "Skills"],
+  "rating": null,
+  "added": "2026-08-03",
+  "queued": "2026-08-03",
   "blurb": "..."
 }
 ```
