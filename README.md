@@ -213,9 +213,10 @@ Status is content-neutral: for an article, video, or certification,
 Every item carries a `type` (`book` · `article` · `video` ·
 `certification`) plus the shared fields below. Type-specific "length"
 fields differ: books use `pages`/`pages_read`, articles use `minutes`
-(read time), videos use `duration`, certifications use `code` (exam code,
-where one exists). Articles and videos also carry a `url` and a `source`
-(publication / channel); certifications use `author` for the issuing
+(read time), videos use `duration`, certifications use `price` (exam
+fee). Articles, videos, and certifications also carry a `url` and a
+`source` (publication / channel for articles and videos, exam code for
+certifications); certifications use `author` for the issuing
 organization.
 
 ```json
@@ -261,7 +262,9 @@ organization.
   "type": "certification",
   "title": "Databricks Certified Generative AI Engineer Associate",
   "author": "Databricks",
-  "code": null,
+  "source": null,
+  "url": "https://www.databricks.com/learn/certification/genai-engineer-associate",
+  "price": "$200",
   "year": null,
   "status": "Queued",
   "topics": ["AI", "RAG", "Skills"],

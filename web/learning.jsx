@@ -63,17 +63,19 @@ function daysAgo(iso) {
 function touchedDate(b) { return b.finished || b.started || b.shelved || b.queued || b.added || "0000-00-00"; }
 
 /* Human "length" label per content type — pages for books, read-time for
-   articles, runtime for videos. Returns "" if the item carries no length. */
+   articles, runtime for videos, exam price for certifications. Returns ""
+   if the item carries no length. */
 function lengthLabel(b) {
   if (b.type === "book") return b.pages ? b.pages + "p" : "";
   if (b.type === "article") return b.minutes ? b.minutes + " min read" : "";
   if (b.type === "video") return b.duration || "";
-  if (b.type === "certification") return b.code || "";
+  if (b.type === "certification") return b.price || "";
   return "";
 }
 
-/* Byline under the title: creator, then source (publication / channel) for
-   articles and videos, then year. Books just show author · year. */
+/* Byline under the title: creator, then source (publication / channel for
+   articles and videos, exam code for certifications), then year. Books
+   just show author · year. */
 function byline(b) {
   const parts = [b.author];
   if (b.source && b.type !== "book") parts.push(b.source);
