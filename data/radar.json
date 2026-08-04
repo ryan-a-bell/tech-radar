@@ -1,7 +1,115 @@
 {
   "generated": "2026-08-04",
-  "count": 536,
+  "count": 540,
   "items": [
+    {
+      "id": "github:donnemartin/system-design-primer",
+      "name": "system-design-primer",
+      "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "canonical_url": "github.com/donnemartin/system-design-primer",
+      "also_seen": [],
+      "company": null,
+      "stars": 237,
+      "momentum": 23,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-04": 237
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:firecrawl/pdf-inspector",
+      "name": "pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "canonical_url": "github.com/firecrawl/pdf-inspector",
+      "also_seen": [],
+      "company": null,
+      "stars": 1699,
+      "momentum": 100,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-04": 1699
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Alishahryar1/free-claude-code",
+      "name": "free-claude-code",
+      "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "canonical_url": "github.com/alishahryar1/free-claude-code",
+      "also_seen": [],
+      "company": null,
+      "stars": 278,
+      "momentum": 27,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-04": 278
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:livekit/agents",
+      "name": "agents",
+      "description": "A framework for building realtime voice AI agents \ud83e\udd16\ud83c\udf99\ufe0f\ud83d\udcf9",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/livekit/agents",
+      "canonical_url": "github.com/livekit/agents",
+      "also_seen": [],
+      "company": null,
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-04": 148
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:openmetadata",
       "name": "OpenMetadata",
@@ -60,7 +168,7 @@
       "canonical_url": "github.com/antirez/ds4",
       "also_seen": [],
       "company": null,
-      "stars": 139,
+      "stars": 384,
       "momentum": 13,
       "tags": [
         "c"
@@ -68,12 +176,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
-        "2026-08-03": 139
+        "2026-08-03": 139,
+        "2026-08-04": 384
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 245
     },
     {
       "id": "manual:vercel",
@@ -209,7 +318,7 @@
       "canonical_url": "github.com/esengine/deepseek-reasonix",
       "also_seen": [],
       "company": null,
-      "stars": 333,
+      "stars": 883,
       "momentum": 33,
       "tags": [
         "go"
@@ -217,12 +326,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
-        "2026-08-03": 333
+        "2026-08-03": 333,
+        "2026-08-04": 883
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 550
     },
     {
       "id": "manual:databento",
@@ -317,7 +427,7 @@
       "canonical_url": "github.com/iv-org/invidious",
       "also_seen": [],
       "company": null,
-      "stars": 305,
+      "stars": 402,
       "momentum": 43,
       "tags": [
         "crystal"
@@ -325,13 +435,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-08-02": 435,
-        "2026-08-03": 305
+        "2026-08-03": 305,
+        "2026-08-04": 402
       },
       "trend": "down",
-      "trend_delta": -130
+      "trend_delta": -33
     },
     {
       "id": "github:github/gh-stack",
@@ -372,7 +483,7 @@
       "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 588,
+      "stars": 775,
       "momentum": 10,
       "tags": [
         "jupyter notebook"
@@ -380,13 +491,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-08-02": 108,
-        "2026-08-03": 588
+        "2026-08-03": 588,
+        "2026-08-04": 775
       },
       "trend": "up",
-      "trend_delta": 480
+      "trend_delta": 667
     },
     {
       "id": "github:microsoft/TRELLIS.2",
@@ -427,7 +539,7 @@
       "canonical_url": "github.com/zhaoxuya520/reverse-skill",
       "also_seen": [],
       "company": null,
-      "stars": 1141,
+      "stars": 2446,
       "momentum": 33,
       "tags": [
         "powershell"
@@ -435,14 +547,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-08-01": 335,
         "2026-08-02": 1320,
-        "2026-08-03": 1141
+        "2026-08-03": 1141,
+        "2026-08-04": 2446
       },
       "trend": "up",
-      "trend_delta": 806
+      "trend_delta": 2111
     },
     {
       "id": "github:usekaneo/kaneo",
@@ -456,7 +569,7 @@
       "canonical_url": "github.com/usekaneo/kaneo",
       "also_seen": [],
       "company": null,
-      "stars": 496,
+      "stars": 665,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -464,14 +577,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-08-01": 194,
         "2026-08-02": 760,
-        "2026-08-03": 496
+        "2026-08-03": 496,
+        "2026-08-04": 665
       },
       "trend": "up",
-      "trend_delta": 302
+      "trend_delta": 471
     },
     {
       "id": "github:geo-tp/ESP32-Bit-Pirate",
@@ -5505,7 +5619,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 602,
+      "stars": 1090,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -5513,15 +5627,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-07-09": 318,
         "2026-07-11": 123,
         "2026-08-02": 227,
-        "2026-08-03": 602
+        "2026-08-03": 602,
+        "2026-08-04": 1090
       },
       "trend": "up",
-      "trend_delta": 479
+      "trend_delta": 967
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -7784,7 +7899,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 2629,
+      "stars": 1902,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -7792,17 +7907,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-07-01": 252,
         "2026-07-02": 1096,
         "2026-07-31": 155,
         "2026-08-01": 1592,
         "2026-08-02": 949,
-        "2026-08-03": 2629
+        "2026-08-03": 2629,
+        "2026-08-04": 1902
       },
       "trend": "up",
-      "trend_delta": 1533
+      "trend_delta": 806
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -7943,17 +8059,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:anthropics/skills",
+      "id": "github:openai/skills",
       "name": "skills",
-      "description": "Public repository for Agent Skills",
+      "description": "Skills Catalog for Codex",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/anthropics/skills",
-      "canonical_url": "github.com/anthropics/skills",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
       "also_seen": [],
-      "company": "Anthropic",
+      "company": "OpenAI",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -7966,17 +8082,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:openai/skills",
+      "id": "github:anthropics/skills",
       "name": "skills",
-      "description": "Skills Catalog for Codex",
+      "description": "Public repository for Agent Skills",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
+      "url": "https://github.com/anthropics/skills",
+      "canonical_url": "github.com/anthropics/skills",
       "also_seen": [],
-      "company": "OpenAI",
+      "company": "Anthropic",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -8871,29 +8987,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "also_seen": [],
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
-      "trend": "none",
-      "trend_delta": 0
-    },
-    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
@@ -8920,6 +9013,29 @@
       },
       "trend": "up",
       "trend_delta": 414
+    },
+    {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -10522,13 +10638,13 @@
       "canonical_url": "github.com/jamiepine/voicebox",
       "also_seen": [],
       "company": null,
-      "stars": 557,
+      "stars": 412,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-21": 145,
         "2026-06-22": 614,
@@ -10536,10 +10652,11 @@
         "2026-06-24": 1045,
         "2026-07-20": 610,
         "2026-07-21": 821,
-        "2026-07-23": 557
+        "2026-07-23": 557,
+        "2026-08-04": 412
       },
       "trend": "down",
-      "trend_delta": -488
+      "trend_delta": -145
     },
     {
       "id": "github:twentyhq/twenty",
@@ -11931,13 +12048,13 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 441,
+      "stars": 200,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-15": 244,
         "2026-06-16": 396,
@@ -11946,10 +12063,11 @@
         "2026-07-25": 499,
         "2026-07-26": 319,
         "2026-07-27": 321,
-        "2026-07-28": 441
+        "2026-07-28": 441,
+        "2026-08-04": 200
       },
-      "trend": "up",
-      "trend_delta": 45
+      "trend": "down",
+      "trend_delta": -241
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -13636,13 +13754,13 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 659,
+      "stars": 1057,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
@@ -13653,10 +13771,11 @@
         "2026-06-17": 2025,
         "2026-06-18": 1161,
         "2026-06-27": 1194,
-        "2026-08-03": 659
+        "2026-08-03": 659,
+        "2026-08-04": 1057
       },
       "trend": "down",
-      "trend_delta": -535
+      "trend_delta": -137
     },
     {
       "id": "github:github/spec-kit",
@@ -14187,23 +14306,24 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 819,
+      "stars": 1085,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
         "2026-06-23": 193,
         "2026-07-19": 161,
         "2026-07-20": 358,
-        "2026-08-03": 819
+        "2026-08-03": 819,
+        "2026-08-04": 1085
       },
       "trend": "up",
-      "trend_delta": 461
+      "trend_delta": 727
     },
     {
       "id": "github:OpenBMB/VoxCPM",

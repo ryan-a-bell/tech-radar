@@ -10,7 +10,7 @@
   "canonical_url": "github.com/iv-org/invidious",
   "also_seen": [],
   "company": null,
-  "stars": 305,
+  "stars": 402,
   "momentum": 43,
   "tags": [
     "crystal"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-02",
-  "last_seen": "2026-08-03",
+  "last_seen": "2026-08-04",
   "stars_history": {
     "2026-08-02": 435,
-    "2026-08-03": 305
+    "2026-08-03": 305,
+    "2026-08-04": 402
   }
 }

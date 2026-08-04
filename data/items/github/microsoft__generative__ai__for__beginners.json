@@ -10,7 +10,7 @@
   "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
   "also_seen": [],
   "company": "Microsoft",
-  "stars": 588,
+  "stars": 775,
   "momentum": 10,
   "tags": [
     "jupyter notebook"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-02",
-  "last_seen": "2026-08-03",
+  "last_seen": "2026-08-04",
   "stars_history": {
     "2026-08-02": 108,
-    "2026-08-03": 588
+    "2026-08-03": 588,
+    "2026-08-04": 775
   }
 }
