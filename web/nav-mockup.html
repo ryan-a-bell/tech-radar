@@ -5,346 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nav Restructure — Mockup</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     /* =====================================================================
-       NAVIGATION RESTRUCTURE — static, data-free mockup.
+       NAVIGATION RESTRUCTURE — static mockup.
 
-       Proposal: promote Discover's four lanes to top-level tabs and merge
-       the dark + light pages behind one shell with a theme toggle.
+       Only the navbar is being reorganised here. Styling is lifted straight
+       from the live nav in dashboard.jsx (the #1a1a1a mono bar with small
+       bordered buttons) so it reads as the same site, not a redesign.
 
-         Discover · Technology · Projects · People · Learning
+       Proposal: the four Discover buckets become the top-level tabs, with
+       Discover kept last, and "TECH RADAR" titled on the left:
 
-       Nothing here is wired to data/ — it exists to feel the navigation.
-       Tokens + accent colours are lifted from the live pages so the shell
-       reads as "the same site", not a redesign.
+         TECH RADAR   Technology · Projects · People · Learning · Discover
+
+       Atlas becomes Technology, with a VIEW: subnav for radar / table /
+       similarity. Light/dark merge is deferred — this stays dark like today.
        ===================================================================== */
-    :root {
-      /* dark is the default ground (matches index/discover/similarity) */
-      --page:      #0d0d0d;
-      --surface-1: #171716;
-      --surface-2: #1f1f1d;
-      --ink:       #f4f3ee;
-      --ink-2:     #c3c2b7;
-      --muted:     #898781;
-      --grid:      #2c2c2a;
-      --border:    rgba(255,255,255,0.10);
-      --border-2:  rgba(255,255,255,0.16);
-      --hairline:  rgba(255,255,255,0.06);
-
-      /* the four category accents — copied verbatim from discover.html,
-         plus a neutral for Discover (the meta-inbox that feeds the rest) */
-      --a-discover:   #b8b6ac;
-      --a-technology: #3987e5;
-      --a-projects:   #199e70;
-      --a-people:     #c98500;
-      --a-learning:   #9085e9;
-
-      --shadow: 0 1px 0 rgba(255,255,255,0.03), 0 8px 30px rgba(0,0,0,0.45);
-    }
-
-    /* the merge the proposal is really about: Learning's cream world becomes
-       a theme, not a separate page. Toggle stamps data-theme on :root. */
-    :root[data-theme="light"] {
-      --page:      #f4f0e6;
-      --surface-1: #fbf8f0;
-      --surface-2: #ffffff;
-      --ink:       #26221b;
-      --ink-2:     #4f4a3f;
-      --muted:     #8a8474;
-      --grid:      #e4ddcb;
-      --border:    rgba(38,34,27,0.14);
-      --border-2:  rgba(38,34,27,0.24);
-      --hairline:  rgba(38,34,27,0.07);
-      --a-discover:   #7a7566;
-      --a-technology: #1f6fd0;
-      --a-projects:   #12855e;
-      --a-people:     #a56b00;
-      --a-learning:   #6f63c9;
-      --shadow: 0 1px 0 rgba(255,255,255,0.6), 0 10px 34px rgba(60,50,30,0.14);
-    }
-    /* honour OS preference until the user flips the in-page toggle */
-    @media (prefers-color-scheme: light) {
-      :root:not([data-theme="dark"]) {
-        --page:#f4f0e6; --surface-1:#fbf8f0; --surface-2:#ffffff;
-        --ink:#26221b; --ink-2:#4f4a3f; --muted:#8a8474; --grid:#e4ddcb;
-        --border:rgba(38,34,27,0.14); --border-2:rgba(38,34,27,0.24);
-        --hairline:rgba(38,34,27,0.07);
-        --a-discover:#7a7566; --a-technology:#1f6fd0; --a-projects:#12855e;
-        --a-people:#a56b00; --a-learning:#6f63c9;
-        --shadow:0 1px 0 rgba(255,255,255,0.6),0 10px 34px rgba(60,50,30,0.14);
-      }
-    }
-
     * { box-sizing: border-box; }
     html, body { margin: 0; height: 100%; }
     body {
-      background: var(--page);
-      color: var(--ink);
-      font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+      background: #000;
+      color: #c3c2b7;
+      font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
       font-size: 13px;
       line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      transition: background .28s ease, color .28s ease;
     }
-    a { color: inherit; }
-    button { font-family: inherit; font-size: inherit; color: inherit; cursor: pointer; }
-    ::selection { background: var(--a-technology); color: #fff; }
+    a { color: #3987e5; }
+    button { font-family: inherit; cursor: pointer; }
 
-    /* ------------------------------------------------------------------ */
-    /* mockup banner                                                       */
-    /* ------------------------------------------------------------------ */
-    .banner {
-      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-      padding: 7px 20px;
-      background: repeating-linear-gradient(45deg,
-        transparent, transparent 10px,
-        var(--hairline) 10px, var(--hairline) 20px);
-      border-bottom: 1px solid var(--border);
-      font-size: 10.5px; letter-spacing: .5px; color: var(--muted);
+    /* ---- mockup ribbon (not part of the real chrome) ---- */
+    .ribbon {
+      padding: 6px 14px; font-size: 10px; letter-spacing: .5px; color: #6f6d67;
+      background: #0d0d0d; border-bottom: 1px solid #222;
     }
-    .banner b { color: var(--ink-2); letter-spacing: 1px; }
-    .banner .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--a-technology); }
+    .ribbon b { color: #898781; letter-spacing: 1px; }
 
-    /* ------------------------------------------------------------------ */
-    /* primary top bar                                                     */
-    /* ------------------------------------------------------------------ */
+    /* ================= PRIMARY BAR — matches dashboard.jsx ================= */
     .topbar {
-      position: sticky; top: 0; z-index: 20;
-      display: flex; align-items: stretch; gap: 4px;
-      padding: 0 16px;
-      background: var(--surface-1);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: 0; background: #1a1a1a; padding: 10px 14px;
     }
     .brand {
-      display: flex; align-items: center; gap: 10px;
-      padding-right: 18px; margin-right: 6px;
-      border-right: 1px solid var(--hairline);
-      white-space: nowrap;
+      display: flex; align-items: baseline; gap: 8px;
+      margin-right: 18px; padding-right: 16px;
+      border-right: 1px solid #333;
     }
-    .brand .mark {
-      width: 20px; height: 20px; border-radius: 50%;
-      background:
-        radial-gradient(circle at 50% 50%, transparent 3px, var(--a-technology) 3px, var(--a-technology) 4px, transparent 4px),
-        radial-gradient(circle at 50% 50%, transparent 7px, var(--a-people) 7px, var(--a-people) 8px, transparent 8px),
-        conic-gradient(var(--a-projects), var(--a-learning), var(--a-technology), var(--a-people), var(--a-projects));
-      -webkit-mask: radial-gradient(circle at 50% 50%, transparent 2px, #000 2.5px);
-              mask: radial-gradient(circle at 50% 50%, transparent 2px, #000 2.5px);
-    }
-    .brand .name { font-weight: 600; letter-spacing: 2px; font-size: 12px; }
-    .brand .name small { display: block; font-weight: 400; letter-spacing: 1px; font-size: 9px; color: var(--muted); }
+    .brand .name { color: #fff; font-weight: 600; letter-spacing: 3px; font-size: 13px; }
+    .brand .sub  { color: #666; font-weight: 400; letter-spacing: 1px; font-size: 9.5px; }
 
-    .primary { display: flex; align-items: stretch; gap: 2px; flex: 1; overflow-x: auto; }
-    .primary::-webkit-scrollbar { height: 0; }
     .tab {
-      position: relative;
-      display: flex; align-items: center; gap: 8px;
-      padding: 14px 15px 12px;
-      background: transparent; border: none;
-      color: var(--muted);
-      letter-spacing: 1.5px; font-size: 11px; font-weight: 500;
+      background: transparent; color: #999;
+      border: 1px solid #444;
+      padding: 6px 14px; margin-right: 8px;
+      font-size: 11px; letter-spacing: 1px;
+    }
+    .tab:hover { color: #ccc; border-color: #666; }
+    .tab[aria-selected="true"] { background: #fff; color: #000; border-color: #fff; }
+
+    .status {
+      margin-left: auto; font-size: 10px; letter-spacing: 1px; color: #4ade80;
       white-space: nowrap;
-      border-bottom: 2px solid transparent;
-      transition: color .15s ease, border-color .15s ease;
-    }
-    .tab .glyph {
-      width: 9px; height: 9px; border-radius: 2px;
-      background: var(--accent); opacity: .55;
-      transition: opacity .15s ease, transform .15s ease;
-    }
-    .tab:hover { color: var(--ink-2); }
-    .tab:hover .glyph { opacity: .85; }
-    .tab[aria-selected="true"] {
-      color: var(--ink);
-      border-bottom-color: var(--accent);
-    }
-    .tab[aria-selected="true"] .glyph { opacity: 1; transform: rotate(45deg); }
-    .tab .count {
-      font-size: 9.5px; color: var(--muted);
-      background: var(--surface-2); border: 1px solid var(--hairline);
-      border-radius: 10px; padding: 1px 6px; letter-spacing: .5px;
     }
 
-    .toolbar { display: flex; align-items: center; gap: 10px; padding-left: 14px; margin-left: 6px; border-left: 1px solid var(--hairline); }
-    .status { display: flex; align-items: center; gap: 6px; font-size: 10px; letter-spacing: 1px; color: var(--muted); white-space: nowrap; }
-    .status .live { width: 6px; height: 6px; border-radius: 50%; background: var(--a-projects); box-shadow: 0 0 0 3px color-mix(in srgb, var(--a-projects) 22%, transparent); }
-    .theme-toggle {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 11px; border-radius: 6px;
-      background: var(--surface-2); border: 1px solid var(--border);
-      letter-spacing: 1px; font-size: 10.5px; color: var(--ink-2);
-    }
-    .theme-toggle:hover { border-color: var(--border-2); }
-    .theme-toggle .ic { font-size: 12px; }
-
-    /* ------------------------------------------------------------------ */
-    /* secondary / contextual subnav                                       */
-    /* ------------------------------------------------------------------ */
+    /* ================= SECONDARY BAR — VIEW: subnav ================= */
     .subbar {
-      position: sticky; top: 49px; z-index: 15;
-      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
-      padding: 9px 20px;
-      background: color-mix(in srgb, var(--accent) 8%, var(--surface-1));
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; flex-wrap: wrap;
+      background: #141413; padding: 8px 14px;
+      border-top: 1px solid #000;
     }
-    .subbar .ctx { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 10px; letter-spacing: 1.5px; }
-    .subbar .ctx b { color: var(--accent); font-weight: 600; }
-    .subnav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+    .subbar.empty { display: none; }
+    .subbar .label { color: #777; font-size: 11px; letter-spacing: 1px; margin-right: 14px; }
     .subtab {
-      padding: 5px 12px; border-radius: 20px;
-      background: transparent; border: 1px solid var(--border);
-      color: var(--ink-2); letter-spacing: .5px; font-size: 11px;
-      transition: all .14s ease;
+      background: transparent; color: #999;
+      border: 1px solid #3a3a3a;
+      padding: 5px 13px; margin-right: 8px;
+      font-size: 11px; letter-spacing: 1px;
     }
-    .subtab:hover { border-color: var(--accent); color: var(--ink); }
-    .subtab[aria-selected="true"] {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fff;
-      font-weight: 500;
+    .subtab:hover { color: #ccc; border-color: #555; }
+    .subtab[aria-selected="true"] { background: #d8d6cc; color: #000; border-color: #d8d6cc; }
+
+    /* ================= CONTENT PLACEHOLDER ================= */
+    .stage { max-width: 940px; margin: 0 auto; padding: 30px 18px 60px; }
+    .kicker { font-size: 10px; letter-spacing: 2px; color: #777; margin-bottom: 8px; }
+    .stage h1 { margin: 0 0 8px; font-size: 26px; font-weight: 600; letter-spacing: -.2px; color: #f4f3ee; }
+    .stage .desc { margin: 0 0 16px; color: #a8a69c; max-width: 66ch; }
+
+    .placeholder {
+      border: 1px dashed #333; border-radius: 4px;
+      padding: 40px 24px; text-align: center;
+      color: #6f6d67; font-size: 11px; letter-spacing: 1px;
+      background:
+        repeating-linear-gradient(45deg, transparent, transparent 12px,
+          rgba(255,255,255,0.015) 12px, rgba(255,255,255,0.015) 24px);
     }
-    :root[data-theme="light"] .subtab[aria-selected="true"] { color: #fff; }
-    .subtab .sub { opacity: .7; font-size: 9.5px; margin-left: 6px; }
+    .placeholder .big { color: #898781; font-size: 12px; letter-spacing: 2px; display: block; margin-bottom: 8px; }
+    .consolidates { margin-top: 14px; font-size: 10.5px; color: #6f6d67; letter-spacing: .5px; }
+    .consolidates code { color: #898781; }
+    .consolidates b { color: #a8a69c; }
 
-    /* ------------------------------------------------------------------ */
-    /* content stage                                                       */
-    /* ------------------------------------------------------------------ */
-    .stage { max-width: 1080px; margin: 0 auto; padding: 26px 20px 60px; }
-    .view-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 18px; }
-    .view-title { display: flex; flex-direction: column; gap: 4px; }
-    .view-title .kicker { font-size: 10px; letter-spacing: 2px; color: var(--accent); font-weight: 600; }
-    .view-title h1 { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -.3px; }
-    .view-title p { margin: 0; color: var(--ink-2); font-size: 12px; max-width: 62ch; }
-    .consolidates {
-      font-size: 10px; letter-spacing: .5px; color: var(--muted);
-      background: var(--surface-1); border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 4px; padding: 8px 12px; white-space: nowrap;
-    }
-    .consolidates b { color: var(--ink-2); }
-    .consolidates code { color: var(--accent); }
-
-    /* representative sketch surfaces (deliberately low-fidelity) */
-    .panel {
-      background: var(--surface-1); border: 1px solid var(--border);
-      border-radius: 10px; padding: 20px; box-shadow: var(--shadow);
-    }
-    .grid { display: grid; gap: 14px; }
-    .cols-2 { grid-template-columns: 1fr 1fr; }
-    .cols-3 { grid-template-columns: repeat(3, 1fr); }
-    .cols-4 { grid-template-columns: repeat(4, 1fr); }
-    @media (max-width: 720px) { .cols-2,.cols-3,.cols-4 { grid-template-columns: 1fr; } }
-
-    .ph-label { font-size: 9.5px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 12px; }
-
-    /* skeleton primitives so each stub reads as its real page */
-    .sk { background: var(--grid); border-radius: 4px; }
-    .sk.line { height: 9px; }
-    .sk.w40 { width: 40%; } .sk.w60 { width: 60%; } .sk.w80 { width: 80%; } .sk.w25 { width: 25%; }
-    .chip {
-      display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 10.5px;
-      border: 1px solid var(--border); color: var(--ink-2); background: var(--surface-2);
-    }
-    .chip.a { border-color: var(--accent); color: var(--accent); }
-
-    .row { display: flex; align-items: center; gap: 12px; padding: 10px 4px; border-bottom: 1px solid var(--hairline); }
-    .row:last-child { border-bottom: none; }
-    .dotmark { width: 8px; height: 8px; border-radius: 50%; flex: none; }
-
-    .card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
-    .card h4 { margin: 0 0 6px; font-size: 12.5px; font-weight: 600; }
-    .card .meta { font-size: 10.5px; color: var(--muted); }
-
-    .bar { height: 7px; border-radius: 6px; background: var(--grid); overflow: hidden; }
-    .bar > span { display: block; height: 100%; background: var(--accent); border-radius: 6px; }
-
-    /* radar sketch */
-    .radar-wrap { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
-    .radar-legend { display: flex; flex-direction: column; gap: 9px; font-size: 11px; color: var(--ink-2); }
-    .radar-legend .li { display: flex; align-items: center; gap: 9px; }
-
-    /* ------------------------------------------------------------------ */
-    /* mapping drawer                                                      */
-    /* ------------------------------------------------------------------ */
+    /* ================= OLD -> NEW MAPPING ================= */
     .maptoggle {
-      display: inline-flex; align-items: center; gap: 8px;
-      margin-top: 30px; padding: 9px 14px; border-radius: 7px;
-      background: var(--surface-1); border: 1px dashed var(--border-2);
-      letter-spacing: 1px; font-size: 10.5px; color: var(--ink-2);
+      display: inline-block; margin-top: 30px; padding: 7px 12px;
+      background: transparent; color: #898781; border: 1px solid #333;
+      font-size: 10.5px; letter-spacing: 1px;
     }
-    .maptoggle:hover { color: var(--ink); border-color: var(--accent); }
-    .mapping { margin-top: 14px; overflow-x: auto; }
+    .maptoggle:hover { color: #ccc; border-color: #555; }
+    .mapping { margin-top: 12px; overflow-x: auto; }
     .mapping.hide { display: none; }
-    table.map { width: 100%; border-collapse: collapse; font-size: 11.5px; min-width: 640px; }
-    table.map th, table.map td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
-    table.map th { color: var(--muted); font-weight: 500; letter-spacing: 1px; font-size: 9.5px; text-transform: uppercase; }
-    table.map td code { color: var(--ink-2); background: var(--surface-1); padding: 1px 5px; border-radius: 3px; }
-    table.map .new { font-weight: 600; }
+    table.map { width: 100%; border-collapse: collapse; font-size: 11.5px; min-width: 560px; }
+    table.map th, table.map td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #1e1e1e; }
+    table.map th { color: #777; font-weight: 400; letter-spacing: 1px; font-size: 9.5px; }
+    table.map td code { color: #898781; }
+    table.map .new { color: #f4f3ee; }
 
-    .foot { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 10.5px; letter-spacing: .5px; }
-
-    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    .foot { margin-top: 30px; padding-top: 14px; border-top: 1px solid #1a1a1a; color: #6f6d67; font-size: 10.5px; letter-spacing: .5px; }
   </style>
 </head>
 <body>
 
-  <div class="banner">
-    <span class="dot"></span>
-    <b>NAVIGATION MOCKUP</b>
-    <span>· non-functional shell for reviewing the proposed IA — not wired to <code>data/</code>. Click the tabs, subnav, and theme toggle.</span>
+  <div class="ribbon">
+    <b>NAVIGATION MOCKUP</b> · reorganising the top nav only — dark theme kept as-is, light/dark merge deferred. Click the tabs.
   </div>
 
   <!-- PRIMARY BAR ---------------------------------------------------------->
   <header class="topbar">
     <div class="brand">
-      <span class="mark"></span>
-      <span class="name">TECH&nbsp;RADAR<small>personal edition</small></span>
+      <span class="name">TECH&nbsp;RADAR</span>
+      <span class="sub">personal edition</span>
     </div>
-
-    <nav class="primary" id="primary" aria-label="Primary"></nav>
-
-    <div class="toolbar">
-      <span class="status"><span class="live"></span> radar.json</span>
-      <button class="theme-toggle" id="themeBtn" aria-label="Toggle colour theme">
-        <span class="ic" id="themeIc">☾</span><span id="themeTxt">DARK</span>
-      </button>
-    </div>
+    <nav class="primary" id="primary" aria-label="Primary" style="display:contents"></nav>
+    <span class="status">● radar.json loaded</span>
   </header>
 
   <!-- SECONDARY BAR -------------------------------------------------------->
   <div class="subbar" id="subbar">
-    <span class="ctx">IN <b id="ctxName">TECHNOLOGY</b></span>
-    <nav class="subnav" id="subnav" aria-label="Section"></nav>
+    <span class="label">VIEW:</span>
+    <nav id="subnav" aria-label="Section" style="display:contents"></nav>
   </div>
 
   <!-- STAGE ---------------------------------------------------------------->
   <main class="stage">
-    <div class="view-head">
-      <div class="view-title">
-        <span class="kicker" id="vKicker">TECHNOLOGY · RADAR</span>
-        <h1 id="vTitle">The Radar</h1>
-        <p id="vDesc"></p>
-      </div>
-      <div class="consolidates" id="vConsolidates"></div>
-    </div>
+    <div class="kicker" id="vKicker">TECHNOLOGY · RADAR</div>
+    <h1 id="vTitle">Technology</h1>
+    <p class="desc" id="vDesc"></p>
 
-    <div id="vBody"></div>
+    <div class="placeholder">
+      <span class="big" id="phName">RADAR PLATE</span>
+      the live view renders here — this mockup only reorganises the navigation
+    </div>
+    <div class="consolidates" id="vConsolidates"></div>
 
     <button class="maptoggle" id="mapBtn">▸ SHOW OLD → NEW MAPPING</button>
     <div class="mapping hide" id="mapping">
       <table class="map">
-        <thead>
-          <tr><th>Today — tab / view</th><th>File</th><th>Proposed home</th></tr>
-        </thead>
+        <thead><tr><th>Today — tab / view</th><th>File</th><th>Proposed home</th></tr></thead>
         <tbody>
-          <tr><td>Atlas — radar plate</td><td><code>index.html</code></td><td class="new">Technology › <span style="color:var(--a-technology)">Radar</span></td></tr>
-          <tr><td>Index — scannable list</td><td><code>index.html</code></td><td class="new">Technology › <span style="color:var(--a-technology)">Table</span></td></tr>
-          <tr><td>Similarity — tool map</td><td><code>similarity.html</code></td><td class="new">Technology › <span style="color:var(--a-technology)">Similarity</span></td></tr>
-          <tr><td>Projects</td><td><code>projects.html</code></td><td class="new">Projects <span style="color:var(--a-projects)">(top tab)</span></td></tr>
-          <tr><td>People</td><td><code>people.html</code></td><td class="new">People <span style="color:var(--a-people)">(top tab)</span></td></tr>
-          <tr><td>Learning Library</td><td><code>learning.html</code></td><td class="new">Learning <span style="color:var(--a-learning)">(top tab)</span></td></tr>
-          <tr><td>Discover — 4-lane inbox</td><td><code>discover.html</code></td><td class="new">Discover <span style="color:var(--a-discover)">(top tab / home)</span></td></tr>
+          <tr><td>Atlas — radar plate</td><td><code>index.html</code></td><td class="new">Technology › Radar</td></tr>
+          <tr><td>Index — scannable list</td><td><code>index.html</code></td><td class="new">Technology › Table</td></tr>
+          <tr><td>Similarity — tool map</td><td><code>similarity.html</code></td><td class="new">Technology › Similarity</td></tr>
+          <tr><td>Projects</td><td><code>projects.html</code></td><td class="new">Projects (top tab)</td></tr>
+          <tr><td>People</td><td><code>people.html</code></td><td class="new">People (top tab)</td></tr>
+          <tr><td>Learning Library</td><td><code>learning.html</code></td><td class="new">Learning (top tab)</td></tr>
+          <tr><td>Discover — 4-lane inbox</td><td><code>discover.html</code></td><td class="new">Discover (top tab, last)</td></tr>
         </tbody>
       </table>
     </div>
@@ -353,254 +176,63 @@
   </main>
 
 <script>
-/* =======================================================================
-   Everything below is presentation-only. A tiny config drives the two nav
-   levels and swaps a representative (skeleton) sketch into the stage.
-   ======================================================================= */
-
-const A = {
-  discover:   "var(--a-discover)",
-  technology: "var(--a-technology)",
-  projects:   "var(--a-projects)",
-  people:     "var(--a-people)",
-  learning:   "var(--a-learning)",
-};
-
-/* ---- skeleton builders (kept dumb on purpose) ---- */
-const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
-
-function skRows(n, colorVars) {
-  const wrap = el("div", "panel");
-  wrap.append(el("div", "ph-label", "SCANNABLE LIST"));
-  for (let i = 0; i < n; i++) {
-    const r = el("div", "row");
-    const dm = el("span", "dotmark"); dm.style.background = colorVars[i % colorVars.length];
-    const col = el("div"); col.style.flex = "1";
-    col.append(el("div", "sk line w40")), col.lastChild.style.marginBottom = "7px";
-    col.append(el("div", "sk line w80"));
-    const ring = el("span", "chip"); ring.textContent = ["Adopted","Trial","Assess","Discovered"][i % 4];
-    r.append(dm, col, ring);
-    wrap.append(r);
-  }
-  return wrap;
-}
-
-function skCards(labels, sub, accent) {
-  const g = el("div", "grid cols-3");
-  labels.forEach(l => {
-    const c = el("div", "card");
-    c.append(el("h4", null, l));
-    c.append(el("div", "meta", sub));
-    const b = el("div", "bar"); b.style.marginTop = "10px";
-    const s = el("span"); s.style.width = (35 + Math.random()*55|0) + "%"; s.style.background = accent;
-    b.append(s); c.append(b);
-    g.append(c);
-  });
-  return g;
-}
-
-function radarSketch() {
-  const wrap = el("div", "panel");
-  wrap.append(el("div", "ph-label", "RADAR PLATE — 4 QUADRANTS × 5 RINGS"));
-  const inner = el("div", "radar-wrap");
-  const NS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(NS, "svg");
-  svg.setAttribute("viewBox", "0 0 260 260"); svg.setAttribute("width", "260"); svg.setAttribute("height", "260");
-  const cx = 130, cy = 130, radii = [30, 58, 86, 114, 124];
-  radii.forEach((r, i) => {
-    const c = document.createElementNS(NS, "circle");
-    c.setAttribute("cx", cx); c.setAttribute("cy", cy); c.setAttribute("r", r);
-    c.setAttribute("fill", "none");
-    c.setAttribute("stroke", i === 3 ? "var(--a-technology)" : "var(--grid)");
-    c.setAttribute("stroke-opacity", i === 3 ? "0.5" : "1");
-    c.setAttribute("stroke-dasharray", i === 3 ? "3 4" : "0");
-    svg.append(c);
-  });
-  [[cx-124,cy,cx+124,cy],[cx,cy-124,cx,cy+124]].forEach(([x1,y1,x2,y2]) => {
-    const l = document.createElementNS(NS, "line");
-    l.setAttribute("x1",x1); l.setAttribute("y1",y1); l.setAttribute("x2",x2); l.setAttribute("y2",y2);
-    l.setAttribute("stroke","var(--grid)");
-    svg.append(l);
-  });
-  // scatter blips
-  const blipColors = [A.technology, A.projects, A.people, A.learning];
-  for (let i = 0; i < 26; i++) {
-    const ang = Math.random()*Math.PI*2, rr = 22 + Math.random()*98;
-    const d = document.createElementNS(NS, "circle");
-    d.setAttribute("cx", cx + Math.cos(ang)*rr); d.setAttribute("cy", cy + Math.sin(ang)*rr);
-    d.setAttribute("r", 3.2); d.setAttribute("fill", blipColors[(Math.floor(ang/(Math.PI/2)))%4]);
-    d.setAttribute("opacity", "0.9");
-    svg.append(d);
-  }
-  inner.append(svg);
-  const legend = el("div", "radar-legend");
-  [["Techniques","var(--a-people)"],["Tools","var(--a-technology)"],["Platforms","var(--a-learning)"],["Languages","var(--a-projects)"]]
-    .forEach(([n,c]) => {
-      const li = el("div","li");
-      const dm = el("span","dotmark"); dm.style.background = c; dm.style.width="10px"; dm.style.height="10px";
-      li.append(dm, el("span", null, n));
-      legend.append(li);
-    });
-  const note = el("div", null, "Rings: Adopted · Trial · Assess · Discovered · Archived");
-  note.style.cssText = "font-size:10px;color:var(--muted);margin-top:8px;letter-spacing:.5px";
-  legend.append(note);
-  inner.append(legend);
-  wrap.append(inner);
-  return wrap;
-}
-
-function scatterSketch(label, accent) {
-  const wrap = el("div", "panel");
-  wrap.append(el("div", "ph-label", label));
-  const NS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(NS, "svg");
-  svg.setAttribute("viewBox","0 0 520 220"); svg.setAttribute("width","100%"); svg.setAttribute("height","220");
-  for (let i=0;i<3;i++){ const ln=document.createElementNS(NS,"line"); ln.setAttribute("x1","0"); ln.setAttribute("x2","520"); ln.setAttribute("y1",55*(i+1)); ln.setAttribute("y2",55*(i+1)); ln.setAttribute("stroke","var(--grid)"); svg.append(ln); }
-  for (let i=0;i<38;i++){
-    const g=document.createElementNS(NS,"circle");
-    g.setAttribute("cx", 15+Math.random()*490); g.setAttribute("cy", 12+Math.random()*196);
-    g.setAttribute("r", 3+Math.random()*7);
-    g.setAttribute("fill", i%5===0 ? accent : "var(--grid)");
-    g.setAttribute("opacity", i%5===0 ? "0.95":"0.8");
-    svg.append(g);
-  }
-  wrap.append(svg);
-  return wrap;
-}
-
-function tagGrid(tags, accent) {
-  const wrap = el("div", "panel");
-  wrap.append(el("div", "ph-label", "SKILL COVERAGE"));
-  const box = el("div"); box.style.cssText = "display:flex;flex-wrap:wrap;gap:8px";
-  tags.forEach((t,i) => { const c = el("span", i%4===0 ? "chip a" : "chip"); c.textContent = t; box.append(c); });
-  wrap.append(box);
-  return wrap;
-}
-
-/* ---- view definitions ---- */
+/* Presentation only. A tiny config drives the two nav levels. */
 const VIEWS = {
-  discover: {
-    accent: A.discover,
-    title: "Discover",
-    desc: "The scraper's inbox, unchanged in spirit — four lanes of freshly found things waiting to be curated. It stays the home screen and feeds every other tab.",
-    consolidates: "Consolidates: <b>Discover</b> · <code>discover.html</code>",
-    subnav: [
-      { id:"all", label:"ALL LANES" },
-      { id:"tech", label:"TECHNOLOGY" },
-      { id:"proj", label:"PROJECTS" },
-      { id:"ppl", label:"PEOPLE" },
-      { id:"learn", label:"LEARNING" },
-    ],
-    body: () => {
-      const g = el("div","grid cols-4");
-      [["TECHNOLOGY",A.technology,"14 new"],["PROJECTS",A.projects,"5 new"],["PEOPLE",A.people,"3 new"],["LEARNING",A.learning,"8 new"]]
-        .forEach(([n,c,k]) => {
-          const p = el("div","panel"); p.style.borderTop = "3px solid "+c;
-          const h = el("div"); h.style.cssText="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px";
-          const nm = el("div",null,n); nm.style.cssText="font-size:11px;letter-spacing:1.5px;color:"+c;
-          h.append(nm, el("span","chip",k)); p.append(h);
-          for(let i=0;i<3;i++){ const l=el("div","sk line"); l.style.width=(50+i*12)+"%"; l.style.marginBottom="9px"; p.append(l); }
-          g.append(p);
-        });
-      return g;
-    },
-  },
   technology: {
-    accent: A.technology,
     title: "Technology",
     desc: "The radar itself — every tool, library, platform, language and technique you'd adopt or use, across all five rings.",
     consolidates: "Consolidates: <b>Atlas + Index + Similarity</b> · <code>index.html</code>, <code>similarity.html</code>",
     subnav: [
-      { id:"radar", label:"RADAR" },
-      { id:"table", label:"TABLE" },
-      { id:"similarity", label:"SIMILARITY" },
+      { id:"radar",      label:"RADAR",      ph:"RADAR PLATE" },
+      { id:"table",      label:"TABLE",      ph:"SCANNABLE LIST" },
+      { id:"similarity", label:"SIMILARITY", ph:"TOOL SIMILARITY MAP" },
     ],
-    kicker: id => "TECHNOLOGY · " + id.toUpperCase(),
-    heads: {
-      radar:      ["The Radar", "Radar plate — blips placed by quadrant and ring, Discovered items split by source."],
-      table:      ["Index", "The same corpus as a dense, sortable, filterable list."],
-      similarity: ["Similarity", "TF-IDF map of how close tools sit to one another."],
-    },
-    body: id => id === "radar" ? radarSketch()
-              : id === "table" ? skRows(6, [A.technology, A.people, A.learning, A.projects])
-              : scatterSketch("TOOL SIMILARITY MAP", A.technology),
   },
   projects: {
-    accent: A.projects,
     title: "Projects",
     desc: "Similar projects surfaced against the radar — one TF-IDF space over both corpora, so project and tool vectors are comparable.",
     consolidates: "Consolidates: <b>Projects</b> · <code>projects.html</code>",
-    subnav: [ { id:"map", label:"MAP" }, { id:"list", label:"LIST" } ],
-    kicker: id => "PROJECTS · " + id.toUpperCase(),
-    heads: {
-      map:  ["Project map", "Projects positioned by similarity to the tools you track."],
-      list: ["Project list", "Filterable by status, with nearest-tool links."],
-    },
-    body: id => id === "map" ? scatterSketch("PROJECT ↔ TOOL SIMILARITY", A.projects)
-                             : skRows(6, [A.projects]),
+    subnav: [],
+    ph: "PROJECT MAP + LIST",
   },
   people: {
-    accent: A.people,
     title: "People",
     desc: "Who works on what — every person as a set of skills (radar tool ids plus free-form), with a staffing read across projects.",
     consolidates: "Consolidates: <b>People</b> · <code>people.html</code>",
-    subnav: [ { id:"directory", label:"DIRECTORY" }, { id:"skills", label:"SKILLS" } ],
-    kicker: id => "PEOPLE · " + id.toUpperCase(),
-    heads: {
-      directory: ["Directory", "People cards with their strongest skills and current projects."],
-      skills:    ["Skills map", "Skill coverage across the team, matched to radar tools."],
-    },
-    body: id => id === "directory"
-      ? skCards(["A. Rivera","J. Okafor","M. Chen","S. Patel","T. Novak","L. Haddad"], "4 projects · 9 skills", A.people)
-      : tagGrid(["python","rust","llm-eval","kubernetes","dspy","trading","rag","react","postgres","observability","mlops","prompting","typescript","airflow"], A.people),
+    subnav: [],
+    ph: "DIRECTORY + SKILLS",
   },
   learning: {
-    accent: A.learning,
     title: "Learning",
-    desc: "The Learning Library — books, articles, videos and certifications, tracked from Discovered through Read, and topic-linked to the radar.",
+    desc: "The Learning Library — books, articles, videos and certifications, tracked from Discovered through Read and topic-linked to the radar.",
     consolidates: "Consolidates: <b>Learning Library</b> · <code>learning.html</code>",
-    subnav: [ { id:"library", label:"LIBRARY" }, { id:"progress", label:"PROGRESS" } ],
-    kicker: id => "LEARNING · " + id.toUpperCase(),
-    heads: {
-      library:  ["Library", "Every book, article, video and cert — filter by type, status or topic."],
-      progress: ["Progress", "Reading status and pages-read across the shelf."],
-    },
-    body: id => id === "library"
-      ? skCards(["Designing Data-Intensive Apps","The DSPy Handbook","Building Agents","Prompt Engineering","Quant Trading 101","RAG in Production"], "book · Reading · ★★★★", A.learning)
-      : (() => {
-          const wrap = el("div","panel");
-          wrap.append(el("div","ph-label","READING PROGRESS"));
-          [["Designing Data-Intensive Apps",72],["The DSPy Handbook",40],["Building Agents",15],["Prompt Engineering",100]]
-            .forEach(([n,p]) => {
-              const r = el("div"); r.style.marginBottom = "14px";
-              const top = el("div"); top.style.cssText="display:flex;justify-content:space-between;font-size:11px;margin-bottom:6px;color:var(--ink-2)";
-              top.append(el("span",null,n), el("span",null,p+"%"));
-              const b = el("div","bar"); const s = el("span"); s.style.width=p+"%"; s.style.background=A.learning; b.append(s);
-              r.append(top,b); wrap.append(r);
-            });
-          return wrap;
-        })(),
+    subnav: [],
+    ph: "LIBRARY",
+  },
+  discover: {
+    title: "Discover",
+    desc: "The scraper's inbox — four lanes of freshly found things waiting to be curated. Kept last; it feeds every other tab.",
+    consolidates: "Consolidates: <b>Discover</b> · <code>discover.html</code>",
+    subnav: [],
+    ph: "FOUR-LANE INBOX",
   },
 };
 
-const ORDER = ["discover","technology","projects","people","learning"];
-const COUNTS = { discover:"30", technology:"212", projects:"41", people:"18", learning:"63" };
+/* Discover LAST, as it was */
+const ORDER = ["technology","projects","people","learning","discover"];
 
 let state = { tab: "technology", sub: "radar" };
 
-/* ---- render ---- */
 const primaryEl = document.getElementById("primary");
 const subnavEl  = document.getElementById("subnav");
 const subbarEl  = document.getElementById("subbar");
+const el = (t,c,h) => { const n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; };
 
 function buildPrimary() {
   primaryEl.innerHTML = "";
   ORDER.forEach(id => {
-    const v = VIEWS[id];
-    const b = el("button", "tab");
-    b.style.setProperty("--accent", v.accent);
+    const b = el("button","tab", VIEWS[id].title.toUpperCase());
     b.setAttribute("aria-selected", state.tab === id);
-    b.innerHTML = `<span class="glyph"></span>${v.title.toUpperCase()}<span class="count">${COUNTS[id]}</span>`;
     b.onclick = () => selectTab(id);
     primaryEl.append(b);
   });
@@ -608,14 +240,12 @@ function buildPrimary() {
 
 function buildSubnav() {
   const v = VIEWS[state.tab];
-  subbarEl.style.setProperty("--accent", v.accent);
-  document.getElementById("ctxName").textContent = v.title.toUpperCase();
-  document.getElementById("ctxName").style.color = v.accent;
+  if (!v.subnav.length) { subbarEl.classList.add("empty"); return; }
+  subbarEl.classList.remove("empty");
   subnavEl.innerHTML = "";
   v.subnav.forEach(s => {
-    const b = el("button", "subtab");
+    const b = el("button","subtab", s.label);
     b.setAttribute("aria-selected", state.sub === s.id);
-    b.innerHTML = s.label + (s.sub ? `<span class="sub">${s.sub}</span>` : "");
     b.onclick = () => { state.sub = s.id; buildSubnav(); renderView(); };
     subnavEl.append(b);
   });
@@ -623,67 +253,32 @@ function buildSubnav() {
 
 function renderView() {
   const v = VIEWS[state.tab];
-  document.documentElement.style.setProperty("--accent", v.accent);
-  document.querySelector(".stage").style.setProperty("--accent", v.accent);
-  document.getElementById("vConsolidates").style.setProperty("--accent", v.accent);
-
-  const isTech = v.heads && v.heads[state.sub];
-  const kicker = v.kicker ? v.kicker(state.sub) : v.title.toUpperCase();
-  const [title, desc] = isTech ? v.heads[state.sub] : [v.title, v.desc];
-
-  document.getElementById("vKicker").textContent = kicker;
-  document.getElementById("vKicker").style.color = v.accent;
-  document.getElementById("vTitle").textContent = title;
-  document.getElementById("vDesc").textContent = v.heads ? desc : v.desc;
+  const sub = v.subnav.find(s => s.id === state.sub);
+  document.getElementById("vKicker").textContent =
+    v.title.toUpperCase() + (sub ? " · " + sub.label : "");
+  document.getElementById("vTitle").textContent = v.title;
+  document.getElementById("vDesc").textContent = v.desc;
+  document.getElementById("phName").textContent = sub ? sub.ph : v.ph;
   document.getElementById("vConsolidates").innerHTML = v.consolidates;
-
-  const body = document.getElementById("vBody");
-  body.innerHTML = "";
-  body.append(v.body(state.sub));
 }
 
 function selectTab(id) {
   state.tab = id;
-  state.sub = VIEWS[id].subnav[0].id;
+  state.sub = VIEWS[id].subnav[0] ? VIEWS[id].subnav[0].id : null;
   buildPrimary(); buildSubnav(); renderView();
 }
 
-/* apply --accent to elements that reference it */
-document.querySelectorAll(".consolidates, .stage").forEach(n => {});
-
-/* ---- theme toggle ---- */
-const root = document.documentElement;
-const themeBtn = document.getElementById("themeBtn");
-function currentTheme() {
-  const set = root.getAttribute("data-theme");
-  if (set) return set;
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-}
-function paintThemeBtn() {
-  const t = currentTheme();
-  document.getElementById("themeIc").textContent  = t === "light" ? "☀" : "☾";
-  document.getElementById("themeTxt").textContent = t === "light" ? "LIGHT" : "DARK";
-}
-themeBtn.onclick = () => {
-  const next = currentTheme() === "light" ? "dark" : "light";
-  root.setAttribute("data-theme", next);
-  paintThemeBtn();
-};
-
-/* ---- mapping drawer ---- */
-const mapBtn = document.getElementById("mapBtn");
-mapBtn.onclick = () => {
+document.getElementById("mapBtn").onclick = function () {
   const m = document.getElementById("mapping");
   const open = m.classList.toggle("hide") === false;
-  mapBtn.textContent = open ? "▾ HIDE OLD → NEW MAPPING" : "▸ SHOW OLD → NEW MAPPING";
+  this.textContent = open ? "▾ HIDE OLD → NEW MAPPING" : "▸ SHOW OLD → NEW MAPPING";
 };
 
 document.getElementById("foot").innerHTML =
-  "Mockup · one shell, one theme switch — the dark radar pages and the cream Learning page become two skins of the same site. " +
-  "Every current tab keeps a home; Similarity folds under Technology as a third view alongside Radar and Table.";
+  "Mockup · navbar reorganisation only. Every current tab keeps a home; Atlas becomes Technology with a VIEW: subnav " +
+  "(Radar / Table / Similarity). Discover stays the last tab. Theme is unchanged — the light/dark merge is a separate step.";
 
-/* boot */
-buildPrimary(); buildSubnav(); renderView(); paintThemeBtn();
+buildPrimary(); buildSubnav(); renderView();
 </script>
 </body>
 </html>
