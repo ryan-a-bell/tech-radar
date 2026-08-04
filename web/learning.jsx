@@ -548,48 +548,36 @@ export default function LearningApp() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#000" }}>
-      {/* top bar — one shared tab group with dashboard.jsx: ATLAS / INDEX live
-          on the radar page, LEARNING is the active tab here */}
+      {/* primary bucket nav — shared across every page; LEARNING active here */}
       <div style={{
         display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
         fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
         flexWrap: "wrap",
       }}>
-        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>
-          VIEW:
-        </span>
+        <span style={{ color: "#fff", fontWeight: 600, letterSpacing: 3, fontSize: 13,
+          marginRight: 16, paddingRight: 16, borderRight: "1px solid #333" }}>TECH RADAR</span>
         <a href="index.html#atlas" style={{
           background: "transparent", color: "#999", border: "1px solid #444",
           textDecoration: "none", padding: "6px 14px", marginRight: 8,
           fontSize: 11, letterSpacing: 1,
-        }}>ATLAS</a>
-        <a href="index.html#index" style={{
-          background: "transparent", color: "#999", border: "1px solid #444",
-          textDecoration: "none", padding: "6px 14px", marginRight: 8,
-          fontSize: 11, letterSpacing: 1,
-        }}>INDEX</a>
+        }}>TECHNOLOGY</a>
         <span style={{
           background: "#fff", color: "#000", border: "1px solid #fff",
-          padding: "6px 14px", fontSize: 11, letterSpacing: 1,
+          padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1,
         }}>LEARNING</span>
-        <a href="similarity.html" style={{
-          background: "transparent", color: "#999", border: "1px solid #444",
-          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
-          fontSize: 11, letterSpacing: 1,
-        }}>SIMILARITY</a>
         <a href="projects.html" style={{
           background: "transparent", color: "#999", border: "1px solid #444",
-          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
+          textDecoration: "none", padding: "6px 14px", marginRight: 8,
           fontSize: 11, letterSpacing: 1,
         }}>PROJECTS</a>
         <a href="people.html" style={{
           background: "transparent", color: "#999", border: "1px solid #444",
-          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
+          textDecoration: "none", padding: "6px 14px", marginRight: 8,
           fontSize: 11, letterSpacing: 1,
         }}>PEOPLE</a>
         <a href="discover.html" style={{
           background: "transparent", color: "#999", border: "1px solid #444",
-          textDecoration: "none", padding: "6px 14px", marginLeft: 8,
+          textDecoration: "none", padding: "6px 14px", marginRight: 8,
           fontSize: 11, letterSpacing: 1,
         }}>DISCOVER</a>
         <span style={{
