@@ -10,273 +10,399 @@
     /* =====================================================================
        NAVIGATION RESTRUCTURE — static mockup.
 
-       Only the navbar is being reorganised here. Styling is lifted straight
-       from the live nav in dashboard.jsx (the #1a1a1a mono bar with small
-       bordered buttons) so it reads as the same site, not a redesign.
+       Reorganising the top nav only. Everything else keeps its CURRENT
+       theme, unchanged: the dark #1a1a1a mono nav bar, the cream "almanac"
+       editorial pages (The Atlas / The Index / Learning Library, Georgia
+       serif on #f4f0e6), and the dark viz pages (Similarity / Projects /
+       People / Discover). Nothing is merged or re-skinned here.
 
-       Proposal: the four Discover buckets become the top-level tabs, with
-       Discover kept last, and "TECH RADAR" titled on the left:
-
-         TECH RADAR   Technology · Projects · People · Learning · Discover
-
-       Atlas becomes Technology, with a VIEW: subnav for radar / table /
-       similarity. Light/dark merge is deferred — this stays dark like today.
+       Tabs, left-titled:
+         TECH RADAR   Technology · Learning · Projects · People · Discover
+       Technology carries a VIEW: subnav — Radar / Table / Similarity.
        ===================================================================== */
     * { box-sizing: border-box; }
     html, body { margin: 0; height: 100%; }
     body {
       background: #000;
-      color: #c3c2b7;
       font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
-      font-size: 13px;
-      line-height: 1.55;
+      font-size: 13px; line-height: 1.55;
     }
-    a { color: #3987e5; }
     button { font-family: inherit; cursor: pointer; }
 
-    /* ---- mockup ribbon (not part of the real chrome) ---- */
+    /* ---- mockup ribbon (not part of real chrome) ---- */
     .ribbon {
       padding: 6px 14px; font-size: 10px; letter-spacing: .5px; color: #6f6d67;
       background: #0d0d0d; border-bottom: 1px solid #222;
     }
     .ribbon b { color: #898781; letter-spacing: 1px; }
 
-    /* ================= PRIMARY BAR — matches dashboard.jsx ================= */
+    /* ================= PRIMARY BAR — from dashboard.jsx ================= */
     .topbar {
       display: flex; align-items: center; flex-wrap: wrap;
-      gap: 0; background: #1a1a1a; padding: 10px 14px;
+      background: #1a1a1a; padding: 10px 14px;
     }
     .brand {
       display: flex; align-items: baseline; gap: 8px;
-      margin-right: 18px; padding-right: 16px;
-      border-right: 1px solid #333;
+      margin-right: 18px; padding-right: 16px; border-right: 1px solid #333;
     }
     .brand .name { color: #fff; font-weight: 600; letter-spacing: 3px; font-size: 13px; }
-    .brand .sub  { color: #666; font-weight: 400; letter-spacing: 1px; font-size: 9.5px; }
+    .brand .sub  { color: #666; letter-spacing: 1px; font-size: 9.5px; }
 
     .tab {
-      background: transparent; color: #999;
-      border: 1px solid #444;
-      padding: 6px 14px; margin-right: 8px;
-      font-size: 11px; letter-spacing: 1px;
+      background: transparent; color: #999; border: 1px solid #444;
+      padding: 6px 14px; margin-right: 8px; font-size: 11px; letter-spacing: 1px;
     }
     .tab:hover { color: #ccc; border-color: #666; }
     .tab[aria-selected="true"] { background: #fff; color: #000; border-color: #fff; }
-
-    .status {
-      margin-left: auto; font-size: 10px; letter-spacing: 1px; color: #4ade80;
-      white-space: nowrap;
-    }
+    .status { margin-left: auto; font-size: 10px; letter-spacing: 1px; color: #4ade80; white-space: nowrap; }
 
     /* ================= SECONDARY BAR — VIEW: subnav ================= */
     .subbar {
       display: flex; align-items: center; flex-wrap: wrap;
-      background: #141413; padding: 8px 14px;
-      border-top: 1px solid #000;
+      background: #141413; padding: 8px 14px; border-top: 1px solid #000;
     }
     .subbar.empty { display: none; }
     .subbar .label { color: #777; font-size: 11px; letter-spacing: 1px; margin-right: 14px; }
     .subtab {
-      background: transparent; color: #999;
-      border: 1px solid #3a3a3a;
-      padding: 5px 13px; margin-right: 8px;
-      font-size: 11px; letter-spacing: 1px;
+      background: transparent; color: #999; border: 1px solid #3a3a3a;
+      padding: 5px 13px; margin-right: 8px; font-size: 11px; letter-spacing: 1px;
     }
     .subtab:hover { color: #ccc; border-color: #555; }
     .subtab[aria-selected="true"] { background: #d8d6cc; color: #000; border-color: #d8d6cc; }
 
-    /* ================= CONTENT PLACEHOLDER ================= */
-    .stage { max-width: 940px; margin: 0 auto; padding: 30px 18px 60px; }
-    .kicker { font-size: 10px; letter-spacing: 2px; color: #777; margin-bottom: 8px; }
-    .stage h1 { margin: 0 0 8px; font-size: 26px; font-weight: 600; letter-spacing: -.2px; color: #f4f3ee; }
-    .stage .desc { margin: 0 0 16px; color: #a8a69c; max-width: 66ch; }
+    /* ================= STAGE — themed per view ================= */
+    .stage { min-height: 460px; padding: 30px 34px 46px; }
 
-    .placeholder {
-      border: 1px dashed #333; border-radius: 4px;
-      padding: 40px 24px; text-align: center;
-      color: #6f6d67; font-size: 11px; letter-spacing: 1px;
-      background:
-        repeating-linear-gradient(45deg, transparent, transparent 12px,
-          rgba(255,255,255,0.015) 12px, rgba(255,255,255,0.015) 24px);
+    /* -- cream almanac (The Atlas / The Index / Learning) -- */
+    .stage.light {
+      background: #f4f0e6; color: #1a1a1a;
+      font-family: Georgia, "Times New Roman", serif;
     }
-    .placeholder .big { color: #898781; font-size: 12px; letter-spacing: 2px; display: block; margin-bottom: 8px; }
-    .consolidates { margin-top: 14px; font-size: 10.5px; color: #6f6d67; letter-spacing: .5px; }
-    .consolidates code { color: #898781; }
-    .consolidates b { color: #a8a69c; }
+    .stage.light .mast { border-bottom: 3px solid #1a1a1a; padding-bottom: 12px;
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+    .stage.light .mast h1 { margin: 0; font-size: 44px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+    .stage.light .mast .tag { font-family: "IBM Plex Mono", monospace; font-size: 10.5px;
+      color: #6b6456; letter-spacing: 1px; text-align: right; line-height: 1.6; }
+    .stage.light .search { margin: 16px 0 6px; width: 100%; font-family: Georgia, serif; font-size: 15px;
+      padding: 10px 14px; border: 1.5px solid #1a1a1a; background: #fffdf7; color: #1a1a1a; }
+    .stage.light .strip { display: flex; gap: 30px; margin: 6px 0 20px;
+      font-family: "IBM Plex Mono", monospace; font-size: 11px; color: #6b6456; letter-spacing: 1px; }
+    .stage.light .strip b { display: block; font-family: Georgia, serif; font-size: 22px; font-weight: 800; color: #1a1a1a; line-height: 1; }
+    .stage.light .strip .k { margin-top: 4px; }
 
-    /* ================= OLD -> NEW MAPPING ================= */
-    .maptoggle {
-      display: inline-block; margin-top: 30px; padding: 7px 12px;
-      background: transparent; color: #898781; border: 1px solid #333;
-      font-size: 10.5px; letter-spacing: 1px;
+    /* -- dark viz (Similarity / Projects / People / Discover) -- */
+    .stage.dark {
+      background: #0d0d0d; color: #c3c2b7;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
     }
+    .stage.dark .kicker { font-size: 10px; letter-spacing: 2px; color: #777; margin-bottom: 8px; }
+    .stage.dark h1 { margin: 0 0 8px; font-size: 25px; font-weight: 600; color: #f4f3ee; letter-spacing: -.2px; }
+    .stage.dark .desc { margin: 0 0 20px; color: #a8a69c; max-width: 66ch; }
+
+    /* shared building blocks (themed via currentColor / vars set inline) */
+    .card-l { background: #fffdf7; border: 1px solid #d8d2c4; padding: 12px 14px; }
+    .card-d { background: #171716; border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; padding: 13px; }
+    .grid { display: grid; gap: 12px; }
+    .cols-2 { grid-template-columns: 1fr 1fr; }
+    .cols-3 { grid-template-columns: repeat(3,1fr); }
+    .cols-4 { grid-template-columns: repeat(4,1fr); }
+    @media (max-width: 720px){ .cols-2,.cols-3,.cols-4 { grid-template-columns: 1fr; } }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex: none; }
+    .pill { display: inline-block; padding: 2px 8px; font-size: 10px; letter-spacing: .5px; border-radius: 10px; color: #fff; }
+
+    /* editorial table (The Index) */
+    table.idx { width: 100%; border-collapse: collapse; font-family: Georgia, serif; font-size: 13px; }
+    table.idx th { text-align: left; font-family: "IBM Plex Mono", monospace; font-size: 9.5px; letter-spacing: 1px;
+      color: #6b6456; border-bottom: 2px solid #1a1a1a; padding: 8px 10px; font-weight: 400; }
+    table.idx td { padding: 8px 10px; border-bottom: 1px solid #d8d2c4; }
+    table.idx td.n { font-weight: 700; }
+    table.idx td.mono { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: #6b6456; letter-spacing: .5px; }
+
+    .consolidates { margin-top: 20px; font-size: 10.5px; letter-spacing: .5px; font-family: "IBM Plex Mono", monospace; }
+    .stage.light .consolidates { color: #8a8474; }
+    .stage.light .consolidates b { color: #6b6456; } .stage.light .consolidates code { color: #1a1a1a; }
+    .stage.dark .consolidates { color: #6f6d67; }
+    .stage.dark .consolidates b { color: #a8a69c; } .stage.dark .consolidates code { color: #898781; }
+
+    /* ================= META STRIP (mapping) ================= */
+    .meta { background: #0d0d0d; color: #6f6d67; padding: 22px 18px 46px; border-top: 1px solid #1a1a1a;
+      font-family: "IBM Plex Mono", monospace; }
+    .meta .inner { max-width: 940px; margin: 0 auto; }
+    .maptoggle { display: inline-block; padding: 7px 12px; background: transparent; color: #898781;
+      border: 1px solid #333; font-size: 10.5px; letter-spacing: 1px; }
     .maptoggle:hover { color: #ccc; border-color: #555; }
     .mapping { margin-top: 12px; overflow-x: auto; }
     .mapping.hide { display: none; }
-    table.map { width: 100%; border-collapse: collapse; font-size: 11.5px; min-width: 560px; }
+    table.map { width: 100%; border-collapse: collapse; font-size: 11.5px; min-width: 620px; }
     table.map th, table.map td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #1e1e1e; }
     table.map th { color: #777; font-weight: 400; letter-spacing: 1px; font-size: 9.5px; }
-    table.map td code { color: #898781; }
-    table.map .new { color: #f4f3ee; }
-
-    .foot { margin-top: 30px; padding-top: 14px; border-top: 1px solid #1a1a1a; color: #6f6d67; font-size: 10.5px; letter-spacing: .5px; }
+    table.map td code { color: #898781; } table.map .new { color: #f4f3ee; }
+    .foot { margin-top: 20px; color: #6f6d67; font-size: 10.5px; letter-spacing: .5px; }
   </style>
 </head>
 <body>
 
   <div class="ribbon">
-    <b>NAVIGATION MOCKUP</b> · reorganising the top nav only — dark theme kept as-is, light/dark merge deferred. Click the tabs.
+    <b>NAVIGATION MOCKUP</b> · top nav reorganised only — each view keeps its current theme (cream almanac / dark viz). Click the tabs &amp; the VIEW: subnav.
   </div>
 
-  <!-- PRIMARY BAR ---------------------------------------------------------->
+  <!-- PRIMARY BAR -->
   <header class="topbar">
-    <div class="brand">
-      <span class="name">TECH&nbsp;RADAR</span>
-      <span class="sub">personal edition</span>
-    </div>
+    <div class="brand"><span class="name">TECH&nbsp;RADAR</span><span class="sub">personal edition</span></div>
     <nav class="primary" id="primary" aria-label="Primary" style="display:contents"></nav>
     <span class="status">● radar.json loaded</span>
   </header>
 
-  <!-- SECONDARY BAR -------------------------------------------------------->
+  <!-- SECONDARY BAR -->
   <div class="subbar" id="subbar">
     <span class="label">VIEW:</span>
     <nav id="subnav" aria-label="Section" style="display:contents"></nav>
   </div>
 
-  <!-- STAGE ---------------------------------------------------------------->
-  <main class="stage">
-    <div class="kicker" id="vKicker">TECHNOLOGY · RADAR</div>
-    <h1 id="vTitle">Technology</h1>
-    <p class="desc" id="vDesc"></p>
+  <!-- STAGE (themed per view) -->
+  <main class="stage" id="stage"></main>
 
-    <div class="placeholder">
-      <span class="big" id="phName">RADAR PLATE</span>
-      the live view renders here — this mockup only reorganises the navigation
-    </div>
-    <div class="consolidates" id="vConsolidates"></div>
-
+  <!-- META / MAPPING -->
+  <section class="meta"><div class="inner">
     <button class="maptoggle" id="mapBtn">▸ SHOW OLD → NEW MAPPING</button>
     <div class="mapping hide" id="mapping">
       <table class="map">
-        <thead><tr><th>Today — tab / view</th><th>File</th><th>Proposed home</th></tr></thead>
+        <thead><tr><th>Today — tab / view</th><th>File</th><th>Theme</th><th>Proposed home</th></tr></thead>
         <tbody>
-          <tr><td>Atlas — radar plate</td><td><code>index.html</code></td><td class="new">Technology › Radar</td></tr>
-          <tr><td>Index — scannable list</td><td><code>index.html</code></td><td class="new">Technology › Table</td></tr>
-          <tr><td>Similarity — tool map</td><td><code>similarity.html</code></td><td class="new">Technology › Similarity</td></tr>
-          <tr><td>Projects</td><td><code>projects.html</code></td><td class="new">Projects (top tab)</td></tr>
-          <tr><td>People</td><td><code>people.html</code></td><td class="new">People (top tab)</td></tr>
-          <tr><td>Learning Library</td><td><code>learning.html</code></td><td class="new">Learning (top tab)</td></tr>
-          <tr><td>Discover — 4-lane inbox</td><td><code>discover.html</code></td><td class="new">Discover (top tab, last)</td></tr>
+          <tr><td>Atlas — radar plate</td><td><code>index.html</code></td><td>cream</td><td class="new">Technology › Radar</td></tr>
+          <tr><td>Index — scannable list</td><td><code>index.html</code></td><td>cream</td><td class="new">Technology › Table</td></tr>
+          <tr><td>Similarity — tool map</td><td><code>similarity.html</code></td><td>dark</td><td class="new">Technology › Similarity</td></tr>
+          <tr><td>Learning Library</td><td><code>learning.html</code></td><td>cream</td><td class="new">Learning (2nd tab)</td></tr>
+          <tr><td>Projects</td><td><code>projects.html</code></td><td>dark</td><td class="new">Projects (top tab)</td></tr>
+          <tr><td>People</td><td><code>people.html</code></td><td>dark</td><td class="new">People (top tab)</td></tr>
+          <tr><td>Discover — 4-lane inbox</td><td><code>discover.html</code></td><td>dark</td><td class="new">Discover (last tab)</td></tr>
         </tbody>
       </table>
     </div>
-
     <div class="foot" id="foot"></div>
-  </main>
+  </div></section>
 
 <script>
-/* Presentation only. A tiny config drives the two nav levels. */
+/* ---- palette (from the live pages) ---- */
+const Q = { tools:"#3987e5", languages:"#199e70", techniques:"#c98500", platforms:"#9085e9" };
+const RING = { Adopted:"#199e70", Trial:"#3987e5", Assess:"#c98500", Discovered:"#6d4fc4" };
+const el = (t,c,h)=>{ const n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; };
+const svgEl = (n)=>document.createElementNS("http://www.w3.org/2000/svg", n);
+
+/* ---- cream masthead ---- */
+function masthead(title, tag1, tag2) {
+  const m = el("div","mast");
+  m.append(el("h1", null, title));
+  m.append(el("div","tag", tag1 + "<br>" + tag2));
+  return m;
+}
+function creamSearch(ph){ const i=el("input","search"); i.placeholder=ph; i.disabled=true; return i; }
+function stat(k,v,color){ const d=el("div"); const b=el("b",null,v); if(color)b.style.color=color; d.append(b); d.append(el("div","k",k)); return d; }
+
+/* ---- radar plate (cream) ---- */
+function radarPlate() {
+  const wrap = el("div"); wrap.style.cssText="display:flex;gap:26px;align-items:center;flex-wrap:wrap";
+  const svg = svgEl("svg"); svg.setAttribute("viewBox","0 0 260 260"); svg.setAttribute("width","250"); svg.setAttribute("height","250");
+  const cx=130, cy=130, radii=[30,58,86,114,124], rings=["Adopted","Trial","Assess","Discovered","Archived"];
+  radii.forEach((r,i)=>{ const c=svgEl("circle"); c.setAttribute("cx",cx); c.setAttribute("cy",cy); c.setAttribute("r",r);
+    c.setAttribute("fill","none"); c.setAttribute("stroke", i===3 ? RING.Discovered : "#1a1a1a");
+    c.setAttribute("stroke-opacity", i===3 ? "0.55" : "0.18"); c.setAttribute("stroke-dasharray", i===3 ? "3 4" : "0"); svg.append(c); });
+  [[cx-124,cy,cx+124,cy],[cx,cy-124,cx,cy+124]].forEach(([x1,y1,x2,y2])=>{ const l=svgEl("line");
+    l.setAttribute("x1",x1); l.setAttribute("y1",y1); l.setAttribute("x2",x2); l.setAttribute("y2",y2);
+    l.setAttribute("stroke","#1a1a1a"); l.setAttribute("stroke-opacity","0.18"); svg.append(l); });
+  const qcol=[Q.tools,Q.platforms,Q.techniques,Q.languages];
+  for(let i=0;i<28;i++){ const a=Math.random()*Math.PI*2, rr=20+Math.random()*100; const d=svgEl("circle");
+    d.setAttribute("cx",cx+Math.cos(a)*rr); d.setAttribute("cy",cy+Math.sin(a)*rr); d.setAttribute("r","3.2");
+    d.setAttribute("fill", qcol[Math.floor(a/(Math.PI/2))%4]); svg.append(d); }
+  wrap.append(svg);
+  const leg = el("div"); leg.style.cssText="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#6b6456;display:flex;flex-direction:column;gap:8px";
+  [["Techniques",Q.techniques],["Tools",Q.tools],["Platforms",Q.platforms],["Languages",Q.languages]].forEach(([n,c])=>{
+    const li=el("div"); li.style.cssText="display:flex;align-items:center;gap:9px";
+    const dm=el("span","dot"); dm.style.background=c; dm.style.width="10px"; dm.style.height="10px"; li.append(dm, el("span",null,n)); leg.append(li); });
+  const note=el("div",null,"Adopted · Trial · Assess · Discovered · Archived"); note.style.cssText="margin-top:6px;color:#8a8474;font-size:10px";
+  leg.append(note); wrap.append(leg);
+  return wrap;
+}
+
+/* ---- editorial index table (cream) ---- */
+function indexTable() {
+  const rows=[["Bun","Platforms","Trial",72],["uv","Tools","Adopted",76],["MCP Servers","Techniques","Trial",91],
+    ["DSPy","Techniques","Discovered",81],["Mojo","Languages","Discovered",87],["Valkey","Platforms","Discovered",67]];
+  const t=el("table","idx");
+  t.innerHTML="<thead><tr><th>NAME</th><th>QUADRANT</th><th>RING</th><th>MOMENTUM</th></tr></thead>";
+  const tb=el("tbody");
+  rows.forEach(([n,q,r,m])=>{ const tr=el("tr");
+    tr.append(el("td","n",n));
+    tr.append(el("td","mono",q.toUpperCase()));
+    const rc=el("td"); const dm=el("span","dot"); dm.style.background=RING[r]; dm.style.marginRight="7px";
+    rc.append(dm); rc.append(document.createTextNode(r)); rc.style.fontSize="12px"; tr.append(rc);
+    tr.append(el("td","mono", m)); tr.lastChild.style.color="#1a1a1a";
+    tb.append(tr); });
+  t.append(tb); return t;
+}
+
+/* ---- learning shelf (cream) ---- */
+function learningShelf() {
+  const books=[["Designing Data-Intensive Applications","M. Kleppmann","Reading","#3987e5"],
+    ["The DSPy Handbook","—","Queued","#c98500"],["Building Effective Agents","Anthropic","Read","#199e70"],
+    ["Prompt Engineering Guide","—","Read","#199e70"],["Quant Trading 101","E. Chan","Discovered","#6d4fc4"],
+    ["RAG in Production","—","Reading","#3987e5"]];
+  const g=el("div","grid cols-3");
+  books.forEach(([t,a,s,c])=>{ const card=el("div","card-l");
+    const h=el("div",null,t); h.style.cssText="font-weight:700;font-size:13.5px;margin-bottom:5px;line-height:1.3";
+    const meta=el("div",null,a); meta.style.cssText="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6b6456;letter-spacing:.5px;margin-bottom:9px";
+    const p=el("span","pill",s.toUpperCase()); p.style.background=c; p.style.fontFamily="'IBM Plex Mono',monospace";
+    card.append(h,meta,p); g.append(card); });
+  return g;
+}
+
+/* ---- dark sketches ---- */
+function darkHeader(kicker,title,desc){ const f=document.createDocumentFragment();
+  f.append(el("div","kicker",kicker), el("h1",null,title), el("p","desc",desc)); return f; }
+
+function similarityMap() {
+  const svg=svgEl("svg"); svg.setAttribute("viewBox","0 0 520 240"); svg.setAttribute("width","100%"); svg.setAttribute("height","240");
+  const pts=[]; for(let i=0;i<22;i++) pts.push([20+Math.random()*480,14+Math.random()*212]);
+  for(let i=0;i<26;i++){ const a=pts[Math.random()*pts.length|0], b=pts[Math.random()*pts.length|0];
+    const l=svgEl("line"); l.setAttribute("x1",a[0]); l.setAttribute("y1",a[1]); l.setAttribute("x2",b[0]); l.setAttribute("y2",b[1]);
+    l.setAttribute("stroke","#2c2c2a"); svg.append(l); }
+  const qc=[Q.tools,Q.platforms,Q.techniques,Q.languages];
+  pts.forEach((p,i)=>{ const c=svgEl("circle"); c.setAttribute("cx",p[0]); c.setAttribute("cy",p[1]); c.setAttribute("r",4+Math.random()*4);
+    c.setAttribute("fill",qc[i%4]); svg.append(c); });
+  const w=el("div"); w.append(svg); return w;
+}
+
+function projectScatter() {
+  const svg=svgEl("svg"); svg.setAttribute("viewBox","0 0 520 220"); svg.setAttribute("width","100%"); svg.setAttribute("height","220");
+  for(let i=0;i<3;i++){ const ln=svgEl("line"); ln.setAttribute("x1","0"); ln.setAttribute("x2","520");
+    ln.setAttribute("y1",55*(i+1)); ln.setAttribute("y2",55*(i+1)); ln.setAttribute("stroke","#2c2c2a"); svg.append(ln); }
+  for(let i=0;i<34;i++){ const c=svgEl("circle"); c.setAttribute("cx",15+Math.random()*490); c.setAttribute("cy",12+Math.random()*196);
+    c.setAttribute("r",3+Math.random()*7); c.setAttribute("fill", i%4===0 ? Q.languages : "#2c2c2a"); svg.append(c); }
+  const w=el("div"); w.append(svg); return w;
+}
+
+function peopleCards() {
+  const ppl=[["A. Rivera","4 projects","python · rust · llm-eval"],["J. Okafor","3 projects","kubernetes · mlops · rag"],
+    ["M. Chen","5 projects","react · typescript · dspy"],["S. Patel","2 projects","trading · quant · postgres"],
+    ["T. Novak","3 projects","observability · airflow"],["L. Haddad","4 projects","prompting · agents · rag"]];
+  const g=el("div","grid cols-3");
+  ppl.forEach(([n,p,s])=>{ const c=el("div","card-d");
+    c.append(el("div",null,n)); c.lastChild.style.cssText="color:#f4f3ee;font-weight:600;font-size:13px;margin-bottom:4px";
+    c.append(el("div",null,p)); c.lastChild.style.cssText="font-size:10px;color:"+Q.techniques+";letter-spacing:.5px;margin-bottom:8px";
+    c.append(el("div",null,s)); c.lastChild.style.cssText="font-size:11px;color:#898781"; g.append(c); });
+  return g;
+}
+
+function discoverLanes() {
+  const lanes=[["TECHNOLOGY",Q.tools,14],["PROJECTS",Q.languages,5],["PEOPLE",Q.techniques,3],["LEARNING",Q.platforms,8]];
+  const g=el("div","grid cols-4");
+  lanes.forEach(([n,c,k])=>{ const p=el("div","card-d"); p.style.borderTop="3px solid "+c;
+    const h=el("div"); h.style.cssText="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px";
+    const nm=el("div",null,n); nm.style.cssText="font-size:10.5px;letter-spacing:1.5px;color:"+c;
+    const kc=el("div",null,k+" new"); kc.style.cssText="font-size:10px;color:#898781";
+    h.append(nm,kc); p.append(h);
+    for(let i=0;i<3;i++){ const l=el("div"); l.style.cssText="height:8px;border-radius:3px;background:#2c2c2a;margin-bottom:9px;width:"+(50+i*12)+"%"; p.append(l); }
+    g.append(p); });
+  return g;
+}
+
+/* ================= VIEW CONFIG ================= */
 const VIEWS = {
   technology: {
-    title: "Technology",
-    desc: "The radar itself — every tool, library, platform, language and technique you'd adopt or use, across all five rings.",
-    consolidates: "Consolidates: <b>Atlas + Index + Similarity</b> · <code>index.html</code>, <code>similarity.html</code>",
-    subnav: [
-      { id:"radar",      label:"RADAR",      ph:"RADAR PLATE" },
-      { id:"table",      label:"TABLE",      ph:"SCANNABLE LIST" },
-      { id:"similarity", label:"SIMILARITY", ph:"TOOL SIMILARITY MAP" },
+    title:"Technology",
+    consolidates:"Consolidates: <b>Atlas + Index + Similarity</b> · <code>index.html</code>, <code>similarity.html</code>",
+    subnav:[
+      { id:"radar",      label:"RADAR" },
+      { id:"table",      label:"TABLE" },
+      { id:"similarity", label:"SIMILARITY" },
     ],
   },
+  learning: {
+    title:"Learning", theme:"light",
+    consolidates:"Consolidates: <b>Learning Library</b> · <code>learning.html</code>",
+    subnav:[],
+  },
   projects: {
-    title: "Projects",
-    desc: "Similar projects surfaced against the radar — one TF-IDF space over both corpora, so project and tool vectors are comparable.",
-    consolidates: "Consolidates: <b>Projects</b> · <code>projects.html</code>",
-    subnav: [],
-    ph: "PROJECT MAP + LIST",
+    title:"Projects", theme:"dark",
+    desc:"Similar projects surfaced against the radar — one TF-IDF space over both corpora, so project and tool vectors are comparable.",
+    consolidates:"Consolidates: <b>Projects</b> · <code>projects.html</code>",
+    subnav:[],
   },
   people: {
-    title: "People",
-    desc: "Who works on what — every person as a set of skills (radar tool ids plus free-form), with a staffing read across projects.",
-    consolidates: "Consolidates: <b>People</b> · <code>people.html</code>",
-    subnav: [],
-    ph: "DIRECTORY + SKILLS",
-  },
-  learning: {
-    title: "Learning",
-    desc: "The Learning Library — books, articles, videos and certifications, tracked from Discovered through Read and topic-linked to the radar.",
-    consolidates: "Consolidates: <b>Learning Library</b> · <code>learning.html</code>",
-    subnav: [],
-    ph: "LIBRARY",
+    title:"People", theme:"dark",
+    desc:"Who works on what — every person as a set of skills (radar tool ids plus free-form), with a staffing read across projects.",
+    consolidates:"Consolidates: <b>People</b> · <code>people.html</code>",
+    subnav:[],
   },
   discover: {
-    title: "Discover",
-    desc: "The scraper's inbox — four lanes of freshly found things waiting to be curated. Kept last; it feeds every other tab.",
-    consolidates: "Consolidates: <b>Discover</b> · <code>discover.html</code>",
-    subnav: [],
-    ph: "FOUR-LANE INBOX",
+    title:"Discover", theme:"dark",
+    desc:"The scraper's inbox — four lanes of freshly found things waiting to be curated. Kept last; it feeds every other tab.",
+    consolidates:"Consolidates: <b>Discover</b> · <code>discover.html</code>",
+    subnav:[],
   },
 };
 
-/* Discover LAST, as it was */
-const ORDER = ["technology","projects","people","learning","discover"];
+/* Learning sits 2nd, right of Technology; Discover stays last */
+const ORDER = ["technology","learning","projects","people","discover"];
 
-let state = { tab: "technology", sub: "radar" };
-
-const primaryEl = document.getElementById("primary");
-const subnavEl  = document.getElementById("subnav");
-const subbarEl  = document.getElementById("subbar");
-const el = (t,c,h) => { const n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; };
-
-function buildPrimary() {
-  primaryEl.innerHTML = "";
-  ORDER.forEach(id => {
-    const b = el("button","tab", VIEWS[id].title.toUpperCase());
-    b.setAttribute("aria-selected", state.tab === id);
-    b.onclick = () => selectTab(id);
-    primaryEl.append(b);
-  });
+/* theme + renderer resolution per (tab, sub) */
+function resolve() {
+  const tab = state.tab, sub = state.sub;
+  if (tab === "technology") {
+    if (sub === "radar") return { theme:"light", title:"The Atlas",  tag:["TECHNOLOGY RADAR","LIVE FEED — 2026-08-04"], search:"Search — try a typo, a partial word, or a topic…",
+      strip:[["SIGNALS","212"],["AWAITING REVIEW","30","#6d4fc4"],["NEW THIS WEEK","9","#3987e5"]], body:radarPlate };
+    if (sub === "table") return { theme:"light", title:"The Index",  tag:["TECHNOLOGY RADAR","212 SIGNALS"], search:"Search the index…",
+      strip:[["SIGNALS","212"],["ADOPTED","41"],["IN TRIAL","28"]], body:indexTable };
+    return { theme:"dark", kicker:"TECHNOLOGY · SIMILARITY", title:"Tool Similarity",
+      desc:"TF-IDF map of how close tools sit to one another — the same corpus as the radar, drawn as a similarity graph.", body:similarityMap };
+  }
+  if (tab === "learning") return { theme:"light", title:"Learning Library", tag:["LEARNING LIBRARY","63 ITEMS"],
+    search:"Search books, articles, videos, certifications…", strip:[["ITEMS","63"],["READING","4","#3987e5"],["READ","22","#199e70"]], body:learningShelf };
+  const v = VIEWS[tab];
+  const bodyMap = { projects:projectScatter, people:peopleCards, discover:discoverLanes };
+  return { theme:"dark", kicker:v.title.toUpperCase(), title:v.title, desc:v.desc, body:bodyMap[tab] };
 }
 
-function buildSubnav() {
-  const v = VIEWS[state.tab];
-  if (!v.subnav.length) { subbarEl.classList.add("empty"); return; }
-  subbarEl.classList.remove("empty");
-  subnavEl.innerHTML = "";
-  v.subnav.forEach(s => {
-    const b = el("button","subtab", s.label);
-    b.setAttribute("aria-selected", state.sub === s.id);
-    b.onclick = () => { state.sub = s.id; buildSubnav(); renderView(); };
-    subnavEl.append(b);
-  });
+let state = { tab:"technology", sub:"radar" };
+const primaryEl=document.getElementById("primary");
+const subnavEl=document.getElementById("subnav");
+const subbarEl=document.getElementById("subbar");
+const stageEl=document.getElementById("stage");
+
+function buildPrimary(){ primaryEl.innerHTML="";
+  ORDER.forEach(id=>{ const b=el("button","tab",VIEWS[id].title.toUpperCase());
+    b.setAttribute("aria-selected", state.tab===id); b.onclick=()=>selectTab(id); primaryEl.append(b); }); }
+
+function buildSubnav(){ const v=VIEWS[state.tab];
+  if(!v.subnav.length){ subbarEl.classList.add("empty"); return; }
+  subbarEl.classList.remove("empty"); subnavEl.innerHTML="";
+  v.subnav.forEach(s=>{ const b=el("button","subtab",s.label); b.setAttribute("aria-selected", state.sub===s.id);
+    b.onclick=()=>{ state.sub=s.id; buildSubnav(); renderView(); }; subnavEl.append(b); }); }
+
+function renderView(){
+  const r = resolve();
+  stageEl.className = "stage " + r.theme;
+  stageEl.innerHTML = "";
+  if (r.theme === "light") {
+    stageEl.append(masthead(r.title, r.tag[0], r.tag[1]));
+    if (r.search) stageEl.append(creamSearch(r.search));
+    if (r.strip){ const s=el("div","strip"); r.strip.forEach(([k,v,c])=>s.append(stat(k,v,c))); stageEl.append(s); }
+  } else {
+    stageEl.append(darkHeader(r.kicker, r.title, r.desc || ""));
+  }
+  stageEl.append(r.body());
+  const c = el("div","consolidates"); c.innerHTML = VIEWS[state.tab].consolidates; stageEl.append(c);
 }
 
-function renderView() {
-  const v = VIEWS[state.tab];
-  const sub = v.subnav.find(s => s.id === state.sub);
-  document.getElementById("vKicker").textContent =
-    v.title.toUpperCase() + (sub ? " · " + sub.label : "");
-  document.getElementById("vTitle").textContent = v.title;
-  document.getElementById("vDesc").textContent = v.desc;
-  document.getElementById("phName").textContent = sub ? sub.ph : v.ph;
-  document.getElementById("vConsolidates").innerHTML = v.consolidates;
-}
+function selectTab(id){ state.tab=id; state.sub=VIEWS[id].subnav[0]?VIEWS[id].subnav[0].id:null;
+  buildPrimary(); buildSubnav(); renderView(); }
 
-function selectTab(id) {
-  state.tab = id;
-  state.sub = VIEWS[id].subnav[0] ? VIEWS[id].subnav[0].id : null;
-  buildPrimary(); buildSubnav(); renderView();
-}
-
-document.getElementById("mapBtn").onclick = function () {
-  const m = document.getElementById("mapping");
-  const open = m.classList.toggle("hide") === false;
-  this.textContent = open ? "▾ HIDE OLD → NEW MAPPING" : "▸ SHOW OLD → NEW MAPPING";
-};
+document.getElementById("mapBtn").onclick=function(){ const m=document.getElementById("mapping");
+  const open=m.classList.toggle("hide")===false; this.textContent=open?"▾ HIDE OLD → NEW MAPPING":"▸ SHOW OLD → NEW MAPPING"; };
 
 document.getElementById("foot").innerHTML =
-  "Mockup · navbar reorganisation only. Every current tab keeps a home; Atlas becomes Technology with a VIEW: subnav " +
-  "(Radar / Table / Similarity). Discover stays the last tab. Theme is unchanged — the light/dark merge is a separate step.";
+  "Mockup · navbar reorganisation only. Themes are untouched — Technology's Radar &amp; Table and the Learning Library stay the cream almanac; " +
+  "Similarity, Projects, People and Discover stay dark. Order: Technology · Learning · Projects · People · Discover.";
 
 buildPrimary(); buildSubnav(); renderView();
 </script>
