@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03",
+  "generated": "2026-08-04",
   "items": [
     {
       "id": "ssml-trading",
@@ -8,7 +8,11 @@
       "author": "David Aronson & Timothy Masters",
       "year": 2013,
       "status": "Shelved",
-      "topics": ["Trading", "Quant", "ML"],
+      "topics": [
+        "Trading",
+        "Quant",
+        "ML"
+      ],
       "pages": 244,
       "pages_read": null,
       "rating": null,
@@ -17,7 +21,7 @@
       "queued": null,
       "finished": null,
       "shelved": "2026-07-28",
-      "shelved_note": "Skimmed the first two chapters — solid on avoiding overfit, but heavier stats-textbook density than useful right now. Revisit once actively building a walk-forward validation pipeline.",
+      "shelved_note": "Skimmed the first two chapters \u2014 solid on avoiding overfit, but heavier stats-textbook density than useful right now. Revisit once actively building a walk-forward validation pipeline.",
       "blurb": "Building predictive-model trading systems with the TSSB platform, with a hard focus on avoiding overfit and validating that an edge is real rather than data-mined noise."
     },
     {
@@ -27,7 +31,10 @@
       "author": "Martin Kleppmann",
       "year": 2017,
       "status": "Read",
-      "topics": ["Data Feeds", "Skills"],
+      "topics": [
+        "Data Feeds",
+        "Skills"
+      ],
       "pages": 616,
       "pages_read": null,
       "rating": 5,
@@ -36,7 +43,7 @@
       "queued": null,
       "finished": "2026-03-02",
       "shelved": null,
-      "blurb": "The reference for how reliable, scalable systems actually store and move data — replication, partitioning, and the tradeoffs behind every database pitch deck."
+      "blurb": "The reference for how reliable, scalable systems actually store and move data \u2014 replication, partitioning, and the tradeoffs behind every database pitch deck."
     },
     {
       "id": "deep-learning",
@@ -45,7 +52,10 @@
       "author": "Goodfellow, Bengio & Courville",
       "year": 2016,
       "status": "Read",
-      "topics": ["ML", "AI"],
+      "topics": [
+        "ML",
+        "AI"
+      ],
       "pages": 800,
       "pages_read": null,
       "rating": 4,
@@ -60,10 +70,14 @@
       "id": "afml",
       "type": "book",
       "title": "Advances in Financial Machine Learning",
-      "author": "Marcos López de Prado",
+      "author": "Marcos L\u00f3pez de Prado",
       "year": 2018,
       "status": "Reading",
-      "topics": ["Quant", "ML", "Trading"],
+      "topics": [
+        "Quant",
+        "ML",
+        "Trading"
+      ],
       "pages": 400,
       "pages_read": 210,
       "rating": null,
@@ -81,7 +95,11 @@
       "author": "Valentina Alto",
       "year": 2024,
       "status": "Reading",
-      "topics": ["AI", "Prompts", "Agents"],
+      "topics": [
+        "AI",
+        "Prompts",
+        "Agents"
+      ],
       "pages": 320,
       "pages_read": 140,
       "rating": null,
@@ -90,7 +108,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Practical patterns for wiring LLMs into real products — retrieval, tool use, and the glue code nobody puts in the paper."
+      "blurb": "Practical patterns for wiring LLMs into real products \u2014 retrieval, tool use, and the glue code nobody puts in the paper."
     },
     {
       "id": "rag-in-practice",
@@ -99,7 +117,10 @@
       "author": "Keith Bourne",
       "year": 2024,
       "status": "Discovered",
-      "topics": ["AI", "RAG"],
+      "topics": [
+        "AI",
+        "RAG"
+      ],
       "pages": 344,
       "pages_read": null,
       "rating": null,
@@ -108,7 +129,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Came up twice this month scouting the RAG topic on the tech radar — queued to see if it's worth the reading time."
+      "blurb": "Came up twice this month scouting the RAG topic on the tech radar \u2014 queued to see if it's worth the reading time."
     },
     {
       "id": "prompt-engineering",
@@ -117,7 +138,10 @@
       "author": "James Phoenix & Mike Taylor",
       "year": 2024,
       "status": "Read",
-      "topics": ["Prompts", "AI"],
+      "topics": [
+        "Prompts",
+        "AI"
+      ],
       "pages": 350,
       "pages_read": null,
       "rating": 3,
@@ -126,7 +150,7 @@
       "queued": null,
       "finished": "2026-01-14",
       "shelved": null,
-      "blurb": "Solid primer, aged fast — useful for the fundamentals, less so for anything model-specific."
+      "blurb": "Solid primer, aged fast \u2014 useful for the fundamentals, less so for anything model-specific."
     },
     {
       "id": "algo-trading",
@@ -135,7 +159,10 @@
       "author": "Ernest P. Chan",
       "year": 2013,
       "status": "Read",
-      "topics": ["Trading", "Quant"],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
       "pages": 224,
       "pages_read": null,
       "rating": 4,
@@ -153,7 +180,9 @@
       "author": "Sutton & Barto",
       "year": 2018,
       "status": "Discovered",
-      "topics": ["ML"],
+      "topics": [
+        "ML"
+      ],
       "pages": 552,
       "pages_read": null,
       "rating": null,
@@ -162,7 +191,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "The canonical RL text — added after it kept getting cited in agent-training threads."
+      "blurb": "The canonical RL text \u2014 added after it kept getting cited in agent-training threads."
     },
     {
       "id": "agentic-design-patterns",
@@ -171,7 +200,10 @@
       "author": "Antonio Gulli",
       "year": 2025,
       "status": "Reading",
-      "topics": ["Agents", "Skills"],
+      "topics": [
+        "Agents",
+        "Skills"
+      ],
       "pages": 280,
       "pages_read": 60,
       "rating": null,
@@ -180,7 +212,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "A pattern catalog for multi-step agent workflows — planning, reflection, tool routing."
+      "blurb": "A pattern catalog for multi-step agent workflows \u2014 planning, reflection, tool routing."
     },
     {
       "id": "hull-derivatives",
@@ -189,7 +221,9 @@
       "author": "John C. Hull",
       "year": 2021,
       "status": "Read",
-      "topics": ["Quant"],
+      "topics": [
+        "Quant"
+      ],
       "pages": 896,
       "pages_read": null,
       "rating": 5,
@@ -207,7 +241,9 @@
       "author": "Matthew Skelton & Manuel Pais",
       "year": 2019,
       "status": "Queued",
-      "topics": ["Skills"],
+      "topics": [
+        "Skills"
+      ],
       "pages": 245,
       "pages_read": null,
       "rating": null,
@@ -216,7 +252,7 @@
       "queued": "2026-07-25",
       "finished": null,
       "shelved": null,
-      "blurb": "Recommended by three separate engineers this quarter — finally queuing it."
+      "blurb": "Recommended by three separate engineers this quarter \u2014 finally queuing it."
     },
     {
       "id": "streaming-systems",
@@ -225,7 +261,9 @@
       "author": "Tyler Akidau, Slava Chernyak & Reuven Lax",
       "year": 2018,
       "status": "Discovered",
-      "topics": ["Data Feeds"],
+      "topics": [
+        "Data Feeds"
+      ],
       "pages": 280,
       "pages_read": null,
       "rating": null,
@@ -234,7 +272,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Windowing, watermarks, and exactly-once semantics — relevant to the scraper pipeline's next rewrite."
+      "blurb": "Windowing, watermarks, and exactly-once semantics \u2014 relevant to the scraper pipeline's next rewrite."
     },
     {
       "id": "understanding-deep-learning",
@@ -243,7 +281,10 @@
       "author": "Simon J.D. Prince",
       "year": 2023,
       "status": "Discovered",
-      "topics": ["ML", "AI"],
+      "topics": [
+        "ML",
+        "AI"
+      ],
       "pages": 552,
       "pages_read": null,
       "rating": null,
@@ -252,7 +293,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "A newer, more visual take on the deep learning fundamentals — queued as a companion to the Goodfellow text."
+      "blurb": "A newer, more visual take on the deep learning fundamentals \u2014 queued as a companion to the Goodfellow text."
     },
     {
       "id": "attention-is-all-you-need",
@@ -263,7 +304,10 @@
       "url": "https://arxiv.org/abs/1706.03762",
       "year": 2017,
       "status": "Read",
-      "topics": ["ML", "AI"],
+      "topics": [
+        "ML",
+        "AI"
+      ],
       "minutes": 40,
       "rating": 5,
       "added": null,
@@ -271,7 +315,7 @@
       "queued": null,
       "finished": "2025-08-11",
       "shelved": null,
-      "blurb": "The transformer paper. Worth reading in the original once — every later 'attention' explainer is a gloss on this."
+      "blurb": "The transformer paper. Worth reading in the original once \u2014 every later 'attention' explainer is a gloss on this."
     },
     {
       "id": "karpathy-gpt-from-scratch",
@@ -282,7 +326,10 @@
       "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
       "year": 2023,
       "status": "Reading",
-      "topics": ["ML", "AI"],
+      "topics": [
+        "ML",
+        "AI"
+      ],
       "duration": "1h 56m",
       "rating": null,
       "added": null,
@@ -290,7 +337,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Hands-on build of a GPT from the ground up — the clearest walk from bigram model to a working transformer you can find."
+      "blurb": "Hands-on build of a GPT from the ground up \u2014 the clearest walk from bigram model to a working transformer you can find."
     },
     {
       "id": "quant-galore-trading-infrastructure",
@@ -301,7 +348,11 @@
       "url": "https://www.quant-galore.com/p/a-no-bs-look-at-quantitative-trading",
       "year": 2024,
       "status": "Discovered",
-      "topics": ["Trading", "Quant", "Data Feeds"],
+      "topics": [
+        "Trading",
+        "Quant",
+        "Data Feeds"
+      ],
       "minutes": 12,
       "rating": null,
       "added": "2026-07-17",
@@ -309,7 +360,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "How a medium-frequency shop should actually lay out its data stack — cloud object storage (S3), Parquet, and a sane folder hierarchy instead of giant local files — to make backtesting fast."
+      "blurb": "How a medium-frequency shop should actually lay out its data stack \u2014 cloud object storage (S3), Parquet, and a sane folder hierarchy instead of giant local files \u2014 to make backtesting fast."
     },
     {
       "id": "quant-galore-chasing-vol-shorting",
@@ -320,7 +371,10 @@
       "url": "https://www.quant-galore.com/p/a-junior-quants-guide-to-chasing",
       "year": 2024,
       "status": "Discovered",
-      "topics": ["Trading", "Quant"],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
       "minutes": 14,
       "rating": null,
       "added": "2026-07-17",
@@ -328,7 +382,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Building a short-selling hedge for a long momentum book, arguing that borrow fees dominate — so the edge comes from finding high-realized-vol names and calling short, one-day directional moves that beat the cost to borrow."
+      "blurb": "Building a short-selling hedge for a long momentum book, arguing that borrow fees dominate \u2014 so the edge comes from finding high-realized-vol names and calling short, one-day directional moves that beat the cost to borrow."
     },
     {
       "id": "pca-clustering-grouping-stocks",
@@ -339,7 +393,10 @@
       "url": "https://medium.com/@wl8380/unmasking-the-markets-hidden-dances-grouping-stocks-with-pca-clustering-0c7046a9b7a0",
       "year": 2024,
       "status": "Discovered",
-      "topics": ["Quant", "ML"],
+      "topics": [
+        "Quant",
+        "ML"
+      ],
       "minutes": 10,
       "rating": null,
       "added": "2026-07-17",
@@ -358,7 +415,10 @@
       "url": "https://kaabar-sofien.medium.com/pca-in-time-series-finding-structure-in-a-moving-world-05db54ebf76c",
       "year": 2024,
       "status": "Discovered",
-      "topics": ["Quant", "ML"],
+      "topics": [
+        "Quant",
+        "ML"
+      ],
       "minutes": 9,
       "rating": null,
       "added": "2026-07-17",
@@ -366,7 +426,7 @@
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "How PCA turns a set of correlated time series into uncorrelated components, cutting noise and surfacing the shared common factors that drive financial series — a preprocessing step before modeling."
+      "blurb": "How PCA turns a set of correlated time series into uncorrelated components, cutting noise and surfacing the shared common factors that drive financial series \u2014 a preprocessing step before modeling."
     },
     {
       "id": "nvidia-ncp-aai",
@@ -378,7 +438,10 @@
       "price": "$200",
       "year": null,
       "status": "Discovered",
-      "topics": ["Agents", "AI"],
+      "topics": [
+        "Agents",
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -397,7 +460,11 @@
       "price": "$200",
       "year": null,
       "status": "Queued",
-      "topics": ["AI", "RAG", "Skills"],
+      "topics": [
+        "AI",
+        "RAG",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -413,10 +480,13 @@
       "author": "Microsoft",
       "source": "AI-103",
       "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/",
-      "price": "≈$165",
+      "price": "\u2248$165",
       "year": null,
       "status": "Discovered",
-      "topics": ["Agents", "AI"],
+      "topics": [
+        "Agents",
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -428,14 +498,17 @@
     {
       "id": "aws-genai-developer-professional",
       "type": "certification",
-      "title": "AWS Certified Generative AI Developer – Professional",
+      "title": "AWS Certified Generative AI Developer \u2013 Professional",
       "author": "AWS",
       "source": null,
       "url": "https://aws.amazon.com/certification/certified-generative-ai-developer-professional/",
       "price": "$300",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI", "Skills"],
+      "topics": [
+        "AI",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -454,7 +527,10 @@
       "price": "$649 member / $799 nonmember",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI", "Skills"],
+      "topics": [
+        "AI",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -473,7 +549,10 @@
       "price": "$200",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI", "ML"],
+      "topics": [
+        "AI",
+        "ML"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -492,7 +571,10 @@
       "price": "$225",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI", "Data Feeds"],
+      "topics": [
+        "AI",
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -511,7 +593,10 @@
       "price": "$200",
       "year": null,
       "status": "Discovered",
-      "topics": ["ML", "AI"],
+      "topics": [
+        "ML",
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -527,10 +612,13 @@
       "author": "Microsoft",
       "source": "AB-620",
       "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-agent-builder-associate/",
-      "price": "≈$165",
+      "price": "\u2248$165",
       "year": null,
       "status": "Discovered",
-      "topics": ["Agents", "RAG"],
+      "topics": [
+        "Agents",
+        "RAG"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -546,10 +634,13 @@
       "author": "Microsoft",
       "source": "AI-200",
       "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/",
-      "price": "≈$165",
+      "price": "\u2248$165",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI", "Skills"],
+      "topics": [
+        "AI",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -561,14 +652,17 @@
     {
       "id": "aws-ml-engineer-associate",
       "type": "certification",
-      "title": "AWS Certified Machine Learning Engineer – Associate",
+      "title": "AWS Certified Machine Learning Engineer \u2013 Associate",
       "author": "AWS",
       "source": null,
       "url": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
       "price": "$150",
       "year": null,
       "status": "Discovered",
-      "topics": ["ML", "Skills"],
+      "topics": [
+        "ML",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -587,7 +681,10 @@
       "price": "$200",
       "year": null,
       "status": "Queued",
-      "topics": ["ML", "Skills"],
+      "topics": [
+        "ML",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -603,10 +700,12 @@
       "author": "Microsoft",
       "source": null,
       "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/",
-      "price": "≈$330 from scratch",
+      "price": "\u2248$330 from scratch",
       "year": null,
       "status": "Discovered",
-      "topics": ["Skills"],
+      "topics": [
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -618,14 +717,16 @@
     {
       "id": "aws-solutions-architect-associate",
       "type": "certification",
-      "title": "AWS Certified Solutions Architect – Associate",
+      "title": "AWS Certified Solutions Architect \u2013 Associate",
       "author": "AWS",
       "source": null,
       "url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
       "price": "$150",
       "year": null,
       "status": "Discovered",
-      "topics": ["Skills"],
+      "topics": [
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -637,14 +738,16 @@
     {
       "id": "aws-solutions-architect-professional",
       "type": "certification",
-      "title": "AWS Certified Solutions Architect – Professional",
+      "title": "AWS Certified Solutions Architect \u2013 Professional",
       "author": "AWS",
       "source": null,
       "url": "https://aws.amazon.com/certification/certified-solutions-architect-professional/",
       "price": "$300",
       "year": null,
       "status": "Discovered",
-      "topics": ["Skills"],
+      "topics": [
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -663,7 +766,9 @@
       "price": "$200",
       "year": null,
       "status": "Discovered",
-      "topics": ["Skills"],
+      "topics": [
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -682,7 +787,10 @@
       "price": "$375",
       "year": null,
       "status": "Discovered",
-      "topics": ["Data Feeds", "Skills"],
+      "topics": [
+        "Data Feeds",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -701,7 +809,10 @@
       "price": "$375",
       "year": null,
       "status": "Discovered",
-      "topics": ["ML", "Data Feeds"],
+      "topics": [
+        "ML",
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -720,7 +831,9 @@
       "price": "$125",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI"],
+      "topics": [
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -739,7 +852,10 @@
       "price": "$200",
       "year": null,
       "status": "Queued",
-      "topics": ["Data Feeds", "Skills"],
+      "topics": [
+        "Data Feeds",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -758,7 +874,9 @@
       "price": "$200",
       "year": null,
       "status": "Discovered",
-      "topics": ["Data Feeds"],
+      "topics": [
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -777,7 +895,9 @@
       "price": "$200",
       "year": null,
       "status": "Queued",
-      "topics": ["Data Feeds"],
+      "topics": [
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -796,7 +916,9 @@
       "price": "$200",
       "year": null,
       "status": "Queued",
-      "topics": ["ML"],
+      "topics": [
+        "ML"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -815,7 +937,9 @@
       "price": "$175",
       "year": null,
       "status": "Discovered",
-      "topics": ["Data Feeds"],
+      "topics": [
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -834,7 +958,9 @@
       "price": "$125",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI"],
+      "topics": [
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -853,7 +979,10 @@
       "price": "$125",
       "year": null,
       "status": "Discovered",
-      "topics": ["ML", "Data Feeds"],
+      "topics": [
+        "ML",
+        "Data Feeds"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -872,7 +1001,9 @@
       "price": "$99",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI"],
+      "topics": [
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -891,7 +1022,9 @@
       "price": "$100",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI"],
+      "topics": [
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -907,10 +1040,12 @@
       "author": "Microsoft",
       "source": "AI-901",
       "url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/",
-      "price": "≈$99–$165",
+      "price": "\u2248$99\u2013$165",
       "year": null,
       "status": "Discovered",
-      "topics": ["AI"],
+      "topics": [
+        "AI"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -929,14 +1064,17 @@
       "price": "Free",
       "year": null,
       "status": "Discovered",
-      "topics": ["Trading", "Quant"],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Self-paced courses covering LEAN, Python/C#, backtesting, universes, portfolio management, and the Algorithm Framework — completions generate QuantConnect certificates."
+      "blurb": "Self-paced courses covering LEAN, Python/C#, backtesting, universes, portfolio management, and the Algorithm Framework \u2014 completions generate QuantConnect certificates."
     },
     {
       "id": "epat-algo-trading",
@@ -948,7 +1086,11 @@
       "price": "$8,599 (early) / $9,499 (standard)",
       "year": null,
       "status": "Discovered",
-      "topics": ["Trading", "Quant", "ML"],
+      "topics": [
+        "Trading",
+        "Quant",
+        "ML"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -967,7 +1109,10 @@
       "price": "Unknown",
       "year": null,
       "status": "Discovered",
-      "topics": ["Quant", "ML"],
+      "topics": [
+        "Quant",
+        "ML"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -986,14 +1131,17 @@
       "price": "$22,995",
       "year": null,
       "status": "Discovered",
-      "topics": ["Quant", "ML"],
+      "topics": [
+        "Quant",
+        "ML"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
       "queued": null,
       "finished": null,
       "shelved": null,
-      "blurb": "Six-month, master's-level qualification in mathematical finance — derivatives pricing, computational finance, Python, and machine learning — built around six core modules, electives, module exams, and a final project."
+      "blurb": "Six-month, master's-level qualification in mathematical finance \u2014 derivatives pricing, computational finance, Python, and machine learning \u2014 built around six core modules, electives, module exams, and a final project."
     },
     {
       "id": "frm",
@@ -1005,7 +1153,10 @@
       "price": "~$2,000 for both exams plus enrollment fee",
       "year": null,
       "status": "Discovered",
-      "topics": ["Quant", "Skills"],
+      "topics": [
+        "Quant",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -1024,7 +1175,10 @@
       "price": "$875 per exam (early registration)",
       "year": null,
       "status": "Discovered",
-      "topics": ["Trading", "Skills"],
+      "topics": [
+        "Trading",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -1042,7 +1196,10 @@
       "url": "https://www.youtube.com/watch?v=4FgAKzM_uYM",
       "year": null,
       "status": "Read",
-      "topics": ["ML", "Skills"],
+      "topics": [
+        "ML",
+        "Skills"
+      ],
       "duration": null,
       "rating": null,
       "added": "2026-08-03",
@@ -1050,7 +1207,7 @@
       "queued": null,
       "finished": "2026-08-03",
       "shelved": null,
-      "blurb": "MLflow fundamentals for MLOps in Python — tracking, projects, and model registry — capped off with an Optuna + MLflow integration for running and logging hyperparameter search trials."
+      "blurb": "MLflow fundamentals for MLOps in Python \u2014 tracking, projects, and model registry \u2014 capped off with an Optuna + MLflow integration for running and logging hyperparameter search trials."
     },
     {
       "id": "mlflow-youtube-channel",
@@ -1061,7 +1218,10 @@
       "url": "https://youtube.com/@mlflowoss",
       "year": null,
       "status": "Queued",
-      "topics": ["ML", "Skills"],
+      "topics": [
+        "ML",
+        "Skills"
+      ],
       "duration": null,
       "rating": null,
       "added": "2026-08-03",
@@ -1069,7 +1229,7 @@
       "queued": "2026-08-03",
       "finished": null,
       "shelved": null,
-      "blurb": "The official MLflow open-source project channel — tutorials, release walkthroughs, and talks straight from the maintainers. Queued to work through after the NeuralNine crash course."
+      "blurb": "The official MLflow open-source project channel \u2014 tutorials, release walkthroughs, and talks straight from the maintainers. Queued to work through after the NeuralNine crash course."
     },
     {
       "id": "kaabar-entry-price-doesnt-matter",
@@ -1080,7 +1240,9 @@
       "url": "https://kaabar-sofien.medium.com/the-market-does-not-care-about-your-entry-price-8775ece620b1",
       "year": 2026,
       "status": "Read",
-      "topics": ["Trading"],
+      "topics": [
+        "Trading"
+      ],
       "minutes": null,
       "rating": null,
       "added": "2026-08-03",
@@ -1088,7 +1250,7 @@
       "queued": null,
       "finished": "2026-08-03",
       "shelved": null,
-      "blurb": "A trading-psychology piece on the 'breakeven trap' — the market has no idea what you paid, so anchoring exits to entry price instead of current prospects is a purely emotional, costly habit."
+      "blurb": "A trading-psychology piece on the 'breakeven trap' \u2014 the market has no idea what you paid, so anchoring exits to entry price instead of current prospects is a purely emotional, costly habit."
     },
     {
       "id": "cfa",
@@ -1097,10 +1259,13 @@
       "author": "CFA Institute",
       "source": null,
       "url": "https://www.cfainstitute.org/programs/cfa-program",
-      "price": "$3,520–$4,600 across three levels",
+      "price": "$3,520\u2013$4,600 across three levels",
       "year": null,
       "status": "Discovered",
-      "topics": ["Quant", "Skills"],
+      "topics": [
+        "Quant",
+        "Skills"
+      ],
       "rating": null,
       "added": "2026-08-03",
       "started": null,
@@ -1108,6 +1273,28 @@
       "finished": null,
       "shelved": null,
       "blurb": "Three-level charter in investment analysis, accounting, valuation, and portfolio management."
+    },
+    {
+      "id": "how-to-use-apache-kafka-to-transform-and-store-stock-market-",
+      "type": "video",
+      "title": "How to Use Apache Kafka to Transform and Store Stock Market Data in Apache Cassandra in Real Time!",
+      "author": "The Data and AI Guy",
+      "source": "YouTube",
+      "url": "https://youtu.be/iEeP9dROuXk",
+      "year": null,
+      "status": "Discovered",
+      "topics": [
+        "Trading",
+        "Data Feeds"
+      ],
+      "duration": null,
+      "rating": null,
+      "added": "2026-08-04",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "Walkthrough of a real-time pipeline that streams stock market data through Apache Kafka and persists it into Apache Cassandra."
     }
   ]
 }
