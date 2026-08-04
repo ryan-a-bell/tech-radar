@@ -1481,50 +1481,28 @@ function App() {
     <div style={{
       minHeight: "100vh", background: "#000",
     }}>
+      {/* ---- primary bucket nav — shared across every page ---- */}
       <div style={{
         display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
         fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
         flexWrap: "wrap",
       }}>
-        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>
-          VIEW:
-        </span>
-        {[
-          { id: "atlas", label: "ATLAS" },
-          { id: "index", label: "INDEX" },
-        ].map((m) => (
-          <button key={m.id} onClick={() => selectView(m.id)} style={{
-            background: view === m.id ? "#fff" : "transparent",
-            color: view === m.id ? "#000" : "#999",
-            border: "1px solid " + (view === m.id ? "#fff" : "#444"),
-            padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1,
-            cursor: "pointer", fontFamily: "inherit",
-          }}>{m.label}</button>
-        ))}
-        <a href="learning.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-        }}>LEARNING</a>
-        <a href="similarity.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>SIMILARITY</a>
-        <a href="projects.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>PROJECTS</a>
-        <a href="people.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>PEOPLE</a>
-        <a href="discover.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>DISCOVER</a>
+        <span style={{ color: "#fff", fontWeight: 600, letterSpacing: 3, fontSize: 13,
+          marginRight: 16, paddingRight: 16, borderRight: "1px solid #333" }}>TECH RADAR</span>
+        <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+          padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 }}>TECHNOLOGY</span>
+        <a href="learning.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>LEARNING</a>
+        <a href="projects.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PROJECTS</a>
+        <a href="people.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PEOPLE</a>
+        <a href="discover.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>DISCOVER</a>
         {EDIT_MODE && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
@@ -1550,6 +1528,30 @@ function App() {
         }}>
           {status === "live" ? "● radar.json loaded" : "● sample data (radar.json not found)"}
         </span>
+      </div>
+
+      {/* ---- Technology subnav: Radar / Table (in-page) + Similarity (page) ---- */}
+      <div style={{
+        display: "flex", gap: 0, background: "#141413", padding: "8px 14px",
+        fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
+        flexWrap: "wrap", borderTop: "1px solid #000",
+      }}>
+        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+        {[
+          { id: "atlas", label: "RADAR" },
+          { id: "index", label: "TABLE" },
+        ].map((m) => (
+          <button key={m.id} onClick={() => selectView(m.id)} style={{
+            background: view === m.id ? "#d8d6cc" : "transparent",
+            color: view === m.id ? "#000" : "#999",
+            border: "1px solid " + (view === m.id ? "#d8d6cc" : "#3a3a3a"),
+            padding: "5px 13px", marginRight: 8, fontSize: 11, letterSpacing: 1,
+            cursor: "pointer", fontFamily: "inherit",
+          }}>{m.label}</button>
+        ))}
+        <a href="similarity.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #3a3a3a", textDecoration: "none", padding: "5px 13px",
+          fontSize: 11, letterSpacing: 1 }}>SIMILARITY</a>
       </div>
 
       {view === "atlas"
