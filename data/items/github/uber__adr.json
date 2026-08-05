@@ -1,0 +1,25 @@
+{
+  "id": "github:uber/ADR",
+  "name": "ADR",
+  "description": "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/uber/ADR",
+  "canonical_url": "github.com/uber/adr",
+  "also_seen": [],
+  "company": "Uber",
+  "stars": 148,
+  "momentum": 14,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-05",
+  "last_seen": "2026-08-05",
+  "stars_history": {
+    "2026-08-05": 148
+  }
+}

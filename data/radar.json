@@ -1,7 +1,196 @@
 {
-  "generated": "2026-08-04",
-  "count": 540,
+  "generated": "2026-08-05",
+  "count": 547,
   "items": [
+    {
+      "id": "github:webpack/webpack",
+      "name": "webpack",
+      "description": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/webpack/webpack",
+      "canonical_url": "github.com/webpack/webpack",
+      "also_seen": [],
+      "company": null,
+      "stars": 10,
+      "momentum": 1,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 10
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tailwindlabs/tailwindcss",
+      "name": "tailwindcss",
+      "description": "A utility-first CSS framework for rapid UI development.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "canonical_url": "github.com/tailwindlabs/tailwindcss",
+      "also_seen": [],
+      "company": null,
+      "stars": 52,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 52
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:gabime/spdlog",
+      "name": "spdlog",
+      "description": "Fast C++ logging library.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/gabime/spdlog",
+      "canonical_url": "github.com/gabime/spdlog",
+      "also_seen": [],
+      "company": null,
+      "stars": 10,
+      "momentum": 1,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 10
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:denoland/deno",
+      "name": "deno",
+      "description": "A modern runtime for JavaScript and TypeScript.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/denoland/deno",
+      "canonical_url": "github.com/denoland/deno",
+      "also_seen": [],
+      "company": "Deno",
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 31
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:EveryInc/compound-engineering-plugin",
+      "name": "compound-engineering-plugin",
+      "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "canonical_url": "github.com/everyinc/compound-engineering-plugin",
+      "also_seen": [],
+      "company": null,
+      "stars": 40,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 40
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:angular/angular",
+      "name": "angular",
+      "description": "Deliver web apps with confidence \ud83d\ude80",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/angular/angular",
+      "canonical_url": "github.com/angular/angular",
+      "also_seen": [],
+      "company": null,
+      "stars": 13,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 13
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:uber/ADR",
+      "name": "ADR",
+      "description": "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/uber/ADR",
+      "canonical_url": "github.com/uber/adr",
+      "also_seen": [],
+      "company": "Uber",
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 148
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:donnemartin/system-design-primer",
       "name": "system-design-primer",
@@ -41,7 +230,7 @@
       "canonical_url": "github.com/firecrawl/pdf-inspector",
       "also_seen": [],
       "company": null,
-      "stars": 1699,
+      "stars": 2540,
       "momentum": 100,
       "tags": [
         "rust"
@@ -49,12 +238,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
-        "2026-08-04": 1699
+        "2026-08-04": 1699,
+        "2026-08-05": 2540
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 841
     },
     {
       "id": "github:Alishahryar1/free-claude-code",
@@ -95,7 +285,7 @@
       "canonical_url": "github.com/livekit/agents",
       "also_seen": [],
       "company": null,
-      "stars": 148,
+      "stars": 432,
       "momentum": 14,
       "tags": [
         "python"
@@ -103,12 +293,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
-        "2026-08-04": 148
+        "2026-08-04": 148,
+        "2026-08-05": 432
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 284
     },
     {
       "id": "manual:openmetadata",
@@ -318,7 +509,7 @@
       "canonical_url": "github.com/esengine/deepseek-reasonix",
       "also_seen": [],
       "company": null,
-      "stars": 883,
+      "stars": 922,
       "momentum": 33,
       "tags": [
         "go"
@@ -326,13 +517,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-03",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-08-03": 333,
-        "2026-08-04": 883
+        "2026-08-04": 883,
+        "2026-08-05": 922
       },
       "trend": "up",
-      "trend_delta": 550
+      "trend_delta": 589
     },
     {
       "id": "manual:databento",
@@ -483,7 +675,7 @@
       "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 775,
+      "stars": 783,
       "momentum": 10,
       "tags": [
         "jupyter notebook"
@@ -491,14 +683,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-02",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-08-02": 108,
         "2026-08-03": 588,
-        "2026-08-04": 775
+        "2026-08-04": 775,
+        "2026-08-05": 783
       },
       "trend": "up",
-      "trend_delta": 667
+      "trend_delta": 675
     },
     {
       "id": "github:microsoft/TRELLIS.2",
@@ -539,7 +732,7 @@
       "canonical_url": "github.com/zhaoxuya520/reverse-skill",
       "also_seen": [],
       "company": null,
-      "stars": 2446,
+      "stars": 2297,
       "momentum": 33,
       "tags": [
         "powershell"
@@ -547,15 +740,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-08-01": 335,
         "2026-08-02": 1320,
         "2026-08-03": 1141,
-        "2026-08-04": 2446
+        "2026-08-04": 2446,
+        "2026-08-05": 2297
       },
       "trend": "up",
-      "trend_delta": 2111
+      "trend_delta": 1962
     },
     {
       "id": "github:usekaneo/kaneo",
@@ -569,7 +763,7 @@
       "canonical_url": "github.com/usekaneo/kaneo",
       "also_seen": [],
       "company": null,
-      "stars": 665,
+      "stars": 559,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -577,15 +771,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-08-01": 194,
         "2026-08-02": 760,
         "2026-08-03": 496,
-        "2026-08-04": 665
+        "2026-08-04": 665,
+        "2026-08-05": 559
       },
       "trend": "up",
-      "trend_delta": 471
+      "trend_delta": 365
     },
     {
       "id": "github:geo-tp/ESP32-Bit-Pirate",
@@ -5619,7 +5814,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 1090,
+      "stars": 1111,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -5627,16 +5822,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-07-09": 318,
         "2026-07-11": 123,
         "2026-08-02": 227,
         "2026-08-03": 602,
-        "2026-08-04": 1090
+        "2026-08-04": 1090,
+        "2026-08-05": 1111
       },
       "trend": "up",
-      "trend_delta": 967
+      "trend_delta": 988
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -9417,7 +9613,7 @@
       "canonical_url": "github.com/browser-use/video-use",
       "also_seen": [],
       "company": null,
-      "stars": 554,
+      "stars": 320,
       "momentum": 19,
       "tags": [
         "python"
@@ -9425,16 +9621,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-29": 976,
         "2026-06-30": 967,
         "2026-07-01": 721,
         "2026-07-02": 693,
-        "2026-07-03": 554
+        "2026-07-03": 554,
+        "2026-08-05": 320
       },
       "trend": "down",
-      "trend_delta": -422
+      "trend_delta": -234
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
@@ -11772,20 +11969,21 @@
       "canonical_url": "github.com/cypress-io/cypress",
       "also_seen": [],
       "company": null,
-      "stars": 19,
+      "stars": 11,
       "momentum": 1,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-16": 11,
         "2026-06-17": 13,
-        "2026-07-12": 19
+        "2026-07-12": 19,
+        "2026-08-05": 11
       },
-      "trend": "up",
-      "trend_delta": 6
+      "trend": "down",
+      "trend_delta": -8
     },
     {
       "id": "github:teslamate-org/teslamate",
@@ -13408,13 +13606,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 616,
+      "stars": 653,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -13434,11 +13632,12 @@
         "2026-07-11": 1013,
         "2026-07-12": 740,
         "2026-07-26": 479,
-        "2026-07-30": 616
+        "2026-07-30": 616,
+        "2026-08-05": 653
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -124
+      "trend": "up",
+      "trend_delta": 174
     },
     {
       "id": "github:openai/plugins",
@@ -14306,13 +14505,13 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 1085,
+      "stars": 1711,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
@@ -14320,10 +14519,11 @@
         "2026-07-19": 161,
         "2026-07-20": 358,
         "2026-08-03": 819,
-        "2026-08-04": 1085
+        "2026-08-04": 1085,
+        "2026-08-05": 1711
       },
       "trend": "up",
-      "trend_delta": 727
+      "trend_delta": 1353
     },
     {
       "id": "github:OpenBMB/VoxCPM",
