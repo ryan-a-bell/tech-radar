@@ -4,6 +4,7 @@
     {
       "id": "devin-cross",
       "name": "Devin Cross",
+      "kind": "person",
       "role": "Platform Engineer",
       "topics": [
         "Data Feeds"
@@ -99,6 +100,7 @@
     {
       "id": "maya-okafor",
       "name": "Maya Okafor",
+      "kind": "person",
       "role": "ML Engineer",
       "topics": [
         "ML",
@@ -172,8 +174,49 @@
       ]
     },
     {
+      "id": "meridian-systematic",
+      "name": "Meridian Systematic",
+      "kind": "org",
+      "role": "",
+      "topics": [
+        "Quant",
+        "Trading",
+        "Data Feeds"
+      ],
+      "interests": [],
+      "blurb": "Chicago systematic-trading firm running derivatives market-making and multi-strategy portfolios. Owns its full data-to-execution stack in-house, from market-data ingestion through pricing and risk to broker routing.",
+      "body": "Chicago systematic-trading firm running derivatives market-making and\nmulti-strategy portfolios. Owns its full data-to-execution stack in-house, from\nmarket-data ingestion through pricing and risk to broker routing.\n\nThis is an organization contact, not a person: the card is a rolodex entry for\nthe firm itself. Anyone whose profile lists Meridian Systematic as their\norganization shows up under \"People here\", so the org record doubles as a hub\nfor the individuals you know there.",
+      "skills": [],
+      "skills_freeform": [],
+      "contact": {
+        "organization": null,
+        "business": "Systematic/quant trading firm — derivatives market-making and multi-strategy portfolios",
+        "location": "Chicago, IL · CT (UTC-6)",
+        "relationship": "Employer",
+        "how_met": null,
+        "email": "contact@meridian-sys.example",
+        "phone": "+1 (312) 555-0100",
+        "last_contact": "2026-08-04",
+        "links": {
+          "website": "meridian-sys.example",
+          "linkedin": "company/meridian-systematic"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-08-04",
+          "text": "Primary desk. Ryan (quant dev) and Devin (platform) both sit here."
+        },
+        {
+          "when": null,
+          "text": "Main point of contact for data-vendor negotiations — renewal window is Q4."
+        }
+      ]
+    },
+    {
       "id": "priya-nair",
       "name": "Priya Nair",
+      "kind": "person",
       "role": "AI Agents Engineer",
       "topics": [
         "Agents",
@@ -245,6 +288,7 @@
     {
       "id": "ryan-bell",
       "name": "Ryan Bell",
+      "kind": "person",
       "role": "Quant Developer",
       "topics": [
         "Quant",
@@ -335,6 +379,7 @@
     {
       "id": "sam-reyes",
       "name": "Sam Reyes",
+      "kind": "person",
       "role": "Full-Stack Engineer",
       "topics": [
         "AI"

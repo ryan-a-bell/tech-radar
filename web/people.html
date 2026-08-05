@@ -187,7 +187,8 @@ function linkHref(kind, v) {
   if (/^https?:\/\//.test(v)) return v;
   if (kind === "website") return "https://" + v;
   if (kind === "github") return "https://github.com/" + v;
-  if (kind === "linkedin") return "https://www.linkedin.com/in/" + v;
+  // a slash means a full path (e.g. an org's `company/acme`); else a personal handle
+  if (kind === "linkedin") return "https://www.linkedin.com/" + (v.includes("/") ? v : "in/" + v);
   if (kind === "x") return "https://x.com/" + v;
   return v;
 }
@@ -212,15 +213,18 @@ function Icon({ name, size = 15 }) {
     </svg>
   );
 }
-function Avatar({ name, color, size = 34, radius = 9, fontSize }) {
+function Avatar({ name, color, size = 34, radius = 9, fontSize, org }) {
   return (
-    <span style={{ flex: "0 0 auto", width: size, height: size, borderRadius: radius, background: color,
-      color: "#0d0d0d", fontWeight: 600, fontSize: fontSize || Math.round(size * 0.37),
+    <span style={{ flex: "0 0 auto", width: size, height: size, borderRadius: org ? Math.round(size * 0.28) : radius,
+      background: color, color: "#0d0d0d", fontWeight: 600, fontSize: fontSize || Math.round(size * 0.37),
       display: "flex", alignItems: "center", justifyContent: "center", letterSpacing: 0.3 }}>
-      {initials(name)}
+      {org ? <Icon name="org" size={Math.round(size * 0.52)} /> : initials(name)}
     </span>
   );
 }
+const isOrg = (p) => p && p.kind === "org";
+// role bucket used for colour + filtering; orgs share one "Organization" bucket
+const roleKey = (p) => isOrg(p) ? "Organization" : (p.role || "—");
 function IconLink({ href, title, name }) {
   return (
     <a href={href} target={href.startsWith("http") ? "_blank" : undefined} title={title}
@@ -314,7 +318,7 @@ function App() {
       setTfidf(buildTfIdf(its.map(toolText), ppl.map(personText), projs.map(projectText)));
       setPrecomp(pc);
       setMethod(pc ? "precomputed" : "tfidf");
-      setRoleFilter(new Set(ppl.map((p) => p.role || "—")));
+      setRoleFilter(new Set(ppl.map(roleKey)));
       setSelId(ppl.length ? ppl[0].id : null);
     })();
   }, []);
@@ -324,8 +328,15 @@ function App() {
     const m = new Map();
     if (people) {
       let i = 0;
-      for (const r of [...new Set(people.map((p) => p.role || "—"))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
+      for (const r of [...new Set(people.map(roleKey))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
     }
+    return m;
+  }, [people]);
+
+  // org name (lowercased) → org record, for linking a person to their org contact
+  const orgByName = useMemo(() => {
+    const m = new Map();
+    for (const p of people || []) if (isOrg(p)) m.set((p.name || "").toLowerCase(), p);
     return m;
   }, [people]);
 
@@ -347,6 +358,7 @@ function App() {
     const m = new Map();  // key -> { key, label, ref (radar item|null), holders:[person] }
     if (!people) return m;
     for (const p of people) {
+      if (isOrg(p)) continue;   // bus factor is about people, not org contacts
       for (const s of p.skills || []) {
         const e = m.get(s.id) || { key: s.id, label: s.name, ref: s, holders: [] };
         e.holders.push(p); m.set(s.id, e);
@@ -391,7 +403,7 @@ function App() {
     if (!people) return () => [];
     return (person, pIdx) => {
       const peers = people.map((q, j) => ({ q, j, s: personSem[pIdx] ? personSem[pIdx][j] : 0 }))
-        .filter((x) => x.j !== pIdx && x.s >= 0.03)
+        .filter((x) => x.j !== pIdx && !isOrg(x.q) && x.s >= 0.03)
         .sort((a, b) => b.s - a.s).slice(0, 8);
       const have = new Set((person.skills || []).map((s) => s.id));
       const agg = new Map();
@@ -444,7 +456,7 @@ function App() {
       const mine = skillKeys(person);
       const out = [];
       people.forEach((q, j) => {
-        if (j === pIdx) return;
+        if (j === pIdx || isOrg(q)) return;   // orgs aren't "similar people"
         if (rankMode === "skills") {
           const theirs = skillKeys(q);
           const score = jaccard(mine, theirs);
@@ -466,7 +478,7 @@ function App() {
     if (!people) return [];
     return people.map((_, i) => i).filter((i) => {
       const p = people[i];
-      if (roleFilter && roleFilter.size && !roleFilter.has(p.role || "—")) return false;
+      if (roleFilter && roleFilter.size && !roleFilter.has(roleKey(p))) return false;
       if (topicFilter.size && ![...(p.topics || []), ...(p.interests || [])].some((t) => topicFilter.has(t))) return false;
       return true;
     });
@@ -496,7 +508,8 @@ function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <TopBar count={people.length} semantic={method === "precomputed" && !!precomp}
+      <TopBar count={people.filter((p) => !isOrg(p)).length} orgs={people.filter(isOrg).length}
+        semantic={method === "precomputed" && !!precomp}
         label={precomp ? prettyMethod(precomp.method) : "TF-IDF · in-browser"} />
       <Controls
         view={view} setView={setView}
@@ -521,18 +534,20 @@ function App() {
             <PeopleList people={people} visibleIdx={visibleIdx} sortBy={sortBy}
               roleColor={roleColor} selId={selId} setSelId={setSelId} />
             <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
-              {sel && <PersonDetail person={sel} roleColor={roleColor}
-                mode={mode} rankBy={effRank} hasProjects={projects.length > 0}
-                techRecs={recommendTech(sel, selIdx)}
-                peerRecs={recommendPeers(sel, selIdx)}
-                projRecs={recommendProjects(sel, selIdx, effRank)}
-                peopleRecs={recommendPeople(sel, selIdx, effRank)}
-                setSelId={setSelId} />}
+              {sel && (isOrg(sel)
+                ? <OrgDetail org={sel} people={people} roleColor={roleColor} setSelId={setSelId} />
+                : <PersonDetail person={sel} people={people} roleColor={roleColor} orgByName={orgByName}
+                    mode={mode} rankBy={effRank} hasProjects={projects.length > 0}
+                    techRecs={recommendTech(sel, selIdx)}
+                    peerRecs={recommendPeers(sel, selIdx)}
+                    projRecs={recommendProjects(sel, selIdx, effRank)}
+                    peopleRecs={recommendPeople(sel, selIdx, effRank)}
+                    setSelId={setSelId} />)}
             </div>
           </>
         )}
         {view === "map" && (
-          <MapView people={people} personSem={personSem} visibleIdx={visibleIdx}
+          <MapView people={people} personSem={personSem} visibleIdx={visibleIdx.filter((i) => !isOrg(people[i]))}
             roleColor={roleColor} threshold={mapThreshold} topK={topK}
             selId={selId} setSelId={setSelId} openBoard={() => setView("board")} />
         )}
@@ -555,7 +570,7 @@ function prettyMethod(m) {
 }
 
 // Shared top nav — identical tab group to dashboard.jsx / learning.jsx / projects.html.
-function TopBar({ count, semantic, label = "TF-IDF · in-browser" }) {
+function TopBar({ count, orgs = 0, semantic, label = "TF-IDF · in-browser" }) {
   const tab = { background: "transparent", color: "#999", border: "1px solid #444",
     textDecoration: "none", padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 };
   return (
@@ -570,7 +585,7 @@ function TopBar({ count, semantic, label = "TF-IDF · in-browser" }) {
         padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PEOPLE</span>
       <a href="discover.html" style={tab}>DISCOVER</a>
       <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: semantic ? "#4ade80" : "#fbbf24" }}>
-        {count} {count === 1 ? "person" : "people"} · {semantic ? "● " : "○ "}{label}
+        {count} {count === 1 ? "person" : "people"}{orgs ? " · " + orgs + " org" + (orgs === 1 ? "" : "s") : ""} · {semantic ? "● " : "○ "}{label}
       </span>
     </div>
   );
@@ -663,7 +678,7 @@ function controlHint(view, mode, rankBy, hasProjects) {
 
 // ---- filters ---------------------------------------------------------------
 function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, setTopicFilter, sortBy, setSortBy, showSort, visibleCount }) {
-  const roles = useMemo(() => [...new Set(people.map((p) => p.role || "—"))].sort(), [people]);
+  const roles = useMemo(() => [...new Set(people.map(roleKey))].sort(), [people]);
   const topics = useMemo(() =>
     [...new Set(people.flatMap((p) => [...(p.topics || []), ...(p.interests || [])]))].sort(), [people]);
 
@@ -738,18 +753,21 @@ function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId }) 
         const p = people[i];
         const on = p.id === selId;
         const org = p.contact && p.contact.organization;
-        const sub = org || (skillCount(p) + " skill" + (skillCount(p) === 1 ? "" : "s"));
+        const lead = isOrg(p) ? "Organization" : (p.role || "—");
+        const sub = isOrg(p)
+          ? (p.contact && p.contact.location) || (p.contact && p.contact.business) || ""
+          : (org || (skillCount(p) + " skill" + (skillCount(p) === 1 ? "" : "s")));
         return (
           <div key={p.id} onClick={() => setSelId(p.id)}
             style={{ padding: "10px 12px", cursor: "pointer", display: "flex", gap: 10, alignItems: "center",
               background: on ? "rgba(57,135,229,0.15)" : "transparent",
               borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
-            <Avatar name={p.name} color={roleColor.get(p.role || "—")} />
+            <Avatar name={p.name} color={roleColor.get(roleKey(p))} org={isOrg(p)} />
             <div style={{ minWidth: 0 }}>
               <div style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</div>
               <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 1,
                 whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                {p.role || "—"} · {sub}
+                {lead}{sub ? " · " + sub : ""}
               </div>
             </div>
           </div>
@@ -770,23 +788,38 @@ function RoleBadge({ role, roleColor }) {
   );
 }
 
-function PersonHeader({ person, roleColor }) {
-  const c = roleColor.get(person.role || "—") || "#898781";
-  const contact = person.contact || {};
+// header card shared by people and org contacts. For a person, the organization
+// name links to a matching org entry when one exists (orgByName); an org shows an
+// "Organization" badge instead of a role.
+function EntityHeader({ entity, roleColor, orgByName, onOpen }) {
+  const org = isOrg(entity);
+  const c = roleColor.get(roleKey(entity)) || "#898781";
+  const contact = entity.contact || {};
   const links = contact.links || {};
+  const orgRef = !org && contact.organization && orgByName
+    ? orgByName.get(contact.organization.toLowerCase()) : null;
   return (
     <div style={{ background: "var(--surface-1)", border: "1px solid var(--border)", borderRadius: 14, overflow: "hidden" }}>
       <div style={{ height: 6, background: c }} />
       <div style={{ padding: "18px 20px" }}>
         <div style={{ display: "flex", gap: 15, alignItems: "flex-start", flexWrap: "wrap" }}>
-          <Avatar name={person.name} color={c} size={56} radius={13} fontSize={20} />
+          <Avatar name={entity.name} color={c} size={56} radius={13} fontSize={20} org={org} />
           <div style={{ minWidth: 0 }}>
-            <div style={{ fontSize: 21, fontWeight: 600, lineHeight: 1.2 }}>{person.name}</div>
+            <div style={{ fontSize: 21, fontWeight: 600, lineHeight: 1.2 }}>{entity.name}</div>
             <div style={{ color: "var(--ink-2)", marginTop: 3 }}>
-              {person.role || "—"}
-              {contact.organization ? <span> · <span style={{ color: "var(--ink)" }}>{contact.organization}</span></span> : null}
+              {org ? "Organization" : (entity.role || "—")}
+              {!org && contact.organization ? <span> · {orgRef
+                ? <a href="#" onClick={(e) => { e.preventDefault(); onOpen && onOpen(orgRef.id); }}
+                    title="open organization contact">{contact.organization}</a>
+                : <span style={{ color: "var(--ink)" }}>{contact.organization}</span>}</span> : null}
             </div>
-            <div style={{ marginTop: 8 }}><RoleBadge role={person.role} roleColor={roleColor} /></div>
+            <div style={{ marginTop: 8 }}>
+              {org
+                ? <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 9px",
+                    borderRadius: 20, border: "1px solid " + c, color: c, fontSize: 11, letterSpacing: 0.5 }}>
+                    <Icon name="org" size={12} /> Organization</span>
+                : <RoleBadge role={entity.role} roleColor={roleColor} />}
+            </div>
           </div>
           <div style={{ marginLeft: "auto", display: "flex", gap: 7 }}>
             {contact.email && <IconLink href={"mailto:" + contact.email} title="email" name="mail" />}
@@ -866,10 +899,72 @@ function NotesSection({ notes }) {
   );
 }
 
-function PersonDetail({ person, roleColor, mode, rankBy, hasProjects, techRecs, peerRecs, projRecs, peopleRecs, setSelId }) {
+// org contacts whose `organization` matches this org's name — the hub view.
+function PeopleHere({ org, people, roleColor, setSelId }) {
+  const members = (people || []).filter((p) => !isOrg(p)
+    && (p.contact && p.contact.organization || "").toLowerCase() === (org.name || "").toLowerCase());
+  return (
+    <>
+      <SectionTitle>People here <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>
+        — profiles that list {org.name} as their organization</span></SectionTitle>
+      <div style={{ marginTop: 8, display: "flex", flexWrap: "wrap", gap: 8 }}>
+        {members.map((p) => (
+          <button key={p.id} onClick={() => setSelId(p.id)}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 11px", borderRadius: 8,
+              cursor: "pointer", color: "var(--ink)", border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)" }}>
+            <Avatar name={p.name} color={roleColor.get(roleKey(p))} size={22} radius={6} fontSize={10} />
+            <span>{p.name}</span>
+            <span style={{ color: "var(--muted)", fontSize: 11 }}>{p.role || "—"}</span>
+          </button>
+        ))}
+        {!members.length && <div style={{ color: "var(--muted)" }}>
+          no profiles list {org.name} yet — set <code>organization: {org.name}</code> on a person.</div>}
+      </div>
+    </>
+  );
+}
+
+function OrgDetail({ org, people, roleColor, setSelId }) {
+  const skills = org.skills || [];
   return (
     <div style={{ maxWidth: 760 }}>
-      <PersonHeader person={person} roleColor={roleColor} />
+      <EntityHeader entity={org} roleColor={roleColor} />
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "14px 0 4px" }}>
+        {(org.topics || []).map((t) => (
+          <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)", borderRadius: 20, padding: "2px 9px" }}>{t}</span>
+        ))}
+      </div>
+      <div style={{ color: "var(--ink-2)", margin: "10px 0 4px" }}>{org.blurb}</div>
+
+      <ContactSection contact={org.contact || {}} />
+
+      {skills.length > 0 && (
+        <>
+          <SectionTitle>Stack / focus</SectionTitle>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+            {skills.map((s) => (
+              <a key={s.id} href={s.url || "#"} target={s.url ? "_blank" : undefined}
+                style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 8,
+                  textDecoration: "none", color: "var(--ink)", border: "1px solid " + quadColor(s.quadrant), background: "rgba(255,255,255,0.02)" }}>
+                <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(s.quadrant) }} />
+                <span>{s.name}</span>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      <PeopleHere org={org} people={people} roleColor={roleColor} setSelId={setSelId} />
+
+      <NotesSection notes={org.notes} />
+    </div>
+  );
+}
+
+function PersonDetail({ person, people, roleColor, orgByName, mode, rankBy, hasProjects, techRecs, peerRecs, projRecs, peopleRecs, setSelId }) {
+  return (
+    <div style={{ maxWidth: 760 }}>
+      <EntityHeader entity={person} roleColor={roleColor} orgByName={orgByName} onOpen={setSelId} />
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "14px 0 4px" }}>
         {(person.topics || []).map((t) => (
           <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)", borderRadius: 20, padding: "2px 9px" }}>{t}</span>
@@ -1317,7 +1412,7 @@ function SectionTitle({ children }) {
 }
 
 function Legend({ view, mode, people, roleColor }) {
-  const roles = [...new Set(people.map((p) => p.role || "—"))];
+  const roles = [...new Set(people.map(roleKey))];
   const note = view === "map" ? "node size ≈ skill count · links = shared skills · drag / scroll to explore"
     : view === "skills" ? "count = people who hold the skill · amber = bus factor 1 · click a person to open"
     : mode === "tech" ? "skills held excluded · ↗ growth = matches a declared interest"

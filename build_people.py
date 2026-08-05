@@ -36,7 +36,8 @@ text still drives the semantic matching exactly as before.
 Output shape (data/people.json):
   { "generated": "2026-07-16",
     "people": [
-      { "id", "name", "role", "topics": [...], "interests": [...],
+      { "id", "name", "kind": "person"|"org", "role",
+        "topics": [...], "interests": [...],
         "blurb", "body",
         "skills": [ {id, name, quadrant, ring, url, canonical_url} ],
         "skills_freeform": ["Python", "options pricing", ...],
@@ -75,6 +76,17 @@ CONTACT_SCALARS = ("organization", "business", "location", "relationship",
 # or bare domain), the browser expands them to full URLs.
 LINK_KEYS = ("website", "github", "linkedin", "x")
 _NOTE_DATE = re.compile(r"^(\d{4}-\d{2}-\d{2})\s*:\s*(.*)$", re.S)
+
+# an entry is a person by default; `kind: org` marks an organization contact
+# (a company/vendor with no individual). Orgs reuse the whole contact block but
+# stay out of the people-only analytics (Map, bus-factor, similar-people).
+_ORG_ALIASES = {"org", "organization", "organisation", "company"}
+
+
+def normalize_kind(raw):
+    """Return 'org' for any organization alias, else 'person' (the default)."""
+    v = (str(raw).strip().lower() if raw is not None else "")
+    return "org" if v in _ORG_ALIASES else "person"
 
 
 def _clean(v):
@@ -162,6 +174,7 @@ def build_person_records():
         records.append({
             "id": fm.get("id") or raw["default_id"],
             "name": fm.get("name") or fm.get("id") or raw["default_id"],
+            "kind": normalize_kind(fm.get("kind")),
             "role": fm.get("role") or "",
             "topics": topics,
             "interests": interests,

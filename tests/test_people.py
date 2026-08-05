@@ -86,6 +86,17 @@ class NotesTests(unittest.TestCase):
         self.assertEqual(bpl.parse_notes({"notes": ["", "  ", None]}), [])
 
 
+class KindTests(unittest.TestCase):
+    def test_default_is_person(self):
+        self.assertEqual(bpl.normalize_kind(None), "person")
+        self.assertEqual(bpl.normalize_kind(""), "person")
+        self.assertEqual(bpl.normalize_kind("engineer"), "person")
+
+    def test_org_aliases(self):
+        for alias in ("org", "Org", "ORGANIZATION", "organisation", "company", "  Company "):
+            self.assertEqual(bpl.normalize_kind(alias), "org", alias)
+
+
 class EndToEndFrontMatterTests(unittest.TestCase):
     """The parser (shared with projects) + the people helpers together."""
 

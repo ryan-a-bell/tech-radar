@@ -9,6 +9,10 @@ people are hand-written profiles, not generated output.
 person's declared `skills` against the radar, and writes `data/people.json`,
 which the **PEOPLE** tab (`web/people.html`) renders.
 
+An entry can also be an **organization** rather than a person — a company or
+vendor you keep a contact card for — via `kind: org`. See
+[Organization contacts](#organization-contacts-kind-org) below.
+
 ## What it's for (hybrid framing)
 
 A person carries both what they can do **today** (`skills`) and what they want
@@ -80,6 +84,48 @@ recommender. Add as much or as little as you have.
 
 Because this is contact information for real people, keep the repo **private**
 if you fill it in — nothing here is meant to be published.
+
+## Organization contacts (`kind: org`)
+
+Sometimes you want a contact card for an **organization** — a company, vendor,
+or team — not an individual. Add `kind: org` to the front-matter and the entry
+becomes an org contact. It lives in this same folder and is managed the same
+way; only the card changes.
+
+```markdown
+---
+id: meridian-systematic
+name: Meridian Systematic        # the org's name IS the entry name
+kind: org                        # org | organization | company all work
+topics: [Quant, Trading]
+business: Systematic trading firm — derivatives market-making
+location: Chicago, IL
+email: contact@meridian-sys.example
+phone: +1 (312) 555-0100
+website: meridian-sys.example
+linkedin: company/meridian-systematic   # a slash → used as a full path (company page)
+last_contact: 2026-08-04
+notes:
+  - 2026-08-04: Renewal window is Q4.
+---
+
+The bio describes the organization.
+```
+
+An org reuses the **entire** contact block above — `role`, `interests`, and
+`skills` are simply omitted (a `skills:` list, if present, renders as the org's
+"Stack / focus"). Two behaviours make the org a hub:
+
+- **People here** — the org card auto-lists every *person* entry whose
+  `organization` matches the org's `name` (case-insensitive). Fill in
+  `organization: Meridian Systematic` on a person and they appear under the org.
+- **Org link** — on a person's card, that `organization` name becomes a link to
+  the org entry when one exists.
+
+Because an org is a contact record and not a teammate, org entries are kept out
+of the people-only analytics: the similarity **Map**, the bus-factor **Skills**
+view, and the "similar people" recommendation. They still appear in the board
+list and under an **Organization** filter chip.
 
 ### `skills` — radar tools *and* free-form
 
