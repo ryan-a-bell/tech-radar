@@ -26,19 +26,31 @@ people) are computed in the browser via the same TF-IDF space the Projects page
 uses — this script only produces the authoritative person records + resolved
 skill mappings.
 
+A person also carries an optional CONTACT block — the rolodex fields. These are
+purely additive: plain front-matter scalars (organization, business, location,
+relationship, how_met, email, phone, last_contact), four flat link handles
+(website, github, linkedin, x), and a `notes` block list where each item may be
+prefixed `YYYY-MM-DD:` to date it. None of these feed the recommender; the bio
+text still drives the semantic matching exactly as before.
+
 Output shape (data/people.json):
   { "generated": "2026-07-16",
     "people": [
       { "id", "name", "role", "topics": [...], "interests": [...],
         "blurb", "body",
         "skills": [ {id, name, quadrant, ring, url, canonical_url} ],
-        "skills_freeform": ["Python", "options pricing", ...] } ] }
+        "skills_freeform": ["Python", "options pricing", ...],
+        "contact": { "organization", "business", "location", "relationship",
+                     "how_met", "email", "phone", "last_contact",
+                     "links": {"website", "github", "linkedin", "x"} },
+        "notes": [ {"when": "2026-08-01"|None, "text": "..."} ] } ] }
 """
 
 import datetime as _dt
 import glob
 import json
 import os
+import re
 
 import radar_core
 
@@ -55,6 +67,58 @@ from build_projects import (
 HERE = os.path.dirname(os.path.abspath(__file__))
 PEOPLE_DIR = os.path.join(HERE, "people")
 OUT = os.path.join(HERE, "data", "people.json")
+
+# rolodex / contact block — all optional, all additive.
+CONTACT_SCALARS = ("organization", "business", "location", "relationship",
+                   "how_met", "email", "phone", "last_contact")
+# flat link handles → assembled into contact["links"]; stored bare (a username
+# or bare domain), the browser expands them to full URLs.
+LINK_KEYS = ("website", "github", "linkedin", "x")
+_NOTE_DATE = re.compile(r"^(\d{4}-\d{2}-\d{2})\s*:\s*(.*)$", re.S)
+
+
+def _clean(v):
+    """A front-matter value as a trimmed string, or None if empty/missing."""
+    if v is None:
+        return None
+    s = str(v).strip()
+    return s or None
+
+
+def build_contact(fm):
+    """Assemble the optional contact block from front-matter.
+
+    Always returns a dict (fields default to None, links to {}) so the browser
+    can render the card uniformly whether or not a person has contact info.
+    """
+    contact = {k: _clean(fm.get(k)) for k in CONTACT_SCALARS}
+    links = {}
+    for k in LINK_KEYS:
+        v = _clean(fm.get(k))
+        if v:
+            links[k] = v
+    contact["links"] = links
+    return contact
+
+
+def parse_notes(fm):
+    """Parse the `notes` block list into dated note records.
+
+    Each note is a free-text line; a leading `YYYY-MM-DD:` is peeled off into
+    `when` so the browser can show it as a running, dated log. Undated notes
+    keep `when: None`.
+    """
+    out = []
+    for raw in _as_list(fm.get("notes")):
+        s = _clean(raw)
+        if not s:
+            continue
+        m = _NOTE_DATE.match(s)
+        if m:
+            out.append({"when": m.group(1), "text": m.group(2).strip()})
+        else:
+            out.append({"when": None, "text": s})
+    return out
 
 
 def load_people():
@@ -105,6 +169,8 @@ def build_person_records():
             "body": body,
             "skills": skills,
             "skills_freeform": freeform,
+            "contact": build_contact(fm),
+            "notes": parse_notes(fm),
         })
     return records
 

@@ -36,12 +36,50 @@ role: Quant Developer             # free-form job title
 topics: [Quant, Trading]          # current focus — from the radar's TOPICS vocab
 interests: [Agents, ML]           # growth areas — also from TOPICS
 skills: [gs-quant, Python, options pricing]   # what they know
+
+# --- contact block (all optional; the rolodex card) ---
+organization: Meridian Systematic # where they work
+business: Systematic trading desk — derivatives market-making   # their line of work
+location: Chicago, IL · CT (UTC-6)
+relationship: Colleague           # Self / Colleague / Collaborator / Contractor / …
+how_met: Same desk since 2024     # free-text
+email: ryan.bell@example.com
+phone: +1 (312) 555-0142
+website: ryanbell.dev             # bare domain — expanded to a URL in the browser
+github: ryan-a-bell               # bare handle
+linkedin: ryanabell               # bare handle
+x: ryan_quant                     # bare handle
+last_contact: 2026-08-01          # ISO date; shown as "N days ago"
+notes:                            # block list; each line optionally dated
+  - 2026-08-01: Wants to hand generate-and-test to agents.
+  - Undated notes are fine too.
 ---
 
 Everything below the closing fence is the bio. This prose is what the semantic
 recommender reads, so describe what the person works on and the problems they
 solve — that is what gets matched against tool descriptions and project prose.
 ```
+
+### Contact block — the rolodex fields
+
+Every key above the bio except `id`/`name`/`role`/`topics`/`interests`/`skills`
+is **optional** and purely additive: it feeds the profile card, never the
+recommender. Add as much or as little as you have.
+
+- **`organization`, `business`, `location`, `relationship`, `how_met`,
+  `email`, `phone`** — plain scalars. `business` is *what that organization
+  does* / their line of work, distinct from their personal `role`.
+- **`website`, `github`, `linkedin`, `x`** — stored as bare handles or a bare
+  domain; the page expands them to full URLs, so write `ryan-a-bell`, not the
+  whole GitHub link.
+- **`last_contact`** — an ISO `YYYY-MM-DD` date, rendered with a relative
+  "N days ago".
+- **`notes`** — a block list of free-text lines. Prefix a line with
+  `YYYY-MM-DD:` to date it and it renders as a dated log entry; undated lines
+  are kept as-is.
+
+Because this is contact information for real people, keep the repo **private**
+if you fill it in — nothing here is meant to be published.
 
 ### `skills` — radar tools *and* free-form
 

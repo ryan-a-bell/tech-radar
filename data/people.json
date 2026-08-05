@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16",
+  "generated": "2026-08-05",
   "people": [
     {
       "id": "devin-cross",
@@ -49,7 +49,7 @@
         {
           "id": "github:dbt-labs/dbt-core",
           "name": "dbt-core",
-          "quadrant": "Languages",
+          "quadrant": "Tools",
           "ring": "Discovered",
           "url": "https://github.com/dbt-labs/dbt-core",
           "canonical_url": "github.com/dbt-labs/dbt-core"
@@ -74,6 +74,26 @@
       "skills_freeform": [
         "observability",
         "CI/CD"
+      ],
+      "contact": {
+        "organization": "Meridian Systematic",
+        "business": "Systematic/quant trading desk — data platform & infrastructure",
+        "location": "Chicago, IL · CT (UTC-6)",
+        "relationship": "Colleague",
+        "how_met": "Same desk — owns the platform under the strategies",
+        "email": "devin.cross@meridian-sys.example",
+        "phone": "+1 (312) 555-0166",
+        "last_contact": "2026-07-29",
+        "links": {
+          "github": "devincross",
+          "linkedin": "devin-cross"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-07-29",
+          "text": "Go-to for feed reliability and job orchestration. Being pulled into ML infra — wants reproducible training data."
+        }
       ]
     },
     {
@@ -129,6 +149,26 @@
         "embeddings",
         "fine-tuning",
         "retrieval"
+      ],
+      "contact": {
+        "organization": "Northwind AI",
+        "business": "LLM serving & retrieval infrastructure vendor — inference at scale for enterprise",
+        "location": "Seattle, WA · PT (UTC-8)",
+        "relationship": "Former colleague",
+        "how_met": "Worked together at a prior startup, 2022–2024",
+        "email": "maya.okafor@northwind.ai",
+        "phone": "+1 (206) 555-0173",
+        "last_contact": "2026-05-30",
+        "links": {
+          "github": "mokafor",
+          "linkedin": "maya-okafor"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-05-30",
+          "text": "Best contact for anything serving/quantisation. Wants to move into agentic loops on top of her serving stack."
+        }
       ]
     },
     {
@@ -178,6 +218,28 @@
         "tool use",
         "MCP",
         "Python"
+      ],
+      "contact": {
+        "organization": "Loom Labs",
+        "business": "Applied-AI studio building multi-agent products for regulated, high-stakes domains",
+        "location": "Toronto, ON · ET (UTC-5)",
+        "relationship": "Collaborator",
+        "how_met": "Met at PyData Toronto 2025, agents workshop",
+        "email": "priya@loomlabs.ai",
+        "phone": "+1 (416) 555-0198",
+        "last_contact": "2026-07-22",
+        "links": {
+          "website": "loomlabs.ai",
+          "github": "priya-nair",
+          "linkedin": "priyanair",
+          "x": "priya_builds"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-07-22",
+          "text": "Keen to collaborate on agent-driven research loops for the trading side. Good person to ask about supervisor/critic patterns."
+        }
       ]
     },
     {
@@ -242,6 +304,32 @@
         "pandas",
         "options pricing",
         "backtesting"
+      ],
+      "contact": {
+        "organization": "Meridian Systematic",
+        "business": "Systematic/quant trading desk — derivatives market-making and portfolio strategies",
+        "location": "Chicago, IL · CT (UTC-6)",
+        "relationship": "Self",
+        "how_met": null,
+        "email": "ryan.bell@example.com",
+        "phone": "+1 (312) 555-0142",
+        "last_contact": "2026-08-01",
+        "links": {
+          "website": "ryanbell.dev",
+          "github": "ryan-a-bell",
+          "linkedin": "ryanabell",
+          "x": "ryan_quant"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-08-01",
+          "text": "Owns the whole data→execution pipeline. Bottleneck is research throughput — wants to hand generate-and-test to agents."
+        },
+        {
+          "when": "2026-06-12",
+          "text": "Prefers IBKR TWS for execution; evaluating Polygon vs Databento for the feed."
+        }
       ]
     },
     {
@@ -296,6 +384,27 @@
         "data visualization",
         "UI design",
         "Python"
+      ],
+      "contact": {
+        "organization": "Independent",
+        "business": "Freelance — turns models and pipelines into dashboards & internal tools",
+        "location": "Austin, TX · CT (UTC-6)",
+        "relationship": "Contractor",
+        "how_met": "Referred by Priya for the dashboard rebuild",
+        "email": "sam@reyes.build",
+        "phone": "+1 (512) 555-0110",
+        "last_contact": "2026-07-18",
+        "links": {
+          "website": "reyes.build",
+          "github": "sam-reyes",
+          "linkedin": "samreyes"
+        }
+      },
+      "notes": [
+        {
+          "when": "2026-07-18",
+          "text": "Available ~10 hrs/week through Q3. Rebuilt the projects board; could take the People rolodex front end."
+        }
       ]
     }
   ]
