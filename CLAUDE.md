@@ -17,7 +17,7 @@ running anything.
 | If the request is about… | Use | Data it touches |
 |---|---|---|
 | A **technology** — tool, library, framework, platform, language, technique; anything with a repo/vendor/docs you'd *adopt or use* | **`radar-manage`** (`radar.py`) | `data/items/**` → rebuilds `data/radar.json` |
-| **Learning material** — a book, article, video, course, or certification; anything you *read/watch/study* | **`learning-manage`** (`learning.py`) | `data/learning.json` |
+| **Learning material** — a book, article, video, course, or certification; anything you *read/watch/study* | **`learning-manage`** (`learning.py`) | `learning/**` → rebuilds `data/learning.json` |
 
 Concrete cues:
 
@@ -36,9 +36,13 @@ Library, not on the radar; the platform itself lives on the radar.
 
 ## Conventions
 
-- **Never hand-edit the JSON.** Go through `radar.py` / `learning.py` so writes
-  stay atomic and the generated files (`radar.json`, `learning.json`) stay
-  consistent. Editing `data/**` directly risks a half-written dashboard.
+- **Never hand-edit the generated JSON.** `data/radar.json` and
+  `data/learning.json` are build artifacts. Go through `radar.py` /
+  `learning.py` (or, for a bulk change, edit the source files and rebuild) so
+  the dashboard never sees a half-written file. The Learning Library's source
+  of truth is now `learning/*.md` (one file per item, like `people/` and
+  `projects/`); a hand-edit there is fine, just run `python build_learning.py`
+  to republish `data/learning.json`.
 - When **adding** an item to either collection, actually open the source and
   read enough to write a real one-to-two-sentence description/blurb first — no
   placeholder or copied-tagline entries.

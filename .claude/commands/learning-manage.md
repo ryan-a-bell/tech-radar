@@ -8,10 +8,11 @@ The Learning Library is the human-curated companion to the tech radar: the
 **books, articles, videos, and certifications** you're reading, watching, or
 planning to. It's separate from the technology radar (that's `radar-manage`) —
 if the thing is a tool/library/framework/platform, it belongs on the radar;
-if it's *learning material about* a thing, it belongs here. All changes go
-through `learning.py`, which edits `data/learning.json`. That file is what the
-Learning Library page reads directly, so a change publishes immediately —
-there's no separate rebuild step.
+if it's *learning material about* a thing, it belongs here. The source of truth
+is one Markdown file per item under `learning/` (like `people/` and
+`projects/`). All changes go through `learning.py`, which writes the affected
+`learning/*.md` and then rebuilds the generated `data/learning.json` the page
+reads — so a CLI change still publishes immediately, in one step.
 
 ## Consumption status
 
@@ -96,5 +97,8 @@ why it's worth your time, not a copy-pasted marketing line.
   `year`, `shelved_note`. `rating` is bounded 1–5; `topics` is validated.
 - `shelve` is `status … Shelved` plus a `--note` explaining the set-aside.
   Moving an item back out of Shelved clears the `shelved` date and note.
-- Never edit `data/learning.json` by hand while unsure — use these commands
-  so the `generated` stamp stays honest and the JSON stays well-formed.
+- The source of truth is `learning/*.md` — never edit the generated
+  `data/learning.json` by hand. Prefer the CLI (it writes the Markdown and
+  rebuilds the JSON); if you do hand-edit a `learning/<id>.md`, run
+  `python build_learning.py` to republish. See `learning/README.md` for the
+  file format.
