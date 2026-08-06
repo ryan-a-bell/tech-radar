@@ -583,7 +583,7 @@ function App() {
         topK={topK} setTopK={setTopK}
         mapThreshold={mapThreshold} setMapThreshold={setMapThreshold}
         skillSort={skillSort} setSkillSort={setSkillSort} />
-      {(view === "board" || view === "map") && (
+      {(view === "board" || view === "map" || view === "table") && (
         <Filters people={people} roleColor={roleColor}
           roleFilter={roleFilter} setRoleFilter={setRoleFilter}
           topicFilter={topicFilter} setTopicFilter={setTopicFilter}
@@ -610,6 +610,11 @@ function App() {
                     setSelId={setSelId} />)}
             </div>
           </>
+        )}
+        {view === "table" && (
+          <PeopleTable people={people} visibleIdx={visibleIdx} roleColor={roleColor}
+            query={query} searchScore={searchScore}
+            openPerson={(id) => { setSelId(id); setView("board"); }} />
         )}
         {view === "map" && (
           <MapView people={people} personSem={personSem} visibleIdx={visibleIdx.filter((i) => !isOrg(people[i]))}
@@ -683,7 +688,7 @@ function Controls({ view, setView, mode, setMode, hasProjects, rankOptions, rank
   const showOpts = [["tech", "Recommended tech"], ["projects", "Matching projects"], ["people", "Similar people"]];
   return (
     <div style={wrap}>
-      <Seg options={[["board", "People"], ["map", "Map"], ["skills", "Skills"]]} value={view} onChange={setView} />
+      <Seg options={[["board", "People"], ["table", "Table"], ["map", "Map"], ["skills", "Skills"]]} value={view} onChange={setView} />
       <span style={{ width: 1, alignSelf: "stretch", background: "var(--border)" }} />
 
       {view === "board" && (
@@ -871,6 +876,135 @@ function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId, qu
       })}
       {!ordered.length && <div style={{ padding: 12, color: "var(--muted)" }}>
         {query ? "no people or organizations match “" + query + "”" : "no people match the filter"}</div>}
+    </div>
+  );
+}
+
+// ---- table view ------------------------------------------------------------
+// The rolodex as a spreadsheet: every contact (people + orgs) as a row, every
+// field as a sortable column, mirroring the Technology "Index" table. Reuses
+// the same fuzzy search / role / topic filters via `visibleIdx`; click any
+// header to sort, click a row to open the full profile.
+function PeopleTable({ people, visibleIdx, roleColor, query, searchScore, openPerson }) {
+  const [sortKey, setSortKey] = useState("name");
+  const [sortDir, setSortDir] = useState(1);
+
+  // a search overrides the manual sort so the best hit leads; clearing it
+  // returns to whatever column was last chosen.
+  const effKey = query ? "relevance" : sortKey;
+  const effDir = query ? -1 : sortDir;
+
+  const val = (p, key) => {
+    const c = p.contact || {};
+    switch (key) {
+      case "name": return (p.name || "").toLowerCase();
+      case "role": return (isOrg(p) ? "Organization" : (p.role || "")).toLowerCase();
+      case "org": return (c.organization || "").toLowerCase();
+      case "location": return (c.location || "").toLowerCase();
+      case "skills": return skillCount(p);
+      case "topics": return ([...(p.topics || []), ...(p.interests || [])][0] || "￿").toLowerCase();
+      case "relationship": return (c.relationship || "").toLowerCase();
+      case "last_contact": return c.last_contact || "";
+      default: return (p.name || "").toLowerCase();
+    }
+  };
+
+  const rows = useMemo(() => {
+    const idx = [...visibleIdx];
+    idx.sort((a, b) => {
+      if (effKey === "relevance") return (searchScore.get(b) - searchScore.get(a)) || people[a].name.localeCompare(people[b].name);
+      const va = val(people[a], effKey), vb = val(people[b], effKey);
+      const cmp = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb));
+      return (cmp || people[a].name.localeCompare(people[b].name)) * effDir;
+    });
+    return idx;
+  }, [visibleIdx, effKey, effDir, people, searchScore]);
+
+  const onSort = (key) => {
+    if (query) return;                                   // search drives the order
+    if (sortKey === key) { setSortDir((d) => -d); return; }
+    setSortKey(key);
+    setSortDir(key === "skills" || key === "last_contact" ? -1 : 1);  // counts/dates: newest/most first
+  };
+
+  const COLUMNS = [
+    { key: "name", label: "NAME" },
+    { key: "role", label: "ROLE" },
+    { key: "org", label: "ORGANIZATION" },
+    { key: "location", label: "LOCATION" },
+    { key: "topics", label: "TOPICS / INTERESTS" },
+    { key: "skills", label: "SKILLS", align: "right" },
+    { key: "relationship", label: "RELATIONSHIP" },
+    { key: "last_contact", label: "LAST CONTACT" },
+  ];
+
+  const th = (c) => (
+    <th key={c.key} onClick={() => onSort(c.key)}
+      title={query ? "clear the search to sort columns" : "sort by " + c.label.toLowerCase()}
+      style={{ textAlign: c.align || "left", fontSize: 9.5, letterSpacing: 1,
+        color: effKey === c.key ? "var(--ink)" : "var(--muted)", fontWeight: effKey === c.key ? 700 : 600,
+        padding: "9px 12px", borderBottom: "1.5px solid var(--border)", position: "sticky", top: 0,
+        background: "var(--surface-1)", cursor: query ? "default" : "pointer", whiteSpace: "nowrap", zIndex: 1 }}>
+      {c.label}{!query && sortKey === c.key ? (sortDir === 1 ? " ▲" : " ▼") : ""}
+    </th>
+  );
+
+  const cell = { padding: "9px 12px", color: "var(--ink-2)", verticalAlign: "top", whiteSpace: "nowrap" };
+
+  return (
+    <div style={{ flex: 1, overflow: "auto", padding: "0 0 40px" }}>
+      <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'IBM Plex Mono', monospace", fontSize: 12 }}>
+        <thead>
+          <tr>{COLUMNS.map(th)}</tr>
+        </thead>
+        <tbody>
+          {rows.map((i) => {
+            const p = people[i];
+            const c = p.contact || {};
+            const org = isOrg(p);
+            const roleTxt = org ? "Organization" : (p.role || "—");
+            const rc = roleColor.get(roleKey(p)) || "#898781";
+            const tags = [...(p.topics || []), ...(p.interests || [])];
+            return (
+              <tr key={p.id} onClick={() => openPerson(p.id)}
+                onMouseEnter={(e) => e.currentTarget.style.background = "rgba(255,255,255,0.03)"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
+                style={{ cursor: "pointer", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                <td style={{ ...cell, whiteSpace: "nowrap" }}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 9 }}>
+                    <Avatar name={p.name} color={rc} org={org} size={26} radius={7} />
+                    <span style={{ color: "var(--ink)", fontWeight: 600 }}>{highlightMatch(p.name, query)}</span>
+                  </span>
+                </td>
+                <td style={cell}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ width: 7, height: 7, borderRadius: "50%", background: rc, flex: "0 0 auto" }} />
+                    {highlightMatch(roleTxt, query)}
+                  </span>
+                </td>
+                <td style={cell}>{c.organization ? highlightMatch(c.organization, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={cell}>{c.location ? highlightMatch(c.location, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={{ ...cell, whiteSpace: "normal", maxWidth: 260 }}>
+                  {tags.length ? tags.map((t) => (
+                    <span key={t} style={{ fontSize: 9.5, color: "var(--ink-2)", background: "rgba(255,255,255,0.04)",
+                      border: "1px solid var(--border)", borderRadius: 20, padding: "2px 8px", marginRight: 4,
+                      marginBottom: 3, display: "inline-block" }}>{t}</span>
+                  )) : <span style={{ color: "var(--grid)" }}>—</span>}
+                </td>
+                <td style={{ ...cell, textAlign: "right", color: "var(--ink)" }}>{skillCount(p) || <span style={{ color: "var(--grid)" }}>0</span>}</td>
+                <td style={cell}>{c.relationship ? highlightMatch(c.relationship, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={cell}>
+                  {c.last_contact
+                    ? <span>{fmtDate(c.last_contact)}<span style={{ color: "var(--muted)", fontSize: 10.5 }}> · {daysAgo(c.last_contact)}</span></span>
+                    : <span style={{ color: "var(--grid)" }}>—</span>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      {!rows.length && <div style={{ padding: 20, color: "var(--muted)" }}>
+        {query ? "no people or organizations match “" + query + "”" : "no contacts match the filter"}</div>}
     </div>
   );
 }
@@ -1512,6 +1646,7 @@ function Legend({ view, mode, people, roleColor }) {
   const roles = [...new Set(people.map(roleKey))];
   const note = view === "map" ? "node size ≈ skill count · links = shared skills · drag / scroll to explore"
     : view === "skills" ? "count = people who hold the skill · amber = bus factor 1 · click a person to open"
+    : view === "table" ? "every contact & field · click a header to sort · click a row to open the profile"
     : mode === "tech" ? "skills held excluded · ↗ growth = matches a declared interest"
     : mode === "projects" ? "staffing fit — semantic on the bio, or overlap with the declared stack"
     : "bar = person-to-person similarity · click a person to open";
