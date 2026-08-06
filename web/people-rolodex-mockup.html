@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People Rolodex — Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* =====================================================================
+       PEOPLE ROLODEX — static mockup (no build step, all data inlined).
+
+       PROPOSAL: grow the People profile from a skills-and-recommender card
+       into a proper contact rolodex. A person keeps everything they have
+       today (role, topics, interests, skills, bio) and gains a CONTACT block:
+
+         organization  — where they work
+         business      — what that org actually does / their line of work
+         location      — city / timezone
+         relationship  — how you know them + how you met
+         email, phone  — reachable channels
+         links         — website / github / linkedin / x
+         last_contact  — when you last spoke
+         notes         — free-text running notes about the person
+
+       In the real app these become optional front-matter keys in
+       people/<slug>.md, parsed by build_people.py into data/people.json —
+       so the existing recommender keeps working and the rolodex is additive.
+       This file hard-codes five sample records to show the end state.
+       ===================================================================== */
+    :root {
+      --surface-1: #1a1a19;
+      --surface-2: #201f1e;
+      --page: #0d0d0d;
+      --card: #161615;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --faint: #605e58;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --border-2: rgba(255,255,255,0.06);
+      --q-tools:      #3987e5;
+      --q-languages:  #199e70;
+      --q-techniques: #c98500;
+      --q-platforms:  #9085e9;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    a { color: var(--q-tools); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    button { font-family: inherit; font-size: inherit; }
+
+    /* ---- top nav (mirrors people.html) ---- */
+    .topbar {
+      display: flex; gap: 0; background: #1a1a1a; padding: 10px 14px;
+      align-items: center; flex-wrap: wrap;
+    }
+    .topbar .brand {
+      color: #fff; font-weight: 600; letter-spacing: 3px; font-size: 13px;
+      margin-right: 16px; padding-right: 16px; border-right: 1px solid #333;
+    }
+    .topbar a.tab, .topbar span.tab {
+      background: transparent; color: #999; border: 1px solid #444;
+      text-decoration: none; padding: 6px 14px; margin-right: 8px;
+      font-size: 11px; letter-spacing: 1px;
+    }
+    .topbar span.tab.on { background: #fff; color: #000; border-color: #fff; }
+    .topbar .count { margin-left: auto; font-size: 10px; letter-spacing: 1px; color: #4ade80; }
+
+    /* ---- mockup banner ---- */
+    .banner {
+      background: linear-gradient(90deg, rgba(201,133,0,0.14), rgba(201,133,0,0.02));
+      border-bottom: 1px solid rgba(201,133,0,0.35);
+      color: var(--ink-2); padding: 8px 16px; font-size: 11.5px;
+    }
+    .banner b { color: var(--q-techniques); letter-spacing: 0.5px; }
+
+    /* ---- toolbar ---- */
+    .toolbar {
+      display: flex; gap: 12px; align-items: center; padding: 9px 14px;
+      border-bottom: 1px solid var(--border); color: var(--muted); flex-wrap: wrap;
+    }
+    .search {
+      background: var(--page); border: 1px solid var(--border); border-radius: 8px;
+      color: var(--ink); padding: 6px 11px; font-family: inherit; font-size: 12.5px;
+      min-width: 230px; outline: none;
+    }
+    .search:focus { border-color: var(--q-tools); }
+    .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .seg button {
+      padding: 6px 12px; font-size: 12px; cursor: pointer; border: 0;
+      border-right: 1px solid var(--border); background: transparent; color: var(--ink-2);
+    }
+    .seg button:last-child { border-right: 0; }
+    .seg button.on { background: rgba(57,135,229,0.16); color: #fff; box-shadow: inset 0 -2px 0 var(--q-tools); }
+    .toolbar .grow { flex: 1; }
+    .chip-filter {
+      display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 20px;
+      cursor: pointer; font-size: 11px; border: 1px solid var(--border); background: transparent; color: var(--ink-2);
+    }
+    .chip-filter.off { opacity: 0.4; }
+    .chip-filter .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+    /* ---- layout ---- */
+    .layout { display: flex; height: calc(100% - 0px); min-height: 0; }
+    .list { width: 300px; border-right: 1px solid var(--border); overflow: auto; }
+    .detail { flex: 1; overflow: auto; padding: 24px; }
+
+    /* ---- list rows ---- */
+    .row {
+      display: flex; gap: 11px; align-items: center; padding: 11px 13px; cursor: pointer;
+      border-bottom: 1px solid var(--border-2);
+    }
+    .row:hover { background: rgba(255,255,255,0.03); }
+    .row.on { background: rgba(57,135,229,0.14); }
+    .avatar {
+      flex: 0 0 auto; width: 34px; height: 34px; border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 12.5px; color: #0d0d0d;
+    }
+    .row .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .row .sub { color: var(--muted); font-size: 11px; margin-top: 1px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* ---- rolodex card ---- */
+    .card {
+      max-width: 720px; background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+    }
+    .card-band { height: 6px; }
+    .card-body { padding: 20px 22px 22px; }
+    .card-head { display: flex; gap: 16px; align-items: flex-start; }
+    .avatar-lg {
+      flex: 0 0 auto; width: 58px; height: 58px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 21px; color: #0d0d0d;
+    }
+    .name { font-size: 21px; font-weight: 600; line-height: 1.2; }
+    .role-line { color: var(--ink-2); margin-top: 3px; }
+    .role-line .org { color: var(--ink); }
+    .role-badge {
+      display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 20px;
+      font-size: 11px; letter-spacing: 0.4px; margin-top: 8px;
+    }
+    .role-badge .dot { width: 7px; height: 7px; border-radius: 50%; }
+
+    .quick { margin-left: auto; display: flex; gap: 7px; }
+    .icon-btn {
+      width: 32px; height: 32px; border-radius: 9px; border: 1px solid var(--border);
+      background: rgba(255,255,255,0.02); color: var(--ink-2); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icon-btn:hover { color: #fff; border-color: var(--q-tools); }
+    .icon-btn svg { width: 15px; height: 15px; }
+
+    .business {
+      margin: 16px 0 4px; padding: 12px 14px; border-radius: 10px;
+      background: var(--surface-2); border: 1px solid var(--border-2);
+      color: var(--ink-2);
+    }
+    .business .lbl { color: var(--faint); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+
+    .section { margin-top: 20px; }
+    .section > .title {
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; font-size: 11px;
+      margin-bottom: 9px; display: flex; align-items: center; gap: 8px;
+    }
+    .section > .title::after { content: ""; flex: 1; height: 1px; background: var(--border-2); }
+
+    /* contact grid */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 20px; }
+    @media (max-width: 620px) { .contact-grid { grid-template-columns: 1fr; } }
+    .field { display: flex; gap: 10px; align-items: flex-start; }
+    .field svg { width: 15px; height: 15px; margin-top: 2px; color: var(--faint); flex: 0 0 auto; }
+    .field .k { color: var(--faint); font-size: 10px; letter-spacing: 0.8px; text-transform: uppercase; }
+    .field .v { color: var(--ink); word-break: break-word; }
+
+    .bio { color: var(--ink-2); }
+    .bio p { margin: 0 0 10px; }
+
+    /* chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: 11px; color: var(--ink-2); border: 1px solid var(--border); border-radius: 20px; padding: 3px 10px; }
+    .chip.interest { color: #4ade80; border-style: dashed; border-color: rgba(74,222,128,0.5); }
+    .skill {
+      display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px; border-radius: 8px;
+      color: var(--ink); background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+    }
+    .skill .sq { width: 9px; height: 9px; border-radius: 2px; }
+    .skill .ring { color: var(--muted); font-size: 11px; }
+
+    /* notes */
+    .notes {
+      background: var(--surface-1); border: 1px solid var(--border-2); border-left: 3px solid var(--q-techniques);
+      border-radius: 8px; padding: 12px 14px; color: var(--ink-2);
+    }
+    .note-item { display: flex; gap: 10px; padding: 6px 0; }
+    .note-item:not(:last-child) { border-bottom: 1px dashed var(--border-2); }
+    .note-item .when { color: var(--faint); font-size: 11px; flex: 0 0 84px; }
+
+    .relrow { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; color: var(--ink-2); }
+    .pill-soft { background: var(--surface-2); border: 1px solid var(--border-2); border-radius: 20px; padding: 3px 11px; font-size: 11.5px; }
+    .foot { padding: 8px 16px; border-top: 1px solid var(--border); background: var(--surface-1); color: var(--muted); font-size: 11px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span class="brand">TECH RADAR</span>
+    <a class="tab" href="index.html#atlas">TECHNOLOGY</a>
+    <a class="tab" href="learning.html">LEARNING</a>
+    <a class="tab" href="projects.html">PROJECTS</a>
+    <span class="tab on">PEOPLE</span>
+    <a class="tab" href="discover.html">DISCOVER</a>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="banner">
+    <b>MOCKUP</b> &nbsp;— Rolodex view. Proposes a <b>contact block</b> (organization · business · location ·
+    relationship · email/phone · links · notes) on top of today's profile. New fields map to optional front-matter
+    keys in <code>people/&lt;slug&gt;.md</code> → <code>build_people.py</code> → <code>data/people.json</code>.
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="search" placeholder="search name, org, business, notes…" />
+    <div class="seg" id="viewseg">
+      <button data-view="rolodex" class="on">Rolodex</button>
+      <button data-view="skills">Skills</button>
+      <button data-view="map">Map</button>
+    </div>
+    <span style="font-size:11px;text-transform:uppercase;letter-spacing:.5px;">org</span>
+    <span id="orgfilters" style="display:flex;gap:7px;flex-wrap:wrap;"></span>
+    <span class="grow"></span>
+    <span style="font-size:11px" id="hint">click a contact to open the card</span>
+  </div>
+
+  <div class="layout">
+    <div class="list" id="list"></div>
+    <div class="detail" id="detail"></div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+
+<script>
+/* ---- role → colour (mirrors ROLE_PALETTE in people.html) ---- */
+const ROLE_PALETTE = ["#3987e5","#199e70","#c98500","#9085e9","#e05a8a","#38b9c9","#d9663b","#7c9c3a"];
+const QUAD = { Tools:"#3987e5", Languages:"#199e70", Techniques:"#c98500", Platforms:"#9085e9" };
+
+/* ---- sample records: existing profile + PROPOSED contact block ---- */
+const PEOPLE = [
+  {
+    id:"ryan-bell", name:"Ryan Bell", role:"Quant Developer",
+    organization:"Meridian Systematic", business:"Systematic/quant trading desk — derivatives market-making and portfolio strategies",
+    location:"Chicago, IL · CT (UTC-6)",
+    relationship:"Self", how_met:"—",
+    email:"ryan.a.bell77@gmail.com", phone:"+1 (312) 555-0142",
+    links:{ website:"ryanbell.dev", github:"ryan-a-bell", linkedin:"ryanabell", x:"ryan_quant" },
+    last_contact:"2026-08-01",
+    topics:["Quant","Trading","Data Feeds"], interests:["Agents","ML"],
+    skills:[
+      {name:"gs-quant",quadrant:"Tools",ring:"Trial"},
+      {name:"Riskfolio-Lib",quadrant:"Tools",ring:"Assess"},
+      {name:"Polygon.io",quadrant:"Platforms",ring:"Adopted"},
+      {name:"FinancePy",quadrant:"Tools",ring:"Trial"},
+    ],
+    skills_freeform:["Python","pandas","options pricing","backtesting"],
+    blurb:"Builds systematic trading systems end to end — market data, derivatives pricing, portfolio construction under risk limits, and order routing. Most of the day is on the vol surface.",
+    notes:[
+      {when:"2026-08-01", text:"Owns the whole data→execution pipeline. Bottleneck is research throughput — wants to hand generate-and-test to agents."},
+      {when:"2026-06-12", text:"Prefers IBKR TWS for execution; evaluating Polygon vs Databento for the feed."},
+    ],
+  },
+  {
+    id:"priya-nair", name:"Priya Nair", role:"AI Agents Engineer",
+    organization:"Loom Labs", business:"Applied-AI studio building multi-agent products for regulated, high-stakes domains",
+    location:"Toronto, ON · ET (UTC-5)",
+    relationship:"Collaborator", how_met:"Met at PyData Toronto 2025, agents workshop",
+    email:"priya@loomlabs.ai", phone:"+1 (416) 555-0198",
+    links:{ website:"loomlabs.ai", github:"priya-nair", linkedin:"priyanair", x:"priya_builds" },
+    last_contact:"2026-07-22",
+    topics:["Agents","AI","Prompts"], interests:["Quant","RAG"],
+    skills:[
+      {name:"TradingAgents",quadrant:"Techniques",ring:"Assess"},
+      {name:"Ollama",quadrant:"Tools",ring:"Trial"},
+      {name:"gradio",quadrant:"Tools",ring:"Adopted"},
+      {name:"LangGraph",quadrant:"Tools",ring:"Trial"},
+    ],
+    skills_freeform:["prompt engineering","tool use","MCP","Python"],
+    blurb:"Builds multi-agent systems — teams of models that divide a task, argue, and get reconciled by a supervisor. Designs the tool interfaces, prompts, and guardrails.",
+    notes:[
+      {when:"2026-07-22", text:"Keen to collaborate on agent-driven research loops for the trading side. Good person to ask about supervisor/critic patterns."},
+    ],
+  },
+  {
+    id:"maya-okafor", name:"Maya Okafor", role:"ML Engineer",
+    organization:"Northwind AI", business:"LLM serving & retrieval infrastructure vendor — inference at scale for enterprise",
+    location:"Seattle, WA · PT (UTC-8)",
+    relationship:"Former colleague", how_met:"Worked together at a prior startup, 2022–2024",
+    email:"maya.okafor@northwind.ai", phone:"+1 (206) 555-0173",
+    links:{ website:"", github:"mokafor", linkedin:"maya-okafor", x:"" },
+    last_contact:"2026-05-30",
+    topics:["ML","AI","RAG"], interests:["Agents"],
+    skills:[
+      {name:"pytorch",quadrant:"Tools",ring:"Adopted"},
+      {name:"vLLM",quadrant:"Tools",ring:"Trial"},
+      {name:"llama.cpp",quadrant:"Tools",ring:"Trial"},
+      {name:"Ollama",quadrant:"Tools",ring:"Trial"},
+    ],
+    skills_freeform:["Python","embeddings","fine-tuning","retrieval"],
+    blurb:"Serves and adapts LLMs for production — quantising checkpoints, high-throughput inference, and grounding answers in a private corpus. Lives in the unglamorous middle: chunking, embedding, eval.",
+    notes:[
+      {when:"2026-05-30", text:"Best contact for anything serving/quantisation. Wants to move into agentic loops on top of her serving stack."},
+    ],
+  },
+  {
+    id:"sam-reyes", name:"Sam Reyes", role:"Full-Stack Engineer",
+    organization:"Independent", business:"Freelance — turns models and pipelines into dashboards & internal tools",
+    location:"Austin, TX · CT (UTC-6)",
+    relationship:"Contractor", how_met:"Referred by Priya for the dashboard rebuild",
+    email:"sam@reyes.build", phone:"+1 (512) 555-0110",
+    links:{ website:"reyes.build", github:"sam-reyes", linkedin:"samreyes", x:"" },
+    last_contact:"2026-07-18",
+    topics:["AI"], interests:["ML","Agents"],
+    skills:[
+      {name:"next.js",quadrant:"Tools",ring:"Adopted"},
+      {name:"bun",quadrant:"Tools",ring:"Assess"},
+      {name:"gradio",quadrant:"Tools",ring:"Adopted"},
+      {name:"React",quadrant:"Tools",ring:"Adopted"},
+    ],
+    skills_freeform:["TypeScript","data visualization","UI design","Python"],
+    blurb:"Turns models and pipelines into things people can actually use — dashboards, internal tools, product surfaces. Cares about the last mile: fast pages, legible viz, obvious interfaces.",
+    notes:[
+      {when:"2026-07-18", text:"Available ~10 hrs/week through Q3. Rebuilt the projects board; would take the People rolodex front end."},
+    ],
+  },
+  {
+    id:"devin-cross", name:"Devin Cross", role:"Platform Engineer",
+    organization:"Meridian Systematic", business:"Systematic/quant trading desk — data platform & infra",
+    location:"Chicago, IL · CT (UTC-6)",
+    relationship:"Colleague", how_met:"Same desk — owns the platform under the strategies",
+    email:"devin.cross@meridian-sys.com", phone:"+1 (312) 555-0166",
+    links:{ website:"", github:"devincross", linkedin:"devin-cross", x:"" },
+    last_contact:"2026-07-29",
+    topics:["Data Feeds"], interests:["ML"],
+    skills:[
+      {name:"Kubernetes",quadrant:"Platforms",ring:"Adopted"},
+      {name:"grafana",quadrant:"Tools",ring:"Adopted"},
+      {name:"prefect",quadrant:"Tools",ring:"Trial"},
+      {name:"dbt-core",quadrant:"Tools",ring:"Adopted"},
+    ],
+    skills_freeform:["Docker","Terraform","observability","CI/CD","Go"],
+    blurb:"Keeps the data platform standing — pipelines, schedulers, and clusters everything else runs on. Thinks about reliability, cost, and blast radius first.",
+    notes:[
+      {when:"2026-07-29", text:"Go-to for feed reliability and job orchestration. Being pulled into ML infra — wants reproducible training data."},
+    ],
+  },
+];
+
+/* ---- role colour map, assigned in first-seen order ---- */
+const roleColor = (() => {
+  const m = new Map(); let i = 0;
+  for (const r of [...new Set(PEOPLE.map(p => p.role))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
+  return m;
+})();
+const initials = n => n.split(/\s+/).map(w => w[0]).slice(0,2).join("").toUpperCase();
+const fmtDate = d => { if(!d) return "—"; const dt=new Date(d+"T00:00:00"); return dt.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}); };
+const daysAgo = d => { if(!d) return ""; const n=Math.round((Date.now()-new Date(d+"T00:00:00"))/864e5); return n<=0?"today":n===1?"yesterday":n+" days ago"; };
+
+/* ---- inline icons ---- */
+const ICON = {
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  org:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg>',
+  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>',
+  gh:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>',
+  in:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.3 8.65 21 10.9 21 14v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V21H9z"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-6l-4.3-5.6L6.3 21H3.3l7-8L2.6 3h6.2l3.9 5.1L17.5 3Zm-1 16h1.6L7.6 4.8H5.9L16.5 19Z"/></svg>',
+  clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+};
+
+let sel = PEOPLE[0].id, query = "", orgFilter = null;
+const el = id => document.getElementById(id);
+const esc = s => (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function visible() {
+  const q = query.trim().toLowerCase();
+  return PEOPLE.filter(p => {
+    if (orgFilter && p.organization !== orgFilter) return false;
+    if (!q) return true;
+    const hay = [p.name,p.role,p.organization,p.business,p.location,p.relationship,
+      ...(p.notes||[]).map(n=>n.text), ...(p.skills||[]).map(s=>s.name), ...(p.skills_freeform||[])].join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+}
+
+function renderList() {
+  const rows = visible().sort((a,b)=>a.name.localeCompare(b.name)).map(p => {
+    const c = roleColor.get(p.role);
+    return `<div class="row ${p.id===sel?'on':''}" data-id="${p.id}">
+      <div class="avatar" style="background:${c}">${initials(p.name)}</div>
+      <div style="min-width:0">
+        <div class="nm">${esc(p.name)}</div>
+        <div class="sub">${esc(p.role)} · ${esc(p.organization)}</div>
+      </div>
+    </div>`;
+  }).join("");
+  el("list").innerHTML = rows || `<div style="padding:14px;color:var(--muted)">no contacts match “${esc(query)}”.</div>`;
+  el("list").querySelectorAll(".row").forEach(r => r.onclick = () => { sel = r.dataset.id; render(); });
+}
+
+function linkList(links) {
+  const out = [];
+  if (links.website)  out.push(`<a href="https://${esc(links.website)}" target="_blank" title="website"><span class="icon-btn">${ICON.link}</span></a>`);
+  if (links.github)   out.push(`<a href="https://github.com/${esc(links.github)}" target="_blank" title="GitHub"><span class="icon-btn">${ICON.gh}</span></a>`);
+  if (links.linkedin) out.push(`<a href="https://www.linkedin.com/in/${esc(links.linkedin)}" target="_blank" title="LinkedIn"><span class="icon-btn">${ICON.in}</span></a>`);
+  if (links.x)        out.push(`<a href="https://x.com/${esc(links.x)}" target="_blank" title="X"><span class="icon-btn">${ICON.x}</span></a>`);
+  return out.join("");
+}
+
+function field(icon, k, v) {
+  return `<div class="field">${icon}<div><div class="k">${k}</div><div class="v">${v}</div></div></div>`;
+}
+
+function renderDetail() {
+  const p = PEOPLE.find(x => x.id === sel) || visible()[0];
+  if (!p) { el("detail").innerHTML = `<div style="color:var(--muted)">no contact selected</div>`; return; }
+  const c = roleColor.get(p.role);
+  const skills = (p.skills||[]).map(s =>
+    `<span class="skill"><span class="sq" style="background:${QUAD[s.quadrant]||'#898781'}"></span>${esc(s.name)}<span class="ring">${esc(s.ring)}</span></span>`).join("");
+  const free = (p.skills_freeform||[]).map(f => `<span class="skill" style="color:var(--ink-2)">${esc(f)}</span>`).join("");
+  const topics = (p.topics||[]).map(t => `<span class="chip">${esc(t)}</span>`).join("")
+    + (p.interests||[]).map(t => `<span class="chip interest">↗ ${esc(t)}</span>`).join("");
+  const notes = (p.notes||[]).map(n =>
+    `<div class="note-item"><span class="when">${fmtDate(n.when)}</span><span>${esc(n.text)}</span></div>`).join("");
+
+  el("detail").innerHTML = `
+    <div class="card">
+      <div class="card-band" style="background:${c}"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <div class="avatar-lg" style="background:${c}">${initials(p.name)}</div>
+          <div style="min-width:0">
+            <div class="name">${esc(p.name)}</div>
+            <div class="role-line">${esc(p.role)} · <span class="org">${esc(p.organization)}</span></div>
+            <span class="role-badge" style="border:1px solid ${c};color:${c}"><span class="dot" style="background:${c}"></span>${esc(p.role)}</span>
+          </div>
+          <div class="quick">
+            <a href="mailto:${esc(p.email)}" title="email"><span class="icon-btn">${ICON.mail}</span></a>
+            <a href="tel:${esc((p.phone||'').replace(/[^+\d]/g,''))}" title="call"><span class="icon-btn">${ICON.phone}</span></a>
+            ${linkList(p.links)}
+          </div>
+        </div>
+
+        <div class="business">
+          <div class="lbl">Business</div>
+          ${esc(p.business)}
+        </div>
+
+        <div class="section">
+          <div class="title">Contact</div>
+          <div class="contact-grid">
+            ${field(ICON.mail, "Email", `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>`)}
+            ${field(ICON.phone,"Phone", esc(p.phone||"—"))}
+            ${field(ICON.org,  "Organization", esc(p.organization))}
+            ${field(ICON.pin,  "Location", esc(p.location))}
+            ${field(ICON.clock,"Last contact", `${fmtDate(p.last_contact)} <span style="color:var(--faint)">· ${daysAgo(p.last_contact)}</span>`)}
+            ${field(ICON.link, "Links", `<span style="display:inline-flex;gap:7px">${linkList(p.links)||'<span style="color:var(--faint)">—</span>'}</span>`)}
+          </div>
+          <div class="relrow" style="margin-top:12px">
+            <span class="pill-soft">${esc(p.relationship)}</span>
+            <span style="color:var(--muted)">${esc(p.how_met)}</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="title">Bio</div>
+          <div class="bio"><p>${esc(p.blurb)}</p></div>
+          <div class="chips" style="margin-top:4px">${topics}</div>
+        </div>
+
+        <div class="section">
+          <div class="title">Skills</div>
+          <div class="chips">${skills}${free}</div>
+        </div>
+
+        <div class="section">
+          <div class="title">Notes</div>
+          <div class="notes">${notes || '<span style="color:var(--faint)">no notes yet</span>'}</div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderOrgFilters() {
+  const orgs = [...new Set(PEOPLE.map(p => p.organization))].sort();
+  el("orgfilters").innerHTML = orgs.map(o =>
+    `<button class="chip-filter ${orgFilter&&orgFilter!==o?'off':''}" data-org="${esc(o)}">${esc(o)}</button>`).join("");
+  el("orgfilters").querySelectorAll("button").forEach(b => b.onclick = () => {
+    orgFilter = (orgFilter === b.dataset.org) ? null : b.dataset.org; render();
+  });
+}
+
+function render() {
+  renderList(); renderDetail(); renderOrgFilters();
+  const v = visible();
+  el("count").textContent = `${PEOPLE.length} contacts · rolodex mockup`;
+  el("foot").textContent = `${v.length} shown${orgFilter?` · org: ${orgFilter}`:""}${query?` · “${query}”`:""} · new contact fields shown here are the proposed schema addition · prototype`;
+}
+
+el("search").oninput = e => { query = e.target.value; render(); };
+el("viewseg").querySelectorAll("button").forEach(b => b.onclick = () => {
+  el("viewseg").querySelectorAll("button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on");
+  el("hint").textContent = b.dataset.view === "rolodex"
+    ? "click a contact to open the card"
+    : "Skills & Map views unchanged from today — this mockup focuses on the Rolodex card";
+});
+render();
+</script>
+</body>
+</html>

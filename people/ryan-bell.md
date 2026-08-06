@@ -5,6 +5,20 @@ role: Quant Developer
 topics: [Quant, Trading, Data Feeds]
 interests: [Agents, ML]
 skills: [gs-quant, Riskfolio-Lib, Polygon.io, FinancePy, IBKR TWS, Python, pandas, options pricing, backtesting]
+organization: Meridian Systematic
+business: Systematic/quant trading desk — derivatives market-making and portfolio strategies
+location: Chicago, IL · CT (UTC-6)
+relationship: Self
+email: ryan.bell@example.com
+phone: +1 (312) 555-0142
+website: ryanbell.dev
+github: ryan-a-bell
+linkedin: ryanabell
+x: ryan_quant
+last_contact: 2026-08-01
+notes:
+  - 2026-08-01: Owns the whole data→execution pipeline. Bottleneck is research throughput — wants to hand generate-and-test to agents.
+  - 2026-06-12: Prefers IBKR TWS for execution; evaluating Polygon vs Databento for the feed.
 ---
 
 Builds systematic trading systems end to end — pulling market data, pricing
