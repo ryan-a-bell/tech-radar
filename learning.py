@@ -19,8 +19,12 @@ learning.py — manage the Learning Library without hand-editing JSON.
 Status pipeline (most-resolved first, mirrors the radar's rings):
   Read → Reading → Queued → Discovered → Shelved
 Moving into a status stamps its date (added/queued/started/finished/shelved).
-The Learning Library page reads data/learning.json directly, so a write here
-publishes immediately — there is no separate rebuild step.
+
+Storage is one Markdown file per item under learning/ (the source of truth,
+like people/ and projects/). Every command writes the affected .md files and
+then refreshes the generated data/learning.json the web page reads, so a CLI
+edit still publishes immediately. Hand-edit a .md instead? Run
+`python build_learning.py` to republish.
 """
 
 import argparse
@@ -30,6 +34,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import learning_core as core  # noqa: E402
+from build_learning import build_learning_json  # noqa: E402
 
 # Fields a human may set directly. Integer fields are coerced; `topics` is
 # validated against the vocabulary; `rating` is bounded 1–5.
@@ -62,8 +67,9 @@ def _resolve_or_exit(items, needle):
 
 
 def _saved(doc):
-    n = core.save(doc)
-    print(f"  ✓ learning.json updated ({n} items)")
+    n = core.save(doc)                 # write the source-of-truth Markdown
+    build_learning_json()              # refresh the generated data/learning.json
+    print(f"  ✓ learning/ + learning.json updated ({n} items)")
 
 
 def cmd_list(args):

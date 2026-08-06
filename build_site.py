@@ -69,9 +69,13 @@ def main():
     shutil.copy(os.path.join(HERE, "data", "radar.json"),
                 os.path.join(SITE, "data", "radar.json"))
 
-    # 6. Learning Library page — learning.html is copied as-is; learning.jsx
-    #    gets the same export-default strip as dashboard.jsx (expects a global
-    #    LearningApp).
+    # 6. Learning Library page — rebuild data/learning.json from learning/*.md
+    #    first (same md → aggregate-json contract as projects/ and people/),
+    #    then ship it. learning.html is copied as-is; learning.jsx gets the same
+    #    export-default strip as dashboard.jsx (expects a global LearningApp).
+    from build_learning import build_learning_json
+    n_learn = build_learning_json()
+    print(f"built learning.json ({n_learn} items)")
     shutil.copy(os.path.join(WEB, "learning.html"),
                 os.path.join(SITE, "learning.html"))
     with open(os.path.join(WEB, "learning.jsx"), encoding="utf-8") as f:

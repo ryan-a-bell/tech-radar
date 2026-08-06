@@ -166,5 +166,59 @@ class SetStatusTests(unittest.TestCase):
             core.set_status({"status": "Discovered"}, "Finished")
 
 
+class MarkdownRoundTripTests(unittest.TestCase):
+    """serialize_item -> parse_front_matter/to_item must be lossless for the
+    field shapes the Learning Library actually uses. These are the guardrails
+    that make Markdown a safe source of truth for the CLI."""
+
+    def _round_trip(self, item):
+        text = core.serialize_item(item)
+        fm, body = core.parse_front_matter(text)
+        return core.to_item(fm, body, default_id=item["id"])
+
+    def test_book_with_shelved_note_survives(self):
+        it = core.new_item("book", "Some Dense Book", author="A. Writer",
+                            topics=["ML", "Quant"], year=2013, pages=244,
+                            blurb="A blurb — with an em-dash and, commas.",
+                            status="Shelved")
+        it["shelved_note"] = "Skimmed ch.1–2 — revisit later: not now."
+        self.assertEqual(self._round_trip(it), it)
+
+    def test_certification_with_awkward_price_survives(self):
+        it = core.new_item("certification", "Some Governance Cert",
+                            author="IAPP", source="AIGP", url="https://x/y",
+                            price="$649 member / $799 nonmember",
+                            topics=["AI", "Skills"],
+                            blurb="Covers governance, risk, and policy.")
+        self.assertEqual(self._round_trip(it), it)
+
+    def test_article_and_video_length_fields_survive(self):
+        art = core.new_item("article", "A Paper: Attention", minutes=40,
+                            source="arXiv", url="https://arxiv.org/abs/1",
+                            topics=["ML"], year=2017, blurb="The paper.")
+        vid = core.new_item("video", "Build GPT", duration="1h 56m",
+                            source="YouTube", url="https://y/z", topics=["AI"],
+                            blurb="Hands-on build.")
+        self.assertEqual(self._round_trip(art), art)
+        self.assertEqual(self._round_trip(vid), vid)
+
+    def test_none_length_and_empty_topics_survive(self):
+        it = core.new_item("book", "Bare Book")   # no pages, no topics, no blurb
+        self.assertEqual(self._round_trip(it), it)
+        self.assertIsNone(it["pages"])
+        self.assertEqual(it["topics"], [])
+
+    def test_blank_scalar_parses_to_none(self):
+        fm, _ = core.parse_front_matter("---\npages:\n---\nbody\n")
+        self.assertIsNone(fm["pages"])
+
+    def test_title_with_internal_colon_is_not_quoted(self):
+        it = core.new_item("book", "Reinforcement Learning: An Introduction",
+                            topics=["ML"])
+        self.assertIn("title: Reinforcement Learning: An Introduction",
+                      core.serialize_item(it))
+        self.assertEqual(self._round_trip(it), it)
+
+
 if __name__ == "__main__":
     unittest.main()
