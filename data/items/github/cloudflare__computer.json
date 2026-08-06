@@ -1,0 +1,25 @@
+{
+  "id": "github:cloudflare/computer",
+  "name": "computer",
+  "description": "Give your agent a computer \ud83d\udc7e",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/cloudflare/computer",
+  "canonical_url": "github.com/cloudflare/computer",
+  "also_seen": [],
+  "company": "Cloudflare",
+  "stars": 891,
+  "momentum": 89,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-06",
+  "last_seen": "2026-08-06",
+  "stars_history": {
+    "2026-08-06": 891
+  }
+}

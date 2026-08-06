@@ -10,7 +10,7 @@
   "canonical_url": "github.com/uber/adr",
   "also_seen": [],
   "company": "Uber",
-  "stars": 148,
+  "stars": 354,
   "momentum": 14,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-05",
-  "last_seen": "2026-08-05",
+  "last_seen": "2026-08-06",
   "stars_history": {
-    "2026-08-05": 148
+    "2026-08-05": 148,
+    "2026-08-06": 354
   }
 }

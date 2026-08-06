@@ -10,7 +10,7 @@
   "canonical_url": "github.com/donnemartin/system-design-primer",
   "also_seen": [],
   "company": null,
-  "stars": 237,
+  "stars": 303,
   "momentum": 23,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-04",
-  "last_seen": "2026-08-04",
+  "last_seen": "2026-08-06",
   "stars_history": {
-    "2026-08-04": 237
+    "2026-08-04": 237,
+    "2026-08-06": 303
   }
 }

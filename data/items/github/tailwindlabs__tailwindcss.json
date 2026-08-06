@@ -10,7 +10,7 @@
   "canonical_url": "github.com/tailwindlabs/tailwindcss",
   "also_seen": [],
   "company": null,
-  "stars": 52,
+  "stars": 408,
   "momentum": 5,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-05",
-  "last_seen": "2026-08-05",
+  "last_seen": "2026-08-06",
   "stars_history": {
-    "2026-08-05": 52
+    "2026-08-05": 52,
+    "2026-08-06": 408
   }
 }

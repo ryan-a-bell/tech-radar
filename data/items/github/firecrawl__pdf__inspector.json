@@ -10,7 +10,7 @@
   "canonical_url": "github.com/firecrawl/pdf-inspector",
   "also_seen": [],
   "company": null,
-  "stars": 2540,
+  "stars": 1582,
   "momentum": 100,
   "tags": [
     "rust"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-04",
-  "last_seen": "2026-08-05",
+  "last_seen": "2026-08-06",
   "stars_history": {
     "2026-08-04": 1699,
-    "2026-08-05": 2540
+    "2026-08-05": 2540,
+    "2026-08-06": 1582
   }
 }
