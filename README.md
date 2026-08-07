@@ -191,8 +191,8 @@ article, video, and a technology can share a topic tag.
 A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
 learning content — **books, articles, videos, and certifications** —
 alongside the technologies they relate to. Hand-curated in Markdown under
-`learning/` (one file per item, like `people/` and `projects/`; no scraper),
-which `build_learning.py` aggregates into `data/learning.json`. Manage it with
+`learning/` (one file per item, like `people/` and `projects/`), which
+`build_learning.py` aggregates into `data/learning.json`. Manage it with
 `learning.py` (the `learning-manage` skill):
 
 ```bash
@@ -207,6 +207,32 @@ The CLI writes the `learning/*.md` source **and** refreshes
 to hand-edit a `learning/<id>.md`? Run `python build_learning.py` to republish.
 Read-only in the browser, same as the deployed dashboard. See
 `learning/README.md` for the file format.
+
+### Syncing books from Calibre
+
+`calibre_sync.py` pulls a [Calibre](https://calibre-ebook.com/) library through
+the official `calibredb` CLI and writes/updates one `learning/<id>.md` **book**
+file per title, then refreshes `data/learning.json` — the same source-of-truth
+write the `learning.py` CLI does:
+
+```bash
+python calibre_sync.py                     # default local library
+python calibre_sync.py --library /path/lib # a specific library folder
+python calibre_sync.py --library http://host:8080/#Lib   # a Content Server
+python calibre_sync.py --dry-run           # pull + report, write nothing
+```
+
+Calibre owns the *facts* (title, author, year, rating, `pages`, blurb,
+tags→topics, date added). *Reading state* (`status`, `pages_read`, and the
+`started`/`finished`/`queued`/`shelved` date stamps) comes from Calibre custom
+columns (`#status`, `#pages_read`, `#started`, `#finished`) when they exist, and
+is otherwise **preserved from the existing `learning/<id>.md`** — so curated
+status and blurbs are never clobbered. New library books are added as
+`Discovered`; existing `book` items not found in the library are left untouched
+and reported (non-book items — articles, videos, certifications — are never
+touched). `notebooks/calibre_sync.ipynb` drives the same flow from Jupyter,
+running the Calibre pull asynchronously (it awaits the `calibredb` subprocess)
+and decoupled from the build.
 
 ### Status
 
@@ -466,6 +492,7 @@ tech-radar/
 ├── build_learning.py   # learning/*.md → data/learning.json (books/articles/videos/certs)
 ├── learning.py         # Learning Library CLI — writes learning/*.md + rebuilds the JSON
 ├── learning_core.py    # shared library — item schema, Markdown parse/serialize
+├── calibre_sync.py     # Calibre (calibredb) → learning/*.md book files
 ├── build_similarity.py # optional — precompute semantic similarity matrices
 ├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
@@ -486,6 +513,7 @@ tech-radar/
 ├── projects/           # personal projects — one Markdown file each (hand-written)
 ├── people/             # people + their skills — one Markdown file each (hand-written)
 ├── learning/           # Learning Library — one Markdown file per item (source of truth)
+├── notebooks/          # calibre_sync.ipynb — async Calibre pull → learning/*.md
 ├── tests/              # stdlib unittest suite for radar_core + learning_core
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
