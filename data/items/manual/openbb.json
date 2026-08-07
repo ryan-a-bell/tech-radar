@@ -3,7 +3,7 @@
   "name": "OpenBB",
   "description": "Open source investment research platform aggregating financial data, analytics, and Python tooling.",
   "quadrant": "Tools",
-  "ring": "Assess",
+  "ring": "Trial",
   "source": "Manual",
   "discovered_by": "manual",
   "url": "https://github.com/OpenBB-finance/OpenBB",

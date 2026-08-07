@@ -1,0 +1,26 @@
+{
+  "id": "github:NomaDamas/k-skill",
+  "name": "k-skill",
+  "description": "\ud55c\uad6d\uc778\uc744 \uc704\ud55c \uc2a4\ud0ac \ubaa8\uc74c\uc9d1 - \uc5d0\uc774\uc804\ud2b8\ub97c \ud55c\uad6d\uc778\uc73c\ub85c",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/NomaDamas/k-skill",
+  "canonical_url": "github.com/nomadamas/k-skill",
+  "also_seen": [],
+  "company": null,
+  "stars": 177,
+  "momentum": 5,
+  "tags": [
+    "javascript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-02",
+  "last_seen": "2026-08-03",
+  "stars_history": {
+    "2026-08-02": 53,
+    "2026-08-03": 177
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "github:dreamhunter2333/cloudflare_temp_email",
+  "name": "cloudflare_temp_email",
+  "description": "CloudFlare free temp domain email \u514d\u8d39\u6536\u53d1 \u4e34\u65f6\u57df\u540d\u90ae\u7bb1 \u652f\u6301\u9644\u4ef6 IMAP SMTP TelegramBot",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/dreamhunter2333/cloudflare_temp_email",
+  "canonical_url": "github.com/dreamhunter2333/cloudflare_temp_email",
+  "also_seen": [],
+  "company": null,
+  "stars": 68,
+  "momentum": 6,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-23",
+  "last_seen": "2026-07-23",
+  "stars_history": {
+    "2026-07-23": 68
+  }
+}

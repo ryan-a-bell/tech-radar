@@ -1,0 +1,25 @@
+{
+  "id": "github:langchain-ai/open_deep_research",
+  "name": "open_deep_research",
+  "description": "A python project trending on GitHub.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/langchain-ai/open_deep_research",
+  "canonical_url": "github.com/langchain-ai/open_deep_research",
+  "also_seen": [],
+  "company": null,
+  "stars": 23,
+  "momentum": 2,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 23
+  }
+}

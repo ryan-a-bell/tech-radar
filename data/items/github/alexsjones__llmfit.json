@@ -1,0 +1,25 @@
+{
+  "id": "github:AlexsJones/llmfit",
+  "name": "llmfit",
+  "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/AlexsJones/llmfit",
+  "canonical_url": "github.com/alexsjones/llmfit",
+  "also_seen": [],
+  "company": null,
+  "stars": 129,
+  "momentum": 12,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-22",
+  "last_seen": "2026-07-22",
+  "stars_history": {
+    "2026-07-22": 129
+  }
+}

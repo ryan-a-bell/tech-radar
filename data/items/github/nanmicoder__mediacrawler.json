@@ -10,7 +10,7 @@
   "canonical_url": "github.com/nanmicoder/mediacrawler",
   "also_seen": [],
   "company": null,
-  "stars": 394,
+  "stars": 154,
   "momentum": 34,
   "tags": [
     "python"
@@ -18,11 +18,13 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-28",
+  "last_seen": "2026-07-30",
   "stars_history": {
     "2026-06-25": 347,
     "2026-06-26": 398,
     "2026-06-27": 673,
-    "2026-06-28": 394
+    "2026-06-28": 394,
+    "2026-07-28": 362,
+    "2026-07-30": 154
   }
 }

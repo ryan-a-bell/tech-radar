@@ -1,0 +1,27 @@
+{
+  "id": "github:firecrawl/pdf-inspector",
+  "name": "pdf-inspector",
+  "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/firecrawl/pdf-inspector",
+  "canonical_url": "github.com/firecrawl/pdf-inspector",
+  "also_seen": [],
+  "company": null,
+  "stars": 1582,
+  "momentum": 100,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-04",
+  "last_seen": "2026-08-06",
+  "stars_history": {
+    "2026-08-04": 1699,
+    "2026-08-05": 2540,
+    "2026-08-06": 1582
+  }
+}

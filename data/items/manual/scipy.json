@@ -1,0 +1,23 @@
+{
+  "id": "manual:scipy",
+  "name": "SciPy",
+  "description": "Foundational Python library for scientific computing, providing optimization, integration, statistics, linear algebra, and differential-equation routines built on high-performance Fortran/C++ implementations.",
+  "quadrant": "Tools",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://scipy.org",
+  "canonical_url": null,
+  "also_seen": [],
+  "company": null,
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [
+    "Quant"
+  ],
+  "archived_at": null,
+  "first_seen": "2026-07-16",
+  "last_seen": "2026-07-16",
+  "stars_history": {}
+}

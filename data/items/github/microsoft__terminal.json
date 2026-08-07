@@ -1,0 +1,25 @@
+{
+  "id": "github:microsoft/terminal",
+  "name": "terminal",
+  "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+  "quadrant": "Tools",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/microsoft/terminal",
+  "canonical_url": "github.com/microsoft/terminal",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 59,
+  "momentum": 5,
+  "tags": [
+    "c++"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-20",
+  "last_seen": "2026-07-20",
+  "stars_history": {
+    "2026-07-20": 59
+  }
+}

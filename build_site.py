@@ -15,8 +15,9 @@ config.js is copied as-is (window.RADAR_EDIT = false), which is what keeps the
 deployed dashboard read-only — edit mode only exists when edit_server.py is the
 one serving the page.
 
-Also copies web/{books.html, books.jsx} and data/books.json — the Reading
-List page, a read-only companion to the tech radar dashboard.
+Also copies web/{learning.html, learning.jsx} and data/learning.json — the
+Learning Library page (books, articles, videos), a read-only companion to the
+tech radar dashboard.
 
 The dashboard stays a plain static page — no bundler, no node_modules.
 """
@@ -68,20 +69,25 @@ def main():
     shutil.copy(os.path.join(HERE, "data", "radar.json"),
                 os.path.join(SITE, "data", "radar.json"))
 
-    # 6. Reading List page — books.html is copied as-is; books.jsx gets the
-    #    same export-default strip as dashboard.jsx (expects a global BooksApp).
-    shutil.copy(os.path.join(WEB, "books.html"),
-                os.path.join(SITE, "books.html"))
-    with open(os.path.join(WEB, "books.jsx"), encoding="utf-8") as f:
-        books_src = f.read()
-    books_src = re.sub(r"export\s+default\s+function\s+BooksApp",
-                        "function BooksApp", books_src)
-    books_src = re.sub(r'^import\s+React.*?;\s*$', "", books_src, flags=re.M)
-    with open(os.path.join(SITE, "books.jsx"), "w", encoding="utf-8") as f:
-        f.write(hooks + books_src)
-    books_json = os.path.join(HERE, "data", "books.json")
-    if os.path.exists(books_json):
-        shutil.copy(books_json, os.path.join(SITE, "data", "books.json"))
+    # 6. Learning Library page — rebuild data/learning.json from learning/*.md
+    #    first (same md → aggregate-json contract as projects/ and people/),
+    #    then ship it. learning.html is copied as-is; learning.jsx gets the same
+    #    export-default strip as dashboard.jsx (expects a global LearningApp).
+    from build_learning import build_learning_json
+    n_learn = build_learning_json()
+    print(f"built learning.json ({n_learn} items)")
+    shutil.copy(os.path.join(WEB, "learning.html"),
+                os.path.join(SITE, "learning.html"))
+    with open(os.path.join(WEB, "learning.jsx"), encoding="utf-8") as f:
+        learning_src = f.read()
+    learning_src = re.sub(r"export\s+default\s+function\s+LearningApp",
+                          "function LearningApp", learning_src)
+    learning_src = re.sub(r'^import\s+React.*?;\s*$', "", learning_src, flags=re.M)
+    with open(os.path.join(SITE, "learning.jsx"), "w", encoding="utf-8") as f:
+        f.write(hooks + learning_src)
+    learning_json = os.path.join(HERE, "data", "learning.json")
+    if os.path.exists(learning_json):
+        shutil.copy(learning_json, os.path.join(SITE, "data", "learning.json"))
 
     # 7. Tool Similarity page — self-contained (inline JSX), copied as-is.
     #    Reads data/radar.json and, if present, data/similarity.json (the
@@ -126,6 +132,15 @@ def main():
     people_sim = os.path.join(HERE, "data", "people_similarity.json")
     if os.path.exists(people_sim):
         shutil.copy(people_sim, os.path.join(SITE, "data", "people_similarity.json"))
+
+    # 10. Discover page — self-contained (inline JSX), copied as-is. Paste a
+    #     description and it finds the closest technology, projects, people and
+    #     learning across the corpora already copied above (radar.json,
+    #     projects.json, people.json, learning.json) using in-browser TF-IDF —
+    #     no extra precomputed file required. Ships with an inline sample as an
+    #     offline fallback; the live data/ files replace it when served.
+    shutil.copy(os.path.join(WEB, "discover.html"),
+                os.path.join(SITE, "discover.html"))
 
     print(f"site/ ready — {len(os.listdir(SITE))} entries")
     print("preview locally:  cd site && python -m http.server 8000")

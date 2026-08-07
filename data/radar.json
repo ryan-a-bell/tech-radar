@@ -1,7 +1,3252 @@
 {
-  "generated": "2026-07-16",
-  "count": 423,
+  "generated": "2026-08-06",
+  "count": 549,
   "items": [
+    {
+      "id": "github:huangruiteng/loopx",
+      "name": "loopx",
+      "description": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/huangruiteng/loopx",
+      "canonical_url": "github.com/huangruiteng/loopx",
+      "also_seen": [],
+      "company": null,
+      "stars": 326,
+      "momentum": 32,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-06": 326
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cloudflare/computer",
+      "name": "computer",
+      "description": "Give your agent a computer \ud83d\udc7e",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cloudflare/computer",
+      "canonical_url": "github.com/cloudflare/computer",
+      "also_seen": [],
+      "company": "Cloudflare",
+      "stars": 891,
+      "momentum": 89,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-06": 891
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:webpack/webpack",
+      "name": "webpack",
+      "description": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through \"loaders\", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/webpack/webpack",
+      "canonical_url": "github.com/webpack/webpack",
+      "also_seen": [],
+      "company": null,
+      "stars": 10,
+      "momentum": 1,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 10
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tailwindlabs/tailwindcss",
+      "name": "tailwindcss",
+      "description": "A utility-first CSS framework for rapid UI development.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "canonical_url": "github.com/tailwindlabs/tailwindcss",
+      "also_seen": [],
+      "company": null,
+      "stars": 408,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-05": 52,
+        "2026-08-06": 408
+      },
+      "trend": "up",
+      "trend_delta": 356
+    },
+    {
+      "id": "github:gabime/spdlog",
+      "name": "spdlog",
+      "description": "Fast C++ logging library.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/gabime/spdlog",
+      "canonical_url": "github.com/gabime/spdlog",
+      "also_seen": [],
+      "company": null,
+      "stars": 10,
+      "momentum": 1,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 10
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:denoland/deno",
+      "name": "deno",
+      "description": "A modern runtime for JavaScript and TypeScript.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/denoland/deno",
+      "canonical_url": "github.com/denoland/deno",
+      "also_seen": [],
+      "company": "Deno",
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 31
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:EveryInc/compound-engineering-plugin",
+      "name": "compound-engineering-plugin",
+      "description": "Official Compound Engineering plugin for Claude Code, Codex, Cursor, and more",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "canonical_url": "github.com/everyinc/compound-engineering-plugin",
+      "also_seen": [],
+      "company": null,
+      "stars": 40,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 40
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:angular/angular",
+      "name": "angular",
+      "description": "Deliver web apps with confidence \ud83d\ude80",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/angular/angular",
+      "canonical_url": "github.com/angular/angular",
+      "also_seen": [],
+      "company": null,
+      "stars": 13,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-05": 13
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:uber/ADR",
+      "name": "ADR",
+      "description": "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/uber/ADR",
+      "canonical_url": "github.com/uber/adr",
+      "also_seen": [],
+      "company": "Uber",
+      "stars": 354,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-05": 148,
+        "2026-08-06": 354
+      },
+      "trend": "up",
+      "trend_delta": 206
+    },
+    {
+      "id": "github:donnemartin/system-design-primer",
+      "name": "system-design-primer",
+      "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "canonical_url": "github.com/donnemartin/system-design-primer",
+      "also_seen": [],
+      "company": null,
+      "stars": 303,
+      "momentum": 23,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-04": 237,
+        "2026-08-06": 303
+      },
+      "trend": "up",
+      "trend_delta": 66
+    },
+    {
+      "id": "github:firecrawl/pdf-inspector",
+      "name": "pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "canonical_url": "github.com/firecrawl/pdf-inspector",
+      "also_seen": [],
+      "company": null,
+      "stars": 1582,
+      "momentum": 100,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-04": 1699,
+        "2026-08-05": 2540,
+        "2026-08-06": 1582
+      },
+      "trend": "down",
+      "trend_delta": -117
+    },
+    {
+      "id": "github:Alishahryar1/free-claude-code",
+      "name": "free-claude-code",
+      "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "canonical_url": "github.com/alishahryar1/free-claude-code",
+      "also_seen": [],
+      "company": null,
+      "stars": 278,
+      "momentum": 27,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-04": 278
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:livekit/agents",
+      "name": "agents",
+      "description": "A framework for building realtime voice AI agents \ud83e\udd16\ud83c\udf99\ufe0f\ud83d\udcf9",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/livekit/agents",
+      "canonical_url": "github.com/livekit/agents",
+      "also_seen": [],
+      "company": null,
+      "stars": 432,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-04": 148,
+        "2026-08-05": 432
+      },
+      "trend": "up",
+      "trend_delta": 284
+    },
+    {
+      "id": "manual:openmetadata",
+      "name": "OpenMetadata",
+      "description": "Open-source metadata platform and data catalog that builds a knowledge graph linking data assets, lineage, ownership, quality, and governance, with 130+ connectors and an MCP server for AI-assisted access.",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/open-metadata/OpenMetadata",
+      "canonical_url": "github.com/open-metadata/openmetadata",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:x11vnc",
+      "name": "x11vnc",
+      "description": "Lightweight VNC server for Unix/Linux that shares an existing X11 desktop session (rather than a virtual one) with a remote VNC client \u2014 a simple, dependency-free way to get remote-desktop access to a live X display.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/LibVNC/x11vnc",
+      "canonical_url": "github.com/libvnc/x11vnc",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:antirez/ds4",
+      "name": "ds4",
+      "description": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/antirez/ds4",
+      "canonical_url": "github.com/antirez/ds4",
+      "also_seen": [],
+      "company": null,
+      "stars": 384,
+      "momentum": 13,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-03": 139,
+        "2026-08-04": 384
+      },
+      "trend": "up",
+      "trend_delta": 245
+    },
+    {
+      "id": "manual:vercel",
+      "name": "Vercel",
+      "description": "Frontend cloud / deployment platform for web apps, now expanding into agentic infrastructure \u2014 sandboxed environments, durable orchestration, and AI model integration for building and running autonomous agents alongside traditional sites.",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://vercel.com",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "Vercel",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:paperclip",
+      "name": "Paperclip",
+      "description": "Open-source orchestration platform (Node.js server + React dashboard) that wraps multiple AI coding agents (Claude Code, Codex, Cursor, etc.) into a company-like structure \u2014 org chart, roles, budgets, goals, task tracking, and audit logs \u2014 so several agents can work toward a shared objective without duplicated effort or runaway API spend.",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://paperclip.ing/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents",
+        "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:HarbourMasters/Lighthouse",
+      "name": "Lighthouse",
+      "description": "A c project trending on GitHub.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HarbourMasters/Lighthouse",
+      "canonical_url": "github.com/harbourmasters/lighthouse",
+      "also_seen": [],
+      "company": null,
+      "stars": 65,
+      "momentum": 6,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-08-03": 65
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:infinityfree",
+      "name": "InfinityFree",
+      "description": "Free web hosting provider whose no-code Site.pro builder lets individuals and small businesses put up websites, landing pages, or online stores without touching code.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.infinityfree.com/website-builder/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:docmost",
+      "name": "Docmost",
+      "description": "Open-source, self-hosted collaborative wiki and documentation platform (AGPL 3.0 core) positioned as an alternative to Confluence and Notion \u2014 real-time editing, diagrams (Draw.io/Excalidraw/Mermaid), spaces, permissions, comments, and page history.",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/docmost/docmost",
+      "canonical_url": "github.com/docmost/docmost",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:esengine/DeepSeek-Reasonix",
+      "name": "DeepSeek-Reasonix",
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability \u2014 leave it running.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "canonical_url": "github.com/esengine/deepseek-reasonix",
+      "also_seen": [],
+      "company": null,
+      "stars": 747,
+      "momentum": 33,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-06",
+      "stars_history": {
+        "2026-08-03": 333,
+        "2026-08-04": 883,
+        "2026-08-05": 922,
+        "2026-08-06": 747
+      },
+      "trend": "up",
+      "trend_delta": 414
+    },
+    {
+      "id": "manual:databento",
+      "name": "Databento",
+      "description": "Market data provider offering real-time and historical APIs for equities, futures, and options, built on normalized direct-exchange feeds for low-latency access \u2014 an alternative to legacy market-data vendors for quant/trading firms.",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://databento.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "Databento",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:abus-aikorea/voice-pro",
+      "name": "voice-pro",
+      "description": "Gradio WebUI for creators and developers, featuring key TTS (Edge-TTS, kokoro) and zero-shot Voice Cloning (E2 & F5-TTS, CosyVoice), with Whisper audio processing, YouTube download, Demucs vocal isolation, and multilingual translation.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/abus-aikorea/voice-pro",
+      "canonical_url": "github.com/abus-aikorea/voice-pro",
+      "also_seen": [],
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 58
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NomaDamas/k-skill",
+      "name": "k-skill",
+      "description": "\ud55c\uad6d\uc778\uc744 \uc704\ud55c \uc2a4\ud0ac \ubaa8\uc74c\uc9d1 - \uc5d0\uc774\uc804\ud2b8\ub97c \ud55c\uad6d\uc778\uc73c\ub85c",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NomaDamas/k-skill",
+      "canonical_url": "github.com/nomadamas/k-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 177,
+      "momentum": 5,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-08-02": 53,
+        "2026-08-03": 177
+      },
+      "trend": "up",
+      "trend_delta": 124
+    },
+    {
+      "id": "github:iv-org/invidious",
+      "name": "invidious",
+      "description": "Invidious is an alternative front-end to YouTube",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/iv-org/invidious",
+      "canonical_url": "github.com/iv-org/invidious",
+      "also_seen": [],
+      "company": null,
+      "stars": 402,
+      "momentum": 43,
+      "tags": [
+        "crystal"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-04",
+      "stars_history": {
+        "2026-08-02": 435,
+        "2026-08-03": 305,
+        "2026-08-04": 402
+      },
+      "trend": "down",
+      "trend_delta": -33
+    },
+    {
+      "id": "github:github/gh-stack",
+      "name": "gh-stack",
+      "description": "GitHub Stacked PRs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/github/gh-stack",
+      "canonical_url": "github.com/github/gh-stack",
+      "also_seen": [],
+      "company": null,
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 46
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:microsoft/generative-ai-for-beginners",
+      "name": "generative-ai-for-beginners",
+      "description": "21 Lessons, Get Started Building with Generative AI",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "canonical_url": "github.com/microsoft/generative-ai-for-beginners",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 783,
+      "momentum": 10,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-02": 108,
+        "2026-08-03": 588,
+        "2026-08-04": 775,
+        "2026-08-05": 783
+      },
+      "trend": "up",
+      "trend_delta": 675
+    },
+    {
+      "id": "github:microsoft/TRELLIS.2",
+      "name": "TRELLIS.2",
+      "description": "Native and Compact Structured Latents for 3D Generation",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/TRELLIS.2",
+      "canonical_url": "github.com/microsoft/trellis.2",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-08-02": 107
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:zhaoxuya520/reverse-skill",
+      "name": "reverse-skill",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients \u9006\u5411/\u6e17\u900f/\u5b89\u5168\u6280\u80fd\u8def\u7531\u5305 - AI \u81ea\u52a8\u8def\u7531 + \u6309\u9700\u81ea\u4e3e\u5de5\u5177\u94fe + \u81ea\u52a8\u8fdb\u5316\u7ecf\u9a8c\u5e93 | \u652f\u6301 Claude Code / Kiro / Cursor / Cline \u7b49\u4ee3\u7801 AI \u5ba2\u6237\u7aef",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "canonical_url": "github.com/zhaoxuya520/reverse-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 2297,
+      "momentum": 33,
+      "tags": [
+        "powershell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-01": 335,
+        "2026-08-02": 1320,
+        "2026-08-03": 1141,
+        "2026-08-04": 2446,
+        "2026-08-05": 2297
+      },
+      "trend": "up",
+      "trend_delta": 1962
+    },
+    {
+      "id": "github:usekaneo/kaneo",
+      "name": "kaneo",
+      "description": "\ud83c\udfaf All you need. Nothing you don't. Open source project management that works for you, not against you.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/usekaneo/kaneo",
+      "canonical_url": "github.com/usekaneo/kaneo",
+      "also_seen": [],
+      "company": null,
+      "stars": 559,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-05",
+      "stars_history": {
+        "2026-08-01": 194,
+        "2026-08-02": 760,
+        "2026-08-03": 496,
+        "2026-08-04": 665,
+        "2026-08-05": 559
+      },
+      "trend": "up",
+      "trend_delta": 365
+    },
+    {
+      "id": "github:geo-tp/ESP32-Bit-Pirate",
+      "name": "ESP32-Bit-Pirate",
+      "description": "A Hardware Hacking Tool with Web-Based CLI That Speaks Every Protocol",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/geo-tp/ESP32-Bit-Pirate",
+      "canonical_url": "github.com/geo-tp/esp32-bit-pirate",
+      "also_seen": [],
+      "company": null,
+      "stars": 83,
+      "momentum": 8,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-08-01": 83
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:agavra/tuicr",
+      "name": "tuicr",
+      "description": "a code review TUI with vim keybindings",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/agavra/tuicr",
+      "canonical_url": "github.com/agavra/tuicr",
+      "also_seen": [],
+      "company": null,
+      "stars": 335,
+      "momentum": 19,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-07-31": 190,
+        "2026-08-01": 335
+      },
+      "trend": "up",
+      "trend_delta": 145
+    },
+    {
+      "id": "github:WhiskeySockets/Baileys",
+      "name": "Baileys",
+      "description": "Socket-based TS/JavaScript API for WhatsApp Web",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/WhiskeySockets/Baileys",
+      "canonical_url": "github.com/whiskeysockets/baileys",
+      "also_seen": [],
+      "company": null,
+      "stars": 19,
+      "momentum": 1,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "stars_history": {
+        "2026-07-31": 19
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:grokability/snipe-it",
+      "name": "snipe-it",
+      "description": "A free open source IT asset/license management system",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/grokability/snipe-it",
+      "canonical_url": "github.com/grokability/snipe-it",
+      "also_seen": [],
+      "company": null,
+      "stars": 164,
+      "momentum": 16,
+      "tags": [
+        "php"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 164
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:different-ai/openwork",
+      "name": "openwork",
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/different-ai/openwork",
+      "canonical_url": "github.com/different-ai/openwork",
+      "also_seen": [],
+      "company": null,
+      "stars": 280,
+      "momentum": 9,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-07-30": 97,
+        "2026-07-31": 915,
+        "2026-08-01": 806,
+        "2026-08-03": 280
+      },
+      "trend": "up",
+      "trend_delta": 183
+    },
+    {
+      "id": "github:deepfakes/faceswap",
+      "name": "faceswap",
+      "description": "Deepfakes Software For All",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/deepfakes/faceswap",
+      "canonical_url": "github.com/deepfakes/faceswap",
+      "also_seen": [],
+      "company": null,
+      "stars": 93,
+      "momentum": 16,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-01",
+      "stars_history": {
+        "2026-07-30": 166,
+        "2026-08-01": 93
+      },
+      "trend": "down",
+      "trend_delta": -73
+    },
+    {
+      "id": "github:MoonshotAI/FlashKDA",
+      "name": "FlashKDA",
+      "description": "FlashKDA: high-performance Kimi Delta Attention kernels",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MoonshotAI/FlashKDA",
+      "canonical_url": "github.com/moonshotai/flashkda",
+      "also_seen": [],
+      "company": null,
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "cuda"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:maderix/ANE",
+      "name": "ANE",
+      "description": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/maderix/ANE",
+      "canonical_url": "github.com/maderix/ane",
+      "also_seen": [],
+      "company": null,
+      "stars": 22,
+      "momentum": 2,
+      "tags": [
+        "objective-c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-30": 22
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:huggingface/speech-to-speech",
+      "name": "speech-to-speech",
+      "description": "Build local voice agents with open-source models",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "canonical_url": "github.com/huggingface/speech-to-speech",
+      "also_seen": [],
+      "company": "Hugging Face",
+      "stars": 442,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-07-29": 227,
+        "2026-07-30": 827,
+        "2026-07-31": 628,
+        "2026-08-02": 442
+      },
+      "trend": "up",
+      "trend_delta": 215
+    },
+    {
+      "id": "github:pascalorg/editor",
+      "name": "editor",
+      "description": "Create and share 3D architectural projects.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pascalorg/editor",
+      "canonical_url": "github.com/pascalorg/editor",
+      "also_seen": [],
+      "company": null,
+      "stars": 625,
+      "momentum": 34,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-31",
+      "stars_history": {
+        "2026-07-29": 341,
+        "2026-07-30": 1022,
+        "2026-07-31": 625
+      },
+      "trend": "up",
+      "trend_delta": 284
+    },
+    {
+      "id": "github:virgiliojr94/book-to-skill",
+      "name": "book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill \u2014 ready to study, reference, and use while you work.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "canonical_url": "github.com/virgiliojr94/book-to-skill",
+      "also_seen": [],
+      "company": null,
+      "stars": 1421,
+      "momentum": 42,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-29": 423,
+        "2026-07-30": 1421
+      },
+      "trend": "up",
+      "trend_delta": 998
+    },
+    {
+      "id": "github:paperswithbacktest/awesome-systematic-trading",
+      "name": "awesome-systematic-trading",
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "canonical_url": "github.com/paperswithbacktest/awesome-systematic-trading",
+      "also_seen": [],
+      "company": null,
+      "stars": 523,
+      "momentum": 30,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-02",
+      "stars_history": {
+        "2026-07-29": 309,
+        "2026-07-30": 945,
+        "2026-07-31": 621,
+        "2026-08-01": 763,
+        "2026-08-02": 523
+      },
+      "trend": "up",
+      "trend_delta": 214
+    },
+    {
+      "id": "github:microsoft/agent-governance-toolkit",
+      "name": "agent-governance-toolkit",
+      "description": "AI Agent Governance Toolkit \u2014 Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "canonical_url": "github.com/microsoft/agent-governance-toolkit",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-29": 46
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ocornut/imgui",
+      "name": "imgui",
+      "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ocornut/imgui",
+      "canonical_url": "github.com/ocornut/imgui",
+      "also_seen": [],
+      "company": null,
+      "stars": 51,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-28": 51
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:apache/cassandra",
+      "name": "cassandra",
+      "description": "Open source transactional distributed database. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apache/cassandra",
+      "canonical_url": "github.com/apache/cassandra",
+      "also_seen": [],
+      "company": null,
+      "stars": 11,
+      "momentum": 1,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-28": 11
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vudovn/ag-kit",
+      "name": "ag-kit",
+      "description": "A typescript project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vudovn/ag-kit",
+      "canonical_url": "github.com/vudovn/ag-kit",
+      "also_seen": [],
+      "company": null,
+      "stars": 14,
+      "momentum": 1,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-28": 14
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opengeos/GeoLibre",
+      "name": "GeoLibre",
+      "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opengeos/GeoLibre",
+      "canonical_url": "github.com/opengeos/geolibre",
+      "also_seen": [],
+      "company": null,
+      "stars": 671,
+      "momentum": 42,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-28": 420,
+        "2026-07-29": 607,
+        "2026-07-30": 671
+      },
+      "trend": "up",
+      "trend_delta": 251
+    },
+    {
+      "id": "github:nodejs/node",
+      "name": "node",
+      "description": "Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nodejs/node",
+      "canonical_url": "github.com/nodejs/node",
+      "also_seen": [],
+      "company": null,
+      "stars": 36,
+      "momentum": 3,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 36
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jenkinsci/jenkins",
+      "name": "jenkins",
+      "description": "Jenkins automation server",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "canonical_url": "github.com/jenkinsci/jenkins",
+      "also_seen": [],
+      "company": null,
+      "stars": 25,
+      "momentum": 1,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-31",
+      "stars_history": {
+        "2026-07-27": 18,
+        "2026-07-28": 180,
+        "2026-07-29": 180,
+        "2026-07-31": 25
+      },
+      "trend": "up",
+      "trend_delta": 7
+    },
+    {
+      "id": "github:pbakaus/impeccable",
+      "name": "impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pbakaus/impeccable",
+      "canonical_url": "github.com/pbakaus/impeccable",
+      "also_seen": [],
+      "company": null,
+      "stars": 847,
+      "momentum": 41,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-27": 413,
+        "2026-07-28": 847
+      },
+      "trend": "up",
+      "trend_delta": 434
+    },
+    {
+      "id": "github:permissionlesstech/bitchat-android",
+      "name": "bitchat-android",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/permissionlesstech/bitchat-android",
+      "canonical_url": "github.com/permissionlesstech/bitchat-android",
+      "also_seen": [],
+      "company": null,
+      "stars": 260,
+      "momentum": 26,
+      "tags": [
+        "kotlin"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-27": 260
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:amnezia-vpn/amnezia-client",
+      "name": "amnezia-client",
+      "description": "Amnezia VPN Client (Desktop+Mobile)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/amnezia-vpn/amnezia-client",
+      "canonical_url": "github.com/amnezia-vpn/amnezia-client",
+      "also_seen": [],
+      "company": null,
+      "stars": 515,
+      "momentum": 3,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-27": 35,
+        "2026-07-28": 515
+      },
+      "trend": "up",
+      "trend_delta": 480
+    },
+    {
+      "id": "github:permissionlesstech/bitchat",
+      "name": "bitchat",
+      "description": "bluetooth mesh chat, IRC vibes",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/permissionlesstech/bitchat",
+      "canonical_url": "github.com/permissionlesstech/bitchat",
+      "also_seen": [],
+      "company": null,
+      "stars": 2346,
+      "momentum": 100,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-28",
+      "stars_history": {
+        "2026-07-26": 1720,
+        "2026-07-27": 1166,
+        "2026-07-28": 2346
+      },
+      "trend": "up",
+      "trend_delta": 626
+    },
+    {
+      "id": "github:yorukot/superfile",
+      "name": "superfile",
+      "description": "Pretty fancy and modern terminal file manager",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yorukot/superfile",
+      "canonical_url": "github.com/yorukot/superfile",
+      "also_seen": [],
+      "company": null,
+      "stars": 662,
+      "momentum": 33,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-29",
+      "stars_history": {
+        "2026-07-25": 338,
+        "2026-07-27": 131,
+        "2026-07-28": 600,
+        "2026-07-29": 662
+      },
+      "trend": "up",
+      "trend_delta": 324
+    },
+    {
+      "id": "github:Lordog/dive-into-llms",
+      "name": "dive-into-llms",
+      "description": "\u300a\u52a8\u624b\u5b66\u5927\u6a21\u578bDive into LLMs\u300b\u7cfb\u5217\u7f16\u7a0b\u5b9e\u8df5\u6559\u7a0b",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Lordog/dive-into-llms",
+      "canonical_url": "github.com/lordog/dive-into-llms",
+      "also_seen": [],
+      "company": null,
+      "stars": 408,
+      "momentum": 32,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-26",
+      "stars_history": {
+        "2026-07-25": 328,
+        "2026-07-26": 408
+      },
+      "trend": "up",
+      "trend_delta": 80
+    },
+    {
+      "id": "github:OtterMind/Chat2DB",
+      "name": "Chat2DB",
+      "description": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/OtterMind/Chat2DB",
+      "canonical_url": "github.com/ottermind/chat2db",
+      "also_seen": [],
+      "company": null,
+      "stars": 398,
+      "momentum": 8,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-25",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-25": 82,
+        "2026-07-26": 360,
+        "2026-07-27": 398
+      },
+      "trend": "up",
+      "trend_delta": 316
+    },
+    {
+      "id": "github:alibaba/open-code-review",
+      "name": "open-code-review",
+      "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alibaba/open-code-review",
+      "canonical_url": "github.com/alibaba/open-code-review",
+      "also_seen": [],
+      "company": null,
+      "stars": 359,
+      "momentum": 18,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-30",
+      "stars_history": {
+        "2026-07-24": 180,
+        "2026-07-26": 431,
+        "2026-07-27": 832,
+        "2026-07-28": 979,
+        "2026-07-30": 359
+      },
+      "trend": "up",
+      "trend_delta": 179
+    },
+    {
+      "id": "github:jellyfin/jellyfin",
+      "name": "jellyfin",
+      "description": "The Free Software Media System - Server Backend & API",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jellyfin/jellyfin",
+      "canonical_url": "github.com/jellyfin/jellyfin",
+      "also_seen": [],
+      "company": null,
+      "stars": 66,
+      "momentum": 6,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-24": 66
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Automattic/harper",
+      "name": "harper",
+      "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Automattic/harper",
+      "canonical_url": "github.com/automattic/harper",
+      "also_seen": [],
+      "company": null,
+      "stars": 503,
+      "momentum": 62,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-26",
+      "stars_history": {
+        "2026-07-24": 624,
+        "2026-07-25": 876,
+        "2026-07-26": 503
+      },
+      "trend": "down",
+      "trend_delta": -121
+    },
+    {
+      "id": "github:citrolabs/ego-lite",
+      "name": "ego-lite",
+      "description": "The best browser for both you and your AI agents work in parallel.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "canonical_url": "github.com/citrolabs/ego-lite",
+      "also_seen": [],
+      "company": null,
+      "stars": 900,
+      "momentum": 24,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-24": 247,
+        "2026-07-25": 880,
+        "2026-07-26": 986,
+        "2026-07-27": 900
+      },
+      "trend": "up",
+      "trend_delta": 653
+    },
+    {
+      "id": "github:block/buzz",
+      "name": "buzz",
+      "description": "A hive mind communication platform",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/block/buzz",
+      "canonical_url": "github.com/block/buzz",
+      "also_seen": [],
+      "company": null,
+      "stars": 1710,
+      "momentum": 100,
+      "tags": [
+        "rust"
+      ],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-24": 2162,
+        "2026-07-25": 3270,
+        "2026-07-26": 2491,
+        "2026-07-27": 1710
+      },
+      "trend": "down",
+      "trend_delta": -452
+    },
+    {
+      "id": "github:likec4/likec4",
+      "name": "likec4",
+      "description": "Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/likec4/likec4",
+      "canonical_url": "github.com/likec4/likec4",
+      "also_seen": [],
+      "company": null,
+      "stars": 337,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-25",
+      "stars_history": {
+        "2026-07-23": 80,
+        "2026-07-24": 472,
+        "2026-07-25": 337
+      },
+      "trend": "up",
+      "trend_delta": 257
+    },
+    {
+      "id": "github:dreamhunter2333/cloudflare_temp_email",
+      "name": "cloudflare_temp_email",
+      "description": "CloudFlare free temp domain email \u514d\u8d39\u6536\u53d1 \u4e34\u65f6\u57df\u540d\u90ae\u7bb1 \u652f\u6301\u9644\u4ef6 IMAP SMTP TelegramBot",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dreamhunter2333/cloudflare_temp_email",
+      "canonical_url": "github.com/dreamhunter2333/cloudflare_temp_email",
+      "also_seen": [],
+      "company": null,
+      "stars": 68,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-23": 68
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Pumpkin-MC/Pumpkin",
+      "name": "Pumpkin",
+      "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Pumpkin-MC/Pumpkin",
+      "canonical_url": "github.com/pumpkin-mc/pumpkin",
+      "also_seen": [],
+      "company": null,
+      "stars": 338,
+      "momentum": 10,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-27",
+      "stars_history": {
+        "2026-07-23": 108,
+        "2026-07-24": 565,
+        "2026-07-25": 473,
+        "2026-07-26": 358,
+        "2026-07-27": 338
+      },
+      "trend": "up",
+      "trend_delta": 230
+    },
+    {
+      "id": "github:tradesdontlie/tradingview-mcp",
+      "name": "tradingview-mcp",
+      "description": "AI-assisted TradingView chart analysis \u2014 connect Claude Code to your TradingView Desktop for personal workflow automation",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tradesdontlie/tradingview-mcp",
+      "canonical_url": "github.com/tradesdontlie/tradingview-mcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 114,
+      "momentum": 11,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 114
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:earthtojake/text-to-cad",
+      "name": "text-to-cad",
+      "description": "A collection of agent skills for CAD, robotics and hardware design",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "canonical_url": "github.com/earthtojake/text-to-cad",
+      "also_seen": [],
+      "company": null,
+      "stars": 230,
+      "momentum": 29,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-22": 291,
+        "2026-07-24": 230
+      },
+      "trend": "down",
+      "trend_delta": -61
+    },
+    {
+      "id": "github:agegr/pi-web",
+      "name": "pi-web",
+      "description": "Web UI for the pi coding agent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/agegr/pi-web",
+      "canonical_url": "github.com/agegr/pi-web",
+      "also_seen": [],
+      "company": null,
+      "stars": 315,
+      "momentum": 29,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-24",
+      "stars_history": {
+        "2026-07-22": 298,
+        "2026-07-23": 314,
+        "2026-07-24": 315
+      },
+      "trend": "up",
+      "trend_delta": 17
+    },
+    {
+      "id": "github:dottxt-ai/outlines",
+      "name": "outlines",
+      "description": "Structured Outputs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dottxt-ai/outlines",
+      "canonical_url": "github.com/dottxt-ai/outlines",
+      "also_seen": [],
+      "company": null,
+      "stars": 364,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-22": 65,
+        "2026-07-23": 364
+      },
+      "trend": "up",
+      "trend_delta": 299
+    },
+    {
+      "id": "github:langchain-ai/open_deep_research",
+      "name": "open_deep_research",
+      "description": "A python project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/langchain-ai/open_deep_research",
+      "canonical_url": "github.com/langchain-ai/open_deep_research",
+      "also_seen": [],
+      "company": null,
+      "stars": 23,
+      "momentum": 2,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 23
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AlexsJones/llmfit",
+      "name": "llmfit",
+      "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AlexsJones/llmfit",
+      "canonical_url": "github.com/alexsjones/llmfit",
+      "also_seen": [],
+      "company": null,
+      "stars": 129,
+      "momentum": 12,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-22": 129
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ayghri/i-have-adhd",
+      "name": "i-have-adhd",
+      "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "canonical_url": "github.com/ayghri/i-have-adhd",
+      "also_seen": [],
+      "company": null,
+      "stars": 1699,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-22": 1866,
+        "2026-07-23": 1699
+      },
+      "trend": "down",
+      "trend_delta": -167
+    },
+    {
+      "id": "github:DioxusLabs/dioxus",
+      "name": "dioxus",
+      "description": "Fullstack app framework for web, desktop, and mobile.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "canonical_url": "github.com/dioxuslabs/dioxus",
+      "also_seen": [],
+      "company": null,
+      "stars": 420,
+      "momentum": 27,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-22": 271,
+        "2026-07-23": 420
+      },
+      "trend": "up",
+      "trend_delta": 149
+    },
+    {
+      "id": "github:schollz/croc",
+      "name": "croc",
+      "description": "Easily and securely send things from one computer to another \ud83d\udc0a \ud83d\udce6",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/schollz/croc",
+      "canonical_url": "github.com/schollz/croc",
+      "also_seen": [],
+      "company": null,
+      "stars": 739,
+      "momentum": 36,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-22": 361,
+        "2026-07-23": 739
+      },
+      "trend": "up",
+      "trend_delta": 378
+    },
+    {
+      "id": "github:hyprwm/Hyprland",
+      "name": "Hyprland",
+      "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/hyprwm/Hyprland",
+      "canonical_url": "github.com/hyprwm/hyprland",
+      "also_seen": [],
+      "company": null,
+      "stars": 356,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-22": 58,
+        "2026-07-23": 356
+      },
+      "trend": "up",
+      "trend_delta": 298
+    },
+    {
+      "id": "github:chrislgarry/Apollo-11",
+      "name": "Apollo-11",
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "canonical_url": "github.com/chrislgarry/apollo-11",
+      "also_seen": [],
+      "company": null,
+      "stars": 409,
+      "momentum": 100,
+      "tags": [
+        "assembly"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-22",
+      "last_seen": "2026-07-25",
+      "stars_history": {
+        "2026-07-22": 1235,
+        "2026-07-23": 768,
+        "2026-07-24": 592,
+        "2026-07-25": 409
+      },
+      "trend": "down",
+      "trend_delta": -826
+    },
+    {
+      "id": "github:handy-computer/transcribe.cpp",
+      "name": "transcribe.cpp",
+      "description": "ggml speech-to-text inference for 16+ model families",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/handy-computer/transcribe.cpp",
+      "canonical_url": "github.com/handy-computer/transcribe.cpp",
+      "also_seen": [],
+      "company": null,
+      "stars": 395,
+      "momentum": 39,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-21": 395
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tokio-rs/topcoat",
+      "name": "topcoat",
+      "description": "A batteries-included framework for building web apps",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "canonical_url": "github.com/tokio-rs/topcoat",
+      "also_seen": [],
+      "company": null,
+      "stars": 371,
+      "momentum": 37,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-21": 371
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:oblien/openship",
+      "name": "openship",
+      "description": "Self-hosted deployment platform",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/oblien/openship",
+      "canonical_url": "github.com/oblien/openship",
+      "also_seen": [],
+      "company": null,
+      "stars": 1302,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-21": 1641,
+        "2026-07-22": 1562,
+        "2026-07-23": 1302
+      },
+      "trend": "down",
+      "trend_delta": -339
+    },
+    {
+      "id": "github:moonshine-ai/moonshine",
+      "name": "moonshine",
+      "description": "Very low latency speech to text, intent recognition, and text to speech, for building voice agents and interfaces",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/moonshine-ai/moonshine",
+      "canonical_url": "github.com/moonshine-ai/moonshine",
+      "also_seen": [],
+      "company": null,
+      "stars": 282,
+      "momentum": 28,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-21": 282
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PrefectHQ/fastmcp",
+      "name": "fastmcp",
+      "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PrefectHQ/fastmcp",
+      "canonical_url": "github.com/prefecthq/fastmcp",
+      "also_seen": [],
+      "company": null,
+      "stars": 96,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-21": 96
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bojieli/ai-agent-book",
+      "name": "ai-agent-book",
+      "description": "\u300a\u6df1\u5165\u7406\u89e3 AI Agent\uff1a\u8bbe\u8ba1\u539f\u7406\u4e0e\u5de5\u7a0b\u5b9e\u8df5\u300b\uff08\u674e\u535a\u6770 \u8457\uff09\u5f00\u6e90\u4e3b\u4ed3\u5e93\uff1a\u5168\u4e66\u6b63\u6587\u3001\u7f16\u8bd1\u7248 PDF \u4e0e\u6309\u7ae0\u914d\u5957\u4ee3\u7801",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "canonical_url": "github.com/bojieli/ai-agent-book",
+      "also_seen": [],
+      "company": null,
+      "stars": 4624,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-21": 4434,
+        "2026-07-22": 4624
+      },
+      "trend": "up",
+      "trend_delta": 190
+    },
+    {
+      "id": "github:microsoft/Ontology-Playground",
+      "name": "Ontology-Playground",
+      "description": "Free, open-source web app for learning about ontologies and Microsoft Fabric IQ. Explore a catalogue of pre-built ontologies, design your own visually, export as RDF/XML, and share interactive diagrams. Zero backend, fully static.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/Ontology-Playground",
+      "canonical_url": "github.com/microsoft/ontology-playground",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 355,
+      "momentum": 46,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-21",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-21": 464,
+        "2026-07-22": 355
+      },
+      "trend": "down",
+      "trend_delta": -109
+    },
+    {
+      "id": "github:microsoft/terminal",
+      "name": "terminal",
+      "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/terminal",
+      "canonical_url": "github.com/microsoft/terminal",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 59,
+      "momentum": 5,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 59
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kvcache-ai/ktransformers",
+      "name": "ktransformers",
+      "description": "A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kvcache-ai/ktransformers",
+      "canonical_url": "github.com/kvcache-ai/ktransformers",
+      "also_seen": [],
+      "company": null,
+      "stars": 458,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-20": 360,
+        "2026-07-21": 458
+      },
+      "trend": "up",
+      "trend_delta": 98
+    },
+    {
+      "id": "github:andrewrabert/jellium-desktop",
+      "name": "jellium-desktop",
+      "description": "An unofficial desktop client for Jellyfin",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/andrewrabert/jellium-desktop",
+      "canonical_url": "github.com/andrewrabert/jellium-desktop",
+      "also_seen": [],
+      "company": null,
+      "stars": 43,
+      "momentum": 4,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 43
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PKUFlyingPig/cs-self-learning",
+      "name": "cs-self-learning",
+      "description": "\u8ba1\u7b97\u673a\u81ea\u5b66\u6307\u5357",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PKUFlyingPig/cs-self-learning",
+      "canonical_url": "github.com/pkuflyingpig/cs-self-learning",
+      "also_seen": [],
+      "company": null,
+      "stars": 134,
+      "momentum": 13,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 134
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Canner/WrenAI",
+      "name": "WrenAI",
+      "description": "GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Canner/WrenAI",
+      "canonical_url": "github.com/canner/wrenai",
+      "also_seen": [],
+      "company": null,
+      "stars": 121,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-20": 121
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AstrBotDevs/AstrBot",
+      "name": "AstrBot",
+      "description": "AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. \u2728",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AstrBotDevs/AstrBot",
+      "canonical_url": "github.com/astrbotdevs/astrbot",
+      "also_seen": [],
+      "company": null,
+      "stars": 416,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-20": 83,
+        "2026-07-21": 317,
+        "2026-07-22": 416
+      },
+      "trend": "up",
+      "trend_delta": 333
+    },
+    {
+      "id": "github:KnockOutEZ/wigolo",
+      "name": "wigolo",
+      "description": "The go-to web for your AI coding agent \u2014 local-first search, fetch, crawl & research over MCP. No API keys, no cloud, $0/query. Public beta.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/KnockOutEZ/wigolo",
+      "canonical_url": "github.com/knockoutez/wigolo",
+      "also_seen": [],
+      "company": null,
+      "stars": 642,
+      "momentum": 20,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-22",
+      "stars_history": {
+        "2026-07-19": 203,
+        "2026-07-20": 595,
+        "2026-07-21": 689,
+        "2026-07-22": 642
+      },
+      "trend": "up",
+      "trend_delta": 439
+    },
+    {
+      "id": "github:MoonshotAI/kimi-cli",
+      "name": "kimi-cli",
+      "description": "Kimi Code CLI is your next CLI agent.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MoonshotAI/kimi-cli",
+      "canonical_url": "github.com/moonshotai/kimi-cli",
+      "also_seen": [],
+      "company": null,
+      "stars": 410,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-21",
+      "stars_history": {
+        "2026-07-19": 65,
+        "2026-07-20": 410,
+        "2026-07-21": 410
+      },
+      "trend": "up",
+      "trend_delta": 345
+    },
+    {
+      "id": "github:elder-plinius/G0DM0D3",
+      "name": "G0DM0D3",
+      "description": "LIBERATED AI CHAT",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elder-plinius/G0DM0D3",
+      "canonical_url": "github.com/elder-plinius/g0dm0d3",
+      "also_seen": [],
+      "company": null,
+      "stars": 69,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-19",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-19": 69
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:protocolbuffers/protobuf",
+      "name": "protobuf",
+      "description": "Protocol Buffers - Google's data interchange format",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/protocolbuffers/protobuf",
+      "canonical_url": "github.com/protocolbuffers/protobuf",
+      "also_seen": [],
+      "company": null,
+      "stars": 11,
+      "momentum": 1,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 11
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:docusealco/docuseal",
+      "name": "docuseal",
+      "description": "Open source DocuSign alternative. Create, fill, and sign digital documents \u270d\ufe0f",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/docusealco/docuseal",
+      "canonical_url": "github.com/docusealco/docuseal",
+      "also_seen": [],
+      "company": null,
+      "stars": 91,
+      "momentum": 9,
+      "tags": [
+        "ruby"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 91
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/cwc-workshops",
+      "name": "cwc-workshops",
+      "description": "A typescript project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/cwc-workshops",
+      "canonical_url": "github.com/anthropics/cwc-workshops",
+      "also_seen": [],
+      "company": "Anthropic",
+      "stars": 45,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-18": 45
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tirth8205/code-review-graph",
+      "name": "code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "canonical_url": "github.com/tirth8205/code-review-graph",
+      "also_seen": [],
+      "company": null,
+      "stars": 882,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-18",
+      "last_seen": "2026-07-23",
+      "stars_history": {
+        "2026-07-18": 74,
+        "2026-07-19": 355,
+        "2026-07-20": 663,
+        "2026-07-21": 1833,
+        "2026-07-22": 1925,
+        "2026-07-23": 882
+      },
+      "trend": "up",
+      "trend_delta": 808
+    },
+    {
+      "id": "github:ibelick/ui-skills",
+      "name": "ui-skills",
+      "description": "Skills for Design Engineers",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ibelick/ui-skills",
+      "canonical_url": "github.com/ibelick/ui-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 123,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-17": 178,
+        "2026-07-19": 123
+      },
+      "trend": "down",
+      "trend_delta": -55
+    },
+    {
+      "id": "github:PostHog/posthog",
+      "name": "posthog",
+      "description": "\ud83e\udd94 PostHog is the leading platform for building self-driving products. Our developer tools \u2013 AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more \u2013 capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PostHog/posthog",
+      "canonical_url": "github.com/posthog/posthog",
+      "also_seen": [],
+      "company": null,
+      "stars": 411,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-20",
+      "stars_history": {
+        "2026-07-17": 77,
+        "2026-07-18": 438,
+        "2026-07-19": 338,
+        "2026-07-20": 411
+      },
+      "trend": "up",
+      "trend_delta": 334
+    },
+    {
+      "id": "github:apache/ossie",
+      "name": "ossie",
+      "description": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apache/ossie",
+      "canonical_url": "github.com/apache/ossie",
+      "also_seen": [],
+      "company": null,
+      "stars": 47,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-19",
+      "stars_history": {
+        "2026-07-17": 60,
+        "2026-07-19": 47
+      },
+      "trend": "down",
+      "trend_delta": -13
+    },
+    {
+      "id": "github:lobehub/lobehub",
+      "name": "lobehub",
+      "description": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operations by hiring, scheduling, and reporting on your entire AI team.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/lobehub/lobehub",
+      "canonical_url": "github.com/lobehub/lobehub",
+      "also_seen": [],
+      "company": null,
+      "stars": 71,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 71
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ossu/computer-science",
+      "name": "computer-science",
+      "description": "\ud83c\udf93 Path to a free self-taught education in Computer Science!",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ossu/computer-science",
+      "canonical_url": "github.com/ossu/computer-science",
+      "also_seen": [],
+      "company": null,
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {
+        "2026-07-17": 107
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:codecrafters-io/build-your-own-x",
+      "name": "build-your-own-x",
+      "description": "Master programming by recreating your favorite technologies from scratch.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "canonical_url": "github.com/codecrafters-io/build-your-own-x",
+      "also_seen": [],
+      "company": null,
+      "stars": 674,
+      "momentum": 43,
+      "tags": [
+        "markdown"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-08-03",
+      "stars_history": {
+        "2026-07-17": 435,
+        "2026-07-18": 1068,
+        "2026-07-19": 1126,
+        "2026-07-20": 754,
+        "2026-08-03": 674
+      },
+      "trend": "down",
+      "trend_delta": -80
+    },
+    {
+      "id": "manual:trendshift",
+      "name": "Trendshift",
+      "description": "A platform that tracks and ranks trending GitHub repositories in real-time based on daily momentum, offering an alternative discovery view to GitHub's own trending page.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://trendshift.io/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:trendspider",
+      "name": "TrendSpider",
+      "description": "An all-in-one, no-code trading platform combining automated technical charting (auto trendlines, Fibonacci, patterns), scanning, backtesting, cloud alerts and bots, plus AI strategy tools \u2014 aimed at non-programmer technical traders.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://trendspider.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "TrendSpider",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:swagger-openapi",
+      "name": "Swagger / OpenAPI",
+      "description": "OpenAPI is the industry-standard, tool-neutral specification for describing HTTP APIs; Swagger is the original tooling ecosystem (editor, codegen, UI) built around it for design, documentation, and client/server generation.",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.openapis.org/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:sphinx",
+      "name": "Sphinx",
+      "description": "A documentation generator, originally for Python, that converts reStructuredText/Markdown into HTML, PDF, and other formats with cross-referencing, autodoc, and search support.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/sphinx-doc/sphinx",
+      "canonical_url": "github.com/sphinx-doc/sphinx",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:realtest",
+      "name": "RealTest",
+      "description": "Multi-strategy, portfolio-level backtesting and trading-system software (by Marsten Parker / MHP Trading) that combines strategies, runs walk-forward optimization, and generates next-day order lists \u2014 a one-time-purchase desktop tool with no broker lock-in.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://mhptrading.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "MHP Trading",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:read-the-docs",
+      "name": "Read the Docs",
+      "description": "A documentation hosting and build platform that automates building, versioning, and publishing docs from Git repos (Sphinx, MkDocs, etc.), with free hosting for open source and paid plans for commercial use.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://about.readthedocs.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:quantrocket",
+      "name": "QuantRocket",
+      "description": "A Python-based quantitative trading platform for researching, backtesting, and live-trading strategies across global markets, bundling multiple backtest engines (Zipline, Moonshot, Alphalens) with historical/real-time data and execution via Interactive Brokers and Alpaca.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.quantrocket.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": "QuantRocket",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:qlib",
+      "name": "Qlib",
+      "description": "Microsoft's open-source, AI-oriented quantitative investment platform covering the full ML pipeline \u2014 data processing, model training, backtesting, portfolio optimization, and order execution \u2014 with support for supervised learning, market-dynamics modeling, and RL.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/microsoft/qlib",
+      "canonical_url": "github.com/microsoft/qlib",
+      "also_seen": [],
+      "company": "Microsoft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:microsoft-to-do-export",
+      "name": "Microsoft-To-Do-Export",
+      "description": "A Go CLI that pulls lists, tasks, notes, sub-tasks, and attachments out of Microsoft To Do via the Graph API and exports them to Todoist CSV, JSON, generic CSV, SuperProductivity, or Joplin JEX formats, enabling migration away from Microsoft To Do.",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/daylamtayari/Microsoft-To-Do-Export",
+      "canonical_url": "github.com/daylamtayari/microsoft-to-do-export",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:lobehub-lobe-chat",
+      "name": "LobeHub / lobe-chat",
+      "description": "Open-source AI chat framework/agent platform supporting multiple model providers, plugins, and knowledge base features, positioned as a self-hostable alternative to ChatGPT-style UIs.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/lobehub/lobe-chat",
+      "canonical_url": "github.com/lobehub/lobe-chat",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:hugo",
+      "name": "Hugo",
+      "description": "A fast static site generator written in Go, optimized for build speed and flexibility, widely used for documentation sites, blogs, and marketing sites with advanced templating and asset pipelines.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/gohugoio/hugo",
+      "canonical_url": "github.com/gohugoio/hugo",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:docusaurus",
+      "name": "Docusaurus",
+      "description": "Meta's open-source static site generator for building documentation websites, using React/MDX to let teams focus on content while it handles versioning, search, and site build/deploy infrastructure.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/facebook/docusaurus",
+      "canonical_url": "github.com/facebook/docusaurus",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PrismML-Eng/Bonsai-demo",
+      "name": "Bonsai-demo",
+      "description": "Bonsai Demo",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "canonical_url": "github.com/prismml-eng/bonsai-demo",
+      "also_seen": [],
+      "company": null,
+      "stars": 278,
+      "momentum": 19,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-18",
+      "stars_history": {
+        "2026-07-17": 196,
+        "2026-07-18": 278
+      },
+      "trend": "up",
+      "trend_delta": 82
+    },
+    {
+      "id": "manual:blankly-os",
+      "name": "Blankly OS",
+      "description": "An open-source quantitative operations platform (the previously closed-source Blankly stack, now a monorepo) for building, backtesting, deploying, and monitoring trading strategies on self-hosted or cloud infrastructure.",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/blankly-finance/blankly-os",
+      "canonical_url": "github.com/blankly-finance/blankly-os",
+      "also_seen": [],
+      "company": "Blankly Finance",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:autoschemakg",
+      "name": "AutoSchemaKG",
+      "description": "A framework for automatic knowledge graph construction that extracts entity/event triples from text with LLMs and induces schemas via conceptualization, avoiding the need for predefined KG schemas.",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/hkust-knowcomp/autoschemakg",
+      "canonical_url": "github.com/hkust-knowcomp/autoschemakg",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:apidog",
+      "name": "Apidog",
+      "description": "An all-in-one API design, documentation, mocking, and testing platform positioned as a Postman/Swagger alternative, combining spec authoring, automated testing, and generated docs in one tool.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://apidog.com/",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:qc-options-framework",
+      "name": "qc-options-framework",
+      "description": "Options trading framework for QuantConnect's Lean platform providing modular, inheritable base classes for alpha models, execution, and portfolio monitoring, enabling more sophisticated options strategies than the stock framework supports.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/Chocksy/qc-options-framework",
+      "canonical_url": "github.com/chocksy/qc-options-framework",
+      "also_seen": [],
+      "company": "Chocksy",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant",
+        "Trading"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:injaneity/pi-computer-use",
       "name": "pi-computer-use",
@@ -41,7 +3286,7 @@
       "canonical_url": "github.com/openinterpreter/openinterpreter",
       "also_seen": [],
       "company": null,
-      "stars": 299,
+      "stars": 431,
       "momentum": 29,
       "tags": [
         "rust"
@@ -49,10 +3294,37 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
-        "2026-07-16": 299
+        "2026-07-16": 299,
+        "2026-07-17": 661,
+        "2026-07-18": 431
       },
+      "trend": "up",
+      "trend_delta": 132
+    },
+    {
+      "id": "manual:zipline",
+      "name": "Zipline",
+      "description": "Pythonic, event-driven backtesting library originally powering Quantopian's platform; no longer actively maintained but still widely used as a reference backtesting engine.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/quantopian/zipline",
+      "canonical_url": "github.com/quantopian/zipline",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
       "trend": "none",
       "trend_delta": 0
     },
@@ -68,7 +3340,7 @@
       "canonical_url": "github.com/yimmenu/yimmenuv2",
       "also_seen": [],
       "company": null,
-      "stars": 38,
+      "stars": 128,
       "momentum": 3,
       "tags": [
         "c++"
@@ -76,10 +3348,112 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
-        "2026-07-16": 38
+        "2026-07-16": 38,
+        "2026-07-17": 128
       },
+      "trend": "up",
+      "trend_delta": 90
+    },
+    {
+      "id": "manual:statsmodels",
+      "name": "Statsmodels",
+      "description": "Python library complementing SciPy with statistical computation: regression, time series modeling, generalized linear models, survival analysis, and hypothesis testing.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/statsmodels/statsmodels",
+      "canonical_url": "github.com/statsmodels/statsmodels",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:scipy",
+      "name": "SciPy",
+      "description": "Foundational Python library for scientific computing, providing optimization, integration, statistics, linear algebra, and differential-equation routines built on high-performance Fortran/C++ implementations.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://scipy.org",
+      "canonical_url": null,
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:qc-strategybacktest",
+      "name": "QC-StrategyBacktest",
+      "description": "Python backtesting tool for the QuantConnect platform; runs historical strategy validation via a single main script plus supporting library modules.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/rccannizzaro/QC-StrategyBacktest",
+      "canonical_url": "github.com/rccannizzaro/qc-strategybacktest",
+      "also_seen": [],
+      "company": "",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant",
+        "Trading"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:pyfolio",
+      "name": "PyFolio",
+      "description": "Python library for performance and risk analysis of financial portfolios, generating tear sheets; in maintenance mode with its last release in 2019.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/quantopian/pyfolio",
+      "canonical_url": "github.com/quantopian/pyfolio",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
       "trend": "none",
       "trend_delta": 0
     },
@@ -99,6 +3473,31 @@
       "momentum": 0,
       "tags": [],
       "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:empyrical",
+      "name": "Empyrical",
+      "description": "Library of common financial risk and performance metrics used under the hood by Zipline and PyFolio; in maintenance mode since its last 2020 release.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/quantopian/empyrical",
+      "canonical_url": "github.com/quantopian/empyrical",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
       "archived_at": null,
       "first_seen": "2026-07-16",
       "last_seen": "2026-07-16",
@@ -141,7 +3540,7 @@
       "canonical_url": "github.com/hkuds/deeptutor",
       "also_seen": [],
       "company": null,
-      "stars": 172,
+      "stars": 531,
       "momentum": 17,
       "tags": [
         "python"
@@ -149,10 +3548,37 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
-        "2026-07-16": 172
+        "2026-07-16": 172,
+        "2026-07-17": 656,
+        "2026-07-18": 531
       },
+      "trend": "up",
+      "trend_delta": 359
+    },
+    {
+      "id": "manual:alphalens",
+      "name": "AlphaLens",
+      "description": "Python library for performance analysis of predictive (alpha) stock factors, producing returns, information-coefficient, and turnover statistics; in maintenance mode since 2020.",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/quantopian/alphalens",
+      "canonical_url": "github.com/quantopian/alphalens",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "stars_history": {},
       "trend": "none",
       "trend_delta": 0
     },
@@ -168,7 +3594,7 @@
       "canonical_url": "github.com/henryndubuaku/maths-cs-ai-compendium",
       "also_seen": [],
       "company": null,
-      "stars": 725,
+      "stars": 200,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -176,13 +3602,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-15": 112,
-        "2026-07-16": 725
+        "2026-07-16": 725,
+        "2026-07-18": 200
       },
       "trend": "up",
-      "trend_delta": 613
+      "trend_delta": 88
     },
     {
       "id": "github:chenyme/grok2api",
@@ -294,29 +3721,34 @@
       "id": "github:Graphify-Labs/graphify",
       "name": "graphify",
       "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
-      "quadrant": "Languages",
-      "ring": "Discovered",
+      "quadrant": "Tools",
+      "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "scraper",
       "url": "https://github.com/Graphify-Labs/graphify",
       "canonical_url": "github.com/graphify-labs/graphify",
       "also_seen": [],
       "company": null,
-      "stars": 1851,
+      "stars": 1107,
       "momentum": 100,
       "tags": [
         "python"
       ],
-      "topics": [],
+      "topics": [
+        "Agents",
+        "Skills",
+        "RAG"
+      ],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-14": 1095,
-        "2026-07-15": 1851
+        "2026-07-15": 1851,
+        "2026-07-17": 1107
       },
       "trend": "up",
-      "trend_delta": 756
+      "trend_delta": 12
     },
     {
       "id": "github:moeru-ai/airi",
@@ -330,7 +3762,7 @@
       "canonical_url": "github.com/moeru-ai/airi",
       "also_seen": [],
       "company": null,
-      "stars": 110,
+      "stars": 682,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -338,13 +3770,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-07-14": 78,
-        "2026-07-16": 110
+        "2026-07-16": 110,
+        "2026-07-28": 572,
+        "2026-07-29": 797,
+        "2026-07-30": 682
       },
       "trend": "up",
-      "trend_delta": 32
+      "trend_delta": 572
     },
     {
       "id": "github:OpenCut-app/OpenCut",
@@ -358,7 +3793,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 1664,
+      "stars": 1074,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -366,14 +3801,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-14": 1229,
         "2026-07-15": 4276,
-        "2026-07-16": 1664
+        "2026-07-16": 1664,
+        "2026-07-17": 3537,
+        "2026-07-18": 1074
       },
-      "trend": "up",
-      "trend_delta": 435
+      "trend": "down",
+      "trend_delta": -155
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -410,7 +3847,7 @@
       "canonical_url": "github.com/pingdotgg/t3code",
       "also_seen": [],
       "company": null,
-      "stars": 75,
+      "stars": 149,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -418,12 +3855,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-27",
       "stars_history": {
-        "2026-07-13": 75
+        "2026-07-13": 75,
+        "2026-07-27": 149
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 74
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -515,7 +3953,7 @@
       "canonical_url": "github.com/nutlope/hallmark",
       "also_seen": [],
       "company": null,
-      "stars": 1277,
+      "stars": 1485,
       "momentum": 15,
       "tags": [
         "css"
@@ -523,15 +3961,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-18",
       "stars_history": {
         "2026-07-13": 155,
         "2026-07-14": 794,
         "2026-07-15": 1015,
-        "2026-07-16": 1277
+        "2026-07-16": 1277,
+        "2026-07-17": 3372,
+        "2026-07-18": 1485
       },
       "trend": "up",
-      "trend_delta": 1122
+      "trend_delta": 1330
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -624,7 +4064,7 @@
       "canonical_url": "github.com/shubhamsaboo/awesome-llm-apps",
       "also_seen": [],
       "company": null,
-      "stars": 1236,
+      "stars": 923,
       "momentum": 40,
       "tags": [
         "python"
@@ -632,15 +4072,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-13": 408,
         "2026-07-14": 996,
         "2026-07-15": 1106,
-        "2026-07-16": 1236
+        "2026-07-16": 1236,
+        "2026-07-17": 923
       },
       "trend": "up",
-      "trend_delta": 828
+      "trend_delta": 515
     },
     {
       "id": "github:virattt/ai-hedge-fund",
@@ -1908,7 +5349,7 @@
       "canonical_url": "github.com/vercel/next.js",
       "also_seen": [],
       "company": "Vercel",
-      "stars": 334,
+      "stars": 68,
       "momentum": 19,
       "tags": [
         "javascript"
@@ -1916,13 +5357,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-07-11": 191,
-        "2026-07-12": 334
+        "2026-07-12": 334,
+        "2026-08-06": 68
       },
-      "trend": "up",
-      "trend_delta": 143
+      "trend": "down",
+      "trend_delta": -266
     },
     {
       "id": "github:zeux/meshoptimizer",
@@ -2213,7 +5655,7 @@
       "canonical_url": "github.com/anthropics/claude-cookbooks",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 459,
+      "stars": 379,
       "momentum": 19,
       "tags": [
         "jupyter notebook"
@@ -2221,14 +5663,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-10": 194,
         "2026-07-12": 219,
-        "2026-07-13": 459
+        "2026-07-13": 459,
+        "2026-07-26": 132,
+        "2026-07-27": 379
       },
-      "trend": "up",
-      "trend_delta": 265
+      "trend": "down",
+      "trend_delta": -80
     },
     {
       "id": "github:VoltAgent/awesome-design-md",
@@ -2430,7 +5874,7 @@
       "canonical_url": "github.com/tencentcloud/tencentdb-agent-memory",
       "also_seen": [],
       "company": null,
-      "stars": 123,
+      "stars": 1892,
       "momentum": 31,
       "tags": [
         "typescript"
@@ -2438,13 +5882,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-07-09": 318,
-        "2026-07-11": 123
+        "2026-07-11": 123,
+        "2026-08-02": 227,
+        "2026-08-03": 602,
+        "2026-08-04": 1090,
+        "2026-08-05": 1111,
+        "2026-08-06": 1892
       },
-      "trend": "down",
-      "trend_delta": -195
+      "trend": "up",
+      "trend_delta": 1769
     },
     {
       "id": "github:Diolinux/PhotoGIMP",
@@ -2656,7 +6105,7 @@
       "canonical_url": "github.com/bradautomates/claude-video",
       "also_seen": [],
       "company": null,
-      "stars": 718,
+      "stars": 988,
       "momentum": 42,
       "tags": [
         "python"
@@ -2664,15 +6113,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-07-07": 427,
         "2026-07-08": 965,
         "2026-07-09": 951,
-        "2026-07-10": 718
+        "2026-07-10": 718,
+        "2026-07-28": 434,
+        "2026-07-29": 988
       },
       "trend": "up",
-      "trend_delta": 291
+      "trend_delta": 270
     },
     {
       "id": "github:sindresorhus/awesome",
@@ -3133,7 +6584,7 @@
       "canonical_url": "github.com/ansible/ansible",
       "also_seen": [],
       "company": null,
-      "stars": 24,
+      "stars": 30,
       "momentum": 6,
       "tags": [
         "python"
@@ -3141,13 +6592,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-07-04": 65,
-        "2026-07-12": 24
+        "2026-07-12": 24,
+        "2026-07-31": 29,
+        "2026-08-02": 30
       },
-      "trend": "down",
-      "trend_delta": -41
+      "trend": "up",
+      "trend_delta": 6
     },
     {
       "id": "manual:ui-bakery-build-with-ai",
@@ -3555,7 +7008,7 @@
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "also_seen": [],
       "company": null,
-      "stars": 304,
+      "stars": 80,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -3563,14 +7016,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-05",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-07-03": 104,
         "2026-07-04": 405,
-        "2026-07-05": 304
+        "2026-07-05": 304,
+        "2026-07-31": 80
       },
-      "trend": "up",
-      "trend_delta": 200
+      "trend": "down",
+      "trend_delta": -224
     },
     {
       "id": "github:actions/checkout",
@@ -4217,7 +7671,7 @@
       "name": "OpenBB",
       "description": "Open source investment research platform aggregating financial data, analytics, and Python tooling.",
       "quadrant": "Tools",
-      "ring": "Assess",
+      "ring": "Trial",
       "source": "Manual",
       "discovered_by": "manual",
       "url": "https://github.com/OpenBB-finance/OpenBB",
@@ -4520,7 +7974,7 @@
       "canonical_url": "github.com/hasaneyldrm/exercises-dataset",
       "also_seen": [],
       "company": null,
-      "stars": 949,
+      "stars": 710,
       "momentum": 100,
       "tags": [
         "html"
@@ -4528,17 +7982,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-17",
       "stars_history": {
         "2026-07-01": 1343,
         "2026-07-02": 2470,
         "2026-07-03": 938,
         "2026-07-14": 451,
         "2026-07-15": 851,
-        "2026-07-16": 949
+        "2026-07-16": 949,
+        "2026-07-17": 710
       },
-      "trend": "up",
-      "trend_delta": 11
+      "trend": "down",
+      "trend_delta": -228
     },
     {
       "id": "github:Mebus/cupp",
@@ -4637,7 +8092,7 @@
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "also_seen": [],
       "company": null,
-      "stars": 1010,
+      "stars": 1841,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -4645,13 +8100,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-25",
       "stars_history": {
         "2026-07-01": 387,
-        "2026-07-02": 1010
+        "2026-07-02": 1010,
+        "2026-07-21": 1107,
+        "2026-07-22": 2034,
+        "2026-07-23": 1651,
+        "2026-07-24": 1929,
+        "2026-07-25": 1841
       },
       "trend": "up",
-      "trend_delta": 623
+      "trend_delta": 831
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -4665,7 +8125,7 @@
       "canonical_url": "github.com/corebunch/instatic",
       "also_seen": [],
       "company": null,
-      "stars": 508,
+      "stars": 888,
       "momentum": 35,
       "tags": [
         "typescript"
@@ -4673,13 +8133,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-07-27",
       "stars_history": {
         "2026-07-01": 351,
-        "2026-07-02": 508
+        "2026-07-02": 508,
+        "2026-07-25": 201,
+        "2026-07-26": 426,
+        "2026-07-27": 888
       },
       "trend": "up",
-      "trend_delta": 157
+      "trend_delta": 380
     },
     {
       "id": "github:microsoft/AI-For-Beginners",
@@ -4693,7 +8156,7 @@
       "canonical_url": "github.com/microsoft/ai-for-beginners",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 1096,
+      "stars": 1902,
       "momentum": 25,
       "tags": [
         "jupyter notebook"
@@ -4701,13 +8164,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-07-01": 252,
-        "2026-07-02": 1096
+        "2026-07-02": 1096,
+        "2026-07-31": 155,
+        "2026-08-01": 1592,
+        "2026-08-02": 949,
+        "2026-08-03": 2629,
+        "2026-08-04": 1902
       },
       "trend": "up",
-      "trend_delta": 844
+      "trend_delta": 806
     },
     {
       "id": "github:windingwind/zotero-plugin-template",
@@ -5787,16 +9255,21 @@
       "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "also_seen": [],
       "company": "Composio",
-      "stars": 0,
+      "stars": 577,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
-      "trend": "none",
-      "trend_delta": 0
+      "last_seen": "2026-07-26",
+      "stars_history": {
+        "2026-07-23": 163,
+        "2026-07-24": 636,
+        "2026-07-25": 663,
+        "2026-07-26": 577
+      },
+      "trend": "up",
+      "trend_delta": 414
     },
     {
       "id": "github:travisvn/awesome-claude-skills",
@@ -6201,7 +9674,7 @@
       "canonical_url": "github.com/browser-use/video-use",
       "also_seen": [],
       "company": null,
-      "stars": 554,
+      "stars": 320,
       "momentum": 19,
       "tags": [
         "python"
@@ -6209,16 +9682,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-29": 976,
         "2026-06-30": 967,
         "2026-07-01": 721,
         "2026-07-02": 693,
-        "2026-07-03": 554
+        "2026-07-03": 554,
+        "2026-08-05": 320
       },
       "trend": "down",
-      "trend_delta": -422
+      "trend_delta": -234
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
@@ -6319,7 +9793,7 @@
       "canonical_url": "github.com/robbyant/lingbot-map",
       "also_seen": [],
       "company": null,
-      "stars": 189,
+      "stars": 565,
       "momentum": 37,
       "tags": [
         "python"
@@ -6327,13 +9801,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-07-21",
       "stars_history": {
         "2026-06-29": 372,
-        "2026-07-01": 189
+        "2026-07-01": 189,
+        "2026-07-19": 831,
+        "2026-07-21": 565
       },
-      "trend": "down",
-      "trend_delta": -183
+      "trend": "up",
+      "trend_delta": 376
     },
     {
       "id": "github:cupy/cupy",
@@ -6564,7 +10040,7 @@
       "id": "github:dbt-labs/dbt-core",
       "name": "dbt-core",
       "description": "dbt enables data analysts and engineers to transform their data using the same practices that software engineers use to build applications.",
-      "quadrant": "Languages",
+      "quadrant": "Tools",
       "ring": "Discovered",
       "source": "GitHub",
       "discovered_by": "scraper",
@@ -6577,7 +10053,10 @@
       "tags": [
         "rust"
       ],
-      "topics": [],
+      "topics": [
+        "Data Feeds",
+        "Skills"
+      ],
       "archived_at": null,
       "first_seen": "2026-06-28",
       "last_seen": "2026-06-28",
@@ -6772,18 +10251,19 @@
       "canonical_url": "github.com/flowseal/zapret-discord-youtube",
       "also_seen": [],
       "company": null,
-      "stars": 61,
+      "stars": 106,
       "momentum": 6,
       "tags": [
         "batchfile"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-20",
       "stars_history": {
-        "2026-06-25": 61
+        "2026-06-25": 61,
+        "2026-07-20": 106
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 45
     },
     {
       "id": "github:alibaba/page-agent",
@@ -6852,7 +10332,7 @@
       "canonical_url": "github.com/every-app/open-seo",
       "also_seen": [],
       "company": null,
-      "stars": 239,
+      "stars": 849,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -6860,14 +10340,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-22",
       "stars_history": {
         "2026-06-25": 57,
         "2026-06-26": 57,
-        "2026-06-28": 239
+        "2026-06-28": 239,
+        "2026-07-21": 939,
+        "2026-07-22": 849
       },
       "trend": "up",
-      "trend_delta": 182
+      "trend_delta": 610
     },
     {
       "id": "github:kunchenguid/no-mistakes",
@@ -7131,7 +10613,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 394,
+      "stars": 154,
       "momentum": 34,
       "tags": [
         "python"
@@ -7139,15 +10621,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-25": 347,
         "2026-06-26": 398,
         "2026-06-27": 673,
-        "2026-06-28": 394
+        "2026-06-28": 394,
+        "2026-07-28": 362,
+        "2026-07-30": 154
       },
-      "trend": "up",
-      "trend_delta": 47
+      "trend": "down",
+      "trend_delta": -240
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -7412,21 +10896,25 @@
       "canonical_url": "github.com/jamiepine/voicebox",
       "also_seen": [],
       "company": null,
-      "stars": 1045,
+      "stars": 412,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-21": 145,
         "2026-06-22": 614,
         "2026-06-23": 529,
-        "2026-06-24": 1045
+        "2026-06-24": 1045,
+        "2026-07-20": 610,
+        "2026-07-21": 821,
+        "2026-07-23": 557,
+        "2026-08-04": 412
       },
-      "trend": "up",
-      "trend_delta": 900
+      "trend": "down",
+      "trend_delta": -145
     },
     {
       "id": "github:twentyhq/twenty",
@@ -7548,18 +11036,23 @@
       "canonical_url": "github.com/1jehuang/jcode",
       "also_seen": [],
       "company": null,
-      "stars": 87,
+      "stars": 527,
       "momentum": 8,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-08-01",
       "stars_history": {
-        "2026-06-21": 87
+        "2026-06-21": 87,
+        "2026-07-20": 235,
+        "2026-07-21": 568,
+        "2026-07-22": 843,
+        "2026-07-30": 640,
+        "2026-08-01": 527
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -316
     },
     {
       "id": "github:bytedance/deer-flow",
@@ -7573,21 +11066,22 @@
       "canonical_url": "github.com/bytedance/deer-flow",
       "also_seen": [],
       "company": null,
-      "stars": 739,
+      "stars": 209,
       "momentum": 41,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-06-21": 415,
         "2026-06-22": 442,
         "2026-06-23": 738,
-        "2026-06-24": 739
+        "2026-06-24": 739,
+        "2026-08-02": 209
       },
-      "trend": "up",
-      "trend_delta": 324
+      "trend": "down",
+      "trend_delta": -530
     },
     {
       "id": "github:ZhuLinsen/daily_stock_analysis",
@@ -7630,19 +11124,20 @@
       "canonical_url": "github.com/topoteretes/cognee",
       "also_seen": [],
       "company": null,
-      "stars": 780,
+      "stars": 234,
       "momentum": 36,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-07-21",
       "stars_history": {
         "2026-06-21": 361,
-        "2026-06-28": 780
+        "2026-06-28": 780,
+        "2026-07-21": 234
       },
-      "trend": "up",
-      "trend_delta": 419
+      "trend": "down",
+      "trend_delta": -546
     },
     {
       "id": "github:mikumifa/biliTickerBuy",
@@ -7760,20 +11255,24 @@
       "canonical_url": "github.com/koala73/worldmonitor",
       "also_seen": [],
       "company": null,
-      "stars": 294,
+      "stars": 2184,
       "momentum": 15,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-25",
       "stars_history": {
         "2026-06-20": 156,
         "2026-06-21": 633,
-        "2026-06-24": 294
+        "2026-06-24": 294,
+        "2026-07-22": 1295,
+        "2026-07-23": 4139,
+        "2026-07-24": 3175,
+        "2026-07-25": 2184
       },
       "trend": "up",
-      "trend_delta": 138
+      "trend_delta": 1890
     },
     {
       "id": "github:palmier-io/palmier-pro",
@@ -7787,22 +11286,23 @@
       "canonical_url": "github.com/palmier-io/palmier-pro",
       "also_seen": [],
       "company": null,
-      "stars": 1630,
+      "stars": 412,
       "momentum": 75,
       "tags": [
         "swift"
       ],
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-24",
+      "last_seen": "2026-07-26",
       "stars_history": {
         "2026-06-20": 756,
         "2026-06-21": 1829,
         "2026-06-22": 1834,
         "2026-06-23": 2463,
-        "2026-06-24": 1630
+        "2026-06-24": 1630,
+        "2026-07-26": 412
       },
-      "trend": "up",
-      "trend_delta": 874
+      "trend": "down",
+      "trend_delta": -1218
     },
     {
       "id": "github:aishwaryanr/awesome-generative-ai-guide",
@@ -7943,19 +11443,20 @@
       "canonical_url": "github.com/dotnet/aspnetcore",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 4,
+      "stars": 7,
       "momentum": 1,
       "tags": [
         "c#"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-19": 14,
-        "2026-07-12": 4
+        "2026-07-12": 4,
+        "2026-07-31": 7
       },
-      "trend": "down",
-      "trend_delta": -10
+      "trend": "up",
+      "trend_delta": 3
     },
     {
       "id": "github:LibreTranslate/LibreTranslate",
@@ -8073,13 +11574,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 2130,
+      "stars": 1740,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-07-26",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -8089,11 +11590,14 @@
         "2026-07-05": 973,
         "2026-07-11": 1712,
         "2026-07-15": 1679,
-        "2026-07-16": 2130
+        "2026-07-16": 2130,
+        "2026-07-17": 2060,
+        "2026-07-25": 2251,
+        "2026-07-26": 1740
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 1157
+      "trend": "down",
+      "trend_delta": -320
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -8526,20 +12030,21 @@
       "canonical_url": "github.com/cypress-io/cypress",
       "also_seen": [],
       "company": null,
-      "stars": 19,
+      "stars": 11,
       "momentum": 1,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-16",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-08-05",
       "stars_history": {
         "2026-06-16": 11,
         "2026-06-17": 13,
-        "2026-07-12": 19
+        "2026-07-12": 19,
+        "2026-08-05": 11
       },
-      "trend": "up",
-      "trend_delta": 6
+      "trend": "down",
+      "trend_delta": -8
     },
     {
       "id": "github:teslamate-org/teslamate",
@@ -8691,19 +12196,20 @@
       "canonical_url": "github.com/trycua/cua",
       "also_seen": [],
       "company": null,
-      "stars": 70,
+      "stars": 64,
       "momentum": 5,
       "tags": [
         "html"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-20",
       "stars_history": {
         "2026-06-15": 57,
-        "2026-06-16": 70
+        "2026-06-16": 70,
+        "2026-07-20": 64
       },
-      "trend": "up",
-      "trend_delta": 13
+      "trend": "down",
+      "trend_delta": -6
     },
     {
       "id": "github:rohitg00/ai-engineering-from-scratch",
@@ -8717,19 +12223,23 @@
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "also_seen": [],
       "company": null,
-      "stars": 562,
+      "stars": 652,
       "momentum": 53,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-07-23",
       "stars_history": {
         "2026-06-15": 538,
-        "2026-06-16": 562
+        "2026-06-16": 562,
+        "2026-07-19": 191,
+        "2026-07-20": 501,
+        "2026-07-21": 823,
+        "2026-07-23": 652
       },
       "trend": "up",
-      "trend_delta": 24
+      "trend_delta": 90
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -8797,19 +12307,26 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 396,
+      "stars": 200,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-15": 244,
-        "2026-06-16": 396
+        "2026-06-16": 396,
+        "2026-07-23": 137,
+        "2026-07-24": 401,
+        "2026-07-25": 499,
+        "2026-07-26": 319,
+        "2026-07-27": 321,
+        "2026-07-28": 441,
+        "2026-08-04": 200
       },
-      "trend": "up",
-      "trend_delta": 152
+      "trend": "down",
+      "trend_delta": -241
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -8905,19 +12422,22 @@
       "canonical_url": "github.com/andrewyng/aisuite",
       "also_seen": [],
       "company": null,
-      "stars": 127,
+      "stars": 62,
       "momentum": 13,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-13",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-07-29",
       "stars_history": {
         "2026-06-13": 132,
-        "2026-06-14": 127
+        "2026-06-14": 127,
+        "2026-07-26": 77,
+        "2026-07-27": 187,
+        "2026-07-29": 62
       },
       "trend": "down",
-      "trend_delta": -5
+      "trend_delta": -65
     },
     {
       "id": "github:alchaincyf/zhangxuefeng-skill",
@@ -9061,23 +12581,24 @@
       "canonical_url": "github.com/iptv-org/iptv",
       "also_seen": [],
       "company": null,
-      "stars": 1197,
+      "stars": 240,
       "momentum": 14,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-17",
+      "last_seen": "2026-07-21",
       "stars_history": {
         "2026-06-12": 142,
         "2026-06-13": 650,
         "2026-06-14": 530,
         "2026-06-15": 1528,
         "2026-06-16": 1196,
-        "2026-06-17": 1197
+        "2026-06-17": 1197,
+        "2026-07-21": 240
       },
-      "trend": "up",
-      "trend_delta": 1055
+      "trend": "down",
+      "trend_delta": -957
     },
     {
       "id": "github:bannedbook/fanqiang",
@@ -9118,13 +12639,13 @@
       "canonical_url": "github.com/chatwoot/chatwoot",
       "also_seen": [],
       "company": null,
-      "stars": 264,
+      "stars": 35,
       "momentum": 6,
       "tags": [
         "ruby"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-08-01",
       "stars_history": {
         "2026-06-12": 67,
         "2026-06-13": 86,
@@ -9132,10 +12653,11 @@
         "2026-06-15": 400,
         "2026-06-16": 431,
         "2026-06-17": 400,
-        "2026-06-18": 264
+        "2026-06-18": 264,
+        "2026-08-01": 35
       },
-      "trend": "up",
-      "trend_delta": 197
+      "trend": "down",
+      "trend_delta": -229
     },
     {
       "id": "github:kenn-io/agentsview",
@@ -9176,13 +12698,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 1208,
+      "stars": 862,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-07-21",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -9191,10 +12713,11 @@
         "2026-07-01": 1791,
         "2026-07-02": 2114,
         "2026-07-03": 3032,
-        "2026-07-04": 1208
+        "2026-07-04": 1208,
+        "2026-07-21": 862
       },
-      "trend": "up",
-      "trend_delta": 182
+      "trend": "down",
+      "trend_delta": -346
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -9237,22 +12760,23 @@
       "canonical_url": "github.com/microsoft/powertoys",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 39,
+      "stars": 70,
       "momentum": 9,
       "tags": [
         "c"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-12": 90,
         "2026-06-13": 374,
         "2026-06-14": 370,
         "2026-06-28": 57,
-        "2026-07-12": 39
+        "2026-07-12": 39,
+        "2026-07-31": 70
       },
-      "trend": "down",
-      "trend_delta": -18
+      "trend": "up",
+      "trend_delta": 31
     },
     {
       "id": "github:LMCache/LMCache",
@@ -9405,23 +12929,26 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 799,
+      "stars": 1022,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-07-25",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
         "2026-07-06": 161,
         "2026-07-07": 470,
         "2026-07-08": 1129,
-        "2026-07-09": 799
+        "2026-07-09": 799,
+        "2026-07-23": 741,
+        "2026-07-24": 1708,
+        "2026-07-25": 1022
       },
       "trend": "up",
-      "trend_delta": 379
+      "trend_delta": 223
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -9572,13 +13099,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1116,
+      "stars": 226,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -9590,11 +13117,12 @@
         "2026-07-08": 1317,
         "2026-07-09": 1297,
         "2026-07-10": 2554,
-        "2026-07-11": 1116
+        "2026-07-11": 1116,
+        "2026-08-06": 226
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -398
+      "trend_delta": -890
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -9635,22 +13163,23 @@
       "canonical_url": "github.com/roboflow/supervision",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 146,
       "momentum": 95,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-07-01",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-06-08": 957,
         "2026-06-09": 735,
         "2026-06-10": 699,
         "2026-06-11": 695,
-        "2026-07-01": 309
+        "2026-07-01": 309,
+        "2026-08-06": 146
       },
       "trend": "down",
-      "trend_delta": -386
+      "trend_delta": -163
     },
     {
       "id": "github:google/skills",
@@ -9750,21 +13279,23 @@
       "canonical_url": "github.com/ryancodrai/turbovec",
       "also_seen": [],
       "company": null,
-      "stars": 1801,
+      "stars": 86,
       "momentum": 100,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-10",
+      "last_seen": "2026-07-26",
       "stars_history": {
         "2026-06-07": 1533,
         "2026-06-08": 1730,
         "2026-06-09": 1800,
-        "2026-06-10": 1801
+        "2026-06-10": 1801,
+        "2026-07-18": 280,
+        "2026-07-26": 86
       },
-      "trend": "up",
-      "trend_delta": 268
+      "trend": "down",
+      "trend_delta": -194
     },
     {
       "id": "github:refactoringhq/tolaria",
@@ -10138,13 +13669,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 740,
+      "stars": 931,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -10162,11 +13693,15 @@
         "2026-07-04": 1209,
         "2026-07-09": 1116,
         "2026-07-11": 1013,
-        "2026-07-12": 740
+        "2026-07-12": 740,
+        "2026-07-26": 479,
+        "2026-07-30": 616,
+        "2026-08-05": 653,
+        "2026-08-06": 931
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -469
+      "trend": "up",
+      "trend_delta": 315
     },
     {
       "id": "github:openai/plugins",
@@ -10374,19 +13909,20 @@
       "canonical_url": "github.com/microsoft/vibevoice",
       "also_seen": [],
       "company": "Microsoft",
-      "stars": 216,
+      "stars": 336,
       "momentum": 21,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-07",
+      "last_seen": "2026-07-30",
       "stars_history": {
         "2026-06-06": 219,
-        "2026-06-07": 216
+        "2026-06-07": 216,
+        "2026-07-30": 336
       },
-      "trend": "down",
-      "trend_delta": -3
+      "trend": "up",
+      "trend_delta": 120
     },
     {
       "id": "github:danielmiessler/Personal_AI_Infrastructure",
@@ -10481,13 +14017,13 @@
       "canonical_url": "github.com/panniantong/agent-reach",
       "also_seen": [],
       "company": null,
-      "stars": 1194,
+      "stars": 1057,
       "momentum": 14,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-08-04",
       "stars_history": {
         "2026-06-06": 700,
         "2026-06-07": 683,
@@ -10497,10 +14033,12 @@
         "2026-06-16": 1100,
         "2026-06-17": 2025,
         "2026-06-18": 1161,
-        "2026-06-27": 1194
+        "2026-06-27": 1194,
+        "2026-08-03": 659,
+        "2026-08-04": 1057
       },
-      "trend": "up",
-      "trend_delta": 33
+      "trend": "down",
+      "trend_delta": -137
     },
     {
       "id": "github:github/spec-kit",
@@ -10594,13 +14132,13 @@
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "also_seen": [],
       "company": null,
-      "stars": 352,
+      "stars": 206,
       "momentum": 17,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-08-03",
       "stars_history": {
         "2026-06-04": 173,
         "2026-06-05": 199,
@@ -10611,10 +14149,14 @@
         "2026-06-10": 2561,
         "2026-06-11": 2535,
         "2026-07-07": 458,
-        "2026-07-09": 352
+        "2026-07-09": 352,
+        "2026-07-28": 240,
+        "2026-07-31": 378,
+        "2026-08-01": 658,
+        "2026-08-03": 206
       },
       "trend": "down",
-      "trend_delta": -2183
+      "trend_delta": -146
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -10653,20 +14195,25 @@
       "canonical_url": "github.com/github/copilot-sdk",
       "also_seen": [],
       "company": null,
-      "stars": 309,
+      "stars": 142,
       "momentum": 2,
       "tags": [
         "java"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-06-06",
+      "last_seen": "2026-08-02",
       "stars_history": {
         "2026-06-04": 25,
         "2026-06-05": 38,
-        "2026-06-06": 309
+        "2026-06-06": 309,
+        "2026-07-17": 13,
+        "2026-07-18": 233,
+        "2026-07-20": 39,
+        "2026-08-01": 7,
+        "2026-08-02": 142
       },
       "trend": "up",
-      "trend_delta": 284
+      "trend_delta": 103
     },
     {
       "id": "github:PaddlePaddle/PaddleOCR",
@@ -11022,20 +14569,26 @@
       "canonical_url": "github.com/lyogavin/airllm",
       "also_seen": [],
       "company": null,
-      "stars": 193,
+      "stars": 833,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-08-06",
       "stars_history": {
         "2026-06-03": 208,
         "2026-06-22": 453,
-        "2026-06-23": 193
+        "2026-06-23": 193,
+        "2026-07-19": 161,
+        "2026-07-20": 358,
+        "2026-08-03": 819,
+        "2026-08-04": 1085,
+        "2026-08-05": 1711,
+        "2026-08-06": 833
       },
-      "trend": "down",
-      "trend_delta": -15
+      "trend": "up",
+      "trend_delta": 475
     },
     {
       "id": "github:OpenBMB/VoxCPM",
@@ -11158,24 +14711,28 @@
       "canonical_url": "github.com/affaan-m/ecc",
       "also_seen": [],
       "company": null,
-      "stars": 486,
+      "stars": 804,
       "momentum": 100,
       "tags": [
         "javascript"
       ],
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-07-31",
       "stars_history": {
         "2026-06-03": 2141,
         "2026-06-04": 1736,
         "2026-06-05": 1750,
         "2026-06-06": 1361,
         "2026-06-24": 593,
-        "2026-07-03": 486
+        "2026-07-03": 486,
+        "2026-07-26": 377,
+        "2026-07-29": 636,
+        "2026-07-30": 857,
+        "2026-07-31": 804
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -107
+      "trend": "up",
+      "trend_delta": 318
     }
   ]
 }

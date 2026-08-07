@@ -152,8 +152,8 @@ A curated, controlled vocabulary assigned per item, separate from the
 free-form `tags` scrapers emit: `AI` · `ML` · `Agents` · `Skills` ·
 `Prompts` · `Trading` · `Quant` · `RAG` · `Data Feeds` (extend `TOPICS` in
 `radar_core.py`). Filter by topic in the dashboard or with `list --topic <name>`.
-The same vocabulary is reused by the Reading List below, so a book and a
-technology can share a topic tag.
+The same vocabulary is reused by the Learning Library below, so a book,
+article, video, and a technology can share a topic tag.
 
 ### Item schema
 
@@ -186,50 +186,83 @@ technology can share a topic tag.
 
 ---
 
-## Reading List
+## Learning Library
 
-A companion page (`web/books.html` + `web/books.jsx`) for tracking books
-alongside the technologies they relate to. Backed by `data/books.json`, which
-you can hand-curate *or* sync from a [Calibre](https://calibre-ebook.com/)
-library (see below). Read-only, same as the deployed dashboard.
-
-### Syncing from Calibre
-
-`build_books.py` pulls a Calibre library through the official `calibredb` CLI
-and rewrites `data/books.json`:
+A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
+learning content — **books, articles, videos, and certifications** —
+alongside the technologies they relate to. Hand-curated in Markdown under
+`learning/` (one file per item, like `people/` and `projects/`), which
+`build_learning.py` aggregates into `data/learning.json`. Manage it with
+`learning.py` (the `learning-manage` skill):
 
 ```bash
-python build_books.py                     # default local library
-python build_books.py --library /path/lib # a specific library folder
-python build_books.py --library http://host:8080/#Lib   # a Content Server
-python build_books.py --dry-run           # pull + report, write nothing
+python learning.py list --status Reading    # what's in progress
+python learning.py status <id-or-title> Read
+python learning.py rate <id-or-title> 5
+python learning.py add "<Title>" --type book --author "..." --topics "ML,AI"
 ```
 
-Calibre owns the *facts* (title, author, year, rating, blurb, tags→topics,
-date added). *Reading state* (`status`, `pages_read`, `started`, `finished`)
-comes from Calibre custom columns (`#status`, `#pages_read`, `#started`,
-`#finished`, `#pages`) when they exist, and is otherwise **preserved from the
-existing `data/books.json`** — so curated status and blurbs are never
-clobbered. New library books default to `Discovered`; books in `books.json`
-but not in the library are kept and reported (use `--drop-orphans` to prune).
+The CLI writes the `learning/*.md` source **and** refreshes
+`data/learning.json` in one step, so a CLI edit publishes immediately. Prefer
+to hand-edit a `learning/<id>.md`? Run `python build_learning.py` to republish.
+Read-only in the browser, same as the deployed dashboard. See
+`learning/README.md` for the file format.
 
-`notebooks/calibre_sync.ipynb` drives the same flow from Jupyter, running the
-Calibre pull asynchronously (it awaits the `calibredb` subprocess) and
-decoupled from the site build.
+### Syncing books from Calibre
+
+`calibre_sync.py` pulls a [Calibre](https://calibre-ebook.com/) library through
+the official `calibredb` CLI and writes/updates one `learning/<id>.md` **book**
+file per title, then refreshes `data/learning.json` — the same source-of-truth
+write the `learning.py` CLI does:
+
+```bash
+python calibre_sync.py                     # default local library
+python calibre_sync.py --library /path/lib # a specific library folder
+python calibre_sync.py --library http://host:8080/#Lib   # a Content Server
+python calibre_sync.py --dry-run           # pull + report, write nothing
+```
+
+Calibre owns the *facts* (title, author, year, rating, `pages`, blurb,
+tags→topics, date added). *Reading state* (`status`, `pages_read`, and the
+`started`/`finished`/`queued`/`shelved` date stamps) comes from Calibre custom
+columns (`#status`, `#pages_read`, `#started`, `#finished`) when they exist, and
+is otherwise **preserved from the existing `learning/<id>.md`** — so curated
+status and blurbs are never clobbered. New library books are added as
+`Discovered`; existing `book` items not found in the library are left untouched
+and reported (non-book items — articles, videos, certifications — are never
+touched). `notebooks/calibre_sync.ipynb` drives the same flow from Jupyter,
+running the Calibre pull asynchronously (it awaits the `calibredb` subprocess)
+and decoupled from the build.
 
 ### Status
 
 | Status | Meaning |
 |--------|---------|
 | `Discovered` | On the list, not started |
-| `Reading` | In progress — tracks `pages_read` |
+| `Queued` | Decided to pursue it, hasn't started — tracks `queued` date |
+| `Reading` | In progress — books track `pages_read` |
 | `Read` | Finished — tracks `rating` (1–5) |
+| `Shelved` | Deliberate "not now" set-aside — tracks `shelved` date and optional `shelved_note` |
 
-### Book schema
+Status is content-neutral: for an article, video, or certification,
+`Reading`/`Read` simply mean "in progress" / "done" (shown in the UI as
+*In Progress* / *Done*).
+
+### Item schema
+
+Every item carries a `type` (`book` · `article` · `video` ·
+`certification`) plus the shared fields below. Type-specific "length"
+fields differ: books use `pages`/`pages_read`, articles use `minutes`
+(read time), videos use `duration`, certifications use `price` (exam
+fee). Articles, videos, and certifications also carry a `url` and a
+`source` (publication / channel for articles and videos, exam code for
+certifications); certifications use `author` for the issuing
+organization.
 
 ```json
 {
   "id": "ddia",
+  "type": "book",
   "title": "Designing Data-Intensive Applications",
   "author": "Martin Kleppmann",
   "year": 2017,
@@ -245,10 +278,48 @@ decoupled from the site build.
 }
 ```
 
+```json
+{
+  "id": "attention-is-all-you-need",
+  "type": "article",
+  "title": "Attention Is All You Need",
+  "author": "Vaswani et al.",
+  "source": "arXiv",
+  "url": "https://arxiv.org/abs/1706.03762",
+  "year": 2017,
+  "status": "Read",
+  "topics": ["ML", "AI"],
+  "minutes": 40,
+  "rating": 5,
+  "finished": "2025-08-11",
+  "blurb": "..."
+}
+```
+
+```json
+{
+  "id": "databricks-genai-engineer-associate",
+  "type": "certification",
+  "title": "Databricks Certified Generative AI Engineer Associate",
+  "author": "Databricks",
+  "source": null,
+  "url": "https://www.databricks.com/learn/certification/genai-engineer-associate",
+  "price": "$200",
+  "year": null,
+  "status": "Queued",
+  "topics": ["AI", "RAG", "Skills"],
+  "rating": null,
+  "added": "2026-08-03",
+  "queued": "2026-08-03",
+  "blurb": "..."
+}
+```
+
 `topics` draws from the same `TOPICS` vocabulary as the tech radar (see
 above). The page (an "Atlas" view, like the dashboard's) shows a radar plot —
-rings for status, sectors for topic — pinned beside a scrollable card list,
-so a book and a technology tagged e.g. `RAG` are easy to spot together.
+rings for status, sectors for topic — pinned beside a scrollable card list
+filterable by type, so a book, an article, and a technology tagged e.g. `RAG`
+are easy to spot together.
 
 ---
 
@@ -379,7 +450,7 @@ Prose bio — what the person works on. This is the text the recommender embeds.
 ```
 
 `topics` and `interests` draw from the same `TOPICS` vocabulary as the tech
-radar, Reading List, and Projects, so a person, a project, a book, and a
+radar, Learning Library, and Projects, so a person, a project, a book, and a
 technology can all share a topic tag. See `people/README.md` for the full
 format.
 
@@ -418,7 +489,10 @@ tech-radar/
 ├── build_site.py       # static site assembler — bundles web/ → site/
 ├── build_projects.py   # projects/*.md → data/projects.json (declared stacks)
 ├── build_people.py     # people/*.md → data/people.json (skills + interests)
-├── build_books.py      # Calibre (calibredb) → data/books.json (Reading List)
+├── build_learning.py   # learning/*.md → data/learning.json (books/articles/videos/certs)
+├── learning.py         # Learning Library CLI — writes learning/*.md + rebuilds the JSON
+├── learning_core.py    # shared library — item schema, Markdown parse/serialize
+├── calibre_sync.py     # Calibre (calibredb) → learning/*.md book files
 ├── build_similarity.py # optional — precompute semantic similarity matrices
 ├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
@@ -430,16 +504,17 @@ tech-radar/
 │   ├── index.html      # HTML shell — loads config.js + dashboard.jsx via CDN
 │   ├── config.js       # runtime flag — window.RADAR_EDIT (false in the build)
 │   ├── dashboard.jsx   # React dashboard — Atlas + Index views + edit mode
-│   ├── books.html      # HTML shell for the Reading List — loads books.jsx via CDN
-│   ├── books.jsx       # React book radar — Atlas-style radar + scrollable list
+│   ├── learning.html   # HTML shell for the Learning Library — loads learning.jsx via CDN
+│   ├── learning.jsx    # React content radar — books/articles/videos, Atlas-style + list
 │   ├── similarity.html # Tool Similarity page — self-contained inline JSX
 │   ├── projects.html   # Projects page — declared stack + recommended tools
 │   ├── people.html     # People page — skills + tech/staffing/peer recommendations
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
 ├── projects/           # personal projects — one Markdown file each (hand-written)
 ├── people/             # people + their skills — one Markdown file each (hand-written)
-├── notebooks/          # calibre_sync.ipynb — async Calibre pull + site build
-├── tests/              # stdlib unittest suite for radar_core
+├── learning/           # Learning Library — one Markdown file per item (source of truth)
+├── notebooks/          # calibre_sync.ipynb — async Calibre pull → learning/*.md
+├── tests/              # stdlib unittest suite for radar_core + learning_core
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
 ├── data/
@@ -450,16 +525,16 @@ tech-radar/
 │   ├── radar.json      # aggregated payload for the dashboard (generated)
 │   ├── projects.json   # aggregated projects payload (generated from projects/)
 │   ├── people.json     # aggregated people payload (generated from people/)
-│   └── books.json       # hand-curated Reading List — { generated, books: [...] }
+│   └── learning.json    # aggregated Learning Library payload (generated from learning/)
 └── site/               # deployable static site (generated by build_site.py)
     ├── index.html
     ├── config.js        # window.RADAR_EDIT = false → read-only public build
     ├── dashboard.jsx
-    ├── books.html
-    ├── books.jsx
+    ├── learning.html
+    ├── learning.jsx
     └── data/
         ├── radar.json
-        └── books.json
+        └── learning.json
 ```
 
 ---

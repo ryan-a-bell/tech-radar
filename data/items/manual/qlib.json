@@ -1,0 +1,21 @@
+{
+  "id": "manual:qlib",
+  "name": "Qlib",
+  "description": "Microsoft's open-source, AI-oriented quantitative investment platform covering the full ML pipeline \u2014 data processing, model training, backtesting, portfolio optimization, and order execution \u2014 with support for supervised learning, market-dynamics modeling, and RL.",
+  "quadrant": "Platforms",
+  "ring": "Assess",
+  "source": "Manual",
+  "discovered_by": "manual",
+  "url": "https://github.com/microsoft/qlib",
+  "canonical_url": "github.com/microsoft/qlib",
+  "also_seen": [],
+  "company": "Microsoft",
+  "stars": 0,
+  "momentum": 0,
+  "tags": [],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-07-17",
+  "last_seen": "2026-07-17",
+  "stars_history": {}
+}

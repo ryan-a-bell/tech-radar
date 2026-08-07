@@ -360,7 +360,7 @@ function prettyMethod(m) {
   return m;
 }
 
-// Shared top nav — identical tab group to dashboard.jsx / books.jsx, so the
+// Shared top nav — identical tab group to dashboard.jsx / learning.jsx, so the
 // name and back buttons stay consistent across the site. SIMILARITY is active.
 function TopBar({ active, count }) {
   const tab = {
@@ -370,23 +370,41 @@ function TopBar({ active, count }) {
   };
   const semantic = active && active.kind === "semantic";
   return (
+    <React.Fragment>
     <div style={{
       display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
       fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap",
     }}>
-      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
-      <a href="index.html#atlas" style={tab}>ATLAS</a>
-      <a href="index.html#index" style={tab}>INDEX</a>
-      <a href="books.html" style={tab}>READING LIST</a>
+      <span style={{ color: "#fff", fontWeight: 600, letterSpacing: 3, fontSize: 13,
+        marginRight: 16, paddingRight: 16, borderRight: "1px solid #333" }}>TECH RADAR</span>
       <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
-        padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>SIMILARITY</span>
-      <a href="projects.html" style={{ ...tab, marginLeft: 8 }}>PROJECTS</a>
-      <a href="people.html" style={{ ...tab, marginLeft: 8 }}>PEOPLE</a>
+        padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 }}>TECHNOLOGY</span>
+      <a href="learning.html" style={tab}>LEARNING</a>
+      <a href="projects.html" style={tab}>PROJECTS</a>
+      <a href="people.html" style={tab}>PEOPLE</a>
+      <a href="discover.html" style={tab}>DISCOVER</a>
       <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1,
         color: semantic ? "#4ade80" : "#fbbf24" }}>
         {count} tools · {semantic ? "● " : "○ "}{active ? active.label : "loading"}
       </span>
     </div>
+    {/* Technology subnav: Radar / Table (radar page) + Similarity (here) */}
+    <div style={{
+      display: "flex", gap: 0, background: "#141413", padding: "8px 14px",
+      fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
+      flexWrap: "wrap", borderTop: "1px solid #000",
+    }}>
+      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+      <a href="index.html#atlas" style={{ background: "transparent", color: "#999",
+        border: "1px solid #3a3a3a", textDecoration: "none", padding: "5px 13px",
+        marginRight: 8, fontSize: 11, letterSpacing: 1 }}>RADAR</a>
+      <a href="index.html#index" style={{ background: "transparent", color: "#999",
+        border: "1px solid #3a3a3a", textDecoration: "none", padding: "5px 13px",
+        marginRight: 8, fontSize: 11, letterSpacing: 1 }}>TABLE</a>
+      <span style={{ background: "#d8d6cc", color: "#000", border: "1px solid #d8d6cc",
+        padding: "5px 13px", fontSize: 11, letterSpacing: 1 }}>SIMILARITY</span>
+    </div>
+    </React.Fragment>
   );
 }
 

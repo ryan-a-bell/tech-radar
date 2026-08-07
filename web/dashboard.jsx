@@ -126,7 +126,65 @@ const PROVENANCE = {
   llm:     { label: "AI",     tip: "found by the LLM discovery routine", color: "#7c5cd6" },
   manual:  { label: "MANUAL", tip: "added by hand", color: "#1a7f4b" },
 };
-function provOf(d) { return PROVENANCE[d.discovered_by] || PROVENANCE.scraper; }
+const SRC_ORDER = Object.keys(PROVENANCE); // ["scraper", "llm", "manual"]
+function provKeyOf(d) { return PROVENANCE[d.discovered_by] ? d.discovered_by : "scraper"; }
+function provOf(d) { return PROVENANCE[provKeyOf(d)]; }
+
+// Discovered-ring source breakdown — how many items in `items` came from each
+// provenance. Used for the "AWAITING REVIEW" stat breakdown and the SOURCE
+// filter pill counts (over different item lists, hence a shared helper).
+function countBySource(items) {
+  const counts = {};
+  SRC_ORDER.forEach((k) => { counts[k] = 0; });
+  items.forEach((d) => { counts[provKeyOf(d)]++; });
+  return counts;
+}
+
+/* Stacked bar + clickable legend showing how a set of items splits across
+   provenance. Used under the "AWAITING REVIEW" stat — clicking a legend chip
+   is equivalent to picking that SOURCE filter pill. */
+function ProvBar({ counts, active, onPick }) {
+  const total = SRC_ORDER.reduce((n, k) => n + counts[k], 0) || 1;
+  return (
+    <div style={{ marginTop: 8 }}>
+      <div style={{ display: "flex", width: 170, height: 6, border: "1px solid #1a1a1a", overflow: "hidden" }}>
+        {SRC_ORDER.map((k) => (
+          <span key={k} style={{ display: "block", height: "100%",
+            width: `${(counts[k] / total) * 100}%`, background: PROVENANCE[k].color }} />
+        ))}
+      </div>
+      <div style={{ display: "flex", gap: 10, marginTop: 5, flexWrap: "wrap" }}>
+        {SRC_ORDER.map((k) => {
+          const on = active === k;
+          const dim = active !== "All" && !on;
+          return (
+            <span key={k} onClick={() => onPick(on ? "All" : k)} style={{
+              display: "flex", alignItems: "center", gap: 4, cursor: "pointer",
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 0.5,
+              color: "#6b6456", opacity: dim ? 0.4 : 1,
+            }}>
+              <span style={{ width: 7, height: 7, borderRadius: "50%", background: PROVENANCE[k].color }} />
+              {PROVENANCE[k].label} <b style={{ color: "#1a1a1a" }}>{counts[k]}</b>
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// Annulus-sector path for the Discovered ring's 12 tiles (4 quadrants x 3
+// sources). Matches the placement math in Atlas's `placed` useMemo: angle 0
+// points right, increasing angle sweeps counter-clockwise on screen (same
+// convention as the dot placement below).
+function sectorPath(cx, cy, r1, r2, aStart, aEnd) {
+  const p = (r, a) => [cx + r * Math.cos(a), cy - r * Math.sin(a)];
+  const [ox1, oy1] = p(r2, aStart);
+  const [ox2, oy2] = p(r2, aEnd);
+  const [ix2, iy2] = p(r1, aEnd);
+  const [ix1, iy1] = p(r1, aStart);
+  return `M ${ox1} ${oy1} A ${r2} ${r2} 0 0 0 ${ox2} ${oy2} L ${ix2} ${iy2} A ${r1} ${r1} 0 0 1 ${ix1} ${iy1} Z`;
+}
 
 function ProvBadge({ item }) {
   const p = provOf(item);
@@ -306,6 +364,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   const [hoverId, setHoverId] = useState(null);    // cross-highlight
   const [ringFilter, setRingFilter] = useState("All");
   const [quadFilter, setQuadFilter] = useState("All");
+  const [srcFilter, setSrcFilter] = useState("All"); // "All" | "scraper" | "llm" | "manual"
   const [topicFilters, setTopicFilters] = useState(() => new Set());
   const [recentOnly, setRecentOnly] = useState(false);
   const [showDiscovered, setShowDiscovered] = useState(true);
@@ -330,6 +389,11 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
   // curated-topic frequency, over the full dataset so counts don't lie
   const topicFreq = useMemo(() => topicCounts(data.items), [data]);
   const noTopicCount = useMemo(() => data.items.filter(hasNoTopics).length, [data]);
+  // source (discovered_by) frequency — same "count over the full dataset,
+  // not the filtered set" rule as topics, so pill counts don't lie either.
+  const srcFreq = useMemo(() => countBySource(data.items), [data]);
+  const discByProv = useMemo(
+    () => countBySource(data.items.filter((d) => d.ring === "Discovered")), [data]);
 
   // shared filter applied to both halves. Topics are OR-matched; the NO_TOPIC
   // bucket matches items that carry no curated topics at all.
@@ -337,6 +401,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
     if (!showDiscovered && d.ring === "Discovered") return false;
     if (ringFilter !== "All" && d.ring !== ringFilter) return false;
     if (quadFilter !== "All" && d.quadrant !== quadFilter) return false;
+    if (srcFilter !== "All" && provKeyOf(d) !== srcFilter) return false;
     if (topicFilters.size) {
       const match = (d.topics || []).some((t) => topicFilters.has(t))
         || (topicFilters.has(NO_TOPIC) && hasNoTopics(d));
@@ -344,7 +409,7 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
     }
     if (recentOnly && daysAgo(d.first_seen) > 7) return false;
     return true;
-  }), [data, ringFilter, quadFilter, topicFilters, recentOnly, showDiscovered]);
+  }), [data, ringFilter, quadFilter, srcFilter, topicFilters, recentOnly, showDiscovered]);
 
   // fuzzy-score against the search box; a query drops non-matches entirely
   const query = searchQuery.trim();
@@ -425,7 +490,15 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
     let h = 0;
     for (let i = 0; i < d.id.length; i++) h = (h * 31 + d.id.charCodeAt(i)) % 100000;
     const frac = h / 100000;
-    const ang = (qIdx * Math.PI) / 2 + 0.2 + frac * (Math.PI / 2 - 0.4);
+    // Discovered items are further confined to their quadrant's 1/3 source
+    // sub-wedge (scraped | AI | manual, in that order) — a 30deg slice
+    // instead of the full 90deg quadrant every other ring gets.
+    const isDisc = d.ring === "Discovered";
+    const srcIdx = isDisc ? SRC_ORDER.indexOf(provKeyOf(d)) : 0;
+    const wedgeSpan = isDisc ? Math.PI / 6 : Math.PI / 2;
+    const wedgeBase = (qIdx * Math.PI) / 2 + (isDisc ? srcIdx * (Math.PI / 6) : 0);
+    const pad = isDisc ? 0.07 : 0.2;
+    const ang = wedgeBase + pad + frac * (wedgeSpan - 2 * pad);
     const rad = inner + 16 + ((h % 1000) / 1000) * Math.max(8, outer - inner - 30);
     return { ...d, x: cx + Math.cos(ang) * rad, y: cy - Math.sin(ang) * rad };
   }), [scored]);
@@ -495,7 +568,12 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
         letterSpacing: 1,
       }}>
         <Stat label="SIGNALS" value={total} />
-        <Stat label="AWAITING REVIEW" value={discCount} color={RING_INK.Discovered} />
+        <div>
+          <div style={{ fontSize: 22, fontWeight: 800, color: RING_INK.Discovered,
+            fontFamily: "Georgia, serif", lineHeight: 1 }}>{discCount}</div>
+          <div style={{ marginTop: 3 }}>AWAITING REVIEW</div>
+          <ProvBar counts={discByProv} active={srcFilter} onPick={setSrcFilter} />
+        </div>
         <Stat label="NEW THIS WEEK" value={newCount} color={RING_INK.Trial} />
         <Stat label="SHOWN" value={sorted.length} />
       </div>
@@ -525,6 +603,13 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
           ))}
           <Pill label={`NO TOPIC · ${noTopicCount}`} active={topicFilters.has(NO_TOPIC)}
             onClick={() => toggleTopic(NO_TOPIC)} color={NO_TOPIC_INK} />
+        </div>
+        <div style={{ marginBottom: 4 }}>
+          <Pill label="ALL SOURCES" active={srcFilter === "All"} onClick={() => setSrcFilter("All")} />
+          {SRC_ORDER.map((k) => (
+            <Pill key={k} label={`${PROVENANCE[k].label} · ${srcFreq[k]}`} active={srcFilter === k}
+              onClick={() => setSrcFilter(srcFilter === k ? "All" : k)} color={PROVENANCE[k].color} />
+          ))}
         </div>
         <div style={{ marginBottom: 4 }}>
           <Pill label={recentOnly ? "✓ NEW THIS WEEK" : "NEW THIS WEEK ONLY"}
@@ -601,9 +686,40 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                 </text>
               );
             })}
+            {/* Discovered band, split into 12 tiles: 4 quadrants x 3 sources
+                (scraped | AI | manual, same order as the legend). Only the
+                Discovered annulus subdivides — every other ring stays one
+                quadrant wedge. */}
+            {QUADRANTS.map((q, qi) => SRC_ORDER.map((src, si) => {
+              const a0 = (qi * Math.PI) / 2 + (si * Math.PI) / 6;
+              const a1 = a0 + Math.PI / 6;
+              const mid = (a0 + a1) / 2, midR = (ringInner.Discovered + ringRadii.Discovered) / 2;
+              const dim = srcFilter !== "All" && srcFilter !== src;
+              return (
+                <g key={q + src}>
+                  <path d={sectorPath(cx, cy, ringInner.Discovered, ringRadii.Discovered, a0, a1)}
+                    fill={PROVENANCE[src].color} fillOpacity={dim ? 0.02 : 0.09}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => setSrcFilter(srcFilter === src ? "All" : src)} />
+                  {si > 0 && (
+                    <line
+                      x1={cx + Math.cos(a0) * ringInner.Discovered} y1={cy - Math.sin(a0) * ringInner.Discovered}
+                      x2={cx + Math.cos(a0) * ringRadii.Discovered} y2={cy - Math.sin(a0) * ringRadii.Discovered}
+                      stroke="#1a1a1a" strokeOpacity="0.2" strokeWidth="1" />
+                  )}
+                  <text x={cx + Math.cos(mid) * midR} y={cy - Math.sin(mid) * midR + 3} textAnchor="middle"
+                    fill={PROVENANCE[src].color} fillOpacity={dim ? 0.3 : 1}
+                    style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 7.5,
+                             letterSpacing: 0.5, fontWeight: 700, pointerEvents: "none" }}>
+                    {PROVENANCE[src].label}
+                  </text>
+                </g>
+              );
+            }))}
             {placed.map((d) => {
               const isHover = hoverId === d.id;
               const isNew = daysAgo(d.first_seen) <= 7;
+              const dotColor = d.ring === "Discovered" ? PROVENANCE[provKeyOf(d)].color : RING_INK[d.ring];
               return (
                 <g key={d.id} style={{ cursor: "pointer" }}
                   onMouseEnter={() => setHoverId(d.id)}
@@ -615,13 +731,21 @@ function Atlas({ data, status, onSetRing, saveStatus }) {
                       opacity={isHover ? 0.7 : 0.35} />
                   )}
                   <circle cx={d.x} cy={d.y} r={isHover ? 7 : 5}
-                    fill={RING_INK[d.ring]}
+                    fill={dotColor}
                     stroke={isHover ? "#1a1a1a" : "#fffdf7"}
                     strokeWidth={isHover ? 2 : 1.5} />
                 </g>
               );
             })}
           </svg>
+          <div style={{
+            fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: "#9a9384",
+            letterSpacing: 0.3, marginTop: 8, maxWidth: size, lineHeight: 1.5,
+          }}>
+            The Discovered band is split into 12 tiles — 4 quadrants x scraped/AI/manual,
+            same order as the SOURCE legend above. Click a tile, a SOURCE pill, or a legend
+            chip to filter by how an item was found.
+          </div>
         </div>
 
         {/* card list */}
@@ -1357,45 +1481,28 @@ export default function App() {
     <div style={{
       minHeight: "100vh", background: "#000",
     }}>
+      {/* ---- primary bucket nav — shared across every page ---- */}
       <div style={{
         display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
         fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
         flexWrap: "wrap",
       }}>
-        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>
-          VIEW:
-        </span>
-        {[
-          { id: "atlas", label: "ATLAS" },
-          { id: "index", label: "INDEX" },
-        ].map((m) => (
-          <button key={m.id} onClick={() => selectView(m.id)} style={{
-            background: view === m.id ? "#fff" : "transparent",
-            color: view === m.id ? "#000" : "#999",
-            border: "1px solid " + (view === m.id ? "#fff" : "#444"),
-            padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1,
-            cursor: "pointer", fontFamily: "inherit",
-          }}>{m.label}</button>
-        ))}
-        <a href="books.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-        }}>READING LIST</a>
-        <a href="similarity.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>SIMILARITY</a>
-        <a href="projects.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>PROJECTS</a>
-        <a href="people.html" style={{
-          color: "#999", textDecoration: "none",
-          fontSize: 11, letterSpacing: 1, border: "1px solid #444", padding: "6px 14px",
-          marginLeft: 8,
-        }}>PEOPLE</a>
+        <span style={{ color: "#fff", fontWeight: 600, letterSpacing: 3, fontSize: 13,
+          marginRight: 16, paddingRight: 16, borderRight: "1px solid #333" }}>TECH RADAR</span>
+        <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
+          padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 }}>TECHNOLOGY</span>
+        <a href="learning.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>LEARNING</a>
+        <a href="projects.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PROJECTS</a>
+        <a href="people.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PEOPLE</a>
+        <a href="discover.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #444", textDecoration: "none", padding: "6px 14px",
+          marginRight: 8, fontSize: 11, letterSpacing: 1 }}>DISCOVER</a>
         {EDIT_MODE && (
           <span style={{
             fontSize: 10.5, letterSpacing: 1, padding: "4px 9px", borderRadius: 3,
@@ -1421,6 +1528,30 @@ export default function App() {
         }}>
           {status === "live" ? "● radar.json loaded" : "● sample data (radar.json not found)"}
         </span>
+      </div>
+
+      {/* ---- Technology subnav: Radar / Table (in-page) + Similarity (page) ---- */}
+      <div style={{
+        display: "flex", gap: 0, background: "#141413", padding: "8px 14px",
+        fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
+        flexWrap: "wrap", borderTop: "1px solid #000",
+      }}>
+        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+        {[
+          { id: "atlas", label: "RADAR" },
+          { id: "index", label: "TABLE" },
+        ].map((m) => (
+          <button key={m.id} onClick={() => selectView(m.id)} style={{
+            background: view === m.id ? "#d8d6cc" : "transparent",
+            color: view === m.id ? "#000" : "#999",
+            border: "1px solid " + (view === m.id ? "#d8d6cc" : "#3a3a3a"),
+            padding: "5px 13px", marginRight: 8, fontSize: 11, letterSpacing: 1,
+            cursor: "pointer", fontFamily: "inherit",
+          }}>{m.label}</button>
+        ))}
+        <a href="similarity.html" style={{ background: "transparent", color: "#999",
+          border: "1px solid #3a3a3a", textDecoration: "none", padding: "5px 13px",
+          fontSize: 11, letterSpacing: 1 }}>SIMILARITY</a>
       </div>
 
       {view === "atlas"

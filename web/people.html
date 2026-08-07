@@ -100,6 +100,59 @@ function projectText(pr) {
   return [pr.name, pr.blurb, pr.body, (pr.topics || []).join(" ")].join(" ");
 }
 
+/* ===================== FUZZY SEARCH =====================
+   Same lightweight subsequence match the Technology table uses (dashboard.jsx):
+   query characters must appear in order in the target, but need not be
+   contiguous or exact. An exact substring wins; denser, earlier runs of matched
+   characters score higher than sparse ones. No dependencies, no index. */
+function fuzzyScore(query, text) {
+  if (!query) return 0;
+  const q = query.toLowerCase(), t = (text || "").toLowerCase();
+  if (t.includes(q)) return 100 + q.length;
+  let qi = 0, score = 0, streak = 0;
+  for (let ti = 0; ti < t.length && qi < q.length; ti++) {
+    if (t[ti] === q[qi]) { score += 1 + streak * 2; streak++; qi++; }
+    else streak = 0;
+  }
+  return qi === q.length ? score : -1;
+}
+
+// Best weighted match across a person's or organization's searchable fields, or
+// -1 if the query matches none of them. 0 (no query) means "everything matches".
+function personScore(query, p) {
+  if (!query) return 0;
+  const contact = p.contact || {};
+  const fields = [
+    [p.name, 3],
+    [isOrg(p) ? "Organization" : (p.role || ""), 1.6],
+    [contact.organization || "", 1.6],
+    [[...(p.topics || []), ...(p.interests || [])].join(" "), 2],
+    [[...(p.skills || []).map((s) => s.name), ...(p.skills_freeform || [])].join(" "), 1.8],
+    [contact.location || contact.business || "", 1.2],
+    [[p.blurb, p.body].filter(Boolean).join(" "), 1],
+  ];
+  let best = -1;
+  for (const [text, weight] of fields) {
+    const s = fuzzyScore(query, text || "");
+    if (s >= 0) best = Math.max(best, s * weight);
+  }
+  return best;
+}
+
+// Splits text around the first literal substring match so a hit shows *why* it
+// matched. Returns plain text when there's no query or no substring overlap.
+function highlightMatch(text, query) {
+  if (!query || !text) return text;
+  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx === -1) return text;
+  return [
+    text.slice(0, idx),
+    <mark key="hl" style={{ background: "#ffe27a", color: "#1a1a1a", padding: "0 1px", borderRadius: 2 }}>
+      {text.slice(idx, idx + query.length)}</mark>,
+    text.slice(idx + query.length),
+  ];
+}
+
 /* One TF-IDF space over ALL THREE corpora so tool, person, and project vectors
  * are directly comparable — and people with each other. */
 function buildTfIdf(toolTexts, personTexts, projTexts) {
@@ -162,6 +215,85 @@ function skillLabel(key, p) {
   return hit ? hit.name : key;
 }
 
+/* ---- rolodex / contact helpers --------------------------------------------
+ * The contact block (data/people.json → person.contact / person.notes) is
+ * additive: it never touches the recommender, only the profile card. Links are
+ * stored as bare handles/domains and expanded to URLs here. */
+const LINK_ORDER = ["website", "github", "linkedin", "x"];
+const FILLED_ICONS = new Set(["github", "linkedin", "x"]);
+const initials = (n) => (n || "?").trim().split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+function fmtDate(d) {
+  if (!d) return "—";
+  const dt = new Date(d + "T00:00:00");
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+}
+function daysAgo(d) {
+  if (!d) return "";
+  const dt = new Date(d + "T00:00:00");
+  if (isNaN(dt)) return "";
+  const n = Math.round((Date.now() - dt) / 864e5);
+  return n <= 0 ? "today" : n === 1 ? "yesterday" : n + " days ago";
+}
+function linkHref(kind, v) {
+  if (!v) return null;
+  if (/^https?:\/\//.test(v)) return v;
+  if (kind === "website") return "https://" + v;
+  if (kind === "github") return "https://github.com/" + v;
+  // a slash means a full path (e.g. an org's `company/acme`); else a personal handle
+  if (kind === "linkedin") return "https://www.linkedin.com/" + (v.includes("/") ? v : "in/" + v);
+  if (kind === "x") return "https://x.com/" + v;
+  return v;
+}
+const ICON_PATHS = {
+  mail: <React.Fragment><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></React.Fragment>,
+  phone: <path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z" />,
+  pin: <React.Fragment><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" /><circle cx="12" cy="10" r="2.5" /></React.Fragment>,
+  org: <path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01" />,
+  link: <path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1" />,
+  search: <React.Fragment><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></React.Fragment>,
+  clock: <React.Fragment><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></React.Fragment>,
+  github: <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />,
+  linkedin: <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.3 8.65 21 10.9 21 14v7h-4v-6.2c0-1.48-.03-3.38-2.06-3.38-2.06 0-2.38 1.6-2.38 3.27V21H9z" />,
+  x: <path d="M17.5 3h3l-6.6 7.5L21.7 21h-6l-4.3-5.6L6.3 21H3.3l7-8L2.6 3h6.2l3.9 5.1L17.5 3Zm-1 16h1.6L7.6 4.8H5.9L16.5 19Z" />,
+};
+function Icon({ name, size = 15 }) {
+  const filled = FILLED_ICONS.has(name);
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true"
+      fill={filled ? "currentColor" : "none"} stroke={filled ? "none" : "currentColor"}
+      strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      {ICON_PATHS[name]}
+    </svg>
+  );
+}
+function Avatar({ name, color, size = 34, radius = 9, fontSize, org }) {
+  return (
+    <span style={{ flex: "0 0 auto", width: size, height: size, borderRadius: org ? Math.round(size * 0.28) : radius,
+      background: color, color: "#0d0d0d", fontWeight: 600, fontSize: fontSize || Math.round(size * 0.37),
+      display: "flex", alignItems: "center", justifyContent: "center", letterSpacing: 0.3 }}>
+      {org ? <Icon name="org" size={Math.round(size * 0.52)} /> : initials(name)}
+    </span>
+  );
+}
+const isOrg = (p) => p && p.kind === "org";
+// role bucket used for colour + filtering; orgs share one "Organization" bucket
+const roleKey = (p) => isOrg(p) ? "Organization" : (p.role || "—");
+function IconLink({ href, title, name }) {
+  return (
+    <a href={href} target={href.startsWith("http") ? "_blank" : undefined} title={title}
+      style={{ width: 32, height: 32, borderRadius: 9, border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)",
+        color: "var(--ink-2)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}>
+      <Icon name={name} />
+    </a>
+  );
+}
+function LinkIcons({ links }) {
+  return LINK_ORDER.map((k) => links[k]
+    ? <IconLink key={k} href={linkHref(k, links[k])} title={k} name={k === "website" ? "link" : k} />
+    : null);
+}
+
 // ============================================================================
 function App() {
   const [tools, setTools] = useState(null);
@@ -177,6 +309,7 @@ function App() {
   const [topK, setTopK] = useState(6);
   const [roleFilter, setRoleFilter] = useState(null);      // null = all; else Set
   const [topicFilter, setTopicFilter] = useState(() => new Set());
+  const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("role");
   const [skillSort, setSkillSort] = useState("rare");
   const [mapThreshold, setMapThreshold] = useState(0.05);
@@ -240,7 +373,7 @@ function App() {
       setTfidf(buildTfIdf(its.map(toolText), ppl.map(personText), projs.map(projectText)));
       setPrecomp(pc);
       setMethod(pc ? "precomputed" : "tfidf");
-      setRoleFilter(new Set(ppl.map((p) => p.role || "—")));
+      setRoleFilter(new Set(ppl.map(roleKey)));
       setSelId(ppl.length ? ppl[0].id : null);
     })();
   }, []);
@@ -250,8 +383,15 @@ function App() {
     const m = new Map();
     if (people) {
       let i = 0;
-      for (const r of [...new Set(people.map((p) => p.role || "—"))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
+      for (const r of [...new Set(people.map(roleKey))]) m.set(r, ROLE_PALETTE[i++ % ROLE_PALETTE.length]);
     }
+    return m;
+  }, [people]);
+
+  // org name (lowercased) → org record, for linking a person to their org contact
+  const orgByName = useMemo(() => {
+    const m = new Map();
+    for (const p of people || []) if (isOrg(p)) m.set((p.name || "").toLowerCase(), p);
     return m;
   }, [people]);
 
@@ -273,6 +413,7 @@ function App() {
     const m = new Map();  // key -> { key, label, ref (radar item|null), holders:[person] }
     if (!people) return m;
     for (const p of people) {
+      if (isOrg(p)) continue;   // bus factor is about people, not org contacts
       for (const s of p.skills || []) {
         const e = m.get(s.id) || { key: s.id, label: s.name, ref: s, holders: [] };
         e.holders.push(p); m.set(s.id, e);
@@ -317,7 +458,7 @@ function App() {
     if (!people) return () => [];
     return (person, pIdx) => {
       const peers = people.map((q, j) => ({ q, j, s: personSem[pIdx] ? personSem[pIdx][j] : 0 }))
-        .filter((x) => x.j !== pIdx && x.s >= 0.03)
+        .filter((x) => x.j !== pIdx && !isOrg(x.q) && x.s >= 0.03)
         .sort((a, b) => b.s - a.s).slice(0, 8);
       const have = new Set((person.skills || []).map((s) => s.id));
       const agg = new Map();
@@ -370,7 +511,7 @@ function App() {
       const mine = skillKeys(person);
       const out = [];
       people.forEach((q, j) => {
-        if (j === pIdx) return;
+        if (j === pIdx || isOrg(q)) return;   // orgs aren't "similar people"
         if (rankMode === "skills") {
           const theirs = skillKeys(q);
           const score = jaccard(mine, theirs);
@@ -388,15 +529,23 @@ function App() {
     };
   }, [people, personSem, tfidf, topK]);
 
+  const query = searchQuery.trim();
+  // per-person fuzzy score for the current query; -1 when it matches nothing.
+  const searchScore = useMemo(() => {
+    if (!people) return new Map();
+    return new Map(people.map((p, i) => [i, personScore(query, p)]));
+  }, [people, query]);
+
   const visibleIdx = useMemo(() => {
     if (!people) return [];
     return people.map((_, i) => i).filter((i) => {
       const p = people[i];
-      if (roleFilter && roleFilter.size && !roleFilter.has(p.role || "—")) return false;
+      if (roleFilter && roleFilter.size && !roleFilter.has(roleKey(p))) return false;
       if (topicFilter.size && ![...(p.topics || []), ...(p.interests || [])].some((t) => topicFilter.has(t))) return false;
+      if (query && searchScore.get(i) < 0) return false;   // fuzzy query drops non-matches
       return true;
     });
-  }, [people, roleFilter, topicFilter]);
+  }, [people, roleFilter, topicFilter, query, searchScore]);
 
   if (!tools || !people || !tfidf) return <div className="loading">building recommendations…</div>;
 
@@ -422,7 +571,8 @@ function App() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <TopBar count={people.length} semantic={method === "precomputed" && !!precomp}
+      <TopBar count={people.filter((p) => !isOrg(p)).length} orgs={people.filter(isOrg).length}
+        semantic={method === "precomputed" && !!precomp}
         label={precomp ? prettyMethod(precomp.method) : "TF-IDF · in-browser"} />
       <Controls
         view={view} setView={setView}
@@ -433,32 +583,41 @@ function App() {
         topK={topK} setTopK={setTopK}
         mapThreshold={mapThreshold} setMapThreshold={setMapThreshold}
         skillSort={skillSort} setSkillSort={setSkillSort} />
-      {(view === "board" || view === "map") && (
+      {(view === "board" || view === "map" || view === "table") && (
         <Filters people={people} roleColor={roleColor}
           roleFilter={roleFilter} setRoleFilter={setRoleFilter}
           topicFilter={topicFilter} setTopicFilter={setTopicFilter}
+          searchQuery={searchQuery} setSearchQuery={setSearchQuery}
           sortBy={sortBy} setSortBy={setSortBy} showSort={view === "board"}
-          visibleCount={visibleIdx.length} />
+          visibleCount={visibleIdx.length} totalCount={people.length} />
       )}
 
       <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
         {view === "board" && (
           <>
             <PeopleList people={people} visibleIdx={visibleIdx} sortBy={sortBy}
-              roleColor={roleColor} selId={selId} setSelId={setSelId} />
+              roleColor={roleColor} selId={selId} setSelId={setSelId}
+              query={query} searchScore={searchScore} />
             <div style={{ flex: 1, overflow: "auto", padding: 22 }}>
-              {sel && <PersonDetail person={sel} roleColor={roleColor}
-                mode={mode} rankBy={effRank} hasProjects={projects.length > 0}
-                techRecs={recommendTech(sel, selIdx)}
-                peerRecs={recommendPeers(sel, selIdx)}
-                projRecs={recommendProjects(sel, selIdx, effRank)}
-                peopleRecs={recommendPeople(sel, selIdx, effRank)}
-                setSelId={setSelId} />}
+              {sel && (isOrg(sel)
+                ? <OrgDetail org={sel} people={people} roleColor={roleColor} setSelId={setSelId} />
+                : <PersonDetail person={sel} people={people} roleColor={roleColor} orgByName={orgByName}
+                    mode={mode} rankBy={effRank} hasProjects={projects.length > 0}
+                    techRecs={recommendTech(sel, selIdx)}
+                    peerRecs={recommendPeers(sel, selIdx)}
+                    projRecs={recommendProjects(sel, selIdx, effRank)}
+                    peopleRecs={recommendPeople(sel, selIdx, effRank)}
+                    setSelId={setSelId} />)}
             </div>
           </>
         )}
+        {view === "table" && (
+          <PeopleTable people={people} visibleIdx={visibleIdx} roleColor={roleColor}
+            query={query} searchScore={searchScore}
+            openPerson={(id) => { setSelId(id); setView("board"); }} />
+        )}
         {view === "map" && (
-          <MapView people={people} personSem={personSem} visibleIdx={visibleIdx}
+          <MapView people={people} personSem={personSem} visibleIdx={visibleIdx.filter((i) => !isOrg(people[i]))}
             roleColor={roleColor} threshold={mapThreshold} topK={topK}
             selId={selId} setSelId={setSelId} openBoard={() => setView("board")} />
         )}
@@ -480,23 +639,23 @@ function prettyMethod(m) {
   return m;
 }
 
-// Shared top nav — identical tab group to dashboard.jsx / books.jsx / projects.html.
-function TopBar({ count, semantic, label = "TF-IDF · in-browser" }) {
+// Shared top nav — identical tab group to dashboard.jsx / learning.jsx / projects.html.
+function TopBar({ count, orgs = 0, semantic, label = "TF-IDF · in-browser" }) {
   const tab = { background: "transparent", color: "#999", border: "1px solid #444",
     textDecoration: "none", padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 };
   return (
     <div style={{ display: "flex", gap: 0, background: "#1a1a1a", padding: "10px 14px",
       fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center", flexWrap: "wrap" }}>
-      <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
-      <a href="index.html#atlas" style={tab}>ATLAS</a>
-      <a href="index.html#index" style={tab}>INDEX</a>
-      <a href="books.html" style={tab}>READING LIST</a>
-      <a href="similarity.html" style={tab}>SIMILARITY</a>
+      <span style={{ color: "#fff", fontWeight: 600, letterSpacing: 3, fontSize: 13,
+        marginRight: 16, paddingRight: 16, borderRight: "1px solid #333" }}>TECH RADAR</span>
+      <a href="index.html#atlas" style={tab}>TECHNOLOGY</a>
+      <a href="learning.html" style={tab}>LEARNING</a>
       <a href="projects.html" style={tab}>PROJECTS</a>
       <span style={{ background: "#fff", color: "#000", border: "1px solid #fff",
-        padding: "6px 14px", fontSize: 11, letterSpacing: 1 }}>PEOPLE</span>
+        padding: "6px 14px", marginRight: 8, fontSize: 11, letterSpacing: 1 }}>PEOPLE</span>
+      <a href="discover.html" style={tab}>DISCOVER</a>
       <span style={{ marginLeft: "auto", fontSize: 10, letterSpacing: 1, color: semantic ? "#4ade80" : "#fbbf24" }}>
-        {count} {count === 1 ? "person" : "people"} · {semantic ? "● " : "○ "}{label}
+        {count} {count === 1 ? "person" : "people"}{orgs ? " · " + orgs + " org" + (orgs === 1 ? "" : "s") : ""} · {semantic ? "● " : "○ "}{label}
       </span>
     </div>
   );
@@ -529,7 +688,7 @@ function Controls({ view, setView, mode, setMode, hasProjects, rankOptions, rank
   const showOpts = [["tech", "Recommended tech"], ["projects", "Matching projects"], ["people", "Similar people"]];
   return (
     <div style={wrap}>
-      <Seg options={[["board", "People"], ["map", "Map"], ["skills", "Skills"]]} value={view} onChange={setView} />
+      <Seg options={[["board", "People"], ["table", "Table"], ["map", "Map"], ["skills", "Skills"]]} value={view} onChange={setView} />
       <span style={{ width: 1, alignSelf: "stretch", background: "var(--border)" }} />
 
       {view === "board" && (
@@ -588,8 +747,9 @@ function controlHint(view, mode, rankBy, hasProjects) {
 }
 
 // ---- filters ---------------------------------------------------------------
-function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, setTopicFilter, sortBy, setSortBy, showSort, visibleCount }) {
-  const roles = useMemo(() => [...new Set(people.map((p) => p.role || "—"))].sort(), [people]);
+function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, setTopicFilter,
+  searchQuery, setSearchQuery, sortBy, setSortBy, showSort, visibleCount, totalCount }) {
+  const roles = useMemo(() => [...new Set(people.map(roleKey))].sort(), [people]);
   const topics = useMemo(() =>
     [...new Set(people.flatMap((p) => [...(p.topics || []), ...(p.interests || [])]))].sort(), [people]);
 
@@ -612,7 +772,31 @@ function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, se
     border: "1px solid " + (color || "var(--border)"), background: "transparent", color: "var(--ink-2)",
   });
 
+  const q = searchQuery.trim();
   return (
+    <div>
+      {/* fuzzy search — mirrors the Technology table: subsequence match across
+          name, role, org, skills, topics/interests and bio */}
+      <div style={{ display: "flex", gap: 10, alignItems: "center", padding: "8px 14px",
+        borderBottom: "1px solid var(--border)" }}>
+        <span style={{ color: "var(--muted)", display: "flex" }}><Icon name="search" /></span>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search people & organizations — try a typo, a partial name, a skill or a topic…"
+          aria-label="Search people and organizations"
+          style={{ flex: 1, minWidth: 0, background: "var(--page)", color: "var(--ink)",
+            border: "1px solid var(--border)", borderRadius: 7, padding: "7px 11px",
+            fontFamily: "inherit", fontSize: 13, outline: "none" }} />
+        {q && (
+          <button onClick={() => setSearchQuery("")} title="Clear search"
+            style={{ background: "transparent", border: "1px solid var(--border)", borderRadius: 7,
+              color: "var(--ink-2)", cursor: "pointer", padding: "6px 10px", fontSize: 12 }}>
+            {visibleCount}/{totalCount} · clear
+          </button>
+        )}
+      </div>
     <div style={{ display: "flex", gap: 14, alignItems: "center", padding: "8px 14px",
       borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" }}>
       <span style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5 }}>role</span>
@@ -627,7 +811,7 @@ function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, se
         <button key={t} onClick={() => toggleTopic(t)} style={pill(topicFilter.size === 0 || topicFilter.has(t))}>{t}</button>
       ))}
       <span style={{ marginLeft: "auto", display: "flex", gap: 12, alignItems: "center" }}>
-        <span style={{ fontSize: 11 }}>{visibleCount} shown</span>
+        <span style={{ fontSize: 11 }}>{q ? visibleCount + " match" + (visibleCount === 1 ? "" : "es") : visibleCount + " shown"}</span>
         {showSort && (
           <label style={{ fontSize: 12 }}>sort{" "}
             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
@@ -641,14 +825,20 @@ function Filters({ people, roleColor, roleFilter, setRoleFilter, topicFilter, se
         )}
       </span>
     </div>
+    </div>
   );
 }
 
 function skillCount(p) { return (p.skills || []).length + (p.skills_freeform || []).length; }
 
-function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId }) {
+function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId, query, searchScore }) {
   const ordered = useMemo(() => {
     const idx = [...visibleIdx];
+    // an active query ranks by fuzzy relevance first, so the best hit floats up
+    if (query) {
+      idx.sort((a, b) => (searchScore.get(b) - searchScore.get(a)) || people[a].name.localeCompare(people[b].name));
+      return idx;
+    }
     idx.sort((a, b) => {
       const pa = people[a], pb = people[b];
       if (sortBy === "name") return pa.name.localeCompare(pb.name);
@@ -656,29 +846,165 @@ function PeopleList({ people, visibleIdx, sortBy, roleColor, selId, setSelId }) 
       return (pa.role || "").localeCompare(pb.role || "") || pa.name.localeCompare(pb.name);
     });
     return idx;
-  }, [visibleIdx, sortBy, people]);
+  }, [visibleIdx, sortBy, people, query, searchScore]);
 
   return (
     <div style={{ width: 250, borderRight: "1px solid var(--border)", overflow: "auto" }}>
       {ordered.map((i) => {
         const p = people[i];
         const on = p.id === selId;
+        const org = p.contact && p.contact.organization;
+        const lead = isOrg(p) ? "Organization" : (p.role || "—");
+        const sub = isOrg(p)
+          ? (p.contact && p.contact.location) || (p.contact && p.contact.business) || ""
+          : (org || (skillCount(p) + " skill" + (skillCount(p) === 1 ? "" : "s")));
         return (
           <div key={p.id} onClick={() => setSelId(p.id)}
-            style={{ padding: "10px 12px", cursor: "pointer",
+            style={{ padding: "10px 12px", cursor: "pointer", display: "flex", gap: 10, alignItems: "center",
               background: on ? "rgba(57,135,229,0.15)" : "transparent",
               borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-              <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(p.role || "—"), flex: "0 0 auto" }} />
-              <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</span>
-            </div>
-            <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 2 }}>
-              {p.role || "—"} · {skillCount(p)} skill{skillCount(p) === 1 ? "" : "s"}
+            <Avatar name={p.name} color={roleColor.get(roleKey(p))} org={isOrg(p)} />
+            <div style={{ minWidth: 0 }}>
+              <div style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{highlightMatch(p.name, query)}</div>
+              <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 1,
+                whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                {lead}{sub ? " · " + sub : ""}
+              </div>
             </div>
           </div>
         );
       })}
-      {!ordered.length && <div style={{ padding: 12, color: "var(--muted)" }}>no people match the filter</div>}
+      {!ordered.length && <div style={{ padding: 12, color: "var(--muted)" }}>
+        {query ? "no people or organizations match “" + query + "”" : "no people match the filter"}</div>}
+    </div>
+  );
+}
+
+// ---- table view ------------------------------------------------------------
+// The rolodex as a spreadsheet: every contact (people + orgs) as a row, every
+// field as a sortable column, mirroring the Technology "Index" table. Reuses
+// the same fuzzy search / role / topic filters via `visibleIdx`; click any
+// header to sort, click a row to open the full profile.
+function PeopleTable({ people, visibleIdx, roleColor, query, searchScore, openPerson }) {
+  const [sortKey, setSortKey] = useState("name");
+  const [sortDir, setSortDir] = useState(1);
+
+  // a search overrides the manual sort so the best hit leads; clearing it
+  // returns to whatever column was last chosen.
+  const effKey = query ? "relevance" : sortKey;
+  const effDir = query ? -1 : sortDir;
+
+  const val = (p, key) => {
+    const c = p.contact || {};
+    switch (key) {
+      case "name": return (p.name || "").toLowerCase();
+      case "role": return (isOrg(p) ? "Organization" : (p.role || "")).toLowerCase();
+      case "org": return (c.organization || "").toLowerCase();
+      case "location": return (c.location || "").toLowerCase();
+      case "skills": return skillCount(p);
+      case "topics": return ([...(p.topics || []), ...(p.interests || [])][0] || "￿").toLowerCase();
+      case "relationship": return (c.relationship || "").toLowerCase();
+      case "last_contact": return c.last_contact || "";
+      default: return (p.name || "").toLowerCase();
+    }
+  };
+
+  const rows = useMemo(() => {
+    const idx = [...visibleIdx];
+    idx.sort((a, b) => {
+      if (effKey === "relevance") return (searchScore.get(b) - searchScore.get(a)) || people[a].name.localeCompare(people[b].name);
+      const va = val(people[a], effKey), vb = val(people[b], effKey);
+      const cmp = typeof va === "number" ? va - vb : String(va).localeCompare(String(vb));
+      return (cmp || people[a].name.localeCompare(people[b].name)) * effDir;
+    });
+    return idx;
+  }, [visibleIdx, effKey, effDir, people, searchScore]);
+
+  const onSort = (key) => {
+    if (query) return;                                   // search drives the order
+    if (sortKey === key) { setSortDir((d) => -d); return; }
+    setSortKey(key);
+    setSortDir(key === "skills" || key === "last_contact" ? -1 : 1);  // counts/dates: newest/most first
+  };
+
+  const COLUMNS = [
+    { key: "name", label: "NAME" },
+    { key: "role", label: "ROLE" },
+    { key: "org", label: "ORGANIZATION" },
+    { key: "location", label: "LOCATION" },
+    { key: "topics", label: "TOPICS / INTERESTS" },
+    { key: "skills", label: "SKILLS", align: "right" },
+    { key: "relationship", label: "RELATIONSHIP" },
+    { key: "last_contact", label: "LAST CONTACT" },
+  ];
+
+  const th = (c) => (
+    <th key={c.key} onClick={() => onSort(c.key)}
+      title={query ? "clear the search to sort columns" : "sort by " + c.label.toLowerCase()}
+      style={{ textAlign: c.align || "left", fontSize: 9.5, letterSpacing: 1,
+        color: effKey === c.key ? "var(--ink)" : "var(--muted)", fontWeight: effKey === c.key ? 700 : 600,
+        padding: "9px 12px", borderBottom: "1.5px solid var(--border)", position: "sticky", top: 0,
+        background: "var(--surface-1)", cursor: query ? "default" : "pointer", whiteSpace: "nowrap", zIndex: 1 }}>
+      {c.label}{!query && sortKey === c.key ? (sortDir === 1 ? " ▲" : " ▼") : ""}
+    </th>
+  );
+
+  const cell = { padding: "9px 12px", color: "var(--ink-2)", verticalAlign: "top", whiteSpace: "nowrap" };
+
+  return (
+    <div style={{ flex: 1, overflow: "auto", padding: "0 0 40px" }}>
+      <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "'IBM Plex Mono', monospace", fontSize: 12 }}>
+        <thead>
+          <tr>{COLUMNS.map(th)}</tr>
+        </thead>
+        <tbody>
+          {rows.map((i) => {
+            const p = people[i];
+            const c = p.contact || {};
+            const org = isOrg(p);
+            const roleTxt = org ? "Organization" : (p.role || "—");
+            const rc = roleColor.get(roleKey(p)) || "#898781";
+            const tags = [...(p.topics || []), ...(p.interests || [])];
+            return (
+              <tr key={p.id} onClick={() => openPerson(p.id)}
+                onMouseEnter={(e) => e.currentTarget.style.background = "rgba(255,255,255,0.03)"}
+                onMouseLeave={(e) => e.currentTarget.style.background = "transparent"}
+                style={{ cursor: "pointer", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                <td style={{ ...cell, whiteSpace: "nowrap" }}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 9 }}>
+                    <Avatar name={p.name} color={rc} org={org} size={26} radius={7} />
+                    <span style={{ color: "var(--ink)", fontWeight: 600 }}>{highlightMatch(p.name, query)}</span>
+                  </span>
+                </td>
+                <td style={cell}>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ width: 7, height: 7, borderRadius: "50%", background: rc, flex: "0 0 auto" }} />
+                    {highlightMatch(roleTxt, query)}
+                  </span>
+                </td>
+                <td style={cell}>{c.organization ? highlightMatch(c.organization, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={cell}>{c.location ? highlightMatch(c.location, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={{ ...cell, whiteSpace: "normal", maxWidth: 260 }}>
+                  {tags.length ? tags.map((t) => (
+                    <span key={t} style={{ fontSize: 9.5, color: "var(--ink-2)", background: "rgba(255,255,255,0.04)",
+                      border: "1px solid var(--border)", borderRadius: 20, padding: "2px 8px", marginRight: 4,
+                      marginBottom: 3, display: "inline-block" }}>{t}</span>
+                  )) : <span style={{ color: "var(--grid)" }}>—</span>}
+                </td>
+                <td style={{ ...cell, textAlign: "right", color: "var(--ink)" }}>{skillCount(p) || <span style={{ color: "var(--grid)" }}>0</span>}</td>
+                <td style={cell}>{c.relationship ? highlightMatch(c.relationship, query) : <span style={{ color: "var(--grid)" }}>—</span>}</td>
+                <td style={cell}>
+                  {c.last_contact
+                    ? <span>{fmtDate(c.last_contact)}<span style={{ color: "var(--muted)", fontSize: 10.5 }}> · {daysAgo(c.last_contact)}</span></span>
+                    : <span style={{ color: "var(--grid)" }}>—</span>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      {!rows.length && <div style={{ padding: 20, color: "var(--muted)" }}>
+        {query ? "no people or organizations match “" + query + "”" : "no contacts match the filter"}</div>}
     </div>
   );
 }
@@ -693,14 +1019,184 @@ function RoleBadge({ role, roleColor }) {
   );
 }
 
-function PersonDetail({ person, roleColor, mode, rankBy, hasProjects, techRecs, peerRecs, projRecs, peopleRecs, setSelId }) {
+// header card shared by people and org contacts. For a person, the organization
+// name links to a matching org entry when one exists (orgByName); an org shows an
+// "Organization" badge instead of a role.
+function EntityHeader({ entity, roleColor, orgByName, onOpen }) {
+  const org = isOrg(entity);
+  const c = roleColor.get(roleKey(entity)) || "#898781";
+  const contact = entity.contact || {};
+  const links = contact.links || {};
+  const orgRef = !org && contact.organization && orgByName
+    ? orgByName.get(contact.organization.toLowerCase()) : null;
+  return (
+    <div style={{ background: "var(--surface-1)", border: "1px solid var(--border)", borderRadius: 14, overflow: "hidden" }}>
+      <div style={{ height: 6, background: c }} />
+      <div style={{ padding: "18px 20px" }}>
+        <div style={{ display: "flex", gap: 15, alignItems: "flex-start", flexWrap: "wrap" }}>
+          <Avatar name={entity.name} color={c} size={56} radius={13} fontSize={20} org={org} />
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 21, fontWeight: 600, lineHeight: 1.2 }}>{entity.name}</div>
+            <div style={{ color: "var(--ink-2)", marginTop: 3 }}>
+              {org ? "Organization" : (entity.role || "—")}
+              {!org && contact.organization ? <span> · {orgRef
+                ? <a href="#" onClick={(e) => { e.preventDefault(); onOpen && onOpen(orgRef.id); }}
+                    title="open organization contact">{contact.organization}</a>
+                : <span style={{ color: "var(--ink)" }}>{contact.organization}</span>}</span> : null}
+            </div>
+            <div style={{ marginTop: 8 }}>
+              {org
+                ? <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 9px",
+                    borderRadius: 20, border: "1px solid " + c, color: c, fontSize: 11, letterSpacing: 0.5 }}>
+                    <Icon name="org" size={12} /> Organization</span>
+                : <RoleBadge role={entity.role} roleColor={roleColor} />}
+            </div>
+          </div>
+          <div style={{ marginLeft: "auto", display: "flex", gap: 7 }}>
+            {contact.email && <IconLink href={"mailto:" + contact.email} title="email" name="mail" />}
+            {contact.phone && <IconLink href={"tel:" + contact.phone.replace(/[^+\d]/g, "")} title="call" name="phone" />}
+            <LinkIcons links={links} />
+          </div>
+        </div>
+        {contact.business && (
+          <div style={{ marginTop: 15, padding: "11px 13px", borderRadius: 10, background: "var(--page)",
+            border: "1px solid var(--border)", color: "var(--ink-2)" }}>
+            <div style={{ color: "var(--muted)", fontSize: 10, letterSpacing: 1, textTransform: "uppercase", marginBottom: 3 }}>Business</div>
+            {contact.business}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ContactField({ icon, label, children }) {
+  return (
+    <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+      <span style={{ color: "var(--muted)", marginTop: 2, flex: "0 0 auto", display: "flex" }}><Icon name={icon} /></span>
+      <div style={{ minWidth: 0 }}>
+        <div style={{ color: "var(--muted)", fontSize: 10, letterSpacing: 0.8, textTransform: "uppercase" }}>{label}</div>
+        <div style={{ color: "var(--ink)", wordBreak: "break-word" }}>{children}</div>
+      </div>
+    </div>
+  );
+}
+
+function ContactSection({ contact }) {
+  const links = contact.links || {};
+  const hasLinks = LINK_ORDER.some((k) => links[k]);
+  const has = contact.email || contact.phone || contact.organization || contact.location
+    || contact.last_contact || hasLinks || contact.relationship || contact.how_met;
+  if (!has) return null;
+  return (
+    <>
+      <SectionTitle>Contact</SectionTitle>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: "11px 22px", marginTop: 10 }}>
+        {contact.email && <ContactField icon="mail" label="Email"><a href={"mailto:" + contact.email}>{contact.email}</a></ContactField>}
+        {contact.phone && <ContactField icon="phone" label="Phone">{contact.phone}</ContactField>}
+        {contact.organization && <ContactField icon="org" label="Organization">{contact.organization}</ContactField>}
+        {contact.location && <ContactField icon="pin" label="Location">{contact.location}</ContactField>}
+        {contact.last_contact && <ContactField icon="clock" label="Last contact">
+          {fmtDate(contact.last_contact)} <span style={{ color: "var(--muted)" }}>· {daysAgo(contact.last_contact)}</span></ContactField>}
+        {hasLinks && <ContactField icon="link" label="Links"><span style={{ display: "inline-flex", gap: 7 }}><LinkIcons links={links} /></span></ContactField>}
+      </div>
+      {(contact.relationship || contact.how_met) && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center", marginTop: 12 }}>
+          {contact.relationship && <span style={{ background: "var(--surface-1)", border: "1px solid var(--border)",
+            borderRadius: 20, padding: "3px 11px", fontSize: 11.5 }}>{contact.relationship}</span>}
+          {contact.how_met && <span style={{ color: "var(--muted)" }}>{contact.how_met}</span>}
+        </div>
+      )}
+    </>
+  );
+}
+
+function NotesSection({ notes }) {
+  if (!notes || !notes.length) return null;
+  return (
+    <>
+      <SectionTitle>Notes</SectionTitle>
+      <div style={{ marginTop: 8, background: "var(--surface-1)", border: "1px solid var(--border)",
+        borderLeft: "3px solid var(--q-techniques)", borderRadius: 8, padding: "8px 14px" }}>
+        {notes.map((n, i) => (
+          <div key={i} style={{ display: "flex", gap: 10, padding: "7px 0",
+            borderTop: i ? "1px dashed var(--border)" : "none" }}>
+            {n.when && <span style={{ color: "var(--muted)", fontSize: 11, flex: "0 0 84px" }}>{fmtDate(n.when)}</span>}
+            <span style={{ color: "var(--ink-2)" }}>{n.text}</span>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+// org contacts whose `organization` matches this org's name — the hub view.
+function PeopleHere({ org, people, roleColor, setSelId }) {
+  const members = (people || []).filter((p) => !isOrg(p)
+    && (p.contact && p.contact.organization || "").toLowerCase() === (org.name || "").toLowerCase());
+  return (
+    <>
+      <SectionTitle>People here <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>
+        — profiles that list {org.name} as their organization</span></SectionTitle>
+      <div style={{ marginTop: 8, display: "flex", flexWrap: "wrap", gap: 8 }}>
+        {members.map((p) => (
+          <button key={p.id} onClick={() => setSelId(p.id)}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 11px", borderRadius: 8,
+              cursor: "pointer", color: "var(--ink)", border: "1px solid var(--border)", background: "rgba(255,255,255,0.02)" }}>
+            <Avatar name={p.name} color={roleColor.get(roleKey(p))} size={22} radius={6} fontSize={10} />
+            <span>{p.name}</span>
+            <span style={{ color: "var(--muted)", fontSize: 11 }}>{p.role || "—"}</span>
+          </button>
+        ))}
+        {!members.length && <div style={{ color: "var(--muted)" }}>
+          no profiles list {org.name} yet — set <code>organization: {org.name}</code> on a person.</div>}
+      </div>
+    </>
+  );
+}
+
+function OrgDetail({ org, people, roleColor, setSelId }) {
+  const skills = org.skills || [];
   return (
     <div style={{ maxWidth: 760 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-        <strong style={{ fontSize: 20 }}>{person.name}</strong>
-        <RoleBadge role={person.role} roleColor={roleColor} />
+      <EntityHeader entity={org} roleColor={roleColor} />
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "14px 0 4px" }}>
+        {(org.topics || []).map((t) => (
+          <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)", borderRadius: 20, padding: "2px 9px" }}>{t}</span>
+        ))}
       </div>
-      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "8px 0" }}>
+      <div style={{ color: "var(--ink-2)", margin: "10px 0 4px" }}>{org.blurb}</div>
+
+      <ContactSection contact={org.contact || {}} />
+
+      {skills.length > 0 && (
+        <>
+          <SectionTitle>Stack / focus</SectionTitle>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
+            {skills.map((s) => (
+              <a key={s.id} href={s.url || "#"} target={s.url ? "_blank" : undefined}
+                style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 8,
+                  textDecoration: "none", color: "var(--ink)", border: "1px solid " + quadColor(s.quadrant), background: "rgba(255,255,255,0.02)" }}>
+                <span style={{ width: 9, height: 9, borderRadius: 2, background: quadColor(s.quadrant) }} />
+                <span>{s.name}</span>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+
+      <PeopleHere org={org} people={people} roleColor={roleColor} setSelId={setSelId} />
+
+      <NotesSection notes={org.notes} />
+    </div>
+  );
+}
+
+function PersonDetail({ person, people, roleColor, orgByName, mode, rankBy, hasProjects, techRecs, peerRecs, projRecs, peopleRecs, setSelId }) {
+  return (
+    <div style={{ maxWidth: 760 }}>
+      <EntityHeader entity={person} roleColor={roleColor} orgByName={orgByName} onOpen={setSelId} />
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "14px 0 4px" }}>
         {(person.topics || []).map((t) => (
           <span key={t} style={{ fontSize: 11, color: "var(--ink-2)", border: "1px solid var(--border)", borderRadius: 20, padding: "2px 9px" }}>{t}</span>
         ))}
@@ -709,7 +1205,9 @@ function PersonDetail({ person, roleColor, mode, rankBy, hasProjects, techRecs, 
             style={{ fontSize: 11, color: "#4ade80", border: "1px dashed rgba(74,222,128,0.5)", borderRadius: 20, padding: "2px 9px" }}>↗ {t}</span>
         ))}
       </div>
-      <div style={{ color: "var(--ink-2)", margin: "12px 0 4px" }}>{person.blurb}</div>
+      <div style={{ color: "var(--ink-2)", margin: "10px 0 4px" }}>{person.blurb}</div>
+
+      <ContactSection contact={person.contact || {}} />
 
       <SectionTitle>Skills</SectionTitle>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 8 }}>
@@ -730,6 +1228,8 @@ function PersonDetail({ person, roleColor, mode, rankBy, hasProjects, techRecs, 
       <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 8 }}>
         colour-bordered = on the radar (links to the tool) · plain = free-form skill
       </div>
+
+      <NotesSection notes={person.notes} />
 
       {mode === "tech" && (rankBy === "peers"
         ? <PeerRecs recs={peerRecs} setSelId={setSelId} />
@@ -1114,7 +1614,9 @@ function MapView({ people, personSem, visibleIdx, roleColor, threshold, topK, se
           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <span style={{ width: 9, height: 9, borderRadius: "50%", background: roleColor.get(people[hoverIdx].role || "—") }} />
             <strong>{people[hoverIdx].name}</strong>
-            <span style={{ color: "var(--muted)" }}>· {people[hoverIdx].role || "—"}</span>
+            <span style={{ color: "var(--muted)" }}>· {people[hoverIdx].role || "—"}
+              {people[hoverIdx].contact && people[hoverIdx].contact.organization
+                ? " · " + people[hoverIdx].contact.organization : ""}</span>
           </div>
           <div style={{ color: "var(--ink-2)", marginTop: 3 }}>{people[hoverIdx].blurb}</div>
         </div>
@@ -1141,9 +1643,10 @@ function SectionTitle({ children }) {
 }
 
 function Legend({ view, mode, people, roleColor }) {
-  const roles = [...new Set(people.map((p) => p.role || "—"))];
+  const roles = [...new Set(people.map(roleKey))];
   const note = view === "map" ? "node size ≈ skill count · links = shared skills · drag / scroll to explore"
     : view === "skills" ? "count = people who hold the skill · amber = bus factor 1 · click a person to open"
+    : view === "table" ? "every contact & field · click a header to sort · click a row to open the profile"
     : mode === "tech" ? "skills held excluded · ↗ growth = matches a declared interest"
     : mode === "projects" ? "staffing fit — semantic on the bio, or overlap with the declared stack"
     : "bar = person-to-person similarity · click a person to open";
