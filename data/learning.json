@@ -303,6 +303,53 @@
       "blurb": "Broad Azure architecture credential covering security, governance, networking, storage, resilience, and cost. Requires Azure Administrator Associate plus AZ-305."
     },
     {
+      "id": "boehm-csse-annual-technology-workshop",
+      "type": "conference",
+      "title": "Boehm CSSE Annual Technology Workshop",
+      "author": "USC Boehm Center for Systems & Software Engineering",
+      "source": "",
+      "url": "https://boehmcsse.org/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Queued",
+      "topics": [
+        "Skills"
+      ],
+      "editions": [
+        {
+          "year": 2026,
+          "dates": null,
+          "location": "Online",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        },
+        {
+          "year": 2025,
+          "dates": "2025-04-15..04-17",
+          "location": "Online",
+          "status": "Announced",
+          "cfp": null,
+          "url": "https://boehmcsse.org/events-2/annual-technology-workshop-2025/"
+        },
+        {
+          "year": 2024,
+          "dates": null,
+          "location": "Online",
+          "status": "Announced",
+          "cfp": null,
+          "url": "https://boehmcsse.org/events-2/annual-research-review-2024/"
+        }
+      ],
+      "rating": null,
+      "added": null,
+      "started": null,
+      "queued": "2026-08-07",
+      "finished": null,
+      "shelved": null,
+      "blurb": "The annual gathering of USC's Barry Boehm Center for Systems and Software Engineering (BCSSE) \u2014 a virtual forum (formerly the Annual Research Review) where academia, industry, and government share work on systems- and software-engineering practices and cost estimation (COCOMO, PSM)."
+    },
+    {
       "id": "building-llm-apps",
       "type": "book",
       "title": "Building Applications with Large Language Models",
@@ -367,6 +414,53 @@
       "finished": null,
       "shelved": null,
       "blurb": "Three-exam charter in technical analysis, behavioral finance, and systematic trading, requiring qualifying professional experience and CMT Association membership."
+    },
+    {
+      "id": "conference-on-systems-engineering-research-cser",
+      "type": "conference",
+      "title": "Conference on Systems Engineering Research (CSER)",
+      "author": "SERC / INCOSE (USC & Stevens Institute)",
+      "source": "",
+      "url": "https://cser.info/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Queued",
+      "topics": [
+        "Skills"
+      ],
+      "editions": [
+        {
+          "year": 2026,
+          "dates": "2026-04-06..04-09",
+          "location": "Arlington, USA",
+          "status": "Announced",
+          "cfp": "see cser.info / EasyChair CSER2026",
+          "url": null
+        },
+        {
+          "year": 2025,
+          "dates": "2025-03-18..03-21",
+          "location": "Long Beach, CA, USA",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        },
+        {
+          "year": 2024,
+          "dates": "2024-03-25..03-27",
+          "location": "Tucson, AZ, USA",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        }
+      ],
+      "rating": null,
+      "added": null,
+      "started": null,
+      "queued": "2026-08-07",
+      "finished": null,
+      "shelved": null,
+      "blurb": "The premier academic forum for systems-engineering research \u2014 established in 2003 by the Systems Engineering Research Center (co-founded by USC and Stevens Institute) and now run with INCOSE, where researchers, practitioners, and educators present peer-reviewed work advancing the discipline."
     },
     {
       "id": "cqf",

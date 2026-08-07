@@ -41,6 +41,11 @@ const TYPES = ["book", "article", "video", "certification", "conference"];
 const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification", conference: "Conference" };
 const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡", conference: "◈" };
 
+// Per-edition status of a conference occurrence — its own small vocabulary,
+// distinct from the consumption STATUS_COLOR above. Announced = dates known;
+// then the personal states an attendee moves through.
+const EDITION_STATUS_COLOR = { Announced: "#6b6456", Interested: "#c17a1a", Registered: "#1d6fb8", Attended: "#1a7f4b", Skipped: "#a05252" };
+
 /* Fallback sample — used if data/learning.json can't be fetched. */
 const SAMPLE = {
   generated: "2026-07-03",
@@ -485,7 +490,7 @@ function DetailModal({ item, onClose }) {
               }}>
                 <span style={{ fontWeight: 700, minWidth: 34 }}>{e.year}</span>
                 <span style={{
-                  color: "#fff", background: STATUS_COLOR[b.status] || "#6b6456",
+                  color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
                   fontSize: 8.5, letterSpacing: 1, padding: "2px 6px",
                   textTransform: "uppercase", alignSelf: "center",
                 }}>{e.status || "—"}</span>
@@ -534,6 +539,107 @@ function DetailModal({ item, onClose }) {
 }
 
 /* ===================== SHELL ===================== */
+/* A flat schedule table of every tracked conference and its year-over-year
+   editions, with links — a reference lens that complements the atlas/card
+   view. One row per edition; the conference name + organizer span their
+   editions via rowSpan. Renders nothing when no conferences are tracked. */
+function ConferenceTable({ items }) {
+  const confs = items.filter((b) => b.type === "conference")
+    .sort((a, c) => (a.title || "").localeCompare(c.title || ""));
+  if (!confs.length) return null;
+
+  const edCount = confs.reduce((n, c) => n + Math.max(1, (c.editions || []).length), 0);
+  const th = {
+    textAlign: "left", padding: "7px 10px", whiteSpace: "nowrap",
+    fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.2,
+    color: "#6b6456", textTransform: "uppercase", borderBottom: "2px solid #1a1a1a",
+  };
+  const td = {
+    padding: "7px 10px", verticalAlign: "top", borderBottom: "1px solid #ece7d9",
+    fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#33312b",
+  };
+  const link = { color: "#1d6fb8", textDecoration: "none" };
+  const ext = (url, label) => (
+    <a href={url} target="_blank" rel="noopener noreferrer" style={link}>{label}</a>
+  );
+
+  return (
+    <div style={{ marginBottom: 22 }}>
+      <div style={{
+        display: "flex", justifyContent: "space-between", alignItems: "baseline",
+        borderBottom: "3px solid #1a1a1a", paddingBottom: 6,
+      }}>
+        <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, letterSpacing: -0.5 }}>
+          ◈ Conference Schedule
+        </h2>
+        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456", letterSpacing: 1 }}>
+          {confs.length} tracked · {edCount} editions
+        </span>
+      </div>
+      <div style={{ overflowX: "auto", border: "1px solid #1a1a1a", borderTop: "none", background: "#fffdf7" }}>
+        <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 660 }}>
+          <thead>
+            <tr>
+              <th style={th}>Conference</th>
+              <th style={th}>Organizer</th>
+              <th style={th}>Year</th>
+              <th style={th}>Dates</th>
+              <th style={th}>Location</th>
+              <th style={th}>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {confs.map((c) => {
+              const eds = (c.editions && c.editions.length) ? c.editions : [null];
+              return eds.map((e, i) => (
+                <tr key={c.id + "-" + (e ? e.year : "none")}>
+                  {i === 0 && (
+                    <td style={{ ...td, fontWeight: 700, minWidth: 190 }} rowSpan={eds.length}>
+                      {c.url ? ext(c.url, <>{c.title} ↗</>) : c.title}
+                    </td>
+                  )}
+                  {i === 0 && (
+                    <td style={{ ...td, color: "#6b6456" }} rowSpan={eds.length}>
+                      {c.author || "—"}
+                      {c.recurrence && (
+                        <div style={{ color: "#9a9384", fontSize: 9.5, marginTop: 2 }}>{c.recurrence}</div>
+                      )}
+                    </td>
+                  )}
+                  {e ? (
+                    <>
+                      <td style={{ ...td, fontWeight: 700 }}>
+                        {e.url ? ext(e.url, <>{e.year} ↗</>)
+                               : (c.url ? ext(c.url, e.year) : e.year)}
+                      </td>
+                      <td style={td}>{e.dates || "TBD"}</td>
+                      <td style={td}>
+                        {e.location || "—"}
+                        {e.cfp && <div style={{ color: "#9a5b1d", fontSize: 9.5, marginTop: 2 }}>CFP: {e.cfp}</div>}
+                      </td>
+                      <td style={td}>
+                        <span style={{
+                          color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
+                          fontSize: 8.5, letterSpacing: 0.8, padding: "2px 6px", textTransform: "uppercase",
+                          whiteSpace: "nowrap",
+                        }}>{e.status || "—"}</span>
+                      </td>
+                    </>
+                  ) : (
+                    <td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={4}>
+                      no editions recorded yet
+                    </td>
+                  )}
+                </tr>
+              ));
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 export default function LearningApp() {
   const { data, status } = useLearningData();
   const [statusFilter, setStatusFilter] = useState("All");
@@ -749,6 +855,10 @@ export default function LearningApp() {
             </select>
           </div>
         </div>
+
+        {/* conference schedule — a flat table of every conference + its year
+            editions with links, shown regardless of the active filters */}
+        <ConferenceTable items={allItems} />
 
         {/* main split — radar (sticky, snapshot of everything) + scrollable list */}
         <div style={{ display: "flex", gap: 22, alignItems: "flex-start", flexWrap: "wrap" }}>
