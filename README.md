@@ -189,8 +189,8 @@ article, video, and a technology can share a topic tag.
 ## Learning Library
 
 A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
-learning content — **books, articles, videos, and certifications** —
-alongside the technologies they relate to. Hand-curated in Markdown under
+learning content — **books, articles, videos, certifications, and
+conferences** — alongside the technologies they relate to. Hand-curated in Markdown under
 `learning/` (one file per item, like `people/` and `projects/`), which
 `build_learning.py` aggregates into `data/learning.json`. Manage it with
 `learning.py` (the `learning-manage` skill):
@@ -251,13 +251,21 @@ Status is content-neutral: for an article, video, or certification,
 ### Item schema
 
 Every item carries a `type` (`book` · `article` · `video` ·
-`certification`) plus the shared fields below. Type-specific "length"
-fields differ: books use `pages`/`pages_read`, articles use `minutes`
+`certification` · `conference`) plus the shared fields below. Type-specific
+"length" fields differ: books use `pages`/`pages_read`, articles use `minutes`
 (read time), videos use `duration`, certifications use `price` (exam
-fee). Articles, videos, and certifications also carry a `url` and a
-`source` (publication / channel for articles and videos, exam code for
-certifications); certifications use `author` for the issuing
-organization.
+fee), and conferences carry an `editions` list. Articles, videos,
+certifications, and conferences also carry a `url` and a `source`
+(publication / channel for articles and videos, exam code for
+certifications); certifications use `author` for the issuing organization and
+conferences for the organizer.
+
+A **conference** recurs, so its single file tracks the series and one `editions`
+entry per year (`year | dates | location | status | cfp | url`) plus a
+`recurrence` cadence. Each year is recorded with `python learning.py edition`,
+and the `conference-track` skill refreshes those editions from the conferences'
+websites. See `learning/README.md` for the edition line format and edition
+status vocabulary.
 
 ```json
 {
@@ -311,6 +319,28 @@ organization.
   "rating": null,
   "added": "2026-08-03",
   "queued": "2026-08-03",
+  "blurb": "..."
+}
+```
+
+```json
+{
+  "id": "reliability-and-maintainability-symposium",
+  "type": "conference",
+  "title": "Reliability and Maintainability Symposium",
+  "author": "IEEE, ASQ, SAE et al.",
+  "source": null,
+  "url": "https://rams.org/",
+  "recurrence": "annual",
+  "year": null,
+  "status": "Queued",
+  "topics": ["Skills"],
+  "editions": [
+    { "year": 2027, "dates": null, "location": "St. Petersburg, FL", "status": "Announced", "cfp": "draft papers 2026-07-31", "url": null },
+    { "year": 2026, "dates": "2026-01-19..01-22", "location": "Miramar Beach, FL", "status": "Announced", "cfp": null, "url": null }
+  ],
+  "rating": null,
+  "queued": "2026-08-07",
   "blurb": "..."
 }
 ```

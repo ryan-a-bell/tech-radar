@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-06",
+  "generated": "2026-08-07",
   "items": [
     {
       "id": "afml",
@@ -736,6 +736,53 @@
       "blurb": "Covers responsible AI governance, risk management, laws, policy, and safe, trustworthy AI deployment."
     },
     {
+      "id": "incose-international-symposium",
+      "type": "conference",
+      "title": "INCOSE International Symposium",
+      "author": "INCOSE",
+      "source": "",
+      "url": "https://www.incose.org/events-education/international-symposium/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Queued",
+      "topics": [
+        "Skills"
+      ],
+      "editions": [
+        {
+          "year": 2027,
+          "dates": "2027-07-17..07-22",
+          "location": null,
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        },
+        {
+          "year": 2026,
+          "dates": "2026-06-13..06-18",
+          "location": "Yokohama, Japan (Pacifico Yokohama)",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        },
+        {
+          "year": 2025,
+          "dates": "2025-07-26..07-31",
+          "location": "Ottawa, Canada",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        }
+      ],
+      "rating": null,
+      "added": null,
+      "started": null,
+      "queued": "2026-08-07",
+      "finished": null,
+      "shelved": null,
+      "blurb": "The International Council on Systems Engineering's flagship annual conference \u2014 a week of peer-reviewed papers, tutorials, and working-group sessions spanning model-based systems engineering, digital engineering, and the evolving practice of the discipline."
+    },
+    {
       "id": "kaabar-entry-price-doesnt-matter",
       "type": "article",
       "title": "The Market Does Not Care About Your Entry Price",
@@ -1082,6 +1129,45 @@
       "finished": null,
       "shelved": null,
       "blurb": "Came up twice this month scouting the RAG topic on the tech radar \u2014 queued to see if it's worth the reading time."
+    },
+    {
+      "id": "reliability-and-maintainability-symposium",
+      "type": "conference",
+      "title": "Reliability and Maintainability Symposium",
+      "author": "IEEE, ASQ, SAE et al.",
+      "source": "",
+      "url": "https://rams.org/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Queued",
+      "topics": [
+        "Skills"
+      ],
+      "editions": [
+        {
+          "year": 2027,
+          "dates": null,
+          "location": "St. Petersburg, FL (Hilton St. Petersburg Bayfront)",
+          "status": "Announced",
+          "cfp": "draft papers 2026-07-31; final 2026-09-30",
+          "url": null
+        },
+        {
+          "year": 2026,
+          "dates": "2026-01-19..01-22",
+          "location": "Miramar Beach, FL (Hilton Sandestin)",
+          "status": "Announced",
+          "cfp": null,
+          "url": null
+        }
+      ],
+      "rating": null,
+      "added": null,
+      "started": null,
+      "queued": "2026-08-07",
+      "finished": null,
+      "shelved": null,
+      "blurb": "RAMS \u2014 the annual symposium (co-sponsored by IEEE, ASQ, SAE and other engineering societies) where reliability, maintainability, and safety engineers present methods, case studies, and tutorials, alongside certification workshops for the profession."
     },
     {
       "id": "rl-intro",

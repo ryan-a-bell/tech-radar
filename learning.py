@@ -15,6 +15,11 @@ learning.py — manage the Learning Library without hand-editing JSON.
   python learning.py shelve <id-or-title> --note "..."   # Shelved + why
   python learning.py add "<title>" --type book --author "..." \
       --topics "ML,AI" --blurb "..."               # add an entry
+  python learning.py add "RAMS" --type conference --author "IEEE" \
+      --url "..." --blurb "..."                     # add a recurring conference
+  python learning.py edition RAMS --year 2026 \
+      --dates "2026-01-19..01-22" --location "..." --status Registered
+                                                    # track one year's occurrence
 
 Status pipeline (most-resolved first, mirrors the radar's rings):
   Read → Reading → Queued → Discovered → Shelved
@@ -41,7 +46,7 @@ from build_learning import build_learning_json  # noqa: E402
 _INT_FIELDS = {"rating", "pages", "pages_read", "minutes", "year"}
 _SETTABLE = (_INT_FIELDS | {
     "topics", "duration", "price", "blurb", "author", "source", "url",
-    "title", "shelved_note",
+    "title", "shelved_note", "recurrence",
 })
 
 # type-specific length labels for the list view
@@ -55,6 +60,13 @@ def _length(it):
         return it.get("duration") or ""
     if t == "certification":
         return it.get("price") or ""
+    if t == "conference":
+        ed = core.next_edition(it)
+        if not ed:
+            return ""
+        when = ed.get("dates") or (str(ed["year"]) if ed.get("year") else "")
+        where = ed.get("location") or ""
+        return " · ".join(p for p in (when, where) if p)
     return ""
 
 
@@ -85,7 +97,8 @@ def cmd_list(args):
     by_status = {s: [] for s in core.STATUS_ORDER}
     for it in items:
         by_status.setdefault(it.get("status", "Discovered"), []).append(it)
-    icon = {"book": "▣", "article": "❡", "video": "▶", "certification": "⬡"}
+    icon = {"book": "▣", "article": "❡", "video": "▶", "certification": "⬡",
+            "conference": "◈"}
     for status in core.STATUS_ORDER:
         group = by_status.get(status, [])
         if not group:
@@ -218,6 +231,7 @@ def cmd_add(args):
             minutes=args.minutes,
             duration=args.duration,
             price=args.price,
+            recurrence=args.recurrence,
             existing_ids=existing,
         )
     except ValueError as e:
@@ -226,6 +240,25 @@ def cmd_add(args):
     doc["items"].append(item)
     print(f"  added {item['title']} — {item['id']} "
           f"({item['type']}, {item['status']})")
+    _saved(doc)
+
+
+def cmd_edition(args):
+    doc = core.load()
+    it = _resolve_or_exit(doc["items"], args.item)
+    if it.get("type") != "conference":
+        print(f"  '{it['title']}' is a {it['type']}, not a conference — "
+              "editions only apply to conferences")
+        sys.exit(1)
+    try:
+        ed = core.upsert_edition(
+            it, args.year, dates=args.dates, location=args.location,
+            status=args.status, cfp=args.cfp, url=args.url)
+    except ValueError as e:
+        print(f"  {e}")
+        sys.exit(1)
+    where = f" — {ed['location']}" if ed.get("location") else ""
+    print(f"  {it['title']}: {ed['year']} edition [{ed.get('status')}]{where}")
     _saved(doc)
 
 
@@ -290,7 +323,22 @@ def main():
     p.add_argument("--minutes", type=int, help="articles (read time)")
     p.add_argument("--duration", help="videos (e.g. \"1h 56m\")")
     p.add_argument("--price", help="certifications (exam fee, e.g. \"$150\")")
+    p.add_argument("--recurrence",
+                   help="conferences (cadence, e.g. \"annual\"; default annual)")
     p.set_defaults(func=cmd_add)
+
+    p = sub.add_parser("edition",
+                       help="add/update a conference's edition for a year")
+    p.add_argument("item")
+    p.add_argument("--year", type=int, required=True)
+    p.add_argument("--dates", help="e.g. \"2026-06-13..06-18\" or \"13–18 Jun 2026\"")
+    p.add_argument("--location", "--loc", dest="location",
+                   help="host city / venue, e.g. \"Yokohama, Japan\"")
+    p.add_argument("--status", choices=core.EDITION_STATUS,
+                   help="default Announced for a new edition; unchanged otherwise")
+    p.add_argument("--cfp", help="call-for-papers / abstract deadline")
+    p.add_argument("--url", help="edition-specific page (optional)")
+    p.set_defaults(func=cmd_edition)
 
     args = ap.parse_args()
     args.func(args)

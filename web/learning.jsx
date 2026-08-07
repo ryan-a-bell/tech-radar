@@ -9,8 +9,9 @@ import React, { useState, useMemo, useEffect } from "react";
    status (Discovered → Queued → Reading → Read, with Shelved as the
    deliberate "not for now, maybe later" set-aside).
 
-   Holds mixed learning content — books, articles, videos, and
-   certifications — in one list, each item carrying a `type`. Reuses the
+   Holds mixed learning content — books, articles, videos, certifications,
+   and recurring conferences (which carry a list of year-over-year
+   `editions`) — in one list, each item carrying a `type`. Reuses the
    same curated TOPICS
    vocabulary as radar_core.TOPICS / dashboard.jsx, so an item and a
    technology can share a topic tag (e.g. both tagged "RAG" or "Quant").
@@ -36,9 +37,9 @@ const STATUS_LABEL = { Discovered: "Discovered", Queued: "Queued", Reading: "In 
 // Content types. A small glyph + label brands each card so books,
 // articles and videos are distinguishable at a glance without color
 // (color is reserved for status, as on the tech radar).
-const TYPES = ["book", "article", "video", "certification"];
-const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification" };
-const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡" };
+const TYPES = ["book", "article", "video", "certification", "conference"];
+const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification", conference: "Conference" };
+const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡", conference: "◈" };
 
 /* Fallback sample — used if data/learning.json can't be fetched. */
 const SAMPLE = {
@@ -62,23 +63,45 @@ function daysAgo(iso) {
    the default sort and the "recently touched" sort option. */
 function touchedDate(b) { return b.finished || b.started || b.shelved || b.queued || b.added || "0000-00-00"; }
 
+/* The edition of a recurring conference to surface: the soonest upcoming one
+   (year >= now), else the most recent past one. Null if none. Mirrors
+   learning_core.next_edition so the page and CLI agree. */
+function nextEdition(b) {
+  const eds = b.editions || [];
+  if (!eds.length) return null;
+  const year = new Date().getFullYear();
+  const upcoming = eds.filter((e) => (e.year || 0) >= year)
+                      .sort((a, c) => (a.year || 0) - (c.year || 0));
+  if (upcoming.length) return upcoming[0];
+  return [...eds].sort((a, c) => (c.year || 0) - (a.year || 0))[0];
+}
+
+/* One-line summary of an edition: dates (or year) · location. */
+function editionLabel(e) {
+  if (!e) return "";
+  const when = e.dates || (e.year ? String(e.year) : "");
+  return [when, e.location].filter(Boolean).join(" · ");
+}
+
 /* Human "length" label per content type — pages for books, read-time for
-   articles, runtime for videos, exam price for certifications. Returns ""
-   if the item carries no length. */
+   articles, runtime for videos, exam price for certifications, and the next
+   occurrence for a recurring conference. Returns "" if none. */
 function lengthLabel(b) {
   if (b.type === "book") return b.pages ? b.pages + "p" : "";
   if (b.type === "article") return b.minutes ? b.minutes + " min read" : "";
   if (b.type === "video") return b.duration || "";
   if (b.type === "certification") return b.price || "";
+  if (b.type === "conference") return editionLabel(nextEdition(b));
   return "";
 }
 
 /* Byline under the title: creator, then source (publication / channel for
    articles and videos, exam code for certifications), then year. Books
-   just show author · year. */
+   just show author · year; a conference shows organizer · recurrence. */
 function byline(b) {
   const parts = [b.author];
   if (b.source && b.type !== "book") parts.push(b.source);
+  if (b.type === "conference" && b.recurrence) parts.push(b.recurrence);
   if (b.year) parts.push(b.year);
   return parts.filter(Boolean).join(" · ");
 }
@@ -226,6 +249,13 @@ function OpenLink({ url, small }) {
 
 function CardFoot({ b }) {
   const len = lengthLabel(b);
+  if (b.type === "conference") {
+    const ed = nextEdition(b);
+    const past = ed && ed.year && ed.year < new Date().getFullYear();
+    const left = ed ? `${past ? "latest" : "next"}: ${editionLabel(ed)}`
+                    : `${(b.editions || []).length} editions`;
+    return (<><span>{left}</span><span>{b.url ? <OpenLink url={b.url} small /> : null}</span></>);
+  }
   if (b.status === "Reading") {
     if (b.type === "book" && b.pages_read && b.pages) {
       const pct = Math.round((b.pages_read / b.pages) * 100);
@@ -440,6 +470,38 @@ function DetailModal({ item, onClose }) {
             borderLeft: `2px solid ${STATUS_COLOR.Shelved}`, paddingLeft: 10, margin: "0 0 14px",
           }}>{b.shelved_note}</p>
         )}
+        {b.type === "conference" && (b.editions || []).length > 0 && (
+          <div style={{ margin: "0 0 14px" }}>
+            <div style={{
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+              letterSpacing: 1.5, color: "#6b6456", textTransform: "uppercase",
+              marginBottom: 6,
+            }}>Editions</div>
+            {b.editions.map((e) => (
+              <div key={e.year} style={{
+                display: "flex", gap: 8, alignItems: "baseline",
+                padding: "6px 0", borderBottom: "1px solid #ece7d9",
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#33312b",
+              }}>
+                <span style={{ fontWeight: 700, minWidth: 34 }}>{e.year}</span>
+                <span style={{
+                  color: "#fff", background: STATUS_COLOR[b.status] || "#6b6456",
+                  fontSize: 8.5, letterSpacing: 1, padding: "2px 6px",
+                  textTransform: "uppercase", alignSelf: "center",
+                }}>{e.status || "—"}</span>
+                <span style={{ flex: 1 }}>
+                  {[e.dates, e.location].filter(Boolean).join(" · ") || "dates TBD"}
+                  {e.cfp && (
+                    <span style={{ display: "block", color: "#9a5b1d", fontSize: 10 }}>
+                      CFP: {e.cfp}
+                    </span>
+                  )}
+                </span>
+                {e.url && <OpenLink url={e.url} small />}
+              </div>
+            ))}
+          </div>
+        )}
         {b.url && (
           <div style={{ margin: "0 0 14px" }}><OpenLink url={b.url} /></div>
         )}
@@ -543,7 +605,7 @@ export default function LearningApp() {
 
   const counts = { Discovered: 0, Queued: 0, Reading: 0, Read: 0, Shelved: 0 };
   allItems.forEach((b) => { if (counts[b.status] !== undefined) counts[b.status]++; });
-  const typeCounts = { book: 0, article: 0, video: 0, certification: 0 };
+  const typeCounts = { book: 0, article: 0, video: 0, certification: 0, conference: 0 };
   allItems.forEach((b) => { if (typeCounts[b.type] !== undefined) typeCounts[b.type]++; });
 
   return (
@@ -602,7 +664,7 @@ export default function LearningApp() {
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
               color: "#6b6456", letterSpacing: 1, textAlign: "right",
             }}>
-              BOOKS · ARTICLES · VIDEOS · CERTIFICATIONS — ATLAS VIEW<br />
+              BOOKS · ARTICLES · VIDEOS · CERTIFICATIONS · CONFERENCES — ATLAS VIEW<br />
               {data.generated}
             </span>
           </div>
@@ -640,6 +702,7 @@ export default function LearningApp() {
           <Stat label="ARTICLES" value={typeCounts.article} />
           <Stat label="VIDEOS" value={typeCounts.video} />
           <Stat label="CERTIFICATIONS" value={typeCounts.certification} />
+          <Stat label="CONFERENCES" value={typeCounts.conference} />
           <Stat label="DISCOVERED" value={counts.Discovered} color={STATUS_COLOR.Discovered} />
           <Stat label="QUEUED" value={counts.Queued} color={STATUS_COLOR.Queued} />
           <Stat label="IN PROGRESS" value={counts.Reading} color={STATUS_COLOR.Reading} />
