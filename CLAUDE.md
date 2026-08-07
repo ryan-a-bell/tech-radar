@@ -17,7 +17,8 @@ running anything.
 | If the request is about… | Use | Data it touches |
 |---|---|---|
 | A **technology** — tool, library, framework, platform, language, technique; anything with a repo/vendor/docs you'd *adopt or use* | **`radar-manage`** (`radar.py`) | `data/items/**` → rebuilds `data/radar.json` |
-| **Learning material** — a book, article, video, course, or certification; anything you *read/watch/study* | **`learning-manage`** (`learning.py`) | `learning/**` → rebuilds `data/learning.json` |
+| **Learning material** — a book, article, video, course, certification, or conference; anything you *read/watch/study/attend* | **`learning-manage`** (`learning.py`) | `learning/**` → rebuilds `data/learning.json` |
+| **Conference updates** — checking/refreshing recurring conferences (INCOSE IS, RAMS) for newly announced or changed year-over-year editions | **`conference-track`** (`learning.py edition` + WebFetch) | `learning/**` → rebuilds `data/learning.json` |
 
 Concrete cues:
 
@@ -25,8 +26,12 @@ Concrete cues:
   quadrants (Techniques / Tools / Platforms / Languages), `promote` / `demote`
   / `archive`, momentum, "is this trending", triaging the scraper's inbox.
 - **learning-manage** — consumption status (Discovered / Queued / Reading /
-  Read / Shelved), types (book / article / video / certification), ratings,
-  `pages_read`, `shelve`, "what should I read next", exam/cert tracking.
+  Read / Shelved), types (book / article / video / certification /
+  conference), ratings, `pages_read`, `shelve`, "what should I read next",
+  exam/cert tracking, adding a conference or one of its year editions.
+- **conference-track** — "check my conferences", "any new INCOSE/RAMS dates",
+  "when's the next <conference>", refreshing edition dates/locations/CFP
+  deadlines from the conferences' own websites.
 
 Both collections share the **same topic vocabulary** (AI, ML, Agents, Skills,
 Prompts, Trading, Quant, RAG, Data Feeds) so a book and a technology can carry

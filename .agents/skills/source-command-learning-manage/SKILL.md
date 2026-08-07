@@ -1,15 +1,16 @@
 ---
 name: "source-command-learning-manage"
-description: "Manage the Learning Library — books, articles, videos, and certifications. Track reading/consumption status, rate finished items, set topics, shelve, or add new learning material."
+description: "Manage the Learning Library — books, articles, videos, certifications, and conferences. Track reading/consumption status, rate finished items, set topics, shelve, record a conference's year editions, or add new learning material."
 ---
 
 # source-command-learning-manage
 
 Use this skill when the user asks to run the migrated source command
 `learning-manage`, or asks to manage learning material — books, articles,
-videos, courses, or certifications; reading status, progress, ratings, or
-"what should I read next." For technologies, tools, libraries, frameworks, and
-platforms use `radar-manage` instead.
+videos, courses, certifications, or conferences; reading/attendance status,
+progress, ratings, or "what should I read next." To refresh recurring
+conferences' dates from their websites, use `conference-track`. For
+technologies, tools, libraries, frameworks, and platforms use `radar-manage`.
 
 ## Command Template
 
@@ -48,6 +49,25 @@ Status is content-neutral: for an article, video, or certification,
 | article | `minutes` (read time) | `source`, `url` |
 | video | `duration` (e.g. "1h 56m") | `source`, `url` |
 | certification | `price` (exam fee) | `source` (exam code), `url`, `author` = issuer |
+| conference | `editions` (one per year) | `recurrence`, `url`, `author` = organizer |
+
+## Conferences (the recurring type)
+
+A conference recurs, so one item tracks the whole series and each year is an
+entry in its `editions` list (`year | dates | location | status | cfp | url`).
+Add the series with `--type conference`, then record each year with `edition`
+(an upsert keyed by `--year`; `--loc` aliases `--location`):
+
+```bash
+python learning.py add "RAMS" --type conference --author "IEEE, ASQ, SAE" \
+  --url "https://rams.org/" --topics "Skills" --status Queued --blurb "..."
+python learning.py edition RAMS --year 2026 --dates "2026-01-19..01-22" \
+  --location "Miramar Beach, FL" --status Registered
+```
+
+Edition `status`: **Announced** → **Interested** → **Registered** →
+**Attended**, plus **Skipped**. To pull dates/locations/CFP deadlines from a
+conference's site automatically, use the **`conference-track`** skill.
 
 ## Topics
 
@@ -86,7 +106,8 @@ actually go look at the source (the book's page, the article, the cert exam
 guide) and read enough to write a real `--blurb` — one honest sentence, not a
 copy-pasted tagline.
 
-1. Pick the `--type` (`book`, `article`, `video`, `certification`).
+1. Pick the `--type` (`book`, `article`, `video`, `certification`,
+   `conference`). For a conference, follow with `edition` to record its years.
 2. Set `--author` (issuing org for a certification), `--topics` from the
    vocabulary, and the type's length field (`--pages` / `--minutes` /
    `--duration` / `--price`).
@@ -99,8 +120,9 @@ copy-pasted tagline.
 ## Notes
 
 - `set` handles: `rating`, `pages_read`, `pages`, `minutes`, `duration`,
-  `price`, `topics`, `blurb`, `author`, `source`, `url`, `title`, `year`,
-  `shelved_note`. `rating` is bounded 1–5; `topics` is validated.
+  `price`, `recurrence`, `topics`, `blurb`, `author`, `source`, `url`, `title`,
+  `year`, `shelved_note`. `rating` is bounded 1–5; `topics` is validated.
+  Conference editions are managed with `edition`, not `set`.
 - `shelve` is `status … Shelved` plus a `--note`. Moving back out of Shelved
   clears the `shelved` date and note.
 - The source of truth is `learning/*.md` — never edit the generated

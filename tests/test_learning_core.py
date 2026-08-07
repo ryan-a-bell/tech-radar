@@ -220,5 +220,100 @@ class MarkdownRoundTripTests(unittest.TestCase):
         self.assertEqual(self._round_trip(it), it)
 
 
+class ConferenceTests(unittest.TestCase):
+    """Conferences are the recurring type: a series item carrying a list of
+    year-over-year editions, each a pipe-delimited line."""
+
+    def test_new_conference_has_recurrence_and_empty_editions(self):
+        it = core.new_item("conference", "INCOSE IS", author="INCOSE",
+                            url="https://x", topics=["Skills"])
+        self.assertEqual(it["type"], "conference")
+        self.assertEqual(it["recurrence"], "annual")
+        self.assertEqual(it["editions"], [])
+        self.assertIn("source", it)   # conferences carry source/url like non-books
+        self.assertIn("url", it)
+        self.assertNotIn("pages", it)
+
+    def test_new_conference_custom_recurrence(self):
+        it = core.new_item("conference", "Biennial Thing", recurrence="biennial")
+        self.assertEqual(it["recurrence"], "biennial")
+
+    def test_edition_line_round_trips(self):
+        raw = "2026 | 2026-06-13..06-18 | Yokohama, Japan | Registered | 2025-11-01 | https://x/y"
+        ed = core.parse_edition(raw)
+        self.assertEqual(ed["year"], 2026)
+        self.assertEqual(ed["location"], "Yokohama, Japan")
+        self.assertEqual(ed["status"], "Registered")
+        self.assertEqual(ed["url"], "https://x/y")   # colon in URL survives
+        self.assertEqual(core.serialize_edition(ed), raw)
+
+    def test_edition_trailing_blanks_trimmed_and_restored(self):
+        ed = core.parse_edition("2027 | 2027-07-17..07-22")
+        self.assertEqual(ed["year"], 2027)
+        self.assertIsNone(ed["location"])
+        self.assertIsNone(ed["url"])
+        # trailing empties are dropped on serialize, restored to None on parse
+        line = core.serialize_edition(ed)
+        self.assertEqual(line, "2027 | 2027-07-17..07-22")
+        self.assertEqual(core.parse_edition(line), ed)
+
+    def test_upsert_adds_and_updates_by_year(self):
+        it = core.new_item("conference", "RAMS")
+        core.upsert_edition(it, 2026, dates="2026-01-19..01-22",
+                            location="Miramar Beach, FL")
+        self.assertEqual(len(it["editions"]), 1)
+        self.assertEqual(it["editions"][0]["status"], "Announced")  # default
+        # re-upsert the same year updates in place, no duplicate
+        core.upsert_edition(it, 2026, location="Somewhere Else, FL")
+        self.assertEqual(len(it["editions"]), 1)
+        self.assertEqual(it["editions"][0]["location"], "Somewhere Else, FL")
+        self.assertEqual(it["editions"][0]["dates"], "2026-01-19..01-22")  # kept
+
+    def test_upsert_keeps_editions_newest_first(self):
+        it = core.new_item("conference", "IS")
+        core.upsert_edition(it, 2025)
+        core.upsert_edition(it, 2027)
+        core.upsert_edition(it, 2026)
+        self.assertEqual([e["year"] for e in it["editions"]], [2027, 2026, 2025])
+
+    def test_upsert_does_not_clobber_status_when_omitted(self):
+        it = core.new_item("conference", "IS")
+        core.upsert_edition(it, 2026, status="Registered")
+        core.upsert_edition(it, 2026, cfp="2025-11-01")   # no status passed
+        self.assertEqual(it["editions"][0]["status"], "Registered")
+
+    def test_upsert_rejects_bad_status(self):
+        it = core.new_item("conference", "IS")
+        with self.assertRaises(ValueError):
+            core.upsert_edition(it, 2026, status="Attending")
+
+    def test_next_edition_prefers_upcoming_then_latest_past(self):
+        it = core.new_item("conference", "IS")
+        this_year = date.today().year
+        core.upsert_edition(it, this_year - 2)
+        core.upsert_edition(it, this_year + 1)
+        core.upsert_edition(it, this_year + 3)
+        self.assertEqual(core.next_edition(it)["year"], this_year + 1)
+        # with only past editions, the most recent one is surfaced
+        past = core.new_item("conference", "Old")
+        core.upsert_edition(past, this_year - 5)
+        core.upsert_edition(past, this_year - 2)
+        self.assertEqual(core.next_edition(past)["year"], this_year - 2)
+        self.assertIsNone(core.next_edition(core.new_item("conference", "Empty")))
+
+    def test_conference_markdown_round_trips(self):
+        it = core.new_item("conference", "INCOSE International Symposium",
+                            author="INCOSE", url="https://incose.org/is",
+                            topics=["Skills"], status="Queued",
+                            blurb="The flagship systems-engineering symposium.")
+        core.upsert_edition(it, 2026, dates="2026-06-13..06-18",
+                            location="Yokohama, Japan", status="Registered",
+                            cfp="2025-11-01")
+        core.upsert_edition(it, 2027, dates="2027-07-17..07-22")  # sparse
+        text = core.serialize_item(it)
+        fm, body = core.parse_front_matter(text)
+        self.assertEqual(core.to_item(fm, body, default_id=it["id"]), it)
+
+
 if __name__ == "__main__":
     unittest.main()
