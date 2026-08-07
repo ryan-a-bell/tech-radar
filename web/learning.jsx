@@ -541,14 +541,47 @@ function DetailModal({ item, onClose }) {
 /* ===================== SHELL ===================== */
 /* A flat schedule table of every tracked conference and its year-over-year
    editions, with links — a reference lens that complements the atlas/card
-   view. One row per edition; the conference name + organizer span their
-   editions via rowSpan. Renders nothing when no conferences are tracked. */
+   view. Fuzzy-filter by name/organizer/topic/description, and toggle the sort:
+   "by time" is a flat chronological run of every edition; "by name" groups a
+   conference's editions together (newest first) under one row-spanning name.
+   Renders nothing when no conferences are tracked. */
 function ConferenceTable({ items }) {
-  const confs = items.filter((b) => b.type === "conference")
-    .sort((a, c) => (a.title || "").localeCompare(c.title || ""));
+  const [query, setQuery] = useState("");
+  const [mode, setMode] = useState("time");   // "time" (chronological) | "name"
+
+  const confs = useMemo(
+    () => items.filter((b) => b.type === "conference"), [items]);
+
+  // one searchable blob per conference — name, organizer, recurrence, blurb,
+  // topics, and every edition's year/dates/location — for the fuzzy filter.
+  const visible = useMemo(() => {
+    const q = query.trim();
+    if (!q) return confs;
+    return confs.filter((c) => {
+      const hay = [c.title, c.author, c.recurrence, c.blurb,
+        (c.topics || []).join(" "),
+        (c.editions || []).map((e) => `${e.year} ${e.dates || ""} ${e.location || ""}`).join(" "),
+      ].join(" ");
+      return fuzzyScore(q, hay) >= 0;
+    });
+  }, [confs, query]);
+
   if (!confs.length) return null;
 
-  const edCount = confs.reduce((n, c) => n + Math.max(1, (c.editions || []).length), 0);
+  // sortable key for an edition: leading ISO date if present, else the year
+  // (end-of-year so a date-TBD edition sorts after dated ones of the same year).
+  const dateKey = (e) => {
+    if (!e) return "9999-99-99";
+    const m = (e.dates || "").match(/^(\d{4}-\d{2}-\d{2})/);
+    return m ? m[1] : (e.year ? `${e.year}-99-99` : "9999-99-99");
+  };
+  const nameSorted = [...visible].sort((a, c) => (a.title || "").localeCompare(c.title || ""));
+  const timeRows = visible
+    .flatMap((c) => ((c.editions && c.editions.length) ? c.editions : [null]).map((e) => ({ c, e })))
+    .sort((x, y) => dateKey(x.e).localeCompare(dateKey(y.e)));
+
+  const edCount = confs.reduce((n, c) => n + (c.editions || []).length, 0);
+
   const th = {
     textAlign: "left", padding: "7px 10px", whiteSpace: "nowrap",
     fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.2,
@@ -562,6 +595,49 @@ function ConferenceTable({ items }) {
   const ext = (url, label) => (
     <a href={url} target="_blank" rel="noopener noreferrer" style={link}>{label}</a>
   );
+  const nameCell = (c, rowSpan) => (
+    <td style={{ ...td, fontWeight: 700, minWidth: 190 }} rowSpan={rowSpan}>
+      {c.url ? ext(c.url, <>{c.title} ↗</>) : c.title}
+    </td>
+  );
+  const orgCell = (c, rowSpan) => (
+    <td style={{ ...td, color: "#6b6456" }} rowSpan={rowSpan}>
+      {c.author || "—"}
+      {c.recurrence && <div style={{ color: "#9a9384", fontSize: 9.5, marginTop: 2 }}>{c.recurrence}</div>}
+    </td>
+  );
+  const editionCells = (c, e) => (e ? (
+    <>
+      <td style={{ ...td, fontWeight: 700 }}>
+        {e.url ? ext(e.url, <>{e.year} ↗</>) : (c.url ? ext(c.url, e.year) : e.year)}
+      </td>
+      <td style={td}>{e.dates || "TBD"}</td>
+      <td style={td}>
+        {e.location || "—"}
+        {e.cfp && <div style={{ color: "#9a5b1d", fontSize: 9.5, marginTop: 2 }}>CFP: {e.cfp}</div>}
+      </td>
+      <td style={td}>
+        <span style={{
+          color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
+          fontSize: 8.5, letterSpacing: 0.8, padding: "2px 6px", textTransform: "uppercase",
+          whiteSpace: "nowrap", display: "inline-block",
+        }}>{e.status || "—"}</span>
+      </td>
+    </>
+  ) : (
+    <td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={4}>
+      no editions recorded yet
+    </td>
+  ));
+
+  const sortBtn = (m, label) => (
+    <button onClick={() => setMode(m)} style={{
+      fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, letterSpacing: 1,
+      padding: "5px 10px", cursor: "pointer",
+      border: "1.5px solid " + (mode === m ? "#1a1a1a" : "#d8d2c4"),
+      background: mode === m ? "#1a1a1a" : "transparent", color: mode === m ? "#fff" : "#6b6456",
+    }}>{label}</button>
+  );
 
   return (
     <div style={{ marginBottom: 22 }}>
@@ -573,10 +649,26 @@ function ConferenceTable({ items }) {
           ◈ Conference Schedule
         </h2>
         <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456", letterSpacing: 1 }}>
-          {confs.length} tracked · {edCount} editions
+          {visible.length === confs.length ? `${confs.length} tracked` : `${visible.length}/${confs.length} match`} · {edCount} editions
         </span>
       </div>
-      <div style={{ overflowX: "auto", border: "1px solid #1a1a1a", borderTop: "none", background: "#fffdf7" }}>
+
+      {/* fuzzy filter + sort toggle */}
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", margin: "10px 0" }}>
+        <input value={query} onChange={(e) => setQuery(e.target.value)}
+          placeholder="Filter conferences — name, organizer, topic, description…"
+          style={{
+            flex: "1 1 260px", minWidth: 200, fontFamily: "Georgia, serif", fontSize: 13,
+            padding: "7px 11px", border: "1.5px solid #1a1a1a", background: "#fffdf7", color: "#1a1a1a",
+          }} />
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456", letterSpacing: 1.5 }}>SORT</span>
+          {sortBtn("time", "By time")}
+          {sortBtn("name", "By name")}
+        </div>
+      </div>
+
+      <div style={{ overflowX: "auto", border: "1px solid #1a1a1a", background: "#fffdf7" }}>
         <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 660 }}>
           <thead>
             <tr>
@@ -589,50 +681,29 @@ function ConferenceTable({ items }) {
             </tr>
           </thead>
           <tbody>
-            {confs.map((c) => {
-              const eds = (c.editions && c.editions.length) ? c.editions : [null];
-              return eds.map((e, i) => (
-                <tr key={c.id + "-" + (e ? e.year : "none")}>
-                  {i === 0 && (
-                    <td style={{ ...td, fontWeight: 700, minWidth: 190 }} rowSpan={eds.length}>
-                      {c.url ? ext(c.url, <>{c.title} ↗</>) : c.title}
-                    </td>
-                  )}
-                  {i === 0 && (
-                    <td style={{ ...td, color: "#6b6456" }} rowSpan={eds.length}>
-                      {c.author || "—"}
-                      {c.recurrence && (
-                        <div style={{ color: "#9a9384", fontSize: 9.5, marginTop: 2 }}>{c.recurrence}</div>
-                      )}
-                    </td>
-                  )}
-                  {e ? (
-                    <>
-                      <td style={{ ...td, fontWeight: 700 }}>
-                        {e.url ? ext(e.url, <>{e.year} ↗</>)
-                               : (c.url ? ext(c.url, e.year) : e.year)}
-                      </td>
-                      <td style={td}>{e.dates || "TBD"}</td>
-                      <td style={td}>
-                        {e.location || "—"}
-                        {e.cfp && <div style={{ color: "#9a5b1d", fontSize: 9.5, marginTop: 2 }}>CFP: {e.cfp}</div>}
-                      </td>
-                      <td style={td}>
-                        <span style={{
-                          color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
-                          fontSize: 8.5, letterSpacing: 0.8, padding: "2px 6px", textTransform: "uppercase",
-                          whiteSpace: "nowrap",
-                        }}>{e.status || "—"}</span>
-                      </td>
-                    </>
-                  ) : (
-                    <td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={4}>
-                      no editions recorded yet
-                    </td>
-                  )}
-                </tr>
-              ));
-            })}
+            {visible.length === 0 && (
+              <tr><td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={6}>
+                No conferences match “{query}”.
+              </td></tr>
+            )}
+            {mode === "time"
+              ? timeRows.map(({ c, e }, i) => (
+                  <tr key={c.id + "-" + (e ? e.year : "none") + "-" + i}>
+                    {nameCell(c, 1)}
+                    {orgCell(c, 1)}
+                    {editionCells(c, e)}
+                  </tr>
+                ))
+              : nameSorted.map((c) => {
+                  const eds = (c.editions && c.editions.length) ? c.editions : [null];
+                  return eds.map((e, i) => (
+                    <tr key={c.id + "-" + (e ? e.year : "none")}>
+                      {i === 0 && nameCell(c, eds.length)}
+                      {i === 0 && orgCell(c, eds.length)}
+                      {editionCells(c, e)}
+                    </tr>
+                  ));
+                })}
           </tbody>
         </table>
       </div>
