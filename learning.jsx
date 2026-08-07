@@ -9,8 +9,9 @@ const { useState, useMemo, useEffect } = React;
    status (Discovered → Queued → Reading → Read, with Shelved as the
    deliberate "not for now, maybe later" set-aside).
 
-   Holds mixed learning content — books, articles, videos, and
-   certifications — in one list, each item carrying a `type`. Reuses the
+   Holds mixed learning content — books, articles, videos, certifications,
+   and recurring conferences (which carry a list of year-over-year
+   `editions`) — in one list, each item carrying a `type`. Reuses the
    same curated TOPICS
    vocabulary as radar_core.TOPICS / dashboard.jsx, so an item and a
    technology can share a topic tag (e.g. both tagged "RAG" or "Quant").
@@ -36,9 +37,14 @@ const STATUS_LABEL = { Discovered: "Discovered", Queued: "Queued", Reading: "In 
 // Content types. A small glyph + label brands each card so books,
 // articles and videos are distinguishable at a glance without color
 // (color is reserved for status, as on the tech radar).
-const TYPES = ["book", "article", "video", "certification"];
-const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification" };
-const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡" };
+const TYPES = ["book", "article", "video", "certification", "conference"];
+const TYPE_LABEL = { book: "Book", article: "Article", video: "Video", certification: "Certification", conference: "Conference" };
+const TYPE_ICON = { book: "▣", article: "❡", video: "▶", certification: "⬡", conference: "◈" };
+
+// Per-edition status of a conference occurrence — its own small vocabulary,
+// distinct from the consumption STATUS_COLOR above. Announced = dates known;
+// then the personal states an attendee moves through.
+const EDITION_STATUS_COLOR = { Announced: "#6b6456", Interested: "#c17a1a", Registered: "#1d6fb8", Attended: "#1a7f4b", Skipped: "#a05252" };
 
 /* Fallback sample — used if data/learning.json can't be fetched. */
 const SAMPLE = {
@@ -62,23 +68,45 @@ function daysAgo(iso) {
    the default sort and the "recently touched" sort option. */
 function touchedDate(b) { return b.finished || b.started || b.shelved || b.queued || b.added || "0000-00-00"; }
 
+/* The edition of a recurring conference to surface: the soonest upcoming one
+   (year >= now), else the most recent past one. Null if none. Mirrors
+   learning_core.next_edition so the page and CLI agree. */
+function nextEdition(b) {
+  const eds = b.editions || [];
+  if (!eds.length) return null;
+  const year = new Date().getFullYear();
+  const upcoming = eds.filter((e) => (e.year || 0) >= year)
+                      .sort((a, c) => (a.year || 0) - (c.year || 0));
+  if (upcoming.length) return upcoming[0];
+  return [...eds].sort((a, c) => (c.year || 0) - (a.year || 0))[0];
+}
+
+/* One-line summary of an edition: dates (or year) · location. */
+function editionLabel(e) {
+  if (!e) return "";
+  const when = e.dates || (e.year ? String(e.year) : "");
+  return [when, e.location].filter(Boolean).join(" · ");
+}
+
 /* Human "length" label per content type — pages for books, read-time for
-   articles, runtime for videos, exam price for certifications. Returns ""
-   if the item carries no length. */
+   articles, runtime for videos, exam price for certifications, and the next
+   occurrence for a recurring conference. Returns "" if none. */
 function lengthLabel(b) {
   if (b.type === "book") return b.pages ? b.pages + "p" : "";
   if (b.type === "article") return b.minutes ? b.minutes + " min read" : "";
   if (b.type === "video") return b.duration || "";
   if (b.type === "certification") return b.price || "";
+  if (b.type === "conference") return editionLabel(nextEdition(b));
   return "";
 }
 
 /* Byline under the title: creator, then source (publication / channel for
    articles and videos, exam code for certifications), then year. Books
-   just show author · year. */
+   just show author · year; a conference shows organizer · recurrence. */
 function byline(b) {
   const parts = [b.author];
   if (b.source && b.type !== "book") parts.push(b.source);
+  if (b.type === "conference" && b.recurrence) parts.push(b.recurrence);
   if (b.year) parts.push(b.year);
   return parts.filter(Boolean).join(" · ");
 }
@@ -226,6 +254,13 @@ function OpenLink({ url, small }) {
 
 function CardFoot({ b }) {
   const len = lengthLabel(b);
+  if (b.type === "conference") {
+    const ed = nextEdition(b);
+    const past = ed && ed.year && ed.year < new Date().getFullYear();
+    const left = ed ? `${past ? "latest" : "next"}: ${editionLabel(ed)}`
+                    : `${(b.editions || []).length} editions`;
+    return (<><span>{left}</span><span>{b.url ? <OpenLink url={b.url} small /> : null}</span></>);
+  }
   if (b.status === "Reading") {
     if (b.type === "book" && b.pages_read && b.pages) {
       const pct = Math.round((b.pages_read / b.pages) * 100);
@@ -440,6 +475,38 @@ function DetailModal({ item, onClose }) {
             borderLeft: `2px solid ${STATUS_COLOR.Shelved}`, paddingLeft: 10, margin: "0 0 14px",
           }}>{b.shelved_note}</p>
         )}
+        {b.type === "conference" && (b.editions || []).length > 0 && (
+          <div style={{ margin: "0 0 14px" }}>
+            <div style={{
+              fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5,
+              letterSpacing: 1.5, color: "#6b6456", textTransform: "uppercase",
+              marginBottom: 6,
+            }}>Editions</div>
+            {b.editions.map((e) => (
+              <div key={e.year} style={{
+                display: "flex", gap: 8, alignItems: "baseline",
+                padding: "6px 0", borderBottom: "1px solid #ece7d9",
+                fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#33312b",
+              }}>
+                <span style={{ fontWeight: 700, minWidth: 34 }}>{e.year}</span>
+                <span style={{
+                  color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
+                  fontSize: 8.5, letterSpacing: 1, padding: "2px 6px",
+                  textTransform: "uppercase", alignSelf: "center",
+                }}>{e.status || "—"}</span>
+                <span style={{ flex: 1 }}>
+                  {[e.dates, e.location].filter(Boolean).join(" · ") || "dates TBD"}
+                  {e.cfp && (
+                    <span style={{ display: "block", color: "#9a5b1d", fontSize: 10 }}>
+                      CFP: {e.cfp}
+                    </span>
+                  )}
+                </span>
+                {e.url && <OpenLink url={e.url} small />}
+              </div>
+            ))}
+          </div>
+        )}
         {b.url && (
           <div style={{ margin: "0 0 14px" }}><OpenLink url={b.url} /></div>
         )}
@@ -472,6 +539,178 @@ function DetailModal({ item, onClose }) {
 }
 
 /* ===================== SHELL ===================== */
+/* A flat schedule table of every tracked conference and its year-over-year
+   editions, with links — a reference lens that complements the atlas/card
+   view. Fuzzy-filter by name/organizer/topic/description, and toggle the sort:
+   "by time" is a flat chronological run of every edition; "by name" groups a
+   conference's editions together (newest first) under one row-spanning name.
+   Renders nothing when no conferences are tracked. */
+function ConferenceTable({ items }) {
+  const [query, setQuery] = useState("");
+  const [mode, setMode] = useState("time");   // "time" (chronological) | "name"
+
+  const confs = useMemo(
+    () => items.filter((b) => b.type === "conference"), [items]);
+
+  // one searchable blob per conference — name, organizer, recurrence, blurb,
+  // topics, and every edition's year/dates/location — for the fuzzy filter.
+  const visible = useMemo(() => {
+    const q = query.trim();
+    if (!q) return confs;
+    return confs.filter((c) => {
+      const hay = [c.title, c.author, c.recurrence, c.blurb,
+        (c.topics || []).join(" "),
+        (c.editions || []).map((e) => `${e.year} ${e.dates || ""} ${e.location || ""}`).join(" "),
+      ].join(" ");
+      return fuzzyScore(q, hay) >= 0;
+    });
+  }, [confs, query]);
+
+  if (!confs.length) return null;
+
+  // sortable key for an edition: leading ISO date if present, else the year
+  // (end-of-year so a date-TBD edition sorts after dated ones of the same year).
+  const dateKey = (e) => {
+    if (!e) return "9999-99-99";
+    const m = (e.dates || "").match(/^(\d{4}-\d{2}-\d{2})/);
+    return m ? m[1] : (e.year ? `${e.year}-99-99` : "9999-99-99");
+  };
+  const nameSorted = [...visible].sort((a, c) => (a.title || "").localeCompare(c.title || ""));
+  const timeRows = visible
+    .flatMap((c) => ((c.editions && c.editions.length) ? c.editions : [null]).map((e) => ({ c, e })))
+    .sort((x, y) => dateKey(x.e).localeCompare(dateKey(y.e)));
+
+  const edCount = confs.reduce((n, c) => n + (c.editions || []).length, 0);
+
+  const th = {
+    textAlign: "left", padding: "7px 10px", whiteSpace: "nowrap",
+    fontFamily: "'IBM Plex Mono', monospace", fontSize: 9.5, letterSpacing: 1.2,
+    color: "#6b6456", textTransform: "uppercase", borderBottom: "2px solid #1a1a1a",
+  };
+  const td = {
+    padding: "7px 10px", verticalAlign: "top", borderBottom: "1px solid #ece7d9",
+    fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "#33312b",
+  };
+  const link = { color: "#1d6fb8", textDecoration: "none" };
+  const ext = (url, label) => (
+    <a href={url} target="_blank" rel="noopener noreferrer" style={link}>{label}</a>
+  );
+  const nameCell = (c, rowSpan) => (
+    <td style={{ ...td, fontWeight: 700, minWidth: 190 }} rowSpan={rowSpan}>
+      {c.url ? ext(c.url, <>{c.title} ↗</>) : c.title}
+    </td>
+  );
+  const orgCell = (c, rowSpan) => (
+    <td style={{ ...td, color: "#6b6456" }} rowSpan={rowSpan}>
+      {c.author || "—"}
+      {c.recurrence && <div style={{ color: "#9a9384", fontSize: 9.5, marginTop: 2 }}>{c.recurrence}</div>}
+    </td>
+  );
+  const editionCells = (c, e) => (e ? (
+    <>
+      <td style={{ ...td, fontWeight: 700 }}>
+        {e.url ? ext(e.url, <>{e.year} ↗</>) : (c.url ? ext(c.url, e.year) : e.year)}
+      </td>
+      <td style={td}>{e.dates || "TBD"}</td>
+      <td style={td}>
+        {e.location || "—"}
+        {e.cfp && <div style={{ color: "#9a5b1d", fontSize: 9.5, marginTop: 2 }}>CFP: {e.cfp}</div>}
+      </td>
+      <td style={td}>
+        <span style={{
+          color: "#fff", background: EDITION_STATUS_COLOR[e.status] || "#6b6456",
+          fontSize: 8.5, letterSpacing: 0.8, padding: "2px 6px", textTransform: "uppercase",
+          whiteSpace: "nowrap", display: "inline-block",
+        }}>{e.status || "—"}</span>
+      </td>
+    </>
+  ) : (
+    <td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={4}>
+      no editions recorded yet
+    </td>
+  ));
+
+  const sortBtn = (m, label) => (
+    <button onClick={() => setMode(m)} style={{
+      fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, letterSpacing: 1,
+      padding: "5px 10px", cursor: "pointer",
+      border: "1.5px solid " + (mode === m ? "#1a1a1a" : "#d8d2c4"),
+      background: mode === m ? "#1a1a1a" : "transparent", color: mode === m ? "#fff" : "#6b6456",
+    }}>{label}</button>
+  );
+
+  return (
+    <div style={{ marginBottom: 22 }}>
+      <div style={{
+        display: "flex", justifyContent: "space-between", alignItems: "baseline",
+        borderBottom: "3px solid #1a1a1a", paddingBottom: 6,
+      }}>
+        <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, letterSpacing: -0.5 }}>
+          ◈ Conference Schedule
+        </h2>
+        <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456", letterSpacing: 1 }}>
+          {visible.length === confs.length ? `${confs.length} tracked` : `${visible.length}/${confs.length} match`} · {edCount} editions
+        </span>
+      </div>
+
+      {/* fuzzy filter + sort toggle */}
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", margin: "10px 0" }}>
+        <input value={query} onChange={(e) => setQuery(e.target.value)}
+          placeholder="Filter conferences — name, organizer, topic, description…"
+          style={{
+            flex: "1 1 260px", minWidth: 200, fontFamily: "Georgia, serif", fontSize: 13,
+            padding: "7px 11px", border: "1.5px solid #1a1a1a", background: "#fffdf7", color: "#1a1a1a",
+          }} />
+        <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: "#6b6456", letterSpacing: 1.5 }}>SORT</span>
+          {sortBtn("time", "By time")}
+          {sortBtn("name", "By name")}
+        </div>
+      </div>
+
+      <div style={{ overflowX: "auto", border: "1px solid #1a1a1a", background: "#fffdf7" }}>
+        <table style={{ borderCollapse: "collapse", width: "100%", minWidth: 660 }}>
+          <thead>
+            <tr>
+              <th style={th}>Conference</th>
+              <th style={th}>Organizer</th>
+              <th style={th}>Year</th>
+              <th style={th}>Dates</th>
+              <th style={th}>Location</th>
+              <th style={th}>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {visible.length === 0 && (
+              <tr><td style={{ ...td, color: "#9a9384", fontStyle: "italic" }} colSpan={6}>
+                No conferences match “{query}”.
+              </td></tr>
+            )}
+            {mode === "time"
+              ? timeRows.map(({ c, e }, i) => (
+                  <tr key={c.id + "-" + (e ? e.year : "none") + "-" + i}>
+                    {nameCell(c, 1)}
+                    {orgCell(c, 1)}
+                    {editionCells(c, e)}
+                  </tr>
+                ))
+              : nameSorted.map((c) => {
+                  const eds = (c.editions && c.editions.length) ? c.editions : [null];
+                  return eds.map((e, i) => (
+                    <tr key={c.id + "-" + (e ? e.year : "none")}>
+                      {i === 0 && nameCell(c, eds.length)}
+                      {i === 0 && orgCell(c, eds.length)}
+                      {editionCells(c, e)}
+                    </tr>
+                  ));
+                })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
 function LearningApp() {
   const { data, status } = useLearningData();
   const [statusFilter, setStatusFilter] = useState("All");
@@ -543,7 +782,7 @@ function LearningApp() {
 
   const counts = { Discovered: 0, Queued: 0, Reading: 0, Read: 0, Shelved: 0 };
   allItems.forEach((b) => { if (counts[b.status] !== undefined) counts[b.status]++; });
-  const typeCounts = { book: 0, article: 0, video: 0, certification: 0 };
+  const typeCounts = { book: 0, article: 0, video: 0, certification: 0, conference: 0 };
   allItems.forEach((b) => { if (typeCounts[b.type] !== undefined) typeCounts[b.type]++; });
 
   return (
@@ -602,7 +841,7 @@ function LearningApp() {
               fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5,
               color: "#6b6456", letterSpacing: 1, textAlign: "right",
             }}>
-              BOOKS · ARTICLES · VIDEOS · CERTIFICATIONS — ATLAS VIEW<br />
+              BOOKS · ARTICLES · VIDEOS · CERTIFICATIONS · CONFERENCES — ATLAS VIEW<br />
               {data.generated}
             </span>
           </div>
@@ -640,6 +879,7 @@ function LearningApp() {
           <Stat label="ARTICLES" value={typeCounts.article} />
           <Stat label="VIDEOS" value={typeCounts.video} />
           <Stat label="CERTIFICATIONS" value={typeCounts.certification} />
+          <Stat label="CONFERENCES" value={typeCounts.conference} />
           <Stat label="DISCOVERED" value={counts.Discovered} color={STATUS_COLOR.Discovered} />
           <Stat label="QUEUED" value={counts.Queued} color={STATUS_COLOR.Queued} />
           <Stat label="IN PROGRESS" value={counts.Reading} color={STATUS_COLOR.Reading} />
@@ -686,6 +926,10 @@ function LearningApp() {
             </select>
           </div>
         </div>
+
+        {/* conference schedule — a flat table of every conference + its year
+            editions with links, shown regardless of the active filters */}
+        <ConferenceTable items={allItems} />
 
         {/* main split — radar (sticky, snapshot of everything) + scrollable list */}
         <div style={{ display: "flex", gap: 22, alignItems: "flex-start", flexWrap: "wrap" }}>
