@@ -10,7 +10,7 @@
   "canonical_url": "github.com/esengine/deepseek-reasonix",
   "also_seen": [],
   "company": null,
-  "stars": 747,
+  "stars": 888,
   "momentum": 33,
   "tags": [
     "go"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-03",
-  "last_seen": "2026-08-06",
+  "last_seen": "2026-08-07",
   "stars_history": {
     "2026-08-03": 333,
     "2026-08-04": 883,
     "2026-08-05": 922,
-    "2026-08-06": 747
+    "2026-08-06": 747,
+    "2026-08-07": 888
   }
 }

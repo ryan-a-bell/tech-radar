@@ -10,7 +10,7 @@
   "canonical_url": "github.com/cloudflare/computer",
   "also_seen": [],
   "company": "Cloudflare",
-  "stars": 891,
+  "stars": 2802,
   "momentum": 89,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-06",
-  "last_seen": "2026-08-06",
+  "last_seen": "2026-08-07",
   "stars_history": {
-    "2026-08-06": 891
+    "2026-08-06": 891,
+    "2026-08-07": 2802
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "github:goauthentik/authentik",
+  "name": "authentik",
+  "description": "The authentication glue you need.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/goauthentik/authentik",
+  "canonical_url": "github.com/goauthentik/authentik",
+  "also_seen": [],
+  "company": null,
+  "stars": 138,
+  "momentum": 13,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-07",
+  "last_seen": "2026-08-07",
+  "stars_history": {
+    "2026-08-07": 138
+  }
+}
