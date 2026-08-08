@@ -1,7 +1,194 @@
 {
-  "generated": "2026-08-07",
-  "count": 552,
+  "generated": "2026-08-08",
+  "count": 559,
   "items": [
+    {
+      "id": "github:pranshuparmar/witr",
+      "name": "witr",
+      "description": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pranshuparmar/witr",
+      "canonical_url": "github.com/pranshuparmar/witr",
+      "also_seen": [],
+      "company": null,
+      "stars": 234,
+      "momentum": 23,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 234
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:unclebob/swarm-forge",
+      "name": "swarm-forge",
+      "description": "A simple tool for coordinating several AI agents.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/unclebob/swarm-forge",
+      "canonical_url": "github.com/unclebob/swarm-forge",
+      "also_seen": [],
+      "company": null,
+      "stars": 81,
+      "momentum": 8,
+      "tags": [
+        "clojure"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 81
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:semantica-agi/semantica",
+      "name": "semantica",
+      "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/semantica-agi/semantica",
+      "canonical_url": "github.com/semantica-agi/semantica",
+      "also_seen": [],
+      "company": null,
+      "stars": 122,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 122
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:PrimeIntellect-ai/prime-agent",
+      "name": "prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "canonical_url": "github.com/primeintellect-ai/prime-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 2293,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 2293
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jdx/mise",
+      "name": "mise",
+      "description": "dev tools, env vars, task runner",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jdx/mise",
+      "canonical_url": "github.com/jdx/mise",
+      "also_seen": [],
+      "company": null,
+      "stars": 135,
+      "momentum": 13,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 135
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:denoland/celld",
+      "name": "celld",
+      "description": "self-hosted, distributed Durable Objects",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/denoland/celld",
+      "canonical_url": "github.com/denoland/celld",
+      "also_seen": [],
+      "company": "Deno",
+      "stars": 516,
+      "momentum": 51,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 516
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:K2SOsint/Legendary_OSINT",
+      "name": "Legendary_OSINT",
+      "description": "A list of OSINT tools & resources for (fraud-)investigators, CTI-analysts, KYC, AML and more.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/K2SOsint/Legendary_OSINT",
+      "canonical_url": "github.com/k2sosint/legendary_osint",
+      "also_seen": [],
+      "company": null,
+      "stars": 109,
+      "momentum": 10,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "stars_history": {
+        "2026-08-08": 109
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:google/guava",
       "name": "guava",
@@ -14,7 +201,7 @@
       "canonical_url": "github.com/google/guava",
       "also_seen": [],
       "company": "Google",
-      "stars": 13,
+      "stars": 152,
       "momentum": 1,
       "tags": [
         "java"
@@ -22,12 +209,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
-        "2026-08-07": 13
+        "2026-08-07": 13,
+        "2026-08-08": 152
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 139
     },
     {
       "id": "github:goauthentik/authentik",
@@ -41,7 +229,7 @@
       "canonical_url": "github.com/goauthentik/authentik",
       "also_seen": [],
       "company": null,
-      "stars": 138,
+      "stars": 530,
       "momentum": 13,
       "tags": [
         "python"
@@ -49,12 +237,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
-        "2026-08-07": 138
+        "2026-08-07": 138,
+        "2026-08-08": 530
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 392
     },
     {
       "id": "github:Significant-Gravitas/AutoGPT",
@@ -68,7 +257,7 @@
       "canonical_url": "github.com/significant-gravitas/autogpt",
       "also_seen": [],
       "company": null,
-      "stars": 37,
+      "stars": 355,
       "momentum": 3,
       "tags": [
         "python"
@@ -76,12 +265,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
-        "2026-08-07": 37
+        "2026-08-07": 37,
+        "2026-08-08": 355
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 318
     },
     {
       "id": "github:huangruiteng/loopx",
@@ -123,7 +313,7 @@
       "canonical_url": "github.com/cloudflare/computer",
       "also_seen": [],
       "company": "Cloudflare",
-      "stars": 2802,
+      "stars": 872,
       "momentum": 89,
       "tags": [
         "typescript"
@@ -131,13 +321,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
         "2026-08-06": 891,
-        "2026-08-07": 2802
+        "2026-08-07": 2802,
+        "2026-08-08": 872
       },
-      "trend": "up",
-      "trend_delta": 1911
+      "trend": "down",
+      "trend_delta": -19
     },
     {
       "id": "github:webpack/webpack",
@@ -3709,7 +3900,7 @@
       "canonical_url": "github.com/chenyme/grok2api",
       "also_seen": [],
       "company": null,
-      "stars": 186,
+      "stars": 55,
       "momentum": 18,
       "tags": [
         "go"
@@ -3717,12 +3908,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-15",
-      "last_seen": "2026-07-15",
+      "last_seen": "2026-08-08",
       "stars_history": {
-        "2026-07-15": 186
+        "2026-07-15": 186,
+        "2026-08-08": 55
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -131
     },
     {
       "id": "manual:open-connector",
@@ -11661,13 +11853,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 1873,
+      "stars": 2152,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -11681,11 +11873,12 @@
         "2026-07-17": 2060,
         "2026-07-25": 2251,
         "2026-07-26": 1740,
-        "2026-08-07": 1873
+        "2026-08-07": 1873,
+        "2026-08-08": 2152
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 133
+      "trend_delta": 412
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -13187,13 +13380,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 593,
+      "stars": 1131,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -13207,11 +13400,12 @@
         "2026-07-10": 2554,
         "2026-07-11": 1116,
         "2026-08-06": 226,
-        "2026-08-07": 593
+        "2026-08-07": 593,
+        "2026-08-08": 1131
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -523
+      "trend": "up",
+      "trend_delta": 15
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -13282,22 +13476,23 @@
       "canonical_url": "github.com/google/skills",
       "also_seen": [],
       "company": "Google",
-      "stars": 211,
+      "stars": 327,
       "momentum": 48,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-08-08",
       "stars_history": {
         "2026-06-08": 481,
         "2026-06-09": 461,
         "2026-06-10": 680,
-        "2026-06-11": 211
+        "2026-06-11": 211,
+        "2026-08-08": 327
       },
       "archived_at": null,
-      "trend": "down",
-      "trend_delta": -270
+      "trend": "up",
+      "trend_delta": 116
     },
     {
       "id": "github:phuryn/pm-skills",
@@ -13759,13 +13954,13 @@
       "canonical_url": "github.com/obra/superpowers",
       "also_seen": [],
       "company": null,
-      "stars": 858,
+      "stars": 782,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-08",
       "stars_history": {
         "2026-06-06": 1008,
         "2026-06-07": 700,
@@ -13788,11 +13983,12 @@
         "2026-07-30": 616,
         "2026-08-05": 653,
         "2026-08-06": 931,
-        "2026-08-07": 858
+        "2026-08-07": 858,
+        "2026-08-08": 782
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 242
+      "trend_delta": 166
     },
     {
       "id": "github:openai/plugins",
@@ -14055,18 +14251,19 @@
       "canonical_url": "github.com/666ghj/mirofish",
       "also_seen": [],
       "company": null,
-      "stars": 320,
+      "stars": 141,
       "momentum": 32,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-06",
+      "last_seen": "2026-08-08",
       "stars_history": {
-        "2026-06-06": 320
+        "2026-06-06": 320,
+        "2026-08-08": 141
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -179
     },
     {
       "id": "github:CopilotKit/CopilotKit",
