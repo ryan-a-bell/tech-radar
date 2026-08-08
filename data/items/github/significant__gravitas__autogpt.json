@@ -10,7 +10,7 @@
   "canonical_url": "github.com/significant-gravitas/autogpt",
   "also_seen": [],
   "company": null,
-  "stars": 37,
+  "stars": 355,
   "momentum": 3,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-07",
-  "last_seen": "2026-08-07",
+  "last_seen": "2026-08-08",
   "stars_history": {
-    "2026-08-07": 37
+    "2026-08-07": 37,
+    "2026-08-08": 355
   }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "github:semantica-agi/semantica",
+  "name": "semantica",
+  "description": "Graph-Native Infrastructure for Context and Accountable AI Systems",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/semantica-agi/semantica",
+  "canonical_url": "github.com/semantica-agi/semantica",
+  "also_seen": [],
+  "company": null,
+  "stars": 122,
+  "momentum": 12,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-08",
+  "last_seen": "2026-08-08",
+  "stars_history": {
+    "2026-08-08": 122
+  }
+}

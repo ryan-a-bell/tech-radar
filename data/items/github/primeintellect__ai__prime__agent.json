@@ -1,0 +1,25 @@
+{
+  "id": "github:PrimeIntellect-ai/prime-agent",
+  "name": "prime-agent",
+  "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+  "canonical_url": "github.com/primeintellect-ai/prime-agent",
+  "also_seen": [],
+  "company": null,
+  "stars": 2293,
+  "momentum": 100,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-08",
+  "last_seen": "2026-08-08",
+  "stars_history": {
+    "2026-08-08": 2293
+  }
+}

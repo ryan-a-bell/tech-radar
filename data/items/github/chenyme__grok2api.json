@@ -10,7 +10,7 @@
   "canonical_url": "github.com/chenyme/grok2api",
   "also_seen": [],
   "company": null,
-  "stars": 186,
+  "stars": 55,
   "momentum": 18,
   "tags": [
     "go"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-15",
-  "last_seen": "2026-07-15",
+  "last_seen": "2026-08-08",
   "stars_history": {
-    "2026-07-15": 186
+    "2026-07-15": 186,
+    "2026-08-08": 55
   }
 }
