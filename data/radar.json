@@ -1,7 +1,59 @@
 {
-  "generated": "2026-08-08",
-  "count": 559,
+  "generated": "2026-08-09",
+  "count": 561,
   "items": [
+    {
+      "id": "github:LadybirdBrowser/ladybird",
+      "name": "ladybird",
+      "description": "Truly independent web browser",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/LadybirdBrowser/ladybird",
+      "canonical_url": "github.com/ladybirdbrowser/ladybird",
+      "also_seen": [],
+      "company": null,
+      "stars": 48,
+      "momentum": 4,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "stars_history": {
+        "2026-08-09": 48
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:litu54/DevOps-Interview-Guide",
+      "name": "DevOps-Interview-Guide",
+      "description": "DevOps Interview Guide",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/litu54/DevOps-Interview-Guide",
+      "canonical_url": "github.com/litu54/devops-interview-guide",
+      "also_seen": [],
+      "company": null,
+      "stars": 68,
+      "momentum": 6,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "stars_history": {
+        "2026-08-09": 68
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:pranshuparmar/witr",
       "name": "witr",
@@ -95,7 +147,7 @@
       "canonical_url": "github.com/primeintellect-ai/prime-agent",
       "also_seen": [],
       "company": null,
-      "stars": 2293,
+      "stars": 2483,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -103,12 +155,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
-        "2026-08-08": 2293
+        "2026-08-08": 2293,
+        "2026-08-09": 2483
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 190
     },
     {
       "id": "github:jdx/mise",
@@ -149,7 +202,7 @@
       "canonical_url": "github.com/denoland/celld",
       "also_seen": [],
       "company": "Deno",
-      "stars": 516,
+      "stars": 432,
       "momentum": 51,
       "tags": [
         "rust"
@@ -157,12 +210,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
-        "2026-08-08": 516
+        "2026-08-08": 516,
+        "2026-08-09": 432
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -84
     },
     {
       "id": "github:K2SOsint/Legendary_OSINT",
@@ -201,7 +255,7 @@
       "canonical_url": "github.com/google/guava",
       "also_seen": [],
       "company": "Google",
-      "stars": 152,
+      "stars": 93,
       "momentum": 1,
       "tags": [
         "java"
@@ -209,13 +263,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-08-07": 13,
-        "2026-08-08": 152
+        "2026-08-08": 152,
+        "2026-08-09": 93
       },
       "trend": "up",
-      "trend_delta": 139
+      "trend_delta": 80
     },
     {
       "id": "github:goauthentik/authentik",
@@ -229,7 +284,7 @@
       "canonical_url": "github.com/goauthentik/authentik",
       "also_seen": [],
       "company": null,
-      "stars": 530,
+      "stars": 467,
       "momentum": 13,
       "tags": [
         "python"
@@ -237,13 +292,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-08-07": 138,
-        "2026-08-08": 530
+        "2026-08-08": 530,
+        "2026-08-09": 467
       },
       "trend": "up",
-      "trend_delta": 392
+      "trend_delta": 329
     },
     {
       "id": "github:Significant-Gravitas/AutoGPT",
@@ -7680,7 +7736,13 @@
       "discovered_by": "manual",
       "url": "https://github.com/TauricResearch/TradingAgents",
       "canonical_url": "github.com/tauricresearch/tradingagents",
-      "also_seen": [],
+      "also_seen": [
+        {
+          "source": "GitHub",
+          "url": "https://github.com/TauricResearch/TradingAgents",
+          "seen": "2026-08-09"
+        }
+      ],
       "company": null,
       "stars": 0,
       "momentum": 0,
@@ -7693,7 +7755,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
+      "last_seen": "2026-08-09",
       "stars_history": {},
       "trend": "none",
       "trend_delta": 0
@@ -11853,13 +11915,13 @@
       "canonical_url": "github.com/mattpocock/skills",
       "also_seen": [],
       "company": null,
-      "stars": 2152,
+      "stars": 1359,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-06-17": 1849,
         "2026-06-18": 1523,
@@ -11874,11 +11936,12 @@
         "2026-07-25": 2251,
         "2026-07-26": 1740,
         "2026-08-07": 1873,
-        "2026-08-08": 2152
+        "2026-08-08": 2152,
+        "2026-08-09": 1359
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 412
+      "trend": "down",
+      "trend_delta": -381
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -12893,20 +12956,21 @@
       "canonical_url": "github.com/bannedbook/fanqiang",
       "also_seen": [],
       "company": null,
-      "stars": 93,
+      "stars": 101,
       "momentum": 16,
       "tags": [
         "kotlin"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-14",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-06-12": 161,
         "2026-06-13": 86,
-        "2026-06-14": 93
+        "2026-06-14": 93,
+        "2026-08-09": 101
       },
-      "trend": "down",
-      "trend_delta": -68
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:chatwoot/chatwoot",
@@ -13380,13 +13444,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 1131,
+      "stars": 779,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -13401,11 +13465,12 @@
         "2026-07-11": 1116,
         "2026-08-06": 226,
         "2026-08-07": 593,
-        "2026-08-08": 1131
+        "2026-08-08": 1131,
+        "2026-08-09": 779
       },
       "archived_at": null,
-      "trend": "up",
-      "trend_delta": 15
+      "trend": "down",
+      "trend_delta": -337
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -13476,23 +13541,24 @@
       "canonical_url": "github.com/google/skills",
       "also_seen": [],
       "company": "Google",
-      "stars": 327,
+      "stars": 481,
       "momentum": 48,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-06-08": 481,
         "2026-06-09": 461,
         "2026-06-10": 680,
         "2026-06-11": 211,
-        "2026-08-08": 327
+        "2026-08-08": 327,
+        "2026-08-09": 481
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 116
+      "trend_delta": 270
     },
     {
       "id": "github:phuryn/pm-skills",
@@ -13817,23 +13883,24 @@
       "canonical_url": "github.com/tapxworld/chinatextbook",
       "also_seen": [],
       "company": null,
-      "stars": 134,
+      "stars": 118,
       "momentum": 35,
       "tags": [
         "roff"
       ],
       "first_seen": "2026-06-07",
-      "last_seen": "2026-08-07",
+      "last_seen": "2026-08-09",
       "stars_history": {
         "2026-06-07": 355,
         "2026-06-08": 593,
         "2026-06-09": 517,
         "2026-06-10": 519,
         "2026-06-12": 88,
-        "2026-08-07": 134
+        "2026-08-07": 134,
+        "2026-08-09": 118
       },
       "trend": "up",
-      "trend_delta": 46
+      "trend_delta": 30
     },
     {
       "id": "github:yikart/AiToEarn",

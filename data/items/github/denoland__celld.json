@@ -10,7 +10,7 @@
   "canonical_url": "github.com/denoland/celld",
   "also_seen": [],
   "company": "Deno",
-  "stars": 516,
+  "stars": 432,
   "momentum": 51,
   "tags": [
     "rust"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-08",
-  "last_seen": "2026-08-08",
+  "last_seen": "2026-08-09",
   "stars_history": {
-    "2026-08-08": 516
+    "2026-08-08": 516,
+    "2026-08-09": 432
   }
 }
