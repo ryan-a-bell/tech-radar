@@ -1,0 +1,25 @@
+{
+  "id": "github:harveyai/harvey-labs",
+  "name": "harvey-labs",
+  "description": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/harveyai/harvey-labs",
+  "canonical_url": "github.com/harveyai/harvey-labs",
+  "also_seen": [],
+  "company": null,
+  "stars": 47,
+  "momentum": 4,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-10",
+  "last_seen": "2026-08-10",
+  "stars_history": {
+    "2026-08-10": 47
+  }
+}

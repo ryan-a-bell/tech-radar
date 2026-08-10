@@ -1,0 +1,25 @@
+{
+  "id": "github:vitali87/code-graph-rag",
+  "name": "code-graph-rag",
+  "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/vitali87/code-graph-rag",
+  "canonical_url": "github.com/vitali87/code-graph-rag",
+  "also_seen": [],
+  "company": null,
+  "stars": 96,
+  "momentum": 9,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-10",
+  "last_seen": "2026-08-10",
+  "stars_history": {
+    "2026-08-10": 96
+  }
+}

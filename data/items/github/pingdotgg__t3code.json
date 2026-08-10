@@ -10,7 +10,7 @@
   "canonical_url": "github.com/pingdotgg/t3code",
   "also_seen": [],
   "company": null,
-  "stars": 149,
+  "stars": 163,
   "momentum": 7,
   "tags": [
     "typescript"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-07-13",
-  "last_seen": "2026-07-27",
+  "last_seen": "2026-08-10",
   "stars_history": {
     "2026-07-13": 75,
-    "2026-07-27": 149
+    "2026-07-27": 149,
+    "2026-08-10": 163
   }
 }

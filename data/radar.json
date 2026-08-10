@@ -1,7 +1,115 @@
 {
   "generated": "2026-08-10",
-  "count": 562,
+  "count": 566,
   "items": [
+    {
+      "id": "github:google-deepmind/weathernext",
+      "name": "weathernext",
+      "description": "A python project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-deepmind/weathernext",
+      "canonical_url": "github.com/google-deepmind/weathernext",
+      "also_seen": [],
+      "company": "Google DeepMind",
+      "stars": 86,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "stars_history": {
+        "2026-08-10": 86
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:harveyai/harvey-labs",
+      "name": "harvey-labs",
+      "description": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/harveyai/harvey-labs",
+      "canonical_url": "github.com/harveyai/harvey-labs",
+      "also_seen": [],
+      "company": null,
+      "stars": 47,
+      "momentum": 4,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "stars_history": {
+        "2026-08-10": 47
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vitali87/code-graph-rag",
+      "name": "code-graph-rag",
+      "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vitali87/code-graph-rag",
+      "canonical_url": "github.com/vitali87/code-graph-rag",
+      "also_seen": [],
+      "company": null,
+      "stars": 96,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "stars_history": {
+        "2026-08-10": 96
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Comfy-Org/ComfyUI",
+      "name": "ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "canonical_url": "github.com/comfy-org/comfyui",
+      "also_seen": [],
+      "company": null,
+      "stars": 365,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "stars_history": {
+        "2026-08-10": 365
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:LadybirdBrowser/ladybird",
       "name": "ladybird",
@@ -92,7 +200,7 @@
       "canonical_url": "github.com/pranshuparmar/witr",
       "also_seen": [],
       "company": null,
-      "stars": 234,
+      "stars": 210,
       "momentum": 23,
       "tags": [
         "go"
@@ -100,12 +208,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-10",
       "stars_history": {
-        "2026-08-08": 234
+        "2026-08-08": 234,
+        "2026-08-10": 210
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -24
     },
     {
       "id": "github:unclebob/swarm-forge",
@@ -173,7 +282,7 @@
       "canonical_url": "github.com/primeintellect-ai/prime-agent",
       "also_seen": [],
       "company": null,
-      "stars": 2483,
+      "stars": 2356,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -181,13 +290,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-08-08": 2293,
-        "2026-08-09": 2483
+        "2026-08-09": 2483,
+        "2026-08-10": 2356
       },
       "trend": "up",
-      "trend_delta": 190
+      "trend_delta": 63
     },
     {
       "id": "github:jdx/mise",
@@ -310,7 +420,7 @@
       "canonical_url": "github.com/goauthentik/authentik",
       "also_seen": [],
       "company": null,
-      "stars": 467,
+      "stars": 310,
       "momentum": 13,
       "tags": [
         "python"
@@ -318,14 +428,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-07",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-08-07": 138,
         "2026-08-08": 530,
-        "2026-08-09": 467
+        "2026-08-09": 467,
+        "2026-08-10": 310
       },
       "trend": "up",
-      "trend_delta": 329
+      "trend_delta": 172
     },
     {
       "id": "github:Significant-Gravitas/AutoGPT",
@@ -4210,7 +4321,7 @@
       "canonical_url": "github.com/pingdotgg/t3code",
       "also_seen": [],
       "company": null,
-      "stars": 149,
+      "stars": 163,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -4218,13 +4329,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-07-13": 75,
-        "2026-07-27": 149
+        "2026-07-27": 149,
+        "2026-08-10": 163
       },
       "trend": "up",
-      "trend_delta": 74
+      "trend_delta": 14
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -8686,17 +8798,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:anthropics/skills",
+      "id": "github:openai/skills",
       "name": "skills",
-      "description": "Public repository for Agent Skills",
+      "description": "Skills Catalog for Codex",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/anthropics/skills",
-      "canonical_url": "github.com/anthropics/skills",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
       "also_seen": [],
-      "company": "Anthropic",
+      "company": "OpenAI",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -8709,17 +8821,17 @@
       "trend_delta": 0
     },
     {
-      "id": "github:openai/skills",
+      "id": "github:anthropics/skills",
       "name": "skills",
-      "description": "Skills Catalog for Codex",
+      "description": "Public repository for Agent Skills",
       "quadrant": "Tools",
       "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
+      "url": "https://github.com/anthropics/skills",
+      "canonical_url": "github.com/anthropics/skills",
       "also_seen": [],
-      "company": "OpenAI",
+      "company": "Anthropic",
       "stars": 0,
       "momentum": 0,
       "tags": [],
@@ -9614,29 +9726,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "also_seen": [],
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
-      "trend": "none",
-      "trend_delta": 0
-    },
-    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
@@ -9663,6 +9752,29 @@
       },
       "trend": "up",
       "trend_delta": 414
+    },
+    {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "also_seen": [],
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "stars_history": {},
+      "trend": "none",
+      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -11465,22 +11577,23 @@
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "also_seen": [],
       "company": null,
-      "stars": 1468,
+      "stars": 306,
       "momentum": 51,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-06-21": 519,
         "2026-06-22": 568,
         "2026-06-23": 1557,
         "2026-06-24": 1119,
-        "2026-06-25": 1468
+        "2026-06-25": 1468,
+        "2026-08-10": 306
       },
-      "trend": "up",
-      "trend_delta": 949
+      "trend": "down",
+      "trend_delta": -1162
     },
     {
       "id": "github:topoteretes/cognee",
@@ -13072,13 +13185,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 862,
+      "stars": 858,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -13088,10 +13201,11 @@
         "2026-07-02": 2114,
         "2026-07-03": 3032,
         "2026-07-04": 1208,
-        "2026-07-21": 862
+        "2026-07-21": 862,
+        "2026-08-10": 858
       },
       "trend": "down",
-      "trend_delta": -346
+      "trend_delta": -4
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -13473,13 +13587,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 779,
+      "stars": 680,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -13495,11 +13609,12 @@
         "2026-08-06": 226,
         "2026-08-07": 593,
         "2026-08-08": 1131,
-        "2026-08-09": 779
+        "2026-08-09": 779,
+        "2026-08-10": 680
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -337
+      "trend_delta": -436
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -13570,24 +13685,25 @@
       "canonical_url": "github.com/google/skills",
       "also_seen": [],
       "company": "Google",
-      "stars": 481,
+      "stars": 528,
       "momentum": 48,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-08",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-10",
       "stars_history": {
         "2026-06-08": 481,
         "2026-06-09": 461,
         "2026-06-10": 680,
         "2026-06-11": 211,
         "2026-08-08": 327,
-        "2026-08-09": 481
+        "2026-08-09": 481,
+        "2026-08-10": 528
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 270
+      "trend_delta": 317
     },
     {
       "id": "github:phuryn/pm-skills",
