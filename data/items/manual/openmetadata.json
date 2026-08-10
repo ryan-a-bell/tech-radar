@@ -9,11 +9,14 @@
   "url": "https://github.com/open-metadata/OpenMetadata",
   "canonical_url": "github.com/open-metadata/openmetadata",
   "also_seen": [],
-  "company": null,
+  "company": "Collate",
   "stars": 0,
   "momentum": 0,
   "tags": [],
-  "topics": [],
+  "topics": [
+    "AI",
+    "Data Feeds"
+  ],
   "archived_at": null,
   "first_seen": "2026-08-04",
   "last_seen": "2026-08-04",
