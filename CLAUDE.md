@@ -48,6 +48,17 @@ Library, not on the radar; the platform itself lives on the radar.
   of truth is now `learning/*.md` (one file per item, like `people/` and
   `projects/`); a hand-edit there is fine, just run `python build_learning.py`
   to republish `data/learning.json`.
+- **Don't commit the regenerated aggregate JSON.** `data/radar.json`,
+  `data/learning.json`, `data/projects.json`, and `data/people.json` are build
+  artifacts that `build_site.py` regenerates from their per-item sources at
+  deploy time (step 1 rebuilds `radar.json` from `data/items/**` before it's
+  copied into `site/`), so the deployed dashboard never depends on the committed
+  copy. `radar.py` rewrites `data/radar.json` locally after every command as a
+  side effect — just leave that change out of your commit (`git add data/items/`
+  or `git checkout data/radar.json` before committing). Commit only the per-item
+  source file (`data/items/**`, `learning/*.md`, `projects/*.md`, `people/*.md`);
+  that's the source of truth. (The daily discovery Action commits a fresh
+  `radar.json` to `main` on its own schedule, so the repo copy self-heals.)
 - When **adding** an item to either collection, actually open the source and
   read enough to write a real one-to-two-sentence description/blurb first — no
   placeholder or copied-tagline entries.
