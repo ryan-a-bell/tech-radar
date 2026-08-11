@@ -10,7 +10,7 @@
   "canonical_url": "github.com/primeintellect-ai/prime-agent",
   "also_seen": [],
   "company": null,
-  "stars": 2356,
+  "stars": 2642,
   "momentum": 100,
   "tags": [
     "typescript"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-08",
-  "last_seen": "2026-08-10",
+  "last_seen": "2026-08-11",
   "stars_history": {
     "2026-08-08": 2293,
     "2026-08-09": 2483,
-    "2026-08-10": 2356
+    "2026-08-10": 2356,
+    "2026-08-11": 2642
   }
 }

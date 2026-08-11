@@ -10,7 +10,7 @@
   "canonical_url": "github.com/vitali87/code-graph-rag",
   "also_seen": [],
   "company": null,
-  "stars": 96,
+  "stars": 682,
   "momentum": 9,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-10",
-  "last_seen": "2026-08-10",
+  "last_seen": "2026-08-11",
   "stars_history": {
-    "2026-08-10": 96
+    "2026-08-10": 96,
+    "2026-08-11": 682
   }
 }

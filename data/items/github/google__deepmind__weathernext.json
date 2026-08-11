@@ -10,7 +10,7 @@
   "canonical_url": "github.com/google-deepmind/weathernext",
   "also_seen": [],
   "company": "Google DeepMind",
-  "stars": 86,
+  "stars": 325,
   "momentum": 8,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-10",
-  "last_seen": "2026-08-10",
+  "last_seen": "2026-08-11",
   "stars_history": {
-    "2026-08-10": 86
+    "2026-08-10": 86,
+    "2026-08-11": 325
   }
 }

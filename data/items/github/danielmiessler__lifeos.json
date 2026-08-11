@@ -1,0 +1,25 @@
+{
+  "id": "github:danielmiessler/LifeOS",
+  "name": "LifeOS",
+  "description": "\u26f0\ufe0fA General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/danielmiessler/LifeOS",
+  "canonical_url": "github.com/danielmiessler/lifeos",
+  "also_seen": [],
+  "company": null,
+  "stars": 315,
+  "momentum": 31,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-11",
+  "last_seen": "2026-08-11",
+  "stars_history": {
+    "2026-08-11": 315
+  }
+}

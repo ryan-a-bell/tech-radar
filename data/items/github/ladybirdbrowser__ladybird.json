@@ -10,7 +10,7 @@
   "canonical_url": "github.com/ladybirdbrowser/ladybird",
   "also_seen": [],
   "company": null,
-  "stars": 48,
+  "stars": 56,
   "momentum": 4,
   "tags": [
     "c++"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-09",
-  "last_seen": "2026-08-09",
+  "last_seen": "2026-08-11",
   "stars_history": {
-    "2026-08-09": 48
+    "2026-08-09": 48,
+    "2026-08-11": 56
   }
 }

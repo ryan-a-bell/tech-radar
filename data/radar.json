@@ -1,7 +1,88 @@
 {
-  "generated": "2026-08-10",
-  "count": 566,
+  "generated": "2026-08-11",
+  "count": 569,
   "items": [
+    {
+      "id": "github:paperclipai/paperclip",
+      "name": "paperclip",
+      "description": "The open-source app everyone uses to manage agents at work",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/paperclipai/paperclip",
+      "canonical_url": "github.com/paperclipai/paperclip",
+      "also_seen": [],
+      "company": null,
+      "stars": 198,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "stars_history": {
+        "2026-08-11": 198
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:danielmiessler/LifeOS",
+      "name": "LifeOS",
+      "description": "\u26f0\ufe0fA General Hill-climbing AI harness that helps you move from Current State to Ideal State in both Life and Work.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/danielmiessler/LifeOS",
+      "canonical_url": "github.com/danielmiessler/lifeos",
+      "also_seen": [],
+      "company": null,
+      "stars": 315,
+      "momentum": 31,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "stars_history": {
+        "2026-08-11": 315
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:opa334/Dopamine",
+      "name": "Dopamine",
+      "description": "Dopamine is a semi-untethered jailbreak for iOS 15 to 26(.0.1)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/opa334/Dopamine",
+      "canonical_url": "github.com/opa334/dopamine",
+      "also_seen": [],
+      "company": null,
+      "stars": 111,
+      "momentum": 11,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "stars_history": {
+        "2026-08-11": 111
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:google-deepmind/weathernext",
       "name": "weathernext",
@@ -14,7 +95,7 @@
       "canonical_url": "github.com/google-deepmind/weathernext",
       "also_seen": [],
       "company": "Google DeepMind",
-      "stars": 86,
+      "stars": 325,
       "momentum": 8,
       "tags": [
         "python"
@@ -22,12 +103,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
-        "2026-08-10": 86
+        "2026-08-10": 86,
+        "2026-08-11": 325
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 239
     },
     {
       "id": "github:harveyai/harvey-labs",
@@ -68,7 +150,7 @@
       "canonical_url": "github.com/vitali87/code-graph-rag",
       "also_seen": [],
       "company": null,
-      "stars": 96,
+      "stars": 682,
       "momentum": 9,
       "tags": [
         "python"
@@ -76,12 +158,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
-        "2026-08-10": 96
+        "2026-08-10": 96,
+        "2026-08-11": 682
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 586
     },
     {
       "id": "github:Comfy-Org/ComfyUI",
@@ -95,7 +178,7 @@
       "canonical_url": "github.com/comfy-org/comfyui",
       "also_seen": [],
       "company": null,
-      "stars": 365,
+      "stars": 922,
       "momentum": 36,
       "tags": [
         "python"
@@ -103,12 +186,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
-        "2026-08-10": 365
+        "2026-08-10": 365,
+        "2026-08-11": 922
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 557
     },
     {
       "id": "github:LadybirdBrowser/ladybird",
@@ -122,7 +206,7 @@
       "canonical_url": "github.com/ladybirdbrowser/ladybird",
       "also_seen": [],
       "company": null,
-      "stars": 48,
+      "stars": 56,
       "momentum": 4,
       "tags": [
         "c++"
@@ -130,12 +214,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-09",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-11",
       "stars_history": {
-        "2026-08-09": 48
+        "2026-08-09": 48,
+        "2026-08-11": 56
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "manual:oh-my-pi",
@@ -255,7 +340,7 @@
       "canonical_url": "github.com/semantica-agi/semantica",
       "also_seen": [],
       "company": null,
-      "stars": 122,
+      "stars": 970,
       "momentum": 12,
       "tags": [
         "python"
@@ -263,12 +348,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-11",
       "stars_history": {
-        "2026-08-08": 122
+        "2026-08-08": 122,
+        "2026-08-11": 970
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 848
     },
     {
       "id": "github:PrimeIntellect-ai/prime-agent",
@@ -282,7 +368,7 @@
       "canonical_url": "github.com/primeintellect-ai/prime-agent",
       "also_seen": [],
       "company": null,
-      "stars": 2356,
+      "stars": 2642,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -290,14 +376,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-08-08": 2293,
         "2026-08-09": 2483,
-        "2026-08-10": 2356
+        "2026-08-10": 2356,
+        "2026-08-11": 2642
       },
       "trend": "up",
-      "trend_delta": 63
+      "trend_delta": 349
     },
     {
       "id": "github:jdx/mise",
@@ -4321,7 +4408,7 @@
       "canonical_url": "github.com/pingdotgg/t3code",
       "also_seen": [],
       "company": null,
-      "stars": 163,
+      "stars": 389,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -4329,14 +4416,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-07-13": 75,
         "2026-07-27": 149,
-        "2026-08-10": 163
+        "2026-08-10": 163,
+        "2026-08-11": 389
       },
       "trend": "up",
-      "trend_delta": 14
+      "trend_delta": 240
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -7896,7 +7984,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-11",
       "stars_history": {},
       "trend": "none",
       "trend_delta": 0
@@ -11095,7 +11183,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 154,
+      "stars": 259,
       "momentum": 34,
       "tags": [
         "python"
@@ -11103,17 +11191,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-06-25": 347,
         "2026-06-26": 398,
         "2026-06-27": 673,
         "2026-06-28": 394,
         "2026-07-28": 362,
-        "2026-07-30": 154
+        "2026-07-30": 154,
+        "2026-08-11": 259
       },
-      "trend": "down",
-      "trend_delta": -240
+      "trend": "up",
+      "trend_delta": 105
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -11293,20 +11382,21 @@
       "canonical_url": "github.com/firecrawl/firecrawl",
       "also_seen": [],
       "company": null,
-      "stars": 867,
+      "stars": 835,
       "momentum": 51,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-07",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-06-22": 513,
         "2026-06-23": 615,
-        "2026-07-07": 867
+        "2026-07-07": 867,
+        "2026-08-11": 835
       },
-      "trend": "up",
-      "trend_delta": 252
+      "trend": "down",
+      "trend_delta": -32
     },
     {
       "id": "github:JCodesMore/ai-website-cloner-template",
@@ -13185,13 +13275,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 858,
+      "stars": 1349,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -13202,10 +13292,11 @@
         "2026-07-03": 3032,
         "2026-07-04": 1208,
         "2026-07-21": 862,
-        "2026-08-10": 858
+        "2026-08-10": 858,
+        "2026-08-11": 1349
       },
-      "trend": "down",
-      "trend_delta": -4
+      "trend": "up",
+      "trend_delta": 487
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -13417,13 +13508,13 @@
       "canonical_url": "github.com/ruvnet/ruview",
       "also_seen": [],
       "company": null,
-      "stars": 1022,
+      "stars": 154,
       "momentum": 43,
       "tags": [
         "rust"
       ],
       "first_seen": "2026-06-10",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-06-10": 439,
         "2026-06-11": 420,
@@ -13433,10 +13524,11 @@
         "2026-07-09": 799,
         "2026-07-23": 741,
         "2026-07-24": 1708,
-        "2026-07-25": 1022
+        "2026-07-25": 1022,
+        "2026-08-11": 154
       },
-      "trend": "up",
-      "trend_delta": 223
+      "trend": "down",
+      "trend_delta": -868
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -13587,13 +13679,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 680,
+      "stars": 659,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -13610,11 +13702,12 @@
         "2026-08-07": 593,
         "2026-08-08": 1131,
         "2026-08-09": 779,
-        "2026-08-10": 680
+        "2026-08-10": 680,
+        "2026-08-11": 659
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -436
+      "trend_delta": -457
     },
     {
       "id": "github:Andyyyy64/whichllm",
