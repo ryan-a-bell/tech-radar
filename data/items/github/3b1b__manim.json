@@ -1,0 +1,25 @@
+{
+  "id": "github:3b1b/manim",
+  "name": "manim",
+  "description": "Animation engine for explanatory math videos",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/3b1b/manim",
+  "canonical_url": "github.com/3b1b/manim",
+  "also_seen": [],
+  "company": null,
+  "stars": 197,
+  "momentum": 19,
+  "tags": [
+    "python"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-12",
+  "last_seen": "2026-08-12",
+  "stars_history": {
+    "2026-08-12": 197
+  }
+}

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/harveyai/harvey-labs",
   "also_seen": [],
   "company": null,
-  "stars": 47,
+  "stars": 28,
   "momentum": 4,
   "tags": [
     "python"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-10",
-  "last_seen": "2026-08-10",
+  "last_seen": "2026-08-12",
   "stars_history": {
-    "2026-08-10": 47
+    "2026-08-10": 47,
+    "2026-08-12": 28
   }
 }

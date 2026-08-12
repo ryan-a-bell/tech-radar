@@ -1,7 +1,142 @@
 {
-  "generated": "2026-08-11",
-  "count": 569,
+  "generated": "2026-08-12",
+  "count": 574,
   "items": [
+    {
+      "id": "github:huggingface/transformers",
+      "name": "transformers",
+      "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/huggingface/transformers",
+      "canonical_url": "github.com/huggingface/transformers",
+      "also_seen": [],
+      "company": "Hugging Face",
+      "stars": 80,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 80
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:practical-tutorials/project-based-learning",
+      "name": "project-based-learning",
+      "description": "Curated list of project-based tutorials",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/practical-tutorials/project-based-learning",
+      "canonical_url": "github.com/practical-tutorials/project-based-learning",
+      "also_seen": [],
+      "company": null,
+      "stars": 401,
+      "momentum": 40,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 401
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nvm-sh/nvm",
+      "name": "nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nvm-sh/nvm",
+      "canonical_url": "github.com/nvm-sh/nvm",
+      "also_seen": [],
+      "company": null,
+      "stars": 22,
+      "momentum": 2,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 22
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:3b1b/manim",
+      "name": "manim",
+      "description": "Animation engine for explanatory math videos",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/3b1b/manim",
+      "canonical_url": "github.com/3b1b/manim",
+      "also_seen": [],
+      "company": null,
+      "stars": 197,
+      "momentum": 19,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 197
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jaywcjlove/awesome-mac",
+      "name": "awesome-mac",
+      "description": "\uf8ff This project is dedicated to collecting high-quality macOS software and organizing them systematically by different categories for easy search and use.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jaywcjlove/awesome-mac",
+      "canonical_url": "github.com/jaywcjlove/awesome-mac",
+      "also_seen": [],
+      "company": null,
+      "stars": 298,
+      "momentum": 29,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 298
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:paperclipai/paperclip",
       "name": "paperclip",
@@ -14,7 +149,7 @@
       "canonical_url": "github.com/paperclipai/paperclip",
       "also_seen": [],
       "company": null,
-      "stars": 198,
+      "stars": 748,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -22,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
-        "2026-08-11": 198
+        "2026-08-11": 198,
+        "2026-08-12": 748
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 550
     },
     {
       "id": "github:danielmiessler/LifeOS",
@@ -123,7 +259,7 @@
       "canonical_url": "github.com/harveyai/harvey-labs",
       "also_seen": [],
       "company": null,
-      "stars": 47,
+      "stars": 28,
       "momentum": 4,
       "tags": [
         "python"
@@ -131,12 +267,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-12",
       "stars_history": {
-        "2026-08-10": 47
+        "2026-08-10": 47,
+        "2026-08-12": 28
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -19
     },
     {
       "id": "github:vitali87/code-graph-rag",
@@ -150,7 +287,7 @@
       "canonical_url": "github.com/vitali87/code-graph-rag",
       "also_seen": [],
       "company": null,
-      "stars": 682,
+      "stars": 341,
       "momentum": 9,
       "tags": [
         "python"
@@ -158,13 +295,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-08-10": 96,
-        "2026-08-11": 682
+        "2026-08-11": 682,
+        "2026-08-12": 341
       },
       "trend": "up",
-      "trend_delta": 586
+      "trend_delta": 245
     },
     {
       "id": "github:Comfy-Org/ComfyUI",
@@ -340,7 +478,7 @@
       "canonical_url": "github.com/semantica-agi/semantica",
       "also_seen": [],
       "company": null,
-      "stars": 970,
+      "stars": 893,
       "momentum": 12,
       "tags": [
         "python"
@@ -348,13 +486,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-08-08": 122,
-        "2026-08-11": 970
+        "2026-08-11": 970,
+        "2026-08-12": 893
       },
       "trend": "up",
-      "trend_delta": 848
+      "trend_delta": 771
     },
     {
       "id": "github:PrimeIntellect-ai/prime-agent",
@@ -368,7 +507,7 @@
       "canonical_url": "github.com/primeintellect-ai/prime-agent",
       "also_seen": [],
       "company": null,
-      "stars": 2642,
+      "stars": 1138,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -376,15 +515,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-08-08": 2293,
         "2026-08-09": 2483,
         "2026-08-10": 2356,
-        "2026-08-11": 2642
+        "2026-08-11": 2642,
+        "2026-08-12": 1138
       },
-      "trend": "up",
-      "trend_delta": 349
+      "trend": "down",
+      "trend_delta": -1155
     },
     {
       "id": "github:jdx/mise",
@@ -4100,7 +4240,7 @@
       "canonical_url": "github.com/hkuds/deeptutor",
       "also_seen": [],
       "company": null,
-      "stars": 531,
+      "stars": 812,
       "momentum": 17,
       "tags": [
         "python"
@@ -4108,14 +4248,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-07-16": 172,
         "2026-07-17": 656,
-        "2026-07-18": 531
+        "2026-07-18": 531,
+        "2026-08-12": 812
       },
       "trend": "up",
-      "trend_delta": 359
+      "trend_delta": 281
     },
     {
       "id": "manual:alphalens",
@@ -8920,14 +9061,16 @@
       "canonical_url": "github.com/anthropics/skills",
       "also_seen": [],
       "company": "Anthropic",
-      "stars": 0,
+      "stars": 485,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "stars_history": {},
+      "last_seen": "2026-08-12",
+      "stars_history": {
+        "2026-08-12": 485
+      },
       "trend": "none",
       "trend_delta": 0
     },
@@ -10877,18 +11020,19 @@
       "canonical_url": "github.com/stablyai/orca",
       "also_seen": [],
       "company": null,
-      "stars": 331,
+      "stars": 875,
       "momentum": 33,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-08-12",
       "stars_history": {
-        "2026-06-25": 331
+        "2026-06-25": 331,
+        "2026-08-12": 875
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 544
     },
     {
       "id": "github:every-app/open-seo",
@@ -11667,23 +11811,24 @@
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "also_seen": [],
       "company": null,
-      "stars": 306,
+      "stars": 243,
       "momentum": 51,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-06-21": 519,
         "2026-06-22": 568,
         "2026-06-23": 1557,
         "2026-06-24": 1119,
         "2026-06-25": 1468,
-        "2026-08-10": 306
+        "2026-08-10": 306,
+        "2026-08-12": 243
       },
       "trend": "down",
-      "trend_delta": -1162
+      "trend_delta": -1225
     },
     {
       "id": "github:topoteretes/cognee",
@@ -12460,13 +12605,13 @@
       "canonical_url": "github.com/calesthio/openmontage",
       "also_seen": [],
       "company": null,
-      "stars": 1754,
+      "stars": 458,
       "momentum": 7,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-06-17": 71,
         "2026-06-18": 98,
@@ -12477,10 +12622,11 @@
         "2026-06-24": 3592,
         "2026-06-25": 3553,
         "2026-06-26": 3434,
-        "2026-06-27": 1754
+        "2026-06-27": 1754,
+        "2026-08-12": 458
       },
-      "trend": "up",
-      "trend_delta": 1598
+      "trend": "down",
+      "trend_delta": -1296
     },
     {
       "id": "github:alibaba/zvec",
@@ -13275,13 +13421,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 1349,
+      "stars": 958,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -13293,10 +13439,11 @@
         "2026-07-04": 1208,
         "2026-07-21": 862,
         "2026-08-10": 858,
-        "2026-08-11": 1349
+        "2026-08-11": 1349,
+        "2026-08-12": 958
       },
       "trend": "up",
-      "trend_delta": 487
+      "trend_delta": 96
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -13679,13 +13826,13 @@
       "canonical_url": "github.com/addyosmani/agent-skills",
       "also_seen": [],
       "company": null,
-      "stars": 659,
+      "stars": 578,
       "momentum": 34,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-12",
       "stars_history": {
         "2026-06-09": 348,
         "2026-06-10": 781,
@@ -13703,11 +13850,12 @@
         "2026-08-08": 1131,
         "2026-08-09": 779,
         "2026-08-10": 680,
-        "2026-08-11": 659
+        "2026-08-11": 659,
+        "2026-08-12": 578
       },
       "archived_at": null,
       "trend": "down",
-      "trend_delta": -457
+      "trend_delta": -538
     },
     {
       "id": "github:Andyyyy64/whichllm",
