@@ -1,7 +1,223 @@
 {
-  "generated": "2026-08-12",
-  "count": 577,
+  "generated": "2026-08-13",
+  "count": 585,
   "items": [
+    {
+      "id": "github:infiniflow/ragflow",
+      "name": "ragflow",
+      "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/infiniflow/ragflow",
+      "canonical_url": "github.com/infiniflow/ragflow",
+      "also_seen": [],
+      "company": null,
+      "stars": 139,
+      "momentum": 13,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 139
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cactus-compute/needle",
+      "name": "needle",
+      "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cactus-compute/needle",
+      "canonical_url": "github.com/cactus-compute/needle",
+      "also_seen": [],
+      "company": null,
+      "stars": 315,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 315
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:macro-inc/macro",
+      "name": "macro",
+      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM \u2014 @-linked together with shared AI memory.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/macro-inc/macro",
+      "canonical_url": "github.com/macro-inc/macro",
+      "also_seen": [],
+      "company": null,
+      "stars": 227,
+      "momentum": 22,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 227
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:localsend/localsend",
+      "name": "localsend",
+      "description": "An open-source cross-platform alternative to AirDrop",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/localsend/localsend",
+      "canonical_url": "github.com/localsend/localsend",
+      "also_seen": [],
+      "company": null,
+      "stars": 213,
+      "momentum": 21,
+      "tags": [
+        "dart"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 213
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ZuodaoTech/everyone-can-use-english",
+      "name": "everyone-can-use-english",
+      "description": "\u4eba\u4eba\u90fd\u80fd\u7528\u82f1\u8bed",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ZuodaoTech/everyone-can-use-english",
+      "canonical_url": "github.com/zuodaotech/everyone-can-use-english",
+      "also_seen": [],
+      "company": null,
+      "stars": 86,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 86
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:embabel/embabel-agent",
+      "name": "embabel-agent",
+      "description": "Agent framework for the JVM. Pronounced Em-BAY-bel /\u025bm\u02c8be\u026ab\u0259l/",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/embabel/embabel-agent",
+      "canonical_url": "github.com/embabel/embabel-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 40,
+      "momentum": 4,
+      "tags": [
+        "kotlin"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 40
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cathrynlavery/diagram-design",
+      "name": "diagram-design",
+      "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "canonical_url": "github.com/cathrynlavery/diagram-design",
+      "also_seen": [],
+      "company": null,
+      "stars": 2855,
+      "momentum": 100,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 2855
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA-NeMo/Switchyard",
+      "name": "Switchyard",
+      "description": "A rust project trending on GitHub.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+      "canonical_url": "github.com/nvidia-nemo/switchyard",
+      "also_seen": [],
+      "company": null,
+      "stars": 421,
+      "momentum": 42,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "stars_history": {
+        "2026-08-13": 421
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:huggingface/transformers",
       "name": "transformers",
@@ -218,7 +434,7 @@
       "canonical_url": "github.com/paperclipai/paperclip",
       "also_seen": [],
       "company": null,
-      "stars": 748,
+      "stars": 571,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -226,13 +442,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-08-11": 198,
-        "2026-08-12": 748
+        "2026-08-12": 748,
+        "2026-08-13": 571
       },
       "trend": "up",
-      "trend_delta": 550
+      "trend_delta": 373
     },
     {
       "id": "github:danielmiessler/LifeOS",
@@ -547,7 +764,7 @@
       "canonical_url": "github.com/semantica-agi/semantica",
       "also_seen": [],
       "company": null,
-      "stars": 893,
+      "stars": 845,
       "momentum": 12,
       "tags": [
         "python"
@@ -555,14 +772,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-08-08": 122,
         "2026-08-11": 970,
-        "2026-08-12": 893
+        "2026-08-12": 893,
+        "2026-08-13": 845
       },
       "trend": "up",
-      "trend_delta": 771
+      "trend_delta": 723
     },
     {
       "id": "github:PrimeIntellect-ai/prime-agent",
@@ -10749,7 +10967,7 @@
       "canonical_url": "github.com/hugohe3/ppt-master",
       "also_seen": [],
       "company": null,
-      "stars": 589,
+      "stars": 476,
       "momentum": 58,
       "tags": [
         "python"
@@ -10757,12 +10975,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-08-13",
       "stars_history": {
-        "2026-06-28": 589
+        "2026-06-28": 589,
+        "2026-08-13": 476
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -113
     },
     {
       "id": "github:anomalyco/opencode",
@@ -11089,19 +11308,20 @@
       "canonical_url": "github.com/stablyai/orca",
       "also_seen": [],
       "company": null,
-      "stars": 875,
+      "stars": 1235,
       "momentum": 33,
       "tags": [
         "typescript"
       ],
       "first_seen": "2026-06-25",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-06-25": 331,
-        "2026-08-12": 875
+        "2026-08-12": 875,
+        "2026-08-13": 1235
       },
       "trend": "up",
-      "trend_delta": 544
+      "trend_delta": 904
     },
     {
       "id": "github:every-app/open-seo",
@@ -11396,7 +11616,7 @@
       "canonical_url": "github.com/nanmicoder/mediacrawler",
       "also_seen": [],
       "company": null,
-      "stars": 259,
+      "stars": 215,
       "momentum": 34,
       "tags": [
         "python"
@@ -11404,7 +11624,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-06-25": 347,
         "2026-06-26": 398,
@@ -11412,10 +11632,11 @@
         "2026-06-28": 394,
         "2026-07-28": 362,
         "2026-07-30": 154,
-        "2026-08-11": 259
+        "2026-08-11": 259,
+        "2026-08-13": 215
       },
       "trend": "up",
-      "trend_delta": 105
+      "trend_delta": 61
     },
     {
       "id": "github:IceWhaleTech/CasaOS",
@@ -11796,18 +12017,19 @@
       "canonical_url": "github.com/smicallef/spiderfoot",
       "also_seen": [],
       "company": null,
-      "stars": 288,
+      "stars": 74,
       "momentum": 28,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-21",
+      "last_seen": "2026-08-13",
       "stars_history": {
-        "2026-06-21": 288
+        "2026-06-21": 288,
+        "2026-08-13": 74
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -214
     },
     {
       "id": "github:1jehuang/jcode",
@@ -12282,19 +12504,20 @@
       "canonical_url": "github.com/lightricks/ltx-2",
       "also_seen": [],
       "company": null,
-      "stars": 196,
+      "stars": 65,
       "momentum": 5,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-19",
-      "last_seen": "2026-06-20",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-06-19": 51,
-        "2026-06-20": 196
+        "2026-06-20": 196,
+        "2026-08-13": 65
       },
-      "trend": "up",
-      "trend_delta": 145
+      "trend": "down",
+      "trend_delta": -131
     },
     {
       "id": "github:zai-org/GLM-5",
@@ -13098,13 +13321,13 @@
       "canonical_url": "github.com/shiyu-coder/kronos",
       "also_seen": [],
       "company": null,
-      "stars": 200,
+      "stars": 266,
       "momentum": 24,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-06-15": 244,
         "2026-06-16": 396,
@@ -13114,10 +13337,11 @@
         "2026-07-26": 319,
         "2026-07-27": 321,
         "2026-07-28": 441,
-        "2026-08-04": 200
+        "2026-08-04": 200,
+        "2026-08-13": 266
       },
-      "trend": "down",
-      "trend_delta": -241
+      "trend": "up",
+      "trend_delta": 66
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -13490,13 +13714,13 @@
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "also_seen": [],
       "company": null,
-      "stars": 958,
+      "stars": 1873,
       "momentum": 100,
       "tags": [
         "shell"
       ],
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-13",
       "stars_history": {
         "2026-06-12": 1040,
         "2026-06-13": 1026,
@@ -13509,10 +13733,11 @@
         "2026-07-21": 862,
         "2026-08-10": 858,
         "2026-08-11": 1349,
-        "2026-08-12": 958
+        "2026-08-12": 958,
+        "2026-08-13": 1873
       },
       "trend": "up",
-      "trend_delta": 96
+      "trend_delta": 1011
     },
     {
       "id": "github:NVIDIA/SkillSpector",
