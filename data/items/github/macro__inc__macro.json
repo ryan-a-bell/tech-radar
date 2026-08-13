@@ -1,0 +1,25 @@
+{
+  "id": "github:macro-inc/macro",
+  "name": "macro",
+  "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM \u2014 @-linked together with shared AI memory.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/macro-inc/macro",
+  "canonical_url": "github.com/macro-inc/macro",
+  "also_seen": [],
+  "company": null,
+  "stars": 227,
+  "momentum": 22,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-13",
+  "last_seen": "2026-08-13",
+  "stars_history": {
+    "2026-08-13": 227
+  }
+}

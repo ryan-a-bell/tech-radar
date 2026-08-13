@@ -10,14 +10,15 @@
   "canonical_url": "github.com/smicallef/spiderfoot",
   "also_seen": [],
   "company": null,
-  "stars": 288,
+  "stars": 74,
   "momentum": 28,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-21",
+  "last_seen": "2026-08-13",
   "stars_history": {
-    "2026-06-21": 288
+    "2026-06-21": 288,
+    "2026-08-13": 74
   }
 }

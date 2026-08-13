@@ -1,0 +1,25 @@
+{
+  "id": "github:NVIDIA-NeMo/Switchyard",
+  "name": "Switchyard",
+  "description": "A rust project trending on GitHub.",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+  "canonical_url": "github.com/nvidia-nemo/switchyard",
+  "also_seen": [],
+  "company": null,
+  "stars": 421,
+  "momentum": 42,
+  "tags": [
+    "rust"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-13",
+  "last_seen": "2026-08-13",
+  "stars_history": {
+    "2026-08-13": 421
+  }
+}

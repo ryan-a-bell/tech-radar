@@ -10,15 +10,16 @@
   "canonical_url": "github.com/stablyai/orca",
   "also_seen": [],
   "company": null,
-  "stars": 875,
+  "stars": 1235,
   "momentum": 33,
   "tags": [
     "typescript"
   ],
   "first_seen": "2026-06-25",
-  "last_seen": "2026-08-12",
+  "last_seen": "2026-08-13",
   "stars_history": {
     "2026-06-25": 331,
-    "2026-08-12": 875
+    "2026-08-12": 875,
+    "2026-08-13": 1235
   }
 }
