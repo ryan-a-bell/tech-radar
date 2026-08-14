@@ -10,7 +10,7 @@
   "canonical_url": "github.com/semantica-agi/semantica",
   "also_seen": [],
   "company": null,
-  "stars": 845,
+  "stars": 713,
   "momentum": 12,
   "tags": [
     "python"
@@ -18,11 +18,12 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-08",
-  "last_seen": "2026-08-13",
+  "last_seen": "2026-08-14",
   "stars_history": {
     "2026-08-08": 122,
     "2026-08-11": 970,
     "2026-08-12": 893,
-    "2026-08-13": 845
+    "2026-08-13": 845,
+    "2026-08-14": 713
   }
 }

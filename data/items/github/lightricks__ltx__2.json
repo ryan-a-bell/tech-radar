@@ -10,16 +10,17 @@
   "canonical_url": "github.com/lightricks/ltx-2",
   "also_seen": [],
   "company": null,
-  "stars": 65,
+  "stars": 205,
   "momentum": 5,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-19",
-  "last_seen": "2026-08-13",
+  "last_seen": "2026-08-14",
   "stars_history": {
     "2026-06-19": 51,
     "2026-06-20": 196,
-    "2026-08-13": 65
+    "2026-08-13": 65,
+    "2026-08-14": 205
   }
 }
