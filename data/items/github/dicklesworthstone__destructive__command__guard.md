@@ -1,0 +1,22 @@
+---
+id: github:Dicklesworthstone/destructive_command_guard
+name: destructive_command_guard
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/Dicklesworthstone/destructive_command_guard
+canonical_url: github.com/dicklesworthstone/destructive_command_guard
+company: null
+stars: 471
+momentum: 44
+tags: ["rust"]
+topics: []
+archived_at: null
+first_seen: 2026-07-13
+last_seen: 2026-07-16
+also_seen: []
+stars_history: {"2026-07-13": 444, "2026-07-14": 1295, "2026-07-16": 471}
+---
+
+The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.

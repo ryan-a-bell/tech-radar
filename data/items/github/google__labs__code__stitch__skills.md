@@ -1,0 +1,22 @@
+---
+id: github:google-labs-code/stitch-skills
+name: stitch-skills
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/google-labs-code/stitch-skills
+canonical_url: github.com/google-labs-code/stitch-skills
+company: null
+stars: 340
+momentum: 11
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-11
+last_seen: 2026-07-12
+also_seen: []
+stars_history: {"2026-07-11": 117, "2026-07-12": 340}
+---
+
+A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.

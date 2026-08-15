@@ -1,0 +1,22 @@
+---
+id: github:agentskills/agentskills
+name: agentskills
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/agentskills/agentskills
+canonical_url: github.com/agentskills/agentskills
+company: null
+stars: 351
+momentum: 8
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-03
+last_seen: 2026-07-05
+also_seen: []
+stars_history: {"2026-07-03": 86, "2026-07-04": 406, "2026-07-05": 351}
+---
+
+Specification and documentation for Agent Skills

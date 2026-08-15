@@ -1,0 +1,22 @@
+---
+id: github:logto-io/logto
+name: logto
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/logto-io/logto
+canonical_url: github.com/logto-io/logto
+company: null
+stars: 113
+momentum: 7
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-06-29
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {"2026-06-29": 77, "2026-06-30": 158, "2026-07-02": 113}
+---
+
+🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-radar.py — manage the technology radar without hand-editing JSON.
+radar.py — manage the technology radar without hand-editing the per-item
+Markdown + YAML frontmatter files.
 
   python radar.py list                        # all items, grouped by ring
   python radar.py list --ring Discovered      # just the review queue
@@ -69,7 +70,7 @@ def _write(item):
     """Persist a modified item back to its own file."""
     path = core.id_to_path(item["id"])
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(item, f, indent=2)
+        f.write(core.dump_item_md(item))
 
 
 def _set_ring(item, ring):

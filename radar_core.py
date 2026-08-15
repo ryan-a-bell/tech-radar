@@ -1,8 +1,12 @@
 """
 radar_core.py — shared library for the technology radar.
 
-Storage model (Option 2): one plaintext JSON file per technology.
-  data/items/<source>/<slug>.json
+Storage model: one Markdown file with YAML frontmatter per technology.
+  data/items/<source>/<slug>.md
+
+Structured fields (ring, quadrant, company, topics, momentum, ...) live in
+the frontmatter; the free-text `description` is the Markdown body, so it's
+readable/diffable and can grow into multi-paragraph notes later.
 
 The `ring` field inside each file decides where it shows up. The runner
 only ever writes ring="Discovered". A human edits the file to promote it.
@@ -65,9 +69,9 @@ def _slugify(text):
 
 def id_to_path(item_id):
     """Map an id to its file path. github:oven-sh/bun ->
-    data/items/github/oven-sh__bun.json"""
+    data/items/github/oven-sh__bun.md"""
     source, _, key = item_id.partition(":")
-    return os.path.join(ITEMS_DIR, _slugify(source), _slugify(key) + ".json")
+    return os.path.join(ITEMS_DIR, _slugify(source), _slugify(key) + ".md")
 
 
 def exists(item_id):
@@ -158,6 +162,142 @@ def new_item(source, key, name, description, url,
     }
 
 
+# --- markdown + YAML frontmatter codec ----------------------------------
+# Hand-rolled rather than pulling in a YAML library: the item schema is a
+# small, known shape (flat scalars + a couple of lists/dicts), and the repo
+# stays dependency-free (see requirements.txt). Structured values (lists,
+# dicts) are dumped with json.dumps, which is also valid YAML flow syntax —
+# so the files stay real, parseable YAML frontmatter, not a bespoke format.
+FIELD_ORDER = [
+    "id", "name", "quadrant", "ring", "source", "discovered_by",
+    "url", "canonical_url", "company", "stars", "momentum",
+    "tags", "topics", "archived_at", "first_seen", "last_seen",
+    "also_seen", "stars_history",
+]
+
+# Type-correct defaults for fields older items (pre-dating a schema addition)
+# may not have. Keeps a migrated item's TYPES matching new_item()'s, instead
+# of round-tripping an absent key to a bare `null` a list/dict-typed field
+# was never meant to hold (e.g. `topics: null` breaking `.get("topics", [])`
+# callers once the key actually exists).
+_FIELD_DEFAULTS = {
+    "canonical_url": None,
+    "also_seen": [],
+    "company": None,
+    "stars": 0,
+    "momentum": 0,
+    "tags": [],
+    "topics": [],
+    "archived_at": None,
+    "stars_history": {},
+    "discovered_by": "scraper",
+}
+
+_NUMBER_RE = re.compile(r"^[-+]?\d+(\.\d+)?$")
+_INT_RE = re.compile(r"^[-+]?\d+$")
+
+
+def _needs_quoting(s):
+    if s == "" or s != s.strip():
+        return True
+    if s in ("null", "true", "false", "~"):
+        return True
+    if _NUMBER_RE.match(s):
+        return True
+    if s[0] in "[{\"'>|*&!%@`,":
+        return True
+    if s.startswith("- ") or s == "-":
+        return True
+    if ": " in s or s.endswith(":"):
+        return True
+    if s.startswith("#") or " #" in s:
+        return True
+    if "\n" in s:
+        return True
+    return False
+
+
+def _dump_value(value):
+    """Serialize one frontmatter value as a single-line YAML flow scalar."""
+    if isinstance(value, (list, dict)):
+        return json.dumps(value, ensure_ascii=False)
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, int):
+        return str(value)
+    s = str(value)
+    return json.dumps(s, ensure_ascii=False) if _needs_quoting(s) else s
+
+
+def _parse_value(raw):
+    """Inverse of _dump_value for one already-stripped value string."""
+    s = raw.strip()
+    if not s:
+        return ""
+    if s[0] in "[{\"":
+        return json.loads(s)
+    if s == "null":
+        return None
+    if s == "true":
+        return True
+    if s == "false":
+        return False
+    if _INT_RE.match(s):
+        return int(s)
+    if _NUMBER_RE.match(s):
+        return float(s)
+    return s
+
+
+def dump_item_md(item):
+    """Serialize an item dict to Markdown-with-YAML-frontmatter text.
+    `description` becomes the Markdown body; every other schema field
+    becomes a frontmatter line, in FIELD_ORDER."""
+    lines = ["---"]
+    for key in FIELD_ORDER:
+        value = item[key] if key in item else _FIELD_DEFAULTS.get(key)
+        lines.append(f"{key}: {_dump_value(value)}")
+    lines.append("---")
+    text = "\n".join(lines) + "\n"
+    body = (item.get("description") or "").strip()
+    if body:
+        text += "\n" + body + "\n"
+    return text
+
+
+def parse_item_md(text):
+    """Inverse of dump_item_md: Markdown-with-frontmatter text -> item dict."""
+    lines = text.splitlines()
+    if not lines or lines[0].strip() != "---":
+        raise ValueError("missing frontmatter delimiter")
+    end = next((i for i in range(1, len(lines))
+                if lines[i].strip() == "---"), None)
+    if end is None:
+        raise ValueError("unterminated frontmatter")
+    item = {}
+    for line in lines[1:end]:
+        if not line.strip():
+            continue
+        key, sep, rest = line.partition(": ")
+        if not sep:
+            key, sep, rest = line.partition(":")
+        item[key.strip()] = _parse_value(rest)
+    item["description"] = "\n".join(lines[end + 1:]).strip()
+    return item
+
+
+def _read_item(path):
+    with open(path, encoding="utf-8") as f:
+        return parse_item_md(f.read())
+
+
+def _write_item(path, item):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(dump_item_md(item))
+
+
 # --- read / write ------------------------------------------------------
 def save_new(item):
     """Write a NEW item. Returns True if written, False if it already
@@ -166,8 +306,7 @@ def save_new(item):
     if os.path.exists(path):
         return False
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(item, f, indent=2)
+    _write_item(path, item)
     return True
 
 
@@ -179,8 +318,7 @@ def touch_last_seen(item_id, day=None, stars=None):
     if not os.path.exists(path):
         return False
     today = day or date.today().isoformat()
-    with open(path, encoding="utf-8") as f:
-        item = json.load(f)
+    item = _read_item(path)
     item["last_seen"] = today
     if stars is not None:
         item.setdefault("stars_history", {})[today] = int(stars)
@@ -189,8 +327,7 @@ def touch_last_seen(item_id, day=None, stars=None):
         if len(item["stars_history"]) > 90:
             keep = dict(sorted(item["stars_history"].items())[-90:])
             item["stars_history"] = keep
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(item, f, indent=2)
+    _write_item(path, item)
     return True
 
 
@@ -252,9 +389,8 @@ def load_all_items():
         return out
     for root, _, files in os.walk(ITEMS_DIR):
         for fn in files:
-            if fn.endswith(".json"):
-                with open(os.path.join(root, fn), encoding="utf-8") as f:
-                    out.append(json.load(f))
+            if fn.endswith(".md"):
+                out.append(_read_item(os.path.join(root, fn)))
     return out
 
 
@@ -279,8 +415,7 @@ def record_also_seen(item_id, source, url, day=None):
     path = id_to_path(item_id)
     if not os.path.exists(path):
         return False
-    with open(path, encoding="utf-8") as f:
-        item = json.load(f)
+    item = _read_item(path)
     item["last_seen"] = day or date.today().isoformat()
     seen = item.setdefault("also_seen", [])
     # don't record the source the item already primarily belongs to
@@ -288,11 +423,9 @@ def record_also_seen(item_id, source, url, day=None):
         return False
     for entry in seen:
         if entry.get("source") == source and entry.get("url") == url:
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(item, f, indent=2)
+            _write_item(path, item)
             return False
     seen.append({"source": source, "url": url,
                  "seen": day or date.today().isoformat()})
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(item, f, indent=2)
+    _write_item(path, item)
     return True

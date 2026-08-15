@@ -231,7 +231,7 @@ C4Context
       The system is made of <strong>four Python processes</strong> (runner, curation CLI, site builder,
       edit server), a shared library, a flat-file data store, and a static React frontend.
       <strong>radar_core.py</strong> is the shared library every process imports.
-      <strong>data/</strong> is a flat filesystem store — one JSON file per technology, no database.
+      <strong>data/</strong> is a flat filesystem store — one Markdown file (YAML frontmatter) per technology, no database.
       The frontend lives in <strong>web/</strong> and is served two ways: <code>build_site.py</code>
       bundles it into <code>site/</code> for GitHub Pages (read-only), while <code>edit_server.py</code>
       serves the same files locally with editing turned on. A single runtime flag in
@@ -250,7 +250,7 @@ C4Container
         Container(curation, "Curation CLI", "Python 3 CLI", "Human-in-the-loop triage: promote/demote between rings, set metadata/topics, archive, find stale inbox items, manual add")
         Container(builder, "Site Builder", "Python 3", "Bundles web/ into a deployable static site/ folder; ships config.js as read-only")
         Container(editsrv, "Edit Server", "Python 3 http.server", "Serves web/ locally with window.RADAR_EDIT=true; ring clicks POST /api/promote and write through to disk")
-        ContainerDb(itemstore, "Item Store", "Flat JSON files", "data/items/source/slug.json — one file per technology; the ring field drives dashboard classification")
+        ContainerDb(itemstore, "Item Store", "Markdown + YAML frontmatter files", "data/items/source/slug.md — one file per technology; structured fields live in frontmatter, description is the body; the ring field drives dashboard classification")
         ContainerDb(manifest, "Radar Manifest", "Single JSON file", "data/radar.json — aggregated payload with computed trend fields, read by the dashboard")
         Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "web/: Atlas and Index views + edit mode — no build step. config.js flag gates editing")
     }
@@ -332,7 +332,7 @@ C4Component
     Rel(orch, raw, "write raw scrape output for audit")
     Rel(orch, builder, "call after all scrapers complete")
     Rel(dedup, items, "read all canonical_url fields")
-    Rel(persist, items, "read/write per-tech JSON files")
+    Rel(persist, items, "read/write per-tech Markdown files")
     Rel(builder, items, "read all JSON files")
     Rel(builder, manifest_db, "write radar.json")
       </div>
@@ -472,7 +472,7 @@ sequenceDiagram
                 C->>FS: append to also_seen, refresh last_seen
             else genuinely new technology
                 R->>C: save_new(item)
-                C->>FS: write data/items/source/slug.json
+                C->>FS: write data/items/source/slug.md
                 Note over R,C: add canonical_url to in-memory index
             end
         end

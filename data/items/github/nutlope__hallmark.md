@@ -1,0 +1,22 @@
+---
+id: github:Nutlope/hallmark
+name: hallmark
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/Nutlope/hallmark
+canonical_url: github.com/nutlope/hallmark
+company: null
+stars: 1485
+momentum: 15
+tags: ["css"]
+topics: []
+archived_at: null
+first_seen: 2026-07-13
+last_seen: 2026-07-18
+also_seen: []
+stars_history: {"2026-07-13": 155, "2026-07-14": 794, "2026-07-15": 1015, "2026-07-16": 1277, "2026-07-17": 3372, "2026-07-18": 1485}
+---
+
+Anti-AI-slop design skill for Claude Code, Cursor, and Codex.

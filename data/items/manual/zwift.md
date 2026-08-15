@@ -1,0 +1,22 @@
+---
+id: manual:zwift
+name: Zwift
+quadrant: Platforms
+ring: Adopted
+source: Manual
+discovered_by: manual
+url: https://www.zwift.com/
+canonical_url: null
+company: Zwift
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-08-12
+last_seen: 2026-08-12
+also_seen: []
+stars_history: {}
+---
+
+Indoor cycling and running app that lets riders train on smart trainers through immersive virtual worlds, with structured workouts, group rides, and competitive racing against a large global community. The dominant, most feature-rich player in virtual training.

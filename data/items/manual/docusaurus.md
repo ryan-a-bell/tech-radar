@@ -1,0 +1,22 @@
+---
+id: manual:docusaurus
+name: Docusaurus
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/facebook/docusaurus
+canonical_url: github.com/facebook/docusaurus
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-07-17
+last_seen: 2026-07-17
+also_seen: []
+stars_history: {}
+---
+
+Meta's open-source static site generator for building documentation websites, using React/MDX to let teams focus on content while it handles versioning, search, and site build/deploy infrastructure.

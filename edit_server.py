@@ -9,7 +9,7 @@ Serves the SAME web/ bundle (index.html + dashboard.jsx) as the public site —
 /data/* is mapped to the repo-root data/ dir — but with one difference: it
 answers GET /config.js with `window.RADAR_EDIT = true`, which
 unlocks the in-browser ring editor. Ring changes POST to /api/promote and are
-written straight to data/items/*.json, rebuilding radar.json immediately.
+written straight to data/items/*.md, rebuilding radar.json immediately.
 
 The deployed GitHub Pages build ships config.js as `false` and has no backend,
 so the public radar can't be edited — this server is the only thing that turns
@@ -75,7 +75,7 @@ class EditHandler(SimpleHTTPRequestHandler):
                 return self._json({"error": "item not found"}, 404)
 
             with open(path, encoding="utf-8") as f:
-                item = json.load(f)
+                item = core.parse_item_md(f.read())
             old_ring = item["ring"]
             item["ring"] = ring
             # maintain the archived_at stamp on the way in/out of Archived,
@@ -85,7 +85,7 @@ class EditHandler(SimpleHTTPRequestHandler):
             else:
                 item["archived_at"] = None
             with open(path, "w", encoding="utf-8") as f:
-                json.dump(item, f, indent=2)
+                f.write(core.dump_item_md(item))
             build_radar_json()
 
             print(f"  {item['name']}: {old_ring} → {ring}")

@@ -1,0 +1,22 @@
+---
+id: github:SmartlyDressedGames/U3-SDK
+name: U3-SDK
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/SmartlyDressedGames/U3-SDK
+canonical_url: github.com/smartlydressedgames/u3-sdk
+company: null
+stars: 524
+momentum: 52
+tags: ["c#"]
+topics: []
+archived_at: null
+first_seen: 2026-07-10
+last_seen: 2026-07-10
+also_seen: []
+stars_history: {"2026-07-10": 524}
+---
+
+Source code for Unturned, a free open-world zombie survival sandbox game.

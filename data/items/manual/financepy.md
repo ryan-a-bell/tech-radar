@@ -1,0 +1,22 @@
+---
+id: manual:financepy
+name: FinancePy
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/domokane/FinancePy
+canonical_url: github.com/domokane/financepy
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant"]
+archived_at: null
+first_seen: 2026-07-02
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {}
+---
+
+Python library for pricing and risk management of financial derivatives.

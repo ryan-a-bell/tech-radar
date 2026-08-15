@@ -1,0 +1,22 @@
+---
+id: github:tirth8205/code-review-graph
+name: code-review-graph
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/tirth8205/code-review-graph
+canonical_url: github.com/tirth8205/code-review-graph
+company: null
+stars: 237
+momentum: 7
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-18
+last_seen: 2026-08-07
+also_seen: []
+stars_history: {"2026-07-18": 74, "2026-07-19": 355, "2026-07-20": 663, "2026-07-21": 1833, "2026-07-22": 1925, "2026-07-23": 882, "2026-08-07": 237}
+---
+
+Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.

@@ -1,0 +1,22 @@
+---
+id: github:webpack/webpack
+name: webpack
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/webpack/webpack
+canonical_url: github.com/webpack/webpack
+company: null
+stars: 10
+momentum: 1
+tags: ["javascript"]
+topics: []
+archived_at: null
+first_seen: 2026-08-05
+last_seen: 2026-08-05
+also_seen: []
+stars_history: {"2026-08-05": 10}
+---
+
+A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.

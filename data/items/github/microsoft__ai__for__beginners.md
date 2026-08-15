@@ -1,0 +1,22 @@
+---
+id: github:microsoft/AI-For-Beginners
+name: AI-For-Beginners
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/microsoft/AI-For-Beginners
+canonical_url: github.com/microsoft/ai-for-beginners
+company: Microsoft
+stars: 1902
+momentum: 25
+tags: ["jupyter notebook"]
+topics: []
+archived_at: null
+first_seen: 2026-07-01
+last_seen: 2026-08-04
+also_seen: []
+stars_history: {"2026-07-01": 252, "2026-07-02": 1096, "2026-07-31": 155, "2026-08-01": 1592, "2026-08-02": 949, "2026-08-03": 2629, "2026-08-04": 1902}
+---
+
+12 Weeks, 24 Lessons, AI for All!

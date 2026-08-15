@@ -7,8 +7,9 @@ description: Use this skill to manage and classify items in a technology radar â
 
 The scraper discovers tech and parks it in the **Discovered** ring. This
 skill is the human side: triaging that queue and curating the radar. All
-changes go through `radar.py`, which edits the per-tech JSON files and
-rebuilds `data/radar.json` for the dashboard automatically.
+changes go through `radar.py`, which edits the per-tech Markdown +
+YAML-frontmatter files (`data/items/<source>/<slug>.md`) and rebuilds
+`data/radar.json` for the dashboard automatically.
 
 ## The rings
 
@@ -90,5 +91,6 @@ empty `--description`.
 - `archive` is for tech that's dead or irrelevant â€” it moves to the
   Archived ring (stamped with `archived_at`) so it won't be re-surfaced as
   a new discovery, and the graveyard can be filtered by age (`--older-than`).
-- Never edit the JSON files by hand while the runner might be active;
-  use these commands so changes are atomic and the rebuild stays in sync.
+- Never edit the item Markdown files by hand while the runner might be
+  active; use these commands so changes are atomic and the rebuild stays in
+  sync.

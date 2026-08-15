@@ -1,0 +1,22 @@
+---
+id: manual:open-connector
+name: Open Connector
+quadrant: Platforms
+ring: Trial
+source: Manual
+discovered_by: manual
+url: https://github.com/oomol-lab/open-connector
+canonical_url: github.com/oomol-lab/open-connector
+company: OOMOL
+stars: 0
+momentum: 0
+tags: []
+topics: ["Agents"]
+archived_at: null
+first_seen: 2026-07-15
+last_seen: 2026-07-15
+also_seen: []
+stars_history: {}
+---
+
+Open-source authentication gateway connecting AI agents/apps to 1,000+ SaaS providers through a unified interface, with MCP support and SDKs/CLI.
