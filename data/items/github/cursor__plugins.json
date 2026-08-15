@@ -1,0 +1,25 @@
+{
+  "id": "github:cursor/plugins",
+  "name": "plugins",
+  "description": "Cursor plugin specification and official plugins",
+  "quadrant": "Languages",
+  "ring": "Discovered",
+  "source": "GitHub",
+  "discovered_by": "scraper",
+  "url": "https://github.com/cursor/plugins",
+  "canonical_url": "github.com/cursor/plugins",
+  "also_seen": [],
+  "company": null,
+  "stars": 41,
+  "momentum": 4,
+  "tags": [
+    "typescript"
+  ],
+  "topics": [],
+  "archived_at": null,
+  "first_seen": "2026-08-15",
+  "last_seen": "2026-08-15",
+  "stars_history": {
+    "2026-08-15": 41
+  }
+}

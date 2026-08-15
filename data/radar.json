@@ -1,7 +1,113 @@
 {
-  "generated": "2026-08-14",
-  "count": 589,
+  "generated": "2026-08-15",
+  "count": 593,
   "items": [
+    {
+      "id": "github:rustdesk/rustdesk",
+      "name": "rustdesk",
+      "description": "An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rustdesk/rustdesk",
+      "canonical_url": "github.com/rustdesk/rustdesk",
+      "also_seen": [],
+      "company": null,
+      "stars": 143,
+      "momentum": 14,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "stars_history": {
+        "2026-08-15": 143
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cursor/plugins",
+      "name": "plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cursor/plugins",
+      "canonical_url": "github.com/cursor/plugins",
+      "also_seen": [],
+      "company": null,
+      "stars": 41,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "stars_history": {
+        "2026-08-15": 41
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:deepseek-ai/awesome-deepseek-agent",
+      "name": "awesome-deepseek-agent",
+      "description": "A software project trending on GitHub.",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/deepseek-ai/awesome-deepseek-agent",
+      "canonical_url": "github.com/deepseek-ai/awesome-deepseek-agent",
+      "also_seen": [],
+      "company": null,
+      "stars": 222,
+      "momentum": 22,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "stars_history": {
+        "2026-08-15": 222
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ToolJet/ToolJet",
+      "name": "ToolJet",
+      "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents \ud83d\ude80",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ToolJet/ToolJet",
+      "canonical_url": "github.com/tooljet/tooljet",
+      "also_seen": [],
+      "company": null,
+      "stars": 132,
+      "momentum": 13,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-08-15",
+      "stars_history": {
+        "2026-08-15": 132
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:unslothai/unsloth",
       "name": "unsloth",
@@ -14,7 +120,7 @@
       "canonical_url": "github.com/unslothai/unsloth",
       "also_seen": [],
       "company": null,
-      "stars": 328,
+      "stars": 501,
       "momentum": 32,
       "tags": [
         "python"
@@ -22,12 +128,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
-        "2026-08-14": 328
+        "2026-08-14": 328,
+        "2026-08-15": 501
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 173
     },
     {
       "id": "github:lightningpixel/modly",
@@ -41,7 +148,7 @@
       "canonical_url": "github.com/lightningpixel/modly",
       "also_seen": [],
       "company": null,
-      "stars": 118,
+      "stars": 579,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -49,12 +156,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
-        "2026-08-14": 118
+        "2026-08-14": 118,
+        "2026-08-15": 579
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 461
     },
     {
       "id": "github:megadose/holehe",
@@ -68,7 +176,7 @@
       "canonical_url": "github.com/megadose/holehe",
       "also_seen": [],
       "company": null,
-      "stars": 195,
+      "stars": 427,
       "momentum": 19,
       "tags": [
         "python"
@@ -76,12 +184,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
-        "2026-08-14": 195
+        "2026-08-14": 195,
+        "2026-08-15": 427
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 232
     },
     {
       "id": "github:holaboss-ai/holaOS",
@@ -95,7 +204,7 @@
       "canonical_url": "github.com/holaboss-ai/holaos",
       "also_seen": [],
       "company": null,
-      "stars": 241,
+      "stars": 769,
       "momentum": 24,
       "tags": [
         "typescript"
@@ -103,12 +212,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
-        "2026-08-14": 241
+        "2026-08-14": 241,
+        "2026-08-15": 769
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 528
     },
     {
       "id": "github:infiniflow/ragflow",
@@ -122,7 +232,7 @@
       "canonical_url": "github.com/infiniflow/ragflow",
       "also_seen": [],
       "company": null,
-      "stars": 465,
+      "stars": 473,
       "momentum": 13,
       "tags": [
         "go"
@@ -130,13 +240,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-08-13": 139,
-        "2026-08-14": 465
+        "2026-08-14": 465,
+        "2026-08-15": 473
       },
       "trend": "up",
-      "trend_delta": 326
+      "trend_delta": 334
     },
     {
       "id": "github:cactus-compute/needle",
@@ -150,7 +261,7 @@
       "canonical_url": "github.com/cactus-compute/needle",
       "also_seen": [],
       "company": null,
-      "stars": 769,
+      "stars": 662,
       "momentum": 31,
       "tags": [
         "python"
@@ -158,13 +269,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-08-13": 315,
-        "2026-08-14": 769
+        "2026-08-14": 769,
+        "2026-08-15": 662
       },
       "trend": "up",
-      "trend_delta": 454
+      "trend_delta": 347
     },
     {
       "id": "github:macro-inc/macro",
@@ -178,7 +290,7 @@
       "canonical_url": "github.com/macro-inc/macro",
       "also_seen": [],
       "company": null,
-      "stars": 1239,
+      "stars": 436,
       "momentum": 22,
       "tags": [
         "rust"
@@ -186,13 +298,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-08-13": 227,
-        "2026-08-14": 1239
+        "2026-08-14": 1239,
+        "2026-08-15": 436
       },
       "trend": "up",
-      "trend_delta": 1012
+      "trend_delta": 209
     },
     {
       "id": "github:localsend/localsend",
@@ -287,7 +400,7 @@
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "also_seen": [],
       "company": null,
-      "stars": 4475,
+      "stars": 3646,
       "momentum": 100,
       "tags": [
         "html"
@@ -295,13 +408,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-08-13": 2855,
-        "2026-08-14": 4475
+        "2026-08-14": 4475,
+        "2026-08-15": 3646
       },
       "trend": "up",
-      "trend_delta": 1620
+      "trend_delta": 791
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -878,7 +992,7 @@
       "canonical_url": "github.com/semantica-agi/semantica",
       "also_seen": [],
       "company": null,
-      "stars": 713,
+      "stars": 1181,
       "momentum": 12,
       "tags": [
         "python"
@@ -886,16 +1000,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-08",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-08-08": 122,
         "2026-08-11": 970,
         "2026-08-12": 893,
         "2026-08-13": 845,
-        "2026-08-14": 713
+        "2026-08-14": 713,
+        "2026-08-15": 1181
       },
       "trend": "up",
-      "trend_delta": 591
+      "trend_delta": 1059
     },
     {
       "id": "github:PrimeIntellect-ai/prime-agent",
@@ -2773,7 +2888,7 @@
       "canonical_url": "github.com/citrolabs/ego-lite",
       "also_seen": [],
       "company": null,
-      "stars": 900,
+      "stars": 165,
       "momentum": 24,
       "tags": [
         "javascript"
@@ -2781,15 +2896,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-07-24": 247,
         "2026-07-25": 880,
         "2026-07-26": 986,
-        "2026-07-27": 900
+        "2026-07-27": 900,
+        "2026-08-15": 165
       },
-      "trend": "up",
-      "trend_delta": 653
+      "trend": "down",
+      "trend_delta": -735
     },
     {
       "id": "github:block/buzz",
@@ -4897,7 +5013,7 @@
       "canonical_url": "github.com/opencut-app/opencut",
       "also_seen": [],
       "company": null,
-      "stars": 1074,
+      "stars": 255,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -4905,16 +5021,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-07-14": 1229,
         "2026-07-15": 4276,
         "2026-07-16": 1664,
         "2026-07-17": 3537,
-        "2026-07-18": 1074
+        "2026-07-18": 1074,
+        "2026-08-15": 255
       },
       "trend": "down",
-      "trend_delta": -155
+      "trend_delta": -819
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -12136,20 +12253,21 @@
       "canonical_url": "github.com/smicallef/spiderfoot",
       "also_seen": [],
       "company": null,
-      "stars": 283,
+      "stars": 293,
       "momentum": 28,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-06-21": 288,
         "2026-08-13": 74,
-        "2026-08-14": 283
+        "2026-08-14": 283,
+        "2026-08-15": 293
       },
-      "trend": "down",
-      "trend_delta": -5
+      "trend": "up",
+      "trend_delta": 5
     },
     {
       "id": "github:1jehuang/jcode",
@@ -15208,21 +15326,22 @@
       "canonical_url": "github.com/github/spec-kit",
       "also_seen": [],
       "company": null,
-      "stars": 543,
+      "stars": 1160,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-07-14",
+      "last_seen": "2026-08-15",
       "stars_history": {
         "2026-06-04": 311,
         "2026-06-05": 321,
-        "2026-07-14": 543
+        "2026-07-14": 543,
+        "2026-08-15": 1160
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 222
+      "trend_delta": 617
     },
     {
       "id": "github:openclaw/openclaw-windows-node",

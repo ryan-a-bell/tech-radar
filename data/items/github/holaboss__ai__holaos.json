@@ -10,7 +10,7 @@
   "canonical_url": "github.com/holaboss-ai/holaos",
   "also_seen": [],
   "company": null,
-  "stars": 241,
+  "stars": 769,
   "momentum": 24,
   "tags": [
     "typescript"
@@ -18,8 +18,9 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-14",
-  "last_seen": "2026-08-14",
+  "last_seen": "2026-08-15",
   "stars_history": {
-    "2026-08-14": 241
+    "2026-08-14": 241,
+    "2026-08-15": 769
   }
 }

@@ -9,17 +9,18 @@
   "canonical_url": "github.com/github/spec-kit",
   "also_seen": [],
   "company": null,
-  "stars": 543,
+  "stars": 1160,
   "momentum": 31,
   "tags": [
     "python"
   ],
   "first_seen": "2026-06-04",
-  "last_seen": "2026-07-14",
+  "last_seen": "2026-08-15",
   "stars_history": {
     "2026-06-04": 311,
     "2026-06-05": 321,
-    "2026-07-14": 543
+    "2026-07-14": 543,
+    "2026-08-15": 1160
   },
   "archived_at": null
 }
