@@ -10,7 +10,7 @@
   "canonical_url": "github.com/megadose/holehe",
   "also_seen": [],
   "company": null,
-  "stars": 427,
+  "stars": 382,
   "momentum": 19,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-14",
-  "last_seen": "2026-08-15",
+  "last_seen": "2026-08-16",
   "stars_history": {
     "2026-08-14": 195,
-    "2026-08-15": 427
+    "2026-08-15": 427,
+    "2026-08-16": 382
   }
 }

@@ -10,7 +10,7 @@
   "canonical_url": "github.com/cactus-compute/needle",
   "also_seen": [],
   "company": null,
-  "stars": 662,
+  "stars": 547,
   "momentum": 31,
   "tags": [
     "python"
@@ -18,10 +18,11 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-13",
-  "last_seen": "2026-08-15",
+  "last_seen": "2026-08-16",
   "stars_history": {
     "2026-08-13": 315,
     "2026-08-14": 769,
-    "2026-08-15": 662
+    "2026-08-15": 662,
+    "2026-08-16": 547
   }
 }

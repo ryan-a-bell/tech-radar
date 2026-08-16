@@ -10,7 +10,7 @@
   "canonical_url": "github.com/unslothai/unsloth",
   "also_seen": [],
   "company": null,
-  "stars": 501,
+  "stars": 434,
   "momentum": 32,
   "tags": [
     "python"
@@ -18,9 +18,10 @@
   "topics": [],
   "archived_at": null,
   "first_seen": "2026-08-14",
-  "last_seen": "2026-08-15",
+  "last_seen": "2026-08-16",
   "stars_history": {
     "2026-08-14": 328,
-    "2026-08-15": 501
+    "2026-08-15": 501,
+    "2026-08-16": 434
   }
 }
