@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/citrolabs/ego-lite
 canonical_url: github.com/citrolabs/ego-lite
 company: null
-stars: 165
+stars: 545
 momentum: 24
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-24
-last_seen: 2026-08-15
+last_seen: 2026-08-16
 also_seen: []
-stars_history: {"2026-07-24": 247, "2026-07-25": 880, "2026-07-26": 986, "2026-07-27": 900, "2026-08-15": 165}
+stars_history: {"2026-07-24": 247, "2026-07-25": 880, "2026-07-26": 986, "2026-07-27": 900, "2026-08-15": 165, "2026-08-16": 545}
 ---
 
 The best browser for both you and your AI agents work in parallel.

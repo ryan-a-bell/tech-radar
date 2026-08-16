@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/github/spec-kit
 canonical_url: github.com/github/spec-kit
 company: null
-stars: 1160
+stars: 892
 momentum: 31
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-04
-last_seen: 2026-08-15
+last_seen: 2026-08-16
 also_seen: []
-stars_history: {"2026-06-04": 311, "2026-06-05": 321, "2026-07-14": 543, "2026-08-15": 1160}
+stars_history: {"2026-06-04": 311, "2026-06-05": 321, "2026-07-14": 543, "2026-08-15": 1160, "2026-08-16": 892}
 ---
 
 💫 Toolkit to help you get started with Spec-Driven Development
