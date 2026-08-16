@@ -1,7 +1,115 @@
 {
-  "generated": "2026-08-15",
-  "count": 594,
+  "generated": "2026-08-16",
+  "count": 598,
   "items": [
+    {
+      "id": "github:public-apis/public-apis",
+      "name": "public-apis",
+      "description": "A collective list of free APIs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/public-apis/public-apis",
+      "canonical_url": "github.com/public-apis/public-apis",
+      "also_seen": [],
+      "company": null,
+      "stars": 2260,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "stars_history": {
+        "2026-08-16": 2260
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cordiverse/cordis",
+      "name": "cordis",
+      "description": "Meta-Framework of Spatiotemporal Composability",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cordiverse/cordis",
+      "canonical_url": "github.com/cordiverse/cordis",
+      "also_seen": [],
+      "company": null,
+      "stars": 599,
+      "momentum": 59,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "stars_history": {
+        "2026-08-16": 599
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MakazhanAlpamys/Soup",
+      "name": "Soup",
+      "description": "Fine-tune LLMs from one YAML. Layer streaming trains an 8B model on a 4 GB laptop GPU.",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MakazhanAlpamys/Soup",
+      "canonical_url": "github.com/makazhanalpamys/soup",
+      "also_seen": [],
+      "company": null,
+      "stars": 297,
+      "momentum": 29,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "stars_history": {
+        "2026-08-16": 297
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:HKUDS/CLI-Anything",
+      "name": "CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "canonical_url": "github.com/hkuds/cli-anything",
+      "also_seen": [],
+      "company": null,
+      "stars": 118,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-08-16",
+      "stars_history": {
+        "2026-08-16": 118
+      },
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:rustdesk/rustdesk",
       "name": "rustdesk",
@@ -41,7 +149,7 @@
       "canonical_url": "github.com/cursor/plugins",
       "also_seen": [],
       "company": null,
-      "stars": 41,
+      "stars": 149,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -49,12 +157,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
-        "2026-08-15": 41
+        "2026-08-15": 41,
+        "2026-08-16": 149
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 108
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -93,7 +202,7 @@
       "canonical_url": "github.com/tooljet/tooljet",
       "also_seen": [],
       "company": null,
-      "stars": 132,
+      "stars": 544,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -101,12 +210,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
-        "2026-08-15": 132
+        "2026-08-15": 132,
+        "2026-08-16": 544
       },
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 412
     },
     {
       "id": "manual:deepseek-harness",
@@ -146,7 +256,7 @@
       "canonical_url": "github.com/unslothai/unsloth",
       "also_seen": [],
       "company": null,
-      "stars": 501,
+      "stars": 434,
       "momentum": 32,
       "tags": [
         "python"
@@ -154,13 +264,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-08-14": 328,
-        "2026-08-15": 501
+        "2026-08-15": 501,
+        "2026-08-16": 434
       },
       "trend": "up",
-      "trend_delta": 173
+      "trend_delta": 106
     },
     {
       "id": "github:lightningpixel/modly",
@@ -202,7 +313,7 @@
       "canonical_url": "github.com/megadose/holehe",
       "also_seen": [],
       "company": null,
-      "stars": 427,
+      "stars": 382,
       "momentum": 19,
       "tags": [
         "python"
@@ -210,13 +321,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-08-14": 195,
-        "2026-08-15": 427
+        "2026-08-15": 427,
+        "2026-08-16": 382
       },
       "trend": "up",
-      "trend_delta": 232
+      "trend_delta": 187
     },
     {
       "id": "github:holaboss-ai/holaOS",
@@ -287,7 +399,7 @@
       "canonical_url": "github.com/cactus-compute/needle",
       "also_seen": [],
       "company": null,
-      "stars": 662,
+      "stars": 547,
       "momentum": 31,
       "tags": [
         "python"
@@ -295,14 +407,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-08-13": 315,
         "2026-08-14": 769,
-        "2026-08-15": 662
+        "2026-08-15": 662,
+        "2026-08-16": 547
       },
       "trend": "up",
-      "trend_delta": 347
+      "trend_delta": 232
     },
     {
       "id": "github:macro-inc/macro",
@@ -426,7 +539,7 @@
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "also_seen": [],
       "company": null,
-      "stars": 3646,
+      "stars": 1607,
       "momentum": 100,
       "tags": [
         "html"
@@ -434,14 +547,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-08-13": 2855,
         "2026-08-14": 4475,
-        "2026-08-15": 3646
+        "2026-08-15": 3646,
+        "2026-08-16": 1607
       },
-      "trend": "up",
-      "trend_delta": 791
+      "trend": "down",
+      "trend_delta": -1248
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -2914,7 +3028,7 @@
       "canonical_url": "github.com/citrolabs/ego-lite",
       "also_seen": [],
       "company": null,
-      "stars": 165,
+      "stars": 545,
       "momentum": 24,
       "tags": [
         "javascript"
@@ -2922,16 +3036,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-07-24": 247,
         "2026-07-25": 880,
         "2026-07-26": 986,
         "2026-07-27": 900,
-        "2026-08-15": 165
+        "2026-08-15": 165,
+        "2026-08-16": 545
       },
       "trend": "down",
-      "trend_delta": -735
+      "trend_delta": -355
     },
     {
       "id": "github:block/buzz",
@@ -11198,7 +11313,7 @@
       "canonical_url": "github.com/altic-dev/fluidvoice",
       "also_seen": [],
       "company": null,
-      "stars": 76,
+      "stars": 104,
       "momentum": 36,
       "tags": [
         "swift"
@@ -11206,16 +11321,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-06-29": 836,
         "2026-06-30": 830,
         "2026-07-01": 588,
         "2026-07-02": 572,
-        "2026-08-14": 76
+        "2026-08-14": 76,
+        "2026-08-16": 104
       },
       "trend": "down",
-      "trend_delta": -496
+      "trend_delta": -468
     },
     {
       "id": "github:hugohe3/ppt-master",
@@ -15352,22 +15468,23 @@
       "canonical_url": "github.com/github/spec-kit",
       "also_seen": [],
       "company": null,
-      "stars": 1160,
+      "stars": 892,
       "momentum": 31,
       "tags": [
         "python"
       ],
       "first_seen": "2026-06-04",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-16",
       "stars_history": {
         "2026-06-04": 311,
         "2026-06-05": 321,
         "2026-07-14": 543,
-        "2026-08-15": 1160
+        "2026-08-15": 1160,
+        "2026-08-16": 892
       },
       "archived_at": null,
       "trend": "up",
-      "trend_delta": 617
+      "trend_delta": 349
     },
     {
       "id": "github:openclaw/openclaw-windows-node",
