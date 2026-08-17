@@ -1,0 +1,22 @@
+---
+id: github:oven-sh/bun
+name: bun
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/oven-sh/bun
+canonical_url: github.com/oven-sh/bun
+company: Oven
+stars: 658
+momentum: 20
+tags: ["rust"]
+topics: []
+archived_at: null
+first_seen: 2026-07-11
+last_seen: 2026-07-12
+also_seen: []
+stars_history: {"2026-07-11": 209, "2026-07-12": 658}
+---
+
+Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one

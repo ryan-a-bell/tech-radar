@@ -144,7 +144,7 @@ class IdAndPathTests(unittest.TestCase):
         path = core.id_to_path("github:oven-sh/bun")
         self.assertEqual(os.path.dirname(path),
                          os.path.join(core.ITEMS_DIR, "github"))
-        self.assertTrue(os.path.basename(path).endswith(".json"))
+        self.assertTrue(os.path.basename(path).endswith(".md"))
 
     def test_id_to_path_is_stable(self):
         self.assertEqual(core.id_to_path("github:foo/bar"),
@@ -190,6 +190,83 @@ class NewItemTests(unittest.TestCase):
         item = core.new_item("GitHub", "a/b", "AB", "d",
                              "https://github.com/a/b", stars=42)
         self.assertEqual(list(item["stars_history"].values()), [42])
+
+
+class FrontmatterCodecTests(unittest.TestCase):
+    """dump_item_md / parse_item_md — the Markdown + YAML frontmatter codec
+    per-tech files are stored in (issue #18)."""
+
+    def _item(self, **overrides):
+        item = core.new_item(
+            "GitHub", "foo/bar", "Foo Bar", "A description.",
+            "https://github.com/foo/bar", company="Acme", stars=10,
+            momentum=3, tags=["cli"], topics=["AI"],
+        )
+        item.update(overrides)
+        return item
+
+    def test_round_trips_a_typical_item(self):
+        item = self._item()
+        self.assertEqual(core.parse_item_md(core.dump_item_md(item)), item)
+
+    def test_body_is_the_description(self):
+        item = self._item(description="Line one.\n\nLine two.")
+        text = core.dump_item_md(item)
+        self.assertTrue(text.startswith("---\n"))
+        self.assertIn("Line one.\n\nLine two.", text)
+
+    def test_empty_description_yields_no_trailing_body(self):
+        item = self._item(description="")
+        text = core.dump_item_md(item)
+        self.assertTrue(text.rstrip("\n").endswith("---"))
+
+    def test_round_trips_special_characters_in_name(self):
+        for name in ["Name: With Colon", "null", "true", "42", "",
+                     "  spaced  ", "- dash prefixed", "quote\" inside",
+                     "emoji 🚀 and em dash —", "[bracketed]", "{braced}"]:
+            with self.subTest(name=name):
+                item = self._item(name=name)
+                self.assertEqual(
+                    core.parse_item_md(core.dump_item_md(item))["name"], name)
+
+    def test_round_trips_multiline_description(self):
+        item = self._item(description="para one\n\n---\n\npara two")
+        back = core.parse_item_md(core.dump_item_md(item))
+        self.assertEqual(back["description"], item["description"])
+
+    def test_round_trips_nested_also_seen_and_stars_history(self):
+        item = self._item(
+            also_seen=[{"source": "reddit", "url": "https://reddit.com/x:y",
+                        "seen": "2026-01-01"}],
+            stars_history={"2026-01-01": 10, "2026-01-08": 15},
+        )
+        back = core.parse_item_md(core.dump_item_md(item))
+        self.assertEqual(back["also_seen"], item["also_seen"])
+        self.assertEqual(back["stars_history"], item["stars_history"])
+
+    def test_dates_stay_plain_strings_not_yaml_dates(self):
+        item = self._item(first_seen="2026-07-12", last_seen="2026-07-12")
+        back = core.parse_item_md(core.dump_item_md(item))
+        self.assertIsInstance(back["first_seen"], str)
+        self.assertEqual(back["first_seen"], "2026-07-12")
+
+    def test_null_fields_round_trip_to_none(self):
+        item = self._item(company=None, canonical_url=None, archived_at=None)
+        back = core.parse_item_md(core.dump_item_md(item))
+        self.assertIsNone(back["company"])
+        self.assertIsNone(back["canonical_url"])
+        self.assertIsNone(back["archived_at"])
+
+    def test_missing_legacy_fields_backfill_to_typed_defaults(self):
+        # simulates a pre-topics/archived_at era item, as real early items
+        # in this repo were, to guard against the migration writing a bare
+        # `null` into a list/dict-typed field.
+        item = self._item()
+        del item["topics"]
+        del item["archived_at"]
+        back = core.parse_item_md(core.dump_item_md(item))
+        self.assertEqual(back["topics"], [])
+        self.assertIsNone(back["archived_at"])
 
 
 if __name__ == "__main__":

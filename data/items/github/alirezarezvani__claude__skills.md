@@ -1,0 +1,22 @@
+---
+id: github:alirezarezvani/claude-skills
+name: claude-skills
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/alirezarezvani/claude-skills
+canonical_url: github.com/alirezarezvani/claude-skills
+company: null
+stars: 610
+momentum: 13
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-05
+last_seen: 2026-07-07
+also_seen: []
+stars_history: {"2026-07-05": 136, "2026-07-06": 392, "2026-07-07": 610}
+---
+
+337 Claude Code skills & agent skills & plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial & finance, and your daily productivity skills.

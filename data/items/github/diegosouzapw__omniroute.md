@@ -1,0 +1,22 @@
+---
+id: github:diegosouzapw/OmniRoute
+name: OmniRoute
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/diegosouzapw/OmniRoute
+canonical_url: github.com/diegosouzapw/omniroute
+company: null
+stars: 1841
+momentum: 38
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-01
+last_seen: 2026-07-25
+also_seen: []
+stars_history: {"2026-07-01": 387, "2026-07-02": 1010, "2026-07-21": 1107, "2026-07-22": 2034, "2026-07-23": 1651, "2026-07-24": 1929, "2026-07-25": 1841}
+---
+
+Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.

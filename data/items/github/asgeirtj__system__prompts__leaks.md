@@ -1,0 +1,22 @@
+---
+id: github:asgeirtj/system_prompts_leaks
+name: system_prompts_leaks
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/asgeirtj/system_prompts_leaks
+canonical_url: github.com/asgeirtj/system_prompts_leaks
+company: null
+stars: 1125
+momentum: 35
+tags: ["javascript"]
+topics: []
+archived_at: null
+first_seen: 2026-06-21
+last_seen: 2026-07-10
+also_seen: []
+stars_history: {"2026-06-21": 352, "2026-07-05": 471, "2026-07-06": 981, "2026-07-07": 1378, "2026-07-08": 1691, "2026-07-09": 1218, "2026-07-10": 1125}
+---
+
+Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.

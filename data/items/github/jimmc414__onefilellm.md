@@ -1,0 +1,22 @@
+---
+id: github:jimmc414/onefilellm
+name: onefilellm
+quadrant: Tools
+ring: Assess
+source: GitHub
+discovered_by: manual
+url: https://github.com/jimmc414/onefilellm
+canonical_url: github.com/jimmc414/onefilellm
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-06-30
+last_seen: 2026-06-30
+also_seen: []
+stars_history: {}
+---
+
+Scrapes repositories, papers, and docs into a single text for LLM use

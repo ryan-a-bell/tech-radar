@@ -1,0 +1,22 @@
+---
+id: github:Comfy-Org/ComfyUI
+name: ComfyUI
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/Comfy-Org/ComfyUI
+canonical_url: github.com/comfy-org/comfyui
+company: null
+stars: 922
+momentum: 36
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-08-10
+last_seen: 2026-08-11
+also_seen: []
+stars_history: {"2026-08-10": 365, "2026-08-11": 922}
+---
+
+The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.

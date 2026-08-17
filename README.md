@@ -13,7 +13,7 @@ RSS Feeds         ┘                       ▲
                                     radar.py (human curation)
 ```
 
-1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one JSON file per technology into `data/items/`.
+1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one Markdown file (YAML frontmatter + a free-text description body) per technology into `data/items/`.
 2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopted`, archive dead tech, assign topics, and fix metadata. Every change rebuilds `data/radar.json` automatically.
 3. **Deploy** — `build_site.py` assembles a self-contained `site/` folder you can push to GitHub Pages, Netlify, or serve locally.
 
@@ -100,7 +100,7 @@ python edit_server.py 8080     # custom port
 Serves the **same** `index.html` + `dashboard.jsx` as the public site, but
 answers `GET /config.js` with `window.RADAR_EDIT = true`. That single flag
 unlocks a ring editor in the detail panels; clicking a ring POSTs to
-`/api/promote`, writes the change to `data/items/*.json`, and rebuilds
+`/api/promote`, writes the change to `data/items/*.md`, and rebuilds
 `radar.json` immediately — the same effect as `radar.py promote`, just visual.
 
 There is one dashboard, not two. Edit affordances are gated behind the runtime
@@ -548,7 +548,7 @@ tech-radar/
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
 ├── data/
-│   ├── items/          # one .json file per technology (generated)
+│   ├── items/          # one Markdown file (YAML frontmatter) per technology
 │   │   ├── github/
 │   │   └── reddit/
 │   ├── raw/            # audit trail of raw scrape output (generated)

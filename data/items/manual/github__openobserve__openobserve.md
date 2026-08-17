@@ -1,0 +1,20 @@
+---
+id: manual:github:openobserve/openobserve
+name: OpenObserve
+quadrant: Platforms
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/openobserve/openobserve
+canonical_url: github.com/openobserve/openobserve
+company: OpenObserve
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-07-12
+last_seen: 2026-07-12
+also_seen: []
+stars_history: {}
+---

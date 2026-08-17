@@ -1,0 +1,22 @@
+---
+id: github:imthenachoman/How-To-Secure-A-Linux-Server
+name: How-To-Secure-A-Linux-Server
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/imthenachoman/How-To-Secure-A-Linux-Server
+canonical_url: github.com/imthenachoman/how-to-secure-a-linux-server
+company: null
+stars: 243
+momentum: 24
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-07-10
+last_seen: 2026-07-10
+also_seen: []
+stars_history: {"2026-07-10": 243}
+---
+
+An evolving how-to guide for securing a Linux server.

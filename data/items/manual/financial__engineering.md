@@ -1,0 +1,22 @@
+---
+id: manual:financial-engineering
+name: financial-engineering
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/federicomariamassari/financial-engineering
+canonical_url: github.com/federicomariamassari/financial-engineering
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant"]
+archived_at: null
+first_seen: 2026-07-02
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {}
+---
+
+Collection of financial engineering and quantitative finance projects in Python.
