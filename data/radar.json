@@ -1,7 +1,34 @@
 {
   "generated": "2026-08-17",
-  "count": 598,
+  "count": 599,
   "items": [
+    {
+      "id": "github:basecamp/omarchy",
+      "name": "omarchy",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/basecamp/omarchy",
+      "canonical_url": "github.com/basecamp/omarchy",
+      "company": null,
+      "stars": 270,
+      "momentum": 27,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-17": 270
+      },
+      "description": "Beautiful, Modern & Opinionated Linux",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:public-apis/public-apis",
       "name": "public-apis",
@@ -12,7 +39,7 @@
       "url": "https://github.com/public-apis/public-apis",
       "canonical_url": "github.com/public-apis/public-apis",
       "company": null,
-      "stars": 2260,
+      "stars": 1588,
       "momentum": 100,
       "tags": [
         "python"
@@ -20,14 +47,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
-        "2026-08-16": 2260
+        "2026-08-16": 2260,
+        "2026-08-17": 1588
       },
       "description": "A collective list of free APIs",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -672
     },
     {
       "id": "github:cordiverse/cordis",
@@ -39,7 +67,7 @@
       "url": "https://github.com/cordiverse/cordis",
       "canonical_url": "github.com/cordiverse/cordis",
       "company": null,
-      "stars": 599,
+      "stars": 720,
       "momentum": 59,
       "tags": [
         "typescript"
@@ -47,14 +75,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
-        "2026-08-16": 599
+        "2026-08-16": 599,
+        "2026-08-17": 720
       },
       "description": "Meta-Framework of Spatiotemporal Composability",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 121
     },
     {
       "id": "github:MakazhanAlpamys/Soup",
@@ -200,7 +229,7 @@
       "url": "https://github.com/ToolJet/ToolJet",
       "canonical_url": "github.com/tooljet/tooljet",
       "company": null,
-      "stars": 544,
+      "stars": 452,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -208,15 +237,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 132,
-        "2026-08-16": 544
+        "2026-08-16": 544,
+        "2026-08-17": 452
       },
       "description": "ToolJet is the open-source foundation of ToolJet AI - the enterprise app generation platform for building internal tools, dashboard, business applications, workflows and AI agents \ud83d\ude80",
       "trend": "up",
-      "trend_delta": 412
+      "trend_delta": 320
     },
     {
       "id": "manual:deepseek-harness",
@@ -254,7 +284,7 @@
       "url": "https://github.com/unslothai/unsloth",
       "canonical_url": "github.com/unslothai/unsloth",
       "company": null,
-      "stars": 434,
+      "stars": 572,
       "momentum": 32,
       "tags": [
         "python"
@@ -262,16 +292,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-14",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
         "2026-08-14": 328,
         "2026-08-15": 501,
-        "2026-08-16": 434
+        "2026-08-16": 434,
+        "2026-08-17": 572
       },
       "description": "Local UI to run and train LLMs and diffusion models, including Qwen3.8, Kimi K3, MiniMax-H3, Gemma 4, DeepSeek-V4, FLUX and more.",
       "trend": "up",
-      "trend_delta": 106
+      "trend_delta": 244
     },
     {
       "id": "github:lightningpixel/modly",
@@ -397,7 +428,7 @@
       "url": "https://github.com/cactus-compute/needle",
       "canonical_url": "github.com/cactus-compute/needle",
       "company": null,
-      "stars": 547,
+      "stars": 443,
       "momentum": 31,
       "tags": [
         "python"
@@ -405,17 +436,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 315,
         "2026-08-14": 769,
         "2026-08-15": 662,
-        "2026-08-16": 547
+        "2026-08-16": 547,
+        "2026-08-17": 443
       },
       "description": "14MB foundation model for tiny devices; phones, wearables, smart home, and robots.",
       "trend": "up",
-      "trend_delta": 232
+      "trend_delta": 128
     },
     {
       "id": "github:macro-inc/macro",
@@ -5152,7 +5184,7 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "canonical_url": "github.com/opencut-app/opencut",
       "company": null,
-      "stars": 255,
+      "stars": 150,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -5160,7 +5192,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-08-17",
       "also_seen": [],
       "stars_history": {
         "2026-07-14": 1229,
@@ -5168,11 +5200,12 @@
         "2026-07-16": 1664,
         "2026-07-17": 3537,
         "2026-07-18": 1074,
-        "2026-08-15": 255
+        "2026-08-15": 255,
+        "2026-08-17": 150
       },
       "description": "The open-source CapCut alternative",
       "trend": "down",
-      "trend_delta": -819
+      "trend_delta": -924
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
