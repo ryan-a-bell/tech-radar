@@ -1,7 +1,88 @@
 {
-  "generated": "2026-08-17",
-  "count": 599,
+  "generated": "2026-08-18",
+  "count": 602,
   "items": [
+    {
+      "id": "github:jundot/omlx",
+      "name": "omlx",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jundot/omlx",
+      "canonical_url": "github.com/jundot/omlx",
+      "company": null,
+      "stars": 78,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-18": 78
+      },
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon \u2014 managed from the macOS menu bar",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:akitaonrails/ai-memory",
+      "name": "ai-memory",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "canonical_url": "github.com/akitaonrails/ai-memory",
+      "company": null,
+      "stars": 207,
+      "momentum": 20,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-18": 207
+      },
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:agalwood/Motrix",
+      "name": "Motrix",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/agalwood/Motrix",
+      "canonical_url": "github.com/agalwood/motrix",
+      "company": null,
+      "stars": 344,
+      "momentum": 34,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-18": 344
+      },
+      "description": "A full-featured download manager.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:basecamp/omarchy",
       "name": "omarchy",
@@ -67,7 +148,7 @@
       "url": "https://github.com/cordiverse/cordis",
       "canonical_url": "github.com/cordiverse/cordis",
       "company": null,
-      "stars": 720,
+      "stars": 957,
       "momentum": 59,
       "tags": [
         "typescript"
@@ -75,15 +156,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 599,
-        "2026-08-17": 720
+        "2026-08-17": 720,
+        "2026-08-18": 957
       },
       "description": "Meta-Framework of Spatiotemporal Composability",
       "trend": "up",
-      "trend_delta": 121
+      "trend_delta": 358
     },
     {
       "id": "github:MakazhanAlpamys/Soup",
@@ -3348,7 +3430,7 @@
       "url": "https://github.com/AlexsJones/llmfit",
       "canonical_url": "github.com/alexsjones/llmfit",
       "company": null,
-      "stars": 129,
+      "stars": 198,
       "momentum": 12,
       "tags": [
         "rust"
@@ -3356,14 +3438,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
-        "2026-07-22": 129
+        "2026-07-22": 129,
+        "2026-08-18": 198
       },
       "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 69
     },
     {
       "id": "github:ayghri/i-have-adhd",
@@ -7786,7 +7869,7 @@
       "url": "https://github.com/immich-app/immich",
       "canonical_url": "github.com/immich-app/immich",
       "company": null,
-      "stars": 470,
+      "stars": 175,
       "momentum": 20,
       "tags": [
         "typescript"
@@ -7794,15 +7877,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-07-05": 201,
-        "2026-07-06": 470
+        "2026-07-06": 470,
+        "2026-08-18": 175
       },
       "description": "High performance self-hosted photo and video management solution.",
-      "trend": "up",
-      "trend_delta": 269
+      "trend": "down",
+      "trend_delta": -295
     },
     {
       "id": "github:chthollyphile/folia-major",
@@ -11138,7 +11222,7 @@
       "url": "https://github.com/usestrix/strix",
       "canonical_url": "github.com/usestrix/strix",
       "company": null,
-      "stars": 1114,
+      "stars": 598,
       "momentum": 12,
       "tags": [
         "python"
@@ -11146,7 +11230,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-06",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-29": 122,
@@ -11155,11 +11239,12 @@
         "2026-07-03": 2137,
         "2026-07-04": 2803,
         "2026-07-05": 1904,
-        "2026-07-06": 1114
+        "2026-07-06": 1114,
+        "2026-08-18": 598
       },
       "description": "Open-source AI hackers to find and fix your app\u2019s vulnerabilities.",
-      "trend": "up",
-      "trend_delta": 992
+      "trend": "down",
+      "trend_delta": -516
     },
     {
       "id": "github:logto-io/logto",
@@ -12697,7 +12782,7 @@
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "company": null,
-      "stars": 571,
+      "stars": 198,
       "momentum": 34,
       "tags": [
         "python"
@@ -12705,7 +12790,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-06-26",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 343,
@@ -12713,11 +12798,12 @@
         "2026-06-23": 956,
         "2026-06-24": 1041,
         "2026-06-25": 600,
-        "2026-06-26": 571
+        "2026-06-26": 571,
+        "2026-08-18": 198
       },
       "description": "754 structured cybersecurity skills for AI agents \u00b7 Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 26 security domains \u00b7 Apache 2.0",
-      "trend": "up",
-      "trend_delta": 228
+      "trend": "down",
+      "trend_delta": -373
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -13205,7 +13291,7 @@
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "canonical_url": "github.com/nautechsystems/nautilus_trader",
       "company": null,
-      "stars": 98,
+      "stars": 120,
       "momentum": 8,
       "tags": [
         "rust"
@@ -13213,15 +13299,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-18",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 86,
-        "2026-06-18": 98
+        "2026-06-18": 98,
+        "2026-08-18": 120
       },
       "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
       "trend": "up",
-      "trend_delta": 12
+      "trend_delta": 22
     },
     {
       "id": "github:continuedev/continue",
@@ -14570,7 +14657,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 1389,
+      "stars": 1189,
       "momentum": 100,
       "tags": [
         "python"
@@ -14578,15 +14665,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-06-11",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
-        "2026-06-11": 1389
+        "2026-06-11": 1389,
+        "2026-08-18": 1189
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
       "trend": "down",
-      "trend_delta": -82
+      "trend_delta": -200
     },
     {
       "id": "github:masterking32/MasterDnsVPN",
@@ -15560,7 +15648,7 @@
       "url": "https://github.com/santifer/career-ops",
       "canonical_url": "github.com/santifer/career-ops",
       "company": null,
-      "stars": 372,
+      "stars": 218,
       "momentum": 18,
       "tags": [
         "javascript"
@@ -15568,7 +15656,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-03",
+      "last_seen": "2026-08-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 186,
@@ -15576,11 +15664,12 @@
         "2026-06-08": 665,
         "2026-06-09": 1114,
         "2026-06-10": 1110,
-        "2026-07-03": 372
+        "2026-07-03": 372,
+        "2026-08-18": 218
       },
       "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
       "trend": "down",
-      "trend_delta": -738
+      "trend_delta": -154
     },
     {
       "id": "github:microsoft/VibeVoice",
