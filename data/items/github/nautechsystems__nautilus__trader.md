@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/nautechsystems/nautilus_trader
 canonical_url: github.com/nautechsystems/nautilus_trader
 company: null
-stars: 98
+stars: 120
 momentum: 8
 tags: ["rust"]
 topics: []
 archived_at: null
 first_seen: 2026-06-17
-last_seen: 2026-06-18
+last_seen: 2026-08-18
 also_seen: []
-stars_history: {"2026-06-17": 86, "2026-06-18": 98}
+stars_history: {"2026-06-17": 86, "2026-06-18": 98, "2026-08-18": 120}
 ---
 
 Production-grade Rust-native trading engine with deterministic event-driven architecture
