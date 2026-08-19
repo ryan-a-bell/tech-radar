@@ -1,7 +1,138 @@
 {
-  "generated": "2026-08-18",
-  "count": 602,
+  "generated": "2026-08-19",
+  "count": 607,
   "items": [
+    {
+      "id": "github:chaitanyagiri/munder-difflin",
+      "name": "munder-difflin",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "canonical_url": "github.com/chaitanyagiri/munder-difflin",
+      "company": null,
+      "stars": 306,
+      "momentum": 30,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-19": 306
+      },
+      "description": "local multi-agent harness",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:genlayerlabs/genlayer-project-boilerplate",
+      "name": "genlayer-project-boilerplate",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/genlayerlabs/genlayer-project-boilerplate",
+      "canonical_url": "github.com/genlayerlabs/genlayer-project-boilerplate",
+      "company": null,
+      "stars": 535,
+      "momentum": 53,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-19": 535
+      },
+      "description": "A typescript project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:audio-cpp",
+      "name": "audio.cpp",
+      "quadrant": "Tools",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/0xShug0/audio.cpp",
+      "canonical_url": "github.com/0xshug0/audio.cpp",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "A C++ inference framework built on ggml for running audio AI models (TTS, speech recognition, voice cloning, music generation) locally without Python, with optimized backends for NVIDIA, AMD, and Apple Silicon that report 1.8x-8x speedups over Python reference implementations.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NawfalMotii79/PLFM_RADAR",
+      "name": "PLFM_RADAR",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
+      "canonical_url": "github.com/nawfalmotii79/plfm_radar",
+      "company": null,
+      "stars": 192,
+      "momentum": 19,
+      "tags": [
+        "plsql"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-19": 192
+      },
+      "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:volcengine/OpenViking",
+      "name": "OpenViking",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/volcengine/OpenViking",
+      "canonical_url": "github.com/volcengine/openviking",
+      "company": null,
+      "stars": 213,
+      "momentum": 21,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-19": 213
+      },
+      "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:jundot/omlx",
       "name": "omlx",
@@ -12,7 +143,7 @@
       "url": "https://github.com/jundot/omlx",
       "canonical_url": "github.com/jundot/omlx",
       "company": null,
-      "stars": 78,
+      "stars": 370,
       "momentum": 7,
       "tags": [
         "python"
@@ -20,14 +151,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
-        "2026-08-18": 78
+        "2026-08-18": 78,
+        "2026-08-19": 370
       },
       "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon \u2014 managed from the macOS menu bar",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 292
     },
     {
       "id": "github:akitaonrails/ai-memory",
@@ -39,7 +171,7 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "canonical_url": "github.com/akitaonrails/ai-memory",
       "company": null,
-      "stars": 207,
+      "stars": 648,
       "momentum": 20,
       "tags": [
         "rust"
@@ -47,14 +179,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
-        "2026-08-18": 207
+        "2026-08-18": 207,
+        "2026-08-19": 648
       },
       "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 441
     },
     {
       "id": "github:agalwood/Motrix",
@@ -66,7 +199,7 @@
       "url": "https://github.com/agalwood/Motrix",
       "canonical_url": "github.com/agalwood/motrix",
       "company": null,
-      "stars": 344,
+      "stars": 609,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -74,14 +207,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
-        "2026-08-18": 344
+        "2026-08-18": 344,
+        "2026-08-19": 609
       },
       "description": "A full-featured download manager.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 265
     },
     {
       "id": "github:basecamp/omarchy",
@@ -93,7 +227,7 @@
       "url": "https://github.com/basecamp/omarchy",
       "canonical_url": "github.com/basecamp/omarchy",
       "company": null,
-      "stars": 270,
+      "stars": 356,
       "momentum": 27,
       "tags": [
         "shell"
@@ -101,14 +235,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
-        "2026-08-17": 270
+        "2026-08-17": 270,
+        "2026-08-19": 356
       },
       "description": "Beautiful, Modern & Opinionated Linux",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 86
     },
     {
       "id": "github:public-apis/public-apis",
@@ -120,7 +255,7 @@
       "url": "https://github.com/public-apis/public-apis",
       "canonical_url": "github.com/public-apis/public-apis",
       "company": null,
-      "stars": 1588,
+      "stars": 1005,
       "momentum": 100,
       "tags": [
         "python"
@@ -128,15 +263,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 2260,
-        "2026-08-17": 1588
+        "2026-08-17": 1588,
+        "2026-08-19": 1005
       },
       "description": "A collective list of free APIs",
       "trend": "down",
-      "trend_delta": -672
+      "trend_delta": -1255
     },
     {
       "id": "github:cordiverse/cordis",
@@ -5267,7 +5403,7 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "canonical_url": "github.com/opencut-app/opencut",
       "company": null,
-      "stars": 150,
+      "stars": 192,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -5275,7 +5411,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-08-17",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-14": 1229,
@@ -5284,11 +5420,12 @@
         "2026-07-17": 3537,
         "2026-07-18": 1074,
         "2026-08-15": 255,
-        "2026-08-17": 150
+        "2026-08-17": 150,
+        "2026-08-19": 192
       },
       "description": "The open-source CapCut alternative",
       "trend": "down",
-      "trend_delta": -924
+      "trend_delta": -882
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -12782,7 +12919,7 @@
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "company": null,
-      "stars": 198,
+      "stars": 730,
       "momentum": 34,
       "tags": [
         "python"
@@ -12790,7 +12927,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 343,
@@ -12799,11 +12936,12 @@
         "2026-06-24": 1041,
         "2026-06-25": 600,
         "2026-06-26": 571,
-        "2026-08-18": 198
+        "2026-08-18": 198,
+        "2026-08-19": 730
       },
       "description": "754 structured cybersecurity skills for AI agents \u00b7 Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 26 security domains \u00b7 Apache 2.0",
-      "trend": "down",
-      "trend_delta": -373
+      "trend": "up",
+      "trend_delta": 159
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -14657,7 +14795,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 1189,
+      "stars": 2304,
       "momentum": 100,
       "tags": [
         "python"
@@ -14665,16 +14803,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
         "2026-06-11": 1389,
-        "2026-08-18": 1189
+        "2026-08-18": 1189,
+        "2026-08-19": 2304
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
-      "trend": "down",
-      "trend_delta": -200
+      "trend": "up",
+      "trend_delta": 915
     },
     {
       "id": "github:masterking32/MasterDnsVPN",

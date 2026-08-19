@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/agalwood/Motrix
 canonical_url: github.com/agalwood/motrix
 company: null
-stars: 344
+stars: 609
 momentum: 34
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-18
-last_seen: 2026-08-18
+last_seen: 2026-08-19
 also_seen: []
-stars_history: {"2026-08-18": 344}
+stars_history: {"2026-08-18": 344, "2026-08-19": 609}
 ---
 
 A full-featured download manager.
