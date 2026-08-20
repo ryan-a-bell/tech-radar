@@ -5,7 +5,7 @@ title: Demonstrating To Win!: The Indispensable Guide for Demonstrating Complex 
 author: Robert Riefstahl
 year: 2011
 status: Discovered
-topics: []
+topics: [Sales]
 pages:
 pages_read:
 rating:

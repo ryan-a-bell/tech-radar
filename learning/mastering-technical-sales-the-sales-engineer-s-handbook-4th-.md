@@ -5,7 +5,7 @@ title: Mastering Technical Sales: The Sales Engineer's Handbook (4th Edition)
 author: John Care, Aron Bohlig
 year: 2022
 status: Discovered
-topics: []
+topics: [Sales]
 pages:
 pages_read:
 rating:

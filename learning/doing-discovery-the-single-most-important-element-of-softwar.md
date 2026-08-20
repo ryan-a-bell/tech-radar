@@ -5,7 +5,7 @@ title: Doing Discovery: The Single Most Important Element of Software Sales and 
 author: Peter E. Cohan
 year: 2022
 status: Discovered
-topics: []
+topics: [Sales]
 pages:
 pages_read:
 rating:

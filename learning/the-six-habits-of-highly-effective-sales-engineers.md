@@ -5,7 +5,7 @@ title: The Six Habits of Highly Effective Sales Engineers
 author: Chris White
 year: 2019
 status: Reading
-topics: []
+topics: [Sales]
 pages: 196
 pages_read:
 rating:

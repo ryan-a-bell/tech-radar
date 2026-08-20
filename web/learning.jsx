@@ -21,7 +21,7 @@ import React, { useState, useMemo, useEffect } from "react";
    learning.html directly from disk).
    ============================================================ */
 
-const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Data Feeds"];
+const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Data Feeds", "Sales"];
 
 // Status radius order mirrors the tech radar: the most "resolved" state
 // sits innermost (Read ~ Adopted), the inbox sits outermost (Discovered),

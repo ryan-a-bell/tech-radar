@@ -5,7 +5,7 @@ title: Great Demo! How To Create And Execute Stunning Software Demonstrations (3
 author: Peter E. Cohan
 year: 2023
 status: Discovered
-topics: []
+topics: [Sales]
 pages:
 pages_read:
 rating:
