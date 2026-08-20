@@ -25,7 +25,7 @@ const RINGS = ["Adopted", "Trial", "Assess", "Discovered", "Archived"];
 
 // Curated topic vocabulary — mirrors radar_core.TOPICS. A controlled set a
 // human assigns, distinct from the free-form per-item `tags` from scrapers.
-const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG"];
+const TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts", "Trading", "Quant", "RAG", "Sales"];
 
 const RING_INK = {
   Adopted: "#1a7f4b", Trial: "#1d6fb8", Assess: "#b8841d",

@@ -72,7 +72,7 @@ STATUS_DATE_FIELD = {
 # scraper-only OCR/Data-Feeds extras the radar added), so a book and a
 # technology can share a topic. Kept in sync with TOPICS in web/learning.jsx.
 TOPICS = ["AI", "ML", "Agents", "Skills", "Prompts",
-          "Trading", "Quant", "RAG", "Data Feeds"]
+          "Trading", "Quant", "RAG", "Data Feeds", "Sales"]
 
 # The type-specific "length" field(s) each content type carries. A conference
 # has no scalar length — its `editions` list is the structural extra (handled
