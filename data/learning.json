@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-19",
+  "generated": "2026-08-20",
   "items": [
     {
       "id": "afml",
@@ -636,6 +636,46 @@
       "blurb": "The textbook. Dense, but it's the reason 'backprop through a transformer' stops being a black box."
     },
     {
+      "id": "demonstrating-to-win-the-indispensable-guide-for-demonstrati",
+      "type": "book",
+      "title": "Demonstrating To Win!: The Indispensable Guide for Demonstrating Complex Products",
+      "author": "Robert Riefstahl",
+      "year": 2011,
+      "status": "Discovered",
+      "topics": [
+        "Sales"
+      ],
+      "pages": null,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-08-20",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "A guide to structuring and delivering demonstrations of complex technical products, focused on aligning demos to buyer needs."
+    },
+    {
+      "id": "doing-discovery-the-single-most-important-element-of-softwar",
+      "type": "book",
+      "title": "Doing Discovery: The Single Most Important Element of Software Sales and Buyer Enablement Processes",
+      "author": "Peter E. Cohan",
+      "year": 2022,
+      "status": "Discovered",
+      "topics": [
+        "Sales"
+      ],
+      "pages": null,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-08-20",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "A deep dive into discovery skills for software sales and presales teams, organized around seven levels of discovery mastery."
+    },
+    {
       "id": "epat-algo-trading",
       "type": "certification",
       "title": "Executive Programme in Algorithmic Trading (EPAT)",
@@ -764,6 +804,26 @@
       "finished": null,
       "shelved": null,
       "blurb": "Covers Vertex AI, Agent Builder, generative-AI evaluation, production ML, orchestration, serving, and monitoring."
+    },
+    {
+      "id": "great-demo-how-to-create-and-execute-stunning-software-demon",
+      "type": "book",
+      "title": "Great Demo! How To Create And Execute Stunning Software Demonstrations (3rd Edition)",
+      "author": "Peter E. Cohan",
+      "year": 2023,
+      "status": "Discovered",
+      "topics": [
+        "Sales"
+      ],
+      "pages": null,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-08-20",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "The Great Demo! methodology for structuring and delivering software demonstrations that resonate with buyers and win deals."
     },
     {
       "id": "how-to-use-apache-kafka-to-transform-and-store-stock-market-",
@@ -918,6 +978,26 @@
       "finished": null,
       "shelved": null,
       "blurb": "Hands-on build of a GPT from the ground up \u2014 the clearest walk from bigram model to a working transformer you can find."
+    },
+    {
+      "id": "mastering-technical-sales-the-sales-engineer-s-handbook-4th-",
+      "type": "book",
+      "title": "Mastering Technical Sales: The Sales Engineer's Handbook (4th Edition)",
+      "author": "John Care, Aron Bohlig",
+      "year": 2022,
+      "status": "Discovered",
+      "topics": [
+        "Sales"
+      ],
+      "pages": null,
+      "pages_read": null,
+      "rating": null,
+      "added": "2026-08-20",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "The 4th edition of the Artech House handbook covering the full sales engineering lifecycle: discovery, demos, POCs, RFPs, and career development for technical sales pros."
     },
     {
       "id": "mlflow-youtube-channel",
@@ -1432,6 +1512,26 @@
       "finished": null,
       "shelved": null,
       "blurb": "Recommended by three separate engineers this quarter \u2014 finally queuing it."
+    },
+    {
+      "id": "the-six-habits-of-highly-effective-sales-engineers",
+      "type": "book",
+      "title": "The Six Habits of Highly Effective Sales Engineers",
+      "author": "Chris White",
+      "year": 2019,
+      "status": "Reading",
+      "topics": [
+        "Sales"
+      ],
+      "pages": 196,
+      "pages_read": null,
+      "rating": null,
+      "added": null,
+      "started": "2026-08-20",
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "A framework of six habits for technical sales engineers to sharpen software demonstrations and win more deals."
     },
     {
       "id": "understanding-deep-learning",
