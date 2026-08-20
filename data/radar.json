@@ -1,7 +1,61 @@
 {
-  "generated": "2026-08-19",
-  "count": 607,
+  "generated": "2026-08-20",
+  "count": 609,
   "items": [
+    {
+      "id": "github:marceloprates/prettymaps",
+      "name": "prettymaps",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/marceloprates/prettymaps",
+      "canonical_url": "github.com/marceloprates/prettymaps",
+      "company": null,
+      "stars": 63,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-20": 63
+      },
+      "description": "Draw pretty maps from OpenStreetMap data! Built with osmnx +matplotlib + shapely",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:amadeusprotocol/node",
+      "name": "node",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/amadeusprotocol/node",
+      "canonical_url": "github.com/amadeusprotocol/node",
+      "company": null,
+      "stars": 1397,
+      "momentum": 100,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-20": 1397
+      },
+      "description": "A rust project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:chaitanyagiri/munder-difflin",
       "name": "munder-difflin",
@@ -12,7 +66,7 @@
       "url": "https://github.com/chaitanyagiri/munder-difflin",
       "canonical_url": "github.com/chaitanyagiri/munder-difflin",
       "company": null,
-      "stars": 306,
+      "stars": 795,
       "momentum": 30,
       "tags": [
         "typescript"
@@ -20,14 +74,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
-        "2026-08-19": 306
+        "2026-08-19": 306,
+        "2026-08-20": 795
       },
       "description": "local multi-agent harness",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 489
     },
     {
       "id": "github:genlayerlabs/genlayer-project-boilerplate",
@@ -39,7 +94,7 @@
       "url": "https://github.com/genlayerlabs/genlayer-project-boilerplate",
       "canonical_url": "github.com/genlayerlabs/genlayer-project-boilerplate",
       "company": null,
-      "stars": 535,
+      "stars": 430,
       "momentum": 53,
       "tags": [
         "typescript"
@@ -47,14 +102,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
-        "2026-08-19": 535
+        "2026-08-19": 535,
+        "2026-08-20": 430
       },
       "description": "A typescript project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -105
     },
     {
       "id": "manual:audio-cpp",
@@ -116,7 +172,7 @@
       "url": "https://github.com/volcengine/OpenViking",
       "canonical_url": "github.com/volcengine/openviking",
       "company": null,
-      "stars": 213,
+      "stars": 804,
       "momentum": 21,
       "tags": [
         "python"
@@ -124,14 +180,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
-        "2026-08-19": 213
+        "2026-08-19": 213,
+        "2026-08-20": 804
       },
       "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 591
     },
     {
       "id": "github:jundot/omlx",
@@ -143,7 +200,7 @@
       "url": "https://github.com/jundot/omlx",
       "canonical_url": "github.com/jundot/omlx",
       "company": null,
-      "stars": 370,
+      "stars": 472,
       "momentum": 7,
       "tags": [
         "python"
@@ -151,15 +208,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-08-18": 78,
-        "2026-08-19": 370
+        "2026-08-19": 370,
+        "2026-08-20": 472
       },
       "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon \u2014 managed from the macOS menu bar",
       "trend": "up",
-      "trend_delta": 292
+      "trend_delta": 394
     },
     {
       "id": "github:akitaonrails/ai-memory",
@@ -8006,7 +8064,7 @@
       "url": "https://github.com/immich-app/immich",
       "canonical_url": "github.com/immich-app/immich",
       "company": null,
-      "stars": 175,
+      "stars": 128,
       "momentum": 20,
       "tags": [
         "typescript"
@@ -8014,16 +8072,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-05",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-07-05": 201,
         "2026-07-06": 470,
-        "2026-08-18": 175
+        "2026-08-18": 175,
+        "2026-08-20": 128
       },
       "description": "High performance self-hosted photo and video management solution.",
       "trend": "down",
-      "trend_delta": -295
+      "trend_delta": -342
     },
     {
       "id": "github:chthollyphile/folia-major",
@@ -12919,7 +12978,7 @@
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
       "canonical_url": "github.com/mukul975/anthropic-cybersecurity-skills",
       "company": null,
-      "stars": 730,
+      "stars": 766,
       "momentum": 34,
       "tags": [
         "python"
@@ -12927,7 +12986,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 343,
@@ -12937,11 +12996,12 @@
         "2026-06-25": 600,
         "2026-06-26": 571,
         "2026-08-18": 198,
-        "2026-08-19": 730
+        "2026-08-19": 730,
+        "2026-08-20": 766
       },
       "description": "754 structured cybersecurity skills for AI agents \u00b7 Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF \u00b7 agentskills.io standard \u00b7 Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms \u00b7 26 security domains \u00b7 Apache 2.0",
       "trend": "up",
-      "trend_delta": 159
+      "trend_delta": 195
     },
     {
       "id": "github:koala73/worldmonitor",
@@ -13298,7 +13358,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1359,
+      "stars": 1894,
       "momentum": 100,
       "tags": [
         "shell"
@@ -13306,7 +13366,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -13323,11 +13383,12 @@
         "2026-07-26": 1740,
         "2026-08-07": 1873,
         "2026-08-08": 2152,
-        "2026-08-09": 1359
+        "2026-08-09": 1359,
+        "2026-08-20": 1894
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "trend": "down",
-      "trend_delta": -381
+      "trend": "up",
+      "trend_delta": 535
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -13429,7 +13490,7 @@
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "canonical_url": "github.com/nautechsystems/nautilus_trader",
       "company": null,
-      "stars": 120,
+      "stars": 80,
       "momentum": 8,
       "tags": [
         "rust"
@@ -13437,16 +13498,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 86,
         "2026-06-18": 98,
-        "2026-08-18": 120
+        "2026-08-18": 120,
+        "2026-08-20": 80
       },
       "description": "Production-grade Rust-native trading engine with deterministic event-driven architecture",
-      "trend": "up",
-      "trend_delta": 22
+      "trend": "down",
+      "trend_delta": -18
     },
     {
       "id": "github:continuedev/continue",
@@ -14795,7 +14857,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 2304,
+      "stars": 2221,
       "momentum": 100,
       "tags": [
         "python"
@@ -14803,17 +14865,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
         "2026-06-11": 1389,
         "2026-08-18": 1189,
-        "2026-08-19": 2304
+        "2026-08-19": 2304,
+        "2026-08-20": 2221
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
       "trend": "up",
-      "trend_delta": 915
+      "trend_delta": 832
     },
     {
       "id": "github:masterking32/MasterDnsVPN",
@@ -15562,7 +15625,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 782,
+      "stars": 557,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15570,7 +15633,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -15595,11 +15658,12 @@
         "2026-08-05": 653,
         "2026-08-06": 931,
         "2026-08-07": 858,
-        "2026-08-08": 782
+        "2026-08-08": 782,
+        "2026-08-20": 557
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "up",
-      "trend_delta": 166
+      "trend": "down",
+      "trend_delta": -225
     },
     {
       "id": "github:openai/plugins",
@@ -15787,7 +15851,7 @@
       "url": "https://github.com/santifer/career-ops",
       "canonical_url": "github.com/santifer/career-ops",
       "company": null,
-      "stars": 218,
+      "stars": 198,
       "momentum": 18,
       "tags": [
         "javascript"
@@ -15795,7 +15859,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-08-20",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 186,
@@ -15804,11 +15868,12 @@
         "2026-06-09": 1114,
         "2026-06-10": 1110,
         "2026-07-03": 372,
-        "2026-08-18": 218
+        "2026-08-18": 218,
+        "2026-08-20": 198
       },
       "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
       "trend": "down",
-      "trend_delta": -154
+      "trend_delta": -174
     },
     {
       "id": "github:microsoft/VibeVoice",

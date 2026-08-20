@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/immich-app/immich
 canonical_url: github.com/immich-app/immich
 company: null
-stars: 175
+stars: 128
 momentum: 20
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-05
-last_seen: 2026-08-18
+last_seen: 2026-08-20
 also_seen: []
-stars_history: {"2026-07-05": 201, "2026-07-06": 470, "2026-08-18": 175}
+stars_history: {"2026-07-05": 201, "2026-07-06": 470, "2026-08-18": 175, "2026-08-20": 128}
 ---
 
 High performance self-hosted photo and video management solution.
