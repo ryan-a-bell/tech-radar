@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/chaitanyagiri/munder-difflin
 canonical_url: github.com/chaitanyagiri/munder-difflin
 company: null
-stars: 795
+stars: 507
 momentum: 30
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-19
-last_seen: 2026-08-20
+last_seen: 2026-08-21
 also_seen: []
-stars_history: {"2026-08-19": 306, "2026-08-20": 795}
+stars_history: {"2026-08-19": 306, "2026-08-20": 795, "2026-08-21": 507}
 ---
 
 local multi-agent harness
