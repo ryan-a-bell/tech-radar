@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/mahlernim/google-timeline-visualizer
 canonical_url: github.com/mahlernim/google-timeline-visualizer
 company: null
-stars: 657
+stars: 1053
 momentum: 65
 tags: ["kotlin"]
 topics: []
 archived_at: null
 first_seen: 2026-08-21
-last_seen: 2026-08-21
+last_seen: 2026-08-22
 also_seen: []
-stars_history: {"2026-08-21": 657}
+stars_history: {"2026-08-21": 657, "2026-08-22": 1053}
 ---
 
 Visualize your year in travel using your Google Location History (Timeline) data

@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/microsoft/TypeScript
 canonical_url: github.com/microsoft/typescript
 company: Microsoft
-stars: 177
+stars: 65
 momentum: 17
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-11
-last_seen: 2026-07-11
+last_seen: 2026-08-22
 also_seen: []
-stars_history: {"2026-07-11": 177}
+stars_history: {"2026-07-11": 177, "2026-08-22": 65}
 ---
 
 TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
