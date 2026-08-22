@@ -1,7 +1,115 @@
 {
-  "generated": "2026-08-21",
-  "count": 618,
+  "generated": "2026-08-22",
+  "count": 622,
   "items": [
+    {
+      "id": "github:microsoft/onnxruntime",
+      "name": "onnxruntime",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/onnxruntime",
+      "canonical_url": "github.com/microsoft/onnxruntime",
+      "company": "Microsoft",
+      "stars": 5,
+      "momentum": 0,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-22": 5
+      },
+      "description": "ONNX Runtime: cross-platform, high performance ML inferencing and training accelerator",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:apache/maka",
+      "name": "maka",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/apache/maka",
+      "canonical_url": "github.com/apache/maka",
+      "company": null,
+      "stars": 148,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-22": 148
+      },
+      "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:elder-plinius/OBLITERATUS",
+      "name": "OBLITERATUS",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elder-plinius/OBLITERATUS",
+      "canonical_url": "github.com/elder-plinius/obliteratus",
+      "company": null,
+      "stars": 63,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-22": 63
+      },
+      "description": "OBLITERATE THE CHAINS THAT BIND YOU",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TryGhost/Ghost",
+      "name": "Ghost",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TryGhost/Ghost",
+      "canonical_url": "github.com/tryghost/ghost",
+      "company": null,
+      "stars": 32,
+      "momentum": 3,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-22": 32
+      },
+      "description": "Independent technology for modern publishing, memberships, subscriptions and newsletters.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:agent-substrate/substrate",
       "name": "substrate",
@@ -39,7 +147,7 @@
       "url": "https://github.com/modular/modular",
       "canonical_url": "github.com/modular/modular",
       "company": "Modular",
-      "stars": 268,
+      "stars": 913,
       "momentum": 26,
       "tags": [
         "mojo"
@@ -47,14 +155,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
-        "2026-08-21": 268
+        "2026-08-21": 268,
+        "2026-08-22": 913
       },
       "description": "The Modular Platform (includes MAX & Mojo)",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 645
     },
     {
       "id": "github:mahlernim/google-timeline-visualizer",
@@ -66,7 +175,7 @@
       "url": "https://github.com/mahlernim/google-timeline-visualizer",
       "canonical_url": "github.com/mahlernim/google-timeline-visualizer",
       "company": null,
-      "stars": 657,
+      "stars": 1053,
       "momentum": 65,
       "tags": [
         "kotlin"
@@ -74,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
-        "2026-08-21": 657
+        "2026-08-21": 657,
+        "2026-08-22": 1053
       },
       "description": "Visualize your year in travel using your Google Location History (Timeline) data",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 396
     },
     {
       "id": "github:AprilNEA/OpenLogi",
@@ -93,7 +203,7 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "canonical_url": "github.com/aprilnea/openlogi",
       "company": null,
-      "stars": 1545,
+      "stars": 1380,
       "momentum": 100,
       "tags": [
         "rust"
@@ -101,14 +211,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
-        "2026-08-21": 1545
+        "2026-08-21": 1545,
+        "2026-08-22": 1380
       },
       "description": "\u26a1\ufe0fA native, local-first alternative to Logitech Options+, written in Rust \ud83e\udd80 \u2014 remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -165
     },
     {
       "id": "github:Tencent/AI-Infra-Guard",
@@ -682,7 +793,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 449,
+      "stars": 388,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -690,16 +801,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
         "2026-08-16": 149,
-        "2026-08-21": 449
+        "2026-08-21": 449,
+        "2026-08-22": 388
       },
       "description": "Cursor plugin specification and official plugins",
       "trend": "up",
-      "trend_delta": 408
+      "trend_delta": 347
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -4469,7 +4581,7 @@
       "url": "https://github.com/protocolbuffers/protobuf",
       "canonical_url": "github.com/protocolbuffers/protobuf",
       "company": null,
-      "stars": 11,
+      "stars": 4,
       "momentum": 1,
       "tags": [
         "c++"
@@ -4477,14 +4589,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-18",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
-        "2026-07-18": 11
+        "2026-07-18": 11,
+        "2026-08-22": 4
       },
       "description": "Protocol Buffers - Google's data interchange format",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -7
     },
     {
       "id": "github:docusealco/docuseal",
@@ -4611,7 +4724,7 @@
       "url": "https://github.com/PostHog/posthog",
       "canonical_url": "github.com/posthog/posthog",
       "company": null,
-      "stars": 60,
+      "stars": 335,
       "momentum": 7,
       "tags": [
         "python"
@@ -4619,18 +4732,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-07-17": 77,
         "2026-07-18": 438,
         "2026-07-19": 338,
         "2026-07-20": 411,
-        "2026-08-21": 60
+        "2026-08-21": 60,
+        "2026-08-22": 335
       },
       "description": "\ud83e\udd94 PostHog is the leading platform for building self-driving products. Our developer tools \u2013 AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more \u2013 capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
       "trend": "down",
-      "trend_delta": -351
+      "trend_delta": -76
     },
     {
       "id": "github:apache/ossie",
@@ -7451,7 +7565,7 @@
       "url": "https://github.com/microsoft/TypeScript",
       "canonical_url": "github.com/microsoft/typescript",
       "company": "Microsoft",
-      "stars": 177,
+      "stars": 65,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -7459,14 +7573,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-11",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
-        "2026-07-11": 177
+        "2026-07-11": 177,
+        "2026-08-22": 65
       },
       "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -112
     },
     {
       "id": "github:catchorg/Catch2",
@@ -10290,15 +10405,17 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 0,
+      "stars": 140,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-08-22",
       "also_seen": [],
-      "stars_history": {},
+      "stars_history": {
+        "2026-08-22": 140
+      },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
       "trend": "none",
       "trend_delta": 0
@@ -13591,7 +13708,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2192,
+      "stars": 3362,
       "momentum": 100,
       "tags": [
         "shell"
@@ -13599,7 +13716,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -13618,11 +13735,12 @@
         "2026-08-08": 2152,
         "2026-08-09": 1359,
         "2026-08-20": 1894,
-        "2026-08-21": 2192
+        "2026-08-21": 2192,
+        "2026-08-22": 3362
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 833
+      "trend_delta": 2003
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -15092,7 +15210,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 2761,
+      "stars": 1201,
       "momentum": 100,
       "tags": [
         "python"
@@ -15100,7 +15218,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
@@ -15108,11 +15226,12 @@
         "2026-08-18": 1189,
         "2026-08-19": 2304,
         "2026-08-20": 2221,
-        "2026-08-21": 2761
+        "2026-08-21": 2761,
+        "2026-08-22": 1201
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
-      "trend": "up",
-      "trend_delta": 1372
+      "trend": "down",
+      "trend_delta": -188
     },
     {
       "id": "github:masterking32/MasterDnsVPN",
@@ -15862,7 +15981,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 727,
+      "stars": 790,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15870,7 +15989,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -15897,11 +16016,12 @@
         "2026-08-07": 858,
         "2026-08-08": 782,
         "2026-08-20": 557,
-        "2026-08-21": 727
+        "2026-08-21": 727,
+        "2026-08-22": 790
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -55
+      "trend": "up",
+      "trend_delta": 8
     },
     {
       "id": "github:openai/plugins",
@@ -16089,7 +16209,7 @@
       "url": "https://github.com/santifer/career-ops",
       "canonical_url": "github.com/santifer/career-ops",
       "company": null,
-      "stars": 816,
+      "stars": 921,
       "momentum": 18,
       "tags": [
         "javascript"
@@ -16097,7 +16217,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 186,
@@ -16108,11 +16228,12 @@
         "2026-07-03": 372,
         "2026-08-18": 218,
         "2026-08-20": 198,
-        "2026-08-21": 816
+        "2026-08-21": 816,
+        "2026-08-22": 921
       },
       "description": "AI-powered job search system built on Claude Code. 14 skill modes, Go dashboard, PDF generation, batch processing.",
       "trend": "up",
-      "trend_delta": 444
+      "trend_delta": 549
     },
     {
       "id": "github:microsoft/VibeVoice",
@@ -17007,7 +17128,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 804,
+      "stars": 357,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -17015,7 +17136,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -17027,11 +17148,12 @@
         "2026-07-26": 377,
         "2026-07-29": 636,
         "2026-07-30": 857,
-        "2026-07-31": 804
+        "2026-07-31": 804,
+        "2026-08-22": 357
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "up",
-      "trend_delta": 318
+      "trend": "down",
+      "trend_delta": -447
     }
   ]
 }
