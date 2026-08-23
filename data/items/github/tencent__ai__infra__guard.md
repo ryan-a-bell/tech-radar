@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Tencent/AI-Infra-Guard
 canonical_url: github.com/tencent/ai-infra-guard
 company: null
-stars: 50
+stars: 150
 momentum: 5
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-21
-last_seen: 2026-08-21
+last_seen: 2026-08-23
 also_seen: []
-stars_history: {"2026-08-21": 50}
+stars_history: {"2026-08-21": 50, "2026-08-23": 150}
 ---
 
 A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.

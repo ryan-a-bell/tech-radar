@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/AprilNEA/OpenLogi
 canonical_url: github.com/aprilnea/openlogi
 company: null
-stars: 1380
+stars: 959
 momentum: 100
 tags: ["rust"]
 topics: []
 archived_at: null
 first_seen: 2026-08-21
-last_seen: 2026-08-22
+last_seen: 2026-08-23
 also_seen: []
-stars_history: {"2026-08-21": 1545, "2026-08-22": 1380}
+stars_history: {"2026-08-21": 1545, "2026-08-22": 1380, "2026-08-23": 959}
 ---
 
 ⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.
