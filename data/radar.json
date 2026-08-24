@@ -1,7 +1,140 @@
 {
-  "generated": "2026-08-23",
-  "count": 625,
+  "generated": "2026-08-24",
+  "count": 630,
   "items": [
+    {
+      "id": "github:dani-garcia/vaultwarden",
+      "name": "vaultwarden",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "canonical_url": "github.com/dani-garcia/vaultwarden",
+      "company": null,
+      "stars": 78,
+      "momentum": 7,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-24": 78
+      },
+      "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tinyhumansai/openhuman",
+      "name": "openhuman",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "canonical_url": "github.com/tinyhumansai/openhuman",
+      "company": null,
+      "stars": 39,
+      "momentum": 3,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-24": 39
+      },
+      "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/claude-plugins-community",
+      "name": "claude-plugins-community",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "canonical_url": "github.com/anthropics/claude-plugins-community",
+      "company": "Anthropic",
+      "stars": 225,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-24": 225
+      },
+      "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror \u2014 submit plugins at clau.de/plugin-directory-submission.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:freestylefly/awesome-gpt-image-2",
+      "name": "awesome-gpt-image-2",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "canonical_url": "github.com/freestylefly/awesome-gpt-image-2",
+      "company": null,
+      "stars": 401,
+      "momentum": 40,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-24": 401
+      },
+      "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:VoltAgent/awesome-agent-skills",
+      "name": "awesome-agent-skills",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "canonical_url": "github.com/voltagent/awesome-agent-skills",
+      "company": null,
+      "stars": 156,
+      "momentum": 15,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-24": 156
+      },
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Wei-Shaw/sub2api",
       "name": "sub2api",
@@ -66,7 +199,7 @@
       "url": "https://github.com/openai/codex",
       "canonical_url": "github.com/openai/codex",
       "company": "OpenAI",
-      "stars": 1544,
+      "stars": 2715,
       "momentum": 100,
       "tags": [
         "rust"
@@ -74,14 +207,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
-        "2026-08-23": 1544
+        "2026-08-23": 1544,
+        "2026-08-24": 2715
       },
       "description": "Lightweight coding agent that runs in your terminal",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1171
     },
     {
       "id": "github:microsoft/onnxruntime",
@@ -120,7 +254,7 @@
       "url": "https://github.com/apache/maka",
       "canonical_url": "github.com/apache/maka",
       "company": null,
-      "stars": 148,
+      "stars": 51,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -128,14 +262,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
-        "2026-08-22": 148
+        "2026-08-22": 148,
+        "2026-08-24": 51
       },
       "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -97
     },
     {
       "id": "github:elder-plinius/OBLITERATUS",
@@ -286,7 +421,7 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "canonical_url": "github.com/aprilnea/openlogi",
       "company": null,
-      "stars": 959,
+      "stars": 1009,
       "momentum": 100,
       "tags": [
         "rust"
@@ -294,16 +429,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-08-21": 1545,
         "2026-08-22": 1380,
-        "2026-08-23": 959
+        "2026-08-23": 959,
+        "2026-08-24": 1009
       },
       "description": "\u26a1\ufe0fA native, local-first alternative to Logitech Options+, written in Rust \ud83e\udd80 \u2014 remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
       "trend": "down",
-      "trend_delta": -586
+      "trend_delta": -536
     },
     {
       "id": "github:Tencent/AI-Infra-Guard",
@@ -711,7 +847,7 @@
       "url": "https://github.com/basecamp/omarchy",
       "canonical_url": "github.com/basecamp/omarchy",
       "company": null,
-      "stars": 356,
+      "stars": 750,
       "momentum": 27,
       "tags": [
         "shell"
@@ -719,15 +855,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-08-17": 270,
-        "2026-08-19": 356
+        "2026-08-19": 356,
+        "2026-08-24": 750
       },
       "description": "Beautiful, Modern & Opinionated Linux",
       "trend": "up",
-      "trend_delta": 86
+      "trend_delta": 480
     },
     {
       "id": "github:public-apis/public-apis",
@@ -1705,7 +1842,7 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "canonical_url": "github.com/comfy-org/comfyui",
       "company": null,
-      "stars": 922,
+      "stars": 201,
       "momentum": 36,
       "tags": [
         "python"
@@ -1713,15 +1850,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-08-10": 365,
-        "2026-08-11": 922
+        "2026-08-11": 922,
+        "2026-08-24": 201
       },
       "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-      "trend": "up",
-      "trend_delta": 557
+      "trend": "down",
+      "trend_delta": -721
     },
     {
       "id": "github:LadybirdBrowser/ladybird",
@@ -2403,7 +2541,7 @@
       "url": "https://github.com/Alishahryar1/free-claude-code",
       "canonical_url": "github.com/alishahryar1/free-claude-code",
       "company": null,
-      "stars": 278,
+      "stars": 1081,
       "momentum": 27,
       "tags": [
         "python"
@@ -2411,14 +2549,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
-        "2026-08-04": 278
+        "2026-08-04": 278,
+        "2026-08-24": 1081
       },
       "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 803
     },
     {
       "id": "github:livekit/agents",
@@ -3224,7 +3363,7 @@
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "canonical_url": "github.com/virgiliojr94/book-to-skill",
       "company": null,
-      "stars": 1421,
+      "stars": 417,
       "momentum": 42,
       "tags": [
         "python"
@@ -3232,15 +3371,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-07-29": 423,
-        "2026-07-30": 1421
+        "2026-07-30": 1421,
+        "2026-08-24": 417
       },
       "description": "Turn any technical book PDF into a Claude Code skill \u2014 ready to study, reference, and use while you work.",
-      "trend": "up",
-      "trend_delta": 998
+      "trend": "down",
+      "trend_delta": -1004
     },
     {
       "id": "github:paperswithbacktest/awesome-systematic-trading",
@@ -3795,7 +3935,7 @@
       "url": "https://github.com/block/buzz",
       "canonical_url": "github.com/block/buzz",
       "company": null,
-      "stars": 1710,
+      "stars": 410,
       "momentum": 100,
       "tags": [
         "rust"
@@ -3805,17 +3945,18 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-27",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 2162,
         "2026-07-25": 3270,
         "2026-07-26": 2491,
-        "2026-07-27": 1710
+        "2026-07-27": 1710,
+        "2026-08-24": 410
       },
       "description": "A hive mind communication platform",
       "trend": "down",
-      "trend_delta": -452
+      "trend_delta": -1300
     },
     {
       "id": "github:likec4/likec4",
@@ -10493,20 +10634,21 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 140,
+      "stars": 131,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
-        "2026-08-22": 140
+        "2026-08-22": 140,
+        "2026-08-24": 131
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -9
     },
     {
       "id": "github:yamadashy/repomix",
@@ -12352,7 +12494,7 @@
       "url": "https://github.com/ripienaar/free-for-dev",
       "canonical_url": "github.com/ripienaar/free-for-dev",
       "company": null,
-      "stars": 829,
+      "stars": 615,
       "momentum": 9,
       "tags": [
         "html"
@@ -12360,7 +12502,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-27",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-27": 90,
@@ -12368,11 +12510,12 @@
         "2026-06-29": 1971,
         "2026-06-30": 1935,
         "2026-07-01": 742,
-        "2026-08-23": 829
+        "2026-08-23": 829,
+        "2026-08-24": 615
       },
       "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
-      "trend": "up",
-      "trend_delta": 87
+      "trend": "down",
+      "trend_delta": -127
     },
     {
       "id": "github:Flowseal/zapret-discord-youtube",
@@ -13800,7 +13943,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2683,
+      "stars": 2447,
       "momentum": 100,
       "tags": [
         "shell"
@@ -13808,7 +13951,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -13829,11 +13972,12 @@
         "2026-08-20": 1894,
         "2026-08-21": 2192,
         "2026-08-22": 3362,
-        "2026-08-23": 2683
+        "2026-08-23": 2683,
+        "2026-08-24": 2447
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 1324
+      "trend_delta": 1088
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -16941,7 +17085,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 1178,
+      "stars": 454,
       "momentum": 100,
       "tags": [
         "python"
@@ -16949,7 +17093,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -16959,11 +17103,12 @@
         "2026-06-07": 1117,
         "2026-06-08": 1112,
         "2026-06-24": 936,
-        "2026-06-25": 1178
+        "2026-06-25": 1178,
+        "2026-08-24": 454
       },
       "description": "The agent that grows with you",
-      "trend": "up",
-      "trend_delta": 66
+      "trend": "down",
+      "trend_delta": -724
     },
     {
       "id": "github:chopratejas/headroom",
@@ -17223,7 +17368,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 411,
+      "stars": 427,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -17231,7 +17376,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -17245,11 +17390,12 @@
         "2026-07-30": 857,
         "2026-07-31": 804,
         "2026-08-22": 357,
-        "2026-08-23": 411
+        "2026-08-23": 411,
+        "2026-08-24": 427
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "down",
-      "trend_delta": -393
+      "trend_delta": -377
     }
   ]
 }
