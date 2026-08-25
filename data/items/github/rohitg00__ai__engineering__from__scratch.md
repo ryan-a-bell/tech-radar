@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 canonical_url: github.com/rohitg00/ai-engineering-from-scratch
 company: null
-stars: 652
+stars: 349
 momentum: 53
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-15
-last_seen: 2026-07-23
+last_seen: 2026-08-25
 also_seen: []
-stars_history: {"2026-06-15": 538, "2026-06-16": 562, "2026-07-19": 191, "2026-07-20": 501, "2026-07-21": 823, "2026-07-23": 652}
+stars_history: {"2026-06-15": 538, "2026-06-16": 562, "2026-07-19": 191, "2026-07-20": 501, "2026-07-21": 823, "2026-07-23": 652, "2026-08-25": 349}
 ---
 
 Learn it. Build it. Ship it for others.

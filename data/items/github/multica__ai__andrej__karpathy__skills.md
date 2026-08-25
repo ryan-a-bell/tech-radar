@@ -8,15 +8,15 @@ discovered_by: manual
 url: https://github.com/multica-ai/andrej-karpathy-skills
 canonical_url: github.com/multica-ai/andrej-karpathy-skills
 company: null
-stars: 315
+stars: 588
 momentum: 0
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-06-30
-last_seen: 2026-08-23
+last_seen: 2026-08-25
 also_seen: []
-stars_history: {"2026-08-23": 315}
+stars_history: {"2026-08-23": 315, "2026-08-25": 588}
 ---
 
 Claude Code behavior improvement resource based on LLM observations
