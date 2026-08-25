@@ -1,7 +1,88 @@
 {
-  "generated": "2026-08-24",
-  "count": 630,
+  "generated": "2026-08-25",
+  "count": 633,
   "items": [
+    {
+      "id": "github:openclaw/openclaw",
+      "name": "openclaw",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openclaw/openclaw",
+      "canonical_url": "github.com/openclaw/openclaw",
+      "company": null,
+      "stars": 173,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-25": 173
+      },
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. \ud83e\udd9e",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tashfeenahmed/freellmapi",
+      "name": "freellmapi",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "canonical_url": "github.com/tashfeenahmed/freellmapi",
+      "company": null,
+      "stars": 174,
+      "momentum": 17,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-25": 174
+      },
+      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:AgriciDaniel/claude-obsidian",
+      "name": "claude-obsidian",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian",
+      "canonical_url": "github.com/agricidaniel/claude-obsidian",
+      "company": null,
+      "stars": 310,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-08-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-25": 310
+      },
+      "description": "Self-organizing AI second brain for Obsidian + Claude Code. Drop any source and Claude reads, links, and files it into one connected knowledge graph of plain Markdown you own. AI note-taking, personal knowledge management (PKM), and an open-source Notion alternative. Based on Karpathy's LLM Wiki pattern.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:dani-garcia/vaultwarden",
       "name": "vaultwarden",
@@ -12,7 +93,7 @@
       "url": "https://github.com/dani-garcia/vaultwarden",
       "canonical_url": "github.com/dani-garcia/vaultwarden",
       "company": null,
-      "stars": 78,
+      "stars": 175,
       "momentum": 7,
       "tags": [
         "rust"
@@ -20,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-24": 78
+        "2026-08-24": 78,
+        "2026-08-25": 175
       },
       "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 97
     },
     {
       "id": "github:tinyhumansai/openhuman",
@@ -39,7 +121,7 @@
       "url": "https://github.com/tinyhumansai/openhuman",
       "canonical_url": "github.com/tinyhumansai/openhuman",
       "company": null,
-      "stars": 39,
+      "stars": 515,
       "momentum": 3,
       "tags": [
         "rust"
@@ -47,14 +129,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-24": 39
+        "2026-08-24": 39,
+        "2026-08-25": 515
       },
       "description": "Your Personal AI super intelligence. A brain that builds a local-first memory of your life, a fantastic orchestrator of agent fleets and workflows, and a deep researcher.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 476
     },
     {
       "id": "github:anthropics/claude-plugins-community",
@@ -66,7 +149,7 @@
       "url": "https://github.com/anthropics/claude-plugins-community",
       "canonical_url": "github.com/anthropics/claude-plugins-community",
       "company": "Anthropic",
-      "stars": 225,
+      "stars": 489,
       "momentum": 22,
       "tags": [
         "python"
@@ -74,14 +157,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-24": 225
+        "2026-08-24": 225,
+        "2026-08-25": 489
       },
       "description": "Community plugin marketplace for Claude Cowork and Claude Code. Read-only mirror \u2014 submit plugins at clau.de/plugin-directory-submission.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 264
     },
     {
       "id": "github:freestylefly/awesome-gpt-image-2",
@@ -93,7 +177,7 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "canonical_url": "github.com/freestylefly/awesome-gpt-image-2",
       "company": null,
-      "stars": 401,
+      "stars": 2449,
       "momentum": 40,
       "tags": [
         "javascript"
@@ -101,14 +185,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-24": 401
+        "2026-08-24": 401,
+        "2026-08-25": 2449
       },
       "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2048
     },
     {
       "id": "github:VoltAgent/awesome-agent-skills",
@@ -120,20 +205,21 @@
       "url": "https://github.com/VoltAgent/awesome-agent-skills",
       "canonical_url": "github.com/voltagent/awesome-agent-skills",
       "company": null,
-      "stars": 156,
+      "stars": 602,
       "momentum": 15,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-24": 156
+        "2026-08-24": 156,
+        "2026-08-25": 602
       },
       "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 446
     },
     {
       "id": "github:Wei-Shaw/sub2api",
@@ -199,7 +285,7 @@
       "url": "https://github.com/openai/codex",
       "canonical_url": "github.com/openai/codex",
       "company": "OpenAI",
-      "stars": 2715,
+      "stars": 1994,
       "momentum": 100,
       "tags": [
         "rust"
@@ -207,15 +293,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-23": 1544,
-        "2026-08-24": 2715
+        "2026-08-24": 2715,
+        "2026-08-25": 1994
       },
       "description": "Lightweight coding agent that runs in your terminal",
       "trend": "up",
-      "trend_delta": 1171
+      "trend_delta": 450
     },
     {
       "id": "github:microsoft/onnxruntime",
@@ -254,7 +341,7 @@
       "url": "https://github.com/apache/maka",
       "canonical_url": "github.com/apache/maka",
       "company": null,
-      "stars": 51,
+      "stars": 411,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -262,15 +349,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-22",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 148,
-        "2026-08-24": 51
+        "2026-08-24": 51,
+        "2026-08-25": 411
       },
       "description": "Apache Maka (Incubating) is a local-first AI agent workspace. Model messages, tool calls, tool results, permission decisions, and termination events are recorded as an append-only log.",
-      "trend": "down",
-      "trend_delta": -97
+      "trend": "up",
+      "trend_delta": 263
     },
     {
       "id": "github:elder-plinius/OBLITERATUS",
@@ -421,7 +509,7 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "canonical_url": "github.com/aprilnea/openlogi",
       "company": null,
-      "stars": 1009,
+      "stars": 1097,
       "momentum": 100,
       "tags": [
         "rust"
@@ -429,17 +517,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-21": 1545,
         "2026-08-22": 1380,
         "2026-08-23": 959,
-        "2026-08-24": 1009
+        "2026-08-24": 1009,
+        "2026-08-25": 1097
       },
       "description": "\u26a1\ufe0fA native, local-first alternative to Logitech Options+, written in Rust \ud83e\udd80 \u2014 remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
       "trend": "down",
-      "trend_delta": -536
+      "trend_delta": -448
     },
     {
       "id": "github:Tencent/AI-Infra-Guard",
@@ -847,7 +936,7 @@
       "url": "https://github.com/basecamp/omarchy",
       "canonical_url": "github.com/basecamp/omarchy",
       "company": null,
-      "stars": 750,
+      "stars": 1056,
       "momentum": 27,
       "tags": [
         "shell"
@@ -855,16 +944,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-17": 270,
         "2026-08-19": 356,
-        "2026-08-24": 750
+        "2026-08-24": 750,
+        "2026-08-25": 1056
       },
       "description": "Beautiful, Modern & Opinionated Linux",
       "trend": "up",
-      "trend_delta": 480
+      "trend_delta": 786
     },
     {
       "id": "github:public-apis/public-apis",
@@ -2541,7 +2631,7 @@
       "url": "https://github.com/Alishahryar1/free-claude-code",
       "canonical_url": "github.com/alishahryar1/free-claude-code",
       "company": null,
-      "stars": 1081,
+      "stars": 891,
       "momentum": 27,
       "tags": [
         "python"
@@ -2549,15 +2639,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-04": 278,
-        "2026-08-24": 1081
+        "2026-08-24": 1081,
+        "2026-08-25": 891
       },
       "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
       "trend": "up",
-      "trend_delta": 803
+      "trend_delta": 613
     },
     {
       "id": "github:livekit/agents",
@@ -4951,7 +5042,7 @@
       "url": "https://github.com/PostHog/posthog",
       "canonical_url": "github.com/posthog/posthog",
       "company": null,
-      "stars": 286,
+      "stars": 83,
       "momentum": 7,
       "tags": [
         "python"
@@ -4959,7 +5050,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-17",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-07-17": 77,
@@ -4968,11 +5059,12 @@
         "2026-07-20": 411,
         "2026-08-21": 60,
         "2026-08-22": 335,
-        "2026-08-23": 286
+        "2026-08-23": 286,
+        "2026-08-25": 83
       },
       "description": "\ud83e\udd94 PostHog is the leading platform for building self-driving products. Our developer tools \u2013 AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more \u2013 capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
       "trend": "down",
-      "trend_delta": -125
+      "trend_delta": -328
     },
     {
       "id": "github:apache/ossie",
@@ -8243,7 +8335,7 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "canonical_url": "github.com/madslorentzen/ai-job-search",
       "company": null,
-      "stars": 5079,
+      "stars": 434,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -8251,15 +8343,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-07-09",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-07-08": 2514,
-        "2026-07-09": 5079
+        "2026-07-09": 5079,
+        "2026-08-25": 434
       },
       "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
-      "trend": "up",
-      "trend_delta": 2565
+      "trend": "down",
+      "trend_delta": -4645
     },
     {
       "id": "github:AhmadIbrahiim/Website-downloader",
@@ -11643,20 +11736,21 @@
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "canonical_url": "github.com/multica-ai/andrej-karpathy-skills",
       "company": null,
-      "stars": 315,
+      "stars": 588,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
-        "2026-08-23": 315
+        "2026-08-23": 315,
+        "2026-08-25": 588
       },
       "description": "Claude Code behavior improvement resource based on LLM observations",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 273
     },
     {
       "id": "github:lifan0127/ai-research-assistant",
@@ -14017,7 +14111,7 @@
       "url": "https://github.com/makeplane/plane",
       "canonical_url": "github.com/makeplane/plane",
       "company": null,
-      "stars": 263,
+      "stars": 243,
       "momentum": 6,
       "tags": [
         "typescript"
@@ -14025,18 +14119,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 68,
         "2026-06-18": 89,
         "2026-06-19": 613,
         "2026-08-21": 98,
-        "2026-08-23": 263
+        "2026-08-23": 263,
+        "2026-08-25": 243
       },
       "description": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
       "trend": "down",
-      "trend_delta": -350
+      "trend_delta": -370
     },
     {
       "id": "github:penpot/penpot",
@@ -14649,7 +14744,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 652,
+      "stars": 349,
       "momentum": 53,
       "tags": [
         "python"
@@ -14657,7 +14752,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -14665,11 +14760,12 @@
         "2026-07-19": 191,
         "2026-07-20": 501,
         "2026-07-21": 823,
-        "2026-07-23": 652
+        "2026-07-23": 652,
+        "2026-08-25": 349
       },
       "description": "Learn it. Build it. Ship it for others.",
-      "trend": "up",
-      "trend_delta": 90
+      "trend": "down",
+      "trend_delta": -303
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -17085,7 +17181,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 454,
+      "stars": 896,
       "momentum": 100,
       "tags": [
         "python"
@@ -17093,7 +17189,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-08-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -17104,11 +17200,12 @@
         "2026-06-08": 1112,
         "2026-06-24": 936,
         "2026-06-25": 1178,
-        "2026-08-24": 454
+        "2026-08-24": 454,
+        "2026-08-25": 896
       },
       "description": "The agent that grows with you",
       "trend": "down",
-      "trend_delta": -724
+      "trend_delta": -282
     },
     {
       "id": "github:chopratejas/headroom",
