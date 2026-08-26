@@ -11,7 +11,7 @@ company: null
 stars: 2617
 momentum: 100
 tags: ["python"]
-topics: []
+topics: ["Tokenomics"]
 archived_at: null
 first_seen: 2026-06-03
 last_seen: 2026-06-21
