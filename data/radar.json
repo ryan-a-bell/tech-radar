@@ -1,6 +1,6 @@
 {
   "generated": "2026-08-26",
-  "count": 636,
+  "count": 641,
   "items": [
     {
       "id": "github:DietrichGebert/ponytail",
@@ -80,6 +80,131 @@
         "2026-08-26": 98
       },
       "description": "Your own search engine",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:spokenly",
+      "name": "Spokenly",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://spokenly.app/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "STT"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "AI dictation app for Mac, Windows, Linux, and iPhone: press a shortcut, speak, and text appears at the cursor in any app. Runs local Whisper and Parakeet models offline for free (voice stays on-device) or cloud engines via your own API keys, in 100+ languages.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:rtk",
+      "name": "RTK",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/rtk-ai/rtk",
+      "canonical_url": "github.com/rtk-ai/rtk",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Tokenomics"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Rust Token Killer: a single-binary CLI proxy that intercepts and compresses shell/dev command output before it reaches an LLM agent's context, cutting token consumption on common dev commands by 60-90%.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:murmure",
+      "name": "Murmure",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.murmure.app/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "STT"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Free, open-source (AGPL v3), offline speech-to-text app for Windows, Linux, and macOS, powered by a tuned NVIDIA Parakeet TDT v3 model that runs entirely on your machine (audio and transcripts never leave it). Global-shortcut dictation with hands-free trigger/validate/cancel words, phone-as-mic, and 25 European languages; no tracking. Site murmure.app, repo github.com/Kieirra/murmure.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:mumbleflow",
+      "name": "MumbleFlow",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://mumble.helix-co.com/",
+      "canonical_url": null,
+      "company": "Helix",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "STT"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Fully local, offline speech-to-text app for macOS. Hold Fn to dictate and text appears at the cursor in any field; runs the whole pipeline on-device with whisper.cpp (Metal/CUDA-accelerated) plus a llama.cpp LLM cleanup step, with zero telemetry or cloud uploads. One-time $5 purchase.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:dictaflow",
+      "name": "DictaFlow",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://dictaflow.io/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "STT"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "AI dictation app for Windows, Mac, and iPhone that works as a system-wide voice keyboard. Hold-to-talk (no always-on mic), types speech into any app including locked-down Citrix/RDP sessions, with optional AI refinement to clean up speech slips.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -11634,7 +11759,9 @@
       "stars": 258,
       "momentum": 0,
       "tags": [],
-      "topics": [],
+      "topics": [
+        "Tokenomics"
+      ],
       "archived_at": null,
       "first_seen": "2026-06-30",
       "last_seen": "2026-08-21",
@@ -17315,7 +17442,9 @@
       "tags": [
         "python"
       ],
-      "topics": [],
+      "topics": [
+        "Tokenomics"
+      ],
       "archived_at": null,
       "first_seen": "2026-06-03",
       "last_seen": "2026-06-21",
