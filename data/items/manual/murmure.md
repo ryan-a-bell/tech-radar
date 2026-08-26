@@ -19,4 +19,4 @@ also_seen: []
 stars_history: {}
 ---
 
-Free, open-source, offline speech-to-text app powered by a tuned NVIDIA Parakeet v3 model that runs entirely on your machine (audio and transcripts never leave it). Global-shortcut dictation with hands-free trigger/validate/cancel words, phone-as-mic, and 25 European languages; no tracking or data collection.
+Free, open-source (AGPL v3), offline speech-to-text app for Windows, Linux, and macOS, powered by a tuned NVIDIA Parakeet TDT v3 model that runs entirely on your machine (audio and transcripts never leave it). Global-shortcut dictation with hands-free trigger/validate/cancel words, phone-as-mic, and 25 European languages; no tracking. Site murmure.app, repo github.com/Kieirra/murmure.
