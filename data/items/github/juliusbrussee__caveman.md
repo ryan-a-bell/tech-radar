@@ -11,7 +11,7 @@ company: null
 stars: 258
 momentum: 0
 tags: []
-topics: []
+topics: ["Tokenomics"]
 archived_at: null
 first_seen: 2026-06-30
 last_seen: 2026-08-21
