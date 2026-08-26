@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/anthropics/claude-plugins-official
 canonical_url: github.com/anthropics/claude-plugins-official
 company: Anthropic
-stars: 77
+stars: 55
 momentum: 7
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-24
-last_seen: 2026-06-24
+last_seen: 2026-08-26
 also_seen: []
-stars_history: {"2026-06-24": 77}
+stars_history: {"2026-06-24": 77, "2026-08-26": 55}
 ---
 
 Official, Anthropic-managed directory of high quality Claude Code Plugins.

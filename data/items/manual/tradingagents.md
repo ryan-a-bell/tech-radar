@@ -14,7 +14,7 @@ tags: []
 topics: ["AI", "Agents", "Trading", "Quant"]
 archived_at: null
 first_seen: 2026-07-02
-last_seen: 2026-08-11
+last_seen: 2026-08-26
 also_seen: [{"source": "GitHub", "url": "https://github.com/TauricResearch/TradingAgents", "seen": "2026-08-09"}]
 stars_history: {}
 ---
