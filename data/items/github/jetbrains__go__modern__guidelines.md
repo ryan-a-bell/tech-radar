@@ -1,0 +1,22 @@
+---
+id: github:JetBrains/go-modern-guidelines
+name: go-modern-guidelines
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/JetBrains/go-modern-guidelines
+canonical_url: github.com/jetbrains/go-modern-guidelines
+company: JetBrains
+stars: 314
+momentum: 31
+tags: ["go"]
+topics: []
+archived_at: null
+first_seen: 2026-08-27
+last_seen: 2026-08-27
+also_seen: []
+stars_history: {"2026-08-27": 314}
+---
+
+Help AI coding agents write modern Go
