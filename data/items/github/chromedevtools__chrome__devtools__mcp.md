@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/ChromeDevTools/chrome-devtools-mcp
 canonical_url: github.com/chromedevtools/chrome-devtools-mcp
 company: null
-stars: 80
+stars: 61
 momentum: 10
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-03
-last_seen: 2026-07-31
+last_seen: 2026-08-28
 also_seen: []
-stars_history: {"2026-07-03": 104, "2026-07-04": 405, "2026-07-05": 304, "2026-07-31": 80}
+stars_history: {"2026-07-03": 104, "2026-07-04": 405, "2026-07-05": 304, "2026-07-31": 80, "2026-08-28": 61}
 ---
 
 Chrome DevTools for coding agents

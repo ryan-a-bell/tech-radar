@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/tt-a1i/archify
 canonical_url: github.com/tt-a1i/archify
 company: null
-stars: 4260
+stars: 4561
 momentum: 100
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-27
-last_seen: 2026-08-27
+last_seen: 2026-08-28
 also_seen: []
-stars_history: {"2026-08-27": 4260}
+stars_history: {"2026-08-27": 4260, "2026-08-28": 4561}
 ---
 
 Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.

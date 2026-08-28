@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/JetBrains/go-modern-guidelines
 canonical_url: github.com/jetbrains/go-modern-guidelines
 company: JetBrains
-stars: 314
+stars: 574
 momentum: 31
 tags: ["go"]
 topics: []
 archived_at: null
 first_seen: 2026-08-27
-last_seen: 2026-08-27
+last_seen: 2026-08-28
 also_seen: []
-stars_history: {"2026-08-27": 314}
+stars_history: {"2026-08-27": 314, "2026-08-28": 574}
 ---
 
 Help AI coding agents write modern Go

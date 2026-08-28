@@ -1,7 +1,169 @@
 {
-  "generated": "2026-08-27",
-  "count": 648,
+  "generated": "2026-08-28",
+  "count": 654,
   "items": [
+    {
+      "id": "github:swoole/typephp",
+      "name": "typephp",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/swoole/typephp",
+      "canonical_url": "github.com/swoole/typephp",
+      "company": null,
+      "stars": 188,
+      "momentum": 18,
+      "tags": [
+        "php"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 188
+      },
+      "description": "Compile PHP to Native Binaries",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tailscale/tailcat",
+      "name": "tailcat",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tailscale/tailcat",
+      "canonical_url": "github.com/tailscale/tailcat",
+      "company": null,
+      "stars": 986,
+      "momentum": 98,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 986
+      },
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:abi/screenshot-to-code",
+      "name": "screenshot-to-code",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/abi/screenshot-to-code",
+      "canonical_url": "github.com/abi/screenshot-to-code",
+      "company": null,
+      "stars": 309,
+      "momentum": 30,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 309
+      },
+      "description": "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bilawalsidhu/gods-eye-view",
+      "name": "gods-eye-view",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
+      "company": null,
+      "stars": 1984,
+      "momentum": 100,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 1984
+      },
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NationalSecurityAgency/ghidra",
+      "name": "ghidra",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "canonical_url": "github.com/nationalsecurityagency/ghidra",
+      "company": null,
+      "stars": 205,
+      "momentum": 20,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 205
+      },
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:abhigyanpatwari/GitNexus",
+      "name": "GitNexus",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/abhigyanpatwari/GitNexus",
+      "canonical_url": "github.com/abhigyanpatwari/gitnexus",
+      "company": null,
+      "stars": 189,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-28": 189
+      },
+      "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:K-Dense-AI/scientific-agent-skills",
       "name": "scientific-agent-skills",
@@ -12,7 +174,7 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "canonical_url": "github.com/k-dense-ai/scientific-agent-skills",
       "company": null,
-      "stars": 494,
+      "stars": 720,
       "momentum": 49,
       "tags": [
         "python"
@@ -20,14 +182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 494
+        "2026-08-27": 494,
+        "2026-08-28": 720
       },
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 226
     },
     {
       "id": "github:zedeus/nitter",
@@ -66,7 +229,7 @@
       "url": "https://github.com/google/googletest",
       "canonical_url": "github.com/google/googletest",
       "company": "Google",
-      "stars": 4,
+      "stars": 156,
       "momentum": 0,
       "tags": [
         "c++"
@@ -74,14 +237,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 4
+        "2026-08-27": 4,
+        "2026-08-28": 156
       },
       "description": "GoogleTest - Google Testing and Mocking Framework",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 152
     },
     {
       "id": "github:JetBrains/go-modern-guidelines",
@@ -93,7 +257,7 @@
       "url": "https://github.com/JetBrains/go-modern-guidelines",
       "canonical_url": "github.com/jetbrains/go-modern-guidelines",
       "company": "JetBrains",
-      "stars": 314,
+      "stars": 574,
       "momentum": 31,
       "tags": [
         "go"
@@ -101,14 +265,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 314
+        "2026-08-27": 314,
+        "2026-08-28": 574
       },
       "description": "Help AI coding agents write modern Go",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 260
     },
     {
       "id": "github:ConardLi/garden-skills",
@@ -174,7 +339,7 @@
       "url": "https://github.com/tt-a1i/archify",
       "canonical_url": "github.com/tt-a1i/archify",
       "company": null,
-      "stars": 4260,
+      "stars": 4561,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -182,14 +347,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 4260
+        "2026-08-27": 4260,
+        "2026-08-28": 4561
       },
       "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams\u2014self-contained HTML with motion and crisp export.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 301
     },
     {
       "id": "github:DietrichGebert/ponytail",
@@ -201,7 +367,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1610,
+      "stars": 1396,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -209,15 +375,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
-        "2026-08-27": 1610
+        "2026-08-27": 1610,
+        "2026-08-28": 1396
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "up",
-      "trend_delta": 628
+      "trend_delta": 414
     },
     {
       "id": "github:marin-community/marin",
@@ -229,7 +396,7 @@
       "url": "https://github.com/marin-community/marin",
       "canonical_url": "github.com/marin-community/marin",
       "company": null,
-      "stars": 255,
+      "stars": 236,
       "momentum": 23,
       "tags": [
         "python"
@@ -237,15 +404,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 231,
-        "2026-08-27": 255
+        "2026-08-27": 255,
+        "2026-08-28": 236
       },
       "description": "Open-source framework for the research and development of foundation models.",
       "trend": "up",
-      "trend_delta": 24
+      "trend_delta": 5
     },
     {
       "id": "github:asciimoo/hister",
@@ -436,7 +604,7 @@
       "url": "https://github.com/tashfeenahmed/freellmapi",
       "canonical_url": "github.com/tashfeenahmed/freellmapi",
       "company": null,
-      "stars": 174,
+      "stars": 477,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -444,14 +612,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-25": 174
+        "2026-08-25": 174,
+        "2026-08-28": 477
       },
       "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 303
     },
     {
       "id": "github:AgriciDaniel/claude-obsidian",
@@ -578,7 +747,7 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "canonical_url": "github.com/freestylefly/awesome-gpt-image-2",
       "company": null,
-      "stars": 2093,
+      "stars": 1687,
       "momentum": 40,
       "tags": [
         "javascript"
@@ -586,17 +755,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-24": 401,
         "2026-08-25": 2449,
         "2026-08-26": 1698,
-        "2026-08-27": 2093
+        "2026-08-27": 2093,
+        "2026-08-28": 1687
       },
       "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
       "trend": "up",
-      "trend_delta": 1692
+      "trend_delta": 1286
     },
     {
       "id": "github:VoltAgent/awesome-agent-skills",
@@ -1511,7 +1681,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 286,
+      "stars": 257,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -1519,18 +1689,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
         "2026-08-16": 149,
         "2026-08-21": 449,
         "2026-08-22": 388,
-        "2026-08-23": 286
+        "2026-08-23": 286,
+        "2026-08-28": 257
       },
       "description": "Cursor plugin specification and official plugins",
-      "trend": "up",
-      "trend_delta": 137
+      "trend": "down",
+      "trend_delta": -192
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -3066,7 +3237,7 @@
       "url": "https://github.com/livekit/agents",
       "canonical_url": "github.com/livekit/agents",
       "company": null,
-      "stars": 432,
+      "stars": 14,
       "momentum": 14,
       "tags": [
         "python"
@@ -3074,15 +3245,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-05",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-04": 148,
-        "2026-08-05": 432
+        "2026-08-05": 432,
+        "2026-08-28": 14
       },
       "description": "A framework for building realtime voice AI agents \ud83e\udd16\ud83c\udf99\ufe0f\ud83d\udcf9",
-      "trend": "up",
-      "trend_delta": 284
+      "trend": "down",
+      "trend_delta": -418
     },
     {
       "id": "manual:openmetadata",
@@ -9762,7 +9934,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "company": null,
-      "stars": 80,
+      "stars": 61,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -9770,17 +9942,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 104,
         "2026-07-04": 405,
         "2026-07-05": 304,
-        "2026-07-31": 80
+        "2026-07-31": 80,
+        "2026-08-28": 61
       },
       "description": "Chrome DevTools for coding agents",
       "trend": "down",
-      "trend_delta": -224
+      "trend_delta": -19
     },
     {
       "id": "github:actions/checkout",
@@ -13505,7 +13678,7 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "canonical_url": "github.com/anthropics/claude-plugins-official",
       "company": "Anthropic",
-      "stars": 290,
+      "stars": 457,
       "momentum": 7,
       "tags": [
         "python"
@@ -13513,16 +13686,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-06-24": 77,
         "2026-08-26": 55,
-        "2026-08-27": 290
+        "2026-08-27": 290,
+        "2026-08-28": 457
       },
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "trend": "up",
-      "trend_delta": 213
+      "trend_delta": 380
     },
     {
       "id": "github:shanraisshan/claude-code-best-practice",
@@ -14796,7 +14970,7 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "canonical_url": "github.com/calesthio/openmontage",
       "company": null,
-      "stars": 1284,
+      "stars": 1144,
       "momentum": 7,
       "tags": [
         "python"
@@ -14804,7 +14978,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -14818,11 +14992,12 @@
         "2026-06-26": 3434,
         "2026-06-27": 1754,
         "2026-08-12": 458,
-        "2026-08-27": 1284
+        "2026-08-27": 1284,
+        "2026-08-28": 1144
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
       "trend": "up",
-      "trend_delta": 826
+      "trend_delta": 686
     },
     {
       "id": "github:alibaba/zvec",
@@ -15161,7 +15336,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 547,
+      "stars": 703,
       "momentum": 53,
       "tags": [
         "python"
@@ -15169,7 +15344,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-28",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -15180,11 +15355,12 @@
         "2026-07-23": 652,
         "2026-08-25": 349,
         "2026-08-26": 569,
-        "2026-08-27": 547
+        "2026-08-27": 547,
+        "2026-08-28": 703
       },
       "description": "Learn it. Build it. Ship it for others.",
-      "trend": "down",
-      "trend_delta": -105
+      "trend": "up",
+      "trend_delta": 51
     },
     {
       "id": "github:Raphire/Win11Debloat",

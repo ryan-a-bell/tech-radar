@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/marin-community/marin
 canonical_url: github.com/marin-community/marin
 company: null
-stars: 255
+stars: 236
 momentum: 23
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-26
-last_seen: 2026-08-27
+last_seen: 2026-08-28
 also_seen: []
-stars_history: {"2026-08-26": 231, "2026-08-27": 255}
+stars_history: {"2026-08-26": 231, "2026-08-27": 255, "2026-08-28": 236}
 ---
 
 Open-source framework for the research and development of foundation models.
