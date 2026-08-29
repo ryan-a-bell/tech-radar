@@ -72,13 +72,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 188
+        "2026-08-28": 188,
+        "2026-08-29": 188
       },
       "description": "Compile PHP to Native Binaries",
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -91,7 +92,7 @@
       "url": "https://github.com/tailscale/tailcat",
       "canonical_url": "github.com/tailscale/tailcat",
       "company": null,
-      "stars": 986,
+      "stars": 965,
       "momentum": 98,
       "tags": [
         "go"
@@ -99,14 +100,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 986
+        "2026-08-28": 986,
+        "2026-08-29": 965
       },
       "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -21
     },
     {
       "id": "github:abi/screenshot-to-code",
@@ -118,7 +120,7 @@
       "url": "https://github.com/abi/screenshot-to-code",
       "canonical_url": "github.com/abi/screenshot-to-code",
       "company": null,
-      "stars": 309,
+      "stars": 326,
       "momentum": 30,
       "tags": [
         "python"
@@ -126,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 309
+        "2026-08-28": 309,
+        "2026-08-29": 326
       },
       "description": "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 17
     },
     {
       "id": "github:bilawalsidhu/gods-eye-view",
@@ -145,7 +148,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 1984,
+      "stars": 3829,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -153,14 +156,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 1984
+        "2026-08-28": 1984,
+        "2026-08-29": 3829
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1845
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -172,7 +176,7 @@
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "canonical_url": "github.com/nationalsecurityagency/ghidra",
       "company": null,
-      "stars": 205,
+      "stars": 191,
       "momentum": 20,
       "tags": [
         "java"
@@ -180,14 +184,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 205
+        "2026-08-28": 205,
+        "2026-08-29": 191
       },
       "description": "Ghidra is a software reverse engineering (SRE) framework",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -14
     },
     {
       "id": "github:abhigyanpatwari/GitNexus",
@@ -199,7 +204,7 @@
       "url": "https://github.com/abhigyanpatwari/GitNexus",
       "canonical_url": "github.com/abhigyanpatwari/gitnexus",
       "company": null,
-      "stars": 189,
+      "stars": 202,
       "momentum": 18,
       "tags": [
         "typescript"
@@ -207,14 +212,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
-        "2026-08-28": 189
+        "2026-08-28": 189,
+        "2026-08-29": 202
       },
       "description": "GitNexus: The Zero-Server Code Intelligence Engine - GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a git repository (Github, Gitlab, Azure, Local) or ZIP file, and get an interactive knowledge graph with a built in Graph RAG Agent. Perfect for code exploration",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 13
     },
     {
       "id": "github:K-Dense-AI/scientific-agent-skills",
@@ -234,11 +240,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 494,
-        "2026-08-28": 720
+        "2026-08-28": 720,
+        "2026-08-29": 720
       },
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
       "trend": "up",
@@ -289,11 +296,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 4,
-        "2026-08-28": 156
+        "2026-08-28": 156,
+        "2026-08-29": 156
       },
       "description": "GoogleTest - Google Testing and Mocking Framework",
       "trend": "up",
@@ -317,11 +325,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 314,
-        "2026-08-28": 574
+        "2026-08-28": 574,
+        "2026-08-29": 574
       },
       "description": "Help AI coding agents write modern Go",
       "trend": "up",
@@ -391,7 +400,7 @@
       "url": "https://github.com/tt-a1i/archify",
       "canonical_url": "github.com/tt-a1i/archify",
       "company": null,
-      "stars": 4561,
+      "stars": 4562,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -399,15 +408,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 4260,
-        "2026-08-28": 4561
+        "2026-08-28": 4561,
+        "2026-08-29": 4562
       },
       "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams\u2014self-contained HTML with motion and crisp export.",
       "trend": "up",
-      "trend_delta": 301
+      "trend_delta": 302
     },
     {
       "id": "github:DietrichGebert/ponytail",
@@ -427,12 +437,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
         "2026-08-27": 1610,
-        "2026-08-28": 1396
+        "2026-08-28": 1396,
+        "2026-08-29": 1396
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "up",
@@ -456,12 +467,13 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 231,
         "2026-08-27": 255,
-        "2026-08-28": 236
+        "2026-08-28": 236,
+        "2026-08-29": 236
       },
       "description": "Open-source framework for the research and development of foundation models.",
       "trend": "up",
@@ -656,7 +668,7 @@
       "url": "https://github.com/tashfeenahmed/freellmapi",
       "canonical_url": "github.com/tashfeenahmed/freellmapi",
       "company": null,
-      "stars": 477,
+      "stars": 433,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -664,15 +676,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-25": 174,
-        "2026-08-28": 477
+        "2026-08-28": 477,
+        "2026-08-29": 433
       },
       "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
       "trend": "up",
-      "trend_delta": 303
+      "trend_delta": 259
     },
     {
       "id": "github:AgriciDaniel/claude-obsidian",
@@ -807,14 +820,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-24": 401,
         "2026-08-25": 2449,
         "2026-08-26": 1698,
         "2026-08-27": 2093,
-        "2026-08-28": 1687
+        "2026-08-28": 1687,
+        "2026-08-29": 1687
       },
       "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
       "trend": "up",
@@ -1733,7 +1747,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 257,
+      "stars": 246,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -1741,7 +1755,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -1749,11 +1763,12 @@
         "2026-08-21": 449,
         "2026-08-22": 388,
         "2026-08-23": 286,
-        "2026-08-28": 257
+        "2026-08-28": 257,
+        "2026-08-29": 246
       },
       "description": "Cursor plugin specification and official plugins",
       "trend": "down",
-      "trend_delta": -192
+      "trend_delta": -142
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -3289,7 +3304,7 @@
       "url": "https://github.com/livekit/agents",
       "canonical_url": "github.com/livekit/agents",
       "company": null,
-      "stars": 14,
+      "stars": 22,
       "momentum": 14,
       "tags": [
         "python"
@@ -3297,16 +3312,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-04": 148,
         "2026-08-05": 432,
-        "2026-08-28": 14
+        "2026-08-28": 14,
+        "2026-08-29": 22
       },
       "description": "A framework for building realtime voice AI agents \ud83e\udd16\ud83c\udf99\ufe0f\ud83d\udcf9",
       "trend": "down",
-      "trend_delta": -418
+      "trend_delta": -410
     },
     {
       "id": "manual:openmetadata",
@@ -9986,7 +10002,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "company": null,
-      "stars": 61,
+      "stars": 67,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -9994,18 +10010,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 104,
         "2026-07-04": 405,
         "2026-07-05": 304,
         "2026-07-31": 80,
-        "2026-08-28": 61
+        "2026-08-28": 61,
+        "2026-08-29": 67
       },
       "description": "Chrome DevTools for coding agents",
       "trend": "down",
-      "trend_delta": -19
+      "trend_delta": -13
     },
     {
       "id": "github:actions/checkout",
@@ -13738,13 +13755,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-06-24": 77,
         "2026-08-26": 55,
         "2026-08-27": 290,
-        "2026-08-28": 457
+        "2026-08-28": 457,
+        "2026-08-29": 457
       },
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "trend": "up",
@@ -15030,7 +15048,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -15045,7 +15063,8 @@
         "2026-06-27": 1754,
         "2026-08-12": 458,
         "2026-08-27": 1284,
-        "2026-08-28": 1144
+        "2026-08-28": 1144,
+        "2026-08-29": 1144
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
       "trend": "up",
@@ -15396,7 +15415,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -15408,7 +15427,8 @@
         "2026-08-25": 349,
         "2026-08-26": 569,
         "2026-08-27": 547,
-        "2026-08-28": 703
+        "2026-08-28": 703,
+        "2026-08-29": 703
       },
       "description": "Learn it. Build it. Ship it for others.",
       "trend": "up",
