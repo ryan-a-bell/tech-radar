@@ -14,9 +14,9 @@ tags: ["go"]
 topics: []
 archived_at: null
 first_seen: 2026-08-27
-last_seen: 2026-08-28
+last_seen: 2026-08-29
 also_seen: []
-stars_history: {"2026-08-27": 314, "2026-08-28": 574}
+stars_history: {"2026-08-27": 314, "2026-08-28": 574, "2026-08-29": 574}
 ---
 
 Help AI coding agents write modern Go

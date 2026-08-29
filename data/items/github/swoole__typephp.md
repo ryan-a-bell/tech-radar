@@ -14,9 +14,9 @@ tags: ["php"]
 topics: []
 archived_at: null
 first_seen: 2026-08-28
-last_seen: 2026-08-28
+last_seen: 2026-08-29
 also_seen: []
-stars_history: {"2026-08-28": 188}
+stars_history: {"2026-08-28": 188, "2026-08-29": 188}
 ---
 
 Compile PHP to Native Binaries
