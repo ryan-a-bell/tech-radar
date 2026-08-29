@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28",
+  "generated": "2026-08-29",
   "items": [
     {
       "id": "afml",
@@ -43,6 +43,39 @@
       "finished": null,
       "shelved": null,
       "blurb": "A pattern catalog for multi-step agent workflows \u2014 planning, reflection, tool routing."
+    },
+    {
+      "id": "ai4",
+      "type": "conference",
+      "title": "Ai4",
+      "author": "Ai4",
+      "source": "",
+      "url": "https://ai4.io/vegas/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Discovered",
+      "topics": [
+        "AI",
+        "ML",
+        "Agents"
+      ],
+      "editions": [
+        {
+          "year": 2026,
+          "dates": "2026-08-04..08-06",
+          "location": "Las Vegas, NV (The Venetian)",
+          "status": "Announced",
+          "cfp": null,
+          "url": "https://ai4.io/vegas/"
+        }
+      ],
+      "rating": null,
+      "added": "2026-08-28",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "Billed as North America's largest AI industry event, gathering enterprise leaders and practitioners for keynotes and tracks on generative AI, AI agents, and applied machine learning."
     },
     {
       "id": "algo-trading",
@@ -1553,6 +1586,38 @@
       "finished": null,
       "shelved": null,
       "blurb": "A newer, more visual take on the deep learning fundamentals \u2014 queued as a companion to the Goodfellow text."
+    },
+    {
+      "id": "vldb-2026",
+      "type": "conference",
+      "title": "VLDB 2026",
+      "author": "VLDB Endowment",
+      "source": "",
+      "url": "https://vldb.org/2026/",
+      "recurrence": "annual",
+      "year": null,
+      "status": "Discovered",
+      "topics": [
+        "Data Feeds",
+        "ML"
+      ],
+      "editions": [
+        {
+          "year": 2026,
+          "dates": "2026-08-31..09-04",
+          "location": "Boston, MA (Westin Boston Seaport)",
+          "status": "Announced",
+          "cfp": null,
+          "url": "https://vldb.org/2026/"
+        }
+      ],
+      "rating": null,
+      "added": "2026-08-28",
+      "started": null,
+      "queued": null,
+      "finished": null,
+      "shelved": null,
+      "blurb": "The 52nd International Conference on Very Large Data Bases \u2014 the premier annual forum for data management, database systems, and scalable data science research."
     },
     {
       "id": "wqu-mscfe",

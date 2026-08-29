@@ -1,7 +1,59 @@
 {
-  "generated": "2026-08-28",
-  "count": 654,
+  "generated": "2026-08-29",
+  "count": 656,
   "items": [
+    {
+      "id": "manual:investing-algorithm-framework",
+      "name": "Investing Algorithm Framework",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/coding-kitties/investing-algorithm-framework",
+      "canonical_url": "github.com/coding-kitties/investing-algorithm-framework",
+      "company": "Finterion",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "An open-source Python framework for building, backtesting, and deploying automated trading strategies with a single codebase spanning vector backtesting, event-driven simulation, and live trading. Backed by Finterion and integrates with multiple exchanges via CCXT.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:finterion",
+      "name": "Finterion",
+      "quadrant": "Platforms",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://finterion.com/",
+      "canonical_url": null,
+      "company": "Finterion",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Trading",
+        "Quant"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "A marketplace platform for discovering, renting, and deploying automated crypto trading bots across exchanges like Binance, Coinbase, and Kraken. Developers build and backtest Python strategies and earn recurring revenue when investors subscribe to their algorithms.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:swoole/typephp",
       "name": "typephp",
