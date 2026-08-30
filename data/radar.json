@@ -1,7 +1,169 @@
 {
-  "generated": "2026-08-29",
-  "count": 656,
+  "generated": "2026-08-30",
+  "count": 662,
   "items": [
+    {
+      "id": "github:kaifcodec/user-scanner",
+      "name": "user-scanner",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kaifcodec/user-scanner",
+      "canonical_url": "github.com/kaifcodec/user-scanner",
+      "company": null,
+      "stars": 39,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 39
+      },
+      "description": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f (2-in-1) Email & Username OSINT suite for deep data extraction just from a single Email/Username. Analyzes 465+ actively maintained scan vectors (175+ email / 290+ username) for security research, investigations, and digital footprinting.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:workweave/router",
+      "name": "router",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/workweave/router",
+      "canonical_url": "github.com/workweave/router",
+      "company": null,
+      "stars": 284,
+      "momentum": 28,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 284
+      },
+      "description": "Model router for agentic systems. Routes every prompt to the right model in <50ms. Cut costs 40-70% with just an endpoint change.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bigskysoftware/htmx",
+      "name": "htmx",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bigskysoftware/htmx",
+      "canonical_url": "github.com/bigskysoftware/htmx",
+      "company": null,
+      "stars": 32,
+      "momentum": 3,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 32
+      },
+      "description": "</> htmx - high power tools for HTML",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:p-e-w/heretic",
+      "name": "heretic",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/p-e-w/heretic",
+      "canonical_url": "github.com/p-e-w/heretic",
+      "company": null,
+      "stars": 150,
+      "momentum": 15,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 150
+      },
+      "description": "Fully automatic censorship removal for language models",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:THU-MAIC/OpenMAIC",
+      "name": "OpenMAIC",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "canonical_url": "github.com/thu-maic/openmaic",
+      "company": null,
+      "stars": 907,
+      "momentum": 90,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 907
+      },
+      "description": "Open Multi-Agent Interactive Classroom \u2014 Get an immersive, multi-agent learning experience in just one click",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Osmantic/ODS",
+      "name": "ODS",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Osmantic/ODS",
+      "canonical_url": "github.com/osmantic/ods",
+      "company": null,
+      "stars": 35,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-30": 35
+      },
+      "description": "Turn your PC, Mac, or Linux box into an AI server. LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:investing-algorithm-framework",
       "name": "Investing Algorithm Framework",
@@ -92,7 +254,7 @@
       "url": "https://github.com/tailscale/tailcat",
       "canonical_url": "github.com/tailscale/tailcat",
       "company": null,
-      "stars": 965,
+      "stars": 789,
       "momentum": 98,
       "tags": [
         "go"
@@ -100,15 +262,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 986,
-        "2026-08-29": 965
+        "2026-08-29": 965,
+        "2026-08-30": 789
       },
       "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
       "trend": "down",
-      "trend_delta": -21
+      "trend_delta": -197
     },
     {
       "id": "github:abi/screenshot-to-code",
@@ -120,7 +283,7 @@
       "url": "https://github.com/abi/screenshot-to-code",
       "canonical_url": "github.com/abi/screenshot-to-code",
       "company": null,
-      "stars": 326,
+      "stars": 550,
       "momentum": 30,
       "tags": [
         "python"
@@ -128,15 +291,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 309,
-        "2026-08-29": 326
+        "2026-08-29": 326,
+        "2026-08-30": 550
       },
       "description": "Drop in a screenshot and convert it to clean code (HTML/Tailwind/React/Vue)",
       "trend": "up",
-      "trend_delta": 17
+      "trend_delta": 241
     },
     {
       "id": "github:bilawalsidhu/gods-eye-view",
@@ -148,7 +312,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 3829,
+      "stars": 1855,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -156,15 +320,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
-        "2026-08-29": 3829
+        "2026-08-29": 3829,
+        "2026-08-30": 1855
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "trend": "up",
-      "trend_delta": 1845
+      "trend": "down",
+      "trend_delta": -129
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -232,7 +397,7 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "canonical_url": "github.com/k-dense-ai/scientific-agent-skills",
       "company": null,
-      "stars": 720,
+      "stars": 1587,
       "momentum": 49,
       "tags": [
         "python"
@@ -240,16 +405,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 494,
         "2026-08-28": 720,
-        "2026-08-29": 720
+        "2026-08-29": 720,
+        "2026-08-30": 1587
       },
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
       "trend": "up",
-      "trend_delta": 226
+      "trend_delta": 1093
     },
     {
       "id": "github:zedeus/nitter",
@@ -288,7 +454,7 @@
       "url": "https://github.com/google/googletest",
       "canonical_url": "github.com/google/googletest",
       "company": "Google",
-      "stars": 156,
+      "stars": 128,
       "momentum": 0,
       "tags": [
         "c++"
@@ -296,16 +462,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 4,
         "2026-08-28": 156,
-        "2026-08-29": 156
+        "2026-08-29": 156,
+        "2026-08-30": 128
       },
       "description": "GoogleTest - Google Testing and Mocking Framework",
       "trend": "up",
-      "trend_delta": 152
+      "trend_delta": 124
     },
     {
       "id": "github:JetBrains/go-modern-guidelines",
@@ -317,7 +484,7 @@
       "url": "https://github.com/JetBrains/go-modern-guidelines",
       "canonical_url": "github.com/jetbrains/go-modern-guidelines",
       "company": "JetBrains",
-      "stars": 574,
+      "stars": 303,
       "momentum": 31,
       "tags": [
         "go"
@@ -325,16 +492,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 314,
         "2026-08-28": 574,
-        "2026-08-29": 574
+        "2026-08-29": 574,
+        "2026-08-30": 303
       },
       "description": "Help AI coding agents write modern Go",
-      "trend": "up",
-      "trend_delta": 260
+      "trend": "down",
+      "trend_delta": -11
     },
     {
       "id": "github:ConardLi/garden-skills",
@@ -400,7 +568,7 @@
       "url": "https://github.com/tt-a1i/archify",
       "canonical_url": "github.com/tt-a1i/archify",
       "company": null,
-      "stars": 4562,
+      "stars": 3902,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -408,16 +576,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 4260,
         "2026-08-28": 4561,
-        "2026-08-29": 4562
+        "2026-08-29": 4562,
+        "2026-08-30": 3902
       },
       "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams\u2014self-contained HTML with motion and crisp export.",
-      "trend": "up",
-      "trend_delta": 302
+      "trend": "down",
+      "trend_delta": -358
     },
     {
       "id": "github:DietrichGebert/ponytail",
@@ -10034,7 +10203,7 @@
       "url": "https://github.com/actions/checkout",
       "canonical_url": "github.com/actions/checkout",
       "company": null,
-      "stars": 4,
+      "stars": 5,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -10042,17 +10211,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 26,
         "2026-07-04": 129,
         "2026-07-12": 8,
-        "2026-08-27": 4
+        "2026-08-27": 4,
+        "2026-08-30": 5
       },
       "description": "Action for checking out a repo",
       "trend": "down",
-      "trend_delta": -4
+      "trend_delta": -3
     },
     {
       "id": "github:agentskills/agentskills",
@@ -12293,24 +12463,25 @@
       "url": "https://github.com/ComposioHQ/awesome-claude-skills",
       "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "company": "Composio",
-      "stars": 125,
+      "stars": 73,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-23": 163,
         "2026-07-24": 636,
         "2026-07-25": 663,
         "2026-07-26": 577,
-        "2026-08-27": 125
+        "2026-08-27": 125,
+        "2026-08-30": 73
       },
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "down",
-      "trend_delta": -452
+      "trend_delta": -504
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -13364,7 +13535,7 @@
       "url": "https://github.com/every-app/open-seo",
       "canonical_url": "github.com/every-app/open-seo",
       "company": null,
-      "stars": 849,
+      "stars": 517,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -13372,18 +13543,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-25": 57,
         "2026-06-26": 57,
         "2026-06-28": 239,
         "2026-07-21": 939,
-        "2026-07-22": 849
+        "2026-07-22": 849,
+        "2026-08-30": 517
       },
       "description": "Open source alternative to Semrush and Ahrefs",
-      "trend": "up",
-      "trend_delta": 610
+      "trend": "down",
+      "trend_delta": -332
     },
     {
       "id": "github:kunchenguid/no-mistakes",
@@ -13747,7 +13919,7 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "canonical_url": "github.com/anthropics/claude-plugins-official",
       "company": "Anthropic",
-      "stars": 457,
+      "stars": 358,
       "momentum": 7,
       "tags": [
         "python"
@@ -13755,18 +13927,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-24": 77,
         "2026-08-26": 55,
         "2026-08-27": 290,
         "2026-08-28": 457,
-        "2026-08-29": 457
+        "2026-08-29": 457,
+        "2026-08-30": 358
       },
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "trend": "up",
-      "trend_delta": 380
+      "trend_delta": 281
     },
     {
       "id": "github:shanraisshan/claude-code-best-practice",
@@ -15040,7 +15213,7 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "canonical_url": "github.com/calesthio/openmontage",
       "company": null,
-      "stars": 1144,
+      "stars": 806,
       "momentum": 7,
       "tags": [
         "python"
@@ -15048,7 +15221,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -15064,11 +15237,12 @@
         "2026-08-12": 458,
         "2026-08-27": 1284,
         "2026-08-28": 1144,
-        "2026-08-29": 1144
+        "2026-08-29": 1144,
+        "2026-08-30": 806
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
       "trend": "up",
-      "trend_delta": 686
+      "trend_delta": 348
     },
     {
       "id": "github:alibaba/zvec",
@@ -16363,7 +16537,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 578,
+      "stars": 196,
       "momentum": 34,
       "tags": [
         "shell"
@@ -16371,7 +16545,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-08-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -16391,11 +16565,12 @@
         "2026-08-09": 779,
         "2026-08-10": 680,
         "2026-08-11": 659,
-        "2026-08-12": 578
+        "2026-08-12": 578,
+        "2026-08-30": 196
       },
       "description": "Production-grade engineering skills for AI coding agents.",
       "trend": "down",
-      "trend_delta": -538
+      "trend_delta": -382
     },
     {
       "id": "github:Andyyyy64/whichllm",
