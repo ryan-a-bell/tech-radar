@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/k1tbyte/Wand-Enhancer
 canonical_url: github.com/k1tbyte/wand-enhancer
 company: null
-stars: 718
+stars: 582
 momentum: 60
 tags: ["c#"]
 topics: []
 archived_at: null
 first_seen: 2026-07-13
-last_seen: 2026-08-31
+last_seen: 2026-09-01
 also_seen: []
-stars_history: {"2026-07-13": 609, "2026-08-31": 718}
+stars_history: {"2026-07-13": 609, "2026-08-31": 718, "2026-09-01": 582}
 ---
 
 Advanced UX and interoperability extension for Wand (WeMod) app
