@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/VoltAgent/awesome-design-md
 canonical_url: github.com/voltagent/awesome-design-md
 company: null
-stars: 1391
+stars: 323
 momentum: 100
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-07-10
-last_seen: 2026-07-10
+last_seen: 2026-09-02
 also_seen: []
-stars_history: {"2026-07-10": 1391}
+stars_history: {"2026-07-10": 1391, "2026-09-02": 323}
 ---
 
 A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.

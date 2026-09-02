@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/3b1b/manim
 canonical_url: github.com/3b1b/manim
 company: null
-stars: 176
+stars: 86
 momentum: 19
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-12
-last_seen: 2026-08-14
+last_seen: 2026-09-02
 also_seen: []
-stars_history: {"2026-08-12": 197, "2026-08-14": 176}
+stars_history: {"2026-08-12": 197, "2026-08-14": 176, "2026-09-02": 86}
 ---
 
 Animation engine for explanatory math videos
