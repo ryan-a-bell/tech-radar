@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Gitlawb/openclaude
 canonical_url: github.com/gitlawb/openclaude
 company: null
-stars: 80
+stars: 775
 momentum: 8
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-09-02
-last_seen: 2026-09-02
+last_seen: 2026-09-03
 also_seen: []
-stars_history: {"2026-09-02": 80}
+stars_history: {"2026-09-02": 80, "2026-09-03": 775}
 ---
 
 runs anywhere. uses anything
