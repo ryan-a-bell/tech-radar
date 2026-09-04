@@ -1,7 +1,61 @@
 {
-  "generated": "2026-09-03",
-  "count": 679,
+  "generated": "2026-09-04",
+  "count": 681,
   "items": [
+    {
+      "id": "github:f/prompts.chat",
+      "name": "prompts.chat",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/f/prompts.chat",
+      "canonical_url": "github.com/f/prompts.chat",
+      "company": null,
+      "stars": 168,
+      "momentum": 16,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-04": 168
+      },
+      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source \u2014 self-host for your organization with complete privacy.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:magnitudedev/magnitude",
+      "name": "magnitude",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "canonical_url": "github.com/magnitudedev/magnitude",
+      "company": null,
+      "stars": 161,
+      "momentum": 16,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-04": 161
+      },
+      "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:superlinked/sie",
       "name": "sie",
@@ -66,7 +120,7 @@
       "url": "https://github.com/blader/humanizer",
       "canonical_url": "github.com/blader/humanizer",
       "company": null,
-      "stars": 374,
+      "stars": 1208,
       "momentum": 37,
       "tags": [
         "python"
@@ -74,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
-        "2026-09-03": 374
+        "2026-09-03": 374,
+        "2026-09-04": 1208
       },
       "description": "Agent skill that removes signs of AI-generated writing from text",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 834
     },
     {
       "id": "github:fmtlib/fmt",
@@ -93,7 +148,7 @@
       "url": "https://github.com/fmtlib/fmt",
       "canonical_url": "github.com/fmtlib/fmt",
       "company": null,
-      "stars": 14,
+      "stars": 963,
       "momentum": 1,
       "tags": [
         "c++"
@@ -101,14 +156,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
-        "2026-09-03": 14
+        "2026-09-03": 14,
+        "2026-09-04": 963
       },
       "description": "A modern formatting library",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 949
     },
     {
       "id": "github:pacifio/atlas",
@@ -147,7 +203,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 832,
+      "stars": 1672,
       "momentum": 83,
       "tags": [
         "python"
@@ -155,14 +211,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
-        "2026-09-03": 832
+        "2026-09-03": 832,
+        "2026-09-04": 1672
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 840
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -228,7 +285,7 @@
       "url": "https://github.com/averygan/reclip",
       "canonical_url": "github.com/averygan/reclip",
       "company": null,
-      "stars": 56,
+      "stars": 88,
       "momentum": 5,
       "tags": [
         "html"
@@ -236,14 +293,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
-        "2026-09-02": 56
+        "2026-09-02": 56,
+        "2026-09-04": 88
       },
       "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 32
     },
     {
       "id": "github:Gitlawb/openclaude",
@@ -255,7 +313,7 @@
       "url": "https://github.com/Gitlawb/openclaude",
       "canonical_url": "github.com/gitlawb/openclaude",
       "company": null,
-      "stars": 775,
+      "stars": 451,
       "momentum": 8,
       "tags": [
         "typescript"
@@ -263,15 +321,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-09-02": 80,
-        "2026-09-03": 775
+        "2026-09-03": 775,
+        "2026-09-04": 451
       },
       "description": "runs anywhere. uses anything",
       "trend": "up",
-      "trend_delta": 695
+      "trend_delta": 371
     },
     {
       "id": "github:Imbad0202/academic-research-skills",
@@ -283,7 +342,7 @@
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "canonical_url": "github.com/imbad0202/academic-research-skills",
       "company": null,
-      "stars": 799,
+      "stars": 496,
       "momentum": 19,
       "tags": [
         "python"
@@ -291,15 +350,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-09-02": 193,
-        "2026-09-03": 799
+        "2026-09-03": 799,
+        "2026-09-04": 496
       },
       "description": "Academic Research Skills for Claude Code: research \u2192 write \u2192 review \u2192 revise \u2192 finalize",
       "trend": "up",
-      "trend_delta": 606
+      "trend_delta": 303
     },
     {
       "id": "github:handsomestWei/patent-disclosure-skill",
@@ -1076,7 +1136,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1354,
+      "stars": 2128,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -1084,18 +1144,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
         "2026-08-27": 1610,
         "2026-08-28": 1396,
         "2026-08-29": 1396,
-        "2026-09-03": 1354
+        "2026-09-03": 1354,
+        "2026-09-04": 2128
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "trend": "down",
-      "trend_delta": -256
+      "trend": "up",
+      "trend_delta": 732
     },
     {
       "id": "github:marin-community/marin",
@@ -11984,6 +12045,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:anthropics/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/anthropics/skills",
+      "canonical_url": "github.com/anthropics/skills",
+      "company": "Anthropic",
+      "stars": 281,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-09-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-12": 485,
+        "2026-08-14": 312,
+        "2026-09-04": 281
+      },
+      "description": "Public repository for Agent Skills",
+      "trend": "down",
+      "trend_delta": -31
+    },
+    {
       "id": "github:openai/skills",
       "name": "skills",
       "quadrant": "Tools",
@@ -12005,32 +12093,6 @@
       "description": "Skills Catalog for Codex",
       "trend": "none",
       "trend_delta": 0
-    },
-    {
-      "id": "github:anthropics/skills",
-      "name": "skills",
-      "quadrant": "Tools",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/anthropics/skills",
-      "canonical_url": "github.com/anthropics/skills",
-      "company": "Anthropic",
-      "stars": 312,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-08-14",
-      "also_seen": [],
-      "stars_history": {
-        "2026-08-12": 485,
-        "2026-08-14": 312
-      },
-      "description": "Public repository for Agent Skills",
-      "trend": "down",
-      "trend_delta": -173
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -12856,7 +12918,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 238,
+      "stars": 543,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -12864,7 +12926,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -12872,11 +12934,12 @@
         "2026-07-05": 1089,
         "2026-07-06": 1052,
         "2026-08-21": 258,
-        "2026-09-03": 238
+        "2026-09-03": 238,
+        "2026-09-04": 543
       },
       "description": "Claude Code skill reducing token usage through simplified language",
-      "trend": "down",
-      "trend_delta": -20
+      "trend": "up",
+      "trend_delta": 285
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -12925,6 +12988,29 @@
       "trend_delta": 0
     },
     {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "quadrant": "Techniques",
@@ -12953,29 +13039,6 @@
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "down",
       "trend_delta": -504
-    },
-    {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "also_seen": [],
-      "stars_history": {},
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "none",
-      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -13392,20 +13455,21 @@
       "url": "https://github.com/ByteByteGoHq/system-design-101",
       "canonical_url": "github.com/bytebytegohq/system-design-101",
       "company": null,
-      "stars": 250,
+      "stars": 171,
       "momentum": 25,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
-        "2026-06-29": 250
+        "2026-06-29": 250,
+        "2026-09-04": 171
       },
       "description": "Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -79
     },
     {
       "id": "github:usestrix/strix",
@@ -15336,7 +15400,7 @@
       "url": "https://github.com/google-research/timesfm",
       "canonical_url": "github.com/google-research/timesfm",
       "company": null,
-      "stars": 343,
+      "stars": 1618,
       "momentum": 8,
       "tags": [
         "python"
@@ -15344,7 +15408,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 84,
@@ -15352,11 +15416,12 @@
         "2026-06-19": 844,
         "2026-06-20": 1510,
         "2026-06-21": 433,
-        "2026-09-03": 343
+        "2026-09-03": 343,
+        "2026-09-04": 1618
       },
       "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
-      "trend": "down",
-      "trend_delta": -90
+      "trend": "up",
+      "trend_delta": 1185
     },
     {
       "id": "github:mattpocock/skills",
@@ -15368,7 +15433,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1166,
+      "stars": 1601,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15376,7 +15441,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -15399,11 +15464,12 @@
         "2026-08-22": 3362,
         "2026-08-23": 2683,
         "2026-08-24": 2447,
-        "2026-09-03": 1166
+        "2026-09-03": 1166,
+        "2026-09-04": 1601
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -1281
+      "trend_delta": -846
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -16503,7 +16569,7 @@
       "url": "https://github.com/bannedbook/fanqiang",
       "canonical_url": "github.com/bannedbook/fanqiang",
       "company": null,
-      "stars": 101,
+      "stars": 522,
       "momentum": 16,
       "tags": [
         "kotlin"
@@ -16511,17 +16577,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-09",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 161,
         "2026-06-13": 86,
         "2026-06-14": 93,
-        "2026-08-09": 101
+        "2026-08-09": 101,
+        "2026-09-04": 522
       },
       "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51",
       "trend": "up",
-      "trend_delta": 8
+      "trend_delta": 421
     },
     {
       "id": "github:chatwoot/chatwoot",
@@ -17036,7 +17103,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 196,
+      "stars": 264,
       "momentum": 34,
       "tags": [
         "shell"
@@ -17044,7 +17111,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -17065,11 +17132,12 @@
         "2026-08-10": 680,
         "2026-08-11": 659,
         "2026-08-12": 578,
-        "2026-08-30": 196
+        "2026-08-30": 196,
+        "2026-09-04": 264
       },
       "description": "Production-grade engineering skills for AI coding agents.",
       "trend": "down",
-      "trend_delta": -382
+      "trend_delta": -314
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -17656,7 +17724,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 592,
+      "stars": 462,
       "momentum": 100,
       "tags": [
         "shell"
@@ -17664,7 +17732,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -17693,11 +17761,12 @@
         "2026-08-20": 557,
         "2026-08-21": 727,
         "2026-08-22": 790,
-        "2026-08-23": 592
+        "2026-08-23": 592,
+        "2026-09-04": 462
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "down",
-      "trend_delta": -190
+      "trend_delta": -130
     },
     {
       "id": "github:openai/plugins",
@@ -18522,7 +18591,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 533,
+      "stars": 774,
       "momentum": 100,
       "tags": [
         "python"
@@ -18530,7 +18599,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -18543,11 +18612,12 @@
         "2026-06-25": 1178,
         "2026-08-24": 454,
         "2026-08-25": 896,
-        "2026-09-03": 533
+        "2026-09-03": 533,
+        "2026-09-04": 774
       },
       "description": "The agent that grows with you",
       "trend": "down",
-      "trend_delta": -363
+      "trend_delta": -122
     },
     {
       "id": "github:chopratejas/headroom",
@@ -18809,7 +18879,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 516,
+      "stars": 751,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -18817,7 +18887,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -18836,11 +18906,12 @@
         "2026-08-31": 490,
         "2026-09-01": 512,
         "2026-09-02": 623,
-        "2026-09-03": 516
+        "2026-09-03": 516,
+        "2026-09-04": 751
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 89
+      "trend_delta": 324
     }
   ]
 }

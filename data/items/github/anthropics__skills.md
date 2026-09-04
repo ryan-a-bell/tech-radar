@@ -8,15 +8,15 @@ discovered_by: manual
 url: https://github.com/anthropics/skills
 canonical_url: github.com/anthropics/skills
 company: Anthropic
-stars: 312
+stars: 281
 momentum: 0
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-06-30
-last_seen: 2026-08-14
+last_seen: 2026-09-04
 also_seen: []
-stars_history: {"2026-08-12": 485, "2026-08-14": 312}
+stars_history: {"2026-08-12": 485, "2026-08-14": 312, "2026-09-04": 281}
 ---
 
 Public repository for Agent Skills

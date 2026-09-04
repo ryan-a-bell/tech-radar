@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/debpalash/VoiceStudio
 canonical_url: github.com/debpalash/voicestudio
 company: null
-stars: 832
+stars: 1672
 momentum: 83
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-09-03
-last_seen: 2026-09-03
+last_seen: 2026-09-04
 also_seen: []
-stars_history: {"2026-09-03": 832}
+stars_history: {"2026-09-03": 832, "2026-09-04": 1672}
 ---
 
 VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.
