@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-04",
-  "count": 681,
+  "generated": "2026-09-05",
+  "count": 684,
   "items": [
+    {
+      "id": "github:clshortfuse/renodx",
+      "name": "renodx",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/clshortfuse/renodx",
+      "canonical_url": "github.com/clshortfuse/renodx",
+      "company": null,
+      "stars": 261,
+      "momentum": 26,
+      "tags": [
+        "hlsl"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-05": 261
+      },
+      "description": "Renovation Engine for DirectX Games",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:radixark/miles",
+      "name": "miles",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/radixark/miles",
+      "canonical_url": "github.com/radixark/miles",
+      "company": null,
+      "stars": 64,
+      "momentum": 6,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-05": 64
+      },
+      "description": "Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:bikini/exploitarium",
+      "name": "exploitarium",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/bikini/exploitarium",
+      "canonical_url": "github.com/bikini/exploitarium",
+      "company": null,
+      "stars": 74,
+      "momentum": 7,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-09-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-05": 74
+      },
+      "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:f/prompts.chat",
       "name": "prompts.chat",
@@ -39,7 +120,7 @@
       "url": "https://github.com/magnitudedev/magnitude",
       "canonical_url": "github.com/magnitudedev/magnitude",
       "company": null,
-      "stars": 161,
+      "stars": 391,
       "momentum": 16,
       "tags": [
         "typescript"
@@ -47,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
-        "2026-09-04": 161
+        "2026-09-04": 161,
+        "2026-09-05": 391
       },
       "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 230
     },
     {
       "id": "github:superlinked/sie",
@@ -120,7 +202,7 @@
       "url": "https://github.com/blader/humanizer",
       "canonical_url": "github.com/blader/humanizer",
       "company": null,
-      "stars": 1208,
+      "stars": 1130,
       "momentum": 37,
       "tags": [
         "python"
@@ -128,15 +210,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 374,
-        "2026-09-04": 1208
+        "2026-09-04": 1208,
+        "2026-09-05": 1130
       },
       "description": "Agent skill that removes signs of AI-generated writing from text",
       "trend": "up",
-      "trend_delta": 834
+      "trend_delta": 756
     },
     {
       "id": "github:fmtlib/fmt",
@@ -148,7 +231,7 @@
       "url": "https://github.com/fmtlib/fmt",
       "canonical_url": "github.com/fmtlib/fmt",
       "company": null,
-      "stars": 963,
+      "stars": 688,
       "momentum": 1,
       "tags": [
         "c++"
@@ -156,15 +239,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 14,
-        "2026-09-04": 963
+        "2026-09-04": 963,
+        "2026-09-05": 688
       },
       "description": "A modern formatting library",
       "trend": "up",
-      "trend_delta": 949
+      "trend_delta": 674
     },
     {
       "id": "github:pacifio/atlas",
@@ -203,7 +287,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 1672,
+      "stars": 1345,
       "momentum": 83,
       "tags": [
         "python"
@@ -211,15 +295,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
-        "2026-09-04": 1672
+        "2026-09-04": 1672,
+        "2026-09-05": 1345
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 840
+      "trend_delta": 513
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -1136,7 +1221,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 2128,
+      "stars": 1679,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -1144,7 +1229,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -1152,11 +1237,12 @@
         "2026-08-28": 1396,
         "2026-08-29": 1396,
         "2026-09-03": 1354,
-        "2026-09-04": 2128
+        "2026-09-04": 2128,
+        "2026-09-05": 1679
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "up",
-      "trend_delta": 732
+      "trend_delta": 283
     },
     {
       "id": "github:marin-community/marin",
@@ -2854,7 +2940,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1607,
+      "stars": 437,
       "momentum": 100,
       "tags": [
         "html"
@@ -2862,17 +2948,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
         "2026-08-14": 4475,
         "2026-08-15": 3646,
-        "2026-08-16": 1607
+        "2026-08-16": 1607,
+        "2026-09-05": 437
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -1248
+      "trend_delta": -1170
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -12045,33 +12132,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:anthropics/skills",
-      "name": "skills",
-      "quadrant": "Tools",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/anthropics/skills",
-      "canonical_url": "github.com/anthropics/skills",
-      "company": "Anthropic",
-      "stars": 281,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-09-04",
-      "also_seen": [],
-      "stars_history": {
-        "2026-08-12": 485,
-        "2026-08-14": 312,
-        "2026-09-04": 281
-      },
-      "description": "Public repository for Agent Skills",
-      "trend": "down",
-      "trend_delta": -31
-    },
-    {
       "id": "github:openai/skills",
       "name": "skills",
       "quadrant": "Tools",
@@ -12093,6 +12153,34 @@
       "description": "Skills Catalog for Codex",
       "trend": "none",
       "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/anthropics/skills",
+      "canonical_url": "github.com/anthropics/skills",
+      "company": "Anthropic",
+      "stars": 511,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-09-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-08-12": 485,
+        "2026-08-14": 312,
+        "2026-09-04": 281,
+        "2026-09-05": 511
+      },
+      "description": "Public repository for Agent Skills",
+      "trend": "up",
+      "trend_delta": 199
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -12918,7 +13006,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 543,
+      "stars": 501,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -12926,7 +13014,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -12935,11 +13023,12 @@
         "2026-07-06": 1052,
         "2026-08-21": 258,
         "2026-09-03": 238,
-        "2026-09-04": 543
+        "2026-09-04": 543,
+        "2026-09-05": 501
       },
       "description": "Claude Code skill reducing token usage through simplified language",
       "trend": "up",
-      "trend_delta": 285
+      "trend_delta": 243
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -12988,29 +13077,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "also_seen": [],
-      "stars_history": {},
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "none",
-      "trend_delta": 0
-    },
-    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "quadrant": "Techniques",
@@ -13039,6 +13105,29 @@
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "down",
       "trend_delta": -504
+    },
+    {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "trend": "none",
+      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -13748,7 +13837,7 @@
       "url": "https://github.com/anomalyco/opencode",
       "canonical_url": "github.com/anomalyco/opencode",
       "company": null,
-      "stars": 392,
+      "stars": 345,
       "momentum": 39,
       "tags": [
         "typescript"
@@ -13756,14 +13845,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
-        "2026-06-28": 392
+        "2026-06-28": 392,
+        "2026-09-05": 345
       },
       "description": "The open source coding agent.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -47
     },
     {
       "id": "github:keycloak/keycloak",
@@ -15400,7 +15490,7 @@
       "url": "https://github.com/google-research/timesfm",
       "canonical_url": "github.com/google-research/timesfm",
       "company": null,
-      "stars": 1618,
+      "stars": 342,
       "momentum": 8,
       "tags": [
         "python"
@@ -15408,7 +15498,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 84,
@@ -15417,11 +15507,12 @@
         "2026-06-20": 1510,
         "2026-06-21": 433,
         "2026-09-03": 343,
-        "2026-09-04": 1618
+        "2026-09-04": 1618,
+        "2026-09-05": 342
       },
       "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
-      "trend": "up",
-      "trend_delta": 1185
+      "trend": "down",
+      "trend_delta": -91
     },
     {
       "id": "github:mattpocock/skills",
@@ -15433,7 +15524,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1601,
+      "stars": 2758,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15441,7 +15532,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -15465,11 +15556,12 @@
         "2026-08-23": 2683,
         "2026-08-24": 2447,
         "2026-09-03": 1166,
-        "2026-09-04": 1601
+        "2026-09-04": 1601,
+        "2026-09-05": 2758
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "trend": "down",
-      "trend_delta": -846
+      "trend": "up",
+      "trend_delta": 311
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -16569,7 +16661,7 @@
       "url": "https://github.com/bannedbook/fanqiang",
       "canonical_url": "github.com/bannedbook/fanqiang",
       "company": null,
-      "stars": 522,
+      "stars": 730,
       "momentum": 16,
       "tags": [
         "kotlin"
@@ -16577,18 +16669,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 161,
         "2026-06-13": 86,
         "2026-06-14": 93,
         "2026-08-09": 101,
-        "2026-09-04": 522
+        "2026-09-04": 522,
+        "2026-09-05": 730
       },
       "description": "\u7ffb\u5899-\u79d1\u5b66\u4e0a\u7f51",
       "trend": "up",
-      "trend_delta": 421
+      "trend_delta": 629
     },
     {
       "id": "github:chatwoot/chatwoot",
@@ -18591,7 +18684,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 774,
+      "stars": 720,
       "momentum": 100,
       "tags": [
         "python"
@@ -18599,7 +18692,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -18613,11 +18706,12 @@
         "2026-08-24": 454,
         "2026-08-25": 896,
         "2026-09-03": 533,
-        "2026-09-04": 774
+        "2026-09-04": 774,
+        "2026-09-05": 720
       },
       "description": "The agent that grows with you",
       "trend": "down",
-      "trend_delta": -122
+      "trend_delta": -176
     },
     {
       "id": "github:chopratejas/headroom",
@@ -18879,7 +18973,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 751,
+      "stars": 1135,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -18887,7 +18981,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -18907,11 +19001,12 @@
         "2026-09-01": 512,
         "2026-09-02": 623,
         "2026-09-03": 516,
-        "2026-09-04": 751
+        "2026-09-04": 751,
+        "2026-09-05": 1135
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 324
+      "trend_delta": 708
     }
   ]
 }
