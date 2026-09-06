@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-05",
-  "count": 684,
+  "generated": "2026-09-06",
+  "count": 687,
   "items": [
+    {
+      "id": "github:humanlayer/skills",
+      "name": "skills",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/humanlayer/skills",
+      "canonical_url": "github.com/humanlayer/skills",
+      "company": null,
+      "stars": 442,
+      "momentum": 44,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-06": 442
+      },
+      "description": "A typescript project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:WorldFlowAI/everything-claude-code",
+      "name": "everything-claude-code",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/WorldFlowAI/everything-claude-code",
+      "canonical_url": "github.com/worldflowai/everything-claude-code",
+      "company": null,
+      "stars": 95,
+      "momentum": 9,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-06": 95
+      },
+      "description": "Claude Code toolkit - agents, commands, skills, rules, and hooks for productive AI-assisted development",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:BraveOPotato/FckSignups",
+      "name": "FckSignups",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/BraveOPotato/FckSignups",
+      "canonical_url": "github.com/braveopotato/fcksignups",
+      "company": null,
+      "stars": 68,
+      "momentum": 6,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-06": 68
+      },
+      "description": "A list of tools that are open-source, in-browser, and require no-signups!",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:clshortfuse/renodx",
       "name": "renodx",
@@ -66,7 +147,7 @@
       "url": "https://github.com/bikini/exploitarium",
       "canonical_url": "github.com/bikini/exploitarium",
       "company": null,
-      "stars": 74,
+      "stars": 230,
       "momentum": 7,
       "tags": [
         "python"
@@ -74,14 +155,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
-        "2026-09-05": 74
+        "2026-09-05": 74,
+        "2026-09-06": 230
       },
       "description": "A single archive of public exploit PoCs and vulnerability research writeups. At the time I post these, none have been reported. Feel free to report them yourself and take credit for the CVE if handed out lulz. Please do not abuse these. I do this so to allure people into the field, and I've always found this is the most efficient way.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 156
     },
     {
       "id": "github:f/prompts.chat",
@@ -120,7 +202,7 @@
       "url": "https://github.com/magnitudedev/magnitude",
       "canonical_url": "github.com/magnitudedev/magnitude",
       "company": null,
-      "stars": 391,
+      "stars": 674,
       "momentum": 16,
       "tags": [
         "typescript"
@@ -128,15 +210,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-09-04": 161,
-        "2026-09-05": 391
+        "2026-09-05": 391,
+        "2026-09-06": 674
       },
       "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
       "trend": "up",
-      "trend_delta": 230
+      "trend_delta": 513
     },
     {
       "id": "github:superlinked/sie",
@@ -202,7 +285,7 @@
       "url": "https://github.com/blader/humanizer",
       "canonical_url": "github.com/blader/humanizer",
       "company": null,
-      "stars": 1130,
+      "stars": 990,
       "momentum": 37,
       "tags": [
         "python"
@@ -210,16 +293,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 374,
         "2026-09-04": 1208,
-        "2026-09-05": 1130
+        "2026-09-05": 1130,
+        "2026-09-06": 990
       },
       "description": "Agent skill that removes signs of AI-generated writing from text",
       "trend": "up",
-      "trend_delta": 756
+      "trend_delta": 616
     },
     {
       "id": "github:fmtlib/fmt",
@@ -231,7 +315,7 @@
       "url": "https://github.com/fmtlib/fmt",
       "canonical_url": "github.com/fmtlib/fmt",
       "company": null,
-      "stars": 688,
+      "stars": 134,
       "momentum": 1,
       "tags": [
         "c++"
@@ -239,16 +323,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 14,
         "2026-09-04": 963,
-        "2026-09-05": 688
+        "2026-09-05": 688,
+        "2026-09-06": 134
       },
       "description": "A modern formatting library",
       "trend": "up",
-      "trend_delta": 674
+      "trend_delta": 120
     },
     {
       "id": "github:pacifio/atlas",
@@ -1221,7 +1306,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1679,
+      "stars": 2845,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -1229,7 +1314,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -1238,11 +1323,12 @@
         "2026-08-29": 1396,
         "2026-09-03": 1354,
         "2026-09-04": 2128,
-        "2026-09-05": 1679
+        "2026-09-05": 1679,
+        "2026-09-06": 2845
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "up",
-      "trend_delta": 283
+      "trend_delta": 1449
     },
     {
       "id": "github:marin-community/marin",
@@ -2940,7 +3026,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 437,
+      "stars": 855,
       "momentum": 100,
       "tags": [
         "html"
@@ -2948,18 +3034,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
         "2026-08-14": 4475,
         "2026-08-15": 3646,
         "2026-08-16": 1607,
-        "2026-09-05": 437
+        "2026-09-05": 437,
+        "2026-09-06": 855
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -1170
+      "trend_delta": -752
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -3061,13 +3148,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
-        "2026-08-12": 22
+        "2026-08-12": 22,
+        "2026-09-06": 22
       },
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -12164,23 +12252,24 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 511,
+      "stars": 475,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
         "2026-08-14": 312,
         "2026-09-04": 281,
-        "2026-09-05": 511
+        "2026-09-05": 511,
+        "2026-09-06": 475
       },
       "description": "Public repository for Agent Skills",
       "trend": "up",
-      "trend_delta": 199
+      "trend_delta": 163
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -12192,21 +12281,22 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 131,
+      "stars": 136,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
-        "2026-08-24": 131
+        "2026-08-24": 131,
+        "2026-09-06": 136
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
-      "trend": "down",
-      "trend_delta": -9
+      "trend": "up",
+      "trend_delta": 5
     },
     {
       "id": "github:yamadashy/repomix",
@@ -13837,7 +13927,7 @@
       "url": "https://github.com/anomalyco/opencode",
       "canonical_url": "github.com/anomalyco/opencode",
       "company": null,
-      "stars": 345,
+      "stars": 725,
       "momentum": 39,
       "tags": [
         "typescript"
@@ -13845,15 +13935,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-28": 392,
-        "2026-09-05": 345
+        "2026-09-05": 345,
+        "2026-09-06": 725
       },
       "description": "The open source coding agent.",
-      "trend": "down",
-      "trend_delta": -47
+      "trend": "up",
+      "trend_delta": 333
     },
     {
       "id": "github:keycloak/keycloak",
@@ -15524,7 +15615,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2758,
+      "stars": 2692,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15532,7 +15623,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -15557,11 +15648,12 @@
         "2026-08-24": 2447,
         "2026-09-03": 1166,
         "2026-09-04": 1601,
-        "2026-09-05": 2758
+        "2026-09-05": 2758,
+        "2026-09-06": 2692
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 311
+      "trend_delta": 245
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -18684,7 +18776,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 720,
+      "stars": 575,
       "momentum": 100,
       "tags": [
         "python"
@@ -18692,7 +18784,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -18707,11 +18799,12 @@
         "2026-08-25": 896,
         "2026-09-03": 533,
         "2026-09-04": 774,
-        "2026-09-05": 720
+        "2026-09-05": 720,
+        "2026-09-06": 575
       },
       "description": "The agent that grows with you",
       "trend": "down",
-      "trend_delta": -176
+      "trend_delta": -321
     },
     {
       "id": "github:chopratejas/headroom",
@@ -18973,7 +19066,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1135,
+      "stars": 1314,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -18981,7 +19074,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -19002,11 +19095,12 @@
         "2026-09-02": 623,
         "2026-09-03": 516,
         "2026-09-04": 751,
-        "2026-09-05": 1135
+        "2026-09-05": 1135,
+        "2026-09-06": 1314
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 708
+      "trend_delta": 887
     }
   ]
 }
