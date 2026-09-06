@@ -14,9 +14,9 @@ tags: ["shell"]
 topics: []
 archived_at: null
 first_seen: 2026-08-12
-last_seen: 2026-08-12
+last_seen: 2026-09-06
 also_seen: []
-stars_history: {"2026-08-12": 22}
+stars_history: {"2026-08-12": 22, "2026-09-06": 22}
 ---
 
 Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions
