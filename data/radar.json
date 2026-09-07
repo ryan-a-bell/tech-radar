@@ -1,7 +1,115 @@
 {
-  "generated": "2026-09-06",
-  "count": 687,
+  "generated": "2026-09-07",
+  "count": 691,
   "items": [
+    {
+      "id": "github:Stremio/stremio-web",
+      "name": "stremio-web",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Stremio/stremio-web",
+      "canonical_url": "github.com/stremio/stremio-web",
+      "company": null,
+      "stars": 122,
+      "momentum": 12,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 122
+      },
+      "description": "Stremio - Freedom to Stream",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:aipoch/open-science",
+      "name": "open-science",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/aipoch/open-science",
+      "canonical_url": "github.com/aipoch/open-science",
+      "company": null,
+      "stars": 146,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 146
+      },
+      "description": "Open Science by AIPOCH is an open-source, local-first, model-agnostic AI research workbench for macOS, Windows, and Linux, with scientific agents, Python/R notebooks, data connectors, and reproducible provenance.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:llvm/llvm-project",
+      "name": "llvm-project",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/llvm/llvm-project",
+      "canonical_url": "github.com/llvm/llvm-project",
+      "company": null,
+      "stars": 23,
+      "momentum": 2,
+      "tags": [
+        "llvm"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 23
+      },
+      "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:The-Swarm-Corporation/AutoHedge",
+      "name": "AutoHedge",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "canonical_url": "github.com/the-swarm-corporation/autohedge",
+      "company": null,
+      "stars": 142,
+      "momentum": 14,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 142
+      },
+      "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:humanlayer/skills",
       "name": "skills",
@@ -12,7 +120,7 @@
       "url": "https://github.com/humanlayer/skills",
       "canonical_url": "github.com/humanlayer/skills",
       "company": null,
-      "stars": 442,
+      "stars": 451,
       "momentum": 44,
       "tags": [
         "typescript"
@@ -20,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
-        "2026-09-06": 442
+        "2026-09-06": 442,
+        "2026-09-07": 451
       },
       "description": "A typescript project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 9
     },
     {
       "id": "github:WorldFlowAI/everything-claude-code",
@@ -66,7 +175,7 @@
       "url": "https://github.com/BraveOPotato/FckSignups",
       "canonical_url": "github.com/braveopotato/fcksignups",
       "company": null,
-      "stars": 68,
+      "stars": 436,
       "momentum": 6,
       "tags": [
         "typescript"
@@ -74,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
-        "2026-09-06": 68
+        "2026-09-06": 68,
+        "2026-09-07": 436
       },
       "description": "A list of tools that are open-source, in-browser, and require no-signups!",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 368
     },
     {
       "id": "github:clshortfuse/renodx",
@@ -202,7 +312,7 @@
       "url": "https://github.com/magnitudedev/magnitude",
       "canonical_url": "github.com/magnitudedev/magnitude",
       "company": null,
-      "stars": 674,
+      "stars": 604,
       "momentum": 16,
       "tags": [
         "typescript"
@@ -210,16 +320,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-09-04": 161,
         "2026-09-05": 391,
-        "2026-09-06": 674
+        "2026-09-06": 674,
+        "2026-09-07": 604
       },
       "description": "Open source inference server that runs the best local models for your hardware, plugged into the agent you already use. Works with Pi, OpenCode, Hermes, OpenClaw, Codex, Claude Code, Oh My Pi, and Cline.",
       "trend": "up",
-      "trend_delta": 513
+      "trend_delta": 443
     },
     {
       "id": "github:superlinked/sie",
@@ -285,7 +396,7 @@
       "url": "https://github.com/blader/humanizer",
       "canonical_url": "github.com/blader/humanizer",
       "company": null,
-      "stars": 990,
+      "stars": 748,
       "momentum": 37,
       "tags": [
         "python"
@@ -293,17 +404,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 374,
         "2026-09-04": 1208,
         "2026-09-05": 1130,
-        "2026-09-06": 990
+        "2026-09-06": 990,
+        "2026-09-07": 748
       },
       "description": "Agent skill that removes signs of AI-generated writing from text",
       "trend": "up",
-      "trend_delta": 616
+      "trend_delta": 374
     },
     {
       "id": "github:fmtlib/fmt",
@@ -1306,7 +1418,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 2845,
+      "stars": 1539,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -1314,7 +1426,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -1324,11 +1436,12 @@
         "2026-09-03": 1354,
         "2026-09-04": 2128,
         "2026-09-05": 1679,
-        "2026-09-06": 2845
+        "2026-09-06": 2845,
+        "2026-09-07": 1539
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "up",
-      "trend_delta": 1449
+      "trend_delta": 143
     },
     {
       "id": "github:marin-community/marin",
@@ -3026,7 +3139,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 855,
+      "stars": 620,
       "momentum": 100,
       "tags": [
         "html"
@@ -3034,7 +3147,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -3042,11 +3155,12 @@
         "2026-08-15": 3646,
         "2026-08-16": 1607,
         "2026-09-05": 437,
-        "2026-09-06": 855
+        "2026-09-06": 855,
+        "2026-09-07": 620
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -752
+      "trend_delta": -987
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -10051,7 +10165,7 @@
       "url": "https://github.com/coreyhaines31/marketingskills",
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "company": null,
-      "stars": 340,
+      "stars": 329,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -10059,16 +10173,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-16",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-07-06": 145,
         "2026-07-14": 299,
-        "2026-07-16": 340
+        "2026-07-16": 340,
+        "2026-09-07": 329
       },
       "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-      "trend": "up",
-      "trend_delta": 195
+      "trend": "down",
+      "trend_delta": -11
     },
     {
       "id": "github:gastownhall/gastown",
@@ -12229,15 +12344,17 @@
       "url": "https://github.com/openai/skills",
       "canonical_url": "github.com/openai/skills",
       "company": "OpenAI",
-      "stars": 0,
+      "stars": 46,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-09-07",
       "also_seen": [],
-      "stars_history": {},
+      "stars_history": {
+        "2026-09-07": 46
+      },
       "description": "Skills Catalog for Codex",
       "trend": "none",
       "trend_delta": 0
@@ -12281,22 +12398,23 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 136,
+      "stars": 276,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
         "2026-08-24": 131,
-        "2026-09-06": 136
+        "2026-09-06": 136,
+        "2026-09-07": 276
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
       "trend": "up",
-      "trend_delta": 5
+      "trend_delta": 145
     },
     {
       "id": "github:yamadashy/repomix",
@@ -12423,15 +12541,17 @@
       "url": "https://github.com/OpenWhispr/openwhispr",
       "canonical_url": "github.com/openwhispr/openwhispr",
       "company": null,
-      "stars": 0,
+      "stars": 121,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-09-07",
       "also_seen": [],
-      "stars_history": {},
+      "stars_history": {
+        "2026-09-07": 121
+      },
       "description": "Open-source voice-to-text dictation with local Whisper and cloud options",
       "trend": "none",
       "trend_delta": 0
@@ -13927,7 +14047,7 @@
       "url": "https://github.com/anomalyco/opencode",
       "canonical_url": "github.com/anomalyco/opencode",
       "company": null,
-      "stars": 725,
+      "stars": 551,
       "momentum": 39,
       "tags": [
         "typescript"
@@ -13935,16 +14055,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-28": 392,
         "2026-09-05": 345,
-        "2026-09-06": 725
+        "2026-09-06": 725,
+        "2026-09-07": 551
       },
       "description": "The open source coding agent.",
       "trend": "up",
-      "trend_delta": 333
+      "trend_delta": 159
     },
     {
       "id": "github:keycloak/keycloak",
@@ -15615,7 +15736,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2692,
+      "stars": 2207,
       "momentum": 100,
       "tags": [
         "shell"
@@ -15623,7 +15744,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -15649,11 +15770,12 @@
         "2026-09-03": 1166,
         "2026-09-04": 1601,
         "2026-09-05": 2758,
-        "2026-09-06": 2692
+        "2026-09-06": 2692,
+        "2026-09-07": 2207
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "trend": "up",
-      "trend_delta": 245
+      "trend": "down",
+      "trend_delta": -240
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -18776,7 +18898,7 @@
       "url": "https://github.com/NousResearch/hermes-agent",
       "canonical_url": "github.com/nousresearch/hermes-agent",
       "company": null,
-      "stars": 575,
+      "stars": 520,
       "momentum": 100,
       "tags": [
         "python"
@@ -18784,7 +18906,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1735,
@@ -18800,11 +18922,12 @@
         "2026-09-03": 533,
         "2026-09-04": 774,
         "2026-09-05": 720,
-        "2026-09-06": 575
+        "2026-09-06": 575,
+        "2026-09-07": 520
       },
       "description": "The agent that grows with you",
       "trend": "down",
-      "trend_delta": -321
+      "trend_delta": -376
     },
     {
       "id": "github:chopratejas/headroom",
@@ -19066,7 +19189,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1314,
+      "stars": 1485,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -19074,7 +19197,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -19096,11 +19219,12 @@
         "2026-09-03": 516,
         "2026-09-04": 751,
         "2026-09-05": 1135,
-        "2026-09-06": 1314
+        "2026-09-06": 1314,
+        "2026-09-07": 1485
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 887
+      "trend_delta": 995
     }
   ]
 }
