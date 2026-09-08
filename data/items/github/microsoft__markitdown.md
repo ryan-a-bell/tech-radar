@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/microsoft/markitdown
 canonical_url: github.com/microsoft/markitdown
 company: Microsoft
-stars: 1984
+stars: 886
 momentum: 100
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-03
-last_seen: 2026-06-03
+last_seen: 2026-09-08
 also_seen: []
-stars_history: {"2026-06-03": 1984}
+stars_history: {"2026-06-03": 1984, "2026-09-08": 886}
 ---
 
 Python tool for converting files and office documents to Markdown.
