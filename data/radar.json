@@ -1,7 +1,115 @@
 {
-  "generated": "2026-09-07",
-  "count": 691,
+  "generated": "2026-09-08",
+  "count": 695,
   "items": [
+    {
+      "id": "github:mksglu/context-mode",
+      "name": "context-mode",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mksglu/context-mode",
+      "canonical_url": "github.com/mksglu/context-mode",
+      "company": null,
+      "stars": 96,
+      "momentum": 9,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-08": 96
+      },
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jo-inc/camofox-browser",
+      "name": "camofox-browser",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "canonical_url": "github.com/jo-inc/camofox-browser",
+      "company": null,
+      "stars": 135,
+      "momentum": 13,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-08": 135
+      },
+      "description": "Stealth headless browser for AI agents \u2014 bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:lightpanda-io/browser",
+      "name": "browser",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/lightpanda-io/browser",
+      "canonical_url": "github.com/lightpanda-io/browser",
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "zig"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-08": 58
+      },
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MoonTechLab/LunaTV",
+      "name": "LunaTV",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MoonTechLab/LunaTV",
+      "canonical_url": "github.com/moontechlab/lunatv",
+      "company": null,
+      "stars": 197,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-08",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-08": 197
+      },
+      "description": "\u672c\u9879\u76ee\u91c7\u7528 CC BY-NC-SA \u534f\u8bae\uff0c\u7981\u6b62\u4efb\u4f55\u5546\u4e1a\u5316\u884c\u4e3a\uff0c\u4efb\u4f55\u884d\u751f\u9879\u76ee\u5fc5\u987b\u4fdd\u7559\u672c\u9879\u76ee\u5730\u5740\u5e76\u4ee5\u76f8\u540c\u534f\u8bae\u5f00\u6e90",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Stremio/stremio-web",
       "name": "stremio-web",
@@ -93,7 +201,7 @@
       "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
       "canonical_url": "github.com/the-swarm-corporation/autohedge",
       "company": null,
-      "stars": 142,
+      "stars": 517,
       "momentum": 14,
       "tags": [
         "python"
@@ -101,14 +209,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
-        "2026-09-07": 142
+        "2026-09-07": 142,
+        "2026-09-08": 517
       },
       "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 375
     },
     {
       "id": "github:humanlayer/skills",
@@ -175,7 +284,7 @@
       "url": "https://github.com/BraveOPotato/FckSignups",
       "canonical_url": "github.com/braveopotato/fcksignups",
       "company": null,
-      "stars": 436,
+      "stars": 501,
       "momentum": 6,
       "tags": [
         "typescript"
@@ -183,15 +292,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-06",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-09-06": 68,
-        "2026-09-07": 436
+        "2026-09-07": 436,
+        "2026-09-08": 501
       },
       "description": "A list of tools that are open-source, in-browser, and require no-signups!",
       "trend": "up",
-      "trend_delta": 368
+      "trend_delta": 433
     },
     {
       "id": "github:clshortfuse/renodx",
@@ -5077,7 +5187,7 @@
       "url": "https://github.com/pascalorg/editor",
       "canonical_url": "github.com/pascalorg/editor",
       "company": null,
-      "stars": 625,
+      "stars": 168,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -5085,16 +5195,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-07-31",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-07-29": 341,
         "2026-07-30": 1022,
-        "2026-07-31": 625
+        "2026-07-31": 625,
+        "2026-09-08": 168
       },
       "description": "Create and share 3D architectural projects.",
-      "trend": "up",
-      "trend_delta": 284
+      "trend": "down",
+      "trend_delta": -457
     },
     {
       "id": "github:virgiliojr94/book-to-skill",
@@ -10165,7 +10276,7 @@
       "url": "https://github.com/coreyhaines31/marketingskills",
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "company": null,
-      "stars": 329,
+      "stars": 580,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -10173,17 +10284,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-07-06": 145,
         "2026-07-14": 299,
         "2026-07-16": 340,
-        "2026-09-07": 329
+        "2026-09-07": 329,
+        "2026-09-08": 580
       },
       "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-      "trend": "down",
-      "trend_delta": -11
+      "trend": "up",
+      "trend_delta": 240
     },
     {
       "id": "github:gastownhall/gastown",
@@ -12344,20 +12456,21 @@
       "url": "https://github.com/openai/skills",
       "canonical_url": "github.com/openai/skills",
       "company": "OpenAI",
-      "stars": 46,
+      "stars": 351,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
-        "2026-09-07": 46
+        "2026-09-07": 46,
+        "2026-09-08": 351
       },
       "description": "Skills Catalog for Codex",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 305
     },
     {
       "id": "github:anthropics/skills",
@@ -12398,23 +12511,24 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 276,
+      "stars": 394,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
         "2026-08-24": 131,
         "2026-09-06": 136,
-        "2026-09-07": 276
+        "2026-09-07": 276,
+        "2026-09-08": 394
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
       "trend": "up",
-      "trend_delta": 145
+      "trend_delta": 263
     },
     {
       "id": "github:yamadashy/repomix",
@@ -14843,7 +14957,7 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "canonical_url": "github.com/heygen-com/hyperframes",
       "company": null,
-      "stars": 395,
+      "stars": 474,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -14851,15 +14965,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-23",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 369,
-        "2026-06-23": 395
+        "2026-06-23": 395,
+        "2026-09-08": 474
       },
       "description": "Write HTML. Render video. Built for agents.",
       "trend": "up",
-      "trend_delta": 26
+      "trend_delta": 79
     },
     {
       "id": "github:garrytan/gstack",
@@ -15180,7 +15295,7 @@
       "url": "https://github.com/bytedance/deer-flow",
       "canonical_url": "github.com/bytedance/deer-flow",
       "company": null,
-      "stars": 209,
+      "stars": 195,
       "momentum": 41,
       "tags": [
         "python"
@@ -15188,18 +15303,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-02",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 415,
         "2026-06-22": 442,
         "2026-06-23": 738,
         "2026-06-24": 739,
-        "2026-08-02": 209
+        "2026-08-02": 209,
+        "2026-09-08": 195
       },
       "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
       "trend": "down",
-      "trend_delta": -530
+      "trend_delta": -14
     },
     {
       "id": "github:ZhuLinsen/daily_stock_analysis",
@@ -18817,7 +18933,7 @@
       "url": "https://github.com/microsoft/markitdown",
       "canonical_url": "github.com/microsoft/markitdown",
       "company": "Microsoft",
-      "stars": 1984,
+      "stars": 886,
       "momentum": 100,
       "tags": [
         "python"
@@ -18825,14 +18941,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
-        "2026-06-03": 1984
+        "2026-06-03": 1984,
+        "2026-09-08": 886
       },
       "description": "Python tool for converting files and office documents to Markdown.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -1098
     },
     {
       "id": "github:stefan-jansen/machine-learning-for-trading",
@@ -19189,7 +19306,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1485,
+      "stars": 1897,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -19197,7 +19314,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -19220,11 +19337,12 @@
         "2026-09-04": 751,
         "2026-09-05": 1135,
         "2026-09-06": 1314,
-        "2026-09-07": 1485
+        "2026-09-07": 1485,
+        "2026-09-08": 1897
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 995
+      "trend_delta": 1385
     }
   ]
 }
