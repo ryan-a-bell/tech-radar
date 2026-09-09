@@ -1,7 +1,86 @@
 {
-  "generated": "2026-09-08",
-  "count": 695,
+  "generated": "2026-09-09",
+  "count": 698,
   "items": [
+    {
+      "id": "github:liquidslr/system-design-notes",
+      "name": "system-design-notes",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/liquidslr/system-design-notes",
+      "canonical_url": "github.com/liquidslr/system-design-notes",
+      "company": null,
+      "stars": 910,
+      "momentum": 91,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-09": 910
+      },
+      "description": "Notes of the book System Desgin Interview - An Insider's Guide",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:viarotel-org/escrcpy",
+      "name": "escrcpy",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/viarotel-org/escrcpy",
+      "canonical_url": "github.com/viarotel-org/escrcpy",
+      "company": null,
+      "stars": 178,
+      "momentum": 17,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-09": 178
+      },
+      "description": "\ud83d\udcf1 Display and control your Android device graphically with scrcpy.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:browser-use/browser-use",
+      "name": "browser-use",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/browser-use/browser-use",
+      "canonical_url": "github.com/browser-use/browser-use",
+      "company": null,
+      "stars": 228,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-09": 228
+      },
+      "description": "Agents that use the browser.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:mksglu/context-mode",
       "name": "context-mode",
@@ -12,7 +91,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 96,
+      "stars": 651,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -20,14 +99,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
-        "2026-09-08": 96
+        "2026-09-08": 96,
+        "2026-09-09": 651
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 555
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -39,7 +119,7 @@
       "url": "https://github.com/jo-inc/camofox-browser",
       "canonical_url": "github.com/jo-inc/camofox-browser",
       "company": null,
-      "stars": 135,
+      "stars": 871,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -47,14 +127,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
-        "2026-09-08": 135
+        "2026-09-08": 135,
+        "2026-09-09": 871
       },
       "description": "Stealth headless browser for AI agents \u2014 bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 736
     },
     {
       "id": "github:lightpanda-io/browser",
@@ -93,7 +174,7 @@
       "url": "https://github.com/MoonTechLab/LunaTV",
       "canonical_url": "github.com/moontechlab/lunatv",
       "company": null,
-      "stars": 197,
+      "stars": 505,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -101,14 +182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
-        "2026-09-08": 197
+        "2026-09-08": 197,
+        "2026-09-09": 505
       },
       "description": "\u672c\u9879\u76ee\u91c7\u7528 CC BY-NC-SA \u534f\u8bae\uff0c\u7981\u6b62\u4efb\u4f55\u5546\u4e1a\u5316\u884c\u4e3a\uff0c\u4efb\u4f55\u884d\u751f\u9879\u76ee\u5fc5\u987b\u4fdd\u7559\u672c\u9879\u76ee\u5730\u5740\u5e76\u4ee5\u76f8\u540c\u534f\u8bae\u5f00\u6e90",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 308
     },
     {
       "id": "github:Stremio/stremio-web",
@@ -201,7 +283,7 @@
       "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
       "canonical_url": "github.com/the-swarm-corporation/autohedge",
       "company": null,
-      "stars": 517,
+      "stars": 494,
       "momentum": 14,
       "tags": [
         "python"
@@ -209,15 +291,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-09-07": 142,
-        "2026-09-08": 517
+        "2026-09-08": 517,
+        "2026-09-09": 494
       },
       "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
       "trend": "up",
-      "trend_delta": 375
+      "trend_delta": 352
     },
     {
       "id": "github:humanlayer/skills",
@@ -3249,7 +3332,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 620,
+      "stars": 710,
       "momentum": 100,
       "tags": [
         "html"
@@ -3257,7 +3340,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -3266,11 +3349,12 @@
         "2026-08-16": 1607,
         "2026-09-05": 437,
         "2026-09-06": 855,
-        "2026-09-07": 620
+        "2026-09-07": 620,
+        "2026-09-09": 710
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -987
+      "trend_delta": -897
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -6076,7 +6160,7 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "company": null,
-      "stars": 1699,
+      "stars": 656,
       "momentum": 100,
       "tags": [
         "python"
@@ -6084,15 +6168,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1866,
-        "2026-07-23": 1699
+        "2026-07-23": 1699,
+        "2026-09-09": 656
       },
       "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
       "trend": "down",
-      "trend_delta": -167
+      "trend_delta": -1043
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -10276,7 +10361,7 @@
       "url": "https://github.com/coreyhaines31/marketingskills",
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "company": null,
-      "stars": 580,
+      "stars": 666,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -10284,18 +10369,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-07-06": 145,
         "2026-07-14": 299,
         "2026-07-16": 340,
         "2026-09-07": 329,
-        "2026-09-08": 580
+        "2026-09-08": 580,
+        "2026-09-09": 666
       },
       "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
       "trend": "up",
-      "trend_delta": 240
+      "trend_delta": 326
     },
     {
       "id": "github:gastownhall/gastown",
@@ -12456,21 +12542,22 @@
       "url": "https://github.com/openai/skills",
       "canonical_url": "github.com/openai/skills",
       "company": "OpenAI",
-      "stars": 351,
+      "stars": 490,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-09-07": 46,
-        "2026-09-08": 351
+        "2026-09-08": 351,
+        "2026-09-09": 490
       },
       "description": "Skills Catalog for Codex",
       "trend": "up",
-      "trend_delta": 305
+      "trend_delta": 444
     },
     {
       "id": "github:anthropics/skills",
@@ -13532,22 +13619,23 @@
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "canonical_url": "github.com/multica-ai/andrej-karpathy-skills",
       "company": null,
-      "stars": 830,
+      "stars": 333,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-08-23": 315,
         "2026-08-25": 588,
-        "2026-08-26": 830
+        "2026-08-26": 830,
+        "2026-09-09": 333
       },
       "description": "Claude Code behavior improvement resource based on LLM observations",
-      "trend": "up",
-      "trend_delta": 515
+      "trend": "down",
+      "trend_delta": -497
     },
     {
       "id": "github:lifan0127/ai-research-assistant",
@@ -14957,7 +15045,7 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "canonical_url": "github.com/heygen-com/hyperframes",
       "company": null,
-      "stars": 474,
+      "stars": 2627,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -14965,16 +15053,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 369,
         "2026-06-23": 395,
-        "2026-09-08": 474
+        "2026-09-08": 474,
+        "2026-09-09": 2627
       },
       "description": "Write HTML. Render video. Built for agents.",
       "trend": "up",
-      "trend_delta": 79
+      "trend_delta": 2232
     },
     {
       "id": "github:garrytan/gstack",
@@ -18147,7 +18236,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 462,
+      "stars": 452,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18155,7 +18244,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -18185,11 +18274,12 @@
         "2026-08-21": 727,
         "2026-08-22": 790,
         "2026-08-23": 592,
-        "2026-09-04": 462
+        "2026-09-04": 462,
+        "2026-09-09": 452
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "down",
-      "trend_delta": -130
+      "trend_delta": -140
     },
     {
       "id": "github:openai/plugins",
@@ -18201,7 +18291,7 @@
       "url": "https://github.com/openai/plugins",
       "canonical_url": "github.com/openai/plugins",
       "company": "OpenAI",
-      "stars": 29,
+      "stars": 105,
       "momentum": 4,
       "tags": [
         "javascript"
@@ -18209,7 +18299,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 215,
@@ -18217,11 +18307,12 @@
         "2026-06-08": 296,
         "2026-06-09": 284,
         "2026-06-10": 284,
-        "2026-07-12": 29
+        "2026-07-12": 29,
+        "2026-09-09": 105
       },
       "description": "OpenAI Plugins",
-      "trend": "down",
-      "trend_delta": -255
+      "trend": "up",
+      "trend_delta": 76
     },
     {
       "id": "github:nginx/nginx",
@@ -18933,7 +19024,7 @@
       "url": "https://github.com/microsoft/markitdown",
       "canonical_url": "github.com/microsoft/markitdown",
       "company": "Microsoft",
-      "stars": 886,
+      "stars": 2047,
       "momentum": 100,
       "tags": [
         "python"
@@ -18941,15 +19032,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1984,
-        "2026-09-08": 886
+        "2026-09-08": 886,
+        "2026-09-09": 2047
       },
       "description": "Python tool for converting files and office documents to Markdown.",
-      "trend": "down",
-      "trend_delta": -1098
+      "trend": "up",
+      "trend_delta": 63
     },
     {
       "id": "github:stefan-jansen/machine-learning-for-trading",
@@ -19306,7 +19398,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1897,
+      "stars": 1427,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -19314,7 +19406,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -19338,11 +19430,12 @@
         "2026-09-05": 1135,
         "2026-09-06": 1314,
         "2026-09-07": 1485,
-        "2026-09-08": 1897
+        "2026-09-08": 1897,
+        "2026-09-09": 1427
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 1385
+      "trend_delta": 804
     }
   ]
 }

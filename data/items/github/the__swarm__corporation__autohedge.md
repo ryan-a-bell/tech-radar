@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/The-Swarm-Corporation/AutoHedge
 canonical_url: github.com/the-swarm-corporation/autohedge
 company: null
-stars: 517
+stars: 494
 momentum: 14
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-09-07
-last_seen: 2026-09-08
+last_seen: 2026-09-09
 also_seen: []
-stars_history: {"2026-09-07": 142, "2026-09-08": 517}
+stars_history: {"2026-09-07": 142, "2026-09-08": 517, "2026-09-09": 494}
 ---
 
 Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.
