@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/earthtojake/text-to-cad
 canonical_url: github.com/earthtojake/text-to-cad
 company: null
-stars: 230
+stars: 124
 momentum: 29
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-22
-last_seen: 2026-07-24
+last_seen: 2026-09-10
 also_seen: []
-stars_history: {"2026-07-22": 291, "2026-07-24": 230}
+stars_history: {"2026-07-22": 291, "2026-07-24": 230, "2026-09-10": 124}
 ---
 
 A collection of agent skills for CAD, robotics and hardware design

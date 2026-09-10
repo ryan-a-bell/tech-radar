@@ -1,7 +1,61 @@
 {
-  "generated": "2026-09-09",
-  "count": 698,
+  "generated": "2026-09-10",
+  "count": 700,
   "items": [
+    {
+      "id": "github:Tencent/teamai-cli",
+      "name": "teamai-cli",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Tencent/teamai-cli",
+      "canonical_url": "github.com/tencent/teamai-cli",
+      "company": null,
+      "stars": 556,
+      "momentum": 55,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-10": 556
+      },
+      "description": "Make Every Team AI Native",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vastsa/PI-Desktop",
+      "name": "PI-Desktop",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vastsa/PI-Desktop",
+      "canonical_url": "github.com/vastsa/pi-desktop",
+      "company": null,
+      "stars": 417,
+      "momentum": 41,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-10": 417
+      },
+      "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:liquidslr/system-design-notes",
       "name": "system-design-notes",
@@ -12,20 +66,21 @@
       "url": "https://github.com/liquidslr/system-design-notes",
       "canonical_url": "github.com/liquidslr/system-design-notes",
       "company": null,
-      "stars": 910,
+      "stars": 1397,
       "momentum": 91,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
-        "2026-09-09": 910
+        "2026-09-09": 910,
+        "2026-09-10": 1397
       },
       "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 487
     },
     {
       "id": "github:viarotel-org/escrcpy",
@@ -1999,7 +2054,7 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "canonical_url": "github.com/freestylefly/awesome-gpt-image-2",
       "company": null,
-      "stars": 1687,
+      "stars": 705,
       "momentum": 40,
       "tags": [
         "javascript"
@@ -2007,7 +2062,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-24": 401,
@@ -2015,11 +2070,12 @@
         "2026-08-26": 1698,
         "2026-08-27": 2093,
         "2026-08-28": 1687,
-        "2026-08-29": 1687
+        "2026-08-29": 1687,
+        "2026-09-10": 705
       },
       "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
-      "trend": "up",
-      "trend_delta": 1286
+      "trend": "down",
+      "trend_delta": -982
     },
     {
       "id": "github:VoltAgent/awesome-agent-skills",
@@ -3332,7 +3388,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 710,
+      "stars": 2249,
       "momentum": 100,
       "tags": [
         "html"
@@ -3340,7 +3396,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -3350,11 +3406,12 @@
         "2026-09-05": 437,
         "2026-09-06": 855,
         "2026-09-07": 620,
-        "2026-09-09": 710
+        "2026-09-09": 710,
+        "2026-09-10": 2249
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-      "trend": "down",
-      "trend_delta": -897
+      "trend": "up",
+      "trend_delta": 642
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -5271,7 +5328,7 @@
       "url": "https://github.com/pascalorg/editor",
       "canonical_url": "github.com/pascalorg/editor",
       "company": null,
-      "stars": 168,
+      "stars": 107,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -5279,17 +5336,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-07-29": 341,
         "2026-07-30": 1022,
         "2026-07-31": 625,
-        "2026-09-08": 168
+        "2026-09-08": 168,
+        "2026-09-10": 107
       },
       "description": "Create and share 3D architectural projects.",
       "trend": "down",
-      "trend_delta": -457
+      "trend_delta": -518
     },
     {
       "id": "github:virgiliojr94/book-to-skill",
@@ -6020,7 +6078,7 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "canonical_url": "github.com/earthtojake/text-to-cad",
       "company": null,
-      "stars": 230,
+      "stars": 124,
       "momentum": 29,
       "tags": [
         "javascript"
@@ -6028,15 +6086,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-24",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 291,
-        "2026-07-24": 230
+        "2026-07-24": 230,
+        "2026-09-10": 124
       },
       "description": "A collection of agent skills for CAD, robotics and hardware design",
       "trend": "down",
-      "trend_delta": -61
+      "trend_delta": -106
     },
     {
       "id": "github:agegr/pi-web",
@@ -6160,7 +6219,7 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "company": null,
-      "stars": 656,
+      "stars": 4650,
       "momentum": 100,
       "tags": [
         "python"
@@ -6168,16 +6227,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1866,
         "2026-07-23": 1699,
-        "2026-09-09": 656
+        "2026-09-09": 656,
+        "2026-09-10": 4650
       },
       "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
-      "trend": "down",
-      "trend_delta": -1043
+      "trend": "up",
+      "trend_delta": 2951
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -11623,7 +11683,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-09-10",
       "also_seen": [
         {
           "source": "GitHub",
@@ -16657,7 +16717,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 703,
+      "stars": 343,
       "momentum": 53,
       "tags": [
         "python"
@@ -16665,7 +16725,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -16678,11 +16738,12 @@
         "2026-08-26": 569,
         "2026-08-27": 547,
         "2026-08-28": 703,
-        "2026-08-29": 703
+        "2026-08-29": 703,
+        "2026-09-10": 343
       },
       "description": "Learn it. Build it. Ship it for others.",
-      "trend": "up",
-      "trend_delta": 51
+      "trend": "down",
+      "trend_delta": -360
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -18236,7 +18297,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 452,
+      "stars": 688,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18244,7 +18305,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -18275,11 +18336,12 @@
         "2026-08-22": 790,
         "2026-08-23": 592,
         "2026-09-04": 462,
-        "2026-09-09": 452
+        "2026-09-09": 452,
+        "2026-09-10": 688
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -140
+      "trend": "up",
+      "trend_delta": 96
     },
     {
       "id": "github:openai/plugins",
@@ -18291,7 +18353,7 @@
       "url": "https://github.com/openai/plugins",
       "canonical_url": "github.com/openai/plugins",
       "company": "OpenAI",
-      "stars": 105,
+      "stars": 498,
       "momentum": 4,
       "tags": [
         "javascript"
@@ -18299,7 +18361,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 215,
@@ -18308,11 +18370,12 @@
         "2026-06-09": 284,
         "2026-06-10": 284,
         "2026-07-12": 29,
-        "2026-09-09": 105
+        "2026-09-09": 105,
+        "2026-09-10": 498
       },
       "description": "OpenAI Plugins",
       "trend": "up",
-      "trend_delta": 76
+      "trend_delta": 469
     },
     {
       "id": "github:nginx/nginx",
@@ -19398,7 +19461,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1427,
+      "stars": 1133,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -19406,7 +19469,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -19431,11 +19494,12 @@
         "2026-09-06": 1314,
         "2026-09-07": 1485,
         "2026-09-08": 1897,
-        "2026-09-09": 1427
+        "2026-09-09": 1427,
+        "2026-09-10": 1133
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 804
+      "trend_delta": 617
     }
   ]
 }
