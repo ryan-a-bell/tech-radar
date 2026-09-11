@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/THU-MAIC/OpenMAIC
 canonical_url: github.com/thu-maic/openmaic
 company: null
-stars: 3128
+stars: 837
 momentum: 90
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-30
-last_seen: 2026-09-02
+last_seen: 2026-09-11
 also_seen: []
-stars_history: {"2026-08-30": 907, "2026-08-31": 1370, "2026-09-01": 2824, "2026-09-02": 3128}
+stars_history: {"2026-08-30": 907, "2026-08-31": 1370, "2026-09-01": 2824, "2026-09-02": 3128, "2026-09-11": 837}
 ---
 
 Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click
