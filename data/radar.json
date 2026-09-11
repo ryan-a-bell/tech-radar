@@ -1,7 +1,142 @@
 {
-  "generated": "2026-09-10",
-  "count": 700,
+  "generated": "2026-09-11",
+  "count": 705,
   "items": [
+    {
+      "id": "github:vercel-labs/skills",
+      "name": "skills",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vercel-labs/skills",
+      "canonical_url": "github.com/vercel-labs/skills",
+      "company": null,
+      "stars": 122,
+      "momentum": 12,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-11": 122
+      },
+      "description": "The open agent skills tool - npx skills",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nashsu/llm_wiki",
+      "name": "llm_wiki",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nashsu/llm_wiki",
+      "canonical_url": "github.com/nashsu/llm_wiki",
+      "company": null,
+      "stars": 142,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-11": 142
+      },
+      "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base \u2014 automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:JustVugg/colibri",
+      "name": "colibri",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/JustVugg/colibri",
+      "canonical_url": "github.com/justvugg/colibri",
+      "company": null,
+      "stars": 98,
+      "momentum": 9,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-11": 98
+      },
+      "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:armory3d/armorpaint",
+      "name": "armorpaint",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/armory3d/armorpaint",
+      "canonical_url": "github.com/armory3d/armorpaint",
+      "company": null,
+      "stars": 72,
+      "momentum": 7,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-11": 72
+      },
+      "description": "Graphics Creation Tools",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alsk1992/CloddsBot",
+      "name": "CloddsBot",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alsk1992/CloddsBot",
+      "canonical_url": "github.com/alsk1992/cloddsbot",
+      "company": null,
+      "stars": 277,
+      "momentum": 27,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-11": 277
+      },
+      "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Tencent/teamai-cli",
       "name": "teamai-cli",
@@ -12,7 +147,7 @@
       "url": "https://github.com/Tencent/teamai-cli",
       "canonical_url": "github.com/tencent/teamai-cli",
       "company": null,
-      "stars": 556,
+      "stars": 841,
       "momentum": 55,
       "tags": [
         "typescript"
@@ -20,14 +155,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
-        "2026-09-10": 556
+        "2026-09-10": 556,
+        "2026-09-11": 841
       },
       "description": "Make Every Team AI Native",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 285
     },
     {
       "id": "github:vastsa/PI-Desktop",
@@ -39,7 +175,7 @@
       "url": "https://github.com/vastsa/PI-Desktop",
       "canonical_url": "github.com/vastsa/pi-desktop",
       "company": null,
-      "stars": 417,
+      "stars": 624,
       "momentum": 41,
       "tags": [
         "typescript"
@@ -47,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
-        "2026-09-10": 417
+        "2026-09-10": 417,
+        "2026-09-11": 624
       },
       "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 207
     },
     {
       "id": "github:liquidslr/system-design-notes",
@@ -66,21 +203,22 @@
       "url": "https://github.com/liquidslr/system-design-notes",
       "canonical_url": "github.com/liquidslr/system-design-notes",
       "company": null,
-      "stars": 1397,
+      "stars": 900,
       "momentum": 91,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-09-09": 910,
-        "2026-09-10": 1397
+        "2026-09-10": 1397,
+        "2026-09-11": 900
       },
       "description": "Notes of the book System Desgin Interview - An Insider's Guide",
-      "trend": "up",
-      "trend_delta": 487
+      "trend": "down",
+      "trend_delta": -10
     },
     {
       "id": "github:viarotel-org/escrcpy",
@@ -1178,7 +1316,7 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "canonical_url": "github.com/thu-maic/openmaic",
       "company": null,
-      "stars": 3128,
+      "stars": 837,
       "momentum": 90,
       "tags": [
         "typescript"
@@ -1186,17 +1324,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-30",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-30": 907,
         "2026-08-31": 1370,
         "2026-09-01": 2824,
-        "2026-09-02": 3128
+        "2026-09-02": 3128,
+        "2026-09-11": 837
       },
       "description": "Open Multi-Agent Interactive Classroom \u2014 Get an immersive, multi-agent learning experience in just one click",
-      "trend": "up",
-      "trend_delta": 2221
+      "trend": "down",
+      "trend_delta": -2291
     },
     {
       "id": "github:Osmantic/ODS",
@@ -1375,7 +1514,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 1855,
+      "stars": 1762,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -1383,16 +1522,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
         "2026-08-29": 3829,
-        "2026-08-30": 1855
+        "2026-08-30": 1855,
+        "2026-09-11": 1762
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
       "trend": "down",
-      "trend_delta": -129
+      "trend_delta": -93
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -2054,7 +2194,7 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "canonical_url": "github.com/freestylefly/awesome-gpt-image-2",
       "company": null,
-      "stars": 705,
+      "stars": 962,
       "momentum": 40,
       "tags": [
         "javascript"
@@ -2062,7 +2202,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-24": 401,
@@ -2071,11 +2211,12 @@
         "2026-08-27": 2093,
         "2026-08-28": 1687,
         "2026-08-29": 1687,
-        "2026-09-10": 705
+        "2026-09-10": 705,
+        "2026-09-11": 962
       },
       "description": "Prompt as Code | GPT-Image2 \u5de5\u4e1a\u7ea7\u63d0\u793a\u8bcd\u5f15\u64ce\u4e0e\u6a21\u677f\u5e93\uff0c470+ \u4e2a\u6848\u4f8b\u9006\u5411\u5de5\u7a0b\uff0c20+ \u5957\u5de5\u4e1a\u7ea7\u6a21\u677f\uff0c\u5e76\u63d0\u70bc\u51faSkills\uff0c\u6301\u7eed\u66f4\u65b0\u4e2d",
       "trend": "down",
-      "trend_delta": -982
+      "trend_delta": -725
     },
     {
       "id": "github:VoltAgent/awesome-agent-skills",
@@ -3388,7 +3529,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 2249,
+      "stars": 1294,
       "momentum": 100,
       "tags": [
         "html"
@@ -3396,7 +3537,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -3407,11 +3548,12 @@
         "2026-09-06": 855,
         "2026-09-07": 620,
         "2026-09-09": 710,
-        "2026-09-10": 2249
+        "2026-09-10": 2249,
+        "2026-09-11": 1294
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-      "trend": "up",
-      "trend_delta": 642
+      "trend": "down",
+      "trend_delta": -313
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -6191,7 +6333,7 @@
       "url": "https://github.com/AlexsJones/llmfit",
       "canonical_url": "github.com/alexsjones/llmfit",
       "company": null,
-      "stars": 198,
+      "stars": 258,
       "momentum": 12,
       "tags": [
         "rust"
@@ -6199,15 +6341,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-08-18",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 129,
-        "2026-08-18": 198
+        "2026-08-18": 198,
+        "2026-09-11": 258
       },
       "description": "Hundreds of models & providers. One command to find what runs on your hardware.",
       "trend": "up",
-      "trend_delta": 69
+      "trend_delta": 60
     },
     {
       "id": "github:ayghri/i-have-adhd",
@@ -6219,7 +6362,7 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "company": null,
-      "stars": 4650,
+      "stars": 3882,
       "momentum": 100,
       "tags": [
         "python"
@@ -6227,17 +6370,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1866,
         "2026-07-23": 1699,
         "2026-09-09": 656,
-        "2026-09-10": 4650
+        "2026-09-10": 4650,
+        "2026-09-11": 3882
       },
       "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
       "trend": "up",
-      "trend_delta": 2951
+      "trend_delta": 2183
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -12367,7 +12511,7 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "canonical_url": "github.com/diegosouzapw/omniroute",
       "company": null,
-      "stars": 1841,
+      "stars": 626,
       "momentum": 38,
       "tags": [
         "typescript"
@@ -12375,7 +12519,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-01",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-07-01": 387,
@@ -12384,11 +12528,12 @@
         "2026-07-22": 2034,
         "2026-07-23": 1651,
         "2026-07-24": 1929,
-        "2026-07-25": 1841
+        "2026-07-25": 1841,
+        "2026-09-11": 626
       },
       "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
-      "trend": "up",
-      "trend_delta": 831
+      "trend": "down",
+      "trend_delta": -1215
     },
     {
       "id": "github:CoreBunch/Instatic",
@@ -18297,7 +18442,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 688,
+      "stars": 732,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18305,7 +18450,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-11",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -18337,11 +18482,12 @@
         "2026-08-23": 592,
         "2026-09-04": 462,
         "2026-09-09": 452,
-        "2026-09-10": 688
+        "2026-09-10": 688,
+        "2026-09-11": 732
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 96
+      "trend_delta": 270
     },
     {
       "id": "github:openai/plugins",
