@@ -1,7 +1,196 @@
 {
-  "generated": "2026-09-11",
-  "count": 705,
+  "generated": "2026-09-12",
+  "count": 712,
   "items": [
+    {
+      "id": "github:nab138/iloader",
+      "name": "iloader",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nab138/iloader",
+      "canonical_url": "github.com/nab138/iloader",
+      "company": null,
+      "stars": 50,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 50
+      },
+      "description": "User friendly sideloader",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jordan-gibbs/hyperresearch",
+      "name": "hyperresearch",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jordan-gibbs/hyperresearch",
+      "canonical_url": "github.com/jordan-gibbs/hyperresearch",
+      "company": null,
+      "stars": 153,
+      "momentum": 15,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 153
+      },
+      "description": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Sonarr/Sonarr",
+      "name": "Sonarr",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Sonarr/Sonarr",
+      "canonical_url": "github.com/sonarr/sonarr",
+      "company": null,
+      "stars": 191,
+      "momentum": 19,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 191
+      },
+      "description": "Smart PVR for newsgroup and bittorrent users.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alphaXiv/OpenResearch",
+      "name": "OpenResearch",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "canonical_url": "github.com/alphaxiv/openresearch",
+      "company": null,
+      "stars": 120,
+      "momentum": 12,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 120
+      },
+      "description": "Run parallel research agents with any model",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:p1neappleXpress/OpenFlux",
+      "name": "OpenFlux",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/p1neappleXpress/OpenFlux",
+      "canonical_url": "github.com/p1neapplexpress/openflux",
+      "company": null,
+      "stars": 198,
+      "momentum": 19,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 198
+      },
+      "description": "Network stack research tool. TCP tunnel with pluggable transports.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jihe520/MathModelAgent",
+      "name": "MathModelAgent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jihe520/MathModelAgent",
+      "canonical_url": "github.com/jihe520/mathmodelagent",
+      "company": null,
+      "stars": 129,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 129
+      },
+      "description": "\ud83e\udd16\ud83d\udcd0\u4e13\u4e3a\u6570\u5b66\u5efa\u6a21\u8bbe\u8ba1\u7684 Agent & skills ,\u81ea\u52a8\u5b8c\u6210\u6570\u5b66\u5efa\u6a21\uff0c\u751f\u6210\u4e00\u4efd\u5b8c\u6574\u7684\u53ef\u4ee5\u76f4\u63a5\u63d0\u4ea4\u7684\u8bba\u6587\u3002 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:melgarafael/DeskcommCRM",
+      "name": "DeskcommCRM",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "canonical_url": "github.com/melgarafael/deskcommcrm",
+      "company": null,
+      "stars": 152,
+      "momentum": 15,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-12": 152
+      },
+      "description": "Open-source AI sales OS \u2014 self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:vercel-labs/skills",
       "name": "skills",
@@ -39,7 +228,7 @@
       "url": "https://github.com/nashsu/llm_wiki",
       "canonical_url": "github.com/nashsu/llm_wiki",
       "company": null,
-      "stars": 142,
+      "stars": 647,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -47,14 +236,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
-        "2026-09-11": 142
+        "2026-09-11": 142,
+        "2026-09-12": 647
       },
       "description": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base \u2014 automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources\u3002",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 505
     },
     {
       "id": "github:JustVugg/colibri",
@@ -93,7 +283,7 @@
       "url": "https://github.com/armory3d/armorpaint",
       "canonical_url": "github.com/armory3d/armorpaint",
       "company": null,
-      "stars": 72,
+      "stars": 350,
       "momentum": 7,
       "tags": [
         "c"
@@ -101,14 +291,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
-        "2026-09-11": 72
+        "2026-09-11": 72,
+        "2026-09-12": 350
       },
       "description": "Graphics Creation Tools",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 278
     },
     {
       "id": "github:alsk1992/CloddsBot",
@@ -120,7 +311,7 @@
       "url": "https://github.com/alsk1992/CloddsBot",
       "canonical_url": "github.com/alsk1992/cloddsbot",
       "company": null,
-      "stars": 277,
+      "stars": 626,
       "momentum": 27,
       "tags": [
         "typescript"
@@ -128,14 +319,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
-        "2026-09-11": 277
+        "2026-09-11": 277,
+        "2026-09-12": 626
       },
       "description": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 349
     },
     {
       "id": "github:Tencent/teamai-cli",
@@ -175,7 +367,7 @@
       "url": "https://github.com/vastsa/PI-Desktop",
       "canonical_url": "github.com/vastsa/pi-desktop",
       "company": null,
-      "stars": 624,
+      "stars": 552,
       "momentum": 41,
       "tags": [
         "typescript"
@@ -183,15 +375,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-09-10": 417,
-        "2026-09-11": 624
+        "2026-09-11": 624,
+        "2026-09-12": 552
       },
       "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
       "trend": "up",
-      "trend_delta": 207
+      "trend_delta": 135
     },
     {
       "id": "github:liquidslr/system-design-notes",
@@ -1514,7 +1707,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 1762,
+      "stars": 3680,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -1522,17 +1715,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
         "2026-08-29": 3829,
         "2026-08-30": 1855,
-        "2026-09-11": 1762
+        "2026-09-11": 1762,
+        "2026-09-12": 3680
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "trend": "down",
-      "trend_delta": -93
+      "trend": "up",
+      "trend_delta": 1825
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -5470,7 +5664,7 @@
       "url": "https://github.com/pascalorg/editor",
       "canonical_url": "github.com/pascalorg/editor",
       "company": null,
-      "stars": 107,
+      "stars": 106,
       "momentum": 34,
       "tags": [
         "typescript"
@@ -5478,18 +5672,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-29",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-07-29": 341,
         "2026-07-30": 1022,
         "2026-07-31": 625,
         "2026-09-08": 168,
-        "2026-09-10": 107
+        "2026-09-10": 107,
+        "2026-09-12": 106
       },
       "description": "Create and share 3D architectural projects.",
       "trend": "down",
-      "trend_delta": -518
+      "trend_delta": -519
     },
     {
       "id": "github:virgiliojr94/book-to-skill",
@@ -6362,7 +6557,7 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "company": null,
-      "stars": 3882,
+      "stars": 3463,
       "momentum": 100,
       "tags": [
         "python"
@@ -6370,18 +6565,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1866,
         "2026-07-23": 1699,
         "2026-09-09": 656,
         "2026-09-10": 4650,
-        "2026-09-11": 3882
+        "2026-09-11": 3882,
+        "2026-09-12": 3463
       },
       "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
       "trend": "up",
-      "trend_delta": 2183
+      "trend_delta": 1764
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -18442,7 +18638,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 732,
+      "stars": 729,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18450,7 +18646,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -18483,11 +18679,12 @@
         "2026-09-04": 462,
         "2026-09-09": 452,
         "2026-09-10": 688,
-        "2026-09-11": 732
+        "2026-09-11": 732,
+        "2026-09-12": 729
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 270
+      "trend_delta": 267
     },
     {
       "id": "github:openai/plugins",
@@ -18867,7 +19064,7 @@
       "url": "https://github.com/github/spec-kit",
       "canonical_url": "github.com/github/spec-kit",
       "company": null,
-      "stars": 892,
+      "stars": 1015,
       "momentum": 31,
       "tags": [
         "python"
@@ -18875,18 +19072,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-09-12",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 311,
         "2026-06-05": 321,
         "2026-07-14": 543,
         "2026-08-15": 1160,
-        "2026-08-16": 892
+        "2026-08-16": 892,
+        "2026-09-12": 1015
       },
       "description": "\ud83d\udcab Toolkit to help you get started with Spec-Driven Development",
       "trend": "up",
-      "trend_delta": 349
+      "trend_delta": 123
     },
     {
       "id": "github:openclaw/openclaw-windows-node",
