@@ -1,7 +1,223 @@
 {
-  "generated": "2026-09-12",
-  "count": 712,
+  "generated": "2026-09-13",
+  "count": 720,
   "items": [
+    {
+      "id": "github:tonhowtf/omniget",
+      "name": "omniget",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tonhowtf/omniget",
+      "canonical_url": "github.com/tonhowtf/omniget",
+      "company": null,
+      "stars": 839,
+      "momentum": 83,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 839
+      },
+      "description": "Download Udemy and Hotmart courses, YouTube videos, music and books \u2014 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ever-co/ever-gauzy",
+      "name": "ever-gauzy",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ever-co/ever-gauzy",
+      "canonical_url": "github.com/ever-co/ever-gauzy",
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 58
+      },
+      "description": "Ever\u00ae Gauzy\u2122 - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jiji262/douyin-downloader",
+      "name": "douyin-downloader",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jiji262/douyin-downloader",
+      "canonical_url": "github.com/jiji262/douyin-downloader",
+      "company": null,
+      "stars": 473,
+      "momentum": 47,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 473
+      },
+      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. \u6296\u97f3\u6279\u91cf\u4e0b\u8f7d\u5de5\u5177\uff0c\u53bb\u6c34\u5370\uff0c\u652f\u6301\u89c6\u9891\u3001\u56fe\u96c6\u3001\u5408\u96c6\u3001\u97f3\u4e50(\u539f\u58f0)\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Swordfish90/cool-retro-term",
+      "name": "cool-retro-term",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Swordfish90/cool-retro-term",
+      "canonical_url": "github.com/swordfish90/cool-retro-term",
+      "company": null,
+      "stars": 98,
+      "momentum": 9,
+      "tags": [
+        "qml"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 98
+      },
+      "description": "A good looking terminal emulator which mimics the old cathode display...",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tech-leads-club/agent-skills",
+      "name": "agent-skills",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tech-leads-club/agent-skills",
+      "canonical_url": "github.com/tech-leads-club/agent-skills",
+      "company": null,
+      "stars": 215,
+      "momentum": 21,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 215
+      },
+      "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:multimodal-art-projection/YuE",
+      "name": "YuE",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "canonical_url": "github.com/multimodal-art-projection/yue",
+      "company": null,
+      "stars": 210,
+      "momentum": 21,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 210
+      },
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:yuliskov/SmartTube",
+      "name": "SmartTube",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/yuliskov/SmartTube",
+      "canonical_url": "github.com/yuliskov/smarttube",
+      "company": null,
+      "stars": 136,
+      "momentum": 13,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 136
+      },
+      "description": "Browse media content with your own rules on Android TV",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:SnailSploit/Claude-Red",
+      "name": "Claude-Red",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "canonical_url": "github.com/snailsploit/claude-red",
+      "company": null,
+      "stars": 113,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-13": 113
+      },
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface \u2014 from SQLi to shellcode, EDR evasion to exploit development.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:nab138/iloader",
       "name": "iloader",
@@ -93,7 +309,7 @@
       "url": "https://github.com/alphaXiv/OpenResearch",
       "canonical_url": "github.com/alphaxiv/openresearch",
       "company": null,
-      "stars": 120,
+      "stars": 452,
       "momentum": 12,
       "tags": [
         "rust"
@@ -101,14 +317,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-09-12": 120
+        "2026-09-12": 120,
+        "2026-09-13": 452
       },
       "description": "Run parallel research agents with any model",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 332
     },
     {
       "id": "github:p1neappleXpress/OpenFlux",
@@ -147,7 +364,7 @@
       "url": "https://github.com/jihe520/MathModelAgent",
       "canonical_url": "github.com/jihe520/mathmodelagent",
       "company": null,
-      "stars": 129,
+      "stars": 262,
       "momentum": 12,
       "tags": [
         "python"
@@ -155,14 +372,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-09-12": 129
+        "2026-09-12": 129,
+        "2026-09-13": 262
       },
       "description": "\ud83e\udd16\ud83d\udcd0\u4e13\u4e3a\u6570\u5b66\u5efa\u6a21\u8bbe\u8ba1\u7684 Agent & skills ,\u81ea\u52a8\u5b8c\u6210\u6570\u5b66\u5efa\u6a21\uff0c\u751f\u6210\u4e00\u4efd\u5b8c\u6574\u7684\u53ef\u4ee5\u76f4\u63a5\u63d0\u4ea4\u7684\u8bba\u6587\u3002 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 133
     },
     {
       "id": "github:melgarafael/DeskcommCRM",
@@ -174,7 +392,7 @@
       "url": "https://github.com/melgarafael/DeskcommCRM",
       "canonical_url": "github.com/melgarafael/deskcommcrm",
       "company": null,
-      "stars": 152,
+      "stars": 504,
       "momentum": 15,
       "tags": [
         "typescript"
@@ -182,14 +400,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-09-12": 152
+        "2026-09-12": 152,
+        "2026-09-13": 504
       },
       "description": "Open-source AI sales OS \u2014 self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 352
     },
     {
       "id": "github:vercel-labs/skills",
@@ -256,7 +475,7 @@
       "url": "https://github.com/JustVugg/colibri",
       "canonical_url": "github.com/justvugg/colibri",
       "company": null,
-      "stars": 98,
+      "stars": 652,
       "momentum": 9,
       "tags": [
         "c"
@@ -264,14 +483,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-09-11": 98
+        "2026-09-11": 98,
+        "2026-09-13": 652
       },
       "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 554
     },
     {
       "id": "github:armory3d/armorpaint",
@@ -1063,7 +1283,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 1345,
+      "stars": 2546,
       "momentum": 83,
       "tags": [
         "python"
@@ -1071,16 +1291,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
         "2026-09-04": 1672,
-        "2026-09-05": 1345
+        "2026-09-05": 1345,
+        "2026-09-13": 2546
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 513
+      "trend_delta": 1201
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -1707,7 +1928,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 3680,
+      "stars": 2265,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -1715,18 +1936,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
         "2026-08-29": 3829,
         "2026-08-30": 1855,
         "2026-09-11": 1762,
-        "2026-09-12": 3680
+        "2026-09-12": 3680,
+        "2026-09-13": 2265
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
       "trend": "up",
-      "trend_delta": 1825
+      "trend_delta": 410
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -3787,7 +4009,7 @@
       "url": "https://github.com/huggingface/transformers",
       "canonical_url": "github.com/huggingface/transformers",
       "company": "Hugging Face",
-      "stars": 80,
+      "stars": 102,
       "momentum": 8,
       "tags": [
         "python"
@@ -3795,14 +4017,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-08-12": 80
+        "2026-08-12": 80,
+        "2026-09-13": 102
       },
       "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 22
     },
     {
       "id": "github:practical-tutorials/project-based-learning",
@@ -6149,7 +6372,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 359,
+      "stars": 264,
       "momentum": 18,
       "tags": [
         "go"
@@ -6157,18 +6380,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
         "2026-07-26": 431,
         "2026-07-27": 832,
         "2026-07-28": 979,
-        "2026-07-30": 359
+        "2026-07-30": 359,
+        "2026-09-13": 264
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "trend": "up",
-      "trend_delta": 179
+      "trend": "down",
+      "trend_delta": -95
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -10195,7 +10419,7 @@
       "url": "https://github.com/vxcontrol/pentagi",
       "canonical_url": "github.com/vxcontrol/pentagi",
       "company": null,
-      "stars": 535,
+      "stars": 189,
       "momentum": 53,
       "tags": [
         "go"
@@ -10203,14 +10427,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
-        "2026-07-10": 535
+        "2026-07-10": 535,
+        "2026-09-13": 189
       },
       "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -346
     },
     {
       "id": "github:unclecode/crawl4ai",
@@ -15690,7 +15915,7 @@
       "url": "https://github.com/asgeirtj/system_prompts_leaks",
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "company": null,
-      "stars": 1125,
+      "stars": 217,
       "momentum": 35,
       "tags": [
         "javascript"
@@ -15698,7 +15923,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-07-10",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 352,
@@ -15707,11 +15932,12 @@
         "2026-07-07": 1378,
         "2026-07-08": 1691,
         "2026-07-09": 1218,
-        "2026-07-10": 1125
+        "2026-07-10": 1125,
+        "2026-09-13": 217
       },
       "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
-      "trend": "up",
-      "trend_delta": 773
+      "trend": "down",
+      "trend_delta": -908
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -16690,7 +16916,7 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "canonical_url": "github.com/calesthio/openmontage",
       "company": null,
-      "stars": 806,
+      "stars": 383,
       "momentum": 7,
       "tags": [
         "python"
@@ -16698,7 +16924,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-13",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -16715,11 +16941,12 @@
         "2026-08-27": 1284,
         "2026-08-28": 1144,
         "2026-08-29": 1144,
-        "2026-08-30": 806
+        "2026-08-30": 806,
+        "2026-09-13": 383
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
-      "trend": "up",
-      "trend_delta": 348
+      "trend": "down",
+      "trend_delta": -423
     },
     {
       "id": "github:alibaba/zvec",
