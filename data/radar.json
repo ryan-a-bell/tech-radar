@@ -1,7 +1,61 @@
 {
-  "generated": "2026-09-13",
-  "count": 720,
+  "generated": "2026-09-14",
+  "count": 722,
   "items": [
+    {
+      "id": "github:peetzweg/opendisplay",
+      "name": "opendisplay",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/peetzweg/opendisplay",
+      "canonical_url": "github.com/peetzweg/opendisplay",
+      "company": null,
+      "stars": 314,
+      "momentum": 31,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-14": 314
+      },
+      "description": "Free, open-source Sidecar/Duet alternative \u2014 use your iPhone or iPad as a true second monitor for your Mac over USB or WiFi. Low latency H.264, Retina HiDPI, touch input.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:rlaope/oh-my-hermes",
+      "name": "oh-my-hermes",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rlaope/oh-my-hermes",
+      "canonical_url": "github.com/rlaope/oh-my-hermes",
+      "company": null,
+      "stars": 52,
+      "momentum": 5,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-14": 52
+      },
+      "description": "All in one plugin for Hermes Agent \u269a the coding intelligence, a long-term memory system and model optimized workflow packages",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:tonhowtf/omniget",
       "name": "omniget",
@@ -39,7 +93,7 @@
       "url": "https://github.com/ever-co/ever-gauzy",
       "canonical_url": "github.com/ever-co/ever-gauzy",
       "company": null,
-      "stars": 58,
+      "stars": 191,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -47,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
-        "2026-09-13": 58
+        "2026-09-13": 58,
+        "2026-09-14": 191
       },
       "description": "Ever\u00ae Gauzy\u2122 - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 133
     },
     {
       "id": "github:jiji262/douyin-downloader",
@@ -120,7 +175,7 @@
       "url": "https://github.com/tech-leads-club/agent-skills",
       "canonical_url": "github.com/tech-leads-club/agent-skills",
       "company": null,
-      "stars": 215,
+      "stars": 265,
       "momentum": 21,
       "tags": [
         "typescript"
@@ -128,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
-        "2026-09-13": 215
+        "2026-09-13": 215,
+        "2026-09-14": 265
       },
       "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 50
     },
     {
       "id": "github:multimodal-art-projection/YuE",
@@ -147,7 +203,7 @@
       "url": "https://github.com/multimodal-art-projection/YuE",
       "canonical_url": "github.com/multimodal-art-projection/yue",
       "company": null,
-      "stars": 210,
+      "stars": 487,
       "momentum": 21,
       "tags": [
         "python"
@@ -155,14 +211,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
-        "2026-09-13": 210
+        "2026-09-13": 210,
+        "2026-09-14": 487
       },
       "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 277
     },
     {
       "id": "github:yuliskov/SmartTube",
@@ -201,7 +258,7 @@
       "url": "https://github.com/SnailSploit/Claude-Red",
       "canonical_url": "github.com/snailsploit/claude-red",
       "company": null,
-      "stars": 113,
+      "stars": 506,
       "momentum": 11,
       "tags": [
         "python"
@@ -209,14 +266,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
-        "2026-09-13": 113
+        "2026-09-13": 113,
+        "2026-09-14": 506
       },
       "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface \u2014 from SQLi to shellcode, EDR evasion to exploit development.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 393
     },
     {
       "id": "github:nab138/iloader",
@@ -475,7 +533,7 @@
       "url": "https://github.com/JustVugg/colibri",
       "canonical_url": "github.com/justvugg/colibri",
       "company": null,
-      "stars": 652,
+      "stars": 868,
       "momentum": 9,
       "tags": [
         "c"
@@ -483,15 +541,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-09-11": 98,
-        "2026-09-13": 652
+        "2026-09-13": 652,
+        "2026-09-14": 868
       },
       "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
       "trend": "up",
-      "trend_delta": 554
+      "trend_delta": 770
     },
     {
       "id": "github:armory3d/armorpaint",
@@ -1283,7 +1342,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 2546,
+      "stars": 2632,
       "momentum": 83,
       "tags": [
         "python"
@@ -1291,17 +1350,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
         "2026-09-04": 1672,
         "2026-09-05": 1345,
-        "2026-09-13": 2546
+        "2026-09-13": 2546,
+        "2026-09-14": 2632
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 1201
+      "trend_delta": 1287
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -2524,7 +2584,7 @@
       "url": "https://github.com/dani-garcia/vaultwarden",
       "canonical_url": "github.com/dani-garcia/vaultwarden",
       "company": null,
-      "stars": 175,
+      "stars": 110,
       "momentum": 7,
       "tags": [
         "rust"
@@ -2532,15 +2592,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-25",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-08-24": 78,
-        "2026-08-25": 175
+        "2026-08-25": 175,
+        "2026-09-14": 110
       },
       "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
-      "trend": "up",
-      "trend_delta": 97
+      "trend": "down",
+      "trend_delta": -65
     },
     {
       "id": "github:tinyhumansai/openhuman",
@@ -3872,13 +3933,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
-        "2026-08-13": 213
+        "2026-08-13": 213,
+        "2026-09-14": 213
       },
       "description": "An open-source cross-platform alternative to AirDrop",
-      "trend": "none",
+      "trend": "flat",
       "trend_delta": 0
     },
     {
@@ -4009,7 +4071,7 @@
       "url": "https://github.com/huggingface/transformers",
       "canonical_url": "github.com/huggingface/transformers",
       "company": "Hugging Face",
-      "stars": 102,
+      "stars": 152,
       "momentum": 8,
       "tags": [
         "python"
@@ -4017,15 +4079,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 80,
-        "2026-09-13": 102
+        "2026-09-13": 102,
+        "2026-09-14": 152
       },
       "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
       "trend": "up",
-      "trend_delta": 22
+      "trend_delta": 72
     },
     {
       "id": "github:practical-tutorials/project-based-learning",
@@ -6372,7 +6435,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 264,
+      "stars": 443,
       "momentum": 18,
       "tags": [
         "go"
@@ -6380,7 +6443,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -6388,11 +6451,12 @@
         "2026-07-27": 832,
         "2026-07-28": 979,
         "2026-07-30": 359,
-        "2026-09-13": 264
+        "2026-09-13": 264,
+        "2026-09-14": 443
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "trend": "down",
-      "trend_delta": -95
+      "trend": "up",
+      "trend_delta": 84
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -12248,7 +12312,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-14",
       "also_seen": [
         {
           "source": "GitHub",
@@ -15915,7 +15979,7 @@
       "url": "https://github.com/asgeirtj/system_prompts_leaks",
       "canonical_url": "github.com/asgeirtj/system_prompts_leaks",
       "company": null,
-      "stars": 217,
+      "stars": 706,
       "momentum": 35,
       "tags": [
         "javascript"
@@ -15923,7 +15987,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 352,
@@ -15933,11 +15997,12 @@
         "2026-07-08": 1691,
         "2026-07-09": 1218,
         "2026-07-10": 1125,
-        "2026-09-13": 217
+        "2026-09-13": 217,
+        "2026-09-14": 706
       },
       "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
       "trend": "down",
-      "trend_delta": -908
+      "trend_delta": -419
     },
     {
       "id": "github:smicallef/spiderfoot",
@@ -18056,7 +18121,7 @@
       "url": "https://github.com/ruvnet/RuView",
       "canonical_url": "github.com/ruvnet/ruview",
       "company": null,
-      "stars": 154,
+      "stars": 370,
       "momentum": 43,
       "tags": [
         "rust"
@@ -18064,7 +18129,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 439,
@@ -18076,11 +18141,12 @@
         "2026-07-23": 741,
         "2026-07-24": 1708,
         "2026-07-25": 1022,
-        "2026-08-11": 154
+        "2026-08-11": 154,
+        "2026-09-14": 370
       },
       "description": "\u03c0 RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection \u2014 all without a single pixel of video.",
-      "trend": "down",
-      "trend_delta": -868
+      "trend": "up",
+      "trend_delta": 216
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -18544,7 +18610,7 @@
       "url": "https://github.com/Crosstalk-Solutions/project-nomad",
       "canonical_url": "github.com/crosstalk-solutions/project-nomad",
       "company": null,
-      "stars": 125,
+      "stars": 26,
       "momentum": 30,
       "tags": [
         "typescript"
@@ -18552,16 +18618,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-07",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-07": 304,
         "2026-06-08": 309,
-        "2026-07-13": 125
+        "2026-07-13": 125,
+        "2026-09-14": 26
       },
       "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered\u2014anytime, anywhere.",
       "trend": "down",
-      "trend_delta": -184
+      "trend_delta": -99
     },
     {
       "id": "github:microsoft/pg_durable",
@@ -19196,7 +19263,7 @@
       "url": "https://github.com/666ghj/MiroFish",
       "canonical_url": "github.com/666ghj/mirofish",
       "company": null,
-      "stars": 141,
+      "stars": 524,
       "momentum": 32,
       "tags": [
         "python"
@@ -19204,15 +19271,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-08",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 320,
-        "2026-08-08": 141
+        "2026-08-08": 141,
+        "2026-09-14": 524
       },
       "description": "A Simple and Universal Swarm Intelligence Engine, Predicting Anything. \u7b80\u6d01\u901a\u7528\u7684\u7fa4\u4f53\u667a\u80fd\u5f15\u64ce\uff0c\u9884\u6d4b\u4e07\u7269",
-      "trend": "down",
-      "trend_delta": -179
+      "trend": "up",
+      "trend_delta": 383
     },
     {
       "id": "github:CopilotKit/CopilotKit",
@@ -19254,7 +19322,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 1057,
+      "stars": 640,
       "momentum": 14,
       "tags": [
         "python"
@@ -19262,7 +19330,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-08-04",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -19275,11 +19343,12 @@
         "2026-06-18": 1161,
         "2026-06-27": 1194,
         "2026-08-03": 659,
-        "2026-08-04": 1057
+        "2026-08-04": 1057,
+        "2026-09-14": 640
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
       "trend": "down",
-      "trend_delta": -137
+      "trend_delta": -417
     },
     {
       "id": "github:github/spec-kit",
@@ -19816,7 +19885,7 @@
       "url": "https://github.com/reconurge/flowsint",
       "canonical_url": "github.com/reconurge/flowsint",
       "company": null,
-      "stars": 308,
+      "stars": 279,
       "momentum": 50,
       "tags": [
         "typescript"
@@ -19824,16 +19893,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-05",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 509,
         "2026-06-04": 308,
-        "2026-06-05": 308
+        "2026-06-05": 308,
+        "2026-09-14": 279
       },
       "description": "A modern platform for visual, flexible, and extensible graph-based investigations. For cybersecurity analysts and investigators.",
       "trend": "down",
-      "trend_delta": -201
+      "trend_delta": -29
     },
     {
       "id": "github:jwasham/coding-interview-university",
@@ -19910,7 +19980,7 @@
       "url": "https://github.com/OpenBMB/VoxCPM",
       "canonical_url": "github.com/openbmb/voxcpm",
       "company": null,
-      "stars": 408,
+      "stars": 204,
       "momentum": 71,
       "tags": [
         "python"
@@ -19918,16 +19988,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-17",
+      "last_seen": "2026-09-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 713,
         "2026-06-16": 413,
-        "2026-06-17": 408
+        "2026-06-17": 408,
+        "2026-09-14": 204
       },
       "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
       "trend": "down",
-      "trend_delta": -305
+      "trend_delta": -204
     },
     {
       "id": "github:HKUDS/Vibe-Trading",
