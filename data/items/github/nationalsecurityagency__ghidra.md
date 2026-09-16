@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/NationalSecurityAgency/ghidra
 canonical_url: github.com/nationalsecurityagency/ghidra
 company: null
-stars: 191
+stars: 725
 momentum: 20
 tags: ["java"]
 topics: []
 archived_at: null
 first_seen: 2026-08-28
-last_seen: 2026-08-29
+last_seen: 2026-09-16
 also_seen: []
-stars_history: {"2026-08-28": 205, "2026-08-29": 191}
+stars_history: {"2026-08-28": 205, "2026-08-29": 191, "2026-09-16": 725}
 ---
 
 Ghidra is a software reverse engineering (SRE) framework
