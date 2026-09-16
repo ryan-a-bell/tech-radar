@@ -1,7 +1,115 @@
 {
-  "generated": "2026-09-15",
-  "count": 722,
+  "generated": "2026-09-16",
+  "count": 726,
   "items": [
+    {
+      "id": "github:earendil-works/pi",
+      "name": "pi",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/earendil-works/pi",
+      "canonical_url": "github.com/earendil-works/pi",
+      "company": null,
+      "stars": 458,
+      "momentum": 45,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-16": 458
+      },
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:danny-avila/LibreChat",
+      "name": "LibreChat",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/danny-avila/LibreChat",
+      "canonical_url": "github.com/danny-avila/librechat",
+      "company": null,
+      "stars": 254,
+      "momentum": 25,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-16": 254
+      },
+      "description": "Enhanced ChatGPT Clone: Features Agents, MCP, Skills, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Homebrew/BrewUI",
+      "name": "BrewUI",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Homebrew/BrewUI",
+      "canonical_url": "github.com/homebrew/brewui",
+      "company": null,
+      "stars": 271,
+      "momentum": 27,
+      "tags": [
+        "swift"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-16": 271
+      },
+      "description": "\ud83d\udcfa Homebrew's official macOS GUI",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MG1937/ASC",
+      "name": "ASC",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MG1937/ASC",
+      "canonical_url": "github.com/mg1937/asc",
+      "company": null,
+      "stars": 129,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-16": 129
+      },
+      "description": "ASC is a super FAST Android decompiler front-end designed for Agents/Mobile Researchers.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:peetzweg/opendisplay",
       "name": "opendisplay",
@@ -68,7 +176,7 @@
       "url": "https://github.com/tonhowtf/omniget",
       "canonical_url": "github.com/tonhowtf/omniget",
       "company": null,
-      "stars": 839,
+      "stars": 258,
       "momentum": 83,
       "tags": [
         "rust"
@@ -76,14 +184,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
-        "2026-09-13": 839
+        "2026-09-13": 839,
+        "2026-09-16": 258
       },
       "description": "Download Udemy and Hotmart courses, YouTube videos, music and books \u2014 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -581
     },
     {
       "id": "github:ever-co/ever-gauzy",
@@ -95,7 +204,7 @@
       "url": "https://github.com/ever-co/ever-gauzy",
       "canonical_url": "github.com/ever-co/ever-gauzy",
       "company": null,
-      "stars": 1130,
+      "stars": 634,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -103,16 +212,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-13": 58,
         "2026-09-14": 191,
-        "2026-09-15": 1130
+        "2026-09-15": 1130,
+        "2026-09-16": 634
       },
       "description": "Ever\u00ae Gauzy\u2122 - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
       "trend": "up",
-      "trend_delta": 1072
+      "trend_delta": 576
     },
     {
       "id": "github:jiji262/douyin-downloader",
@@ -373,7 +483,7 @@
       "url": "https://github.com/alphaXiv/OpenResearch",
       "canonical_url": "github.com/alphaxiv/openresearch",
       "company": null,
-      "stars": 452,
+      "stars": 531,
       "momentum": 12,
       "tags": [
         "rust"
@@ -381,15 +491,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-12": 120,
-        "2026-09-13": 452
+        "2026-09-13": 452,
+        "2026-09-16": 531
       },
       "description": "Run parallel research agents with any model",
       "trend": "up",
-      "trend_delta": 332
+      "trend_delta": 411
     },
     {
       "id": "github:p1neappleXpress/OpenFlux",
@@ -456,7 +567,7 @@
       "url": "https://github.com/melgarafael/DeskcommCRM",
       "canonical_url": "github.com/melgarafael/deskcommcrm",
       "company": null,
-      "stars": 504,
+      "stars": 193,
       "momentum": 15,
       "tags": [
         "typescript"
@@ -464,15 +575,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-12": 152,
-        "2026-09-13": 504
+        "2026-09-13": 504,
+        "2026-09-16": 193
       },
       "description": "Open-source AI sales OS \u2014 self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
       "trend": "up",
-      "trend_delta": 352
+      "trend_delta": 41
     },
     {
       "id": "github:vercel-labs/skills",
@@ -539,7 +651,7 @@
       "url": "https://github.com/JustVugg/colibri",
       "canonical_url": "github.com/justvugg/colibri",
       "company": null,
-      "stars": 2173,
+      "stars": 2026,
       "momentum": 9,
       "tags": [
         "c"
@@ -547,17 +659,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-11": 98,
         "2026-09-13": 652,
         "2026-09-14": 868,
-        "2026-09-15": 2173
+        "2026-09-15": 2173,
+        "2026-09-16": 2026
       },
       "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
       "trend": "up",
-      "trend_delta": 2075
+      "trend_delta": 1928
     },
     {
       "id": "github:armory3d/armorpaint",
@@ -1322,7 +1435,7 @@
       "url": "https://github.com/pacifio/atlas",
       "canonical_url": "github.com/pacifio/atlas",
       "company": null,
-      "stars": 888,
+      "stars": 91,
       "momentum": 88,
       "tags": [
         "rust"
@@ -1330,14 +1443,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
-        "2026-09-03": 888
+        "2026-09-03": 888,
+        "2026-09-16": 91
       },
       "description": "Source control for agents. Use multiple coding agents, track their changes and query them in one place",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -797
     },
     {
       "id": "github:debpalash/VoiceStudio",
@@ -1349,7 +1463,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 2776,
+      "stars": 2072,
       "momentum": 83,
       "tags": [
         "python"
@@ -1357,7 +1471,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -1365,11 +1479,12 @@
         "2026-09-05": 1345,
         "2026-09-13": 2546,
         "2026-09-14": 2632,
-        "2026-09-15": 2776
+        "2026-09-15": 2776,
+        "2026-09-16": 2072
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 1431
+      "trend_delta": 727
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -2028,7 +2143,7 @@
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "canonical_url": "github.com/nationalsecurityagency/ghidra",
       "company": null,
-      "stars": 191,
+      "stars": 725,
       "momentum": 20,
       "tags": [
         "java"
@@ -2036,15 +2151,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 205,
-        "2026-08-29": 191
+        "2026-08-29": 191,
+        "2026-09-16": 725
       },
       "description": "Ghidra is a software reverse engineering (SRE) framework",
-      "trend": "down",
-      "trend_delta": -14
+      "trend": "up",
+      "trend_delta": 534
     },
     {
       "id": "github:abhigyanpatwari/GitNexus",
@@ -6446,7 +6562,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 1571,
+      "stars": 2756,
       "momentum": 18,
       "tags": [
         "go"
@@ -6454,7 +6570,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -6464,11 +6580,12 @@
         "2026-07-30": 359,
         "2026-09-13": 264,
         "2026-09-14": 443,
-        "2026-09-15": 1571
+        "2026-09-15": 1571,
+        "2026-09-16": 2756
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 1212
+      "trend_delta": 2397
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -18324,7 +18441,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 264,
+      "stars": 307,
       "momentum": 34,
       "tags": [
         "shell"
@@ -18332,7 +18449,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -18354,11 +18471,12 @@
         "2026-08-11": 659,
         "2026-08-12": 578,
         "2026-08-30": 196,
-        "2026-09-04": 264
+        "2026-09-04": 264,
+        "2026-09-16": 307
       },
       "description": "Production-grade engineering skills for AI coding agents.",
-      "trend": "down",
-      "trend_delta": -314
+      "trend": "up",
+      "trend_delta": 43
     },
     {
       "id": "github:Andyyyy64/whichllm",
