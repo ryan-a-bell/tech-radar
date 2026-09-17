@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/JustVugg/colibri
 canonical_url: github.com/justvugg/colibri
 company: null
-stars: 2026
+stars: 1546
 momentum: 9
 tags: ["c"]
 topics: []
 archived_at: null
 first_seen: 2026-09-11
-last_seen: 2026-09-16
+last_seen: 2026-09-17
 also_seen: []
-stars_history: {"2026-09-11": 98, "2026-09-13": 652, "2026-09-14": 868, "2026-09-15": 2173, "2026-09-16": 2026}
+stars_history: {"2026-09-11": 98, "2026-09-13": 652, "2026-09-14": 868, "2026-09-15": 2173, "2026-09-16": 2026, "2026-09-17": 1546}
 ---
 
 Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦
