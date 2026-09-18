@@ -1,7 +1,115 @@
 {
-  "generated": "2026-09-17",
-  "count": 733,
+  "generated": "2026-09-18",
+  "count": 737,
   "items": [
+    {
+      "id": "github:coder/coder",
+      "name": "coder",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/coder/coder",
+      "canonical_url": "github.com/coder/coder",
+      "company": null,
+      "stars": 145,
+      "momentum": 14,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-18": 145
+      },
+      "description": "Secure environments for developers and their agents",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cilium/cilium",
+      "name": "cilium",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cilium/cilium",
+      "canonical_url": "github.com/cilium/cilium",
+      "company": null,
+      "stars": 111,
+      "momentum": 11,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-18": 111
+      },
+      "description": "eBPF-based Networking, Security, and Observability",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TencentCloud/Octop",
+      "name": "Octop",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TencentCloud/Octop",
+      "canonical_url": "github.com/tencentcloud/octop",
+      "company": null,
+      "stars": 367,
+      "momentum": 36,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-18": 367
+      },
+      "description": "A smarter, self-hosted AI assistant \u2014 multi-user, multi-agent.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Tencent/BrowserSkill",
+      "name": "BrowserSkill",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "canonical_url": "github.com/tencent/browserskill",
+      "company": null,
+      "stars": 1302,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-18": 1302
+      },
+      "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Lakr233/vphone-cli",
       "name": "vphone-cli",
@@ -39,7 +147,7 @@
       "url": "https://github.com/abue-ammar/tinycast",
       "canonical_url": "github.com/abue-ammar/tinycast",
       "company": null,
-      "stars": 1179,
+      "stars": 739,
       "momentum": 100,
       "tags": [
         "swift"
@@ -47,14 +155,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 1179
+        "2026-09-17": 1179,
+        "2026-09-18": 739
       },
       "description": "Tinycast \u2014 a tiny, fully native macOS launcher, hotkeys, and clipboard history.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -440
     },
     {
       "id": "github:cloudflare/security-audit-skill",
@@ -66,7 +175,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 927,
+      "stars": 3607,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -74,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 927
+        "2026-09-17": 927,
+        "2026-09-18": 3607
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2680
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -93,7 +203,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 110,
+      "stars": 287,
       "momentum": 11,
       "tags": [
         "python"
@@ -101,14 +211,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 110
+        "2026-09-17": 110,
+        "2026-09-18": 287
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 177
     },
     {
       "id": "github:cline/cline",
@@ -120,7 +231,7 @@
       "url": "https://github.com/cline/cline",
       "canonical_url": "github.com/cline/cline",
       "company": null,
-      "stars": 112,
+      "stars": 380,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -128,14 +239,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 112
+        "2026-09-17": 112,
+        "2026-09-18": 380
       },
       "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 268
     },
     {
       "id": "github:ankitects/anki",
@@ -174,7 +286,7 @@
       "url": "https://github.com/Tencent/WeKnora",
       "canonical_url": "github.com/tencent/weknora",
       "company": null,
-      "stars": 1197,
+      "stars": 1125,
       "momentum": 100,
       "tags": [
         "go"
@@ -182,14 +294,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 1197
+        "2026-09-17": 1197,
+        "2026-09-18": 1125
       },
       "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -72
     },
     {
       "id": "github:earendil-works/pi",
@@ -394,7 +507,7 @@
       "url": "https://github.com/ever-co/ever-gauzy",
       "canonical_url": "github.com/ever-co/ever-gauzy",
       "company": null,
-      "stars": 778,
+      "stars": 470,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -402,18 +515,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-13",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-09-13": 58,
         "2026-09-14": 191,
         "2026-09-15": 1130,
         "2026-09-16": 634,
-        "2026-09-17": 778
+        "2026-09-17": 778,
+        "2026-09-18": 470
       },
       "description": "Ever\u00ae Gauzy\u2122 - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
       "trend": "up",
-      "trend_delta": 720
+      "trend_delta": 412
     },
     {
       "id": "github:jiji262/douyin-downloader",
@@ -676,7 +790,7 @@
       "url": "https://github.com/alphaXiv/OpenResearch",
       "canonical_url": "github.com/alphaxiv/openresearch",
       "company": null,
-      "stars": 1017,
+      "stars": 939,
       "momentum": 12,
       "tags": [
         "rust"
@@ -684,17 +798,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-12",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-09-12": 120,
         "2026-09-13": 452,
         "2026-09-16": 531,
-        "2026-09-17": 1017
+        "2026-09-17": 1017,
+        "2026-09-18": 939
       },
       "description": "Run parallel research agents with any model",
       "trend": "up",
-      "trend_delta": 897
+      "trend_delta": 819
     },
     {
       "id": "github:p1neappleXpress/OpenFlux",
@@ -845,7 +960,7 @@
       "url": "https://github.com/JustVugg/colibri",
       "canonical_url": "github.com/justvugg/colibri",
       "company": null,
-      "stars": 1546,
+      "stars": 873,
       "momentum": 9,
       "tags": [
         "c"
@@ -853,7 +968,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-09-11": 98,
@@ -861,11 +976,12 @@
         "2026-09-14": 868,
         "2026-09-15": 2173,
         "2026-09-16": 2026,
-        "2026-09-17": 1546
+        "2026-09-17": 1546,
+        "2026-09-18": 873
       },
       "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
       "trend": "up",
-      "trend_delta": 1448
+      "trend_delta": 775
     },
     {
       "id": "github:armory3d/armorpaint",
@@ -2338,7 +2454,7 @@
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "canonical_url": "github.com/nationalsecurityagency/ghidra",
       "company": null,
-      "stars": 1059,
+      "stars": 912,
       "momentum": 20,
       "tags": [
         "java"
@@ -2346,17 +2462,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 205,
         "2026-08-29": 191,
         "2026-09-16": 725,
-        "2026-09-17": 1059
+        "2026-09-17": 1059,
+        "2026-09-18": 912
       },
       "description": "Ghidra is a software reverse engineering (SRE) framework",
       "trend": "up",
-      "trend_delta": 868
+      "trend_delta": 721
     },
     {
       "id": "github:abhigyanpatwari/GitNexus",
@@ -3079,7 +3196,7 @@
       "url": "https://github.com/n8n-io/n8n",
       "canonical_url": "github.com/n8n-io/n8n",
       "company": null,
-      "stars": 149,
+      "stars": 281,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -3087,14 +3204,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
-        "2026-08-23": 149
+        "2026-08-23": 149,
+        "2026-09-18": 281
       },
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 132
     },
     {
       "id": "github:openai/codex",
@@ -6758,7 +6876,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 3231,
+      "stars": 3286,
       "momentum": 18,
       "tags": [
         "go"
@@ -6766,7 +6884,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -6778,11 +6896,12 @@
         "2026-09-14": 443,
         "2026-09-15": 1571,
         "2026-09-16": 2756,
-        "2026-09-17": 3231
+        "2026-09-17": 3231,
+        "2026-09-18": 3286
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 2872
+      "trend_delta": 2927
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -14407,23 +14526,24 @@
       "url": "https://github.com/anthropics/claude-code",
       "canonical_url": "github.com/anthropics/claude-code",
       "company": "Anthropic",
-      "stars": 165,
+      "stars": 538,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 221,
         "2026-07-06": 156,
         "2026-08-23": 127,
-        "2026-09-17": 165
+        "2026-09-17": 165,
+        "2026-09-18": 538
       },
       "description": "Agentic coding tool for terminal-based development assistance",
       "trend": "up",
-      "trend_delta": 38
+      "trend_delta": 411
     },
     {
       "id": "github:JuliusBrussee/caveman",
@@ -16217,7 +16337,7 @@
       "url": "https://github.com/jamiepine/voicebox",
       "canonical_url": "github.com/jamiepine/voicebox",
       "company": null,
-      "stars": 417,
+      "stars": 667,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -16225,7 +16345,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 145,
@@ -16236,11 +16356,12 @@
         "2026-07-21": 821,
         "2026-07-23": 557,
         "2026-08-04": 412,
-        "2026-09-17": 417
+        "2026-09-17": 417,
+        "2026-09-18": 667
       },
       "description": "The open-source AI voice studio. Clone, dictate, create.",
       "trend": "up",
-      "trend_delta": 5
+      "trend_delta": 255
     },
     {
       "id": "github:twentyhq/twenty",
@@ -18641,7 +18762,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 658,
+      "stars": 680,
       "momentum": 34,
       "tags": [
         "shell"
@@ -18649,7 +18770,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -18673,11 +18794,12 @@
         "2026-08-30": 196,
         "2026-09-04": 264,
         "2026-09-16": 307,
-        "2026-09-17": 658
+        "2026-09-17": 658,
+        "2026-09-18": 680
       },
       "description": "Production-grade engineering skills for AI coding agents.",
       "trend": "up",
-      "trend_delta": 394
+      "trend_delta": 416
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -18718,7 +18840,7 @@
       "url": "https://github.com/roboflow/supervision",
       "canonical_url": "github.com/roboflow/supervision",
       "company": null,
-      "stars": 260,
+      "stars": 329,
       "momentum": 95,
       "tags": [
         "python"
@@ -18726,7 +18848,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 957,
@@ -18735,11 +18857,12 @@
         "2026-06-11": 695,
         "2026-07-01": 309,
         "2026-08-06": 146,
-        "2026-09-17": 260
+        "2026-09-17": 260,
+        "2026-09-18": 329
       },
       "description": "We write your reusable computer vision tools. \ud83d\udc9c",
       "trend": "up",
-      "trend_delta": 114
+      "trend_delta": 183
     },
     {
       "id": "github:google/skills",
@@ -20442,7 +20565,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1057,
+      "stars": 1171,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -20450,7 +20573,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -20477,11 +20600,12 @@
         "2026-09-08": 1897,
         "2026-09-09": 1427,
         "2026-09-10": 1133,
-        "2026-09-17": 1057
+        "2026-09-17": 1057,
+        "2026-09-18": 1171
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "down",
-      "trend_delta": -76
+      "trend": "up",
+      "trend_delta": 38
     }
   ]
 }
