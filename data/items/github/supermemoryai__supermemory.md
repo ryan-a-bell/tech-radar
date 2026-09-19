@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/supermemoryai/supermemory
 canonical_url: github.com/supermemoryai/supermemory
 company: null
-stars: 600
+stars: 140
 momentum: 60
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-06-03
-last_seen: 2026-06-03
+last_seen: 2026-09-19
 also_seen: []
-stars_history: {"2026-06-03": 600}
+stars_history: {"2026-06-03": 600, "2026-09-19": 140}
 ---
 
 Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.

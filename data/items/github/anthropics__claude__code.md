@@ -8,15 +8,15 @@ discovered_by: manual
 url: https://github.com/anthropics/claude-code
 canonical_url: github.com/anthropics/claude-code
 company: Anthropic
-stars: 538
+stars: 444
 momentum: 0
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-06-30
-last_seen: 2026-09-18
+last_seen: 2026-09-19
 also_seen: []
-stars_history: {"2026-07-04": 221, "2026-07-06": 156, "2026-08-23": 127, "2026-09-17": 165, "2026-09-18": 538}
+stars_history: {"2026-07-04": 221, "2026-07-06": 156, "2026-08-23": 127, "2026-09-17": 165, "2026-09-18": 538, "2026-09-19": 444}
 ---
 
 Agentic coding tool for terminal-based development assistance

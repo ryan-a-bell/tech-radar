@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/cloudflare/security-audit-skill
 canonical_url: github.com/cloudflare/security-audit-skill
 company: Cloudflare
-stars: 3607
+stars: 3006
 momentum: 92
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-09-17
-last_seen: 2026-09-18
+last_seen: 2026-09-19
 also_seen: []
-stars_history: {"2026-09-17": 927, "2026-09-18": 3607}
+stars_history: {"2026-09-17": 927, "2026-09-18": 3607, "2026-09-19": 3006}
 ---
 
 A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings

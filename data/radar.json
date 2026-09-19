@@ -1,7 +1,34 @@
 {
-  "generated": "2026-09-18",
-  "count": 737,
+  "generated": "2026-09-19",
+  "count": 738,
   "items": [
+    {
+      "id": "github:rustfs/rustfs",
+      "name": "rustfs",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rustfs/rustfs",
+      "canonical_url": "github.com/rustfs/rustfs",
+      "company": null,
+      "stars": 267,
+      "momentum": 26,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-19": 267
+      },
+      "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:coder/coder",
       "name": "coder",
@@ -12,7 +39,7 @@
       "url": "https://github.com/coder/coder",
       "canonical_url": "github.com/coder/coder",
       "company": null,
-      "stars": 145,
+      "stars": 478,
       "momentum": 14,
       "tags": [
         "go"
@@ -20,14 +47,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-09-18": 145
+        "2026-09-18": 145,
+        "2026-09-19": 478
       },
       "description": "Secure environments for developers and their agents",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 333
     },
     {
       "id": "github:cilium/cilium",
@@ -66,7 +94,7 @@
       "url": "https://github.com/TencentCloud/Octop",
       "canonical_url": "github.com/tencentcloud/octop",
       "company": null,
-      "stars": 367,
+      "stars": 569,
       "momentum": 36,
       "tags": [
         "python"
@@ -74,14 +102,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-09-18": 367
+        "2026-09-18": 367,
+        "2026-09-19": 569
       },
       "description": "A smarter, self-hosted AI assistant \u2014 multi-user, multi-agent.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 202
     },
     {
       "id": "github:Tencent/BrowserSkill",
@@ -93,7 +122,7 @@
       "url": "https://github.com/Tencent/BrowserSkill",
       "canonical_url": "github.com/tencent/browserskill",
       "company": null,
-      "stars": 1302,
+      "stars": 1306,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -101,14 +130,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-09-18": 1302
+        "2026-09-18": 1302,
+        "2026-09-19": 1306
       },
       "description": "Let AI agents use your real, logged-in browser without interrupting your work. CLI + extension for browser automation across any shell-capable AI agent.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 4
     },
     {
       "id": "github:Lakr233/vphone-cli",
@@ -175,7 +205,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 3607,
+      "stars": 3006,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -183,15 +213,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
-        "2026-09-18": 3607
+        "2026-09-18": 3607,
+        "2026-09-19": 3006
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "trend": "up",
-      "trend_delta": 2680
+      "trend_delta": 2079
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -203,7 +234,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 287,
+      "stars": 299,
       "momentum": 11,
       "tags": [
         "python"
@@ -211,15 +242,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
-        "2026-09-18": 287
+        "2026-09-18": 287,
+        "2026-09-19": 299
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "trend": "up",
-      "trend_delta": 177
+      "trend_delta": 189
     },
     {
       "id": "github:cline/cline",
@@ -259,7 +291,7 @@
       "url": "https://github.com/ankitects/anki",
       "canonical_url": "github.com/ankitects/anki",
       "company": null,
-      "stars": 58,
+      "stars": 174,
       "momentum": 5,
       "tags": [
         "rust"
@@ -267,14 +299,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-09-17": 58
+        "2026-09-17": 58,
+        "2026-09-19": 174
       },
       "description": "Anki is a smart spaced repetition flashcard program",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 116
     },
     {
       "id": "github:Tencent/WeKnora",
@@ -2784,7 +2817,7 @@
       "url": "https://github.com/asciimoo/hister",
       "canonical_url": "github.com/asciimoo/hister",
       "company": null,
-      "stars": 98,
+      "stars": 889,
       "momentum": 9,
       "tags": [
         "go"
@@ -2792,14 +2825,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-08-26",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-08-26": 98
+        "2026-08-26": 98,
+        "2026-09-19": 889
       },
       "description": "Your own search engine",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 791
     },
     {
       "id": "manual:spokenly",
@@ -6876,7 +6910,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 3286,
+      "stars": 2704,
       "momentum": 18,
       "tags": [
         "go"
@@ -6884,7 +6918,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -6897,11 +6931,12 @@
         "2026-09-15": 1571,
         "2026-09-16": 2756,
         "2026-09-17": 3231,
-        "2026-09-18": 3286
+        "2026-09-18": 3286,
+        "2026-09-19": 2704
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 2927
+      "trend_delta": 2345
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -7121,7 +7156,7 @@
       "url": "https://github.com/tradesdontlie/tradingview-mcp",
       "canonical_url": "github.com/tradesdontlie/tradingview-mcp",
       "company": null,
-      "stars": 114,
+      "stars": 79,
       "momentum": 11,
       "tags": [
         "javascript"
@@ -7129,14 +7164,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-22",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-07-22": 114
+        "2026-07-22": 114,
+        "2026-09-19": 79
       },
       "description": "AI-assisted TradingView chart analysis \u2014 connect Claude Code to your TradingView Desktop for personal workflow automation",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -35
     },
     {
       "id": "github:earthtojake/text-to-cad",
@@ -11820,11 +11856,12 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-09-17",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 169,
-        "2026-09-17": 120
+        "2026-09-17": 120,
+        "2026-09-19": 120
       },
       "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
       "trend": "down",
@@ -14227,15 +14264,17 @@
       "url": "https://github.com/ahmedkhaleel2004/gitdiagram",
       "canonical_url": "github.com/ahmedkhaleel2004/gitdiagram",
       "company": null,
-      "stars": 0,
+      "stars": 152,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
+      "last_seen": "2026-09-19",
       "also_seen": [],
-      "stars_history": {},
+      "stars_history": {
+        "2026-09-19": 152
+      },
       "description": "Free, simple, fast interactive diagrams for any GitHub repository",
       "trend": "none",
       "trend_delta": 0
@@ -14526,24 +14565,25 @@
       "url": "https://github.com/anthropics/claude-code",
       "canonical_url": "github.com/anthropics/claude-code",
       "company": "Anthropic",
-      "stars": 538,
+      "stars": 444,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 221,
         "2026-07-06": 156,
         "2026-08-23": 127,
         "2026-09-17": 165,
-        "2026-09-18": 538
+        "2026-09-18": 538,
+        "2026-09-19": 444
       },
       "description": "Agentic coding tool for terminal-based development assistance",
       "trend": "up",
-      "trend_delta": 411
+      "trend_delta": 317
     },
     {
       "id": "github:JuliusBrussee/caveman",
@@ -15474,7 +15514,7 @@
       "url": "https://github.com/Fission-AI/OpenSpec",
       "canonical_url": "github.com/fission-ai/openspec",
       "company": null,
-      "stars": 177,
+      "stars": 296,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -15482,14 +15522,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-06-28": 177
+        "2026-06-28": 177,
+        "2026-09-19": 296
       },
       "description": "Spec-driven development (SDD) for AI coding assistants.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 119
     },
     {
       "id": "github:Anil-matcha/Open-Generative-AI",
@@ -18762,7 +18803,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 680,
+      "stars": 675,
       "momentum": 34,
       "tags": [
         "shell"
@@ -18770,7 +18811,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -18795,11 +18836,12 @@
         "2026-09-04": 264,
         "2026-09-16": 307,
         "2026-09-17": 658,
-        "2026-09-18": 680
+        "2026-09-18": 680,
+        "2026-09-19": 675
       },
       "description": "Production-grade engineering skills for AI coding agents.",
       "trend": "up",
-      "trend_delta": 416
+      "trend_delta": 411
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -20079,7 +20121,7 @@
       "url": "https://github.com/supermemoryai/supermemory",
       "canonical_url": "github.com/supermemoryai/supermemory",
       "company": null,
-      "stars": 600,
+      "stars": 140,
       "momentum": 60,
       "tags": [
         "typescript"
@@ -20087,14 +20129,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
-        "2026-06-03": 600
+        "2026-06-03": 600,
+        "2026-09-19": 140
       },
       "description": "Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -460
     },
     {
       "id": "github:jamwithai/production-agentic-rag-course",
@@ -20565,7 +20608,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1171,
+      "stars": 958,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -20573,7 +20616,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-09-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -20601,11 +20644,12 @@
         "2026-09-09": 1427,
         "2026-09-10": 1133,
         "2026-09-17": 1057,
-        "2026-09-18": 1171
+        "2026-09-18": 1171,
+        "2026-09-19": 958
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "up",
-      "trend_delta": 38
+      "trend": "down",
+      "trend_delta": -175
     }
   ]
 }
