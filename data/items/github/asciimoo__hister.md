@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/asciimoo/hister
 canonical_url: github.com/asciimoo/hister
 company: null
-stars: 889
+stars: 420
 momentum: 9
 tags: ["go"]
 topics: []
 archived_at: null
 first_seen: 2026-08-26
-last_seen: 2026-09-19
+last_seen: 2026-09-20
 also_seen: []
-stars_history: {"2026-08-26": 98, "2026-09-19": 889}
+stars_history: {"2026-08-26": 98, "2026-09-19": 889, "2026-09-20": 420}
 ---
 
 Your own search engine

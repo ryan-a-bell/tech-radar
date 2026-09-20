@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/ZuodaoTech/everyone-can-use-english
 canonical_url: github.com/zuodaotech/everyone-can-use-english
 company: null
-stars: 86
+stars: 48
 momentum: 8
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-13
-last_seen: 2026-08-13
+last_seen: 2026-09-20
 also_seen: []
-stars_history: {"2026-08-13": 86}
+stars_history: {"2026-08-13": 86, "2026-09-20": 48}
 ---
 
 人人都能用英语
