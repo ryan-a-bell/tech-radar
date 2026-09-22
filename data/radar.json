@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21",
+  "generated": "2026-09-22",
   "count": 746,
   "items": [
     {
@@ -12,7 +12,7 @@
       "url": "https://github.com/mvt-project/mvt",
       "canonical_url": "github.com/mvt-project/mvt",
       "company": null,
-      "stars": 177,
+      "stars": 169,
       "momentum": 17,
       "tags": [
         "python"
@@ -20,14 +20,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
-        "2026-09-21": 177
+        "2026-09-21": 177,
+        "2026-09-22": 169
       },
       "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -8
     },
     {
       "id": "github:anthropics/financial-services",
@@ -39,7 +40,7 @@
       "url": "https://github.com/anthropics/financial-services",
       "canonical_url": "github.com/anthropics/financial-services",
       "company": "Anthropic",
-      "stars": 260,
+      "stars": 424,
       "momentum": 26,
       "tags": [
         "python"
@@ -47,14 +48,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
-        "2026-09-21": 260
+        "2026-09-21": 260,
+        "2026-09-22": 424
       },
       "description": "A python project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 164
     },
     {
       "id": "github:zhouxiaoka/autoclip",
@@ -66,7 +68,7 @@
       "url": "https://github.com/zhouxiaoka/autoclip",
       "canonical_url": "github.com/zhouxiaoka/autoclip",
       "company": null,
-      "stars": 395,
+      "stars": 250,
       "momentum": 39,
       "tags": [
         "python"
@@ -74,14 +76,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
-        "2026-09-21": 395
+        "2026-09-21": 395,
+        "2026-09-22": 250
       },
       "description": "AutoClip : AI-powered video clipping and highlight generation \u00b7 \u4e00\u6b3e\u667a\u80fd\u9ad8\u5149\u63d0\u53d6\u4e0e\u526a\u8f91\u7684\u4e8c\u521b\u5de5\u5177",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -145
     },
     {
       "id": "github:ruanyf/weekly",
@@ -93,21 +96,22 @@
       "url": "https://github.com/ruanyf/weekly",
       "canonical_url": "github.com/ruanyf/weekly",
       "company": null,
-      "stars": 621,
+      "stars": 182,
       "momentum": 9,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-20": 98,
-        "2026-09-21": 621
+        "2026-09-21": 621,
+        "2026-09-22": 182
       },
       "description": "\u79d1\u6280\u7231\u597d\u8005\u5468\u520a\uff0c\u6bcf\u5468\u4e94\u53d1\u5e03",
       "trend": "up",
-      "trend_delta": 523
+      "trend_delta": 84
     },
     {
       "id": "github:cloudflare/quiche",
@@ -119,7 +123,7 @@
       "url": "https://github.com/cloudflare/quiche",
       "canonical_url": "github.com/cloudflare/quiche",
       "company": "Cloudflare",
-      "stars": 242,
+      "stars": 32,
       "momentum": 3,
       "tags": [
         "rust"
@@ -127,15 +131,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-20": 31,
-        "2026-09-21": 242
+        "2026-09-21": 242,
+        "2026-09-22": 32
       },
       "description": "\ud83e\udd67 Savoury implementation of the QUIC transport protocol and HTTP/3",
       "trend": "up",
-      "trend_delta": 211
+      "trend_delta": 1
     },
     {
       "id": "github:higgsfield-ai/higgsfield",
@@ -174,7 +179,7 @@
       "url": "https://github.com/Open-Dev-Society/OpenStock",
       "canonical_url": "github.com/open-dev-society/openstock",
       "company": null,
-      "stars": 755,
+      "stars": 844,
       "momentum": 47,
       "tags": [
         "typescript"
@@ -182,15 +187,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-20": 472,
-        "2026-09-21": 755
+        "2026-09-21": 755,
+        "2026-09-22": 844
       },
       "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights \u2014 built openly, for everyone, forever free.",
       "trend": "up",
-      "trend_delta": 283
+      "trend_delta": 372
     },
     {
       "id": "github:yynxxxxx/Codex-X",
@@ -202,7 +208,7 @@
       "url": "https://github.com/yynxxxxx/Codex-X",
       "canonical_url": "github.com/yynxxxxx/codex-x",
       "company": null,
-      "stars": 210,
+      "stars": 50,
       "momentum": 3,
       "tags": [
         "rust"
@@ -210,15 +216,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-20": 32,
-        "2026-09-21": 210
+        "2026-09-21": 210,
+        "2026-09-22": 50
       },
       "description": "OpenAI Codex \u684c\u9762\u7aef/CLI \u7684\u53ef\u89c6\u5316\u7ba1\u7406\u5de5\u5177\uff0c\u5177\u6709Provider/API \u5207\u6362\u3001\u4f1a\u8bdd\u540c\u6b65\u3001\u63d0\u793a\u8bcd\u6ce8\u5165\u3001Skills/MCP \u7ba1\u7406\u3001TOML \u914d\u7f6e\u53ef\u89c6\u5316\u7684\u8de8\u5e73\u53f0\u5de5\u5177\u3002",
       "trend": "up",
-      "trend_delta": 178
+      "trend_delta": 18
     },
     {
       "id": "github:rustfs/rustfs",
@@ -257,7 +264,7 @@
       "url": "https://github.com/coder/coder",
       "canonical_url": "github.com/coder/coder",
       "company": null,
-      "stars": 379,
+      "stars": 460,
       "momentum": 14,
       "tags": [
         "go"
@@ -265,17 +272,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-18",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-18": 145,
         "2026-09-19": 478,
         "2026-09-20": 402,
-        "2026-09-21": 379
+        "2026-09-21": 379,
+        "2026-09-22": 460
       },
       "description": "Secure environments for developers and their agents",
       "trend": "up",
-      "trend_delta": 234
+      "trend_delta": 315
     },
     {
       "id": "github:cilium/cilium",
@@ -4077,7 +4085,7 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "canonical_url": "github.com/akitaonrails/ai-memory",
       "company": null,
-      "stars": 114,
+      "stars": 167,
       "momentum": 20,
       "tags": [
         "rust"
@@ -4085,17 +4093,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-18": 207,
         "2026-08-19": 648,
         "2026-08-21": 332,
-        "2026-09-21": 114
+        "2026-09-21": 114,
+        "2026-09-22": 167
       },
       "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
       "trend": "down",
-      "trend_delta": -218
+      "trend_delta": -165
     },
     {
       "id": "github:agalwood/Motrix",
@@ -17098,7 +17107,7 @@
       "url": "https://github.com/BuilderIO/agent-native",
       "canonical_url": "github.com/builderio/agent-native",
       "company": null,
-      "stars": 98,
+      "stars": 607,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -17106,15 +17115,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-20": 147,
-        "2026-09-21": 98
+        "2026-09-21": 98,
+        "2026-09-22": 607
       },
       "description": "A framework for building agent-native applications.",
-      "trend": "down",
-      "trend_delta": -49
+      "trend": "up",
+      "trend_delta": 460
     },
     {
       "id": "github:Kilo-Org/kilocode",
@@ -18043,7 +18053,7 @@
       "url": "https://github.com/trycua/cua",
       "canonical_url": "github.com/trycua/cua",
       "company": null,
-      "stars": 1018,
+      "stars": 609,
       "momentum": 5,
       "tags": [
         "html"
@@ -18051,18 +18061,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 57,
         "2026-06-16": 70,
         "2026-07-20": 64,
         "2026-09-20": 859,
-        "2026-09-21": 1018
+        "2026-09-21": 1018,
+        "2026-09-22": 609
       },
       "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
       "trend": "up",
-      "trend_delta": 954
+      "trend_delta": 545
     },
     {
       "id": "github:rohitg00/ai-engineering-from-scratch",
@@ -19342,7 +19353,7 @@
       "url": "https://github.com/Crosstalk-Solutions/project-nomad",
       "canonical_url": "github.com/crosstalk-solutions/project-nomad",
       "company": null,
-      "stars": 360,
+      "stars": 394,
       "momentum": 30,
       "tags": [
         "typescript"
@@ -19350,7 +19361,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-07",
-      "last_seen": "2026-09-21",
+      "last_seen": "2026-09-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-07": 304,
@@ -19358,11 +19369,12 @@
         "2026-07-13": 125,
         "2026-09-14": 26,
         "2026-09-15": 40,
-        "2026-09-21": 360
+        "2026-09-21": 360,
+        "2026-09-22": 394
       },
       "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered\u2014anytime, anywhere.",
       "trend": "up",
-      "trend_delta": 334
+      "trend_delta": 354
     },
     {
       "id": "github:microsoft/pg_durable",
