@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-22",
-  "count": 746,
+  "generated": "2026-09-23",
+  "count": 749,
   "items": [
+    {
+      "id": "github:dream-num/univer",
+      "name": "univer",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dream-num/univer",
+      "canonical_url": "github.com/dream-num/univer",
+      "company": null,
+      "stars": 255,
+      "momentum": 25,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-23": 255
+      },
+      "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:superdesigndev/treg",
+      "name": "treg",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/superdesigndev/treg",
+      "canonical_url": "github.com/superdesigndev/treg",
+      "company": null,
+      "stars": 230,
+      "momentum": 23,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-23": 230
+      },
+      "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:google/ax",
+      "name": "ax",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google/ax",
+      "canonical_url": "github.com/google/ax",
+      "company": "Google",
+      "stars": 2305,
+      "momentum": 100,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-09-23",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-23": 2305
+      },
+      "description": "Google's open agentic orchestration runtime",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:mvt-project/mvt",
       "name": "mvt",
@@ -12,7 +93,7 @@
       "url": "https://github.com/mvt-project/mvt",
       "canonical_url": "github.com/mvt-project/mvt",
       "company": null,
-      "stars": 169,
+      "stars": 441,
       "momentum": 17,
       "tags": [
         "python"
@@ -20,15 +101,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-23",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 177,
-        "2026-09-22": 169
+        "2026-09-22": 169,
+        "2026-09-23": 441
       },
       "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
-      "trend": "down",
-      "trend_delta": -8
+      "trend": "up",
+      "trend_delta": 264
     },
     {
       "id": "github:anthropics/financial-services",
@@ -40,7 +122,7 @@
       "url": "https://github.com/anthropics/financial-services",
       "canonical_url": "github.com/anthropics/financial-services",
       "company": "Anthropic",
-      "stars": 424,
+      "stars": 438,
       "momentum": 26,
       "tags": [
         "python"
@@ -48,15 +130,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-23",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 260,
-        "2026-09-22": 424
+        "2026-09-22": 424,
+        "2026-09-23": 438
       },
       "description": "A python project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 164
+      "trend_delta": 178
     },
     {
       "id": "github:zhouxiaoka/autoclip",
@@ -3630,7 +3713,7 @@
       "url": "https://github.com/agent-substrate/substrate",
       "canonical_url": "github.com/agent-substrate/substrate",
       "company": null,
-      "stars": 22,
+      "stars": 245,
       "momentum": 2,
       "tags": [
         "go"
@@ -3638,14 +3721,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-09-23",
       "also_seen": [],
       "stars_history": {
-        "2026-08-21": 22
+        "2026-08-21": 22,
+        "2026-09-23": 245
       },
       "description": "Agent Substrate: the core system",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 223
     },
     {
       "id": "github:modular/modular",
@@ -11029,7 +11113,7 @@
       "url": "https://github.com/davila7/claude-code-templates",
       "canonical_url": "github.com/davila7/claude-code-templates",
       "company": null,
-      "stars": 274,
+      "stars": 64,
       "momentum": 11,
       "tags": [
         "python"
@@ -11037,16 +11121,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-13",
+      "last_seen": "2026-09-23",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 118,
         "2026-07-12": 232,
-        "2026-07-13": 274
+        "2026-07-13": 274,
+        "2026-09-23": 64
       },
       "description": "CLI tool for configuring and monitoring Claude Code",
-      "trend": "up",
-      "trend_delta": 156
+      "trend": "down",
+      "trend_delta": -210
     },
     {
       "id": "github:oven-sh/bun",
@@ -15339,7 +15424,7 @@
       "url": "https://github.com/browser-use/video-use",
       "canonical_url": "github.com/browser-use/video-use",
       "company": null,
-      "stars": 472,
+      "stars": 191,
       "momentum": 19,
       "tags": [
         "python"
@@ -15347,7 +15432,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-09-23",
       "also_seen": [],
       "stars_history": {
         "2026-06-29": 976,
@@ -15356,11 +15441,12 @@
         "2026-07-02": 693,
         "2026-07-03": 554,
         "2026-08-05": 320,
-        "2026-09-02": 472
+        "2026-09-02": 472,
+        "2026-09-23": 191
       },
       "description": "Edit videos with coding agents",
-      "trend": "up",
-      "trend_delta": 152
+      "trend": "down",
+      "trend_delta": -281
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
