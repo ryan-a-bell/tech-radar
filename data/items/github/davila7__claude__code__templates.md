@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/davila7/claude-code-templates
 canonical_url: github.com/davila7/claude-code-templates
 company: null
-stars: 64
+stars: 389
 momentum: 11
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-07-11
-last_seen: 2026-09-23
+last_seen: 2026-09-24
 also_seen: []
-stars_history: {"2026-07-11": 118, "2026-07-12": 232, "2026-07-13": 274, "2026-09-23": 64}
+stars_history: {"2026-07-11": 118, "2026-07-12": 232, "2026-07-13": 274, "2026-09-23": 64, "2026-09-24": 389}
 ---
 
 CLI tool for configuring and monitoring Claude Code

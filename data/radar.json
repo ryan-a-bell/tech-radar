@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-23",
-  "count": 749,
+  "generated": "2026-09-24",
+  "count": 752,
   "items": [
+    {
+      "id": "github:harry7557558/spirula-studio",
+      "name": "spirula-studio",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/harry7557558/spirula-studio",
+      "canonical_url": "github.com/harry7557558/spirula-studio",
+      "company": null,
+      "stars": 69,
+      "momentum": 6,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-24": 69
+      },
+      "description": "Cross-vendor 3D Gaussian Splatting trainer - video to splat to mesh, Vulkan or CUDA.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:strands-agents/harness-sdk",
+      "name": "harness-sdk",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/strands-agents/harness-sdk",
+      "canonical_url": "github.com/strands-agents/harness-sdk",
+      "company": null,
+      "stars": 115,
+      "momentum": 11,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-24": 115
+      },
+      "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:TNT-Likely/PanWatch",
+      "name": "PanWatch",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/TNT-Likely/PanWatch",
+      "canonical_url": "github.com/tnt-likely/panwatch",
+      "company": null,
+      "stars": 95,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-09-24",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-24": 95
+      },
+      "description": "\u76ef\u76d8\u4fa0 PanWatch \u00b7 \u81ea\u6258\u7ba1 AI \u76ef\u76d8\u52a9\u624b\uff0c\u96c6\u6210 TradingAgents \u591a Agent \u6295\u8d44\u51b3\u7b56 | A\u80a1/\u6e2f\u80a1/\u7f8e\u80a1\u5b9e\u65f6\u76d1\u63a7\u3001\u6301\u4ed3\u7ba1\u7406\u3001\u667a\u80fd\u5206\u6790\u3001\u5168\u6e20\u9053\u63a8\u9001",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:dream-num/univer",
       "name": "univer",
@@ -12,7 +93,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 255,
+      "stars": 1142,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -20,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
-        "2026-09-23": 255
+        "2026-09-23": 255,
+        "2026-09-24": 1142
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 887
     },
     {
       "id": "github:superdesigndev/treg",
@@ -39,7 +121,7 @@
       "url": "https://github.com/superdesigndev/treg",
       "canonical_url": "github.com/superdesigndev/treg",
       "company": null,
-      "stars": 230,
+      "stars": 506,
       "momentum": 23,
       "tags": [
         "python"
@@ -47,14 +129,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
-        "2026-09-23": 230
+        "2026-09-23": 230,
+        "2026-09-24": 506
       },
       "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 276
     },
     {
       "id": "github:google/ax",
@@ -66,7 +149,7 @@
       "url": "https://github.com/google/ax",
       "canonical_url": "github.com/google/ax",
       "company": "Google",
-      "stars": 2305,
+      "stars": 1543,
       "momentum": 100,
       "tags": [
         "go"
@@ -74,14 +157,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
-        "2026-09-23": 2305
+        "2026-09-23": 2305,
+        "2026-09-24": 1543
       },
       "description": "Google's open agentic orchestration runtime",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -762
     },
     {
       "id": "github:mvt-project/mvt",
@@ -93,7 +177,7 @@
       "url": "https://github.com/mvt-project/mvt",
       "canonical_url": "github.com/mvt-project/mvt",
       "company": null,
-      "stars": 441,
+      "stars": 543,
       "momentum": 17,
       "tags": [
         "python"
@@ -101,16 +185,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 177,
         "2026-09-22": 169,
-        "2026-09-23": 441
+        "2026-09-23": 441,
+        "2026-09-24": 543
       },
       "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
       "trend": "up",
-      "trend_delta": 264
+      "trend_delta": 366
     },
     {
       "id": "github:anthropics/financial-services",
@@ -122,7 +207,7 @@
       "url": "https://github.com/anthropics/financial-services",
       "canonical_url": "github.com/anthropics/financial-services",
       "company": "Anthropic",
-      "stars": 438,
+      "stars": 664,
       "momentum": 26,
       "tags": [
         "python"
@@ -130,16 +215,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 260,
         "2026-09-22": 424,
-        "2026-09-23": 438
+        "2026-09-23": 438,
+        "2026-09-24": 664
       },
       "description": "A python project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 178
+      "trend_delta": 404
     },
     {
       "id": "github:zhouxiaoka/autoclip",
@@ -262,7 +348,7 @@
       "url": "https://github.com/Open-Dev-Society/OpenStock",
       "canonical_url": "github.com/open-dev-society/openstock",
       "company": null,
-      "stars": 844,
+      "stars": 344,
       "momentum": 47,
       "tags": [
         "typescript"
@@ -270,16 +356,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-09-20": 472,
         "2026-09-21": 755,
-        "2026-09-22": 844
+        "2026-09-22": 844,
+        "2026-09-24": 344
       },
       "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights \u2014 built openly, for everyone, forever free.",
-      "trend": "up",
-      "trend_delta": 372
+      "trend": "down",
+      "trend_delta": -128
     },
     {
       "id": "github:yynxxxxx/Codex-X",
@@ -3713,7 +3800,7 @@
       "url": "https://github.com/agent-substrate/substrate",
       "canonical_url": "github.com/agent-substrate/substrate",
       "company": null,
-      "stars": 245,
+      "stars": 558,
       "momentum": 2,
       "tags": [
         "go"
@@ -3721,15 +3808,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-21",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-08-21": 22,
-        "2026-09-23": 245
+        "2026-09-23": 245,
+        "2026-09-24": 558
       },
       "description": "Agent Substrate: the core system",
       "trend": "up",
-      "trend_delta": 223
+      "trend_delta": 536
     },
     {
       "id": "github:modular/modular",
@@ -4344,7 +4432,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 118,
+      "stars": 57,
       "momentum": 11,
       "tags": [
         "python"
@@ -4352,14 +4440,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
-        "2026-08-16": 118
+        "2026-08-16": 118,
+        "2026-09-24": 57
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -61
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -7030,7 +7119,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 847,
+      "stars": 304,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -7038,15 +7127,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-28",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
-        "2026-07-28": 847
+        "2026-07-28": 847,
+        "2026-09-24": 304
       },
       "description": "The design language that makes your AI harness better at design.",
-      "trend": "up",
-      "trend_delta": 434
+      "trend": "down",
+      "trend_delta": -543
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -11113,7 +11203,7 @@
       "url": "https://github.com/davila7/claude-code-templates",
       "canonical_url": "github.com/davila7/claude-code-templates",
       "company": null,
-      "stars": 64,
+      "stars": 389,
       "momentum": 11,
       "tags": [
         "python"
@@ -11121,17 +11211,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 118,
         "2026-07-12": 232,
         "2026-07-13": 274,
-        "2026-09-23": 64
+        "2026-09-23": 64,
+        "2026-09-24": 389
       },
       "description": "CLI tool for configuring and monitoring Claude Code",
-      "trend": "down",
-      "trend_delta": -210
+      "trend": "up",
+      "trend_delta": 115
     },
     {
       "id": "github:oven-sh/bun",
@@ -15424,7 +15515,7 @@
       "url": "https://github.com/browser-use/video-use",
       "canonical_url": "github.com/browser-use/video-use",
       "company": null,
-      "stars": 191,
+      "stars": 746,
       "momentum": 19,
       "tags": [
         "python"
@@ -15432,7 +15523,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-09-23",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-29": 976,
@@ -15442,11 +15533,12 @@
         "2026-07-03": 554,
         "2026-08-05": 320,
         "2026-09-02": 472,
-        "2026-09-23": 191
+        "2026-09-23": 191,
+        "2026-09-24": 746
       },
       "description": "Edit videos with coding agents",
-      "trend": "down",
-      "trend_delta": -281
+      "trend": "up",
+      "trend_delta": 274
     },
     {
       "id": "github:ByteByteGoHq/system-design-101",
@@ -17193,7 +17285,7 @@
       "url": "https://github.com/BuilderIO/agent-native",
       "canonical_url": "github.com/builderio/agent-native",
       "company": null,
-      "stars": 607,
+      "stars": 87,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -17201,16 +17293,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-20",
-      "last_seen": "2026-09-22",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-20": 147,
         "2026-09-21": 98,
-        "2026-09-22": 607
+        "2026-09-22": 607,
+        "2026-09-24": 87
       },
       "description": "A framework for building agent-native applications.",
-      "trend": "up",
-      "trend_delta": 460
+      "trend": "down",
+      "trend_delta": -60
     },
     {
       "id": "github:Kilo-Org/kilocode",
@@ -17653,7 +17746,7 @@
       "url": "https://github.com/DeusData/codebase-memory-mcp",
       "canonical_url": "github.com/deusdata/codebase-memory-mcp",
       "company": null,
-      "stars": 2190,
+      "stars": 190,
       "momentum": 36,
       "tags": [
         "c"
@@ -17661,7 +17754,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-29",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 367,
@@ -17672,11 +17765,12 @@
         "2026-06-22": 1032,
         "2026-06-23": 1185,
         "2026-06-24": 1300,
-        "2026-06-29": 2190
+        "2026-06-29": 2190,
+        "2026-09-24": 190
       },
       "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph \u2014 average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
-      "trend": "up",
-      "trend_delta": 1158
+      "trend": "down",
+      "trend_delta": -2000
     },
     {
       "id": "github:yairm210/Unciv",
@@ -19764,7 +19858,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 729,
+      "stars": 474,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19772,7 +19866,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-09-24",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -19806,11 +19900,12 @@
         "2026-09-09": 452,
         "2026-09-10": 688,
         "2026-09-11": 732,
-        "2026-09-12": 729
+        "2026-09-12": 729,
+        "2026-09-24": 474
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "up",
-      "trend_delta": 267
+      "trend": "down",
+      "trend_delta": -255
     },
     {
       "id": "github:openai/plugins",

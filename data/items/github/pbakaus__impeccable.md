@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/pbakaus/impeccable
 canonical_url: github.com/pbakaus/impeccable
 company: null
-stars: 847
+stars: 304
 momentum: 41
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-27
-last_seen: 2026-07-28
+last_seen: 2026-09-24
 also_seen: []
-stars_history: {"2026-07-27": 413, "2026-07-28": 847}
+stars_history: {"2026-07-27": 413, "2026-07-28": 847, "2026-09-24": 304}
 ---
 
 The design language that makes your AI harness better at design.
