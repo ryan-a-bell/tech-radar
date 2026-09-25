@@ -1,7 +1,142 @@
 {
-  "generated": "2026-09-24",
-  "count": 752,
+  "generated": "2026-09-25",
+  "count": 757,
   "items": [
+    {
+      "id": "github:leejet/stable-diffusion.cpp",
+      "name": "stable-diffusion.cpp",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/leejet/stable-diffusion.cpp",
+      "canonical_url": "github.com/leejet/stable-diffusion.cpp",
+      "company": null,
+      "stars": 36,
+      "momentum": 3,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-25": 36
+      },
+      "description": "Diffusion model(SD,Flux,Wan,Qwen Image,Z-Image,...) inference in pure C/C++",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:julyx10/lap",
+      "name": "lap",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/julyx10/lap",
+      "canonical_url": "github.com/julyx10/lap",
+      "company": null,
+      "stars": 122,
+      "momentum": 12,
+      "tags": [
+        "vue"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-25": 122
+      },
+      "description": "An offline-first photo manager for large local libraries",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vectorize-io/hindsight",
+      "name": "hindsight",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vectorize-io/hindsight",
+      "canonical_url": "github.com/vectorize-io/hindsight",
+      "company": null,
+      "stars": 1668,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-25": 1668
+      },
+      "description": "Hindsight: Agent Memory That Learns",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/Model-Optimizer",
+      "name": "Model-Optimizer",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/Model-Optimizer",
+      "canonical_url": "github.com/nvidia/model-optimizer",
+      "company": "NVIDIA",
+      "stars": 44,
+      "momentum": 4,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-25": 44
+      },
+      "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:FxEmbed/FxEmbed",
+      "name": "FxEmbed",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/FxEmbed/FxEmbed",
+      "canonical_url": "github.com/fxembed/fxembed",
+      "company": null,
+      "stars": 182,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-25",
+      "last_seen": "2026-09-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-25": 182
+      },
+      "description": "Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:harry7557558/spirula-studio",
       "name": "spirula-studio",
@@ -39,7 +174,7 @@
       "url": "https://github.com/strands-agents/harness-sdk",
       "canonical_url": "github.com/strands-agents/harness-sdk",
       "company": null,
-      "stars": 115,
+      "stars": 455,
       "momentum": 11,
       "tags": [
         "python"
@@ -47,14 +182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
-        "2026-09-24": 115
+        "2026-09-24": 115,
+        "2026-09-25": 455
       },
       "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 340
     },
     {
       "id": "github:TNT-Likely/PanWatch",
@@ -93,7 +229,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 1142,
+      "stars": 1082,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -101,15 +237,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
-        "2026-09-24": 1142
+        "2026-09-24": 1142,
+        "2026-09-25": 1082
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 887
+      "trend_delta": 827
     },
     {
       "id": "github:superdesigndev/treg",
@@ -121,7 +258,7 @@
       "url": "https://github.com/superdesigndev/treg",
       "canonical_url": "github.com/superdesigndev/treg",
       "company": null,
-      "stars": 506,
+      "stars": 468,
       "momentum": 23,
       "tags": [
         "python"
@@ -129,15 +266,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 230,
-        "2026-09-24": 506
+        "2026-09-24": 506,
+        "2026-09-25": 468
       },
       "description": "OpenRouter for agent tools. Join community here: https://discord.gg/6mQYYfFMAn",
       "trend": "up",
-      "trend_delta": 276
+      "trend_delta": 238
     },
     {
       "id": "github:google/ax",
@@ -149,7 +287,7 @@
       "url": "https://github.com/google/ax",
       "canonical_url": "github.com/google/ax",
       "company": "Google",
-      "stars": 1543,
+      "stars": 1373,
       "momentum": 100,
       "tags": [
         "go"
@@ -157,15 +295,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 2305,
-        "2026-09-24": 1543
+        "2026-09-24": 1543,
+        "2026-09-25": 1373
       },
       "description": "Google's open agentic orchestration runtime",
       "trend": "down",
-      "trend_delta": -762
+      "trend_delta": -932
     },
     {
       "id": "github:mvt-project/mvt",
@@ -177,7 +316,7 @@
       "url": "https://github.com/mvt-project/mvt",
       "canonical_url": "github.com/mvt-project/mvt",
       "company": null,
-      "stars": 543,
+      "stars": 272,
       "momentum": 17,
       "tags": [
         "python"
@@ -185,17 +324,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 177,
         "2026-09-22": 169,
         "2026-09-23": 441,
-        "2026-09-24": 543
+        "2026-09-24": 543,
+        "2026-09-25": 272
       },
       "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
       "trend": "up",
-      "trend_delta": 366
+      "trend_delta": 95
     },
     {
       "id": "github:anthropics/financial-services",
@@ -207,7 +347,7 @@
       "url": "https://github.com/anthropics/financial-services",
       "canonical_url": "github.com/anthropics/financial-services",
       "company": "Anthropic",
-      "stars": 664,
+      "stars": 509,
       "momentum": 26,
       "tags": [
         "python"
@@ -215,17 +355,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 260,
         "2026-09-22": 424,
         "2026-09-23": 438,
-        "2026-09-24": 664
+        "2026-09-24": 664,
+        "2026-09-25": 509
       },
       "description": "A python project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 404
+      "trend_delta": 249
     },
     {
       "id": "github:zhouxiaoka/autoclip",
@@ -4432,7 +4573,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 57,
+      "stars": 413,
       "momentum": 11,
       "tags": [
         "python"
@@ -4440,15 +4581,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
-        "2026-09-24": 57
+        "2026-09-24": 57,
+        "2026-09-25": 413
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "trend": "down",
-      "trend_delta": -61
+      "trend": "up",
+      "trend_delta": 295
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -18265,7 +18407,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 343,
+      "stars": 347,
       "momentum": 53,
       "tags": [
         "python"
@@ -18273,7 +18415,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -18287,11 +18429,12 @@
         "2026-08-27": 547,
         "2026-08-28": 703,
         "2026-08-29": 703,
-        "2026-09-10": 343
+        "2026-09-10": 343,
+        "2026-09-25": 347
       },
       "description": "Learn it. Build it. Ship it for others.",
-      "trend": "down",
-      "trend_delta": -360
+      "trend": "up",
+      "trend_delta": 4
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -19858,7 +20001,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 474,
+      "stars": 611,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19866,7 +20009,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -19901,11 +20044,12 @@
         "2026-09-10": 688,
         "2026-09-11": 732,
         "2026-09-12": 729,
-        "2026-09-24": 474
+        "2026-09-24": 474,
+        "2026-09-25": 611
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "down",
-      "trend_delta": -255
+      "trend_delta": -118
     },
     {
       "id": "github:openai/plugins",
