@@ -1,7 +1,140 @@
 {
-  "generated": "2026-09-25",
-  "count": 757,
+  "generated": "2026-09-26",
+  "count": 762,
   "items": [
+    {
+      "id": "github:derv82/wifit3",
+      "name": "wifit3",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/derv82/wifit3",
+      "canonical_url": "github.com/derv82/wifit3",
+      "company": null,
+      "stars": 183,
+      "momentum": 18,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-26": 183
+      },
+      "description": "Wifite but USB-only & cross-platform.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:shy3130/tick-stock-panel",
+      "name": "tick-stock-panel",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/shy3130/tick-stock-panel",
+      "canonical_url": "github.com/shy3130/tick-stock-panel",
+      "company": null,
+      "stars": 44,
+      "momentum": 4,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-26": 44
+      },
+      "description": "TSP\u81ea\u6258\u7ba1\u3001\u96f6\u8fd0\u7ef4\u7684 A \u80a1\u300c\u9009\u80a1 + \u76d1\u63a7 + \u56de\u6d4b\u300d\u91cf\u5316\u5de5\u4f5c\u53f0 | LLM\u80fd\u529b\u9a71\u4f7f\u7b56\u7565\u5b9a\u5236+\u4e2a\u80a1\u5206\u6790+\u590d\u76d8 | \u81ea\u7531\u63a5\u5165\u7b2c\u4e09\u65b9\u6570\u636e\u6e90\u4e0e\u4e2a\u6027\u5316\u6269\u5c55\u6570\u636e | \u4e2a\u4eba\u5f00\u6e90",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:androoAGI/starnet",
+      "name": "starnet",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/androoAGI/starnet",
+      "canonical_url": "github.com/androoagi/starnet",
+      "company": null,
+      "stars": 93,
+      "momentum": 9,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-26": 93
+      },
+      "description": "A living pixel-art station where real AI agents do real work. Local-first desktop agent harness - bring your own key, watch your crew actually run.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:openbao/openbao",
+      "name": "openbao",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openbao/openbao",
+      "canonical_url": "github.com/openbao/openbao",
+      "company": null,
+      "stars": 49,
+      "momentum": 4,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-26": 49
+      },
+      "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kelseyhightower/kubernetes-the-hard-way",
+      "name": "kubernetes-the-hard-way",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+      "canonical_url": "github.com/kelseyhightower/kubernetes-the-hard-way",
+      "company": null,
+      "stars": 119,
+      "momentum": 11,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-26",
+      "last_seen": "2026-09-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-26": 119
+      },
+      "description": "Bootstrap Kubernetes the hard way. No scripts.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:leejet/stable-diffusion.cpp",
       "name": "stable-diffusion.cpp",
@@ -66,7 +199,7 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "canonical_url": "github.com/vectorize-io/hindsight",
       "company": null,
-      "stars": 1668,
+      "stars": 1653,
       "momentum": 100,
       "tags": [
         "python"
@@ -74,14 +207,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
-        "2026-09-25": 1668
+        "2026-09-25": 1668,
+        "2026-09-26": 1653
       },
       "description": "Hindsight: Agent Memory That Learns",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -15
     },
     {
       "id": "github:NVIDIA/Model-Optimizer",
@@ -93,7 +227,7 @@
       "url": "https://github.com/NVIDIA/Model-Optimizer",
       "canonical_url": "github.com/nvidia/model-optimizer",
       "company": "NVIDIA",
-      "stars": 44,
+      "stars": 359,
       "momentum": 4,
       "tags": [
         "python"
@@ -101,14 +235,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
-        "2026-09-25": 44
+        "2026-09-25": 44,
+        "2026-09-26": 359
       },
       "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 315
     },
     {
       "id": "github:FxEmbed/FxEmbed",
@@ -229,7 +364,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 1082,
+      "stars": 1050,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -237,16 +372,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
         "2026-09-24": 1142,
-        "2026-09-25": 1082
+        "2026-09-25": 1082,
+        "2026-09-26": 1050
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 827
+      "trend_delta": 795
     },
     {
       "id": "github:superdesigndev/treg",
@@ -287,7 +423,7 @@
       "url": "https://github.com/google/ax",
       "canonical_url": "github.com/google/ax",
       "company": "Google",
-      "stars": 1373,
+      "stars": 1379,
       "momentum": 100,
       "tags": [
         "go"
@@ -295,16 +431,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 2305,
         "2026-09-24": 1543,
-        "2026-09-25": 1373
+        "2026-09-25": 1373,
+        "2026-09-26": 1379
       },
       "description": "Google's open agentic orchestration runtime",
       "trend": "down",
-      "trend_delta": -932
+      "trend_delta": -926
     },
     {
       "id": "github:mvt-project/mvt",
@@ -5305,7 +5442,7 @@
       "url": "https://github.com/paperclipai/paperclip",
       "canonical_url": "github.com/paperclipai/paperclip",
       "company": null,
-      "stars": 571,
+      "stars": 2109,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -5313,16 +5450,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-08-11": 198,
         "2026-08-12": 748,
-        "2026-08-13": 571
+        "2026-08-13": 571,
+        "2026-09-26": 2109
       },
       "description": "The open-source app everyone uses to manage agents at work",
       "trend": "up",
-      "trend_delta": 373
+      "trend_delta": 1538
     },
     {
       "id": "github:danielmiessler/LifeOS",
@@ -7261,7 +7399,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 304,
+      "stars": 306,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -7269,16 +7407,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-09-24",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
         "2026-07-28": 847,
-        "2026-09-24": 304
+        "2026-09-24": 304,
+        "2026-09-26": 306
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "down",
-      "trend_delta": -543
+      "trend_delta": -541
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -14295,24 +14434,25 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 475,
+      "stars": 189,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
         "2026-08-14": 312,
         "2026-09-04": 281,
         "2026-09-05": 511,
-        "2026-09-06": 475
+        "2026-09-06": 475,
+        "2026-09-26": 189
       },
       "description": "Public repository for Agent Skills",
-      "trend": "up",
-      "trend_delta": 163
+      "trend": "down",
+      "trend_delta": -286
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -16721,7 +16861,7 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "canonical_url": "github.com/anthropics/claude-plugins-official",
       "company": "Anthropic",
-      "stars": 358,
+      "stars": 83,
       "momentum": 7,
       "tags": [
         "python"
@@ -16729,7 +16869,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-24": 77,
@@ -16737,11 +16877,12 @@
         "2026-08-27": 290,
         "2026-08-28": 457,
         "2026-08-29": 457,
-        "2026-08-30": 358
+        "2026-08-30": 358,
+        "2026-09-26": 83
       },
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "trend": "up",
-      "trend_delta": 281
+      "trend": "down",
+      "trend_delta": -275
     },
     {
       "id": "github:shanraisshan/claude-code-best-practice",
@@ -17686,7 +17827,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2207,
+      "stars": 583,
       "momentum": 100,
       "tags": [
         "shell"
@@ -17694,7 +17835,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -17721,11 +17862,12 @@
         "2026-09-04": 1601,
         "2026-09-05": 2758,
         "2026-09-06": 2692,
-        "2026-09-07": 2207
+        "2026-09-07": 2207,
+        "2026-09-26": 583
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -240
+      "trend_delta": -1624
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -18407,7 +18549,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 347,
+      "stars": 1177,
       "momentum": 53,
       "tags": [
         "python"
@@ -18415,7 +18557,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -18430,11 +18572,12 @@
         "2026-08-28": 703,
         "2026-08-29": 703,
         "2026-09-10": 343,
-        "2026-09-25": 347
+        "2026-09-25": 347,
+        "2026-09-26": 1177
       },
       "description": "Learn it. Build it. Ship it for others.",
       "trend": "up",
-      "trend_delta": 4
+      "trend_delta": 834
     },
     {
       "id": "github:Raphire/Win11Debloat",
@@ -20001,7 +20144,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 611,
+      "stars": 468,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20009,7 +20152,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-09-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -20045,11 +20188,12 @@
         "2026-09-11": 732,
         "2026-09-12": 729,
         "2026-09-24": 474,
-        "2026-09-25": 611
+        "2026-09-25": 611,
+        "2026-09-26": 468
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "down",
-      "trend_delta": -118
+      "trend_delta": -261
     },
     {
       "id": "github:openai/plugins",
