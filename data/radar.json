@@ -1,7 +1,142 @@
 {
-  "generated": "2026-09-26",
-  "count": 762,
+  "generated": "2026-09-27",
+  "count": 767,
   "items": [
+    {
+      "id": "github:microsoft/vscode",
+      "name": "vscode",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/microsoft/vscode",
+      "canonical_url": "github.com/microsoft/vscode",
+      "company": "Microsoft",
+      "stars": 95,
+      "momentum": 9,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-27": 95
+      },
+      "description": "Visual Studio Code",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tensorflow/tensorflow",
+      "name": "tensorflow",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "canonical_url": "github.com/tensorflow/tensorflow",
+      "company": null,
+      "stars": 46,
+      "momentum": 4,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-27": 46
+      },
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:actions/runner-images",
+      "name": "runner-images",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/actions/runner-images",
+      "canonical_url": "github.com/actions/runner-images",
+      "company": null,
+      "stars": 19,
+      "momentum": 1,
+      "tags": [
+        "powershell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-27": 19
+      },
+      "description": "GitHub Actions runner images",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mobile-next/mobile-mcp",
+      "name": "mobile-mcp",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mobile-next/mobile-mcp",
+      "canonical_url": "github.com/mobile-next/mobile-mcp",
+      "company": null,
+      "stars": 168,
+      "momentum": 16,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-27": 168
+      },
+      "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/claude-code-action",
+      "name": "claude-code-action",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/claude-code-action",
+      "canonical_url": "github.com/anthropics/claude-code-action",
+      "company": "Anthropic",
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-27": 31
+      },
+      "description": "A typescript project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:derv82/wifit3",
       "name": "wifit3",
@@ -93,7 +228,7 @@
       "url": "https://github.com/openbao/openbao",
       "canonical_url": "github.com/openbao/openbao",
       "company": null,
-      "stars": 49,
+      "stars": 364,
       "momentum": 4,
       "tags": [
         "go"
@@ -101,14 +236,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-26",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
-        "2026-09-26": 49
+        "2026-09-26": 49,
+        "2026-09-27": 364
       },
       "description": "OpenBao is a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 315
     },
     {
       "id": "github:kelseyhightower/kubernetes-the-hard-way",
@@ -199,7 +335,7 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "canonical_url": "github.com/vectorize-io/hindsight",
       "company": null,
-      "stars": 1653,
+      "stars": 2147,
       "momentum": 100,
       "tags": [
         "python"
@@ -207,15 +343,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-09-25": 1668,
-        "2026-09-26": 1653
+        "2026-09-26": 1653,
+        "2026-09-27": 2147
       },
       "description": "Hindsight: Agent Memory That Learns",
-      "trend": "down",
-      "trend_delta": -15
+      "trend": "up",
+      "trend_delta": 479
     },
     {
       "id": "github:NVIDIA/Model-Optimizer",
@@ -227,7 +364,7 @@
       "url": "https://github.com/NVIDIA/Model-Optimizer",
       "canonical_url": "github.com/nvidia/model-optimizer",
       "company": "NVIDIA",
-      "stars": 359,
+      "stars": 357,
       "momentum": 4,
       "tags": [
         "python"
@@ -235,15 +372,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-09-25": 44,
-        "2026-09-26": 359
+        "2026-09-26": 359,
+        "2026-09-27": 357
       },
       "description": "A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It compresses deep learning models for downstream deployment frameworks like TensorRT-LLM, TensorRT, vLLM, etc. to optimize inference speed.",
       "trend": "up",
-      "trend_delta": 315
+      "trend_delta": 313
     },
     {
       "id": "github:FxEmbed/FxEmbed",
@@ -364,7 +502,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 1050,
+      "stars": 849,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -372,17 +510,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
         "2026-09-24": 1142,
         "2026-09-25": 1082,
-        "2026-09-26": 1050
+        "2026-09-26": 1050,
+        "2026-09-27": 849
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 795
+      "trend_delta": 594
     },
     {
       "id": "github:superdesigndev/treg",
@@ -2063,7 +2202,7 @@
       "url": "https://github.com/llvm/llvm-project",
       "canonical_url": "github.com/llvm/llvm-project",
       "company": null,
-      "stars": 23,
+      "stars": 41,
       "momentum": 2,
       "tags": [
         "llvm"
@@ -2071,14 +2210,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
-        "2026-09-07": 23
+        "2026-09-07": 23,
+        "2026-09-27": 41
       },
       "description": "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 18
     },
     {
       "id": "github:The-Swarm-Corporation/AutoHedge",
@@ -5442,7 +5582,7 @@
       "url": "https://github.com/paperclipai/paperclip",
       "canonical_url": "github.com/paperclipai/paperclip",
       "company": null,
-      "stars": 2109,
+      "stars": 2608,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -5450,17 +5590,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-08-11": 198,
         "2026-08-12": 748,
         "2026-08-13": 571,
-        "2026-09-26": 2109
+        "2026-09-26": 2109,
+        "2026-09-27": 2608
       },
       "description": "The open-source app everyone uses to manage agents at work",
       "trend": "up",
-      "trend_delta": 1538
+      "trend_delta": 2037
     },
     {
       "id": "github:danielmiessler/LifeOS",
@@ -6798,7 +6939,7 @@
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "canonical_url": "github.com/zhaoxuya520/reverse-skill",
       "company": null,
-      "stars": 1401,
+      "stars": 361,
       "momentum": 33,
       "tags": [
         "powershell"
@@ -6806,7 +6947,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-01",
-      "last_seen": "2026-09-01",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-08-01": 335,
@@ -6815,11 +6956,12 @@
         "2026-08-04": 2446,
         "2026-08-05": 2297,
         "2026-08-31": 1439,
-        "2026-09-01": 1401
+        "2026-09-01": 1401,
+        "2026-09-27": 361
       },
       "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients \u9006\u5411/\u6e17\u900f/\u5b89\u5168\u6280\u80fd\u8def\u7531\u5305 - AI \u81ea\u52a8\u8def\u7531 + \u6309\u9700\u81ea\u4e3e\u5de5\u5177\u94fe + \u81ea\u52a8\u8fdb\u5316\u7ecf\u9a8c\u5e93 | \u652f\u6301 Claude Code / Kiro / Cursor / Cline \u7b49\u4ee3\u7801 AI \u5ba2\u6237\u7aef",
       "trend": "down",
-      "trend_delta": -896
+      "trend_delta": -1040
     },
     {
       "id": "github:usekaneo/kaneo",
@@ -7726,7 +7868,7 @@
       "url": "https://github.com/block/buzz",
       "canonical_url": "github.com/block/buzz",
       "company": null,
-      "stars": 410,
+      "stars": 339,
       "momentum": 100,
       "tags": [
         "rust"
@@ -7736,18 +7878,19 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 2162,
         "2026-07-25": 3270,
         "2026-07-26": 2491,
         "2026-07-27": 1710,
-        "2026-08-24": 410
+        "2026-08-24": 410,
+        "2026-09-27": 339
       },
       "description": "A hive mind communication platform",
       "trend": "down",
-      "trend_delta": -1300
+      "trend_delta": -71
     },
     {
       "id": "github:likec4/likec4",
@@ -11400,7 +11543,7 @@
       "url": "https://github.com/vercel/next.js",
       "canonical_url": "github.com/vercel/next.js",
       "company": "Vercel",
-      "stars": 68,
+      "stars": 54,
       "momentum": 19,
       "tags": [
         "javascript"
@@ -11408,16 +11551,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 191,
         "2026-07-12": 334,
-        "2026-08-06": 68
+        "2026-08-06": 68,
+        "2026-09-27": 54
       },
       "description": "The React Framework",
       "trend": "down",
-      "trend_delta": -266
+      "trend_delta": -14
     },
     {
       "id": "github:zeux/meshoptimizer",
@@ -18549,7 +18693,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 1177,
+      "stars": 827,
       "momentum": 53,
       "tags": [
         "python"
@@ -18557,7 +18701,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -18573,11 +18717,12 @@
         "2026-08-29": 703,
         "2026-09-10": 343,
         "2026-09-25": 347,
-        "2026-09-26": 1177
+        "2026-09-26": 1177,
+        "2026-09-27": 827
       },
       "description": "Learn it. Build it. Ship it for others.",
       "trend": "up",
-      "trend_delta": 834
+      "trend_delta": 484
     },
     {
       "id": "github:Raphire/Win11Debloat",

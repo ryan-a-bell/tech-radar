@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/llvm/llvm-project
 canonical_url: github.com/llvm/llvm-project
 company: null
-stars: 23
+stars: 41
 momentum: 2
 tags: ["llvm"]
 topics: []
 archived_at: null
 first_seen: 2026-09-07
-last_seen: 2026-09-07
+last_seen: 2026-09-27
 also_seen: []
-stars_history: {"2026-09-07": 23}
+stars_history: {"2026-09-07": 23, "2026-09-27": 41}
 ---
 
 The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.
