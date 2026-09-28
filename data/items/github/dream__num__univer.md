@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/dream-num/univer
 canonical_url: github.com/dream-num/univer
 company: null
-stars: 849
+stars: 895
 momentum: 25
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-09-23
-last_seen: 2026-09-27
+last_seen: 2026-09-28
 also_seen: []
-stars_history: {"2026-09-23": 255, "2026-09-24": 1142, "2026-09-25": 1082, "2026-09-26": 1050, "2026-09-27": 849}
+stars_history: {"2026-09-23": 255, "2026-09-24": 1142, "2026-09-25": 1082, "2026-09-26": 1050, "2026-09-27": 849, "2026-09-28": 895}
 ---
 
 The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.

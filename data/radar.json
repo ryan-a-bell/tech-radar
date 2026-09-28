@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-27",
-  "count": 767,
+  "generated": "2026-09-28",
+  "count": 770,
   "items": [
+    {
+      "id": "github:byoungd/up",
+      "name": "up",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/byoungd/up",
+      "canonical_url": "github.com/byoungd/up",
+      "company": null,
+      "stars": 310,
+      "momentum": 31,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-28": 310
+      },
+      "description": "An advanced guide which might benefit you a lot \ud83c\udf89 . \u97e9\u5148\u51ef\u7684\u4eba\u751f\u8fdb\u9636\u6307\u5357 \u4eba\u751f\u8fdb\u9636\u6307\u5357 \u79bb\u8c31\u7684\u4eba\u751f \u4eba\u751f\u8fdb\u9636 AI\u5b66\u4e60 AI\u6307\u5357 \u97e9\u5148\u51ef\u7684AI\u5b66\u4e60\u6307\u5357 \u82f1\u8bed\u5b66\u4e60\u6307\u5357/\u82f1\u8bed\u5b66\u4e60\u6559\u7a0b/\u82f1\u8bed\u5b66\u4e60/\u5b66\u82f1\u8bed",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mvschwarz/openrig",
+      "name": "openrig",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mvschwarz/openrig",
+      "canonical_url": "github.com/mvschwarz/openrig",
+      "company": null,
+      "stars": 114,
+      "momentum": 11,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-28": 114
+      },
+      "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cs341-illinois/coursebook",
+      "name": "coursebook",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cs341-illinois/coursebook",
+      "canonical_url": "github.com/cs341-illinois/coursebook",
+      "company": null,
+      "stars": 265,
+      "momentum": 26,
+      "tags": [
+        "tex"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-28": 265
+      },
+      "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:microsoft/vscode",
       "name": "vscode",
@@ -335,7 +416,7 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "canonical_url": "github.com/vectorize-io/hindsight",
       "company": null,
-      "stars": 2147,
+      "stars": 4520,
       "momentum": 100,
       "tags": [
         "python"
@@ -343,16 +424,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-09-28",
       "also_seen": [],
       "stars_history": {
         "2026-09-25": 1668,
         "2026-09-26": 1653,
-        "2026-09-27": 2147
+        "2026-09-27": 2147,
+        "2026-09-28": 4520
       },
       "description": "Hindsight: Agent Memory That Learns",
       "trend": "up",
-      "trend_delta": 479
+      "trend_delta": 2852
     },
     {
       "id": "github:NVIDIA/Model-Optimizer",
@@ -502,7 +584,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 849,
+      "stars": 895,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -510,18 +592,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-09-28",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
         "2026-09-24": 1142,
         "2026-09-25": 1082,
         "2026-09-26": 1050,
-        "2026-09-27": 849
+        "2026-09-27": 849,
+        "2026-09-28": 895
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 594
+      "trend_delta": 640
     },
     {
       "id": "github:superdesigndev/treg",
@@ -2625,7 +2708,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 2072,
+      "stars": 3086,
       "momentum": 83,
       "tags": [
         "python"
@@ -2633,7 +2716,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-16",
+      "last_seen": "2026-09-28",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -2642,11 +2725,12 @@
         "2026-09-13": 2546,
         "2026-09-14": 2632,
         "2026-09-15": 2776,
-        "2026-09-16": 2072
+        "2026-09-16": 2072,
+        "2026-09-28": 3086
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 727
+      "trend_delta": 1014
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -4590,7 +4674,7 @@
       "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
       "canonical_url": "github.com/nawfalmotii79/plfm_radar",
       "company": null,
-      "stars": 192,
+      "stars": 145,
       "momentum": 19,
       "tags": [
         "plsql"
@@ -4598,14 +4682,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-09-28",
       "also_seen": [],
       "stars_history": {
-        "2026-08-19": 192
+        "2026-08-19": 192,
+        "2026-09-28": 145
       },
       "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -47
     },
     {
       "id": "github:volcengine/OpenViking",
@@ -5582,7 +5667,7 @@
       "url": "https://github.com/paperclipai/paperclip",
       "canonical_url": "github.com/paperclipai/paperclip",
       "company": null,
-      "stars": 2608,
+      "stars": 2401,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -5590,18 +5675,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-09-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-11": 198,
         "2026-08-12": 748,
         "2026-08-13": 571,
         "2026-09-26": 2109,
-        "2026-09-27": 2608
+        "2026-09-27": 2608,
+        "2026-09-28": 2401
       },
       "description": "The open-source app everyone uses to manage agents at work",
       "trend": "up",
-      "trend_delta": 2037
+      "trend_delta": 1830
     },
     {
       "id": "github:danielmiessler/LifeOS",
