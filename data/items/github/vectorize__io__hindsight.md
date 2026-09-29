@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/vectorize-io/hindsight
 canonical_url: github.com/vectorize-io/hindsight
 company: null
-stars: 4520
+stars: 4561
 momentum: 100
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-09-25
-last_seen: 2026-09-28
+last_seen: 2026-09-29
 also_seen: []
-stars_history: {"2026-09-25": 1668, "2026-09-26": 1653, "2026-09-27": 2147, "2026-09-28": 4520}
+stars_history: {"2026-09-25": 1668, "2026-09-26": 1653, "2026-09-27": 2147, "2026-09-28": 4520, "2026-09-29": 4561}
 ---
 
 Hindsight: Agent Memory That Learns

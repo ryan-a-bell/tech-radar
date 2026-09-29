@@ -1,7 +1,142 @@
 {
-  "generated": "2026-09-28",
-  "count": 770,
+  "generated": "2026-09-29",
+  "count": 776,
   "items": [
+    {
+      "id": "github:rakyll/hey",
+      "name": "hey",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rakyll/hey",
+      "canonical_url": "github.com/rakyll/hey",
+      "company": null,
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-29": 31
+      },
+      "description": "HTTP load generator, ApacheBench (ab) replacement",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:t8y2/dbx",
+      "name": "dbx",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/t8y2/dbx",
+      "canonical_url": "github.com/t8y2/dbx",
+      "company": null,
+      "stars": 460,
+      "momentum": 46,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-29": 460
+      },
+      "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | \u8f7b\u91cf\u7ea7\u8de8\u5e73\u53f0\u6570\u636e\u5e93\u7ba1\u7406\u5de5\u5177\uff0c\u652f\u6301 MySQL\u3001PostgreSQL\u3001SQLite\u3001Redis\u3001MongoDB\u3001\u8fbe\u68a6\u7b49 100+ \u6570\u636e\u5e93\uff0c\u63d0\u4f9b\u684c\u9762\u7aef\u3001Docker\u3001CLI\u3001\u5185\u7f6e AI \u52a9\u624b\u548c MCP\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:VectifyAI/PageIndex",
+      "name": "PageIndex",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/VectifyAI/PageIndex",
+      "canonical_url": "github.com/vectifyai/pageindex",
+      "company": null,
+      "stars": 822,
+      "momentum": 82,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-29": 822
+      },
+      "description": "\ud83d\udcd1 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/OpenShell",
+      "name": "OpenShell",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "canonical_url": "github.com/nvidia/openshell",
+      "company": "NVIDIA",
+      "stars": 978,
+      "momentum": 97,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-29": 978
+      },
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:willfaust/Madeira",
+      "name": "Madeira",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/willfaust/Madeira",
+      "canonical_url": "github.com/willfaust/madeira",
+      "company": null,
+      "stars": 229,
+      "momentum": 22,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-29",
+      "last_seen": "2026-09-29",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-29": 229
+      },
+      "description": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:byoungd/up",
       "name": "up",
@@ -39,7 +174,7 @@
       "url": "https://github.com/mvschwarz/openrig",
       "canonical_url": "github.com/mvschwarz/openrig",
       "company": null,
-      "stars": 114,
+      "stars": 734,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -47,14 +182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
-        "2026-09-28": 114
+        "2026-09-28": 114,
+        "2026-09-29": 734
       },
       "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 620
     },
     {
       "id": "github:cs341-illinois/coursebook",
@@ -66,7 +202,7 @@
       "url": "https://github.com/cs341-illinois/coursebook",
       "canonical_url": "github.com/cs341-illinois/coursebook",
       "company": null,
-      "stars": 265,
+      "stars": 195,
       "momentum": 26,
       "tags": [
         "tex"
@@ -74,12 +210,36 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
-        "2026-09-28": 265
+        "2026-09-28": 265,
+        "2026-09-29": 195
       },
       "description": "Open Source Introductory Systems Programming Textbook for the University of Illinois",
+      "trend": "down",
+      "trend_delta": -70
+    },
+    {
+      "id": "manual:fissure",
+      "name": "FISSURE",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/ainfosec/fissure",
+      "canonical_url": "github.com/ainfosec/fissure",
+      "company": "Assured Information Security",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Open-source RF reverse-engineering framework unifying SDR hardware (USRP, HackRF, LimeSDR, bladeRF, PlutoSDR, RTL2832U), GNU Radio, and distributed sensor nodes for signal detection/classification, IQ capture, protocol discovery, packet crafting, fuzzing, and geolocation.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -416,7 +576,7 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "canonical_url": "github.com/vectorize-io/hindsight",
       "company": null,
-      "stars": 4520,
+      "stars": 4561,
       "momentum": 100,
       "tags": [
         "python"
@@ -424,17 +584,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-09-25": 1668,
         "2026-09-26": 1653,
         "2026-09-27": 2147,
-        "2026-09-28": 4520
+        "2026-09-28": 4520,
+        "2026-09-29": 4561
       },
       "description": "Hindsight: Agent Memory That Learns",
       "trend": "up",
-      "trend_delta": 2852
+      "trend_delta": 2893
     },
     {
       "id": "github:NVIDIA/Model-Optimizer",
@@ -584,7 +745,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 895,
+      "stars": 1099,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -592,7 +753,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
@@ -600,11 +761,12 @@
         "2026-09-25": 1082,
         "2026-09-26": 1050,
         "2026-09-27": 849,
-        "2026-09-28": 895
+        "2026-09-28": 895,
+        "2026-09-29": 1099
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 640
+      "trend_delta": 844
     },
     {
       "id": "github:superdesigndev/treg",
@@ -2708,7 +2870,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 3086,
+      "stars": 3221,
       "momentum": 83,
       "tags": [
         "python"
@@ -2716,7 +2878,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -2726,11 +2888,12 @@
         "2026-09-14": 2632,
         "2026-09-15": 2776,
         "2026-09-16": 2072,
-        "2026-09-28": 3086
+        "2026-09-28": 3086,
+        "2026-09-29": 3221
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 1014
+      "trend_delta": 1149
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -2796,7 +2959,7 @@
       "url": "https://github.com/averygan/reclip",
       "canonical_url": "github.com/averygan/reclip",
       "company": null,
-      "stars": 88,
+      "stars": 114,
       "momentum": 5,
       "tags": [
         "html"
@@ -2804,15 +2967,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-02",
-      "last_seen": "2026-09-04",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-09-02": 56,
-        "2026-09-04": 88
+        "2026-09-04": 88,
+        "2026-09-29": 114
       },
       "description": "Download videos from almost any website. Lightweight, self-hosted media downloader with a clean web UI.",
       "trend": "up",
-      "trend_delta": 32
+      "trend_delta": 26
     },
     {
       "id": "github:Gitlawb/openclaude",
@@ -5667,7 +5831,7 @@
       "url": "https://github.com/paperclipai/paperclip",
       "canonical_url": "github.com/paperclipai/paperclip",
       "company": null,
-      "stars": 2401,
+      "stars": 3197,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -5675,7 +5839,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-11",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-08-11": 198,
@@ -5683,11 +5847,12 @@
         "2026-08-13": 571,
         "2026-09-26": 2109,
         "2026-09-27": 2608,
-        "2026-09-28": 2401
+        "2026-09-28": 2401,
+        "2026-09-29": 3197
       },
       "description": "The open-source app everyone uses to manage agents at work",
       "trend": "up",
-      "trend_delta": 1830
+      "trend_delta": 2626
     },
     {
       "id": "github:danielmiessler/LifeOS",
@@ -8445,7 +8610,7 @@
       "url": "https://github.com/oblien/openship",
       "canonical_url": "github.com/oblien/openship",
       "company": null,
-      "stars": 1302,
+      "stars": 436,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -8453,16 +8618,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-07-21": 1641,
         "2026-07-22": 1562,
-        "2026-07-23": 1302
+        "2026-07-23": 1302,
+        "2026-09-29": 436
       },
       "description": "Self-hosted deployment platform",
       "trend": "down",
-      "trend_delta": -339
+      "trend_delta": -866
     },
     {
       "id": "github:moonshine-ai/moonshine",
@@ -18779,7 +18945,7 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "canonical_url": "github.com/rohitg00/ai-engineering-from-scratch",
       "company": null,
-      "stars": 827,
+      "stars": 1287,
       "momentum": 53,
       "tags": [
         "python"
@@ -18787,7 +18953,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-09-29",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 538,
@@ -18804,11 +18970,12 @@
         "2026-09-10": 343,
         "2026-09-25": 347,
         "2026-09-26": 1177,
-        "2026-09-27": 827
+        "2026-09-27": 827,
+        "2026-09-29": 1287
       },
       "description": "Learn it. Build it. Ship it for others.",
       "trend": "up",
-      "trend_delta": 484
+      "trend_delta": 944
     },
     {
       "id": "github:Raphire/Win11Debloat",
