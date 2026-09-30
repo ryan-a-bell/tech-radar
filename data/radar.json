@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-29",
-  "count": 776,
+  "generated": "2026-09-30",
+  "count": 779,
   "items": [
+    {
+      "id": "github:modelcontextprotocol/servers",
+      "name": "servers",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "canonical_url": "github.com/modelcontextprotocol/servers",
+      "company": null,
+      "stars": 48,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-30": 48
+      },
+      "description": "Model Context Protocol Servers",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:firebase/firebase-ios-sdk",
+      "name": "firebase-ios-sdk",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/firebase/firebase-ios-sdk",
+      "canonical_url": "github.com/firebase/firebase-ios-sdk",
+      "company": null,
+      "stars": 4,
+      "momentum": 0,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-30": 4
+      },
+      "description": "Firebase SDK for Apple App Development",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:colbymchenry/codegraph",
+      "name": "codegraph",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "canonical_url": "github.com/colbymchenry/codegraph",
+      "company": null,
+      "stars": 116,
+      "momentum": 11,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-09-30",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-30": 116
+      },
+      "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent \u2014 fewer tokens, fewer tool calls, 100% local",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:rakyll/hey",
       "name": "hey",
@@ -39,7 +120,7 @@
       "url": "https://github.com/t8y2/dbx",
       "canonical_url": "github.com/t8y2/dbx",
       "company": null,
-      "stars": 460,
+      "stars": 1133,
       "momentum": 46,
       "tags": [
         "rust"
@@ -47,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
-        "2026-09-29": 460
+        "2026-09-29": 460,
+        "2026-09-30": 1133
       },
       "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | \u8f7b\u91cf\u7ea7\u8de8\u5e73\u53f0\u6570\u636e\u5e93\u7ba1\u7406\u5de5\u5177\uff0c\u652f\u6301 MySQL\u3001PostgreSQL\u3001SQLite\u3001Redis\u3001MongoDB\u3001\u8fbe\u68a6\u7b49 100+ \u6570\u636e\u5e93\uff0c\u63d0\u4f9b\u684c\u9762\u7aef\u3001Docker\u3001CLI\u3001\u5185\u7f6e AI \u52a9\u624b\u548c MCP\u3002",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 673
     },
     {
       "id": "github:VectifyAI/PageIndex",
@@ -66,7 +148,7 @@
       "url": "https://github.com/VectifyAI/PageIndex",
       "canonical_url": "github.com/vectifyai/pageindex",
       "company": null,
-      "stars": 822,
+      "stars": 1095,
       "momentum": 82,
       "tags": [
         "python"
@@ -74,14 +156,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
-        "2026-09-29": 822
+        "2026-09-29": 822,
+        "2026-09-30": 1095
       },
       "description": "\ud83d\udcd1 PageIndex: Document Index for Vectorless, Reasoning-based RAG",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 273
     },
     {
       "id": "github:NVIDIA/OpenShell",
@@ -93,7 +176,7 @@
       "url": "https://github.com/NVIDIA/OpenShell",
       "canonical_url": "github.com/nvidia/openshell",
       "company": "NVIDIA",
-      "stars": 978,
+      "stars": 1280,
       "momentum": 97,
       "tags": [
         "rust"
@@ -101,14 +184,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
-        "2026-09-29": 978
+        "2026-09-29": 978,
+        "2026-09-30": 1280
       },
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 302
     },
     {
       "id": "github:willfaust/Madeira",
@@ -147,7 +231,7 @@
       "url": "https://github.com/byoungd/up",
       "canonical_url": "github.com/byoungd/up",
       "company": null,
-      "stars": 310,
+      "stars": 1102,
       "momentum": 31,
       "tags": [
         "javascript"
@@ -155,14 +239,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
-        "2026-09-28": 310
+        "2026-09-28": 310,
+        "2026-09-30": 1102
       },
       "description": "An advanced guide which might benefit you a lot \ud83c\udf89 . \u97e9\u5148\u51ef\u7684\u4eba\u751f\u8fdb\u9636\u6307\u5357 \u4eba\u751f\u8fdb\u9636\u6307\u5357 \u79bb\u8c31\u7684\u4eba\u751f \u4eba\u751f\u8fdb\u9636 AI\u5b66\u4e60 AI\u6307\u5357 \u97e9\u5148\u51ef\u7684AI\u5b66\u4e60\u6307\u5357 \u82f1\u8bed\u5b66\u4e60\u6307\u5357/\u82f1\u8bed\u5b66\u4e60\u6559\u7a0b/\u82f1\u8bed\u5b66\u4e60/\u5b66\u82f1\u8bed",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 792
     },
     {
       "id": "github:mvschwarz/openrig",
@@ -174,7 +259,7 @@
       "url": "https://github.com/mvschwarz/openrig",
       "canonical_url": "github.com/mvschwarz/openrig",
       "company": null,
-      "stars": 734,
+      "stars": 622,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -182,15 +267,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-09-28": 114,
-        "2026-09-29": 734
+        "2026-09-29": 734,
+        "2026-09-30": 622
       },
       "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
       "trend": "up",
-      "trend_delta": 620
+      "trend_delta": 508
     },
     {
       "id": "github:cs341-illinois/coursebook",
@@ -2282,7 +2368,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 651,
+      "stars": 88,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -2290,15 +2376,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
-        "2026-09-09": 651
+        "2026-09-09": 651,
+        "2026-09-30": 88
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
-      "trend": "up",
-      "trend_delta": 555
+      "trend": "down",
+      "trend_delta": -563
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -2870,7 +2957,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 3221,
+      "stars": 3481,
       "momentum": 83,
       "tags": [
         "python"
@@ -2878,7 +2965,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -2889,11 +2976,12 @@
         "2026-09-15": 2776,
         "2026-09-16": 2072,
         "2026-09-28": 3086,
-        "2026-09-29": 3221
+        "2026-09-29": 3221,
+        "2026-09-30": 3481
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "up",
-      "trend_delta": 1149
+      "trend_delta": 1409
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -3818,7 +3906,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1539,
+      "stars": 675,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -3826,7 +3914,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -3837,11 +3925,12 @@
         "2026-09-04": 2128,
         "2026-09-05": 1679,
         "2026-09-06": 2845,
-        "2026-09-07": 1539
+        "2026-09-07": 1539,
+        "2026-09-30": 675
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "trend": "up",
-      "trend_delta": 143
+      "trend": "down",
+      "trend_delta": -864
     },
     {
       "id": "github:marin-community/marin",
@@ -4037,7 +4126,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "canonical_url": "github.com/openclaw/openclaw",
       "company": null,
-      "stars": 173,
+      "stars": 136,
       "momentum": 17,
       "tags": [
         "typescript"
@@ -4045,14 +4134,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
-        "2026-08-25": 173
+        "2026-08-25": 173,
+        "2026-09-30": 136
       },
       "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. \ud83e\udd9e",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -37
     },
     {
       "id": "github:tashfeenahmed/freellmapi",
@@ -4838,7 +4928,7 @@
       "url": "https://github.com/NawfalMotii79/PLFM_RADAR",
       "canonical_url": "github.com/nawfalmotii79/plfm_radar",
       "company": null,
-      "stars": 145,
+      "stars": 466,
       "momentum": 19,
       "tags": [
         "plsql"
@@ -4846,15 +4936,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-19",
-      "last_seen": "2026-09-28",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-19": 192,
-        "2026-09-28": 145
+        "2026-09-28": 145,
+        "2026-09-30": 466
       },
       "description": "Open-source, low-cost 10.5 GHz PLFM phased array RADAR system",
-      "trend": "down",
-      "trend_delta": -47
+      "trend": "up",
+      "trend_delta": 274
     },
     {
       "id": "github:volcengine/OpenViking",
@@ -15767,13 +15858,13 @@
       "url": "https://github.com/ComposioHQ/awesome-claude-skills",
       "canonical_url": "github.com/composiohq/awesome-claude-skills",
       "company": "Composio",
-      "stars": 73,
+      "stars": 118,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-08-30",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-23": 163,
@@ -15781,11 +15872,12 @@
         "2026-07-25": 663,
         "2026-07-26": 577,
         "2026-08-27": 125,
-        "2026-08-30": 73
+        "2026-08-30": 73,
+        "2026-09-30": 118
       },
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "down",
-      "trend_delta": -504
+      "trend": "up",
+      "trend_delta": 45
     },
     {
       "id": "github:travisvn/awesome-claude-skills",
@@ -17319,7 +17411,7 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "canonical_url": "github.com/heygen-com/hyperframes",
       "company": null,
-      "stars": 2627,
+      "stars": 324,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -17327,17 +17419,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 369,
         "2026-06-23": 395,
         "2026-09-08": 474,
-        "2026-09-09": 2627
+        "2026-09-09": 2627,
+        "2026-09-30": 324
       },
       "description": "Write HTML. Render video. Built for agents.",
-      "trend": "up",
-      "trend_delta": 2232
+      "trend": "down",
+      "trend_delta": -2303
     },
     {
       "id": "github:garrytan/gstack",
@@ -18223,7 +18316,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 583,
+      "stars": 736,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18231,7 +18324,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -18259,11 +18352,12 @@
         "2026-09-05": 2758,
         "2026-09-06": 2692,
         "2026-09-07": 2207,
-        "2026-09-26": 583
+        "2026-09-26": 583,
+        "2026-09-30": 736
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -1624
+      "trend_delta": -1471
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -19758,7 +19852,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 1201,
+      "stars": 338,
       "momentum": 100,
       "tags": [
         "python"
@@ -19766,7 +19860,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-09-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
@@ -19775,11 +19869,12 @@
         "2026-08-19": 2304,
         "2026-08-20": 2221,
         "2026-08-21": 2761,
-        "2026-08-22": 1201
+        "2026-08-22": 1201,
+        "2026-09-30": 338
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
       "trend": "down",
-      "trend_delta": -188
+      "trend_delta": -863
     },
     {
       "id": "github:masterking32/MasterDnsVPN",
