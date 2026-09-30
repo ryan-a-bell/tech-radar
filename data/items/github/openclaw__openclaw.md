@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/openclaw/openclaw
 canonical_url: github.com/openclaw/openclaw
 company: null
-stars: 173
+stars: 136
 momentum: 17
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-25
-last_seen: 2026-08-25
+last_seen: 2026-09-30
 also_seen: []
-stars_history: {"2026-08-25": 173}
+stars_history: {"2026-08-25": 173, "2026-09-30": 136}
 ---
 
 Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞
