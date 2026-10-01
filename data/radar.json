@@ -1,7 +1,88 @@
 {
-  "generated": "2026-09-30",
-  "count": 779,
+  "generated": "2026-10-01",
+  "count": 782,
   "items": [
+    {
+      "id": "github:pablostanley/yoinks",
+      "name": "yoinks",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pablostanley/yoinks",
+      "canonical_url": "github.com/pablostanley/yoinks",
+      "company": null,
+      "stars": 356,
+      "momentum": 35,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-01": 356
+      },
+      "description": "yoink any video from your terminal. no shady ads.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tile-ai/tilelang",
+      "name": "tilelang",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tile-ai/tilelang",
+      "canonical_url": "github.com/tile-ai/tilelang",
+      "company": null,
+      "stars": 157,
+      "momentum": 15,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-01": 157
+      },
+      "description": "Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Friedrich-M/UniMate",
+      "name": "UniMate",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Friedrich-M/UniMate",
+      "canonical_url": "github.com/friedrich-m/unimate",
+      "company": null,
+      "stars": 225,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-01",
+      "last_seen": "2026-10-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-01": 225
+      },
+      "description": "[SIGGRAPH Asia 2026] UniMate: One Unified Model to Animate Diverse Skeletons",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:modelcontextprotocol/servers",
       "name": "servers",
@@ -39,7 +120,7 @@
       "url": "https://github.com/firebase/firebase-ios-sdk",
       "canonical_url": "github.com/firebase/firebase-ios-sdk",
       "company": null,
-      "stars": 4,
+      "stars": 112,
       "momentum": 0,
       "tags": [
         "c++"
@@ -47,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
-        "2026-09-30": 4
+        "2026-09-30": 4,
+        "2026-10-01": 112
       },
       "description": "Firebase SDK for Apple App Development",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 108
     },
     {
       "id": "github:colbymchenry/codegraph",
@@ -176,7 +258,7 @@
       "url": "https://github.com/NVIDIA/OpenShell",
       "canonical_url": "github.com/nvidia/openshell",
       "company": "NVIDIA",
-      "stars": 1280,
+      "stars": 2503,
       "momentum": 97,
       "tags": [
         "rust"
@@ -184,15 +266,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-09-29": 978,
-        "2026-09-30": 1280
+        "2026-09-30": 1280,
+        "2026-10-01": 2503
       },
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "trend": "up",
-      "trend_delta": 302
+      "trend_delta": 1525
     },
     {
       "id": "github:willfaust/Madeira",
@@ -259,7 +342,7 @@
       "url": "https://github.com/mvschwarz/openrig",
       "canonical_url": "github.com/mvschwarz/openrig",
       "company": null,
-      "stars": 622,
+      "stars": 640,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -267,16 +350,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-09-28": 114,
         "2026-09-29": 734,
-        "2026-09-30": 622
+        "2026-09-30": 622,
+        "2026-10-01": 640
       },
       "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
       "trend": "up",
-      "trend_delta": 508
+      "trend_delta": 526
     },
     {
       "id": "github:cs341-illinois/coursebook",
@@ -1495,7 +1579,7 @@
       "url": "https://github.com/earendil-works/pi",
       "canonical_url": "github.com/earendil-works/pi",
       "company": null,
-      "stars": 458,
+      "stars": 294,
       "momentum": 45,
       "tags": [
         "typescript"
@@ -1503,14 +1587,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-09-16",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
-        "2026-09-16": 458
+        "2026-09-16": 458,
+        "2026-10-01": 294
       },
       "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -164
     },
     {
       "id": "github:danny-avila/LibreChat",
@@ -2368,7 +2453,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 88,
+      "stars": 357,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -2376,16 +2461,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
         "2026-09-09": 651,
-        "2026-09-30": 88
+        "2026-09-30": 88,
+        "2026-10-01": 357
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "down",
-      "trend_delta": -563
+      "trend_delta": -294
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -3906,7 +3992,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 675,
+      "stars": 1179,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -3914,7 +4000,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -3926,11 +4012,12 @@
         "2026-09-05": 1679,
         "2026-09-06": 2845,
         "2026-09-07": 1539,
-        "2026-09-30": 675
+        "2026-09-30": 675,
+        "2026-10-01": 1179
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "down",
-      "trend_delta": -864
+      "trend_delta": -360
     },
     {
       "id": "github:marin-community/marin",
@@ -5246,7 +5333,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 246,
+      "stars": 157,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -5254,7 +5341,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-08-29",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -5263,11 +5350,12 @@
         "2026-08-22": 388,
         "2026-08-23": 286,
         "2026-08-28": 257,
-        "2026-08-29": 246
+        "2026-08-29": 246,
+        "2026-10-01": 157
       },
       "description": "Cursor plugin specification and official plugins",
       "trend": "down",
-      "trend_delta": -142
+      "trend_delta": -89
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -7883,7 +7971,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 306,
+      "stars": 463,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -7891,17 +7979,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
         "2026-07-28": 847,
         "2026-09-24": 304,
-        "2026-09-26": 306
+        "2026-09-26": 306,
+        "2026-10-01": 463
       },
       "description": "The design language that makes your AI harness better at design.",
-      "trend": "down",
-      "trend_delta": -541
+      "trend": "up",
+      "trend_delta": 159
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -17411,7 +17500,7 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "canonical_url": "github.com/heygen-com/hyperframes",
       "company": null,
-      "stars": 324,
+      "stars": 624,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -17419,18 +17508,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 369,
         "2026-06-23": 395,
         "2026-09-08": 474,
         "2026-09-09": 2627,
-        "2026-09-30": 324
+        "2026-09-30": 324,
+        "2026-10-01": 624
       },
       "description": "Write HTML. Render video. Built for agents.",
       "trend": "down",
-      "trend_delta": -2303
+      "trend_delta": -2003
     },
     {
       "id": "github:garrytan/gstack",
@@ -18316,7 +18406,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 736,
+      "stars": 888,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18324,7 +18414,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -18353,11 +18443,12 @@
         "2026-09-06": 2692,
         "2026-09-07": 2207,
         "2026-09-26": 583,
-        "2026-09-30": 736
+        "2026-09-30": 736,
+        "2026-10-01": 888
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -1471
+      "trend_delta": -1319
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -20461,7 +20552,7 @@
       "url": "https://github.com/HunxByts/GhostTrack",
       "canonical_url": "github.com/hunxbyts/ghosttrack",
       "company": null,
-      "stars": 28,
+      "stars": 635,
       "momentum": 2,
       "tags": [
         "python"
@@ -20469,15 +20560,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-06-07": 21,
-        "2026-06-08": 28
+        "2026-06-08": 28,
+        "2026-10-01": 635
       },
       "description": "Useful tool to track location or mobile number",
       "trend": "up",
-      "trend_delta": 7
+      "trend_delta": 607
     },
     {
       "id": "github:TapXWorld/ChinaTextbook",
@@ -20637,7 +20729,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 468,
+      "stars": 594,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20645,7 +20737,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-10-01",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -20682,11 +20774,12 @@
         "2026-09-12": 729,
         "2026-09-24": 474,
         "2026-09-25": 611,
-        "2026-09-26": 468
+        "2026-09-26": 468,
+        "2026-10-01": 594
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -261
+      "trend": "up",
+      "trend_delta": 120
     },
     {
       "id": "github:openai/plugins",

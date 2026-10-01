@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/cursor/plugins
 canonical_url: github.com/cursor/plugins
 company: null
-stars: 246
+stars: 157
 momentum: 4
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-15
-last_seen: 2026-08-29
+last_seen: 2026-10-01
 also_seen: []
-stars_history: {"2026-08-15": 41, "2026-08-16": 149, "2026-08-21": 449, "2026-08-22": 388, "2026-08-23": 286, "2026-08-28": 257, "2026-08-29": 246}
+stars_history: {"2026-08-15": 41, "2026-08-16": 149, "2026-08-21": 449, "2026-08-22": 388, "2026-08-23": 286, "2026-08-28": 257, "2026-08-29": 246, "2026-10-01": 157}
 ---
 
 Cursor plugin specification and official plugins
