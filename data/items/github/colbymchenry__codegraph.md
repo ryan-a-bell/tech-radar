@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/colbymchenry/codegraph
 canonical_url: github.com/colbymchenry/codegraph
 company: null
-stars: 116
+stars: 241
 momentum: 11
 tags: ["c"]
 topics: []
 archived_at: null
 first_seen: 2026-09-30
-last_seen: 2026-09-30
+last_seen: 2026-10-02
 also_seen: []
-stars_history: {"2026-09-30": 116}
+stars_history: {"2026-09-30": 116, "2026-10-02": 241}
 ---
 
 Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent — fewer tokens, fewer tool calls, 100% local

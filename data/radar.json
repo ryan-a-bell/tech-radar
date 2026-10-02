@@ -1,7 +1,61 @@
 {
-  "generated": "2026-10-01",
-  "count": 782,
+  "generated": "2026-10-02",
+  "count": 784,
   "items": [
+    {
+      "id": "github:getsentry/sentry",
+      "name": "sentry",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/getsentry/sentry",
+      "canonical_url": "github.com/getsentry/sentry",
+      "company": null,
+      "stars": 12,
+      "momentum": 1,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-02": 12
+      },
+      "description": "Developer-first error tracking and performance monitoring",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Effect-TS/effect",
+      "name": "effect",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Effect-TS/effect",
+      "canonical_url": "github.com/effect-ts/effect",
+      "company": null,
+      "stars": 76,
+      "momentum": 7,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-02": 76
+      },
+      "description": "Build production-ready applications in TypeScript",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:pablostanley/yoinks",
       "name": "yoinks",
@@ -12,7 +66,7 @@
       "url": "https://github.com/pablostanley/yoinks",
       "canonical_url": "github.com/pablostanley/yoinks",
       "company": null,
-      "stars": 356,
+      "stars": 361,
       "momentum": 35,
       "tags": [
         "typescript"
@@ -20,14 +74,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
-        "2026-10-01": 356
+        "2026-10-01": 356,
+        "2026-10-02": 361
       },
       "description": "yoink any video from your terminal. no shady ads.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 5
     },
     {
       "id": "github:tile-ai/tilelang",
@@ -148,7 +203,7 @@
       "url": "https://github.com/colbymchenry/codegraph",
       "canonical_url": "github.com/colbymchenry/codegraph",
       "company": null,
-      "stars": 116,
+      "stars": 241,
       "momentum": 11,
       "tags": [
         "c"
@@ -156,14 +211,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-30",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
-        "2026-09-30": 116
+        "2026-09-30": 116,
+        "2026-10-02": 241
       },
       "description": "Pre-indexed code knowledge graph, auto syncs on code changes, for Claude Code, Codex, Gemini, Cursor, OpenCode, AntiGravity, Kiro, CoPilot, and Hermes Agent \u2014 fewer tokens, fewer tool calls, 100% local",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 125
     },
     {
       "id": "github:rakyll/hey",
@@ -258,7 +314,7 @@
       "url": "https://github.com/NVIDIA/OpenShell",
       "canonical_url": "github.com/nvidia/openshell",
       "company": "NVIDIA",
-      "stars": 2503,
+      "stars": 2456,
       "momentum": 97,
       "tags": [
         "rust"
@@ -266,16 +322,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-09-29": 978,
         "2026-09-30": 1280,
-        "2026-10-01": 2503
+        "2026-10-01": 2503,
+        "2026-10-02": 2456
       },
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "trend": "up",
-      "trend_delta": 1525
+      "trend_delta": 1478
     },
     {
       "id": "github:willfaust/Madeira",
@@ -342,7 +399,7 @@
       "url": "https://github.com/mvschwarz/openrig",
       "canonical_url": "github.com/mvschwarz/openrig",
       "company": null,
-      "stars": 640,
+      "stars": 642,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -350,17 +407,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-28",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-09-28": 114,
         "2026-09-29": 734,
         "2026-09-30": 622,
-        "2026-10-01": 640
+        "2026-10-01": 640,
+        "2026-10-02": 642
       },
       "description": "Multi-agent harness that runs Claude Code and Codex together as one system",
       "trend": "up",
-      "trend_delta": 526
+      "trend_delta": 528
     },
     {
       "id": "github:cs341-illinois/coursebook",
@@ -2453,7 +2511,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 357,
+      "stars": 362,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -2461,17 +2519,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
         "2026-09-09": 651,
         "2026-09-30": 88,
-        "2026-10-01": 357
+        "2026-10-01": 357,
+        "2026-10-02": 362
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "down",
-      "trend_delta": -294
+      "trend_delta": -289
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -3992,7 +4051,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1179,
+      "stars": 1194,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -4000,7 +4059,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -4013,11 +4072,12 @@
         "2026-09-06": 2845,
         "2026-09-07": 1539,
         "2026-09-30": 675,
-        "2026-10-01": 1179
+        "2026-10-01": 1179,
+        "2026-10-02": 1194
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
       "trend": "down",
-      "trend_delta": -360
+      "trend_delta": -345
     },
     {
       "id": "github:marin-community/marin",
@@ -5333,7 +5393,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 157,
+      "stars": 150,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -5341,7 +5401,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -5351,11 +5411,12 @@
         "2026-08-23": 286,
         "2026-08-28": 257,
         "2026-08-29": 246,
-        "2026-10-01": 157
+        "2026-10-01": 157,
+        "2026-10-02": 150
       },
       "description": "Cursor plugin specification and official plugins",
       "trend": "down",
-      "trend_delta": -89
+      "trend_delta": -96
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -7971,7 +8032,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 463,
+      "stars": 495,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -7979,18 +8040,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
         "2026-07-28": 847,
         "2026-09-24": 304,
         "2026-09-26": 306,
-        "2026-10-01": 463
+        "2026-10-01": 463,
+        "2026-10-02": 495
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 159
+      "trend_delta": 191
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12799,7 +12861,7 @@
       "url": "https://github.com/coreyhaines31/marketingskills",
       "canonical_url": "github.com/coreyhaines31/marketingskills",
       "company": null,
-      "stars": 666,
+      "stars": 139,
       "momentum": 14,
       "tags": [
         "javascript"
@@ -12807,7 +12869,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-06",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-07-06": 145,
@@ -12815,11 +12877,12 @@
         "2026-07-16": 340,
         "2026-09-07": 329,
         "2026-09-08": 580,
-        "2026-09-09": 666
+        "2026-09-09": 666,
+        "2026-10-02": 139
       },
       "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-      "trend": "up",
-      "trend_delta": 326
+      "trend": "down",
+      "trend_delta": -527
     },
     {
       "id": "github:gastownhall/gastown",
@@ -15867,7 +15930,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 501,
+      "stars": 193,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -15875,7 +15938,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -15885,11 +15948,12 @@
         "2026-08-21": 258,
         "2026-09-03": 238,
         "2026-09-04": 543,
-        "2026-09-05": 501
+        "2026-09-05": 501,
+        "2026-10-02": 193
       },
       "description": "Claude Code skill reducing token usage through simplified language",
-      "trend": "up",
-      "trend_delta": 243
+      "trend": "down",
+      "trend_delta": -308
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -17500,7 +17564,7 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "canonical_url": "github.com/heygen-com/hyperframes",
       "company": null,
-      "stars": 624,
+      "stars": 627,
       "momentum": 36,
       "tags": [
         "typescript"
@@ -17508,7 +17572,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 369,
@@ -17516,11 +17580,12 @@
         "2026-09-08": 474,
         "2026-09-09": 2627,
         "2026-09-30": 324,
-        "2026-10-01": 624
+        "2026-10-01": 624,
+        "2026-10-02": 627
       },
       "description": "Write HTML. Render video. Built for agents.",
       "trend": "down",
-      "trend_delta": -2003
+      "trend_delta": -2000
     },
     {
       "id": "github:garrytan/gstack",
@@ -18406,7 +18471,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 888,
+      "stars": 883,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18414,7 +18479,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -18444,11 +18509,12 @@
         "2026-09-07": 2207,
         "2026-09-26": 583,
         "2026-09-30": 736,
-        "2026-10-01": 888
+        "2026-10-01": 888,
+        "2026-10-02": 883
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -1319
+      "trend_delta": -1324
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -20210,7 +20276,7 @@
       "url": "https://github.com/google/skills",
       "canonical_url": "github.com/google/skills",
       "company": "Google",
-      "stars": 528,
+      "stars": 30,
       "momentum": 48,
       "tags": [
         "python"
@@ -20218,7 +20284,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 481,
@@ -20227,11 +20293,12 @@
         "2026-06-11": 211,
         "2026-08-08": 327,
         "2026-08-09": 481,
-        "2026-08-10": 528
+        "2026-08-10": 528,
+        "2026-10-02": 30
       },
       "description": "Agent Skills for Google products and technologies",
-      "trend": "up",
-      "trend_delta": 317
+      "trend": "down",
+      "trend_delta": -498
     },
     {
       "id": "github:phuryn/pm-skills",
@@ -20729,7 +20796,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 594,
+      "stars": 455,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20737,7 +20804,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -20775,11 +20842,12 @@
         "2026-09-24": 474,
         "2026-09-25": 611,
         "2026-09-26": 468,
-        "2026-10-01": 594
+        "2026-10-01": 594,
+        "2026-10-02": 455
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "up",
-      "trend_delta": 120
+      "trend": "down",
+      "trend_delta": -156
     },
     {
       "id": "github:openai/plugins",
@@ -21124,7 +21192,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 651,
+      "stars": 683,
       "momentum": 14,
       "tags": [
         "python"
@@ -21132,7 +21200,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-10-02",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -21147,11 +21215,12 @@
         "2026-08-03": 659,
         "2026-08-04": 1057,
         "2026-09-14": 640,
-        "2026-09-15": 651
+        "2026-09-15": 651,
+        "2026-10-02": 683
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
-      "trend": "down",
-      "trend_delta": -406
+      "trend": "up",
+      "trend_delta": 32
     },
     {
       "id": "github:github/spec-kit",
