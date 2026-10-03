@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/coreyhaines31/marketingskills
 canonical_url: github.com/coreyhaines31/marketingskills
 company: null
-stars: 139
+stars: 140
 momentum: 14
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-06
-last_seen: 2026-10-02
+last_seen: 2026-10-03
 also_seen: []
-stars_history: {"2026-07-06": 145, "2026-07-14": 299, "2026-07-16": 340, "2026-09-07": 329, "2026-09-08": 580, "2026-09-09": 666, "2026-10-02": 139}
+stars_history: {"2026-07-06": 145, "2026-07-14": 299, "2026-07-16": 340, "2026-09-07": 329, "2026-09-08": 580, "2026-09-09": 666, "2026-10-02": 139, "2026-10-03": 140}
 ---
 
 Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.
