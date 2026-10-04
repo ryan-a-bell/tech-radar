@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/getsentry/sentry
 canonical_url: github.com/getsentry/sentry
 company: null
-stars: 16
+stars: 152
 momentum: 1
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-10-02
-last_seen: 2026-10-03
+last_seen: 2026-10-04
 also_seen: []
-stars_history: {"2026-10-02": 12, "2026-10-03": 16}
+stars_history: {"2026-10-02": 12, "2026-10-03": 16, "2026-10-04": 152}
 ---
 
 Developer-first error tracking and performance monitoring

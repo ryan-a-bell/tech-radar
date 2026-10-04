@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/jamwithai/production-agentic-rag-course
 canonical_url: github.com/jamwithai/production-agentic-rag-course
 company: null
-stars: 372
+stars: 219
 momentum: 37
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-03
-last_seen: 2026-06-03
+last_seen: 2026-10-04
 also_seen: []
-stars_history: {"2026-06-03": 372}
+stars_history: {"2026-06-03": 372, "2026-10-04": 219}
 ---
 
 A python project trending on GitHub.
