@@ -7,7 +7,7 @@ source: Manual
 discovered_by: manual
 url: https://github.com/sightread/sightread
 canonical_url: github.com/sightread/sightread
-company: ""
+company: null
 stars: 0
 momentum: 0
 tags: []
