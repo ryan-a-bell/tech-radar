@@ -11,7 +11,7 @@ company: null
 stars: 0
 momentum: 0
 tags: []
-topics: ["ML"]
+topics: ["ML", "Music"]
 archived_at: null
 first_seen: 2026-10-04
 last_seen: 2026-10-04
