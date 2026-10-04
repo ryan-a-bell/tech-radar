@@ -1,7 +1,34 @@
 {
   "generated": "2026-10-04",
-  "count": 790,
+  "count": 792,
   "items": [
+    {
+      "id": "github:cloudflare/cloudflare-os",
+      "name": "cloudflare-os",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "canonical_url": "github.com/cloudflare/cloudflare-os",
+      "company": "Cloudflare",
+      "stars": 336,
+      "momentum": 33,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-04": 336
+      },
+      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company\u2019s context and systems.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:synthesia-game",
       "name": "Synthesia",
@@ -107,6 +134,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:meituan-longcat/LongCat-Video",
+      "name": "LongCat-Video",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/meituan-longcat/LongCat-Video",
+      "canonical_url": "github.com/meituan-longcat/longcat-video",
+      "company": null,
+      "stars": 307,
+      "momentum": 30,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-04": 307
+      },
+      "description": "A python project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:cloudflare-forge",
       "name": "Forge",
       "quadrant": "Tools",
@@ -164,7 +218,7 @@
       "url": "https://github.com/getsentry/sentry",
       "canonical_url": "github.com/getsentry/sentry",
       "company": null,
-      "stars": 16,
+      "stars": 152,
       "momentum": 1,
       "tags": [
         "python"
@@ -172,15 +226,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-10-02": 12,
-        "2026-10-03": 16
+        "2026-10-03": 16,
+        "2026-10-04": 152
       },
       "description": "Developer-first error tracking and performance monitoring",
       "trend": "up",
-      "trend_delta": 4
+      "trend_delta": 140
     },
     {
       "id": "github:Effect-TS/effect",
@@ -192,7 +247,7 @@
       "url": "https://github.com/Effect-TS/effect",
       "canonical_url": "github.com/effect-ts/effect",
       "company": null,
-      "stars": 80,
+      "stars": 243,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -200,15 +255,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-02",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-10-02": 76,
-        "2026-10-03": 80
+        "2026-10-03": 80,
+        "2026-10-04": 243
       },
       "description": "Build production-ready applications in TypeScript",
       "trend": "up",
-      "trend_delta": 4
+      "trend_delta": 167
     },
     {
       "id": "github:pablostanley/yoinks",
@@ -1795,7 +1851,7 @@
       "url": "https://github.com/earendil-works/pi",
       "canonical_url": "github.com/earendil-works/pi",
       "company": null,
-      "stars": 294,
+      "stars": 400,
       "momentum": 45,
       "tags": [
         "typescript"
@@ -1803,15 +1859,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-16",
-      "last_seen": "2026-10-01",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-09-16": 458,
-        "2026-10-01": 294
+        "2026-10-01": 294,
+        "2026-10-04": 400
       },
       "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
       "trend": "down",
-      "trend_delta": -164
+      "trend_delta": -58
     },
     {
       "id": "github:danny-avila/LibreChat",
@@ -2669,7 +2726,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 282,
+      "stars": 189,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -2677,7 +2734,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
@@ -2685,11 +2742,12 @@
         "2026-09-30": 88,
         "2026-10-01": 357,
         "2026-10-02": 362,
-        "2026-10-03": 282
+        "2026-10-03": 282,
+        "2026-10-04": 189
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "down",
-      "trend_delta": -369
+      "trend_delta": -462
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -4151,7 +4209,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 133,
+      "stars": 627,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -4159,14 +4217,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 133
+        "2026-08-27": 133,
+        "2026-10-04": 627
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 494
     },
     {
       "id": "github:tt-a1i/archify",
@@ -4210,7 +4269,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1435,
+      "stars": 1894,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -4218,7 +4277,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -4233,11 +4292,12 @@
         "2026-09-30": 675,
         "2026-10-01": 1179,
         "2026-10-02": 1194,
-        "2026-10-03": 1435
+        "2026-10-03": 1435,
+        "2026-10-04": 1894
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "trend": "down",
-      "trend_delta": -104
+      "trend": "up",
+      "trend_delta": 355
     },
     {
       "id": "github:marin-community/marin",
@@ -8193,7 +8253,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 722,
+      "stars": 1170,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -8201,7 +8261,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -8210,11 +8270,12 @@
         "2026-09-26": 306,
         "2026-10-01": 463,
         "2026-10-02": 495,
-        "2026-10-03": 722
+        "2026-10-03": 722,
+        "2026-10-04": 1170
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 416
+      "trend_delta": 864
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -10634,7 +10695,7 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "canonical_url": "github.com/opencut-app/opencut",
       "company": null,
-      "stars": 460,
+      "stars": 512,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -10642,7 +10703,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-14": 1229,
@@ -10653,11 +10714,12 @@
         "2026-08-15": 255,
         "2026-08-17": 150,
         "2026-08-19": 192,
-        "2026-08-27": 460
+        "2026-08-27": 460,
+        "2026-10-04": 512
       },
       "description": "The open-source CapCut alternative",
       "trend": "up",
-      "trend_delta": 268
+      "trend_delta": 52
     },
     {
       "id": "manual:github:ggerganov/whisper.cpp",
@@ -10692,7 +10754,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "canonical_url": "github.com/pingdotgg/t3code",
       "company": null,
-      "stars": 389,
+      "stars": 492,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -10700,17 +10762,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-08-11",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 75,
         "2026-07-27": 149,
         "2026-08-10": 163,
-        "2026-08-11": 389
+        "2026-08-11": 389,
+        "2026-10-04": 492
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 240
+      "trend_delta": 103
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -16062,13 +16125,13 @@
       "url": "https://github.com/anthropics/claude-code",
       "canonical_url": "github.com/anthropics/claude-code",
       "company": "Anthropic",
-      "stars": 483,
+      "stars": 336,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 221,
@@ -16077,11 +16140,12 @@
         "2026-09-17": 165,
         "2026-09-18": 538,
         "2026-09-19": 444,
-        "2026-09-20": 483
+        "2026-09-20": 483,
+        "2026-10-04": 336
       },
       "description": "Agentic coding tool for terminal-based development assistance",
-      "trend": "up",
-      "trend_delta": 356
+      "trend": "down",
+      "trend_delta": -147
     },
     {
       "id": "github:JuliusBrussee/caveman",
@@ -16093,7 +16157,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 209,
+      "stars": 434,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -16101,7 +16165,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -16113,11 +16177,12 @@
         "2026-09-04": 543,
         "2026-09-05": 501,
         "2026-10-02": 193,
-        "2026-10-03": 209
+        "2026-10-03": 209,
+        "2026-10-04": 434
       },
       "description": "Claude Code skill reducing token usage through simplified language",
       "trend": "down",
-      "trend_delta": -292
+      "trend_delta": -67
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -18636,7 +18701,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 955,
+      "stars": 691,
       "momentum": 100,
       "tags": [
         "shell"
@@ -18644,7 +18709,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -18676,11 +18741,12 @@
         "2026-09-30": 736,
         "2026-10-01": 888,
         "2026-10-02": 883,
-        "2026-10-03": 955
+        "2026-10-03": 955,
+        "2026-10-04": 691
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 372
+      "trend_delta": 108
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -20328,7 +20394,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 556,
+      "stars": 336,
       "momentum": 34,
       "tags": [
         "shell"
@@ -20336,7 +20402,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -20363,11 +20429,12 @@
         "2026-09-17": 658,
         "2026-09-18": 680,
         "2026-09-19": 675,
-        "2026-09-20": 556
+        "2026-09-20": 556,
+        "2026-10-04": 336
       },
       "description": "Production-grade engineering skills for AI coding agents.",
-      "trend": "up",
-      "trend_delta": 292
+      "trend": "down",
+      "trend_delta": -220
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -20963,7 +21030,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 556,
+      "stars": 446,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20971,7 +21038,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -21011,11 +21078,12 @@
         "2026-09-26": 468,
         "2026-10-01": 594,
         "2026-10-02": 455,
-        "2026-10-03": 556
+        "2026-10-03": 556,
+        "2026-10-04": 446
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "up",
-      "trend_delta": 88
+      "trend": "down",
+      "trend_delta": -22
     },
     {
       "id": "github:openai/plugins",
@@ -21360,7 +21428,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 696,
+      "stars": 979,
       "momentum": 14,
       "tags": [
         "python"
@@ -21368,7 +21436,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -21385,11 +21453,12 @@
         "2026-09-14": 640,
         "2026-09-15": 651,
         "2026-10-02": 683,
-        "2026-10-03": 696
+        "2026-10-03": 696,
+        "2026-10-04": 979
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
       "trend": "up",
-      "trend_delta": 45
+      "trend_delta": 328
     },
     {
       "id": "github:github/spec-kit",
@@ -21688,7 +21757,7 @@
       "url": "https://github.com/jamwithai/production-agentic-rag-course",
       "canonical_url": "github.com/jamwithai/production-agentic-rag-course",
       "company": null,
-      "stars": 372,
+      "stars": 219,
       "momentum": 37,
       "tags": [
         "python"
@@ -21696,14 +21765,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-06-03",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
-        "2026-06-03": 372
+        "2026-06-03": 372,
+        "2026-10-04": 219
       },
       "description": "A python project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -153
     },
     {
       "id": "github:opendataloader-project/opendataloader-pdf",
@@ -22147,7 +22217,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 958,
+      "stars": 889,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -22155,7 +22225,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-09-19",
+      "last_seen": "2026-10-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -22184,11 +22254,12 @@
         "2026-09-10": 1133,
         "2026-09-17": 1057,
         "2026-09-18": 1171,
-        "2026-09-19": 958
+        "2026-09-19": 958,
+        "2026-10-04": 889
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "down",
-      "trend_delta": -175
+      "trend_delta": -69
     }
   ]
 }
