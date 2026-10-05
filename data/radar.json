@@ -1,7 +1,115 @@
 {
-  "generated": "2026-10-04",
-  "count": 801,
+  "generated": "2026-10-05",
+  "count": 805,
   "items": [
+    {
+      "id": "github:DuarteSantos8/openGym",
+      "name": "openGym",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "canonical_url": "github.com/duartesantos8/opengym",
+      "company": null,
+      "stars": 570,
+      "momentum": 57,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 570
+      },
+      "description": "Self-hosted gym & body-weight tracker \u2014 plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tester-army/e2e",
+      "name": "e2e",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tester-army/e2e",
+      "canonical_url": "github.com/tester-army/e2e",
+      "company": null,
+      "stars": 1430,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 1430
+      },
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:caddyserver/caddy",
+      "name": "caddy",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/caddyserver/caddy",
+      "canonical_url": "github.com/caddyserver/caddy",
+      "company": null,
+      "stars": 526,
+      "momentum": 52,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 526
+      },
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:boykopovar/AnyPS5",
+      "name": "AnyPS5",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "canonical_url": "github.com/boykopovar/anyps5",
+      "company": null,
+      "stars": 994,
+      "momentum": 99,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 994
+      },
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:cloudflare/cloudflare-os",
       "name": "cloudflare-os",
@@ -12,7 +120,7 @@
       "url": "https://github.com/cloudflare/cloudflare-os",
       "canonical_url": "github.com/cloudflare/cloudflare-os",
       "company": "Cloudflare",
-      "stars": 336,
+      "stars": 102,
       "momentum": 33,
       "tags": [
         "typescript"
@@ -20,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
-        "2026-10-04": 336
+        "2026-10-04": 336,
+        "2026-10-05": 102
       },
       "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company\u2019s context and systems.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -234
     },
     {
       "id": "manual:vectorcraft",
@@ -3065,7 +3174,7 @@
       "url": "https://github.com/Stremio/stremio-web",
       "canonical_url": "github.com/stremio/stremio-web",
       "company": null,
-      "stars": 122,
+      "stars": 111,
       "momentum": 12,
       "tags": [
         "javascript"
@@ -3073,14 +3182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
-        "2026-09-07": 122
+        "2026-09-07": 122,
+        "2026-10-05": 111
       },
       "description": "Stremio - Freedom to Stream",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -11
     },
     {
       "id": "github:aipoch/open-science",
@@ -4432,7 +4542,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 627,
+      "stars": 534,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -4440,15 +4550,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
-        "2026-10-04": 627
+        "2026-10-04": 627,
+        "2026-10-05": 534
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 494
+      "trend_delta": 401
     },
     {
       "id": "github:tt-a1i/archify",
@@ -8956,7 +9067,7 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "canonical_url": "github.com/earthtojake/text-to-cad",
       "company": null,
-      "stars": 124,
+      "stars": 456,
       "momentum": 29,
       "tags": [
         "javascript"
@@ -8964,16 +9075,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 291,
         "2026-07-24": 230,
-        "2026-09-10": 124
+        "2026-09-10": 124,
+        "2026-10-05": 456
       },
       "description": "A collection of agent skills for CAD, robotics and hardware design",
-      "trend": "down",
-      "trend_delta": -106
+      "trend": "up",
+      "trend_delta": 332
     },
     {
       "id": "github:agegr/pi-web",
@@ -10977,7 +11089,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "canonical_url": "github.com/pingdotgg/t3code",
       "company": null,
-      "stars": 492,
+      "stars": 487,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -10985,18 +11097,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 75,
         "2026-07-27": 149,
         "2026-08-10": 163,
         "2026-08-11": 389,
-        "2026-10-04": 492
+        "2026-10-04": 492,
+        "2026-10-05": 487
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 103
+      "trend_delta": 98
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -19279,7 +19392,7 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "canonical_url": "github.com/calesthio/openmontage",
       "company": null,
-      "stars": 383,
+      "stars": 758,
       "momentum": 7,
       "tags": [
         "python"
@@ -19287,7 +19400,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -19305,11 +19418,12 @@
         "2026-08-28": 1144,
         "2026-08-29": 1144,
         "2026-08-30": 806,
-        "2026-09-13": 383
+        "2026-09-13": 383,
+        "2026-10-05": 758
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
-      "trend": "down",
-      "trend_delta": -423
+      "trend": "up",
+      "trend_delta": 375
     },
     {
       "id": "github:alibaba/zvec",
@@ -20174,7 +20288,7 @@
       "url": "https://github.com/msitarzewski/agency-agents",
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "company": null,
-      "stars": 778,
+      "stars": 595,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20182,7 +20296,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 1040,
@@ -20198,11 +20312,12 @@
         "2026-08-11": 1349,
         "2026-08-12": 958,
         "2026-08-13": 1873,
-        "2026-08-14": 778
+        "2026-08-14": 778,
+        "2026-10-05": 595
       },
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "trend": "down",
-      "trend_delta": -84
+      "trend_delta": -183
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -21651,7 +21766,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 979,
+      "stars": 1156,
       "momentum": 14,
       "tags": [
         "python"
@@ -21659,7 +21774,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -21677,11 +21792,12 @@
         "2026-09-15": 651,
         "2026-10-02": 683,
         "2026-10-03": 696,
-        "2026-10-04": 979
+        "2026-10-04": 979,
+        "2026-10-05": 1156
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
       "trend": "up",
-      "trend_delta": 328
+      "trend_delta": 505
     },
     {
       "id": "github:github/spec-kit",
