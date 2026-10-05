@@ -1,7 +1,115 @@
 {
-  "generated": "2026-10-04",
-  "count": 792,
+  "generated": "2026-10-05",
+  "count": 805,
   "items": [
+    {
+      "id": "github:DuarteSantos8/openGym",
+      "name": "openGym",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "canonical_url": "github.com/duartesantos8/opengym",
+      "company": null,
+      "stars": 570,
+      "momentum": 57,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 570
+      },
+      "description": "Self-hosted gym & body-weight tracker \u2014 plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:tester-army/e2e",
+      "name": "e2e",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/tester-army/e2e",
+      "canonical_url": "github.com/tester-army/e2e",
+      "company": null,
+      "stars": 1430,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 1430
+      },
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:caddyserver/caddy",
+      "name": "caddy",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/caddyserver/caddy",
+      "canonical_url": "github.com/caddyserver/caddy",
+      "company": null,
+      "stars": 526,
+      "momentum": 52,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 526
+      },
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:boykopovar/AnyPS5",
+      "name": "AnyPS5",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "canonical_url": "github.com/boykopovar/anyps5",
+      "company": null,
+      "stars": 994,
+      "momentum": 99,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-05": 994
+      },
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:cloudflare/cloudflare-os",
       "name": "cloudflare-os",
@@ -12,7 +120,7 @@
       "url": "https://github.com/cloudflare/cloudflare-os",
       "canonical_url": "github.com/cloudflare/cloudflare-os",
       "company": "Cloudflare",
-      "stars": 336,
+      "stars": 102,
       "momentum": 33,
       "tags": [
         "typescript"
@@ -20,12 +128,38 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
-        "2026-10-04": 336
+        "2026-10-04": 336,
+        "2026-10-05": 102
       },
       "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company\u2019s context and systems.",
+      "trend": "down",
+      "trend_delta": -234
+    },
+    {
+      "id": "manual:vectorcraft",
+      "name": "VectorCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/vectorcraft",
+      "canonical_url": "github.com/storytold/vectorcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust reimplementation of the Adobe Illustrator workflow for vector illustration, native on macOS/Windows/Linux and in the browser via WASM. Shares the Crafting Apps' command API, so the same MCP server lets agents build and export artwork end to end.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -77,6 +211,79 @@
       "also_seen": [],
       "stars_history": {},
       "description": "Offline desktop app (Electron + React UI, Python backend) that splits any YouTube song into isolated stems (vocals, drums, bass, guitar, piano) using demucs and Mel-Band Roformer models, with per-stem mute/solo/volume, karaoke/acapella presets, and WAV export. Fun local-ML music toy with GPU acceleration on MPS/CUDA/ROCm.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:sightread",
+      "name": "Sightread",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/sightread/sightread",
+      "canonical_url": "github.com/sightread/sightread",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Music"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Free, open-source web app for learning piano by playing along with falling notes (with an optional sheet-music mode), best with a MIDI keyboard plugged in. As of March 2026 development moved to a private repo; the public snapshot stays free and open source, with PRs disabled.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:printcraft",
+      "name": "PrintCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/printcraft",
+      "canonical_url": "github.com/storytold/printcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust PDF workbench modeled on Acrobat for reading, organizing, commenting on, and protecting PDFs, with faithful rendering of complex typography and forms, and append-only incremental saves that never touch the original bytes.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:photocraft",
+      "name": "PhotoCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/photocraft",
+      "canonical_url": "github.com/storytold/photocraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust reimplementation of Photoshop: layers, masks, adjustment layers, layer styles, type, vectors, and byte-faithful PSD round-tripping on a wgpu GPU compositor, native and in the browser via WASM. Every action is a command in a 500+ entry registry, drivable from the UI, a headless CLI, a JSON control channel, or an MCP server. Early alpha.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -161,6 +368,31 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:lightcraft",
+      "name": "LightCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/lightcraft",
+      "canonical_url": "github.com/storytold/lightcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust photo library and raw developer in the vein of Lightroom: non-destructive edits through a scene-referred, wide-gamut 32-bit float pipeline with OkLCh color tools and masking. Native and WASM, and drivable end to end by agents over MCP.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "manual:cloudflare-forge",
       "name": "Forge",
       "quadrant": "Tools",
@@ -180,6 +412,106 @@
       "also_seen": [],
       "stars_history": {},
       "description": "Cloudflare's early-stage, schema-first code generation framework: takes OpenAPI 3.x specs, applies JSONPath overlays, and emits typed SDKs, CLIs, and docs through a plugin architecture. Currently powers Cloudflare's own cf CLI, with TypeScript/Go/Python/Terraform targets planned.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:filmcraft",
+      "name": "FilmCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/filmcraft",
+      "canonical_url": "github.com/storytold/filmcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust non-linear video editor modeled on Premiere Pro, with its own H.264/HEVC/ProRes/AAC codecs written from the specs, a linear-light GPU compositor, exact integer-tick timing, and Lumetri-style color grading. Every edit is a command an AI agent can drive.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:effectcraft",
+      "name": "EffectCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/effectcraft",
+      "canonical_url": "github.com/storytold/effectcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust motion-graphics compositor modeled on After Effects: compositions, keyframes, 300+ effects, expressions, 3D cameras/lights, and a render queue, with built-in Lottie import/export, diffable JSON project files, FFmpeg-free codecs, and an MCP server for agents.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:designcraft",
+      "name": "DesignCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/designcraft",
+      "canonical_url": "github.com/storytold/designcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Clean-room, pure-Rust page-layout app modeled on InDesign: spreads, parent pages, threaded stories, styles, and a Knuth\u2013Plass paragraph composer with hyphenation and optical margin alignment, native and in the browser via WASM, scriptable through the shared Crafting Apps command API.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:artcraft",
+      "name": "ArtCraft",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/storytold/artcraft",
+      "canonical_url": "github.com/storytold/artcraft",
+      "company": "ArtCraft",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Open-source desktop 'IDE for artists' for AI image and video generation: compose in 2D, block scenes and cameras in 3D, and pick among multiple model providers to get controllable, repeatable results instead of pure prompting. The flagship app behind the Crafting Apps family.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -2842,7 +3174,7 @@
       "url": "https://github.com/Stremio/stremio-web",
       "canonical_url": "github.com/stremio/stremio-web",
       "company": null,
-      "stars": 122,
+      "stars": 111,
       "momentum": 12,
       "tags": [
         "javascript"
@@ -2850,14 +3182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
-        "2026-09-07": 122
+        "2026-09-07": 122,
+        "2026-10-05": 111
       },
       "description": "Stremio - Freedom to Stream",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -11
     },
     {
       "id": "github:aipoch/open-science",
@@ -4209,7 +4542,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 627,
+      "stars": 534,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -4217,15 +4550,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
-        "2026-10-04": 627
+        "2026-10-04": 627,
+        "2026-10-05": 534
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 494
+      "trend_delta": 401
     },
     {
       "id": "github:tt-a1i/archify",
@@ -8733,7 +9067,7 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "canonical_url": "github.com/earthtojake/text-to-cad",
       "company": null,
-      "stars": 124,
+      "stars": 456,
       "momentum": 29,
       "tags": [
         "javascript"
@@ -8741,16 +9075,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-10",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 291,
         "2026-07-24": 230,
-        "2026-09-10": 124
+        "2026-09-10": 124,
+        "2026-10-05": 456
       },
       "description": "A collection of agent skills for CAD, robotics and hardware design",
-      "trend": "down",
-      "trend_delta": -106
+      "trend": "up",
+      "trend_delta": 332
     },
     {
       "id": "github:agegr/pi-web",
@@ -10754,7 +11089,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "canonical_url": "github.com/pingdotgg/t3code",
       "company": null,
-      "stars": 492,
+      "stars": 487,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -10762,18 +11097,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 75,
         "2026-07-27": 149,
         "2026-08-10": 163,
         "2026-08-11": 389,
-        "2026-10-04": 492
+        "2026-10-04": 492,
+        "2026-10-05": 487
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 103
+      "trend_delta": 98
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -19056,7 +19392,7 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "canonical_url": "github.com/calesthio/openmontage",
       "company": null,
-      "stars": 383,
+      "stars": 758,
       "momentum": 7,
       "tags": [
         "python"
@@ -19064,7 +19400,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 71,
@@ -19082,11 +19418,12 @@
         "2026-08-28": 1144,
         "2026-08-29": 1144,
         "2026-08-30": 806,
-        "2026-09-13": 383
+        "2026-09-13": 383,
+        "2026-10-05": 758
       },
       "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
-      "trend": "down",
-      "trend_delta": -423
+      "trend": "up",
+      "trend_delta": 375
     },
     {
       "id": "github:alibaba/zvec",
@@ -19951,7 +20288,7 @@
       "url": "https://github.com/msitarzewski/agency-agents",
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "company": null,
-      "stars": 778,
+      "stars": 595,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19959,7 +20296,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-08-14",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 1040,
@@ -19975,11 +20312,12 @@
         "2026-08-11": 1349,
         "2026-08-12": 958,
         "2026-08-13": 1873,
-        "2026-08-14": 778
+        "2026-08-14": 778,
+        "2026-10-05": 595
       },
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "trend": "down",
-      "trend_delta": -84
+      "trend_delta": -183
     },
     {
       "id": "github:NVIDIA/SkillSpector",
@@ -21428,7 +21766,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 979,
+      "stars": 1156,
       "momentum": 14,
       "tags": [
         "python"
@@ -21436,7 +21774,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -21454,11 +21792,12 @@
         "2026-09-15": 651,
         "2026-10-02": 683,
         "2026-10-03": 696,
-        "2026-10-04": 979
+        "2026-10-04": 979,
+        "2026-10-05": 1156
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
       "trend": "up",
-      "trend_delta": 328
+      "trend_delta": 505
     },
     {
       "id": "github:github/spec-kit",

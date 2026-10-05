@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/pingdotgg/t3code
 canonical_url: github.com/pingdotgg/t3code
 company: null
-stars: 492
+stars: 487
 momentum: 7
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-13
-last_seen: 2026-10-04
+last_seen: 2026-10-05
 also_seen: []
-stars_history: {"2026-07-13": 75, "2026-07-27": 149, "2026-08-10": 163, "2026-08-11": 389, "2026-10-04": 492}
+stars_history: {"2026-07-13": 75, "2026-07-27": 149, "2026-08-10": 163, "2026-08-11": 389, "2026-10-04": 492, "2026-10-05": 487}
 ---
 
 A typescript project trending on GitHub.
