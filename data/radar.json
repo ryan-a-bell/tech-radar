@@ -1,7 +1,61 @@
 {
-  "generated": "2026-10-05",
-  "count": 805,
+  "generated": "2026-10-06",
+  "count": 807,
   "items": [
+    {
+      "id": "github:morluto/rea",
+      "name": "rea",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/morluto/rea",
+      "canonical_url": "github.com/morluto/rea",
+      "company": null,
+      "stars": 2963,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-06": 2963
+      },
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:deepseek-ai/DeepGEMM",
+      "name": "DeepGEMM",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/deepseek-ai/DeepGEMM",
+      "canonical_url": "github.com/deepseek-ai/deepgemm",
+      "company": null,
+      "stars": 363,
+      "momentum": 36,
+      "tags": [
+        "cuda"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-06": 363
+      },
+      "description": "DeepGEMM: clean and efficient BLAS kernel library on GPU",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:DuarteSantos8/openGym",
       "name": "openGym",
@@ -12,7 +66,7 @@
       "url": "https://github.com/DuarteSantos8/openGym",
       "canonical_url": "github.com/duartesantos8/opengym",
       "company": null,
-      "stars": 570,
+      "stars": 1419,
       "momentum": 57,
       "tags": [
         "javascript"
@@ -20,14 +74,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
-        "2026-10-05": 570
+        "2026-10-05": 570,
+        "2026-10-06": 1419
       },
       "description": "Self-hosted gym & body-weight tracker \u2014 plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 849
     },
     {
       "id": "github:tester-army/e2e",
@@ -39,7 +94,7 @@
       "url": "https://github.com/tester-army/e2e",
       "canonical_url": "github.com/tester-army/e2e",
       "company": null,
-      "stars": 1430,
+      "stars": 1720,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -47,14 +102,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
-        "2026-10-05": 1430
+        "2026-10-05": 1430,
+        "2026-10-06": 1720
       },
       "description": "Next generation e2e testing framework for web and mobile apps.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 290
     },
     {
       "id": "github:caddyserver/caddy",
@@ -93,7 +149,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "canonical_url": "github.com/boykopovar/anyps5",
       "company": null,
-      "stars": 994,
+      "stars": 943,
       "momentum": 99,
       "tags": [
         "c++"
@@ -101,14 +157,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
-        "2026-10-05": 994
+        "2026-10-05": 994,
+        "2026-10-06": 943
       },
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -51
     },
     {
       "id": "github:cloudflare/cloudflare-os",
@@ -4542,7 +4599,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 534,
+      "stars": 536,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -4550,16 +4607,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
         "2026-10-04": 627,
-        "2026-10-05": 534
+        "2026-10-05": 534,
+        "2026-10-06": 536
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 401
+      "trend_delta": 403
     },
     {
       "id": "github:tt-a1i/archify",
@@ -6352,7 +6410,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1294,
+      "stars": 227,
       "momentum": 100,
       "tags": [
         "html"
@@ -6360,7 +6418,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6372,11 +6430,12 @@
         "2026-09-07": 620,
         "2026-09-09": 710,
         "2026-09-10": 2249,
-        "2026-09-11": 1294
+        "2026-09-11": 1294,
+        "2026-10-06": 227
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -313
+      "trend_delta": -1067
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -8587,7 +8646,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 1170,
+      "stars": 947,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -8595,7 +8654,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -8605,11 +8664,12 @@
         "2026-10-01": 463,
         "2026-10-02": 495,
         "2026-10-03": 722,
-        "2026-10-04": 1170
+        "2026-10-04": 1170,
+        "2026-10-06": 947
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 864
+      "trend_delta": 641
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -9067,7 +9127,7 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "canonical_url": "github.com/earthtojake/text-to-cad",
       "company": null,
-      "stars": 456,
+      "stars": 620,
       "momentum": 29,
       "tags": [
         "javascript"
@@ -9075,17 +9135,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 291,
         "2026-07-24": 230,
         "2026-09-10": 124,
-        "2026-10-05": 456
+        "2026-10-05": 456,
+        "2026-10-06": 620
       },
       "description": "A collection of agent skills for CAD, robotics and hardware design",
       "trend": "up",
-      "trend_delta": 332
+      "trend_delta": 496
     },
     {
       "id": "github:agegr/pi-web",
@@ -9210,7 +9271,7 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "canonical_url": "github.com/ayghri/i-have-adhd",
       "company": null,
-      "stars": 3463,
+      "stars": 318,
       "momentum": 100,
       "tags": [
         "python"
@@ -9218,7 +9279,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1866,
@@ -9226,11 +9287,12 @@
         "2026-09-09": 656,
         "2026-09-10": 4650,
         "2026-09-11": 3882,
-        "2026-09-12": 3463
+        "2026-09-12": 3463,
+        "2026-10-06": 318
       },
       "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
-      "trend": "up",
-      "trend_delta": 1764
+      "trend": "down",
+      "trend_delta": -3145
     },
     {
       "id": "github:DioxusLabs/dioxus",
@@ -19037,7 +19099,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 691,
+      "stars": 1028,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19045,7 +19107,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -19078,11 +19140,12 @@
         "2026-10-01": 888,
         "2026-10-02": 883,
         "2026-10-03": 955,
-        "2026-10-04": 691
+        "2026-10-04": 691,
+        "2026-10-06": 1028
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 108
+      "trend_delta": 445
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -20288,7 +20351,7 @@
       "url": "https://github.com/msitarzewski/agency-agents",
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "company": null,
-      "stars": 595,
+      "stars": 621,
       "momentum": 100,
       "tags": [
         "shell"
@@ -20296,7 +20359,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 1040,
@@ -20313,11 +20376,12 @@
         "2026-08-12": 958,
         "2026-08-13": 1873,
         "2026-08-14": 778,
-        "2026-10-05": 595
+        "2026-10-05": 595,
+        "2026-10-06": 621
       },
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "trend": "down",
-      "trend_delta": -183
+      "trend_delta": -157
     },
     {
       "id": "github:NVIDIA/SkillSpector",
