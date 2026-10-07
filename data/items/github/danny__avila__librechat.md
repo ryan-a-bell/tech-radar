@@ -1,8 +1,8 @@
 ---
 id: github:danny-avila/LibreChat
 name: LibreChat
-quadrant: Languages
-ring: Discovered
+quadrant: Platforms
+ring: Trial
 source: GitHub
 discovered_by: scraper
 url: https://github.com/danny-avila/LibreChat
@@ -11,7 +11,7 @@ company: null
 stars: 254
 momentum: 25
 tags: ["typescript"]
-topics: []
+topics: ["AI", "Agents"]
 archived_at: null
 first_seen: 2026-09-16
 last_seen: 2026-09-16
