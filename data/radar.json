@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-07",
-  "count": 809,
+  "count": 810,
   "items": [
     {
       "id": "github:EpicGames/raddebugger",
@@ -53,6 +53,32 @@
         "2026-10-07": 50
       },
       "description": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:open-webui",
+      "name": "Open WebUI",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/open-webui/open-webui",
+      "canonical_url": "github.com/open-webui/open-webui",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "RAG"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Self-hosted, extensible web UI for chatting with local and cloud LLMs (Ollama and OpenAI-compatible APIs), with RAG, voice, image generation, and enterprise auth. A common front end for a local-inference stack.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -2321,8 +2347,8 @@
     {
       "id": "github:danny-avila/LibreChat",
       "name": "LibreChat",
-      "quadrant": "Languages",
-      "ring": "Discovered",
+      "quadrant": "Platforms",
+      "ring": "Trial",
       "source": "GitHub",
       "discovered_by": "scraper",
       "url": "https://github.com/danny-avila/LibreChat",
@@ -2333,7 +2359,10 @@
       "tags": [
         "typescript"
       ],
-      "topics": [],
+      "topics": [
+        "AI",
+        "Agents"
+      ],
       "archived_at": null,
       "first_seen": "2026-09-16",
       "last_seen": "2026-09-16",
@@ -17479,7 +17508,7 @@
       "id": "github:keycloak/keycloak",
       "name": "keycloak",
       "quadrant": "Tools",
-      "ring": "Discovered",
+      "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "scraper",
       "url": "https://github.com/keycloak/keycloak",
