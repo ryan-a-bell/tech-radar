@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/trycua/cua
 canonical_url: github.com/trycua/cua
 company: null
-stars: 609
+stars: 229
 momentum: 5
 tags: ["html"]
 topics: []
 archived_at: null
 first_seen: 2026-06-15
-last_seen: 2026-09-22
+last_seen: 2026-10-07
 also_seen: []
-stars_history: {"2026-06-15": 57, "2026-06-16": 70, "2026-07-20": 64, "2026-09-20": 859, "2026-09-21": 1018, "2026-09-22": 609}
+stars_history: {"2026-06-15": 57, "2026-06-16": 70, "2026-07-20": 64, "2026-09-20": 859, "2026-09-21": 1018, "2026-09-22": 609, "2026-10-07": 229}
 ---
 
 Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).

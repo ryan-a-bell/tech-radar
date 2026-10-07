@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/thedotmack/claude-mem
 canonical_url: github.com/thedotmack/claude-mem
 company: null
-stars: 536
+stars: 578
 momentum: 13
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-27
-last_seen: 2026-10-06
+last_seen: 2026-10-07
 also_seen: []
-stars_history: {"2026-08-27": 133, "2026-10-04": 627, "2026-10-05": 534, "2026-10-06": 536}
+stars_history: {"2026-08-27": 133, "2026-10-04": 627, "2026-10-05": 534, "2026-10-06": 536, "2026-10-07": 578}
 ---
 
 Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More
