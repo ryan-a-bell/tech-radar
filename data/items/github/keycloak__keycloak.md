@@ -2,7 +2,7 @@
 id: github:keycloak/keycloak
 name: keycloak
 quadrant: Tools
-ring: Discovered
+ring: Assess
 source: GitHub
 discovered_by: scraper
 url: https://github.com/keycloak/keycloak
