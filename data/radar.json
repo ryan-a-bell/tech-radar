@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-07",
-  "count": 809,
+  "generated": "2026-10-08",
+  "count": 810,
   "items": [
     {
       "id": "github:EpicGames/raddebugger",
@@ -12,7 +12,7 @@
       "url": "https://github.com/EpicGames/raddebugger",
       "canonical_url": "github.com/epicgames/raddebugger",
       "company": null,
-      "stars": 82,
+      "stars": 283,
       "momentum": 8,
       "tags": [
         "c"
@@ -20,14 +20,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-07",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
-        "2026-10-07": 82
+        "2026-10-07": 82,
+        "2026-10-08": 283
       },
       "description": "A native, user-mode, multi-process, graphical debugger.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 201
     },
     {
       "id": "github:manaflow-ai/cmux",
@@ -57,6 +58,32 @@
       "trend_delta": 0
     },
     {
+      "id": "manual:open-webui",
+      "name": "Open WebUI",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/open-webui/open-webui",
+      "canonical_url": "github.com/open-webui/open-webui",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "RAG"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-07",
+      "last_seen": "2026-10-07",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Self-hosted, extensible web UI for chatting with local and cloud LLMs (Ollama and OpenAI-compatible APIs), with RAG, voice, image generation, and enterprise auth. A common front end for a local-inference stack.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:morluto/rea",
       "name": "rea",
       "quadrant": "Languages",
@@ -66,7 +93,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 4666,
+      "stars": 7744,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -74,15 +101,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
-        "2026-10-07": 4666
+        "2026-10-07": 4666,
+        "2026-10-08": 7744
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 1703
+      "trend_delta": 4781
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -206,7 +234,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "canonical_url": "github.com/boykopovar/anyps5",
       "company": null,
-      "stars": 2725,
+      "stars": 4640,
       "momentum": 99,
       "tags": [
         "c++"
@@ -214,16 +242,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-10-05": 994,
         "2026-10-06": 943,
-        "2026-10-07": 2725
+        "2026-10-07": 2725,
+        "2026-10-08": 4640
       },
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
       "trend": "up",
-      "trend_delta": 1731
+      "trend_delta": 3646
     },
     {
       "id": "github:cloudflare/cloudflare-os",
@@ -623,8 +652,14 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-04",
-      "also_seen": [],
+      "last_seen": "2026-10-08",
+      "also_seen": [
+        {
+          "source": "GitHub",
+          "url": "https://github.com/storytold/artcraft",
+          "seen": "2026-10-08"
+        }
+      ],
       "stars_history": {},
       "description": "Open-source desktop 'IDE for artists' for AI image and video generation: compose in 2D, block scenes and cameras in 3D, and pick among multiple model providers to get controllable, repeatable results instead of pure prompting. The flagship app behind the Crafting Apps family.",
       "trend": "none",
@@ -2185,7 +2220,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 281,
+      "stars": 766,
       "momentum": 11,
       "tags": [
         "python"
@@ -2193,17 +2228,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
         "2026-09-18": 287,
         "2026-09-19": 299,
-        "2026-09-20": 281
+        "2026-09-20": 281,
+        "2026-10-08": 766
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "trend": "up",
-      "trend_delta": 171
+      "trend_delta": 485
     },
     {
       "id": "github:cline/cline",
@@ -2321,8 +2357,8 @@
     {
       "id": "github:danny-avila/LibreChat",
       "name": "LibreChat",
-      "quadrant": "Languages",
-      "ring": "Discovered",
+      "quadrant": "Platforms",
+      "ring": "Trial",
       "source": "GitHub",
       "discovered_by": "scraper",
       "url": "https://github.com/danny-avila/LibreChat",
@@ -2333,7 +2369,10 @@
       "tags": [
         "typescript"
       ],
-      "topics": [],
+      "topics": [
+        "AI",
+        "Agents"
+      ],
       "archived_at": null,
       "first_seen": "2026-09-16",
       "last_seen": "2026-09-16",
@@ -3093,22 +3132,23 @@
       "url": "https://github.com/liquidslr/system-design-notes",
       "canonical_url": "github.com/liquidslr/system-design-notes",
       "company": null,
-      "stars": 900,
+      "stars": 398,
       "momentum": 91,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-09",
-      "last_seen": "2026-09-11",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-09-09": 910,
         "2026-09-10": 1397,
-        "2026-09-11": 900
+        "2026-09-11": 900,
+        "2026-10-08": 398
       },
       "description": "Notes of the book System Desgin Interview - An Insider's Guide",
       "trend": "down",
-      "trend_delta": -10
+      "trend_delta": -502
     },
     {
       "id": "github:viarotel-org/escrcpy",
@@ -4658,7 +4698,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 578,
+      "stars": 662,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -4666,18 +4706,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
         "2026-10-04": 627,
         "2026-10-05": 534,
         "2026-10-06": 536,
-        "2026-10-07": 578
+        "2026-10-07": 578,
+        "2026-10-08": 662
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 445
+      "trend_delta": 529
     },
     {
       "id": "github:tt-a1i/archify",
@@ -6470,7 +6511,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 828,
+      "stars": 1163,
       "momentum": 100,
       "tags": [
         "html"
@@ -6478,7 +6519,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6492,11 +6533,12 @@
         "2026-09-10": 2249,
         "2026-09-11": 1294,
         "2026-10-06": 227,
-        "2026-10-07": 828
+        "2026-10-07": 828,
+        "2026-10-08": 1163
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -466
+      "trend_delta": -131
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -17479,7 +17521,7 @@
       "id": "github:keycloak/keycloak",
       "name": "keycloak",
       "quadrant": "Tools",
-      "ring": "Discovered",
+      "ring": "Assess",
       "source": "GitHub",
       "discovered_by": "scraper",
       "url": "https://github.com/keycloak/keycloak",
@@ -19161,7 +19203,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1406,
+      "stars": 1770,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19169,7 +19211,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-08",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -19204,11 +19246,12 @@
         "2026-10-03": 955,
         "2026-10-04": 691,
         "2026-10-06": 1028,
-        "2026-10-07": 1406
+        "2026-10-07": 1406,
+        "2026-10-08": 1770
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 670
+      "trend_delta": 882
     },
     {
       "id": "github:alexzhang13/rlm",

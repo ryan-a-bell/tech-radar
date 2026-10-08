@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/cathrynlavery/diagram-design
 canonical_url: github.com/cathrynlavery/diagram-design
 company: null
-stars: 828
+stars: 1163
 momentum: 100
 tags: ["html"]
 topics: []
 archived_at: null
 first_seen: 2026-08-13
-last_seen: 2026-10-07
+last_seen: 2026-10-08
 also_seen: []
-stars_history: {"2026-08-13": 2855, "2026-08-14": 4475, "2026-08-15": 3646, "2026-08-16": 1607, "2026-09-05": 437, "2026-09-06": 855, "2026-09-07": 620, "2026-09-09": 710, "2026-09-10": 2249, "2026-09-11": 1294, "2026-10-06": 227, "2026-10-07": 828}
+stars_history: {"2026-08-13": 2855, "2026-08-14": 4475, "2026-08-15": 3646, "2026-08-16": 1607, "2026-09-05": 437, "2026-09-06": 855, "2026-09-07": 620, "2026-09-09": 710, "2026-09-10": 2249, "2026-09-11": 1294, "2026-10-06": 227, "2026-10-07": 828, "2026-10-08": 1163}
 ---
 
 29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.
