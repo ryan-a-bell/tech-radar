@@ -20,3 +20,5 @@ stars_history: {}
 ---
 
 Simon Brown's C4 model for visualizing software architecture at four levels of abstraction: Context, Containers, Components, and Code.
+
+Notes: an architecture description framework in the same family as UAF (Unified Architecture Framework) and DoDAF (DoD Architecture Framework) — like them it organizes architecture into a defined set of views/viewpoints, but it's far lighter-weight and software-focused, trading their formal metamodels and enterprise/mission scope for a few hierarchical diagram levels.
