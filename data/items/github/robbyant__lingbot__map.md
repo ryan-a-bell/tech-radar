@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Robbyant/lingbot-map
 canonical_url: github.com/robbyant/lingbot-map
 company: null
-stars: 565
+stars: 109
 momentum: 37
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-29
-last_seen: 2026-07-21
+last_seen: 2026-10-09
 also_seen: []
-stars_history: {"2026-06-29": 372, "2026-07-01": 189, "2026-07-19": 831, "2026-07-21": 565}
+stars_history: {"2026-06-29": 372, "2026-07-01": 189, "2026-07-19": 831, "2026-07-21": 565, "2026-10-09": 109}
 ---
 
 A feed-forward 3D foundation model for reconstructing scenes from streaming data
