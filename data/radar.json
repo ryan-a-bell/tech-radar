@@ -1,7 +1,59 @@
 {
-  "generated": "2026-10-08",
-  "count": 810,
+  "generated": "2026-10-09",
+  "count": 812,
   "items": [
+    {
+      "id": "github:BerriAI/litellm",
+      "name": "litellm",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/BerriAI/litellm",
+      "canonical_url": "github.com/berriai/litellm",
+      "company": null,
+      "stars": 95,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-09": 95
+      },
+      "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:twostraws/SwiftUI-Agent-Skill",
+      "name": "SwiftUI-Agent-Skill",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "canonical_url": "github.com/twostraws/swiftui-agent-skill",
+      "company": null,
+      "stars": 88,
+      "momentum": 8,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-09": 88
+      },
+      "description": "SwiftUI agent skill for Claude Code, Codex, and other AI tools.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:EpicGames/raddebugger",
       "name": "raddebugger",
@@ -93,7 +145,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 7744,
+      "stars": 15335,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -101,16 +153,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
         "2026-10-07": 4666,
-        "2026-10-08": 7744
+        "2026-10-08": 7744,
+        "2026-10-09": 15335
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 4781
+      "trend_delta": 12372
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -234,7 +287,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "canonical_url": "github.com/boykopovar/anyps5",
       "company": null,
-      "stars": 4640,
+      "stars": 5925,
       "momentum": 99,
       "tags": [
         "c++"
@@ -242,17 +295,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-10-05": 994,
         "2026-10-06": 943,
         "2026-10-07": 2725,
-        "2026-10-08": 4640
+        "2026-10-08": 4640,
+        "2026-10-09": 5925
       },
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
       "trend": "up",
-      "trend_delta": 3646
+      "trend_delta": 4931
     },
     {
       "id": "github:cloudflare/cloudflare-os",
@@ -652,7 +706,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [
         {
           "source": "GitHub",
@@ -2220,7 +2274,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 766,
+      "stars": 714,
       "momentum": 11,
       "tags": [
         "python"
@@ -2228,18 +2282,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
         "2026-09-18": 287,
         "2026-09-19": 299,
         "2026-09-20": 281,
-        "2026-10-08": 766
+        "2026-10-08": 766,
+        "2026-10-09": 714
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "trend": "up",
-      "trend_delta": 485
+      "trend_delta": 433
     },
     {
       "id": "github:cline/cline",
@@ -6511,7 +6566,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1163,
+      "stars": 1744,
       "momentum": 100,
       "tags": [
         "html"
@@ -6519,7 +6574,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6534,11 +6589,12 @@
         "2026-09-11": 1294,
         "2026-10-06": 227,
         "2026-10-07": 828,
-        "2026-10-08": 1163
+        "2026-10-08": 1163,
+        "2026-10-09": 1744
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-      "trend": "down",
-      "trend_delta": -131
+      "trend": "up",
+      "trend_delta": 450
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -8955,7 +9011,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 2704,
+      "stars": 323,
       "momentum": 18,
       "tags": [
         "go"
@@ -8963,7 +9019,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-09-19",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -8977,11 +9033,12 @@
         "2026-09-16": 2756,
         "2026-09-17": 3231,
         "2026-09-18": 3286,
-        "2026-09-19": 2704
+        "2026-09-19": 2704,
+        "2026-10-09": 323
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "trend": "up",
-      "trend_delta": 2345
+      "trend": "down",
+      "trend_delta": -2381
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -17293,7 +17350,7 @@
       "url": "https://github.com/Robbyant/lingbot-map",
       "canonical_url": "github.com/robbyant/lingbot-map",
       "company": null,
-      "stars": 565,
+      "stars": 109,
       "momentum": 37,
       "tags": [
         "python"
@@ -17301,17 +17358,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-29": 372,
         "2026-07-01": 189,
         "2026-07-19": 831,
-        "2026-07-21": 565
+        "2026-07-21": 565,
+        "2026-10-09": 109
       },
       "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
-      "trend": "up",
-      "trend_delta": 376
+      "trend": "down",
+      "trend_delta": -456
     },
     {
       "id": "github:cupy/cupy",
@@ -19203,7 +19261,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1770,
+      "stars": 1696,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19211,7 +19269,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -19247,11 +19305,12 @@
         "2026-10-04": 691,
         "2026-10-06": 1028,
         "2026-10-07": 1406,
-        "2026-10-08": 1770
+        "2026-10-08": 1770,
+        "2026-10-09": 1696
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 882
+      "trend_delta": 813
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -20903,7 +20962,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 453,
+      "stars": 751,
       "momentum": 34,
       "tags": [
         "shell"
@@ -20911,7 +20970,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -20940,11 +20999,12 @@
         "2026-09-19": 675,
         "2026-09-20": 556,
         "2026-10-04": 336,
-        "2026-10-07": 453
+        "2026-10-07": 453,
+        "2026-10-09": 751
       },
       "description": "Production-grade engineering skills for AI coding agents.",
-      "trend": "down",
-      "trend_delta": -103
+      "trend": "up",
+      "trend_delta": 195
     },
     {
       "id": "github:Andyyyy64/whichllm",
