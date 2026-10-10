@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09",
+  "generated": "2026-10-10",
   "count": 812,
   "items": [
     {
@@ -145,7 +145,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 15335,
+      "stars": 25784,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -153,17 +153,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
         "2026-10-07": 4666,
         "2026-10-08": 7744,
-        "2026-10-09": 15335
+        "2026-10-09": 15335,
+        "2026-10-10": 25784
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 12372
+      "trend_delta": 22821
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -287,7 +288,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "canonical_url": "github.com/boykopovar/anyps5",
       "company": null,
-      "stars": 5925,
+      "stars": 5831,
       "momentum": 99,
       "tags": [
         "c++"
@@ -295,18 +296,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-10-05": 994,
         "2026-10-06": 943,
         "2026-10-07": 2725,
         "2026-10-08": 4640,
-        "2026-10-09": 5925
+        "2026-10-09": 5925,
+        "2026-10-10": 5831
       },
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
       "trend": "up",
-      "trend_delta": 4931
+      "trend_delta": 4837
     },
     {
       "id": "github:cloudflare/cloudflare-os",
@@ -706,7 +708,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [
         {
           "source": "GitHub",
@@ -1258,7 +1260,7 @@
       "url": "https://github.com/tensorflow/tensorflow",
       "canonical_url": "github.com/tensorflow/tensorflow",
       "company": null,
-      "stars": 46,
+      "stars": 24,
       "momentum": 4,
       "tags": [
         "c++"
@@ -1266,14 +1268,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
-        "2026-09-27": 46
+        "2026-09-27": 46,
+        "2026-10-10": 24
       },
       "description": "An Open Source Machine Learning Framework for Everyone",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -22
     },
     {
       "id": "github:actions/runner-images",
@@ -2274,7 +2277,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 714,
+      "stars": 626,
       "momentum": 11,
       "tags": [
         "python"
@@ -2282,7 +2285,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
@@ -2290,11 +2293,12 @@
         "2026-09-19": 299,
         "2026-09-20": 281,
         "2026-10-08": 766,
-        "2026-10-09": 714
+        "2026-10-09": 714,
+        "2026-10-10": 626
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "trend": "up",
-      "trend_delta": 433
+      "trend_delta": 345
     },
     {
       "id": "github:cline/cline",
@@ -3269,7 +3273,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 189,
+      "stars": 178,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -3277,7 +3281,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
@@ -3286,11 +3290,12 @@
         "2026-10-01": 357,
         "2026-10-02": 362,
         "2026-10-03": 282,
-        "2026-10-04": 189
+        "2026-10-04": 189,
+        "2026-10-10": 178
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "down",
-      "trend_delta": -462
+      "trend_delta": -104
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -6566,7 +6571,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1744,
+      "stars": 1189,
       "momentum": 100,
       "tags": [
         "html"
@@ -6574,7 +6579,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6590,11 +6595,12 @@
         "2026-10-06": 227,
         "2026-10-07": 828,
         "2026-10-08": 1163,
-        "2026-10-09": 1744
+        "2026-10-09": 1744,
+        "2026-10-10": 1189
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-      "trend": "up",
-      "trend_delta": 450
+      "trend": "down",
+      "trend_delta": -105
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -6634,7 +6640,7 @@
       "url": "https://github.com/huggingface/transformers",
       "canonical_url": "github.com/huggingface/transformers",
       "company": "Hugging Face",
-      "stars": 536,
+      "stars": 94,
       "momentum": 8,
       "tags": [
         "python"
@@ -6642,17 +6648,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 80,
         "2026-09-13": 102,
         "2026-09-14": 152,
-        "2026-09-15": 536
+        "2026-09-15": 536,
+        "2026-10-10": 94
       },
       "description": "\ud83e\udd17 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",
-      "trend": "up",
-      "trend_delta": 456
+      "trend": "down",
+      "trend_delta": -442
     },
     {
       "id": "github:practical-tutorials/project-based-learning",
@@ -14357,7 +14364,7 @@
       "url": "https://github.com/pytorch/pytorch",
       "canonical_url": "github.com/pytorch/pytorch",
       "company": null,
-      "stars": 293,
+      "stars": 81,
       "momentum": 6,
       "tags": [
         "python"
@@ -14365,15 +14372,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-07-04",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 65,
-        "2026-07-04": 293
+        "2026-07-04": 293,
+        "2026-10-10": 81
       },
       "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-      "trend": "up",
-      "trend_delta": 228
+      "trend": "down",
+      "trend_delta": -212
     },
     {
       "id": "github:langflow-ai/langflow",
@@ -16922,23 +16930,24 @@
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "canonical_url": "github.com/multica-ai/andrej-karpathy-skills",
       "company": null,
-      "stars": 333,
+      "stars": 279,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-23": 315,
         "2026-08-25": 588,
         "2026-08-26": 830,
-        "2026-09-09": 333
+        "2026-09-09": 333,
+        "2026-10-10": 279
       },
       "description": "Claude Code behavior improvement resource based on LLM observations",
       "trend": "down",
-      "trend_delta": -497
+      "trend_delta": -54
     },
     {
       "id": "github:lifan0127/ai-research-assistant",
@@ -17527,7 +17536,7 @@
       "url": "https://github.com/hugohe3/ppt-master",
       "canonical_url": "github.com/hugohe3/ppt-master",
       "company": null,
-      "stars": 476,
+      "stars": 372,
       "momentum": 58,
       "tags": [
         "python"
@@ -17535,15 +17544,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-28": 589,
-        "2026-08-13": 476
+        "2026-08-13": 476,
+        "2026-10-10": 372
       },
       "description": "AI generates a real, editable PowerPoint from any document \u2014 native shapes & animations, speaker notes voiced as audio narration, and the option to follow your own .pptx template, not slide images \u00b7 by Hugo He",
       "trend": "down",
-      "trend_delta": -113
+      "trend_delta": -104
     },
     {
       "id": "github:anomalyco/opencode",
@@ -18021,7 +18031,7 @@
       "url": "https://github.com/flutter/flutter",
       "canonical_url": "github.com/flutter/flutter",
       "company": null,
-      "stars": 73,
+      "stars": 39,
       "momentum": 7,
       "tags": [
         "dart"
@@ -18029,14 +18039,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
-        "2026-06-25": 73
+        "2026-06-25": 73,
+        "2026-10-10": 39
       },
       "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -34
     },
     {
       "id": "github:google-labs-code/design.md",
@@ -19261,7 +19272,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1696,
+      "stars": 1737,
       "momentum": 100,
       "tags": [
         "shell"
@@ -19269,7 +19280,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -19306,11 +19317,12 @@
         "2026-10-06": 1028,
         "2026-10-07": 1406,
         "2026-10-08": 1770,
-        "2026-10-09": 1696
+        "2026-10-09": 1696,
+        "2026-10-10": 1737
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 813
+      "trend_delta": 782
     },
     {
       "id": "github:alexzhang13/rlm",
