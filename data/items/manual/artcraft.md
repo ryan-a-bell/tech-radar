@@ -14,7 +14,7 @@ tags: []
 topics: ["AI"]
 archived_at: null
 first_seen: 2026-10-04
-last_seen: 2026-10-09
+last_seen: 2026-10-10
 also_seen: [{"source": "GitHub", "url": "https://github.com/storytold/artcraft", "seen": "2026-10-08"}]
 stars_history: {}
 ---

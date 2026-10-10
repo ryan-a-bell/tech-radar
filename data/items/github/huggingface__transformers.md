@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/huggingface/transformers
 canonical_url: github.com/huggingface/transformers
 company: Hugging Face
-stars: 536
+stars: 94
 momentum: 8
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-12
-last_seen: 2026-09-15
+last_seen: 2026-10-10
 also_seen: []
-stars_history: {"2026-08-12": 80, "2026-09-13": 102, "2026-09-14": 152, "2026-09-15": 536}
+stars_history: {"2026-08-12": 80, "2026-09-13": 102, "2026-09-14": 152, "2026-09-15": 536, "2026-10-10": 94}
 ---
 
 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.
