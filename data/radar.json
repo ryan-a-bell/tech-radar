@@ -145,7 +145,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 25784,
+      "stars": 25585,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -153,18 +153,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
         "2026-10-07": 4666,
         "2026-10-08": 7744,
         "2026-10-09": 15335,
-        "2026-10-10": 25784
+        "2026-10-10": 25784,
+        "2026-10-11": 25585
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 22821
+      "trend_delta": 22622
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -288,7 +289,7 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "canonical_url": "github.com/boykopovar/anyps5",
       "company": null,
-      "stars": 5831,
+      "stars": 3977,
       "momentum": 99,
       "tags": [
         "c++"
@@ -296,7 +297,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-10-05": 994,
@@ -304,11 +305,12 @@
         "2026-10-07": 2725,
         "2026-10-08": 4640,
         "2026-10-09": 5925,
-        "2026-10-10": 5831
+        "2026-10-10": 5831,
+        "2026-10-11": 3977
       },
       "description": "Tool for automatic PS5 executables porting to Linux and Windows",
       "trend": "up",
-      "trend_delta": 4837
+      "trend_delta": 2983
     },
     {
       "id": "github:cloudflare/cloudflare-os",
@@ -708,7 +710,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "also_seen": [
         {
           "source": "GitHub",
@@ -4520,7 +4522,7 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "canonical_url": "github.com/bilawalsidhu/gods-eye-view",
       "company": null,
-      "stars": 2265,
+      "stars": 872,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -4528,7 +4530,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
@@ -4536,11 +4538,12 @@
         "2026-08-30": 1855,
         "2026-09-11": 1762,
         "2026-09-12": 3680,
-        "2026-09-13": 2265
+        "2026-09-13": 2265,
+        "2026-10-11": 872
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "trend": "up",
-      "trend_delta": 410
+      "trend": "down",
+      "trend_delta": -1393
     },
     {
       "id": "github:NationalSecurityAgency/ghidra",
@@ -6571,7 +6574,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1189,
+      "stars": 1083,
       "momentum": 100,
       "tags": [
         "html"
@@ -6579,7 +6582,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6596,11 +6599,12 @@
         "2026-10-07": 828,
         "2026-10-08": 1163,
         "2026-10-09": 1744,
-        "2026-10-10": 1189
+        "2026-10-10": 1189,
+        "2026-10-11": 1083
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -105
+      "trend_delta": -211
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -9556,7 +9560,7 @@
       "url": "https://github.com/chrislgarry/Apollo-11",
       "canonical_url": "github.com/chrislgarry/apollo-11",
       "company": null,
-      "stars": 409,
+      "stars": 496,
       "momentum": 100,
       "tags": [
         "assembly"
@@ -9564,17 +9568,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-25",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 1235,
         "2026-07-23": 768,
         "2026-07-24": 592,
-        "2026-07-25": 409
+        "2026-07-25": 409,
+        "2026-10-11": 496
       },
       "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-      "trend": "down",
-      "trend_delta": -826
+      "trend": "up",
+      "trend_delta": 87
     },
     {
       "id": "github:handy-computer/transcribe.cpp",
@@ -14364,7 +14369,7 @@
       "url": "https://github.com/pytorch/pytorch",
       "canonical_url": "github.com/pytorch/pytorch",
       "company": null,
-      "stars": 81,
+      "stars": 314,
       "momentum": 6,
       "tags": [
         "python"
@@ -14372,16 +14377,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 65,
         "2026-07-04": 293,
-        "2026-10-10": 81
+        "2026-10-10": 81,
+        "2026-10-11": 314
       },
       "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-      "trend": "down",
-      "trend_delta": -212
+      "trend": "up",
+      "trend_delta": 21
     },
     {
       "id": "github:langflow-ai/langflow",
@@ -22641,7 +22647,7 @@
       "url": "https://github.com/lyogavin/airllm",
       "canonical_url": "github.com/lyogavin/airllm",
       "company": null,
-      "stars": 833,
+      "stars": 541,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
@@ -22652,7 +22658,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-10-11",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 208,
@@ -22663,11 +22669,12 @@
         "2026-08-03": 819,
         "2026-08-04": 1085,
         "2026-08-05": 1711,
-        "2026-08-06": 833
+        "2026-08-06": 833,
+        "2026-10-11": 541
       },
       "description": "Python library that runs very large LLMs (70B dense up to 2.8T MoE) on a single small GPU by streaming weights layer-by-layer (and per-expert for MoE) instead of loading the whole model, with no quantization required. Now also supports adapter fine-tuning of huge models under ~6GB VRAM \u2014 trading throughput for the ability to run frontier open-weight models on consumer hardware.",
-      "trend": "up",
-      "trend_delta": 475
+      "trend": "down",
+      "trend_delta": -292
     },
     {
       "id": "github:OpenBMB/VoxCPM",
