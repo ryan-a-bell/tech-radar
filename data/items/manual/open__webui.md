@@ -14,8 +14,8 @@ tags: []
 topics: ["AI", "RAG"]
 archived_at: null
 first_seen: 2026-10-07
-last_seen: 2026-10-07
-also_seen: []
+last_seen: 2026-10-12
+also_seen: [{"source": "GitHub", "url": "https://github.com/open-webui/open-webui", "seen": "2026-10-12"}]
 stars_history: {}
 ---
 
