@@ -1,8 +1,8 @@
 ---
 id: github:morluto/rea
 name: rea
-quadrant: Languages
-ring: Discovered
+quadrant: Tools
+ring: Trial
 source: GitHub
 discovered_by: scraper
 url: https://github.com/morluto/rea
@@ -11,7 +11,7 @@ company: null
 stars: 54706
 momentum: 100
 tags: ["typescript"]
-topics: []
+topics: ["AI", "Agents"]
 archived_at: null
 first_seen: 2026-10-06
 last_seen: 2026-10-13
