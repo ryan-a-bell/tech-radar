@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13",
+  "generated": "2026-10-14",
   "count": 814,
   "items": [
     {
@@ -12,7 +12,7 @@
       "url": "https://github.com/xtool-org/xtool",
       "canonical_url": "github.com/xtool-org/xtool",
       "company": null,
-      "stars": 936,
+      "stars": 1198,
       "momentum": 93,
       "tags": [
         "swift"
@@ -20,14 +20,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
-        "2026-10-13": 936
+        "2026-10-13": 936,
+        "2026-10-14": 1198
       },
       "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 262
     },
     {
       "id": "github:microsoft/BitNet",
@@ -205,7 +206,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 54706,
+      "stars": 54679,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -216,7 +217,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
@@ -226,11 +227,12 @@
         "2026-10-10": 25784,
         "2026-10-11": 25585,
         "2026-10-12": 45495,
-        "2026-10-13": 54706
+        "2026-10-13": 54706,
+        "2026-10-14": 54679
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 51743
+      "trend_delta": 50013
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -775,7 +777,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [
         {
           "source": "GitHub",
@@ -3057,7 +3059,7 @@
       "url": "https://github.com/vercel-labs/skills",
       "canonical_url": "github.com/vercel-labs/skills",
       "company": null,
-      "stars": 187,
+      "stars": 190,
       "momentum": 12,
       "tags": [
         "typescript"
@@ -3065,15 +3067,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-09-11": 122,
-        "2026-10-13": 187
+        "2026-10-13": 187,
+        "2026-10-14": 190
       },
       "description": "The open agent skills tool - npx skills",
       "trend": "up",
-      "trend_delta": 65
+      "trend_delta": 68
     },
     {
       "id": "github:nashsu/llm_wiki",
@@ -3341,7 +3344,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 978,
+      "stars": 969,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -3349,7 +3352,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
@@ -3361,11 +3364,12 @@
         "2026-10-04": 189,
         "2026-10-10": 178,
         "2026-10-12": 485,
-        "2026-10-13": 978
+        "2026-10-13": 978,
+        "2026-10-14": 969
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "up",
-      "trend_delta": 789
+      "trend_delta": 780
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -3938,7 +3942,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 1691,
+      "stars": 1748,
       "momentum": 83,
       "tags": [
         "python"
@@ -3946,7 +3950,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -3959,11 +3963,12 @@
         "2026-09-28": 3086,
         "2026-09-29": 3221,
         "2026-09-30": 3481,
-        "2026-10-13": 1691
+        "2026-10-13": 1691,
+        "2026-10-14": 1748
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "trend": "down",
-      "trend_delta": -1790
+      "trend_delta": -1733
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -4599,7 +4604,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 1984,
@@ -4610,7 +4615,8 @@
         "2026-09-13": 2265,
         "2026-10-11": 872,
         "2026-10-12": 1903,
-        "2026-10-13": 1961
+        "2026-10-13": 1961,
+        "2026-10-14": 1961
       },
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
       "trend": "down",
@@ -6645,7 +6651,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 1813,
+      "stars": 1815,
       "momentum": 100,
       "tags": [
         "html"
@@ -6653,7 +6659,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -6673,11 +6679,12 @@
         "2026-10-10": 1189,
         "2026-10-11": 1083,
         "2026-10-12": 2100,
-        "2026-10-13": 1813
+        "2026-10-13": 1813,
+        "2026-10-14": 1815
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "up",
-      "trend_delta": 1586
+      "trend_delta": 987
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -22721,7 +22728,7 @@
       "url": "https://github.com/lyogavin/airllm",
       "canonical_url": "github.com/lyogavin/airllm",
       "company": null,
-      "stars": 1004,
+      "stars": 1001,
       "momentum": 20,
       "tags": [
         "jupyter notebook"
@@ -22732,7 +22739,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 208,
@@ -22746,11 +22753,12 @@
         "2026-08-06": 833,
         "2026-10-11": 541,
         "2026-10-12": 886,
-        "2026-10-13": 1004
+        "2026-10-13": 1004,
+        "2026-10-14": 1001
       },
       "description": "Python library that runs very large LLMs (70B dense up to 2.8T MoE) on a single small GPU by streaming weights layer-by-layer (and per-expert for MoE) instead of loading the whole model, with no quantization required. Now also supports adapter fine-tuning of huge models under ~6GB VRAM \u2014 trading throughput for the ability to run frontier open-weight models on consumer hardware.",
       "trend": "up",
-      "trend_delta": 171
+      "trend_delta": 168
     },
     {
       "id": "github:OpenBMB/VoxCPM",
