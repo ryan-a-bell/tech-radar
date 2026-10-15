@@ -1,7 +1,88 @@
 {
-  "generated": "2026-10-14",
-  "count": 814,
+  "generated": "2026-10-15",
+  "count": 817,
   "items": [
+    {
+      "id": "github:ntdevlabs/tiny11builder",
+      "name": "tiny11builder",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ntdevlabs/tiny11builder",
+      "canonical_url": "github.com/ntdevlabs/tiny11builder",
+      "company": null,
+      "stars": 139,
+      "momentum": 13,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-15": 139
+      },
+      "description": "WinUI app for building smaller, customized Windows 11 images.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:rust-lang/rust",
+      "name": "rust",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rust-lang/rust",
+      "canonical_url": "github.com/rust-lang/rust",
+      "company": null,
+      "stars": 207,
+      "momentum": 20,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-15": 207
+      },
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ifixai-ai/iFixAi",
+      "name": "iFixAi",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ifixai-ai/iFixAi",
+      "canonical_url": "github.com/ifixai-ai/ifixai",
+      "company": null,
+      "stars": 2109,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-15": 2109
+      },
+      "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:xtool-org/xtool",
       "name": "xtool",
@@ -12,7 +93,7 @@
       "url": "https://github.com/xtool-org/xtool",
       "canonical_url": "github.com/xtool-org/xtool",
       "company": null,
-      "stars": 1198,
+      "stars": 1502,
       "momentum": 93,
       "tags": [
         "swift"
@@ -20,15 +101,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-10-13": 936,
-        "2026-10-14": 1198
+        "2026-10-14": 1198,
+        "2026-10-15": 1502
       },
       "description": "Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, macOS.",
       "trend": "up",
-      "trend_delta": 262
+      "trend_delta": 566
     },
     {
       "id": "github:microsoft/BitNet",
@@ -206,7 +288,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 54679,
+      "stars": 41034,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -217,7 +299,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
@@ -228,11 +310,12 @@
         "2026-10-11": 25585,
         "2026-10-12": 45495,
         "2026-10-13": 54706,
-        "2026-10-14": 54679
+        "2026-10-14": 54679,
+        "2026-10-15": 41034
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 50013
+      "trend_delta": 33290
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -3344,7 +3427,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 969,
+      "stars": 947,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -3352,7 +3435,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
@@ -3365,11 +3448,12 @@
         "2026-10-10": 178,
         "2026-10-12": 485,
         "2026-10-13": 978,
-        "2026-10-14": 969
+        "2026-10-14": 969,
+        "2026-10-15": 947
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "up",
-      "trend_delta": 780
+      "trend_delta": 758
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -3942,7 +4026,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 1748,
+      "stars": 3538,
       "momentum": 83,
       "tags": [
         "python"
@@ -3950,7 +4034,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -3964,11 +4048,12 @@
         "2026-09-29": 3221,
         "2026-09-30": 3481,
         "2026-10-13": 1691,
-        "2026-10-14": 1748
+        "2026-10-14": 1748,
+        "2026-10-15": 3538
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "trend": "down",
-      "trend_delta": -1733
+      "trend": "up",
+      "trend_delta": 57
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -4632,7 +4717,7 @@
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "canonical_url": "github.com/nationalsecurityagency/ghidra",
       "company": null,
-      "stars": 912,
+      "stars": 1008,
       "momentum": 20,
       "tags": [
         "java"
@@ -4640,18 +4725,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 205,
         "2026-08-29": 191,
         "2026-09-16": 725,
         "2026-09-17": 1059,
-        "2026-09-18": 912
+        "2026-09-18": 912,
+        "2026-10-15": 1008
       },
       "description": "Ghidra is a software reverse engineering (SRE) framework",
       "trend": "up",
-      "trend_delta": 721
+      "trend_delta": 96
     },
     {
       "id": "github:abhigyanpatwari/GitNexus",
@@ -4691,7 +4777,7 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "canonical_url": "github.com/k-dense-ai/scientific-agent-skills",
       "company": null,
-      "stars": 912,
+      "stars": 163,
       "momentum": 49,
       "tags": [
         "python"
@@ -4699,7 +4785,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 494,
@@ -4708,11 +4794,12 @@
         "2026-08-30": 1587,
         "2026-08-31": 1114,
         "2026-09-01": 1980,
-        "2026-09-02": 912
+        "2026-09-02": 912,
+        "2026-10-15": 163
       },
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "trend": "up",
-      "trend_delta": 418
+      "trend": "down",
+      "trend_delta": -749
     },
     {
       "id": "github:zedeus/nitter",
@@ -6190,7 +6277,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 413,
+      "stars": 103,
       "momentum": 11,
       "tags": [
         "python"
@@ -6198,16 +6285,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-09-25",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
         "2026-09-24": 57,
-        "2026-09-25": 413
+        "2026-09-25": 413,
+        "2026-10-15": 103
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "trend": "up",
-      "trend_delta": 295
+      "trend": "down",
+      "trend_delta": -310
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -6782,7 +6870,7 @@
       "url": "https://github.com/nvm-sh/nvm",
       "canonical_url": "github.com/nvm-sh/nvm",
       "company": null,
-      "stars": 22,
+      "stars": 52,
       "momentum": 2,
       "tags": [
         "shell"
@@ -6790,15 +6878,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-09-06",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 22,
-        "2026-09-06": 22
+        "2026-09-06": 22,
+        "2026-10-15": 52
       },
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
-      "trend": "flat",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 30
     },
     {
       "id": "github:3b1b/manim",
@@ -13171,7 +13260,7 @@
       "url": "https://github.com/vxcontrol/pentagi",
       "canonical_url": "github.com/vxcontrol/pentagi",
       "company": null,
-      "stars": 189,
+      "stars": 1025,
       "momentum": 53,
       "tags": [
         "go"
@@ -13179,15 +13268,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-10",
-      "last_seen": "2026-09-13",
+      "last_seen": "2026-10-15",
       "also_seen": [],
       "stars_history": {
         "2026-07-10": 535,
-        "2026-09-13": 189
+        "2026-09-13": 189,
+        "2026-10-15": 1025
       },
       "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
-      "trend": "down",
-      "trend_delta": -346
+      "trend": "up",
+      "trend_delta": 836
     },
     {
       "id": "github:unclecode/crawl4ai",
