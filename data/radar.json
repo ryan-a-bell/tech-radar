@@ -1,7 +1,88 @@
 {
-  "generated": "2026-10-15",
-  "count": 817,
+  "generated": "2026-10-16",
+  "count": 820,
   "items": [
+    {
+      "id": "github:xerj-org/xerj",
+      "name": "xerj",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/xerj-org/xerj",
+      "canonical_url": "github.com/xerj-org/xerj",
+      "company": null,
+      "stars": 715,
+      "momentum": 71,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-16": 715
+      },
+      "description": "XERJ is the new way for AI to search data. Its autoindex capability activates agents to know your data without the token waste of grep and sed. One command indexes code, docs, logs and PDFs for search, RAG, security audits and agent memory, using 40x fewer tokens than grep. Elasticsearch compatible, so existing clients just work.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:lightseekorg/tokenspeed",
+      "name": "tokenspeed",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/lightseekorg/tokenspeed",
+      "canonical_url": "github.com/lightseekorg/tokenspeed",
+      "company": null,
+      "stars": 30,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-16": 30
+      },
+      "description": "TokenSpeed is a speed-of-light LLM inference engine.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:LibreSpark/LibreTV",
+      "name": "LibreTV",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/LibreSpark/LibreTV",
+      "canonical_url": "github.com/librespark/libretv",
+      "company": null,
+      "stars": 978,
+      "momentum": 97,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-16",
+      "last_seen": "2026-10-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-16": 978
+      },
+      "description": "\u4e00\u5206\u949f\u642d\u5efa\u5f71\u89c6\u7ad9\uff0c\u652f\u6301Docker\u7b49\u90e8\u7f72\u65b9\u5f0f",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:ntdevlabs/tiny11builder",
       "name": "tiny11builder",
@@ -288,7 +369,7 @@
       "url": "https://github.com/morluto/rea",
       "canonical_url": "github.com/morluto/rea",
       "company": null,
-      "stars": 41034,
+      "stars": 32314,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -299,7 +380,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-10-06": 2963,
@@ -311,11 +392,12 @@
         "2026-10-12": 45495,
         "2026-10-13": 54706,
         "2026-10-14": 54679,
-        "2026-10-15": 41034
+        "2026-10-15": 41034,
+        "2026-10-16": 32314
       },
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "trend": "up",
-      "trend_delta": 33290
+      "trend_delta": 16979
     },
     {
       "id": "github:deepseek-ai/DeepGEMM",
@@ -3427,7 +3509,7 @@
       "url": "https://github.com/mksglu/context-mode",
       "canonical_url": "github.com/mksglu/context-mode",
       "company": null,
-      "stars": 947,
+      "stars": 904,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -3435,7 +3517,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 96,
@@ -3449,11 +3531,12 @@
         "2026-10-12": 485,
         "2026-10-13": 978,
         "2026-10-14": 969,
-        "2026-10-15": 947
+        "2026-10-15": 947,
+        "2026-10-16": 904
       },
       "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
       "trend": "up",
-      "trend_delta": 758
+      "trend_delta": 715
     },
     {
       "id": "github:jo-inc/camofox-browser",
@@ -4026,7 +4109,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 3538,
+      "stars": 3024,
       "momentum": 83,
       "tags": [
         "python"
@@ -4034,7 +4117,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -4049,11 +4132,12 @@
         "2026-09-30": 3481,
         "2026-10-13": 1691,
         "2026-10-14": 1748,
-        "2026-10-15": 3538
+        "2026-10-15": 3538,
+        "2026-10-16": 3024
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "trend": "up",
-      "trend_delta": 57
+      "trend": "down",
+      "trend_delta": -457
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -4717,7 +4801,7 @@
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "canonical_url": "github.com/nationalsecurityagency/ghidra",
       "company": null,
-      "stars": 1008,
+      "stars": 1369,
       "momentum": 20,
       "tags": [
         "java"
@@ -4725,7 +4809,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 205,
@@ -4733,11 +4817,12 @@
         "2026-09-16": 725,
         "2026-09-17": 1059,
         "2026-09-18": 912,
-        "2026-10-15": 1008
+        "2026-10-15": 1008,
+        "2026-10-16": 1369
       },
       "description": "Ghidra is a software reverse engineering (SRE) framework",
       "trend": "up",
-      "trend_delta": 96
+      "trend_delta": 457
     },
     {
       "id": "github:abhigyanpatwari/GitNexus",
@@ -4777,7 +4862,7 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "canonical_url": "github.com/k-dense-ai/scientific-agent-skills",
       "company": null,
-      "stars": 163,
+      "stars": 1091,
       "momentum": 49,
       "tags": [
         "python"
@@ -4785,7 +4870,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 494,
@@ -4795,11 +4880,12 @@
         "2026-08-31": 1114,
         "2026-09-01": 1980,
         "2026-09-02": 912,
-        "2026-10-15": 163
+        "2026-10-15": 163,
+        "2026-10-16": 1091
       },
       "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 175,000+ scientists worldwide. 163 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
-      "trend": "down",
-      "trend_delta": -749
+      "trend": "up",
+      "trend_delta": 179
     },
     {
       "id": "github:zedeus/nitter",
@@ -16073,24 +16159,25 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 394,
+      "stars": 147,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
         "2026-08-24": 131,
         "2026-09-06": 136,
         "2026-09-07": 276,
-        "2026-09-08": 394
+        "2026-09-08": 394,
+        "2026-10-16": 147
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
-      "trend": "up",
-      "trend_delta": 263
+      "trend": "down",
+      "trend_delta": -247
     },
     {
       "id": "github:yamadashy/repomix",
@@ -16901,7 +16988,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 434,
+      "stars": 433,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -16909,7 +16996,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -16922,11 +17009,12 @@
         "2026-09-05": 501,
         "2026-10-02": 193,
         "2026-10-03": 209,
-        "2026-10-04": 434
+        "2026-10-04": 434,
+        "2026-10-16": 433
       },
       "description": "Claude Code skill reducing token usage through simplified language",
       "trend": "down",
-      "trend_delta": -67
+      "trend_delta": -1
     },
     {
       "id": "github:eclipse-capella/capella",
@@ -18479,7 +18567,7 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "canonical_url": "github.com/anthropics/claude-plugins-official",
       "company": "Anthropic",
-      "stars": 83,
+      "stars": 307,
       "momentum": 7,
       "tags": [
         "python"
@@ -18487,7 +18575,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-24",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-24": 77,
@@ -18496,11 +18584,12 @@
         "2026-08-28": 457,
         "2026-08-29": 457,
         "2026-08-30": 358,
-        "2026-09-26": 83
+        "2026-09-26": 83,
+        "2026-10-16": 307
       },
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "trend": "down",
-      "trend_delta": -275
+      "trend": "up",
+      "trend_delta": 224
     },
     {
       "id": "github:shanraisshan/claude-code-best-practice",
@@ -21789,7 +21878,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 446,
+      "stars": 582,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21797,7 +21886,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -21838,11 +21927,12 @@
         "2026-10-01": 594,
         "2026-10-02": 455,
         "2026-10-03": 556,
-        "2026-10-04": 446
+        "2026-10-04": 446,
+        "2026-10-16": 582
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -22
+      "trend": "up",
+      "trend_delta": 136
     },
     {
       "id": "github:openai/plugins",
@@ -22984,7 +23074,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 889,
+      "stars": 1013,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -22992,7 +23082,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -23022,11 +23112,12 @@
         "2026-09-17": 1057,
         "2026-09-18": 1171,
         "2026-09-19": 958,
-        "2026-10-04": 889
+        "2026-10-04": 889,
+        "2026-10-16": 1013
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "down",
-      "trend_delta": -69
+      "trend": "up",
+      "trend_delta": 124
     }
   ]
 }
