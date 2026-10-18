@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/HKUDS/CLI-Anything
 canonical_url: github.com/hkuds/cli-anything
 company: null
-stars: 281
+stars: 574
 momentum: 11
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-16
-last_seen: 2026-10-17
+last_seen: 2026-10-18
 also_seen: []
-stars_history: {"2026-08-16": 118, "2026-09-24": 57, "2026-09-25": 413, "2026-10-15": 103, "2026-10-17": 281}
+stars_history: {"2026-08-16": 118, "2026-09-24": 57, "2026-09-25": 413, "2026-10-15": 103, "2026-10-17": 281, "2026-10-18": 574}
 ---
 
 "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
