@@ -1,7 +1,88 @@
 {
-  "generated": "2026-10-18",
-  "count": 822,
+  "generated": "2026-10-19",
+  "count": 825,
   "items": [
+    {
+      "id": "github:withmarbleapp/os-taxonomy",
+      "name": "os-taxonomy",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/withmarbleapp/os-taxonomy",
+      "canonical_url": "github.com/withmarbleapp/os-taxonomy",
+      "company": null,
+      "stars": 427,
+      "momentum": 42,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-19": 427
+      },
+      "description": "A javascript project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Kruk2/jasna",
+      "name": "jasna",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Kruk2/jasna",
+      "canonical_url": "github.com/kruk2/jasna",
+      "company": null,
+      "stars": 502,
+      "momentum": 50,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-19": 502
+      },
+      "description": "Video restoration tool",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:headroomlabs-ai/headroom",
+      "name": "headroom",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "canonical_url": "github.com/headroomlabs-ai/headroom",
+      "company": null,
+      "stars": 317,
+      "momentum": 31,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-19",
+      "last_seen": "2026-10-19",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-19": 317
+      },
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:android/skills",
       "name": "skills",
@@ -6250,7 +6331,7 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "canonical_url": "github.com/akitaonrails/ai-memory",
       "company": null,
-      "stars": 178,
+      "stars": 666,
       "momentum": 20,
       "tags": [
         "rust"
@@ -6258,7 +6339,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-18",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-08-18": 207,
@@ -6266,11 +6347,12 @@
         "2026-08-21": 332,
         "2026-09-21": 114,
         "2026-09-22": 167,
-        "2026-10-18": 178
+        "2026-10-18": 178,
+        "2026-10-19": 666
       },
       "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
       "trend": "up",
-      "trend_delta": 11
+      "trend_delta": 499
     },
     {
       "id": "github:agalwood/Motrix",
@@ -6426,7 +6508,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 574,
+      "stars": 607,
       "momentum": 11,
       "tags": [
         "python"
@@ -6434,7 +6516,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
@@ -6442,11 +6524,12 @@
         "2026-09-25": 413,
         "2026-10-15": 103,
         "2026-10-17": 281,
-        "2026-10-18": 574
+        "2026-10-18": 574,
+        "2026-10-19": 607
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "trend": "up",
-      "trend_delta": 161
+      "trend_delta": 194
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -7348,7 +7431,7 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "canonical_url": "github.com/comfy-org/comfyui",
       "company": null,
-      "stars": 201,
+      "stars": 1011,
       "momentum": 36,
       "tags": [
         "python"
@@ -7356,16 +7439,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-24",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-08-10": 365,
         "2026-08-11": 922,
-        "2026-08-24": 201
+        "2026-08-24": 201,
+        "2026-10-19": 1011
       },
       "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-      "trend": "down",
-      "trend_delta": -721
+      "trend": "up",
+      "trend_delta": 810
     },
     {
       "id": "github:LadybirdBrowser/ladybird",
@@ -13809,7 +13893,7 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "canonical_url": "github.com/madslorentzen/ai-job-search",
       "company": null,
-      "stars": 1365,
+      "stars": 3860,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -13817,7 +13901,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-08": 2514,
@@ -13825,11 +13909,12 @@
         "2026-08-25": 434,
         "2026-08-26": 1265,
         "2026-10-17": 898,
-        "2026-10-18": 1365
+        "2026-10-18": 1365,
+        "2026-10-19": 3860
       },
       "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
       "trend": "up",
-      "trend_delta": 100
+      "trend_delta": 2595
     },
     {
       "id": "github:AhmadIbrahiim/Website-downloader",
@@ -16227,13 +16312,13 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 420,
+      "stars": 564,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
@@ -16243,11 +16328,12 @@
         "2026-09-08": 394,
         "2026-10-16": 147,
         "2026-10-17": 672,
-        "2026-10-18": 420
+        "2026-10-18": 420,
+        "2026-10-19": 564
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
       "trend": "up",
-      "trend_delta": 26
+      "trend_delta": 170
     },
     {
       "id": "github:yamadashy/repomix",
@@ -17026,13 +17112,13 @@
       "url": "https://github.com/anthropics/claude-code",
       "canonical_url": "github.com/anthropics/claude-code",
       "company": "Anthropic",
-      "stars": 179,
+      "stars": 167,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 221,
@@ -17043,11 +17129,12 @@
         "2026-09-19": 444,
         "2026-09-20": 483,
         "2026-10-04": 336,
-        "2026-10-18": 179
+        "2026-10-18": 179,
+        "2026-10-19": 167
       },
       "description": "Agentic coding tool for terminal-based development assistance",
       "trend": "down",
-      "trend_delta": -157
+      "trend_delta": -169
     },
     {
       "id": "github:JuliusBrussee/caveman",
@@ -17901,7 +17988,7 @@
       "url": "https://github.com/anomalyco/opencode",
       "canonical_url": "github.com/anomalyco/opencode",
       "company": null,
-      "stars": 438,
+      "stars": 1310,
       "momentum": 39,
       "tags": [
         "typescript"
@@ -17909,18 +17996,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-28": 392,
         "2026-09-05": 345,
         "2026-09-06": 725,
         "2026-09-07": 551,
-        "2026-10-18": 438
+        "2026-10-18": 438,
+        "2026-10-19": 1310
       },
       "description": "The open source coding agent.",
-      "trend": "down",
-      "trend_delta": -113
+      "trend": "up",
+      "trend_delta": 759
     },
     {
       "id": "github:keycloak/keycloak",
@@ -18223,7 +18311,7 @@
       "url": "https://github.com/stablyai/orca",
       "canonical_url": "github.com/stablyai/orca",
       "company": null,
-      "stars": 830,
+      "stars": 1591,
       "momentum": 33,
       "tags": [
         "typescript"
@@ -18231,17 +18319,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-25": 331,
         "2026-08-12": 875,
         "2026-08-13": 1235,
-        "2026-10-18": 830
+        "2026-10-18": 830,
+        "2026-10-19": 1591
       },
       "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-      "trend": "down",
-      "trend_delta": -405
+      "trend": "up",
+      "trend_delta": 356
     },
     {
       "id": "github:every-app/open-seo",
@@ -20447,7 +20536,7 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "canonical_url": "github.com/shiyu-coder/kronos",
       "company": null,
-      "stars": 266,
+      "stars": 355,
       "momentum": 24,
       "tags": [
         "python"
@@ -20455,7 +20544,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-08-13",
+      "last_seen": "2026-10-19",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 244,
@@ -20467,11 +20556,12 @@
         "2026-07-27": 321,
         "2026-07-28": 441,
         "2026-08-04": 200,
-        "2026-08-13": 266
+        "2026-08-13": 266,
+        "2026-10-19": 355
       },
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
       "trend": "up",
-      "trend_delta": 66
+      "trend_delta": 89
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
