@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/MadsLorentzen/ai-job-search
 canonical_url: github.com/madslorentzen/ai-job-search
 company: null
-stars: 1365
+stars: 3860
 momentum: 100
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-07-08
-last_seen: 2026-10-18
+last_seen: 2026-10-19
 also_seen: []
-stars_history: {"2026-07-08": 2514, "2026-07-09": 5079, "2026-08-25": 434, "2026-08-26": 1265, "2026-10-17": 898, "2026-10-18": 1365}
+stars_history: {"2026-07-08": 2514, "2026-07-09": 5079, "2026-08-25": 434, "2026-08-26": 1265, "2026-10-17": 898, "2026-10-18": 1365, "2026-10-19": 3860}
 ---
 
 AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.

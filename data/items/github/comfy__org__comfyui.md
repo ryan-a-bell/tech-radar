@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Comfy-Org/ComfyUI
 canonical_url: github.com/comfy-org/comfyui
 company: null
-stars: 201
+stars: 1011
 momentum: 36
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-08-10
-last_seen: 2026-08-24
+last_seen: 2026-10-19
 also_seen: []
-stars_history: {"2026-08-10": 365, "2026-08-11": 922, "2026-08-24": 201}
+stars_history: {"2026-08-10": 365, "2026-08-11": 922, "2026-08-24": 201, "2026-10-19": 1011}
 ---
 
 The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.
