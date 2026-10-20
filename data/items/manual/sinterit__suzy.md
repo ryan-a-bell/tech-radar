@@ -19,4 +19,4 @@ also_seen: []
 stars_history: {}
 ---
 
-Polish maker Sinterit's entry-level compact SLS printer (successor in its Lisa line), with a 30 W fiber-coupled IR diode laser, a 130×180×330 mm build, and 0.075 mm layers. Prints PA11.5 and PA12 Industrial. The low-cost way to get nylon powder-bed parts without industrial infrastructure.
+Polish maker Sinterit's current entry-level compact SLS printer, with a 30 W fiber-coupled IR diode laser, a 130×180×330 mm build, and 0.075 mm layers. Prints PA11.5 and PA12 Industrial. The low-cost way to get nylon powder-bed parts without industrial infrastructure.
