@@ -7,7 +7,7 @@ source: GitHub
 discovered_by: manual
 url: https://github.com/backstage/backstage
 canonical_url: github.com/backstage/backstage
-company: Spotify
+company: null
 stars: 0
 momentum: 0
 tags: []
