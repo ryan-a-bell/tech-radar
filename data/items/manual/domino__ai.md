@@ -2,7 +2,7 @@
 id: manual:domino-ai
 name: Domino AI
 quadrant: Platforms
-ring: Discovered
+ring: Assess
 source: Manual
 discovered_by: manual
 url: https://domino.ai
