@@ -1,7 +1,34 @@
 {
   "generated": "2026-10-21",
-  "count": 852,
+  "count": 853,
   "items": [
+    {
+      "id": "github:wshobson/agents",
+      "name": "agents",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/wshobson/agents",
+      "canonical_url": "github.com/wshobson/agents",
+      "company": null,
+      "stars": 93,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-21",
+      "last_seen": "2026-10-21",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-21": 93
+      },
+      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:gsender",
       "name": "gSender",
@@ -747,7 +774,7 @@
       "url": "https://github.com/headroomlabs-ai/headroom",
       "canonical_url": "github.com/headroomlabs-ai/headroom",
       "company": null,
-      "stars": 310,
+      "stars": 549,
       "momentum": 31,
       "tags": [
         "python"
@@ -755,15 +782,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-19",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-10-19": 317,
-        "2026-10-20": 310
+        "2026-10-20": 310,
+        "2026-10-21": 549
       },
       "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
-      "trend": "down",
-      "trend_delta": -7
+      "trend": "up",
+      "trend_delta": 232
     },
     {
       "id": "github:android/skills",
@@ -3300,7 +3328,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 538,
+      "stars": 1712,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -3308,18 +3336,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-07",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
         "2026-09-18": 3607,
         "2026-09-19": 3006,
         "2026-09-20": 3155,
-        "2026-10-07": 538
+        "2026-10-07": 538,
+        "2026-10-21": 1712
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "trend": "down",
-      "trend_delta": -2617
+      "trend": "up",
+      "trend_delta": 1174
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -3331,7 +3360,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 626,
+      "stars": 267,
       "momentum": 11,
       "tags": [
         "python"
@@ -3339,7 +3368,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
@@ -3348,11 +3377,12 @@
         "2026-09-20": 281,
         "2026-10-08": 766,
         "2026-10-09": 714,
-        "2026-10-10": 626
+        "2026-10-10": 626,
+        "2026-10-21": 267
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "trend": "up",
-      "trend_delta": 345
+      "trend": "down",
+      "trend_delta": -359
     },
     {
       "id": "github:cline/cline",
@@ -5900,7 +5930,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1894,
+      "stars": 1208,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -5908,7 +5938,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -5924,11 +5954,12 @@
         "2026-10-01": 1179,
         "2026-10-02": 1194,
         "2026-10-03": 1435,
-        "2026-10-04": 1894
+        "2026-10-04": 1894,
+        "2026-10-21": 1208
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "trend": "up",
-      "trend_delta": 355
+      "trend": "down",
+      "trend_delta": -686
     },
     {
       "id": "github:marin-community/marin",
@@ -8115,7 +8146,7 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "canonical_url": "github.com/comfy-org/comfyui",
       "company": null,
-      "stars": 1011,
+      "stars": 1206,
       "momentum": 36,
       "tags": [
         "python"
@@ -8123,18 +8154,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-08-10": 365,
         "2026-08-11": 922,
         "2026-08-24": 201,
         "2026-10-19": 1011,
-        "2026-10-20": 1011
+        "2026-10-20": 1011,
+        "2026-10-21": 1206
       },
       "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
       "trend": "up",
-      "trend_delta": 810
+      "trend_delta": 1005
     },
     {
       "id": "github:LadybirdBrowser/ladybird",
@@ -12292,7 +12324,7 @@
       "url": "https://github.com/Graphify-Labs/graphify",
       "canonical_url": "github.com/graphify-labs/graphify",
       "company": null,
-      "stars": 1107,
+      "stars": 802,
       "momentum": 100,
       "tags": [
         "python"
@@ -12304,16 +12336,17 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-07-17",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-07-14": 1095,
         "2026-07-15": 1851,
-        "2026-07-17": 1107
+        "2026-07-17": 1107,
+        "2026-10-21": 802
       },
       "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
-      "trend": "up",
-      "trend_delta": 12
+      "trend": "down",
+      "trend_delta": -305
     },
     {
       "id": "github:moeru-ai/airi",
@@ -13246,8 +13279,14 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-12",
-      "last_seen": "2026-07-12",
-      "also_seen": [],
+      "last_seen": "2026-10-21",
+      "also_seen": [
+        {
+          "source": "GitHub",
+          "url": "https://github.com/vllm-project/vllm",
+          "seen": "2026-10-21"
+        }
+      ],
       "stars_history": {},
       "description": "High-throughput, memory-efficient inference and serving engine for LLMs (PagedAttention).",
       "trend": "none",
@@ -14578,7 +14617,7 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "canonical_url": "github.com/madslorentzen/ai-job-search",
       "company": null,
-      "stars": 3856,
+      "stars": 3861,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -14586,7 +14625,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-08",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-07-08": 2514,
@@ -14596,11 +14635,12 @@
         "2026-10-17": 898,
         "2026-10-18": 1365,
         "2026-10-19": 3860,
-        "2026-10-20": 3856
+        "2026-10-20": 3856,
+        "2026-10-21": 3861
       },
       "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
       "trend": "up",
-      "trend_delta": 2591
+      "trend_delta": 2596
     },
     {
       "id": "github:AhmadIbrahiim/Website-downloader",
@@ -16932,33 +16972,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:openai/skills",
-      "name": "skills",
-      "quadrant": "Tools",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
-      "company": "OpenAI",
-      "stars": 490,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-09-09",
-      "also_seen": [],
-      "stars_history": {
-        "2026-09-07": 46,
-        "2026-09-08": 351,
-        "2026-09-09": 490
-      },
-      "description": "Skills Catalog for Codex",
-      "trend": "up",
-      "trend_delta": 444
-    },
-    {
       "id": "github:anthropics/skills",
       "name": "skills",
       "quadrant": "Tools",
@@ -16989,6 +17002,33 @@
       "trend_delta": -286
     },
     {
+      "id": "github:openai/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
+      "company": "OpenAI",
+      "stars": 490,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 46,
+        "2026-09-08": 351,
+        "2026-09-09": 490
+      },
+      "description": "Skills Catalog for Codex",
+      "trend": "up",
+      "trend_delta": 444
+    },
+    {
       "id": "github:ruvnet/ruflo",
       "name": "ruflo",
       "quadrant": "Tools",
@@ -16998,13 +17038,13 @@
       "url": "https://github.com/ruvnet/ruflo",
       "canonical_url": "github.com/ruvnet/ruflo",
       "company": null,
-      "stars": 564,
+      "stars": 684,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-08-22": 140,
@@ -17016,11 +17056,12 @@
         "2026-10-17": 672,
         "2026-10-18": 420,
         "2026-10-19": 564,
-        "2026-10-20": 564
+        "2026-10-20": 564,
+        "2026-10-21": 684
       },
       "description": "Agent meta-harness for multi-agent swarms and workflows",
       "trend": "up",
-      "trend_delta": 170
+      "trend_delta": 290
     },
     {
       "id": "github:yamadashy/repomix",
@@ -18676,7 +18717,7 @@
       "url": "https://github.com/anomalyco/opencode",
       "canonical_url": "github.com/anomalyco/opencode",
       "company": null,
-      "stars": 1311,
+      "stars": 1240,
       "momentum": 39,
       "tags": [
         "typescript"
@@ -18684,7 +18725,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-28",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-06-28": 392,
@@ -18693,11 +18734,12 @@
         "2026-09-07": 551,
         "2026-10-18": 438,
         "2026-10-19": 1310,
-        "2026-10-20": 1311
+        "2026-10-20": 1311,
+        "2026-10-21": 1240
       },
       "description": "The open source coding agent.",
       "trend": "up",
-      "trend_delta": 760
+      "trend_delta": 689
     },
     {
       "id": "github:keycloak/keycloak",
@@ -19000,7 +19042,7 @@
       "url": "https://github.com/stablyai/orca",
       "canonical_url": "github.com/stablyai/orca",
       "company": null,
-      "stars": 1590,
+      "stars": 1565,
       "momentum": 33,
       "tags": [
         "typescript"
@@ -19008,7 +19050,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-06-25": 331,
@@ -19016,11 +19058,12 @@
         "2026-08-13": 1235,
         "2026-10-18": 830,
         "2026-10-19": 1591,
-        "2026-10-20": 1590
+        "2026-10-20": 1590,
+        "2026-10-21": 1565
       },
       "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
       "trend": "up",
-      "trend_delta": 355
+      "trend_delta": 330
     },
     {
       "id": "github:every-app/open-seo",
@@ -21226,7 +21269,7 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "canonical_url": "github.com/shiyu-coder/kronos",
       "company": null,
-      "stars": 363,
+      "stars": 733,
       "momentum": 24,
       "tags": [
         "python"
@@ -21234,7 +21277,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 244,
@@ -21248,11 +21291,12 @@
         "2026-08-04": 200,
         "2026-08-13": 266,
         "2026-10-19": 355,
-        "2026-10-20": 363
+        "2026-10-20": 363,
+        "2026-10-21": 733
       },
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
       "trend": "up",
-      "trend_delta": 97
+      "trend_delta": 467
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -21651,7 +21695,7 @@
       "url": "https://github.com/msitarzewski/agency-agents",
       "canonical_url": "github.com/msitarzewski/agency-agents",
       "company": null,
-      "stars": 621,
+      "stars": 562,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21659,7 +21703,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-10-06",
+      "last_seen": "2026-10-21",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 1040,
@@ -21677,11 +21721,12 @@
         "2026-08-13": 1873,
         "2026-08-14": 778,
         "2026-10-05": 595,
-        "2026-10-06": 621
+        "2026-10-06": 621,
+        "2026-10-21": 562
       },
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "trend": "down",
-      "trend_delta": -157
+      "trend_delta": -59
     },
     {
       "id": "github:NVIDIA/SkillSpector",
