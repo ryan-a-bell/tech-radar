@@ -8,15 +8,15 @@ discovered_by: manual
 url: https://github.com/ruvnet/ruflo
 canonical_url: github.com/ruvnet/ruflo
 company: null
-stars: 564
+stars: 684
 momentum: 0
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-06-30
-last_seen: 2026-10-20
+last_seen: 2026-10-21
 also_seen: []
-stars_history: {"2026-08-22": 140, "2026-08-24": 131, "2026-09-06": 136, "2026-09-07": 276, "2026-09-08": 394, "2026-10-16": 147, "2026-10-17": 672, "2026-10-18": 420, "2026-10-19": 564, "2026-10-20": 564}
+stars_history: {"2026-08-22": 140, "2026-08-24": 131, "2026-09-06": 136, "2026-09-07": 276, "2026-09-08": 394, "2026-10-16": 147, "2026-10-17": 672, "2026-10-18": 420, "2026-10-19": 564, "2026-10-20": 564, "2026-10-21": 684}
 ---
 
 Agent meta-harness for multi-agent swarms and workflows

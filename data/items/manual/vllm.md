@@ -14,8 +14,8 @@ tags: []
 topics: []
 archived_at: null
 first_seen: 2026-07-12
-last_seen: 2026-07-12
-also_seen: []
+last_seen: 2026-10-21
+also_seen: [{"source": "GitHub", "url": "https://github.com/vllm-project/vllm", "seen": "2026-10-21"}]
 stars_history: {}
 ---
 
