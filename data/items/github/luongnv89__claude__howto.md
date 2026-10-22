@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/luongnv89/claude-howto
 canonical_url: github.com/luongnv89/claude-howto
 company: null
-stars: 141
+stars: 428
 momentum: 15
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-08
-last_seen: 2026-06-28
+last_seen: 2026-10-22
 also_seen: []
-stars_history: {"2026-06-08": 154, "2026-06-09": 312, "2026-06-10": 204, "2026-06-11": 211, "2026-06-28": 141}
+stars_history: {"2026-06-08": 154, "2026-06-09": 312, "2026-06-10": 204, "2026-06-11": 211, "2026-06-28": 141, "2026-10-22": 428}
 ---
 
 A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.
