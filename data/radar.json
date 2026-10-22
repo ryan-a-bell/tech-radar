@@ -1,7 +1,88 @@
 {
-  "generated": "2026-10-21",
-  "count": 853,
+  "generated": "2026-10-22",
+  "count": 856,
   "items": [
+    {
+      "id": "github:php/php-src",
+      "name": "php-src",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/php/php-src",
+      "canonical_url": "github.com/php/php-src",
+      "company": null,
+      "stars": 110,
+      "momentum": 11,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-22": 110
+      },
+      "description": "The PHP Interpreter",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:fastapi/fastapi",
+      "name": "fastapi",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/fastapi/fastapi",
+      "canonical_url": "github.com/fastapi/fastapi",
+      "company": null,
+      "stars": 96,
+      "momentum": 9,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-22": 96
+      },
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Meloong-Git/PCL",
+      "name": "PCL",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Meloong-Git/PCL",
+      "canonical_url": "github.com/meloong-git/pcl",
+      "company": null,
+      "stars": 115,
+      "momentum": 11,
+      "tags": [
+        "visual basic .net"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-22",
+      "last_seen": "2026-10-22",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-22": 115
+      },
+      "description": "Minecraft \u542f\u52a8\u5668 Plain Craft Launcher\uff08PCL\uff09\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:wshobson/agents",
       "name": "agents",
@@ -3328,7 +3409,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 1712,
+      "stars": 2012,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -3336,7 +3417,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
@@ -3344,11 +3425,12 @@
         "2026-09-19": 3006,
         "2026-09-20": 3155,
         "2026-10-07": 538,
-        "2026-10-21": 1712
+        "2026-10-21": 1712,
+        "2026-10-22": 2012
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "trend": "up",
-      "trend_delta": 1174
+      "trend_delta": 1474
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -3360,7 +3442,7 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "canonical_url": "github.com/anthropics/knowledge-work-plugins",
       "company": "Anthropic",
-      "stars": 267,
+      "stars": 389,
       "momentum": 11,
       "tags": [
         "python"
@@ -3368,7 +3450,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 110,
@@ -3378,11 +3460,12 @@
         "2026-10-08": 766,
         "2026-10-09": 714,
         "2026-10-10": 626,
-        "2026-10-21": 267
+        "2026-10-21": 267,
+        "2026-10-22": 389
       },
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "trend": "down",
-      "trend_delta": -359
+      "trend_delta": -237
     },
     {
       "id": "github:cline/cline",
@@ -5930,7 +6013,7 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "canonical_url": "github.com/dietrichgebert/ponytail",
       "company": null,
-      "stars": 1208,
+      "stars": 2079,
       "momentum": 98,
       "tags": [
         "javascript"
@@ -5938,7 +6021,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-26",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-26": 982,
@@ -5955,11 +6038,12 @@
         "2026-10-02": 1194,
         "2026-10-03": 1435,
         "2026-10-04": 1894,
-        "2026-10-21": 1208
+        "2026-10-21": 1208,
+        "2026-10-22": 2079
       },
       "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "trend": "down",
-      "trend_delta": -686
+      "trend": "up",
+      "trend_delta": 185
     },
     {
       "id": "github:marin-community/marin",
@@ -12324,7 +12408,7 @@
       "url": "https://github.com/Graphify-Labs/graphify",
       "canonical_url": "github.com/graphify-labs/graphify",
       "company": null,
-      "stars": 802,
+      "stars": 1433,
       "momentum": 100,
       "tags": [
         "python"
@@ -12336,17 +12420,18 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-14",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-07-14": 1095,
         "2026-07-15": 1851,
         "2026-07-17": 1107,
-        "2026-10-21": 802
+        "2026-10-21": 802,
+        "2026-10-22": 1433
       },
       "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
-      "trend": "down",
-      "trend_delta": -305
+      "trend": "up",
+      "trend_delta": 326
     },
     {
       "id": "github:moeru-ai/airi",
@@ -15112,7 +15197,7 @@
       "url": "https://github.com/supabase/supabase",
       "canonical_url": "github.com/supabase/supabase",
       "company": "Supabase",
-      "stars": 120,
+      "stars": 504,
       "momentum": 16,
       "tags": [
         "typescript"
@@ -15120,16 +15205,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-04",
-      "last_seen": "2026-09-19",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-07-04": 169,
         "2026-09-17": 120,
-        "2026-09-19": 120
+        "2026-09-19": 120,
+        "2026-10-22": 504
       },
       "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
-      "trend": "down",
-      "trend_delta": -49
+      "trend": "up",
+      "trend_delta": 384
     },
     {
       "id": "github:rommapp/romm",
@@ -22323,7 +22409,7 @@
       "url": "https://github.com/luongnv89/claude-howto",
       "canonical_url": "github.com/luongnv89/claude-howto",
       "company": null,
-      "stars": 141,
+      "stars": 428,
       "momentum": 15,
       "tags": [
         "python"
@@ -22331,18 +22417,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-10-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 154,
         "2026-06-09": 312,
         "2026-06-10": 204,
         "2026-06-11": 211,
-        "2026-06-28": 141
+        "2026-06-28": 141,
+        "2026-10-22": 428
       },
       "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
-      "trend": "down",
-      "trend_delta": -70
+      "trend": "up",
+      "trend_delta": 287
     },
     {
       "id": "github:RyanCodrai/turbovec",
