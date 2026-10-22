@@ -544,7 +544,7 @@ function DetailModal({ item, onClose }) {
    view. Fuzzy-filter by name/organizer/topic/description, and toggle the sort:
    "by time" is a flat chronological run of every edition; "by name" groups a
    conference's editions together (newest first) under one row-spanning name.
-   Renders nothing when no conferences are tracked. */
+   Shows an empty-state note when no conferences are tracked. */
 function ConferenceTable({ items }) {
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState("time");   // "time" (chronological) | "name"
@@ -566,7 +566,13 @@ function ConferenceTable({ items }) {
     });
   }, [confs, query]);
 
-  if (!confs.length) return null;
+  if (!confs.length) {
+    return (
+      <div style={{ fontFamily: "Georgia, serif", fontSize: 14, fontStyle: "italic", color: "#6b6456", padding: 20 }}>
+        No conferences tracked yet.
+      </div>
+    );
+  }
 
   // sortable key for an edition: leading ISO date if present, else the year
   // (end-of-year so a date-TBD edition sorts after dated ones of the same year).
@@ -720,6 +726,17 @@ export default function LearningApp() {
   const [searchQuery, setSearchQuery] = useState("");
   const [hoverId, setHoverId] = useState(null);
   const [active, setActive] = useState(null);
+  // in-page subtab: the radar + card library, or the conference schedule table.
+  // Honours a #conferences hash so the view survives a reload / deep link.
+  const [view, setView] = useState(
+    () => (typeof window !== "undefined" && window.location.hash.replace("#", "") === "conferences") ? "conferences" : "radar"
+  );
+  const selectView = (id) => {
+    setView(id);
+    if (typeof history !== "undefined" && history.replaceState) {
+      history.replaceState(null, "", "#" + id);
+    }
+  };
 
   // typing a query auto-switches to relevance sort, but only away from the
   // default (doesn't clobber a sort the user picked on purpose)
@@ -827,6 +844,27 @@ export default function LearningApp() {
         </span>
       </div>
 
+      {/* ---- Learning subnav: Radar (library) / Conferences (schedule table) ---- */}
+      <div style={{
+        display: "flex", gap: 0, background: "#141413", padding: "8px 14px",
+        fontFamily: "'IBM Plex Mono', ui-monospace, monospace", alignItems: "center",
+        flexWrap: "wrap", borderTop: "1px solid #000",
+      }}>
+        <span style={{ color: "#777", fontSize: 11, letterSpacing: 1, marginRight: 14 }}>VIEW:</span>
+        {[
+          { id: "radar", label: "RADAR" },
+          { id: "conferences", label: "CONFERENCES" },
+        ].map((m) => (
+          <button key={m.id} onClick={() => selectView(m.id)} style={{
+            background: view === m.id ? "#d8d6cc" : "transparent",
+            color: view === m.id ? "#000" : "#999",
+            border: "1px solid " + (view === m.id ? "#d8d6cc" : "#3a3a3a"),
+            padding: "5px 13px", marginRight: 8, fontSize: 11, letterSpacing: 1,
+            cursor: "pointer", fontFamily: "inherit",
+          }}>{m.label}</button>
+        ))}
+      </div>
+
       <div style={{
         fontFamily: "Georgia, 'Times New Roman', serif",
         background: "#f4f0e6", color: "#1a1a1a", minHeight: "100%", padding: "30px 34px 60px",
@@ -847,6 +885,11 @@ export default function LearningApp() {
           </div>
         </div>
 
+        {view === "conferences" ? (
+          <div style={{ marginTop: 18 }}>
+            <ConferenceTable items={allItems} />
+          </div>
+        ) : (<>
         {/* fuzzy search */}
         <div style={{ margin: "14px 0 4px" }}>
           <input
@@ -927,10 +970,6 @@ export default function LearningApp() {
           </div>
         </div>
 
-        {/* conference schedule — a flat table of every conference + its year
-            editions with links, shown regardless of the active filters */}
-        <ConferenceTable items={allItems} />
-
         {/* main split — radar (sticky, snapshot of everything) + scrollable list */}
         <div style={{ display: "flex", gap: 22, alignItems: "flex-start", flexWrap: "wrap" }}>
           <div style={{
@@ -966,6 +1005,7 @@ export default function LearningApp() {
           marginTop: 32, fontFamily: "'IBM Plex Mono', monospace", fontSize: 10,
           color: "#6b6456", letterSpacing: 0.5, textAlign: "center",
         }}>click any item — dot or card — to open its full entry</footer>
+        </>)}
       </div>
 
       <DetailModal item={active} onClose={() => setActive(null)} />
