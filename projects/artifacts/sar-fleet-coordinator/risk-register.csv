@@ -1,0 +1,13 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+SAR-R01,Risk,Drift model error exceeds search-cell size in high sea states,4,4,Open,Planner lead,Ensemble drift runs; widen cells above Sea State 4
+SAR-R02,Risk,UAV endurance below spec in cold-weather ops,3,4,Open,Air vehicle lead,Cold-soak battery testing; reserve margin raised to 25%
+SAR-R03,Risk,Ground-station link saturates with 6+ craft,3,3,Mitigating,Comms lead,Compress status telemetry; prioritize tasking traffic
+SAR-R04,Risk,On-board LLM misparses radio traffic into wrong tasking,2,5,Open,Autonomy lead,Human confirm on any re-task that changes sector
+SAR-R05,Risk,STK coverage license unavailable for field laptops,2,2,Watch,PM,Precompute coverage tables before sortie
+SAR-R06,Risk,SysML model drifts from as-built interfaces,3,2,Mitigating,Systems engineer,Model review gate at every interface change
+SAR-R07,Risk,Sensor footprint assumption invalid for night IR,1,3,Closed,Payload lead,Measured IR footprint in sea trial 2
+SAR-I01,Issue,USV-2 GPS drops fix near the harbor breakwater,,4,Open,USV lead,Fuse INS dead-reckoning; relocate antenna above superstructure
+SAR-I02,Issue,PettingZoo env step rate too slow for 6-craft training,,2,Open,Autonomy lead,Vectorize env; cut observation size
+SAR-O01,Opportunity,Reuse Coast Guard SAROPS drift output instead of in-house model,3,4,Pursuing,Planner lead,MOU for SAROPS data feed; adapter in the planner
+SAR-O02,Opportunity,Shared airframe with the comms-mesh relay UAV,4,3,Open,PM,Align payload bay ICD with Contested-Comms SAR Mesh
+SAR-O03,Opportunity,Thermal camera upgrade doubles night sweep width,2,4,Watch,Payload lead,Price trade study next quarter

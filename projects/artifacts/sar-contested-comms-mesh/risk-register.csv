@@ -1,0 +1,6 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+CCM-R01,Risk,Mesh partitions under broadband jamming,4,5,Open,RF lead,Frequency-hopping fallback; store-and-forward on partition
+CCM-R02,Risk,Antenna placement on USV mast degrades UAV link,3,3,Open,RF lead,HFSS installed-performance study before mast freeze
+CCM-R03,Risk,Gossip protocol overhead starves tasking bandwidth,2,4,Watch,Software lead,Rate-limit COP updates; priority classes
+CCM-I01,Issue,CST license seat shared with another program,,3,Open,PM,Schedule solver runs off-hours
+CCM-O01,Opportunity,iroh QUIC transport removes custom relay code,4,3,Pursuing,Software lead,Spike iroh on two nodes; retire bespoke relay

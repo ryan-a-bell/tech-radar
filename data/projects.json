@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-23",
+  "generated": "2026-10-24",
   "projects": [
     {
       "id": "autonomous-trading-desk",
@@ -72,7 +72,8 @@
           "canonical_url": "github.com/grafana/grafana"
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "document-intelligence-engine",
@@ -129,7 +130,8 @@
           "canonical_url": null
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "gsd-core-app",
@@ -168,7 +170,8 @@
           "canonical_url": null
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "microgrid-dispatch-optimizer",
@@ -224,7 +227,8 @@
           "canonical_url": "github.com/grafana/grafana"
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "options-vol-surface",
@@ -239,7 +243,8 @@
       "blurb": "An idea, no code yet. I want to build and calibrate an implied-volatility surface for equity options: pull an options chain, fit a no-arbitrage surface across strikes and expiries, and price exotic payoffs off it. The interesting part is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to interpolate the surface for pricing.",
       "body": "An idea, no code yet. I want to build and calibrate an implied-volatility\nsurface for equity options: pull an options chain, fit a no-arbitrage surface\nacross strikes and expiries, and price exotic payoffs off it. The interesting\npart is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to\ninterpolate the surface for pricing.\n\nBecause there is no declared stack, the recommendations below are the whole\nsuggested tech stack, inferred purely from this description — option pricing\nlibraries, a quant analytics toolkit, and a market-data feed for the chains.",
       "stack": [],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "radar-portfolio-optimizer",
@@ -271,7 +276,8 @@
           "canonical_url": "github.com/goldmansachs/gs-quant"
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "sar-contested-comms-mesh",
@@ -343,7 +349,86 @@
           "canonical_url": "github.com/openobserve/openobserve"
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [],
+        "rio": {
+          "items": [
+            {
+              "id": "CCM-R01",
+              "type": "Risk",
+              "title": "Mesh partitions under broadband jamming",
+              "likelihood": 4,
+              "consequence": 5,
+              "score": 20,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "RF lead",
+              "mitigation": "Frequency-hopping fallback; store-and-forward on partition"
+            },
+            {
+              "id": "CCM-O01",
+              "type": "Opportunity",
+              "title": "iroh QUIC transport removes custom relay code",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Spike iroh on two nodes; retire bespoke relay"
+            },
+            {
+              "id": "CCM-R02",
+              "type": "Risk",
+              "title": "Antenna placement on USV mast degrades UAV link",
+              "likelihood": 3,
+              "consequence": 3,
+              "score": 9,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "RF lead",
+              "mitigation": "HFSS installed-performance study before mast freeze"
+            },
+            {
+              "id": "CCM-R03",
+              "type": "Risk",
+              "title": "Gossip protocol overhead starves tasking bandwidth",
+              "likelihood": 2,
+              "consequence": 4,
+              "score": 8,
+              "level": "Moderate",
+              "status": "Watch",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Rate-limit COP updates; priority classes"
+            },
+            {
+              "id": "CCM-I01",
+              "type": "Issue",
+              "title": "CST license seat shared with another program",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Schedule solver runs off-hours"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/sar-contested-comms-mesh/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      }
     },
     {
       "id": "sar-fleet-coordinator",
@@ -408,7 +493,254 @@
           "canonical_url": null
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [
+          {
+            "file": "sar-fleet.sysml",
+            "href": "projects/artifacts/sar-fleet-coordinator/sar-fleet.sysml",
+            "packages": [
+              "SARFleet",
+              "Requirements",
+              "Structure",
+              "Behavior",
+              "Trace"
+            ],
+            "defs": {
+              "requirement": [
+                "SearchCoverage",
+                "ReTaskLatency",
+                "EnduranceMargin",
+                "DegradedComms"
+              ],
+              "port": [
+                "TaskingPort",
+                "SensorFeedPort"
+              ],
+              "item": [
+                "Tasking",
+                "CraftStatus",
+                "Detection",
+                "Position",
+                "SearchCell"
+              ],
+              "part": [
+                "Craft",
+                "UnmannedSurfaceVessel",
+                "UAV",
+                "GroundStation",
+                "SearchPlanner",
+                "DriftModel",
+                "TaskAllocator",
+                "FleetDashboard"
+              ],
+              "action": [
+                "PlanSearch",
+                "AllocateTasks",
+                "ReTask"
+              ]
+            },
+            "requirements": [
+              {
+                "id": "SAR-001",
+                "name": "SearchCoverage"
+              },
+              {
+                "id": "SAR-002",
+                "name": "ReTaskLatency"
+              },
+              {
+                "id": "SAR-003",
+                "name": "EnduranceMargin"
+              },
+              {
+                "id": "SAR-004",
+                "name": "DegradedComms"
+              }
+            ],
+            "satisfied": [
+              "EnduranceMargin",
+              "ReTaskLatency",
+              "SearchCoverage"
+            ],
+            "counts": {
+              "parts": 8,
+              "ports": 3,
+              "connections": 2,
+              "satisfy": 3,
+              "verify": 0,
+              "allocate": 2
+            }
+          }
+        ],
+        "rio": {
+          "items": [
+            {
+              "id": "SAR-R01",
+              "type": "Risk",
+              "title": "Drift model error exceeds search-cell size in high sea states",
+              "likelihood": 4,
+              "consequence": 4,
+              "score": 16,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Planner lead",
+              "mitigation": "Ensemble drift runs; widen cells above Sea State 4"
+            },
+            {
+              "id": "SAR-O01",
+              "type": "Opportunity",
+              "title": "Reuse Coast Guard SAROPS drift output instead of in-house model",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "Planner lead",
+              "mitigation": "MOU for SAROPS data feed; adapter in the planner"
+            },
+            {
+              "id": "SAR-O02",
+              "type": "Opportunity",
+              "title": "Shared airframe with the comms-mesh relay UAV",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Align payload bay ICD with Contested-Comms SAR Mesh"
+            },
+            {
+              "id": "SAR-R02",
+              "type": "Risk",
+              "title": "UAV endurance below spec in cold-weather ops",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Air vehicle lead",
+              "mitigation": "Cold-soak battery testing; reserve margin raised to 25%"
+            },
+            {
+              "id": "SAR-R04",
+              "type": "Risk",
+              "title": "On-board LLM misparses radio traffic into wrong tasking",
+              "likelihood": 2,
+              "consequence": 5,
+              "score": 10,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Human confirm on any re-task that changes sector"
+            },
+            {
+              "id": "SAR-R03",
+              "type": "Risk",
+              "title": "Ground-station link saturates with 6+ craft",
+              "likelihood": 3,
+              "consequence": 3,
+              "score": 9,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Comms lead",
+              "mitigation": "Compress status telemetry; prioritize tasking traffic"
+            },
+            {
+              "id": "SAR-O03",
+              "type": "Opportunity",
+              "title": "Thermal camera upgrade doubles night sweep width",
+              "likelihood": 2,
+              "consequence": 4,
+              "score": 8,
+              "level": "Moderate",
+              "status": "Watch",
+              "open": true,
+              "owner": "Payload lead",
+              "mitigation": "Price trade study next quarter"
+            },
+            {
+              "id": "SAR-R06",
+              "type": "Risk",
+              "title": "SysML model drifts from as-built interfaces",
+              "likelihood": 3,
+              "consequence": 2,
+              "score": 6,
+              "level": "Low",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Systems engineer",
+              "mitigation": "Model review gate at every interface change"
+            },
+            {
+              "id": "SAR-I01",
+              "type": "Issue",
+              "title": "USV-2 GPS drops fix near the harbor breakwater",
+              "likelihood": null,
+              "consequence": 4,
+              "score": 4,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "USV lead",
+              "mitigation": "Fuse INS dead-reckoning; relocate antenna above superstructure"
+            },
+            {
+              "id": "SAR-R05",
+              "type": "Risk",
+              "title": "STK coverage license unavailable for field laptops",
+              "likelihood": 2,
+              "consequence": 2,
+              "score": 4,
+              "level": "Low",
+              "status": "Watch",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Precompute coverage tables before sortie"
+            },
+            {
+              "id": "SAR-I02",
+              "type": "Issue",
+              "title": "PettingZoo env step rate too slow for 6-craft training",
+              "likelihood": null,
+              "consequence": 2,
+              "score": 2,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Vectorize env; cut observation size"
+            },
+            {
+              "id": "SAR-R07",
+              "type": "Risk",
+              "title": "Sensor footprint assumption invalid for night IR",
+              "likelihood": 1,
+              "consequence": 3,
+              "score": 3,
+              "level": "Low",
+              "status": "Closed",
+              "open": false,
+              "owner": "Payload lead",
+              "mitigation": "Measured IR footprint in sea trial 2"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/sar-fleet-coordinator/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      }
     },
     {
       "id": "sensor-anomalies",
@@ -422,7 +754,8 @@
       "blurb": "An idea for detecting anomalies in industrial sensor streams over time. The plan: ingest telemetry from many sensors, resample the irregular timestamps onto a regular grid, decompose trend and seasonality, and fit a rolling forecast so points that break the predicted band get flagged.",
       "body": "An idea for detecting anomalies in industrial sensor streams over time. The\nplan: ingest telemetry from many sensors, resample the irregular timestamps\nonto a regular grid, decompose trend and seasonality, and fit a rolling forecast\nso points that break the predicted band get flagged.\n\nStructurally this is the same shape as forecasting a financial series — lagged\nfeatures, rolling windows, drift as the distribution shifts over time, and a\nsignal that fires when the observed value leaves the forecast window. Different\ndomain, same temporal machinery, so the tooling should overlap heavily.",
       "stack": [],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     },
     {
       "id": "trading-timeseries",
@@ -454,7 +787,8 @@
           "canonical_url": "github.com/jsmidt/quantpy"
         }
       ],
-      "stack_unresolved": []
+      "stack_unresolved": [],
+      "artifacts": null
     }
   ]
 }
