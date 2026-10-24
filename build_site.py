@@ -112,6 +112,11 @@ def main():
     proj_json = os.path.join(HERE, "data", "projects.json")
     if os.path.exists(proj_json):
         shutil.copy(proj_json, os.path.join(SITE, "data", "projects.json"))
+    # project artifacts (SysML models, risk registers, docs) ship as-is so the
+    # Artifacts panel can link straight to the source file
+    proj_art = os.path.join(HERE, "projects", "artifacts")
+    if os.path.isdir(proj_art):
+        shutil.copytree(proj_art, os.path.join(SITE, "projects", "artifacts"))
     proj_sim = os.path.join(HERE, "data", "project_similarity.json")
     if os.path.exists(proj_sim):
         shutil.copy(proj_sim, os.path.join(SITE, "data", "project_similarity.json"))

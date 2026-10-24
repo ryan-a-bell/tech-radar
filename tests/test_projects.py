@@ -115,5 +115,97 @@ class AsListTests(unittest.TestCase):
         self.assertEqual(bp._as_list(["a", "b"]), ["a", "b"])
 
 
+class SysmlSummaryTests(unittest.TestCase):
+    MODEL = (
+        "// header comment\n"
+        "package Demo {\n"
+        "  requirement def <'R-1'> Range { doc /* part def Hidden; */ }\n"
+        "  requirement def <'R-2'> Speed;\n"
+        "  part def Vehicle { port p : Plug; }\n"
+        "  abstract part def 'Power Unit';\n"
+        "  port def Plug;\n"
+        "  part car : Vehicle { part engine : 'Power Unit'; }\n"
+        "  connect car.p to car.engine;\n"
+        "  satisfy Range by car;\n"
+        "}\n"
+    )
+
+    def test_packages_and_defs(self):
+        s = bp.summarize_sysml(self.MODEL)
+        self.assertEqual(s["packages"], ["Demo"])
+        self.assertEqual(s["defs"]["part"], ["Vehicle", "Power Unit"])
+        self.assertEqual(s["defs"]["port"], ["Plug"])
+
+    def test_comments_are_ignored(self):
+        self.assertNotIn("Hidden", bp.summarize_sysml(self.MODEL)["defs"]["part"])
+
+    def test_requirements_and_trace(self):
+        s = bp.summarize_sysml(self.MODEL)
+        self.assertEqual([r["id"] for r in s["requirements"]], ["R-1", "R-2"])
+        self.assertEqual(s["satisfied"], ["Range"])
+
+    def test_usage_counts(self):
+        c = bp.summarize_sysml(self.MODEL)["counts"]
+        self.assertEqual(c["parts"], 2)
+        self.assertEqual(c["ports"], 1)
+        self.assertEqual(c["connections"], 1)
+        self.assertEqual(c["satisfy"], 1)
+
+
+class RioRegisterTests(unittest.TestCase):
+    def test_level_matrix_corners(self):
+        self.assertEqual(bp.risk_level(1, 1), "Low")
+        self.assertEqual(bp.risk_level(5, 5), "High")
+        self.assertEqual(bp.risk_level(1, 5), "Moderate")
+        self.assertEqual(bp.risk_level(4, 4), "High")
+        self.assertIsNone(bp.risk_level(0, 3))
+
+    def test_header_aliases_and_sort(self):
+        reg = bp.parse_rio_register(
+            "Risk #,Risk Statement,Probability,Impact,State,Risk Owner,Handling\n"
+            "A,Low one,1,2,Open,me,watch\n"
+            "B,Hot one,5,4,Open,you,fix it\n"
+            "C,Done,5,5,Closed,,\n"
+        )
+        self.assertEqual(reg["unmapped"], [])
+        self.assertEqual([r["id"] for r in reg["items"]], ["B", "A", "C"])
+        b = reg["items"][0]
+        self.assertEqual((b["score"], b["level"], b["owner"]), (20, "High", "you"))
+        self.assertFalse(reg["items"][-1]["open"])
+
+    def test_missing_columns_reported_and_unscored(self):
+        reg = bp.parse_rio_register("Title,Status\nSomething,Open\n")
+        self.assertIn("likelihood", reg["unmapped"])
+        r = reg["items"][0]
+        self.assertEqual(r["id"], "R1")
+        self.assertIsNone(r["level"])
+        self.assertIsNone(r["score"])
+
+    def test_types_and_ratings(self):
+        reg = bp.parse_rio_register(
+            "ID,Type,Title,Likelihood,Consequence,Status\n"
+            "R1,Risk,Threat,4,4,Open\n"
+            "I1,Issue,Happened,,4,Open\n"
+            "O1,Opportunity,Upside,3,4,Pursuing\n"
+            "O2,opp,Won,5,5,Captured\n"
+            "X1,,Untyped,2,2,Open\n"
+        )
+        by = {r["id"]: r for r in reg["items"]}
+        self.assertEqual((by["R1"]["type"], by["R1"]["level"]), ("Risk", "High"))
+        self.assertEqual((by["I1"]["type"], by["I1"]["score"], by["I1"]["level"]), ("Issue", 4, "High"))
+        self.assertEqual((by["O1"]["type"], by["O1"]["score"], by["O1"]["level"]),
+                         ("Opportunity", 12, "Moderate"))
+        self.assertFalse(by["O2"]["open"])
+        self.assertEqual(by["X1"]["type"], "Risk")
+
+    def test_issue_levels_by_consequence(self):
+        self.assertEqual([bp.rio_rating("Issue", None, c)[1] for c in range(1, 6)],
+                         ["Low", "Moderate", "Moderate", "High", "High"])
+
+    def test_type_column_is_optional(self):
+        reg = bp.parse_rio_register("ID,Title,Likelihood,Consequence\nA,x,1,1\n")
+        self.assertEqual(reg["unmapped"], ["status"])
+
+
 if __name__ == "__main__":
     unittest.main()
