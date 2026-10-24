@@ -784,29 +784,39 @@ function ProjectRecs({ proj, recs, rankBy, setSelId }) {
 
 // ---- artifacts: SysML v2 models, risk registers, files ----------------------
 const RISK_COLOR = { High: "#e5484d", Moderate: "#c98500", Low: "#199e70" };
+// opportunities are upside, so they get a blue ramp instead of the threat colours
+const OPP_COLOR = { High: "#5aa2f0", Moderate: "#2f72b8", Low: "#1f4f7a" };
 // DoD RIO guide 5x5 — rows likelihood 1..5, columns consequence 1..5 (mirrors build_projects.RISK_MATRIX)
 const RISK_MATRIX = ["LLLLM", "LLLMM", "LLMMH", "LMMHH", "LMHHH"];
 const RISK_LEVEL = { L: "Low", M: "Moderate", H: "High" };
+// issues have already happened — rated on consequence alone (mirrors build_projects.ISSUE_LEVEL)
+const ISSUE_LEVEL = { 1: "Low", 2: "Moderate", 3: "Moderate", 4: "High", 5: "High" };
+const RIO_TYPES = [["Risk", "Risks"], ["Issue", "Issues"], ["Opportunity", "Opportunities"]];
+const rioColor = (type, level) => (type === "Opportunity" ? OPP_COLOR : RISK_COLOR)[level] || "var(--muted)";
 
 function artifactSummary(a) {
   if (!a) return null;
   const bits = [];
-  if (a.models.length) bits.push(a.models.length + " model" + (a.models.length === 1 ? "" : "s"));
-  const open = a.risks ? a.risks.items.filter((r) => r.open) : [];
-  if (open.length) bits.push(open.length + " risk" + (open.length === 1 ? "" : "s"));
-  if (a.files.length) bits.push(a.files.length + " file" + (a.files.length === 1 ? "" : "s"));
+  const plural = (n, w) => n + " " + w + (n === 1 ? "" : "s");
+  if (a.models.length) bits.push(plural(a.models.length, "model"));
+  const open = a.rio ? a.rio.items.filter((r) => r.open) : [];
+  const of = (t) => open.filter((r) => r.type === t);
+  if (of("Risk").length) bits.push(plural(of("Risk").length, "risk"));
+  if (of("Issue").length) bits.push(plural(of("Issue").length, "issue"));
+  if (of("Opportunity").length) bits.push(plural(of("Opportunity").length, "opp"));
+  if (a.files.length) bits.push(plural(a.files.length, "file"));
   if (!bits.length) return null;
-  const high = open.filter((r) => r.level === "High").length;
+  const high = open.filter((r) => r.type !== "Opportunity" && r.level === "High").length;
   return <span> · {bits.join(" · ")}{high ? <span style={{ color: RISK_COLOR.High }}> · {high} high</span> : null}</span>;
 }
 
 function Artifacts({ artifacts }) {
-  if (!artifacts || (!artifacts.models.length && !artifacts.risks && !artifacts.files.length)) return null;
+  if (!artifacts || (!artifacts.models.length && !artifacts.rio && !artifacts.files.length)) return null;
   return (
     <>
-      <SectionTitle>Artifacts <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— models, risks &amp; engineering data</span></SectionTitle>
+      <SectionTitle>Artifacts <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— models, risks, issues, opportunities &amp; engineering data</span></SectionTitle>
       {artifacts.models.map((m) => <ModelCard key={m.file} model={m} />)}
-      {artifacts.risks && <RiskRegister risks={artifacts.risks} />}
+      {artifacts.rio && <RioRegister rio={artifacts.rio} />}
       {artifacts.files.length > 0 && (
         <div style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 8 }}>
           {artifacts.files.map((f) => (
@@ -882,76 +892,56 @@ function ModelCard({ model }) {
   );
 }
 
-function RiskRegister({ risks }) {
+function RioRegister({ rio }) {
+  const items = rio.items;
+  const present = RIO_TYPES.filter(([t]) => items.some((r) => r.type === t));
+  const [type, setType] = useState(present.length ? present[0][0] : "Risk");
   const [cell, setCell] = useState(null);   // "L-C" focus from the matrix
-  const items = risks.items;
-  const open = items.filter((r) => r.open);
-  const at = (l, c) => open.filter((r) => r.likelihood === l && r.consequence === c);
+  useEffect(() => setCell(null), [type]);
+  const ofType = items.filter((r) => r.type === type);
+  const open = ofType.filter((r) => r.open);
   const counts = { High: 0, Moderate: 0, Low: 0 };
   for (const r of open) if (r.level) counts[r.level]++;
-  const shown = cell ? items.filter((r) => r.open && r.likelihood + "-" + r.consequence === cell) : items;
-  const cellPx = 34;
+  const cellKey = (r) => type === "Issue" ? String(r.consequence) : r.likelihood + "-" + r.consequence;
+  const shown = cell ? open.filter((r) => cellKey(r) === cell) : ofType;
+  const openOf = (t) => items.filter((r) => r.type === t && r.open).length;
   return (
     <div style={card}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        <span style={pillTag("#e5484d")}>Risk register</span>
-        {risks.sources.map((s) => <a key={s.file} href={s.href} target="_blank"><strong>{s.file}</strong></a>)}
+        <span style={pillTag("#e5484d")}>RIO register</span>
+        {rio.sources.map((s) => <a key={s.file} href={s.href} target="_blank"><strong>{s.file}</strong></a>)}
         <span style={{ flex: 1 }} />
+        <Seg options={present.map(([t, lbl]) => [t, lbl + " " + openOf(t)])} value={type} onChange={setType} />
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 10, flexWrap: "wrap" }}>
         {["High", "Moderate", "Low"].map((lv) => (
           <span key={lv} style={{ fontSize: 11, color: "var(--ink-2)", display: "inline-flex", alignItems: "center", gap: 5 }}>
-            <span style={{ width: 8, height: 8, borderRadius: 2, background: RISK_COLOR[lv] }} />{counts[lv]} {lv.toLowerCase()}
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: rioColor(type, lv) }} />{counts[lv]} {lv.toLowerCase()}
           </span>
         ))}
-        <span style={{ fontSize: 11, color: "var(--muted)" }}>· {items.length - open.length} closed</span>
+        <span style={{ fontSize: 11, color: "var(--muted)" }}>· {ofType.length - open.length} closed</span>
+        <span style={{ fontSize: 11, color: "var(--muted)", marginLeft: "auto" }}>{rioHint(type)}</span>
       </div>
       <div style={{ display: "flex", gap: 18, marginTop: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
-        <div>
-          <div style={{ display: "flex" }}>
-            <div style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", fontSize: 10, color: "var(--muted)",
-              textTransform: "uppercase", letterSpacing: 0.5, textAlign: "center", marginRight: 4 }}>likelihood</div>
-            <div>
-              {[5, 4, 3, 2, 1].map((l) => (
-                <div key={l} style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ width: 12, fontSize: 10, color: "var(--muted)" }}>{l}</span>
-                  {[1, 2, 3, 4, 5].map((c) => {
-                    const lv = RISK_LEVEL[RISK_MATRIX[l - 1][c - 1]];
-                    const here = at(l, c);
-                    const key = l + "-" + c;
-                    const on = cell === key;
-                    return (
-                      <button key={c} onClick={() => setCell(on || !here.length ? null : key)}
-                        title={here.map((r) => r.id + " " + r.title).join("\n") || lv}
-                        style={{ width: cellPx, height: cellPx, margin: 1, borderRadius: 3, border: on ? "1.5px solid #fff" : 0,
-                          cursor: here.length ? "pointer" : "default", color: "#fff", fontWeight: 600, fontSize: 12,
-                          background: RISK_COLOR[lv], opacity: here.length ? 1 : 0.22 }}>
-                        {here.length || ""}
-                      </button>
-                    );
-                  })}
-                </div>
-              ))}
-              <div style={{ display: "flex", marginLeft: 12 }}>
-                {[1, 2, 3, 4, 5].map((c) => <span key={c} style={{ width: cellPx + 2, textAlign: "center", fontSize: 10, color: "var(--muted)" }}>{c}</span>)}
-              </div>
-              <div style={{ textAlign: "center", fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5, marginLeft: 12 }}>consequence</div>
-            </div>
-          </div>
-        </div>
+        {type === "Issue"
+          ? <IssueStrip open={open} cell={cell} setCell={setCell} />
+          : <RioMatrix type={type} open={open} cell={cell} setCell={setCell} />}
         <div style={{ flex: 1, minWidth: 300 }}>
           {cell && (
             <div style={{ fontSize: 11, color: "var(--muted)", marginBottom: 4 }}>
-              L{cell.split("-")[0]} × C{cell.split("-")[1]} · <a href="#" onClick={(e) => { e.preventDefault(); setCell(null); }}>show all</a>
+              {type === "Issue" ? "C" + cell : "L" + cell.split("-")[0] + " × " + (type === "Opportunity" ? "B" : "C") + cell.split("-")[1]}
+              {" · "}<a href="#" onClick={(e) => { e.preventDefault(); setCell(null); }}>show all</a>
             </div>
           )}
           {shown.map((r) => (
             <div key={r.id} style={{ padding: "6px 0", borderTop: "1px solid var(--border)", opacity: r.open ? 1 : 0.45 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ width: 8, height: 8, borderRadius: 2, background: r.level ? RISK_COLOR[r.level] : "var(--muted)", flex: "0 0 auto" }} />
+                <span style={{ width: 8, height: 8, borderRadius: 2, background: r.level ? rioColor(r.type, r.level) : "var(--muted)", flex: "0 0 auto" }} />
                 <span style={{ color: "var(--muted)", fontSize: 11, flex: "0 0 auto" }}>{r.id}</span>
                 <span style={{ fontSize: 12, textDecoration: r.open ? "none" : "line-through" }}>{r.title}</span>
                 <span style={{ flex: 1 }} />
                 <span style={{ fontSize: 11, color: "var(--ink-2)", fontVariantNumeric: "tabular-nums", flex: "0 0 auto" }}>
-                  {r.score != null ? r.likelihood + "×" + r.consequence : "—"}
+                  {r.score == null ? "—" : r.type === "Issue" ? "C" + r.consequence : r.likelihood + "×" + r.consequence}
                 </span>
                 <span style={{ fontSize: 10, color: "var(--muted)", width: 74, textAlign: "right", flex: "0 0 auto" }}>{r.status}</span>
               </div>
@@ -962,8 +952,75 @@ function RiskRegister({ risks }) {
               )}
             </div>
           ))}
+          {!shown.length && <div style={{ fontSize: 12, color: "var(--muted)" }}>none recorded</div>}
         </div>
       </div>
+    </div>
+  );
+}
+function rioHint(type) {
+  if (type === "Issue") return "already happened — rated on consequence";
+  if (type === "Opportunity") return "likelihood × benefit";
+  return "likelihood × consequence";
+}
+
+const axisLbl = { fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5 };
+const CELL_PX = 34;
+function MatrixCell({ n, color, on, title, onClick }) {
+  return (
+    <button onClick={onClick} title={title}
+      style={{ width: CELL_PX, height: CELL_PX, margin: 1, borderRadius: 3, border: on ? "1.5px solid #fff" : 0,
+        cursor: n ? "pointer" : "default", color: "#fff", fontWeight: 600, fontSize: 12,
+        background: color, opacity: n ? 1 : 0.22 }}>
+      {n || ""}
+    </button>
+  );
+}
+
+function RioMatrix({ type, open, cell, setCell }) {
+  const at = (l, c) => open.filter((r) => r.likelihood === l && r.consequence === c);
+  return (
+    <div style={{ display: "flex" }}>
+      <div style={{ ...axisLbl, writingMode: "vertical-rl", transform: "rotate(180deg)", textAlign: "center", marginRight: 4 }}>likelihood</div>
+      <div>
+        {[5, 4, 3, 2, 1].map((l) => (
+          <div key={l} style={{ display: "flex", alignItems: "center" }}>
+            <span style={{ width: 12, fontSize: 10, color: "var(--muted)" }}>{l}</span>
+            {[1, 2, 3, 4, 5].map((c) => {
+              const lv = RISK_LEVEL[RISK_MATRIX[l - 1][c - 1]];
+              const here = at(l, c);
+              const key = l + "-" + c;
+              return <MatrixCell key={c} n={here.length} color={rioColor(type, lv)} on={cell === key}
+                title={here.map((r) => r.id + " " + r.title).join("\n") || lv}
+                onClick={() => setCell(cell === key || !here.length ? null : key)} />;
+            })}
+          </div>
+        ))}
+        <div style={{ display: "flex", marginLeft: 12 }}>
+          {[1, 2, 3, 4, 5].map((c) => <span key={c} style={{ width: CELL_PX + 2, textAlign: "center", fontSize: 10, color: "var(--muted)" }}>{c}</span>)}
+        </div>
+        <div style={{ ...axisLbl, textAlign: "center", marginLeft: 12 }}>{type === "Opportunity" ? "benefit" : "consequence"}</div>
+      </div>
+    </div>
+  );
+}
+
+function IssueStrip({ open, cell, setCell }) {
+  return (
+    <div style={{ marginLeft: 16 }}>
+      <div style={{ display: "flex" }}>
+        {[1, 2, 3, 4, 5].map((c) => {
+          const here = open.filter((r) => r.consequence === c);
+          const key = String(c);
+          return <MatrixCell key={c} n={here.length} color={RISK_COLOR[ISSUE_LEVEL[c]]} on={cell === key}
+            title={here.map((r) => r.id + " " + r.title).join("\n") || ISSUE_LEVEL[c]}
+            onClick={() => setCell(cell === key || !here.length ? null : key)} />;
+        })}
+      </div>
+      <div style={{ display: "flex" }}>
+        {[1, 2, 3, 4, 5].map((c) => <span key={c} style={{ width: CELL_PX + 2, textAlign: "center", fontSize: 10, color: "var(--muted)" }}>{c}</span>)}
+      </div>
+      <div style={{ ...axisLbl, textAlign: "center" }}>consequence</div>
     </div>
   );
 }

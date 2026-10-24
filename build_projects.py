@@ -29,13 +29,14 @@ Output shape (data/projects.json):
         "blurb", "body",
         "stack": [ {id, name, quadrant, ring, url, canonical_url} ],
         "stack_unresolved": ["..."],
-        "artifacts": { "models": [...], "risks": {...} | null, "files": [...] } } ] }
+        "artifacts": { "models": [...], "rio": {...} | null, "files": [...] } } ] }
 
 Artifacts are optional engineering data dropped next to the project under
 projects/artifacts/<project-id>/:
   *.sysml          — SysML v2 textual models, summarised (packages, defs, trace)
-  *risk*.csv       — a risk register export (CMPro or any tool that writes CSV),
-                     scored on the 5x5 likelihood x consequence matrix
+  *risk*.csv       — a risk / issue / opportunity (RIO) register export (CMPro
+                     or any tool that writes CSV); risks and opportunities are
+                     scored on the 5x5 matrix, issues on consequence alone
   anything else    — listed as a plain linked file (PDFs, diagrams, ICDs, ...)
 """
 
@@ -240,21 +241,24 @@ def summarize_sysml(text):
     }
 
 
-# --- artifacts: risk registers ----------------------------------------------
+# --- artifacts: risk / issue / opportunity registers ------------------------
 # Header aliases so exports from different tools (CMPro, Active Risk Manager,
 # a hand-kept spreadsheet) map onto one shape. Matched case-insensitively.
-RISK_COLUMNS = {
+RIO_COLUMNS = {
     "id": ["id", "risk id", "risk_id", "risk #", "risk no", "number", "no"],
+    "type": ["type", "rio type", "record type", "kind"],
     "title": ["title", "risk title", "risk", "name", "risk statement", "description"],
     "likelihood": ["likelihood", "probability", "prob", "l"],
-    "consequence": ["consequence", "impact", "severity", "c"],
+    "consequence": ["consequence", "impact", "severity", "benefit", "c"],
     "status": ["status", "state"],
     "owner": ["owner", "risk owner", "assignee"],
-    "mitigation": ["mitigation", "mitigation plan", "handling", "response", "handling strategy"],
+    "mitigation": ["mitigation", "mitigation plan", "handling", "response",
+                   "handling strategy", "action plan"],
 }
+OPTIONAL_COLUMNS = {"type", "owner", "mitigation"}
 
-# DoD Risk, Issue, and Opportunity guide 5x5 matrix — rows are likelihood 1..5,
-# columns consequence 1..5.
+# DoD Risk, Issue, and Opportunity (RIO) guide 5x5 matrix — rows are likelihood
+# 1..5, columns consequence (or, for an opportunity, benefit) 1..5.
 RISK_MATRIX = [
     "LLLLM",
     "LLLMM",
@@ -263,7 +267,12 @@ RISK_MATRIX = [
     "LMHHH",
 ]
 RISK_LEVEL = {"L": "Low", "M": "Moderate", "H": "High"}
-CLOSED_STATUSES = {"closed", "retired", "realized", "accepted"}
+# An issue has already happened, so it is rated on consequence alone.
+ISSUE_LEVEL = {1: "Low", 2: "Moderate", 3: "Moderate", 4: "High", 5: "High"}
+RIO_TYPES = {"risk": "Risk", "issue": "Issue", "opportunity": "Opportunity",
+             "opp": "Opportunity", "r": "Risk", "i": "Issue", "o": "Opportunity"}
+CLOSED_STATUSES = {"closed", "retired", "realized", "accepted", "captured",
+                   "rejected", "resolved"}
 
 
 def risk_level(likelihood, consequence):
@@ -273,44 +282,58 @@ def risk_level(likelihood, consequence):
     return RISK_LEVEL[RISK_MATRIX[likelihood - 1][consequence - 1]]
 
 
+def rio_rating(kind, likelihood, consequence):
+    """(score, level) for one register row. Risks and opportunities use the
+    5x5 matrix (likelihood x consequence/benefit); issues use consequence only."""
+    if kind == "Issue":
+        level = ISSUE_LEVEL.get(consequence)
+        return (consequence if level else None), level
+    level = risk_level(likelihood, consequence) if likelihood and consequence else None
+    return (likelihood * consequence if level else None), level
+
+
 def _int_or_none(v):
     m = re.match(r"\s*(\d+)", v or "")
     return int(m.group(1)) if m else None
 
 
-def parse_risk_register(text):
-    """Parse a risk-register CSV into {risks: [...], unmapped: [...]}. Rows
-    without a likelihood and consequence are kept but left unscored."""
+def parse_rio_register(text):
+    """Parse a RIO-register CSV into {items: [...], unmapped: [...]}. A row's
+    `type` column marks it Risk / Issue / Opportunity (default Risk). Rows that
+    can't be rated are kept but left unscored."""
     reader = csv.DictReader(io.StringIO(text))
     headers = {h.strip().lower(): h for h in (reader.fieldnames or []) if h}
     colmap = {}
-    for field, aliases in RISK_COLUMNS.items():
+    for field, aliases in RIO_COLUMNS.items():
         for a in aliases:
             if a in headers and headers[a] not in colmap.values():
                 colmap[field] = headers[a]
                 break
-    risks = []
+    items = []
     for row in reader:
         get = lambda f: (row.get(colmap[f]) or "").strip() if f in colmap else ""
         if not any((v or "").strip() for v in row.values() if isinstance(v, str)):
             continue
+        kind = RIO_TYPES.get(get("type").lower(), "Risk")
         lik, con = _int_or_none(get("likelihood")), _int_or_none(get("consequence"))
-        level = risk_level(lik, con) if lik and con else None
+        score, level = rio_rating(kind, lik, con)
         status = get("status") or "Open"
-        risks.append({
-            "id": get("id") or f"R{len(risks) + 1}",
+        items.append({
+            "id": get("id") or f"{kind[0]}{len(items) + 1}",
+            "type": kind,
             "title": get("title"),
             "likelihood": lik,
             "consequence": con,
-            "score": lik * con if level else None,
+            "score": score,
             "level": level,
             "status": status,
             "open": status.lower() not in CLOSED_STATUSES,
             "owner": get("owner") or None,
             "mitigation": get("mitigation") or None,
         })
-    risks.sort(key=lambda r: (not r["open"], -(r["score"] or 0), r["id"]))
-    return {"risks": risks, "unmapped": sorted(set(RISK_COLUMNS) - set(colmap))}
+    items.sort(key=lambda r: (not r["open"], -(r["score"] or 0), r["id"]))
+    unmapped = sorted(set(RIO_COLUMNS) - set(colmap) - OPTIONAL_COLUMNS)
+    return {"items": items, "unmapped": unmapped}
 
 
 def load_artifacts(project_id, root=ARTIFACTS_DIR):
@@ -319,7 +342,7 @@ def load_artifacts(project_id, root=ARTIFACTS_DIR):
     base = os.path.join(root, project_id)
     if not os.path.isdir(base):
         return None
-    models, files, risks, sources = [], [], [], []
+    models, files, rio, sources = [], [], [], []
     for path in sorted(glob.glob(os.path.join(base, "**", "*"), recursive=True)):
         if not os.path.isfile(path):
             continue
@@ -330,19 +353,19 @@ def load_artifacts(project_id, root=ARTIFACTS_DIR):
         if low.endswith(".sysml"):
             with open(path, encoding="utf-8") as f:
                 models.append({"file": rel, "href": href, **summarize_sysml(f.read())})
-        elif low.endswith(".csv") and "risk" in low:
+        elif low.endswith(".csv") and any(k in low for k in ("risk", "rio", "issue", "opportunit")):
             with open(path, encoding="utf-8-sig") as f:
-                reg = parse_risk_register(f.read())
+                reg = parse_rio_register(f.read())
             if reg["unmapped"]:
-                print(f"  warning: {project_id}/{rel}: risk columns not found: "
+                print(f"  warning: {project_id}/{rel}: RIO columns not found: "
                       f"{', '.join(reg['unmapped'])}")
-            risks.extend(reg["risks"])
+            rio.extend(reg["items"])
             sources.append({"file": rel, "href": href})
         else:
             files.append({"file": rel, "href": href, "bytes": os.path.getsize(path)})
     return {
         "models": models,
-        "risks": {"items": risks, "sources": sources} if sources else None,
+        "rio": {"items": rio, "sources": sources} if sources else None,
         "files": files,
     }
 

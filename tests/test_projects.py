@@ -152,7 +152,7 @@ class SysmlSummaryTests(unittest.TestCase):
         self.assertEqual(c["satisfy"], 1)
 
 
-class RiskRegisterTests(unittest.TestCase):
+class RioRegisterTests(unittest.TestCase):
     def test_level_matrix_corners(self):
         self.assertEqual(bp.risk_level(1, 1), "Low")
         self.assertEqual(bp.risk_level(5, 5), "High")
@@ -161,25 +161,50 @@ class RiskRegisterTests(unittest.TestCase):
         self.assertIsNone(bp.risk_level(0, 3))
 
     def test_header_aliases_and_sort(self):
-        reg = bp.parse_risk_register(
+        reg = bp.parse_rio_register(
             "Risk #,Risk Statement,Probability,Impact,State,Risk Owner,Handling\n"
             "A,Low one,1,2,Open,me,watch\n"
             "B,Hot one,5,4,Open,you,fix it\n"
             "C,Done,5,5,Closed,,\n"
         )
         self.assertEqual(reg["unmapped"], [])
-        self.assertEqual([r["id"] for r in reg["risks"]], ["B", "A", "C"])
-        b = reg["risks"][0]
+        self.assertEqual([r["id"] for r in reg["items"]], ["B", "A", "C"])
+        b = reg["items"][0]
         self.assertEqual((b["score"], b["level"], b["owner"]), (20, "High", "you"))
-        self.assertFalse(reg["risks"][-1]["open"])
+        self.assertFalse(reg["items"][-1]["open"])
 
     def test_missing_columns_reported_and_unscored(self):
-        reg = bp.parse_risk_register("Title,Status\nSomething,Open\n")
+        reg = bp.parse_rio_register("Title,Status\nSomething,Open\n")
         self.assertIn("likelihood", reg["unmapped"])
-        r = reg["risks"][0]
+        r = reg["items"][0]
         self.assertEqual(r["id"], "R1")
         self.assertIsNone(r["level"])
         self.assertIsNone(r["score"])
+
+    def test_types_and_ratings(self):
+        reg = bp.parse_rio_register(
+            "ID,Type,Title,Likelihood,Consequence,Status\n"
+            "R1,Risk,Threat,4,4,Open\n"
+            "I1,Issue,Happened,,4,Open\n"
+            "O1,Opportunity,Upside,3,4,Pursuing\n"
+            "O2,opp,Won,5,5,Captured\n"
+            "X1,,Untyped,2,2,Open\n"
+        )
+        by = {r["id"]: r for r in reg["items"]}
+        self.assertEqual((by["R1"]["type"], by["R1"]["level"]), ("Risk", "High"))
+        self.assertEqual((by["I1"]["type"], by["I1"]["score"], by["I1"]["level"]), ("Issue", 4, "High"))
+        self.assertEqual((by["O1"]["type"], by["O1"]["score"], by["O1"]["level"]),
+                         ("Opportunity", 12, "Moderate"))
+        self.assertFalse(by["O2"]["open"])
+        self.assertEqual(by["X1"]["type"], "Risk")
+
+    def test_issue_levels_by_consequence(self):
+        self.assertEqual([bp.rio_rating("Issue", None, c)[1] for c in range(1, 6)],
+                         ["Low", "Moderate", "Moderate", "High", "High"])
+
+    def test_type_column_is_optional(self):
+        reg = bp.parse_rio_register("ID,Title,Likelihood,Consequence\nA,x,1,1\n")
+        self.assertEqual(reg["unmapped"], ["status"])
 
 
 if __name__ == "__main__":

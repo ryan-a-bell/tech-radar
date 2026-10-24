@@ -48,13 +48,16 @@ and `build_projects.py` picks it up into an **Artifacts** panel on the project:
 | File | What the panel shows |
 |------|----------------------|
 | `*.sysml` | SysML v2 textual model — packages, part/port/action defs, part usages, connections, allocations, and a requirements-trace bar (which `requirement def`s have a `satisfy` link). |
-| `*risk*.csv` | Risk register export (CMPro or any tool that writes CSV) — scored on the DoD 5×5 likelihood × consequence matrix, with a clickable heat map and a list sorted by score. Closed/retired risks are shown struck through and kept off the matrix. |
+| `*risk*.csv` (or `*rio*`, `*issue*`, `*opportunit*`) | Risk, issue & opportunity (RIO) register export (CMPro or any tool that writes CSV), split into Risks / Issues / Opportunities tabs per the DoD RIO guide. **Risks** use the 5×5 likelihood × consequence matrix; **issues** have already happened and are rated on consequence alone (a 1×5 strip); **opportunities** use likelihood × benefit on the same matrix shape in a blue ramp. Closed / retired / captured items are struck through and kept off the matrix. |
 | anything else | Listed as a linked file (PDFs, ICDs, diagrams, …). |
 
 Risk CSV headers are matched case-insensitively against common aliases:
-`Risk ID`/`ID`, `Title`/`Risk Statement`, `Likelihood`/`Probability`,
-`Consequence`/`Impact`/`Severity`, `Status`, `Owner`, `Mitigation`/`Handling`.
-Missing columns are reported as a build warning rather than an error.
+`Risk ID`/`ID`, `Type` (`Risk` / `Issue` / `Opportunity`; blank means risk),
+`Title`/`Risk Statement`, `Likelihood`/`Probability`,
+`Consequence`/`Impact`/`Severity`/`Benefit`, `Status`, `Owner`,
+`Mitigation`/`Handling`/`Action Plan`. Missing required columns are reported
+as a build warning rather than an error; `Type`, `Owner`, and `Mitigation` are
+optional.
 
 `build_site.py` copies `projects/artifacts/` into the site so the panel links
 straight to each source file.
