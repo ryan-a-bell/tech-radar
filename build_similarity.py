@@ -189,6 +189,7 @@ def project_doc_text(p):
         p.get("name") or "",
         p.get("blurb") or "",
         p.get("body") or "",
+        p.get("model_terms") or "",
         " ".join(p.get("topics") or []),
     ]).strip()
 

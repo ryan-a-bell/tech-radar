@@ -91,7 +91,62 @@ function toolText(it) {
   return [it.description, it.name, it.company || "", (it.tags || []).join(" "), (it.topics || []).join(" ")].join(" ");
 }
 function projectText(p) {
-  return [p.name, p.blurb, p.body, (p.topics || []).join(" ")].join(" ");
+  return [p.name, p.blurb, p.body, p.model_terms || "", (p.topics || []).join(" ")].join(" ");
+}
+
+/* Cross-project risk / issue / opportunity matching. Its own TF-IDF space over
+ * just the register rows (so IDF reflects RIO vocabulary, not tool blurbs);
+ * titles weigh double the mitigation text, and plurals fold together so
+ * "licenses" meets "license". */
+function rioTokens(s) {
+  return tokenize(s).map((t) => t.length > 4 ? t.replace(/ies$/, "y").replace(/([^s])s$/, "$1") : t);
+}
+function buildRioIndex(projects) {
+  const rows = [];
+  for (const p of projects) {
+    const rio = p.artifacts && p.artifacts.rio;
+    for (const it of (rio ? rio.items : [])) rows.push({ proj: p, item: it });
+  }
+  const counts = rows.map(({ item }) => {
+    const c = new Map();
+    for (const t of rioTokens(item.title)) c.set(t, (c.get(t) || 0) + 1);
+    for (const t of rioTokens(item.mitigation)) c.set(t, (c.get(t) || 0) + 0.5);
+    return c;
+  });
+  const df = new Map();
+  for (const c of counts) for (const t of c.keys()) df.set(t, (df.get(t) || 0) + 1);
+  const n = rows.length;
+  counts.forEach((c, i) => {
+    const v = new Map();
+    let norm = 0;
+    for (const [t, k] of c) {
+      const w = (k >= 1 ? 1 + Math.log(k) : k) * (Math.log((1 + n) / (1 + df.get(t))) + 1);
+      v.set(t, w); norm += w * w;
+    }
+    norm = Math.sqrt(norm) || 1;
+    for (const [t, w] of v) v.set(t, w / norm);
+    rows[i].vec = v;
+  });
+  return rows;
+}
+const RIO_MIN_MATCH = 0.1;
+function sharedRio(rows, projId, k = 8) {
+  const mine = rows.filter((r) => r.proj.id === projId && r.item.open);
+  const others = rows.filter((r) => r.proj.id !== projId && r.item.open);
+  const out = [];
+  for (const a of mine) for (const b of others) {
+    const score = cosine(a.vec, b.vec);
+    if (score >= RIO_MIN_MATCH) out.push({ a, b, score, why: sharedTerms(a.vec, b.vec) });
+  }
+  return out.sort((x, y) => y.score - x.score).slice(0, k);
+}
+function rioRelation(a, b) {
+  if (a === "Opportunity" && b === "Opportunity") return ["shared opportunity", "#5aa2f0"];
+  if (a === "Opportunity" || b === "Opportunity") return ["could offset", "#5aa2f0"];
+  if (a === "Risk" && b === "Issue") return ["already an issue there", "#e5484d"];
+  if (a === "Issue" && b === "Risk") return ["issue here, risk there", "#e5484d"];
+  if (a === "Issue") return ["same issue", "#e5484d"];
+  return ["common risk", "#c98500"];
 }
 
 /* One TF-IDF space over BOTH corpora so project vectors and tool vectors — and
@@ -160,6 +215,7 @@ function App() {
   const [sortBy, setSortBy] = useState("status");
   const [toolSort, setToolSort] = useState("count");
   const [mapThreshold, setMapThreshold] = useState(0.05);
+  const rioIndex = useMemo(() => (projects ? buildRioIndex(projects) : []), [projects]);
 
   useEffect(() => {
     (async () => {
@@ -373,6 +429,7 @@ function App() {
                     toolRecs={recommendTools(sel, selIdx)}
                     peerRecs={recommendPeers(sel, selIdx)}
                     projRecs={recommendProjects(sel, selIdx, effRank)}
+                    rioMatches={sharedRio(rioIndex, sel.id)}
                     setSelId={setSelId} />
                 : <div style={{ color: "var(--muted)" }}>
                     No projects yet. Add a Markdown file under <code>projects/</code> and run{" "}
@@ -618,7 +675,7 @@ function StatusBadge({ status }) {
   );
 }
 
-function ProjectDetail({ proj, tools, toolUsage, mode, rankBy, toolRecs, peerRecs, projRecs, setSelId }) {
+function ProjectDetail({ proj, tools, toolUsage, mode, rankBy, toolRecs, peerRecs, projRecs, rioMatches, setSelId }) {
   return (
     <div style={{ maxWidth: 760 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
@@ -658,6 +715,7 @@ function ProjectDetail({ proj, tools, toolUsage, mode, rankBy, toolRecs, peerRec
       )}
 
       <Artifacts artifacts={proj.artifacts} />
+      {proj.artifacts && proj.artifacts.rio && <SharedRio matches={rioMatches} setSelId={setSelId} />}
 
       {mode === "tools"
         ? (rankBy === "peers"
@@ -879,7 +937,7 @@ function ModelCard({ model }) {
             {reqs.map((r) => {
               const ok = sat.has(r.name);
               return (
-                <span key={r.id} title={ok ? "satisfied in model" : "no satisfy link"} style={{ fontSize: 11, padding: "2px 8px", borderRadius: 6,
+                <span key={r.id} title={(r.text ? r.text + "\n" : "") + (ok ? "satisfied in model" : "no satisfy link")} style={{ fontSize: 11, padding: "2px 8px", borderRadius: 6,
                   border: "1px solid " + (ok ? "rgba(25,158,112,0.6)" : "rgba(229,72,77,0.6)"), color: "var(--ink-2)" }}>
                   <span style={{ color: ok ? "#199e70" : "#e5484d" }}>{ok ? "✓" : "○"}</span> {r.id} {r.name}
                 </span>
@@ -1022,6 +1080,51 @@ function IssueStrip({ open, cell, setCell }) {
       </div>
       <div style={{ ...axisLbl, textAlign: "center" }}>consequence</div>
     </div>
+  );
+}
+
+function RioChip({ r }) {
+  return (
+    <span style={{ display: "inline-flex", alignItems: "baseline", gap: 6, minWidth: 0 }}>
+      <span style={{ width: 8, height: 8, borderRadius: 2, flex: "0 0 auto", alignSelf: "center",
+        background: r.level ? rioColor(r.type, r.level) : "var(--muted)" }} />
+      <span style={{ color: "var(--muted)", fontSize: 11, flex: "0 0 auto" }}>{r.id}</span>
+      <span style={{ fontSize: 12 }}>{r.title}</span>
+    </span>
+  );
+}
+
+function SharedRio({ matches, setSelId }) {
+  return (
+    <>
+      <SectionTitle>Shared risks, issues &amp; opportunities <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— open items here that resemble another project's</span></SectionTitle>
+      <div style={{ marginTop: 8 }}>
+        {matches.map(({ a, b, score, why }) => {
+          const [rel, relColor] = rioRelation(a.item.type, b.item.type);
+          return (
+            <div key={a.item.id + "|" + b.proj.id + "|" + b.item.id} style={{ padding: "9px 0", borderTop: "1px solid var(--border)" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) 22px minmax(0,1fr) auto", gap: 10, alignItems: "start" }}>
+                <RioChip r={a.item} />
+                <span style={{ color: "var(--muted)", textAlign: "center" }}>↔</span>
+                <div style={{ minWidth: 0 }}>
+                  <RioChip r={b.item} />
+                  <div style={{ fontSize: 11, marginTop: 2, marginLeft: 14 }}>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setSelId(b.proj.id); }}>{b.proj.name}</a>
+                    <span style={{ color: "var(--muted)" }}> · {b.item.status}{b.item.owner ? " · " + b.item.owner : ""}</span>
+                  </div>
+                </div>
+                <span style={{ fontVariantNumeric: "tabular-nums", color: "var(--ink-2)", fontSize: 12 }}>{score.toFixed(2)}</span>
+              </div>
+              <div style={{ display: "flex", gap: 8, alignItems: "center", marginTop: 4, marginLeft: 14, fontSize: 11 }}>
+                <span style={{ ...pillTag(relColor), fontSize: 10 }}>{rel}</span>
+                {why.length > 0 && <span style={{ color: "#6da7ec" }}>shared: {why.join(", ")}</span>}
+              </div>
+            </div>
+          );
+        })}
+        {!matches.length && <div style={{ color: "var(--muted)", fontSize: 12 }}>No other project has an open item that looks like one of these.</div>}
+      </div>
+    </>
   );
 }
 
