@@ -152,6 +152,25 @@ class SysmlSummaryTests(unittest.TestCase):
         self.assertEqual(c["satisfy"], 1)
 
 
+class ModelTermsTests(unittest.TestCase):
+    def test_requirement_doc_text_captured(self):
+        s = bp.summarize_sysml(
+            "requirement def <'R-1'> Range { doc /* Shall go 10 km. */ }\n"
+            "requirement def <'R-2'> Speed;\n")
+        self.assertEqual([r["text"] for r in s["requirements"]], ["Shall go 10 km.", None])
+
+    def test_identifiers_split_into_words(self):
+        self.assertEqual(bp._split_ident("ReTaskLatency"), "re task latency")
+        self.assertEqual(bp._split_ident("GPSReceiver"), "gps receiver")
+        self.assertEqual(bp._split_ident("search_cell"), "search cell")
+
+    def test_model_terms_skip_packages(self):
+        models = [{"packages": ["Structure"], "defs": {"part": ["DriftModel"]},
+                   "requirements": [{"id": "R1", "name": "X", "text": "Shall drift."}]}]
+        self.assertEqual(bp.model_terms(models), "drift model Shall drift.")
+        self.assertEqual(bp.model_terms([]), "")
+
+
 class RioRegisterTests(unittest.TestCase):
     def test_level_matrix_corners(self):
         self.assertEqual(bp.risk_level(1, 1), "Low")

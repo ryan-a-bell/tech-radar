@@ -29,6 +29,7 @@ Output shape (data/projects.json):
         "blurb", "body",
         "stack": [ {id, name, quadrant, ring, url, canonical_url} ],
         "stack_unresolved": ["..."],
+        "model_terms": "...",
         "artifacts": { "models": [...], "rio": {...} | null, "files": [...] } } ] }
 
 Artifacts are optional engineering data dropped next to the project under
@@ -208,6 +209,7 @@ _SYSML_DEF = re.compile(
     r"constraint|calc|analysis|verification|enum|allocation|flow|use\s+case)\s+def\s+"
     + _SYSML_NAME)
 _SYSML_REQ_ID = re.compile(r"\brequirement\s+(?:def\s+)?<'?([^>']+)'?>\s*" + _SYSML_NAME)
+_SYSML_REQ_DOC = re.compile(r"\brequirement\s+(?:def\s+)?<'?([^>']+)'?>[^{;]*\{\s*doc\s*/\*(.*?)\*/", re.S)
 _SYSML_SATISFY = re.compile(r"(?<!\w)satisfy\s+(?:requirement\s+)?([\w':]+)")
 _SYSML_USAGE = {
     "parts": re.compile(r"(?<!\w)part\s+(?!def\b)[A-Za-z_']"),
@@ -226,6 +228,7 @@ def _unquote(name):
 def summarize_sysml(text):
     """Summarise a SysML v2 textual model without a full parser: packages,
     definitions by kind, requirement ids, and usage / trace-link counts."""
+    docs = {rid: " ".join(doc.split()) for rid, doc in _SYSML_REQ_DOC.findall(text)}
     src = _SYSML_COMMENT.sub(" ", text)
     defs = {}
     for kind, name in _SYSML_DEF.findall(src):
@@ -234,11 +237,32 @@ def summarize_sysml(text):
     return {
         "packages": [_unquote(n) for n in _SYSML_PACKAGE.findall(src)],
         "defs": defs,
-        "requirements": [{"id": rid, "name": _unquote(n)}
+        "requirements": [{"id": rid, "name": _unquote(n), "text": docs.get(rid)}
                          for rid, n in _SYSML_REQ_ID.findall(src)],
         "satisfied": sorted({_unquote(n.split("::")[-1]) for n in _SYSML_SATISFY.findall(src)}),
         "counts": {k: len(rx.findall(src)) for k, rx in _SYSML_USAGE.items()},
     }
+
+
+def _split_ident(name):
+    """'ReTaskLatency' / 'search_cell' -> 're task latency' / 'search cell'."""
+    words = re.sub(r"([a-z0-9])([A-Z])", r"\1 \2", re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", name))
+    return words.replace("_", " ").lower()
+
+
+def model_terms(models):
+    """Searchable prose drawn from a project's SysML models — package and
+    definition names split into words, plus requirement text — so the
+    recommenders and Discover can match on what the model actually says.
+    Package names are left out — they're mostly scaffolding (Requirements,
+    Structure, Behavior) and would only add noise."""
+    out = []
+    for m in models or []:
+        for names in (m.get("defs") or {}).values():
+            out += [_split_ident(n) for n in names]
+        for r in m.get("requirements", []):
+            out.append(r.get("text") or "")
+    return " ".join(t for t in out if t)
 
 
 # --- artifacts: risk / issue / opportunity registers ------------------------
@@ -407,6 +431,7 @@ def build_project_records():
             print(f"  warning: {os.path.basename(raw['_path'])}: stack entries not "
                   f"on the radar: {', '.join(map(str, unresolved))}")
         pid = fm.get("id") or raw["default_id"]
+        artifacts = load_artifacts(pid)
         records.append({
             "id": pid,
             "name": fm.get("name") or fm.get("id") or raw["default_id"],
@@ -417,7 +442,8 @@ def build_project_records():
             "body": body,
             "stack": stack,
             "stack_unresolved": unresolved,
-            "artifacts": load_artifacts(pid),
+            "artifacts": artifacts,
+            "model_terms": model_terms(artifacts["models"]) if artifacts else "",
         })
     return records
 

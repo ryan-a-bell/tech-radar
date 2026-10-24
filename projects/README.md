@@ -59,6 +59,24 @@ Risk CSV headers are matched case-insensitively against common aliases:
 as a build warning rather than an error; `Type`, `Owner`, and `Mitigation` are
 optional.
 
+### Shared risks, issues & opportunities
+
+Under the register, each project lists its **open** items that resemble an open
+item in another project (TF-IDF over the register rows: title counts double
+the mitigation text, plurals fold together; matches below 0.10 are dropped).
+Each pair is labelled by type — *common risk*, *already an issue there*,
+*issue here, risk there*, *could offset* (an opportunity against a risk or
+issue), or *shared opportunity* — with the words they share.
+
+### Search
+
+- **Discover** indexes every register row as a fifth category, *Risks · issues
+  · opps*, tagged with its project, type and rating.
+- SysML **definition names** (split into words, e.g. `ReTaskLatency` → "re task
+  latency") and **requirement `doc` text** are emitted per project as
+  `model_terms`, which the Projects recommender, Discover and
+  `build_similarity.py` all fold into the project's text.
+
 `build_site.py` copies `projects/artifacts/` into the site so the panel links
 straight to each source file.
 
