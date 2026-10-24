@@ -73,7 +73,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "document-intelligence-engine",
@@ -131,7 +132,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "gsd-core-app",
@@ -171,7 +173,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "microgrid-dispatch-optimizer",
@@ -228,7 +231,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "options-vol-surface",
@@ -244,7 +248,8 @@
       "body": "An idea, no code yet. I want to build and calibrate an implied-volatility\nsurface for equity options: pull an options chain, fit a no-arbitrage surface\nacross strikes and expiries, and price exotic payoffs off it. The interesting\npart is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to\ninterpolate the surface for pricing.\n\nBecause there is no declared stack, the recommendations below are the whole\nsuggested tech stack, inferred purely from this description — option pricing\nlibraries, a quant analytics toolkit, and a market-data feed for the chains.",
       "stack": [],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "radar-portfolio-optimizer",
@@ -277,7 +282,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "sar-contested-comms-mesh",
@@ -383,7 +389,7 @@
             {
               "id": "CCM-R02",
               "type": "Risk",
-              "title": "Antenna placement on USV mast degrades UAV link",
+              "title": "Antenna placement on USV mast degrades the relay UAV link",
               "likelihood": 3,
               "consequence": 3,
               "score": 9,
@@ -396,7 +402,7 @@
             {
               "id": "CCM-R03",
               "type": "Risk",
-              "title": "Gossip protocol overhead starves tasking bandwidth",
+              "title": "Gossip protocol overhead saturates the link and starves tasking traffic",
               "likelihood": 2,
               "consequence": 4,
               "score": 8,
@@ -404,12 +410,12 @@
               "status": "Watch",
               "open": true,
               "owner": "Software lead",
-              "mitigation": "Rate-limit COP updates; priority classes"
+              "mitigation": "Rate-limit COP updates; prioritize tasking over telemetry"
             },
             {
               "id": "CCM-I01",
               "type": "Issue",
-              "title": "CST license seat shared with another program",
+              "title": "CST license seat unavailable — shared with another program",
               "likelihood": null,
               "consequence": 3,
               "score": 3,
@@ -428,7 +434,8 @@
           ]
         },
         "files": []
-      }
+      },
+      "model_terms": ""
     },
     {
       "id": "sar-fleet-coordinator",
@@ -543,19 +550,23 @@
             "requirements": [
               {
                 "id": "SAR-001",
-                "name": "SearchCoverage"
+                "name": "SearchCoverage",
+                "text": "The fleet shall cover a 25 nm^2 search area at POD >= 0.8 within 4 h."
               },
               {
                 "id": "SAR-002",
-                "name": "ReTaskLatency"
+                "name": "ReTaskLatency",
+                "text": "Re-tasking shall reach every craft within 30 s of a POD map update."
               },
               {
                 "id": "SAR-003",
-                "name": "EnduranceMargin"
+                "name": "EnduranceMargin",
+                "text": "Each assigned sweep shall leave >= 20% fuel/battery reserve for RTB."
               },
               {
                 "id": "SAR-004",
-                "name": "DegradedComms"
+                "name": "DegradedComms",
+                "text": "Craft shall continue the last valid tasking for 10 min on loss of link."
               }
             ],
             "satisfied": [
@@ -740,7 +751,8 @@
           ]
         },
         "files": []
-      }
+      },
+      "model_terms": "search coverage re task latency endurance margin degraded comms tasking port sensor feed port tasking craft status detection position search cell craft unmanned surface vessel uav ground station search planner drift model task allocator fleet dashboard plan search allocate tasks re task The fleet shall cover a 25 nm^2 search area at POD >= 0.8 within 4 h. Re-tasking shall reach every craft within 30 s of a POD map update. Each assigned sweep shall leave >= 20% fuel/battery reserve for RTB. Craft shall continue the last valid tasking for 10 min on loss of link."
     },
     {
       "id": "sensor-anomalies",
@@ -755,7 +767,8 @@
       "body": "An idea for detecting anomalies in industrial sensor streams over time. The\nplan: ingest telemetry from many sensors, resample the irregular timestamps\nonto a regular grid, decompose trend and seasonality, and fit a rolling forecast\nso points that break the predicted band get flagged.\n\nStructurally this is the same shape as forecasting a financial series — lagged\nfeatures, rolling windows, drift as the distribution shifts over time, and a\nsignal that fires when the observed value leaves the forecast window. Different\ndomain, same temporal machinery, so the tooling should overlap heavily.",
       "stack": [],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     },
     {
       "id": "trading-timeseries",
@@ -788,7 +801,8 @@
         }
       ],
       "stack_unresolved": [],
-      "artifacts": null
+      "artifacts": null,
+      "model_terms": ""
     }
   ]
 }

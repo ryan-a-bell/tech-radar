@@ -59,11 +59,12 @@ const { useState, useMemo, useEffect, useRef } = React;
  * DISCOVER — "paste a description, find what's most similar"
  *
  * Paste a paragraph describing what you're building; the page vectorises it
- * into the same TF-IDF space as four corpora and surfaces the strongest match
- * in each — Technology · Similar projects · People · Learning materials.
+ * into the same TF-IDF space as five corpora and surfaces the strongest match
+ * in each — Technology · Similar projects · People · Learning materials ·
+ * Risks, issues & opportunities (the RIO register rows from every project).
  *
  * One page, two ways to read the result — flip with the view toggle:
- *   COLUMNS  four columns, the highest match per column as a hero card.
+ *   COLUMNS  five columns, the highest match per column as a hero card.
  *   RADAR    a scope: your idea at the centre, matches as blips (sector =
  *            category, distance from centre = match strength), plus an
  *            auto-assembled "build kit" reading the best pick per category.
@@ -75,12 +76,15 @@ const { useState, useMemo, useEffect, useRef } = React;
  * against precomputed item embeddings, behind the same rankQuery seam.
  * ==========================================================================*/
 
+// radar sectors go clockwise from the top, one equal slice per category
 const CATS = [
-  { key: "tools",    label: "Technology",       accent: "#3987e5", noun: "tool",     a0: -Math.PI / 2 }, // top
-  { key: "projects", label: "Similar projects", accent: "#199e70", noun: "project",  a0: 0 },            // right
-  { key: "people",   label: "People",           accent: "#c98500", noun: "person",   a0: Math.PI / 2 },  // bottom
-  { key: "learning", label: "Learning",         accent: "#9085e9", noun: "resource", a0: Math.PI },      // left
-];
+  { key: "tools",    label: "Technology",       accent: "#3987e5", noun: "tool" },
+  { key: "projects", label: "Similar projects", accent: "#199e70", noun: "project" },
+  { key: "people",   label: "People",           accent: "#c98500", noun: "person" },
+  { key: "learning", label: "Learning",         accent: "#9085e9", noun: "resource" },
+  { key: "rio",      label: "Risks · issues · opps", accent: "#e5484d", noun: "item" },
+].map((c, i, all) => ({ ...c, a0: -Math.PI / 2 + i * 2 * Math.PI / all.length }));
+const SECTOR = 2 * Math.PI / CATS.length;
 const ACCENT = Object.fromEntries(CATS.map((c) => [c.key, c.accent]));
 const LABEL = Object.fromEntries(CATS.map((c) => [c.key, c.label]));
 
@@ -100,12 +104,13 @@ function tokenize(s) {
     .filter((t) => t.length >= 2 && !STOP.has(t) && !/^\d+$/.test(t));
 }
 const toolText     = (t) => [t.description, t.name, t.company || "", (t.topics || []).join(" ")].join(" ");
-const projectText  = (p) => [p.name, p.blurb, (p.topics || []).join(" "), (p.stack || []).join(" ")].join(" ");
+const projectText  = (p) => [p.name, p.blurb, p.model_terms || "", (p.topics || []).join(" "), (p.stack || []).join(" ")].join(" ");
 const personText   = (p) => [p.name, p.role, p.blurb, (p.topics || []).join(" "), (p.interests || []).join(" "), (p.skills || []).join(" ")].join(" ");
 const learningText = (l) => [l.title, l.author || "", l.blurb, (l.topics || []).join(" ")].join(" ");
-const TEXT = { tools: toolText, projects: projectText, people: personText, learning: learningText };
+const rioText      = (r) => [r.title, r.title, r.mitigation || "", r.type].join(" ");   // title counts double
+const TEXT = { tools: toolText, projects: projectText, people: personText, learning: learningText, rio: rioText };
 
-/* One shared TF-IDF space over ALL four corpora, so a query vector and any item
+/* One shared TF-IDF space over ALL five corpora, so a query vector and any item
  * vector are directly comparable. Precomputes an L2-normalised vector per item. */
 function buildEngine(data) {
   const cats = CATS.map((c) => ({ ...c, items: data[c.key] || [] }));
@@ -162,27 +167,35 @@ async function loadData() {
       const tools = (radar.items || radar)
         .filter((x) => x && x.ring !== "Archived" && (x.description || "").trim())
         .map((t) => ({ id: t.id, name: t.name, description: t.description, quadrant: t.quadrant, ring: t.ring, url: t.url, company: t.company, topics: t.topics || [] }));
-      const projects = (proj.projects || []).map((p) => ({ id: p.id, name: p.name, status: p.status, topics: p.topics || [], blurb: p.blurb, stack: (p.stack || []).map((s) => s.name) }));
+      const projects = (proj.projects || []).map((p) => ({ id: p.id, name: p.name, status: p.status, topics: p.topics || [], blurb: p.blurb, model_terms: p.model_terms || "", stack: (p.stack || []).map((s) => s.name) }));
+      const rio = (proj.projects || []).flatMap((p) => ((p.artifacts && p.artifacts.rio) ? p.artifacts.rio.items : [])
+        .map((r) => ({ ...r, id: p.id + "/" + r.id, code: r.id, project: p.name, projectId: p.id })));
       const people = (ppl.people || []).map((p) => ({ id: p.id, name: p.name, role: p.role, topics: p.topics || [], interests: p.interests || [], blurb: p.blurb, skills: (p.skills || []).map((s) => s.name).concat(p.skills_freeform || []) }));
       const learning = (learn.items || []).map((l) => ({ id: l.id, type: l.type, title: l.title, author: l.author, year: l.year, status: l.status, rating: l.rating, topics: l.topics || [], blurb: l.blurb }));
-      return { tools, projects, people, learning, live: true };
+      return { tools, projects, people, learning, rio, live: true };
     }
   } catch (e) { /* fall through to seed */ }
   return { ...seed, live: false };
 }
 
 // small shared field accessors
-const nameOf = (key, it) => (key === "learning" ? it.title : it.name);
+const nameOf = (key, it) => (key === "learning" || key === "rio" ? it.title : it.name);
 function metaSub(key, it) {
   if (key === "tools") return [it.quadrant, it.ring, it.company].filter(Boolean).join(" · ");
   if (key === "projects") return [it.status, (it.topics || []).join(", ")].filter(Boolean).join(" · ");
   if (key === "people") return [it.role, (it.interests || []).join(", ")].filter(Boolean).join(" · ");
   if (key === "learning") return [it.type, it.author, it.status].filter(Boolean).join(" · ") + (it.rating ? " · " + "★".repeat(it.rating) : "");
+  if (key === "rio") return [it.code + " " + it.type, rioRating(it), it.project, it.status].filter(Boolean).join(" · ");
   return "";
 }
-const blurbOf = (key, it) => (key === "tools" ? it.description : it.blurb) || "";
+const blurbOf = (key, it) => (key === "tools" ? it.description : key === "rio" ? it.mitigation : it.blurb) || "";
+function rioRating(r) {
+  if (!r.level) return null;
+  return r.level + " " + (r.type === "Issue" ? "C" + r.consequence : r.likelihood + "×" + r.consequence);
+}
 function topicsOf(key, it) {
   if (key === "people") return [...(it.topics || []), ...(it.interests || [])].slice(0, 4);
+  if (key === "rio") return [];
   return (it.topics || []).slice(0, 4);
 }
 const clip = (s, n) => (s || "").length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : (s || "");
@@ -279,7 +292,7 @@ function QueryBox({ query, setQuery, onExample, onClear }) {
       <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
         <strong style={{ fontSize: 15 }}>Describe what you're trying to build</strong>
         <span style={{ color: "var(--muted)", fontSize: 12 }}>
-          paste a paragraph — the radar matches technology, projects, people and learning as you type
+          paste a paragraph — the radar matches technology, projects, people, learning and risks / issues / opportunities as you type
         </span>
         <span style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
           <button onClick={onExample} style={ghostBtn}>example</button>
@@ -340,7 +353,7 @@ function ControlBar({ view, setView, method, setMethod, perCat, setPerCat }) {
       )}
       <span style={{ marginLeft: "auto", fontSize: 11.5 }}>
         {view === "columns"
-          ? "four columns · highest match surfaced per category"
+          ? "five columns · highest match surfaced per category"
           : "your idea at centre · nearer = stronger · size = score"}
       </span>
     </div>
@@ -357,7 +370,7 @@ function Empty() {
  * ========================================================================== */
 function ColumnsView({ engine, ranked }) {
   return (
-    <div style={{ minHeight: "100%", display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 0 }}>
+    <div style={{ minHeight: "100%", display: "grid", gridTemplateColumns: `repeat(${CATS.length}, minmax(0, 1fr))`, gap: 0 }}>
       {engine.cats.map((c, i) => (
         <Column key={c.key} cat={c} results={ranked.byCat[c.key]} globalMax={ranked.globalMax}
           border={i < engine.cats.length - 1} />
@@ -463,6 +476,9 @@ function LinkRow({ cat, item }) {
     return <div style={{ marginTop: 10, fontSize: 11.5, color: "var(--muted)" }}>skills: {(item.skills || []).slice(0, 4).join(", ") || "—"}</div>;
   if (cat.key === "projects")
     return <div style={{ marginTop: 10, fontSize: 11.5, color: "var(--muted)" }}>stack: {(item.stack || []).slice(0, 4).join(", ") || "not declared"}</div>;
+  if (cat.key === "rio")
+    return <div style={{ marginTop: 10, fontSize: 11.5, color: "var(--muted)" }}>
+      in <a href="projects.html" style={{ fontSize: 11.5 }}>{item.project}</a>{item.owner ? " · owner: " + item.owner : ""}{item.open ? "" : " · closed"}</div>;
   return null;
 }
 
@@ -488,7 +504,7 @@ function Scope({ blips, sel, setSel, selBlip }) {
 
   const placed = useMemo(() => blips.map((b) => {
     const cat = CATS.find((c) => c.key === b.key);
-    const span = Math.PI / 2 * 0.74;
+    const span = SECTOR * 0.74;
     const t = b.sectorCount > 1 ? b.rank / (b.sectorCount - 1) : 0.5;
     const angle = cat.a0 + (t - 0.5) * span;
     const radiusFrac = 0.16 + (1 - b.rel) * 0.72;
@@ -518,7 +534,7 @@ function Scope({ blips, sel, setSel, selBlip }) {
       ctx.strokeStyle = "rgba(255,255,255,0.08)"; ctx.lineWidth = 1;
       for (let k = 1; k <= 4; k++) { ctx.beginPath(); ctx.arc(cx, cy, r * k / 4, 0, Math.PI * 2); ctx.stroke(); }
       ctx.strokeStyle = "rgba(255,255,255,0.06)";
-      for (const ang of [Math.PI / 4, 3 * Math.PI / 4, 5 * Math.PI / 4, 7 * Math.PI / 4]) {
+      for (const ang of CATS.map((c) => c.a0 + SECTOR / 2)) {
         ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r); ctx.stroke();
       }
       ctx.font = "600 11px 'IBM Plex Mono', monospace"; ctx.textAlign = "center";
@@ -662,12 +678,14 @@ function SectionLead({ accent, label, pct }) {
   );
 }
 function KitPhrase({ top }) {
-  const [t, p, pe, l] = top;
+  const [t, p, pe, l, rio] = top;
   const parts = [];
   if (t) parts.push(<b key="t" style={{ color: ACCENT.tools }}>{t.item.name}</b>);
   if (pe) parts.push(<span key="pe">, talk to <b style={{ color: ACCENT.people }}>{pe.item.name}</b></span>);
   if (p) parts.push(<span key="p">, study <b style={{ color: ACCENT.projects }}>{p.item.name}</b></span>);
-  if (l) parts.push(<span key="l">, and read <b style={{ color: ACCENT.learning }}>{l.item.title}</b></span>);
+  if (l) parts.push(<span key="l">, {rio ? "" : "and "}read <b style={{ color: ACCENT.learning }}>{l.item.title}</b></span>);
+  if (rio) parts.push(<span key="rio">, and {rio.item.type === "Opportunity" ? "pursue" : "watch for"} <b style={{ color: ACCENT.rio }}>{rio.item.title}</b>
+    <span style={{ color: "var(--muted)" }}> ({rio.item.project})</span></span>);
   return <span>{parts}</span>;
 }
 
