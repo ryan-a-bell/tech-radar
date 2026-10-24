@@ -595,6 +595,7 @@ function ProjectList({ projects, visibleIdx, sortBy, selId, setSelId }) {
             </div>
             <div style={{ color: "var(--muted)", fontSize: 11, marginTop: 2 }}>
               {p.status}{p.stack && p.stack.length ? " · " + p.stack.length + " tools" : " · no stack"}
+              {artifactSummary(p.artifacts)}
             </div>
           </div>
         );
@@ -655,6 +656,8 @@ function ProjectDetail({ proj, tools, toolUsage, mode, rankBy, toolRecs, peerRec
           Not on the radar yet: {proj.stack_unresolved.join(", ")}
         </div>
       )}
+
+      <Artifacts artifacts={proj.artifacts} />
 
       {mode === "tools"
         ? (rankBy === "peers"
@@ -776,6 +779,192 @@ function ProjectRecs({ proj, recs, rankBy, setSelId }) {
         {!recs.length && <div style={{ color: "var(--muted)" }}>no similar projects{rankBy === "topics" ? " share a topic tag" : " yet — add more projects or detail"}.</div>}
       </div>
     </>
+  );
+}
+
+// ---- artifacts: SysML v2 models, risk registers, files ----------------------
+const RISK_COLOR = { High: "#e5484d", Moderate: "#c98500", Low: "#199e70" };
+// DoD RIO guide 5x5 — rows likelihood 1..5, columns consequence 1..5 (mirrors build_projects.RISK_MATRIX)
+const RISK_MATRIX = ["LLLLM", "LLLMM", "LLMMH", "LMMHH", "LMHHH"];
+const RISK_LEVEL = { L: "Low", M: "Moderate", H: "High" };
+
+function artifactSummary(a) {
+  if (!a) return null;
+  const bits = [];
+  if (a.models.length) bits.push(a.models.length + " model" + (a.models.length === 1 ? "" : "s"));
+  const open = a.risks ? a.risks.items.filter((r) => r.open) : [];
+  if (open.length) bits.push(open.length + " risk" + (open.length === 1 ? "" : "s"));
+  if (a.files.length) bits.push(a.files.length + " file" + (a.files.length === 1 ? "" : "s"));
+  if (!bits.length) return null;
+  const high = open.filter((r) => r.level === "High").length;
+  return <span> · {bits.join(" · ")}{high ? <span style={{ color: RISK_COLOR.High }}> · {high} high</span> : null}</span>;
+}
+
+function Artifacts({ artifacts }) {
+  if (!artifacts || (!artifacts.models.length && !artifacts.risks && !artifacts.files.length)) return null;
+  return (
+    <>
+      <SectionTitle>Artifacts <span style={{ textTransform: "none", letterSpacing: 0, color: "var(--muted)" }}>— models, risks &amp; engineering data</span></SectionTitle>
+      {artifacts.models.map((m) => <ModelCard key={m.file} model={m} />)}
+      {artifacts.risks && <RiskRegister risks={artifacts.risks} />}
+      {artifacts.files.length > 0 && (
+        <div style={{ marginTop: 10, display: "flex", flexWrap: "wrap", gap: 8 }}>
+          {artifacts.files.map((f) => (
+            <a key={f.file} href={f.href} target="_blank" style={{ fontSize: 12, padding: "4px 10px", borderRadius: 8,
+              border: "1px solid var(--border)", textDecoration: "none", color: "var(--ink-2)" }}>
+              ▤ {f.file} <span style={{ color: "var(--muted)" }}>{fmtBytes(f.bytes)}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+function fmtBytes(n) { return n < 1024 ? n + " B" : n < 1048576 ? (n / 1024).toFixed(0) + " KB" : (n / 1048576).toFixed(1) + " MB"; }
+
+const card = { marginTop: 10, border: "1px solid var(--border)", borderRadius: 10, background: "var(--surface-1)", padding: 14 };
+const pillTag = (c) => ({ fontSize: 10, letterSpacing: 0.5, color: c, border: "1px solid " + c, borderRadius: 10, padding: "1px 7px" });
+
+function ModelCard({ model }) {
+  const d = model.defs || {};
+  const n = (k) => (d[k] || []).length;
+  const sat = new Set(model.satisfied || []);
+  const reqs = model.requirements || [];
+  const traced = reqs.filter((r) => sat.has(r.name)).length;
+  const stats = [
+    ["part defs", n("part")], ["port defs", n("port")], ["actions", n("action")],
+    ["part usages", model.counts.parts], ["connections", model.counts.connections],
+    ["allocations", model.counts.allocate],
+  ];
+  return (
+    <div style={card}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+        <span style={pillTag("#9085e9")}>SysML v2</span>
+        <a href={model.href} target="_blank"><strong>{model.file}</strong></a>
+        <span style={{ color: "var(--muted)", fontSize: 12 }}>packages: {model.packages.join(" · ")}</span>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))", gap: 8, marginTop: 12 }}>
+        {stats.map(([lbl, v]) => (
+          <div key={lbl} style={{ border: "1px solid var(--border)", borderRadius: 8, padding: "7px 9px" }}>
+            <div style={{ fontSize: 18, fontVariantNumeric: "tabular-nums" }}>{v}</div>
+            <div style={{ fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5 }}>{lbl}</div>
+          </div>
+        ))}
+      </div>
+      {n("part") > 0 && (
+        <div style={{ marginTop: 10, fontSize: 12, color: "var(--ink-2)" }}>
+          <span style={{ color: "var(--muted)" }}>blocks: </span>{d.part.join(", ")}
+        </div>
+      )}
+      {reqs.length > 0 && (
+        <div style={{ marginTop: 12 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 12 }}>
+            <span style={{ color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5, fontSize: 11 }}>requirements trace</span>
+            <span style={{ flex: 1, height: 4, background: "var(--grid)", borderRadius: 2, maxWidth: 200 }}>
+              <span style={{ display: "block", height: "100%", width: (traced / reqs.length * 100) + "%", background: "#199e70", borderRadius: 2 }} />
+            </span>
+            <span style={{ color: "var(--ink-2)" }}>{traced}/{reqs.length} satisfied</span>
+          </div>
+          <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {reqs.map((r) => {
+              const ok = sat.has(r.name);
+              return (
+                <span key={r.id} title={ok ? "satisfied in model" : "no satisfy link"} style={{ fontSize: 11, padding: "2px 8px", borderRadius: 6,
+                  border: "1px solid " + (ok ? "rgba(25,158,112,0.6)" : "rgba(229,72,77,0.6)"), color: "var(--ink-2)" }}>
+                  <span style={{ color: ok ? "#199e70" : "#e5484d" }}>{ok ? "✓" : "○"}</span> {r.id} {r.name}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function RiskRegister({ risks }) {
+  const [cell, setCell] = useState(null);   // "L-C" focus from the matrix
+  const items = risks.items;
+  const open = items.filter((r) => r.open);
+  const at = (l, c) => open.filter((r) => r.likelihood === l && r.consequence === c);
+  const counts = { High: 0, Moderate: 0, Low: 0 };
+  for (const r of open) if (r.level) counts[r.level]++;
+  const shown = cell ? items.filter((r) => r.open && r.likelihood + "-" + r.consequence === cell) : items;
+  const cellPx = 34;
+  return (
+    <div style={card}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+        <span style={pillTag("#e5484d")}>Risk register</span>
+        {risks.sources.map((s) => <a key={s.file} href={s.href} target="_blank"><strong>{s.file}</strong></a>)}
+        <span style={{ flex: 1 }} />
+        {["High", "Moderate", "Low"].map((lv) => (
+          <span key={lv} style={{ fontSize: 11, color: "var(--ink-2)", display: "inline-flex", alignItems: "center", gap: 5 }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: RISK_COLOR[lv] }} />{counts[lv]} {lv.toLowerCase()}
+          </span>
+        ))}
+        <span style={{ fontSize: 11, color: "var(--muted)" }}>· {items.length - open.length} closed</span>
+      </div>
+      <div style={{ display: "flex", gap: 18, marginTop: 12, alignItems: "flex-start", flexWrap: "wrap" }}>
+        <div>
+          <div style={{ display: "flex" }}>
+            <div style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", fontSize: 10, color: "var(--muted)",
+              textTransform: "uppercase", letterSpacing: 0.5, textAlign: "center", marginRight: 4 }}>likelihood</div>
+            <div>
+              {[5, 4, 3, 2, 1].map((l) => (
+                <div key={l} style={{ display: "flex", alignItems: "center" }}>
+                  <span style={{ width: 12, fontSize: 10, color: "var(--muted)" }}>{l}</span>
+                  {[1, 2, 3, 4, 5].map((c) => {
+                    const lv = RISK_LEVEL[RISK_MATRIX[l - 1][c - 1]];
+                    const here = at(l, c);
+                    const key = l + "-" + c;
+                    const on = cell === key;
+                    return (
+                      <button key={c} onClick={() => setCell(on || !here.length ? null : key)}
+                        title={here.map((r) => r.id + " " + r.title).join("\n") || lv}
+                        style={{ width: cellPx, height: cellPx, margin: 1, borderRadius: 3, border: on ? "1.5px solid #fff" : 0,
+                          cursor: here.length ? "pointer" : "default", color: "#fff", fontWeight: 600, fontSize: 12,
+                          background: RISK_COLOR[lv], opacity: here.length ? 1 : 0.22 }}>
+                        {here.length || ""}
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
+              <div style={{ display: "flex", marginLeft: 12 }}>
+                {[1, 2, 3, 4, 5].map((c) => <span key={c} style={{ width: cellPx + 2, textAlign: "center", fontSize: 10, color: "var(--muted)" }}>{c}</span>)}
+              </div>
+              <div style={{ textAlign: "center", fontSize: 10, color: "var(--muted)", textTransform: "uppercase", letterSpacing: 0.5, marginLeft: 12 }}>consequence</div>
+            </div>
+          </div>
+        </div>
+        <div style={{ flex: 1, minWidth: 300 }}>
+          {cell && (
+            <div style={{ fontSize: 11, color: "var(--muted)", marginBottom: 4 }}>
+              L{cell.split("-")[0]} × C{cell.split("-")[1]} · <a href="#" onClick={(e) => { e.preventDefault(); setCell(null); }}>show all</a>
+            </div>
+          )}
+          {shown.map((r) => (
+            <div key={r.id} style={{ padding: "6px 0", borderTop: "1px solid var(--border)", opacity: r.open ? 1 : 0.45 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ width: 8, height: 8, borderRadius: 2, background: r.level ? RISK_COLOR[r.level] : "var(--muted)", flex: "0 0 auto" }} />
+                <span style={{ color: "var(--muted)", fontSize: 11, flex: "0 0 auto" }}>{r.id}</span>
+                <span style={{ fontSize: 12, textDecoration: r.open ? "none" : "line-through" }}>{r.title}</span>
+                <span style={{ flex: 1 }} />
+                <span style={{ fontSize: 11, color: "var(--ink-2)", fontVariantNumeric: "tabular-nums", flex: "0 0 auto" }}>
+                  {r.score != null ? r.likelihood + "×" + r.consequence : "—"}
+                </span>
+                <span style={{ fontSize: 10, color: "var(--muted)", width: 74, textAlign: "right", flex: "0 0 auto" }}>{r.status}</span>
+              </div>
+              {(r.mitigation || r.owner) && (
+                <div style={{ fontSize: 11, color: "var(--muted)", marginLeft: 16, marginTop: 2 }}>
+                  {r.mitigation}{r.owner ? <span> · {r.owner}</span> : null}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 

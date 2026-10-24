@@ -115,5 +115,72 @@ class AsListTests(unittest.TestCase):
         self.assertEqual(bp._as_list(["a", "b"]), ["a", "b"])
 
 
+class SysmlSummaryTests(unittest.TestCase):
+    MODEL = (
+        "// header comment\n"
+        "package Demo {\n"
+        "  requirement def <'R-1'> Range { doc /* part def Hidden; */ }\n"
+        "  requirement def <'R-2'> Speed;\n"
+        "  part def Vehicle { port p : Plug; }\n"
+        "  abstract part def 'Power Unit';\n"
+        "  port def Plug;\n"
+        "  part car : Vehicle { part engine : 'Power Unit'; }\n"
+        "  connect car.p to car.engine;\n"
+        "  satisfy Range by car;\n"
+        "}\n"
+    )
+
+    def test_packages_and_defs(self):
+        s = bp.summarize_sysml(self.MODEL)
+        self.assertEqual(s["packages"], ["Demo"])
+        self.assertEqual(s["defs"]["part"], ["Vehicle", "Power Unit"])
+        self.assertEqual(s["defs"]["port"], ["Plug"])
+
+    def test_comments_are_ignored(self):
+        self.assertNotIn("Hidden", bp.summarize_sysml(self.MODEL)["defs"]["part"])
+
+    def test_requirements_and_trace(self):
+        s = bp.summarize_sysml(self.MODEL)
+        self.assertEqual([r["id"] for r in s["requirements"]], ["R-1", "R-2"])
+        self.assertEqual(s["satisfied"], ["Range"])
+
+    def test_usage_counts(self):
+        c = bp.summarize_sysml(self.MODEL)["counts"]
+        self.assertEqual(c["parts"], 2)
+        self.assertEqual(c["ports"], 1)
+        self.assertEqual(c["connections"], 1)
+        self.assertEqual(c["satisfy"], 1)
+
+
+class RiskRegisterTests(unittest.TestCase):
+    def test_level_matrix_corners(self):
+        self.assertEqual(bp.risk_level(1, 1), "Low")
+        self.assertEqual(bp.risk_level(5, 5), "High")
+        self.assertEqual(bp.risk_level(1, 5), "Moderate")
+        self.assertEqual(bp.risk_level(4, 4), "High")
+        self.assertIsNone(bp.risk_level(0, 3))
+
+    def test_header_aliases_and_sort(self):
+        reg = bp.parse_risk_register(
+            "Risk #,Risk Statement,Probability,Impact,State,Risk Owner,Handling\n"
+            "A,Low one,1,2,Open,me,watch\n"
+            "B,Hot one,5,4,Open,you,fix it\n"
+            "C,Done,5,5,Closed,,\n"
+        )
+        self.assertEqual(reg["unmapped"], [])
+        self.assertEqual([r["id"] for r in reg["risks"]], ["B", "A", "C"])
+        b = reg["risks"][0]
+        self.assertEqual((b["score"], b["level"], b["owner"]), (20, "High", "you"))
+        self.assertFalse(reg["risks"][-1]["open"])
+
+    def test_missing_columns_reported_and_unscored(self):
+        reg = bp.parse_risk_register("Title,Status\nSomething,Open\n")
+        self.assertIn("likelihood", reg["unmapped"])
+        r = reg["risks"][0]
+        self.assertEqual(r["id"], "R1")
+        self.assertIsNone(r["level"])
+        self.assertIsNone(r["score"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,8 @@
+Risk ID,Title,Likelihood,Consequence,Status,Owner,Mitigation
+SAR-R01,Drift model error exceeds search-cell size in high sea states,4,4,Open,Planner lead,Ensemble drift runs; widen cells above Sea State 4
+SAR-R02,UAV endurance below spec in cold-weather ops,3,4,Open,Air vehicle lead,Cold-soak battery testing; reserve margin raised to 25%
+SAR-R03,Ground-station link saturates with 6+ craft,3,3,Mitigating,Comms lead,Compress status telemetry; prioritize tasking traffic
+SAR-R04,On-board LLM misparses radio traffic into wrong tasking,2,5,Open,Autonomy lead,Human confirm on any re-task that changes sector
+SAR-R05,STK coverage license unavailable for field laptops,2,2,Watch,PM,Precompute coverage tables before sortie
+SAR-R06,SysML model drifts from as-built interfaces,3,2,Mitigating,Systems engineer,Model review gate at every interface change
+SAR-R07,Sensor footprint assumption invalid for night IR,1,3,Closed,Payload lead,Measured IR footprint in sea trial 2

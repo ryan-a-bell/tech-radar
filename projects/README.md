@@ -40,6 +40,31 @@ problems it solves — that is what gets matched against tool descriptions.
 | `repo` | no | Link shown on the project card. |
 | _body_ | recommended | Prose used for tool recommendations. The first paragraph becomes the card blurb. |
 
+## Artifacts — models, risks & engineering data
+
+Drop engineering data for a project into `projects/artifacts/<project-id>/`
+and `build_projects.py` picks it up into an **Artifacts** panel on the project:
+
+| File | What the panel shows |
+|------|----------------------|
+| `*.sysml` | SysML v2 textual model — packages, part/port/action defs, part usages, connections, allocations, and a requirements-trace bar (which `requirement def`s have a `satisfy` link). |
+| `*risk*.csv` | Risk register export (CMPro or any tool that writes CSV) — scored on the DoD 5×5 likelihood × consequence matrix, with a clickable heat map and a list sorted by score. Closed/retired risks are shown struck through and kept off the matrix. |
+| anything else | Listed as a linked file (PDFs, ICDs, diagrams, …). |
+
+Risk CSV headers are matched case-insensitively against common aliases:
+`Risk ID`/`ID`, `Title`/`Risk Statement`, `Likelihood`/`Probability`,
+`Consequence`/`Impact`/`Severity`, `Status`, `Owner`, `Mitigation`/`Handling`.
+Missing columns are reported as a build warning rather than an error.
+
+`build_site.py` copies `projects/artifacts/` into the site so the panel links
+straight to each source file.
+
+```
+projects/artifacts/sar-fleet-coordinator/
+  sar-fleet.sysml
+  risk-register.csv
+```
+
 ## The two halves: declared vs. recommended
 
 - **Declared stack** (`stack:`) — the authoritative "we ARE using these tools"

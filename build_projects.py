@@ -28,18 +28,30 @@ Output shape (data/projects.json):
       { "id", "name", "status", "topics": [...], "repo",
         "blurb", "body",
         "stack": [ {id, name, quadrant, ring, url, canonical_url} ],
-        "stack_unresolved": ["..."] } ] }
+        "stack_unresolved": ["..."],
+        "artifacts": { "models": [...], "risks": {...} | null, "files": [...] } } ] }
+
+Artifacts are optional engineering data dropped next to the project under
+projects/artifacts/<project-id>/:
+  *.sysml          — SysML v2 textual models, summarised (packages, defs, trace)
+  *risk*.csv       — a risk register export (CMPro or any tool that writes CSV),
+                     scored on the 5x5 likelihood x consequence matrix
+  anything else    — listed as a plain linked file (PDFs, diagrams, ICDs, ...)
 """
 
+import csv
 import datetime as _dt
 import glob
+import io
 import json
 import os
+import re
 
 import radar_core
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECTS_DIR = os.path.join(HERE, "projects")
+ARTIFACTS_DIR = os.path.join(PROJECTS_DIR, "artifacts")
 OUT = os.path.join(HERE, "data", "projects.json")
 
 STATUSES = ["Idea", "Active", "Paused", "Shipped", "Archived"]
@@ -186,6 +198,155 @@ def resolve_stack(entries, tool_index):
     return resolved, unresolved
 
 
+# --- artifacts: SysML v2 models ---------------------------------------------
+_SYSML_COMMENT = re.compile(r"/\*.*?\*/|//[^\n]*", re.S)
+_SYSML_NAME = r"(?:<'?[^>']*'?>\s*)?('[^']+'|[A-Za-z_]\w*)"
+_SYSML_PACKAGE = re.compile(r"\b(?:library\s+)?package\s+" + _SYSML_NAME)
+_SYSML_DEF = re.compile(
+    r"\b(part|port|item|attribute|action|state|requirement|interface|connection|"
+    r"constraint|calc|analysis|verification|enum|allocation|flow|use\s+case)\s+def\s+"
+    + _SYSML_NAME)
+_SYSML_REQ_ID = re.compile(r"\brequirement\s+(?:def\s+)?<'?([^>']+)'?>\s*" + _SYSML_NAME)
+_SYSML_SATISFY = re.compile(r"(?<!\w)satisfy\s+(?:requirement\s+)?([\w':]+)")
+_SYSML_USAGE = {
+    "parts": re.compile(r"(?<!\w)part\s+(?!def\b)[A-Za-z_']"),
+    "ports": re.compile(r"(?<!\w)port\s+(?!def\b)[A-Za-z_']"),
+    "connections": re.compile(r"(?<!\w)connect\s"),
+    "satisfy": re.compile(r"(?<!\w)satisfy\s"),
+    "verify": re.compile(r"(?<!\w)verify\s"),
+    "allocate": re.compile(r"(?<!\w)allocate\s"),
+}
+
+
+def _unquote(name):
+    return name[1:-1] if name.startswith("'") and name.endswith("'") else name
+
+
+def summarize_sysml(text):
+    """Summarise a SysML v2 textual model without a full parser: packages,
+    definitions by kind, requirement ids, and usage / trace-link counts."""
+    src = _SYSML_COMMENT.sub(" ", text)
+    defs = {}
+    for kind, name in _SYSML_DEF.findall(src):
+        kind = re.sub(r"\s+", " ", kind)
+        defs.setdefault(kind, []).append(_unquote(name))
+    return {
+        "packages": [_unquote(n) for n in _SYSML_PACKAGE.findall(src)],
+        "defs": defs,
+        "requirements": [{"id": rid, "name": _unquote(n)}
+                         for rid, n in _SYSML_REQ_ID.findall(src)],
+        "satisfied": sorted({_unquote(n.split("::")[-1]) for n in _SYSML_SATISFY.findall(src)}),
+        "counts": {k: len(rx.findall(src)) for k, rx in _SYSML_USAGE.items()},
+    }
+
+
+# --- artifacts: risk registers ----------------------------------------------
+# Header aliases so exports from different tools (CMPro, Active Risk Manager,
+# a hand-kept spreadsheet) map onto one shape. Matched case-insensitively.
+RISK_COLUMNS = {
+    "id": ["id", "risk id", "risk_id", "risk #", "risk no", "number", "no"],
+    "title": ["title", "risk title", "risk", "name", "risk statement", "description"],
+    "likelihood": ["likelihood", "probability", "prob", "l"],
+    "consequence": ["consequence", "impact", "severity", "c"],
+    "status": ["status", "state"],
+    "owner": ["owner", "risk owner", "assignee"],
+    "mitigation": ["mitigation", "mitigation plan", "handling", "response", "handling strategy"],
+}
+
+# DoD Risk, Issue, and Opportunity guide 5x5 matrix — rows are likelihood 1..5,
+# columns consequence 1..5.
+RISK_MATRIX = [
+    "LLLLM",
+    "LLLMM",
+    "LLMMH",
+    "LMMHH",
+    "LMHHH",
+]
+RISK_LEVEL = {"L": "Low", "M": "Moderate", "H": "High"}
+CLOSED_STATUSES = {"closed", "retired", "realized", "accepted"}
+
+
+def risk_level(likelihood, consequence):
+    """Low / Moderate / High for a 1..5 likelihood and consequence, else None."""
+    if not (1 <= likelihood <= 5 and 1 <= consequence <= 5):
+        return None
+    return RISK_LEVEL[RISK_MATRIX[likelihood - 1][consequence - 1]]
+
+
+def _int_or_none(v):
+    m = re.match(r"\s*(\d+)", v or "")
+    return int(m.group(1)) if m else None
+
+
+def parse_risk_register(text):
+    """Parse a risk-register CSV into {risks: [...], unmapped: [...]}. Rows
+    without a likelihood and consequence are kept but left unscored."""
+    reader = csv.DictReader(io.StringIO(text))
+    headers = {h.strip().lower(): h for h in (reader.fieldnames or []) if h}
+    colmap = {}
+    for field, aliases in RISK_COLUMNS.items():
+        for a in aliases:
+            if a in headers and headers[a] not in colmap.values():
+                colmap[field] = headers[a]
+                break
+    risks = []
+    for row in reader:
+        get = lambda f: (row.get(colmap[f]) or "").strip() if f in colmap else ""
+        if not any((v or "").strip() for v in row.values() if isinstance(v, str)):
+            continue
+        lik, con = _int_or_none(get("likelihood")), _int_or_none(get("consequence"))
+        level = risk_level(lik, con) if lik and con else None
+        status = get("status") or "Open"
+        risks.append({
+            "id": get("id") or f"R{len(risks) + 1}",
+            "title": get("title"),
+            "likelihood": lik,
+            "consequence": con,
+            "score": lik * con if level else None,
+            "level": level,
+            "status": status,
+            "open": status.lower() not in CLOSED_STATUSES,
+            "owner": get("owner") or None,
+            "mitigation": get("mitigation") or None,
+        })
+    risks.sort(key=lambda r: (not r["open"], -(r["score"] or 0), r["id"]))
+    return {"risks": risks, "unmapped": sorted(set(RISK_COLUMNS) - set(colmap))}
+
+
+def load_artifacts(project_id, root=ARTIFACTS_DIR):
+    """Collect projects/artifacts/<project_id>/** into the record's artifacts
+    block, or None when the project has no artifact folder."""
+    base = os.path.join(root, project_id)
+    if not os.path.isdir(base):
+        return None
+    models, files, risks, sources = [], [], [], []
+    for path in sorted(glob.glob(os.path.join(base, "**", "*"), recursive=True)):
+        if not os.path.isfile(path):
+            continue
+        rel = os.path.relpath(path, base).replace(os.sep, "/")
+        href = "projects/artifacts/" + project_id + "/" + rel
+        name = os.path.basename(path)
+        low = name.lower()
+        if low.endswith(".sysml"):
+            with open(path, encoding="utf-8") as f:
+                models.append({"file": rel, "href": href, **summarize_sysml(f.read())})
+        elif low.endswith(".csv") and "risk" in low:
+            with open(path, encoding="utf-8-sig") as f:
+                reg = parse_risk_register(f.read())
+            if reg["unmapped"]:
+                print(f"  warning: {project_id}/{rel}: risk columns not found: "
+                      f"{', '.join(reg['unmapped'])}")
+            risks.extend(reg["risks"])
+            sources.append({"file": rel, "href": href})
+        else:
+            files.append({"file": rel, "href": href, "bytes": os.path.getsize(path)})
+    return {
+        "models": models,
+        "risks": {"items": risks, "sources": sources} if sources else None,
+        "files": files,
+    }
+
+
 # --- assembly ---------------------------------------------------------------
 def load_projects():
     """Parse every projects/*.md (except README.md) into raw dicts."""
@@ -222,8 +383,9 @@ def build_project_records():
         if unresolved:
             print(f"  warning: {os.path.basename(raw['_path'])}: stack entries not "
                   f"on the radar: {', '.join(map(str, unresolved))}")
+        pid = fm.get("id") or raw["default_id"]
         records.append({
-            "id": fm.get("id") or raw["default_id"],
+            "id": pid,
             "name": fm.get("name") or fm.get("id") or raw["default_id"],
             "status": status,
             "topics": topics,
@@ -232,6 +394,7 @@ def build_project_records():
             "body": body,
             "stack": stack,
             "stack_unresolved": unresolved,
+            "artifacts": load_artifacts(pid),
         })
     return records
 
