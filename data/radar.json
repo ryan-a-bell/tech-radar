@@ -1,7 +1,115 @@
 {
-  "generated": "2026-10-24",
-  "count": 857,
+  "generated": "2026-10-25",
+  "count": 861,
   "items": [
+    {
+      "id": "github:pollen-robotics/microduck",
+      "name": "microduck",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "canonical_url": "github.com/pollen-robotics/microduck",
+      "company": null,
+      "stars": 319,
+      "momentum": 31,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-25": 319
+      },
+      "description": "A Tiny biped duck robot \ud83e\udd86",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:google-gemini/gemini-cli",
+      "name": "gemini-cli",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "canonical_url": "github.com/google-gemini/gemini-cli",
+      "company": null,
+      "stars": 44,
+      "momentum": 4,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-25": 44
+      },
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jbiaojerry/ebook-treasure-chest",
+      "name": "ebook-treasure-chest",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jbiaojerry/ebook-treasure-chest",
+      "canonical_url": "github.com/jbiaojerry/ebook-treasure-chest",
+      "company": null,
+      "stars": 227,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-25": 227
+      },
+      "description": "\u6b22\u8fce\u6765\u5230\u7535\u5b50\u4e66\u4e0b\u8f7d\u5b9d\u5e93\uff0c\u4e00\u4e2a\u6c47\u805a\u4e86\u5404\u7c7b\u7535\u5b50\u4e66\u4e0b\u8f7d\u94fe\u63a5\u7684\u5730\u65b9\u3002\u65e0\u8bba\u4f60\u662f\u559c\u6b22\u9605\u8bfb\u7ecf\u5178\u6587\u5b66\u3001\u7ecf\u7ba1\u52b1\u5fd7\u3001\u7ec8\u8eab\u5b66\u4e60\u3001\u804c\u573a\u521b\u4e1a\u3001\u6280\u672f\u624b\u518c\u8fd8\u662f\u5176\u4ed6\u7c7b\u578b\u7684\u4e66\u7c4d\uff0c\u8fd9\u91cc\u90fd\u80fd\u6ee1\u8db3\u4f60\u7684\u9700\u6c42\u3002 \u8be5\u5e93\u6db5\u76d6\u4e86\u5e06\u4e66app(\u539f\u6a0a\u767b\u8bfb\u4e66)\u3001\u5fae\u4fe1\u8bfb\u4e66\u3001\u4eac\u4e1c\u8bfb\u4e66\u3001\u559c\u9a6c\u62c9\u96c5\u7b49\u8bfb\u4e66app\u7684\u5927\u90e8\u5206\u7535\u5b50\u4e66\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:makecindy/cindy",
+      "name": "cindy",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/makecindy/cindy",
+      "canonical_url": "github.com/makecindy/cindy",
+      "company": null,
+      "stars": 477,
+      "momentum": 47,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-25": 477
+      },
+      "description": "Consider it done. The open-source AI agent that works out of the box \u00b7 \u60f3\u5230\uff0c\u5c31\u80fd\u505a\u5230\u3002\u5f00\u6e90\u3001\u5f00\u7bb1\u5373\u7528\u7684 AI Agent\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Renhuai123/ziwei-doushu",
       "name": "ziwei-doushu",
@@ -2258,7 +2366,7 @@
       "url": "https://github.com/NVIDIA/OpenShell",
       "canonical_url": "github.com/nvidia/openshell",
       "company": "NVIDIA",
-      "stars": 1119,
+      "stars": 896,
       "momentum": 97,
       "tags": [
         "rust"
@@ -2266,7 +2374,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-29",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-29": 978,
@@ -2274,11 +2382,12 @@
         "2026-10-01": 2503,
         "2026-10-02": 2456,
         "2026-10-03": 594,
-        "2026-10-24": 1119
+        "2026-10-24": 1119,
+        "2026-10-25": 896
       },
       "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
       "trend": "up",
-      "trend_delta": 525
+      "trend_delta": 302
     },
     {
       "id": "github:willfaust/Madeira",
@@ -3441,7 +3550,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 2716,
+      "stars": 2264,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -3449,7 +3558,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
@@ -3460,11 +3569,12 @@
         "2026-10-21": 1712,
         "2026-10-22": 2012,
         "2026-10-23": 2979,
-        "2026-10-24": 2716
+        "2026-10-24": 2716,
+        "2026-10-25": 2264
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "trend": "up",
-      "trend_delta": 2178
+      "trend_delta": 1726
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -10062,7 +10172,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 947,
+      "stars": 619,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -10070,7 +10180,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-06",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -10081,11 +10191,12 @@
         "2026-10-02": 495,
         "2026-10-03": 722,
         "2026-10-04": 1170,
-        "2026-10-06": 947
+        "2026-10-06": 947,
+        "2026-10-25": 619
       },
       "description": "The design language that makes your AI harness better at design.",
-      "trend": "up",
-      "trend_delta": 641
+      "trend": "down",
+      "trend_delta": -328
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12683,7 +12794,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "canonical_url": "github.com/nutlope/hallmark",
       "company": null,
-      "stars": 1485,
+      "stars": 455,
       "momentum": 15,
       "tags": [
         "css"
@@ -12691,7 +12802,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-18",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 155,
@@ -12699,11 +12810,12 @@
         "2026-07-15": 1015,
         "2026-07-16": 1277,
         "2026-07-17": 3372,
-        "2026-07-18": 1485
+        "2026-07-18": 1485,
+        "2026-10-25": 455
       },
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "trend": "up",
-      "trend_delta": 1330
+      "trend": "down",
+      "trend_delta": -1030
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -19409,7 +19521,7 @@
       "url": "https://github.com/aws/agent-toolkit-for-aws",
       "canonical_url": "github.com/aws/agent-toolkit-for-aws",
       "company": "Amazon",
-      "stars": 243,
+      "stars": 13,
       "momentum": 1,
       "tags": [
         "python"
@@ -19417,16 +19529,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-27",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-25": 15,
         "2026-06-26": 47,
-        "2026-06-27": 243
+        "2026-06-27": 243,
+        "2026-10-25": 13
       },
       "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
-      "trend": "up",
-      "trend_delta": 228
+      "trend": "down",
+      "trend_delta": -230
     },
     {
       "id": "github:mauriceboe/TREK",
@@ -22450,7 +22563,7 @@
       "url": "https://github.com/luongnv89/claude-howto",
       "canonical_url": "github.com/luongnv89/claude-howto",
       "company": null,
-      "stars": 177,
+      "stars": 392,
       "momentum": 15,
       "tags": [
         "python"
@@ -22458,7 +22571,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-10-23",
+      "last_seen": "2026-10-25",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 154,
@@ -22467,11 +22580,12 @@
         "2026-06-11": 211,
         "2026-06-28": 141,
         "2026-10-22": 428,
-        "2026-10-23": 177
+        "2026-10-23": 177,
+        "2026-10-25": 392
       },
       "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
       "trend": "up",
-      "trend_delta": 36
+      "trend_delta": 251
     },
     {
       "id": "github:RyanCodrai/turbovec",
