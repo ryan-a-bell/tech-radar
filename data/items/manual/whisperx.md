@@ -19,4 +19,4 @@ also_seen: []
 stars_history: {}
 ---
 
-Speech-recognition pipeline built on Whisper that adds word-level timestamps via wav2vec2 forced alignment and speaker diarization via pyannote, with batched faster-whisper inference at ~70x realtime. BSD-2-Clause; a strong fit for meeting/interview transcription.
+Speaker diarization is its key function: labels who said what in a transcript via pyannote-audio, on top of Whisper with word-level timestamps from wav2vec2 forced alignment. Batched faster-whisper inference runs at ~70x realtime; BSD-2-Clause. A strong fit for meeting and interview transcription.
