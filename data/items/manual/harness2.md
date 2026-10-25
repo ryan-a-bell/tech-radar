@@ -1,6 +1,6 @@
 ---
-id: manual:harness
-name: Harness²
+id: manual:harness2
+name: harness2
 quadrant: Techniques
 ring: Discovered
 source: Manual
