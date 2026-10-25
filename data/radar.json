@@ -1,7 +1,32 @@
 {
   "generated": "2026-10-25",
-  "count": 861,
+  "count": 863,
   "items": [
+    {
+      "id": "manual:speakr",
+      "name": "speakr",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/murtaza-nasir/speakr",
+      "canonical_url": "github.com/murtaza-nasir/speakr",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Self-hosted web app that turns audio recordings into searchable, organized notes, with pluggable transcription engines (WhisperX, OpenAI, AssemblyAI), speaker diarization, auto-summaries, and chat across a recording or the whole library. Flask/Vue stack deployed via Docker; AGPLv3 with a commercial option.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:pollen-robotics/microduck",
       "name": "microduck",
@@ -107,6 +132,32 @@
         "2026-10-25": 477
       },
       "description": "Consider it done. The open-source AI agent that works out of the box \u00b7 \u60f3\u5230\uff0c\u5c31\u80fd\u505a\u5230\u3002\u5f00\u6e90\u3001\u5f00\u7bb1\u5373\u7528\u7684 AI Agent\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:whisperx",
+      "name": "WhisperX",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/m-bain/whisperX",
+      "canonical_url": "github.com/m-bain/whisperx",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "ML"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Speaker diarization is its key function: labels who said what in a transcript via pyannote-audio, on top of Whisper with word-level timestamps from wav2vec2 forced alignment. Batched faster-whisper inference runs at ~70x realtime; BSD-2-Clause. A strong fit for meeting and interview transcription.",
       "trend": "none",
       "trend_delta": 0
     },
