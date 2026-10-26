@@ -1,7 +1,140 @@
 {
-  "generated": "2026-10-25",
-  "count": 861,
+  "generated": "2026-10-26",
+  "count": 868,
   "items": [
+    {
+      "id": "github:JetBrains/thinkrail",
+      "name": "thinkrail",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "canonical_url": "github.com/jetbrains/thinkrail",
+      "company": "JetBrains",
+      "stars": 1156,
+      "momentum": 100,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-26": 1156
+      },
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work \u2014 The Vibe You Need",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:gitroomhq/postiz-app",
+      "name": "postiz-app",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "canonical_url": "github.com/gitroomhq/postiz-app",
+      "company": null,
+      "stars": 146,
+      "momentum": 14,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-26": 146
+      },
+      "description": "\ud83d\udce8 The ultimate agentic social media scheduling tool \ud83e\udd16",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nightly-labs/openbot",
+      "name": "openbot",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nightly-labs/openbot",
+      "canonical_url": "github.com/nightly-labs/openbot",
+      "company": null,
+      "stars": 86,
+      "momentum": 8,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-26": 86
+      },
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:alchaincyf/huashu-design",
+      "name": "huashu-design",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/alchaincyf/huashu-design",
+      "canonical_url": "github.com/alchaincyf/huashu-design",
+      "company": null,
+      "stars": 177,
+      "momentum": 17,
+      "tags": [
+        "html"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-26": 177
+      },
+      "description": "Huashu Design 3.0 \u00b7 \u5728 agent \u91cc\u6253\u4e00\u53e5\u8bdd\uff0c\u62ff\u56de\u80fd\u4ea4\u4ed8\u7684\u8bbe\u8ba1\uff1a\u7f51\u9875 / App \u539f\u578b / \u53ef\u7f16\u8f91 PPTX / \u52a8\u753b / \u4fe1\u606f\u56fe \u00b7 \u516d\u4e2a\u5019\u9009\u6311\u4e09\u4e2a\u65b9\u5411 \u00b7 84 \u79cd\u5e26\u6837\u5f20\u7684\u98ce\u683c\u5e93 \u00b7 \u8d8a\u7528\u8d8a\u61c2\u4f60\u7684\u5916\u89c2\u8d26\u672c\u4e0e\u8bbe\u8ba1\u4f53\u68c0 \u00b7 HTML-native design skill for Claude Code, Codex, Cursor & any agent",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:speakr",
+      "name": "speakr",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/murtaza-nasir/speakr",
+      "canonical_url": "github.com/murtaza-nasir/speakr",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Self-hosted web app that turns audio recordings into searchable, organized notes, with pluggable transcription engines (WhisperX, OpenAI, AssemblyAI), speaker diarization, auto-summaries, and chat across a recording or the whole library. Flask/Vue stack deployed via Docker; AGPLv3 with a commercial option.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:pollen-robotics/microduck",
       "name": "microduck",
@@ -12,7 +145,7 @@
       "url": "https://github.com/pollen-robotics/microduck",
       "canonical_url": "github.com/pollen-robotics/microduck",
       "company": null,
-      "stars": 319,
+      "stars": 844,
       "momentum": 31,
       "tags": [
         "rust"
@@ -20,12 +153,41 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
-        "2026-10-25": 319
+        "2026-10-25": 319,
+        "2026-10-26": 844
       },
       "description": "A Tiny biped duck robot \ud83e\udd86",
+      "trend": "up",
+      "trend_delta": 525
+    },
+    {
+      "id": "manual:harness2",
+      "name": "harness2",
+      "quadrant": "Techniques",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/google-research/harness2",
+      "canonical_url": "github.com/google-research/harness2",
+      "company": "Google",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Agents",
+        "Skills",
+        "Prompts"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Google Research framework that recursively improves an AI agent's harness (system prompt, guardrails, memory, tool guidance, subagents, skills, scripts, plugins) with model weights held fixed, via task-level refinement and a persistent improvement harness that carries lessons across tasks. Runs on OpenCode or Codex executors with JobBench, LAB and WorkBuddy-Bench benchmarks; relevant to agent/skill self-improvement.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -93,7 +255,7 @@
       "url": "https://github.com/makecindy/cindy",
       "canonical_url": "github.com/makecindy/cindy",
       "company": null,
-      "stars": 477,
+      "stars": 1268,
       "momentum": 47,
       "tags": [
         "typescript"
@@ -101,12 +263,39 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
-        "2026-10-25": 477
+        "2026-10-25": 477,
+        "2026-10-26": 1268
       },
       "description": "Consider it done. The open-source AI agent that works out of the box \u00b7 \u60f3\u5230\uff0c\u5c31\u80fd\u505a\u5230\u3002\u5f00\u6e90\u3001\u5f00\u7bb1\u5373\u7528\u7684 AI Agent\u3002",
+      "trend": "up",
+      "trend_delta": 791
+    },
+    {
+      "id": "manual:whisperx",
+      "name": "WhisperX",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/m-bain/whisperX",
+      "canonical_url": "github.com/m-bain/whisperx",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "ML"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Speaker diarization is its key function: labels who said what in a transcript via pyannote-audio, on top of Whisper with word-level timestamps from wav2vec2 forced alignment. Batched faster-whisper inference runs at ~70x realtime; BSD-2-Clause. A strong fit for meeting and interview transcription.",
       "trend": "none",
       "trend_delta": 0
     },
@@ -5190,7 +5379,7 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "canonical_url": "github.com/debpalash/voicestudio",
       "company": null,
-      "stars": 2125,
+      "stars": 2292,
       "momentum": 83,
       "tags": [
         "python"
@@ -5198,7 +5387,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-03",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-09-03": 832,
@@ -5216,11 +5405,12 @@
         "2026-10-15": 3538,
         "2026-10-16": 3024,
         "2026-10-17": 2301,
-        "2026-10-18": 2125
+        "2026-10-18": 2125,
+        "2026-10-26": 2292
       },
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "trend": "down",
-      "trend_delta": -1356
+      "trend": "up",
+      "trend_delta": 167
     },
     {
       "id": "github:zyronon/TypeWords",
@@ -10172,7 +10362,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 619,
+      "stars": 1551,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -10180,7 +10370,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -10192,11 +10382,12 @@
         "2026-10-03": 722,
         "2026-10-04": 1170,
         "2026-10-06": 947,
-        "2026-10-25": 619
+        "2026-10-25": 619,
+        "2026-10-26": 1551
       },
       "description": "The design language that makes your AI harness better at design.",
-      "trend": "down",
-      "trend_delta": -328
+      "trend": "up",
+      "trend_delta": 604
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12794,7 +12985,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "canonical_url": "github.com/nutlope/hallmark",
       "company": null,
-      "stars": 455,
+      "stars": 2235,
       "momentum": 15,
       "tags": [
         "css"
@@ -12802,7 +12993,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 155,
@@ -12811,11 +13002,12 @@
         "2026-07-16": 1277,
         "2026-07-17": 3372,
         "2026-07-18": 1485,
-        "2026-10-25": 455
+        "2026-10-25": 455,
+        "2026-10-26": 2235
       },
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "trend": "down",
-      "trend_delta": -1030
+      "trend": "up",
+      "trend_delta": 750
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -16300,7 +16492,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-02",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-10-26",
       "also_seen": [
         {
           "source": "GitHub",
@@ -18321,24 +18513,25 @@
       "url": "https://github.com/multica-ai/andrej-karpathy-skills",
       "canonical_url": "github.com/multica-ai/andrej-karpathy-skills",
       "company": null,
-      "stars": 279,
+      "stars": 457,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-08-23": 315,
         "2026-08-25": 588,
         "2026-08-26": 830,
         "2026-09-09": 333,
-        "2026-10-10": 279
+        "2026-10-10": 279,
+        "2026-10-26": 457
       },
       "description": "Claude Code behavior improvement resource based on LLM observations",
-      "trend": "down",
-      "trend_delta": -54
+      "trend": "up",
+      "trend_delta": 178
     },
     {
       "id": "github:lifan0127/ai-research-assistant",
@@ -21978,7 +22171,7 @@
       "url": "https://github.com/NVIDIA/SkillSpector",
       "canonical_url": "github.com/nvidia/skillspector",
       "company": "NVIDIA",
-      "stars": 1079,
+      "stars": 203,
       "momentum": 31,
       "tags": [
         "python"
@@ -21986,18 +22179,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-12",
-      "last_seen": "2026-06-16",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-12": 319,
         "2026-06-13": 809,
         "2026-06-14": 804,
         "2026-06-15": 964,
-        "2026-06-16": 1079
+        "2026-06-16": 1079,
+        "2026-10-26": 203
       },
       "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
-      "trend": "up",
-      "trend_delta": 760
+      "trend": "down",
+      "trend_delta": -876
     },
     {
       "id": "github:microsoft/PowerToys",
@@ -23422,7 +23616,7 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "canonical_url": "github.com/panniantong/agent-reach",
       "company": null,
-      "stars": 1156,
+      "stars": 723,
       "momentum": 14,
       "tags": [
         "python"
@@ -23430,7 +23624,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 700,
@@ -23449,11 +23643,12 @@
         "2026-10-02": 683,
         "2026-10-03": 696,
         "2026-10-04": 979,
-        "2026-10-05": 1156
+        "2026-10-05": 1156,
+        "2026-10-26": 723
       },
       "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu \u2014 one CLI, zero API fees.",
-      "trend": "up",
-      "trend_delta": 505
+      "trend": "down",
+      "trend_delta": -433
     },
     {
       "id": "github:github/spec-kit",
@@ -24220,7 +24415,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 1145,
+      "stars": 853,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -24228,7 +24423,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-10-26",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -24261,11 +24456,12 @@
         "2026-10-04": 889,
         "2026-10-16": 1013,
         "2026-10-17": 1057,
-        "2026-10-18": 1145
+        "2026-10-18": 1145,
+        "2026-10-26": 853
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "up",
-      "trend_delta": 256
+      "trend": "down",
+      "trend_delta": -292
     }
   ]
 }

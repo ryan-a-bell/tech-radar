@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/pollen-robotics/microduck
 canonical_url: github.com/pollen-robotics/microduck
 company: null
-stars: 319
+stars: 844
 momentum: 31
 tags: ["rust"]
 topics: []
 archived_at: null
 first_seen: 2026-10-25
-last_seen: 2026-10-25
+last_seen: 2026-10-26
 also_seen: []
-stars_history: {"2026-10-25": 319}
+stars_history: {"2026-10-25": 319, "2026-10-26": 844}
 ---
 
 A Tiny biped duck robot 🦆
