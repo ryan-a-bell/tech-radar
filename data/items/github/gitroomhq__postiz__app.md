@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/gitroomhq/postiz-app
 canonical_url: github.com/gitroomhq/postiz-app
 company: null
-stars: 146
+stars: 188
 momentum: 14
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-10-26
-last_seen: 2026-10-26
+last_seen: 2026-10-27
 also_seen: []
-stars_history: {"2026-10-26": 146}
+stars_history: {"2026-10-26": 146, "2026-10-27": 188}
 ---
 
 📨 The ultimate agentic social media scheduling tool 🤖
