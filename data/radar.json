@@ -1,7 +1,32 @@
 {
-  "generated": "2026-10-26",
-  "count": 868,
+  "generated": "2026-10-27",
+  "count": 869,
   "items": [
+    {
+      "id": "github:togg53192-cmd/jailbreaks",
+      "name": "jailbreaks",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "canonical_url": "github.com/togg53192-cmd/jailbreaks",
+      "company": null,
+      "stars": 890,
+      "momentum": 89,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-27": 890
+      },
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:JetBrains/thinkrail",
       "name": "thinkrail",
@@ -12,7 +37,7 @@
       "url": "https://github.com/JetBrains/thinkrail",
       "canonical_url": "github.com/jetbrains/thinkrail",
       "company": "JetBrains",
-      "stars": 1156,
+      "stars": 1173,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -20,14 +45,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
-        "2026-10-26": 1156
+        "2026-10-26": 1156,
+        "2026-10-27": 1173
       },
       "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work \u2014 The Vibe You Need",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 17
     },
     {
       "id": "github:gitroomhq/postiz-app",
@@ -39,7 +65,7 @@
       "url": "https://github.com/gitroomhq/postiz-app",
       "canonical_url": "github.com/gitroomhq/postiz-app",
       "company": null,
-      "stars": 146,
+      "stars": 188,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -47,14 +73,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
-        "2026-10-26": 146
+        "2026-10-26": 146,
+        "2026-10-27": 188
       },
       "description": "\ud83d\udce8 The ultimate agentic social media scheduling tool \ud83e\udd16",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 42
     },
     {
       "id": "github:nightly-labs/openbot",
@@ -66,7 +93,7 @@
       "url": "https://github.com/nightly-labs/openbot",
       "canonical_url": "github.com/nightly-labs/openbot",
       "company": null,
-      "stars": 86,
+      "stars": 176,
       "momentum": 8,
       "tags": [
         "typescript"
@@ -74,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
-        "2026-10-26": 86
+        "2026-10-26": 86,
+        "2026-10-27": 176
       },
       "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 90
     },
     {
       "id": "github:alchaincyf/huashu-design",
@@ -255,7 +283,7 @@
       "url": "https://github.com/makecindy/cindy",
       "canonical_url": "github.com/makecindy/cindy",
       "company": null,
-      "stars": 1268,
+      "stars": 1296,
       "momentum": 47,
       "tags": [
         "typescript"
@@ -263,15 +291,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-10-25": 477,
-        "2026-10-26": 1268
+        "2026-10-26": 1268,
+        "2026-10-27": 1296
       },
       "description": "Consider it done. The open-source AI agent that works out of the box \u00b7 \u60f3\u5230\uff0c\u5c31\u80fd\u505a\u5230\u3002\u5f00\u6e90\u3001\u5f00\u7bb1\u5373\u7528\u7684 AI Agent\u3002",
       "trend": "up",
-      "trend_delta": 791
+      "trend_delta": 819
     },
     {
       "id": "manual:whisperx",
@@ -10362,7 +10391,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 1551,
+      "stars": 1506,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -10370,7 +10399,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -10383,11 +10412,12 @@
         "2026-10-04": 1170,
         "2026-10-06": 947,
         "2026-10-25": 619,
-        "2026-10-26": 1551
+        "2026-10-26": 1551,
+        "2026-10-27": 1506
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 604
+      "trend_delta": 559
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12558,7 +12588,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "canonical_url": "github.com/hkuds/deeptutor",
       "company": null,
-      "stars": 812,
+      "stars": 1587,
       "momentum": 17,
       "tags": [
         "python"
@@ -12566,17 +12596,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-07-16": 172,
         "2026-07-17": 656,
         "2026-07-18": 531,
-        "2026-08-12": 812
+        "2026-08-12": 812,
+        "2026-10-27": 1587
       },
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
       "trend": "up",
-      "trend_delta": 281
+      "trend_delta": 775
     },
     {
       "id": "manual:alphalens",
@@ -12985,7 +13016,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "canonical_url": "github.com/nutlope/hallmark",
       "company": null,
-      "stars": 2235,
+      "stars": 2244,
       "momentum": 15,
       "tags": [
         "css"
@@ -12993,7 +13024,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 155,
@@ -13003,11 +13034,12 @@
         "2026-07-17": 3372,
         "2026-07-18": 1485,
         "2026-10-25": 455,
-        "2026-10-26": 2235
+        "2026-10-26": 2235,
+        "2026-10-27": 2244
       },
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "trend": "up",
-      "trend_delta": 750
+      "trend_delta": 759
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -17403,33 +17435,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:openai/skills",
-      "name": "skills",
-      "quadrant": "Tools",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
-      "company": "OpenAI",
-      "stars": 490,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-09-09",
-      "also_seen": [],
-      "stars_history": {
-        "2026-09-07": 46,
-        "2026-09-08": 351,
-        "2026-09-09": 490
-      },
-      "description": "Skills Catalog for Codex",
-      "trend": "up",
-      "trend_delta": 444
-    },
-    {
       "id": "github:anthropics/skills",
       "name": "skills",
       "quadrant": "Tools",
@@ -17458,6 +17463,33 @@
       "description": "Public repository for Agent Skills",
       "trend": "down",
       "trend_delta": -286
+    },
+    {
+      "id": "github:openai/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
+      "company": "OpenAI",
+      "stars": 490,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 46,
+        "2026-09-08": 351,
+        "2026-09-09": 490
+      },
+      "description": "Skills Catalog for Codex",
+      "trend": "up",
+      "trend_delta": 444
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -18381,6 +18413,29 @@
       "trend_delta": 0
     },
     {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "quadrant": "Techniques",
@@ -18410,29 +18465,6 @@
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "up",
       "trend_delta": 45
-    },
-    {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "also_seen": [],
-      "stars_history": {},
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "none",
-      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -23216,7 +23248,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 973,
+      "stars": 608,
       "momentum": 100,
       "tags": [
         "shell"
@@ -23224,7 +23256,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-17",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -23267,11 +23299,12 @@
         "2026-10-03": 556,
         "2026-10-04": 446,
         "2026-10-16": 582,
-        "2026-10-17": 973
+        "2026-10-17": 973,
+        "2026-10-27": 608
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "up",
-      "trend_delta": 527
+      "trend": "down",
+      "trend_delta": -365
     },
     {
       "id": "github:openai/plugins",
@@ -24415,7 +24448,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 853,
+      "stars": 896,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -24423,7 +24456,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-27",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -24457,11 +24490,12 @@
         "2026-10-16": 1013,
         "2026-10-17": 1057,
         "2026-10-18": 1145,
-        "2026-10-26": 853
+        "2026-10-26": 853,
+        "2026-10-27": 896
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "down",
-      "trend_delta": -292
+      "trend_delta": -249
     }
   ]
 }
