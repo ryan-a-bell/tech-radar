@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/makecindy/cindy
 canonical_url: github.com/makecindy/cindy
 company: null
-stars: 1296
+stars: 740
 momentum: 47
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-10-25
-last_seen: 2026-10-27
+last_seen: 2026-10-28
 also_seen: []
-stars_history: {"2026-10-25": 477, "2026-10-26": 1268, "2026-10-27": 1296}
+stars_history: {"2026-10-25": 477, "2026-10-26": 1268, "2026-10-27": 1296, "2026-10-28": 740}
 ---
 
 Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。

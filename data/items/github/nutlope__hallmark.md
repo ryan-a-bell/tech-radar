@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Nutlope/hallmark
 canonical_url: github.com/nutlope/hallmark
 company: null
-stars: 2244
+stars: 2109
 momentum: 15
 tags: ["css"]
 topics: []
 archived_at: null
 first_seen: 2026-07-13
-last_seen: 2026-10-27
+last_seen: 2026-10-28
 also_seen: []
-stars_history: {"2026-07-13": 155, "2026-07-14": 794, "2026-07-15": 1015, "2026-07-16": 1277, "2026-07-17": 3372, "2026-07-18": 1485, "2026-10-25": 455, "2026-10-26": 2235, "2026-10-27": 2244}
+stars_history: {"2026-07-13": 155, "2026-07-14": 794, "2026-07-15": 1015, "2026-07-16": 1277, "2026-07-17": 3372, "2026-07-18": 1485, "2026-10-25": 455, "2026-10-26": 2235, "2026-10-27": 2244, "2026-10-28": 2109}
 ---
 
 Anti-AI-slop design skill for Claude Code, Cursor, and Codex.

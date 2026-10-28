@@ -1,7 +1,86 @@
 {
-  "generated": "2026-10-27",
-  "count": 869,
+  "generated": "2026-10-28",
+  "count": 872,
   "items": [
+    {
+      "id": "github:xiaolai/the-craft-of-selfteaching",
+      "name": "the-craft-of-selfteaching",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+      "canonical_url": "github.com/xiaolai/the-craft-of-selfteaching",
+      "company": null,
+      "stars": 143,
+      "momentum": 14,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-28": 143
+      },
+      "description": "One has no future if one couldn't teach themself.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:expo/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/expo/skills",
+      "canonical_url": "github.com/expo/skills",
+      "company": null,
+      "stars": 212,
+      "momentum": 21,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-28": 212
+      },
+      "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:elayadesign/ai-design-skills",
+      "name": "ai-design-skills",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "canonical_url": "github.com/elayadesign/ai-design-skills",
+      "company": null,
+      "stars": 1395,
+      "momentum": 100,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-10-28",
+      "last_seen": "2026-10-28",
+      "also_seen": [],
+      "stars_history": {
+        "2026-10-28": 1395
+      },
+      "description": "A software project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:togg53192-cmd/jailbreaks",
       "name": "jailbreaks",
@@ -12,20 +91,21 @@
       "url": "https://github.com/togg53192-cmd/jailbreaks",
       "canonical_url": "github.com/togg53192-cmd/jailbreaks",
       "company": null,
-      "stars": 890,
+      "stars": 1478,
       "momentum": 89,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-27",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
-        "2026-10-27": 890
+        "2026-10-27": 890,
+        "2026-10-28": 1478
       },
       "description": "LIST OF ALL MY JAILBREAKS",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 588
     },
     {
       "id": "github:JetBrains/thinkrail",
@@ -37,7 +117,7 @@
       "url": "https://github.com/JetBrains/thinkrail",
       "canonical_url": "github.com/jetbrains/thinkrail",
       "company": "JetBrains",
-      "stars": 1173,
+      "stars": 1075,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -45,15 +125,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-10-26": 1156,
-        "2026-10-27": 1173
+        "2026-10-27": 1173,
+        "2026-10-28": 1075
       },
       "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work \u2014 The Vibe You Need",
-      "trend": "up",
-      "trend_delta": 17
+      "trend": "down",
+      "trend_delta": -81
     },
     {
       "id": "github:gitroomhq/postiz-app",
@@ -93,7 +174,7 @@
       "url": "https://github.com/nightly-labs/openbot",
       "canonical_url": "github.com/nightly-labs/openbot",
       "company": null,
-      "stars": 176,
+      "stars": 1053,
       "momentum": 8,
       "tags": [
         "typescript"
@@ -101,15 +182,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-10-26": 86,
-        "2026-10-27": 176
+        "2026-10-27": 176,
+        "2026-10-28": 1053
       },
       "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
       "trend": "up",
-      "trend_delta": 90
+      "trend_delta": 967
     },
     {
       "id": "github:alchaincyf/huashu-design",
@@ -283,7 +365,7 @@
       "url": "https://github.com/makecindy/cindy",
       "canonical_url": "github.com/makecindy/cindy",
       "company": null,
-      "stars": 1296,
+      "stars": 740,
       "momentum": 47,
       "tags": [
         "typescript"
@@ -291,16 +373,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-10-25": 477,
         "2026-10-26": 1268,
-        "2026-10-27": 1296
+        "2026-10-27": 1296,
+        "2026-10-28": 740
       },
       "description": "Consider it done. The open-source AI agent that works out of the box \u00b7 \u60f3\u5230\uff0c\u5c31\u80fd\u505a\u5230\u3002\u5f00\u6e90\u3001\u5f00\u7bb1\u5373\u7528\u7684 AI Agent\u3002",
       "trend": "up",
-      "trend_delta": 819
+      "trend_delta": 263
     },
     {
       "id": "manual:whisperx",
@@ -1269,7 +1352,7 @@
       "url": "https://github.com/hmjz100/LinkSwift",
       "canonical_url": "github.com/hmjz100/linkswift",
       "company": null,
-      "stars": 538,
+      "stars": 3209,
       "momentum": 53,
       "tags": [
         "javascript"
@@ -1277,14 +1360,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-17",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
-        "2026-10-17": 538
+        "2026-10-17": 538,
+        "2026-10-28": 3209
       },
       "description": "\u4e00\u4e2a\u57fa\u4e8e JavaScript \u7684\u7f51\u76d8\u6587\u4ef6\u4e0b\u8f7d\u5730\u5740\u83b7\u53d6\u5de5\u5177\u3002\u57fa\u4e8e\u3010\u7f51\u76d8\u76f4\u94fe\u4e0b\u8f7d\u52a9\u624b\u3011\u4fee\u6539 \uff0c\u652f\u6301 \u767e\u5ea6\u7f51\u76d8 / \u963f\u91cc\u4e91\u76d8 / \u4e2d\u56fd\u79fb\u52a8\u4e91\u76d8 / \u5929\u7ffc\u4e91\u76d8 / \u8fc5\u96f7\u4e91\u76d8 / \u5938\u514b\u7f51\u76d8 / UC\u7f51\u76d8 / 123\u4e91\u76d8 \u516b\u5927\u7f51\u76d8",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2671
     },
     {
       "id": "github:xerj-org/xerj",
@@ -8027,7 +8111,7 @@
       "url": "https://github.com/macro-inc/macro",
       "canonical_url": "github.com/macro-inc/macro",
       "company": null,
-      "stars": 436,
+      "stars": 106,
       "momentum": 22,
       "tags": [
         "rust"
@@ -8035,16 +8119,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-15",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 227,
         "2026-08-14": 1239,
-        "2026-08-15": 436
+        "2026-08-15": 436,
+        "2026-10-28": 106
       },
       "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM \u2014 @-linked together with shared AI memory.",
-      "trend": "up",
-      "trend_delta": 209
+      "trend": "down",
+      "trend_delta": -330
     },
     {
       "id": "github:localsend/localsend",
@@ -10391,7 +10476,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 1506,
+      "stars": 1471,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -10399,7 +10484,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -10413,11 +10498,12 @@
         "2026-10-06": 947,
         "2026-10-25": 619,
         "2026-10-26": 1551,
-        "2026-10-27": 1506
+        "2026-10-27": 1506,
+        "2026-10-28": 1471
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 559
+      "trend_delta": 524
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12588,7 +12674,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "canonical_url": "github.com/hkuds/deeptutor",
       "company": null,
-      "stars": 1587,
+      "stars": 2376,
       "momentum": 17,
       "tags": [
         "python"
@@ -12596,18 +12682,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-07-16": 172,
         "2026-07-17": 656,
         "2026-07-18": 531,
         "2026-08-12": 812,
-        "2026-10-27": 1587
+        "2026-10-27": 1587,
+        "2026-10-28": 2376
       },
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
       "trend": "up",
-      "trend_delta": 775
+      "trend_delta": 1564
     },
     {
       "id": "manual:alphalens",
@@ -13016,7 +13103,7 @@
       "url": "https://github.com/Nutlope/hallmark",
       "canonical_url": "github.com/nutlope/hallmark",
       "company": null,
-      "stars": 2244,
+      "stars": 2109,
       "momentum": 15,
       "tags": [
         "css"
@@ -13024,7 +13111,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 155,
@@ -13035,11 +13122,12 @@
         "2026-07-18": 1485,
         "2026-10-25": 455,
         "2026-10-26": 2235,
-        "2026-10-27": 2244
+        "2026-10-27": 2244,
+        "2026-10-28": 2109
       },
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "trend": "up",
-      "trend_delta": 759
+      "trend_delta": 624
     },
     {
       "id": "manual:github:SYSTRAN/faster-whisper",
@@ -22416,7 +22504,7 @@
       "url": "https://github.com/ruvnet/RuView",
       "canonical_url": "github.com/ruvnet/ruview",
       "company": null,
-      "stars": 383,
+      "stars": 415,
       "momentum": 43,
       "tags": [
         "rust"
@@ -22424,7 +22512,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 439,
@@ -22438,11 +22526,12 @@
         "2026-07-25": 1022,
         "2026-08-11": 154,
         "2026-09-14": 370,
-        "2026-09-15": 383
+        "2026-09-15": 383,
+        "2026-10-28": 415
       },
       "description": "\u03c0 RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection \u2014 all without a single pixel of video.",
       "trend": "up",
-      "trend_delta": 229
+      "trend_delta": 32
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
@@ -23248,7 +23337,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 608,
+      "stars": 1096,
       "momentum": 100,
       "tags": [
         "shell"
@@ -23256,7 +23345,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-10-28",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -23300,11 +23389,12 @@
         "2026-10-04": 446,
         "2026-10-16": 582,
         "2026-10-17": 973,
-        "2026-10-27": 608
+        "2026-10-27": 608,
+        "2026-10-28": 1096
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -365
+      "trend": "up",
+      "trend_delta": 123
     },
     {
       "id": "github:openai/plugins",
