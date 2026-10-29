@@ -6,7 +6,7 @@ description: Check tracked conferences (INCOSE IS, RAMS, …) for new or updated
 
 Conferences live in the **Learning Library** as `type: conference` items (see
 `learning-manage`). Unlike a book or a video, a conference **recurs**: one
-`learning/<id>.md` holds the whole series and a list of `editions`, one per
+`content/learning/<id>.md` holds the whole series and a list of `editions`, one per
 year (`year | dates | location | status | cfp | url`). This skill is the
 "scraper" for that list — it visits each tracked conference's website, reads
 off the next occurrence, and records it. Extraction is done by reading the
@@ -96,9 +96,9 @@ python learning.py edition "<name>" --year 2026 --dates "..." --location "..."
 
 - Topics use the shared vocabulary (**AI, ML, Agents, Skills, Prompts, Trading,
   Quant, RAG, Data Feeds**); most professional conferences map to `Skills`.
-- The source of truth is `learning/<id>.md`. The CLI rebuilds
+- The source of truth is `content/learning/<id>.md`. The CLI rebuilds
   `data/learning.json`; if you ever hand-edit an edition line, run
   `python build_learning.py` to republish. Edition line format and the edition
-  status vocabulary are documented in `learning/README.md`.
+  status vocabulary are documented in `content/learning/README.md`.
 - This skill discovers/records dates only — deciding to attend (moving an
   edition to `Registered` / `Attended`) is a human call via `learning-manage`.

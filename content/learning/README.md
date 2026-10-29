@@ -1,7 +1,7 @@
 # Learning Library
 
 The books, articles, videos, certifications, and conferences tracked alongside
-the tech radar, each one a Markdown file. Like `people/` and `projects/`, this
+the tech radar, each one a Markdown file. Like `content/people/` and `content/projects/`, this
 directory is the **source of truth** — hand-written prose, not scraped JSON.
 
 `build_learning.py` reads every `*.md` here (except this README) and writes
@@ -113,7 +113,7 @@ python learning.py add "RAMS" --type conference --author "IEEE" \
 python learning.py edition RAMS --year 2026 --dates "2026-01-19..01-22" \
   --location "Miramar Beach, FL" --status Registered
 
-# or hand-edit a learning/<id>.md, then republish:
+# or hand-edit a content/learning/<id>.md, then republish:
 python build_learning.py
 
 # build the static site and preview

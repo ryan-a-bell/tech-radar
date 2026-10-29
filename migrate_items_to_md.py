@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-migrate_items_to_md.py — one-time migration: data/items/**/*.json -> *.md
+migrate_items_to_md.py — one-time migration: content/tech/**/*.json -> *.md
 
 Converts every per-technology JSON file to the new Markdown + YAML
 frontmatter format (radar_core.dump_item_md), verifies the conversion is

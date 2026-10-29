@@ -30,7 +30,7 @@ arXiv (like HN/Lobsters) can flood the inbox with papers that never become
 
 - **Way 1 — Promotion-gated persistence (preferred).** Scrapers write to an
   ephemeral `data/inbox/` that's pruned each run (auto-expire uncurated items
-  using the staleness logic). Items graduate to the permanent `data/items/`
+  using the staleness logic). Items graduate to the permanent `content/tech/`
   only when a human promotes them. Noisy sources become consequence-free
   because their noise auto-expires.
 - **Way 2 — Ingest filtering + per-source cap.** Keep one store, but gate

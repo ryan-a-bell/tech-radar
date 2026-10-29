@@ -18,7 +18,7 @@ Run this weekly, or on a schedule that complements the daily `runner.py` routine
 | Speed | Fast (~10s) | Slower (~2–5 min) |
 | Frequency | Daily | Weekly |
 
-Both routines write to the same `data/items/` store and dedup correctly —
+Both routines write to the same `content/tech/` store and dedup correctly —
 running both means broader coverage with no duplicates.
 
 ## Setup
@@ -135,7 +135,7 @@ After you have processed all sources and added any new technologies:
 2. Check how many new items you added:
      python radar.py list --ring Discovered
 3. If you added anything, stage and commit:
-     git add data/items/ data/radar.json
+     git add content/tech/ data/radar.json
      git commit -m "llm-discovery: YYYY-MM-DD — N new technologies"
      git push
 4. If you added nothing, exit cleanly with no commit.

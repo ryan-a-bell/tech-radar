@@ -69,8 +69,8 @@ def main():
     shutil.copy(os.path.join(HERE, "data", "radar.json"),
                 os.path.join(SITE, "data", "radar.json"))
 
-    # 6. Learning Library page — rebuild data/learning.json from learning/*.md
-    #    first (same md → aggregate-json contract as projects/ and people/),
+    # 6. Learning Library page — rebuild data/learning.json from content/learning/*.md
+    #    first (same md → aggregate-json contract as content/projects/ and content/people/),
     #    then ship it. learning.html is copied as-is; learning.jsx gets the same
     #    export-default strip as dashboard.jsx (expects a global LearningApp).
     from build_learning import build_learning_json
@@ -101,7 +101,7 @@ def main():
         shutil.copy(sim_json, os.path.join(SITE, "data", "similarity.json"))
 
     # 8. Projects page — self-contained (inline JSX), copied as-is. Rebuild
-    #    data/projects.json from projects/*.md first, then ship it. The optional
+    #    data/projects.json from content/projects/*.md first, then ship it. The optional
     #    data/project_similarity.json (from build_similarity.py) upgrades the
     #    tool recommendations from in-browser TF-IDF to semantic embeddings.
     from build_projects import build_projects_json
@@ -114,7 +114,7 @@ def main():
         shutil.copy(proj_json, os.path.join(SITE, "data", "projects.json"))
     # project artifacts (SysML models, risk registers, docs) ship as-is so the
     # Artifacts panel can link straight to the source file
-    proj_art = os.path.join(HERE, "projects", "artifacts")
+    proj_art = os.path.join(HERE, "content", "projects", "artifacts")
     if os.path.isdir(proj_art):
         shutil.copytree(proj_art, os.path.join(SITE, "projects", "artifacts"))
     proj_sim = os.path.join(HERE, "data", "project_similarity.json")
@@ -122,7 +122,7 @@ def main():
         shutil.copy(proj_sim, os.path.join(SITE, "data", "project_similarity.json"))
 
     # 9. People page — self-contained (inline JSX), copied as-is. Rebuild
-    #    data/people.json from people/*.md first, then ship it. The page reuses
+    #    data/people.json from content/people/*.md first, then ship it. The page reuses
     #    the Projects recommender in-browser (TF-IDF), and also reads the
     #    radar.json + projects.json already copied above for tech and staffing
     #    recommendations — no extra precomputed file required.

@@ -42,7 +42,7 @@ problems it solves — that is what gets matched against tool descriptions.
 
 ## Artifacts — models, risks & engineering data
 
-Drop engineering data for a project into `projects/artifacts/<project-id>/`
+Drop engineering data for a project into `content/projects/artifacts/<project-id>/`
 and `build_projects.py` picks it up into an **Artifacts** panel on the project:
 
 | File | What the panel shows |
@@ -77,11 +77,11 @@ issue), or *shared opportunity* — with the words they share.
   `model_terms`, which the Projects recommender, Discover and
   `build_similarity.py` all fold into the project's text.
 
-`build_site.py` copies `projects/artifacts/` into the site so the panel links
+`build_site.py` copies `content/projects/artifacts/` into the site so the panel links
 straight to each source file.
 
 ```
-projects/artifacts/sar-fleet-coordinator/
+content/projects/artifacts/sar-fleet-coordinator/
   sar-fleet.sysml
   risk-register.csv
 ```

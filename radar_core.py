@@ -2,7 +2,7 @@
 radar_core.py — shared library for the technology radar.
 
 Storage model: one Markdown file with YAML frontmatter per technology.
-  data/items/<source>/<slug>.md
+  content/tech/<source>/<slug>.md
 
 Structured fields (ring, quadrant, company, topics, momentum, ...) live in
 the frontmatter; the free-text `description` is the Markdown body, so it's
@@ -21,7 +21,7 @@ from datetime import date
 # --- paths -------------------------------------------------------------
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(HERE, "data")
-ITEMS_DIR = os.path.join(DATA_DIR, "items")
+ITEMS_DIR = os.path.join(HERE, "content", "tech")
 RAW_DIR = os.path.join(DATA_DIR, "raw")
 RADAR_JSON = os.path.join(DATA_DIR, "radar.json")  # generated for the dashboard
 
@@ -69,7 +69,7 @@ def _slugify(text):
 
 def id_to_path(item_id):
     """Map an id to its file path. github:oven-sh/bun ->
-    data/items/github/oven-sh__bun.md"""
+    content/tech/github/oven-sh__bun.md"""
     source, _, key = item_id.partition(":")
     return os.path.join(ITEMS_DIR, _slugify(source), _slugify(key) + ".md")
 

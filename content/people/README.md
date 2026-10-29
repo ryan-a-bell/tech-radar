@@ -1,8 +1,8 @@
 # People
 
 People and their skills, tracked in Markdown and mapped against the technology
-radar — the same idea as `projects/`, with the noun swapped. This directory is
-kept **separate** from `data/` (scraped tech) and `projects/` (personal work):
+radar — the same idea as `content/projects/`, with the noun swapped. This directory is
+kept **separate** from `data/` (scraped tech) and `content/projects/` (personal work):
 people are hand-written profiles, not generated output.
 
 `build_people.py` reads every `*.md` here (except this README), resolves each

@@ -43,7 +43,7 @@ import math
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ITEMS_DIR = os.path.join(HERE, "data", "items")
+ITEMS_DIR = os.path.join(HERE, "content", "tech")
 OUT = os.path.join(HERE, "data", "similarity.json")
 PROJ_OUT = os.path.join(HERE, "data", "project_similarity.json")
 PEOPLE_OUT = os.path.join(HERE, "data", "people_similarity.json")

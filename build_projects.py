@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-build_projects.py — aggregate the Markdown project files in projects/ into
+build_projects.py — aggregate the Markdown project files in content/projects/ into
 data/projects.json for the PROJECTS tab (web/projects.html).
 
   python build_projects.py
 
-Each projects/*.md is a project: a YAML-style front-matter block between `---`
-fences, then a free-text body (see projects/README.md for the format). This
+Each content/projects/*.md is a project: a YAML-style front-matter block between `---`
+fences, then a free-text body (see content/projects/README.md for the format). This
 script parses them, resolves each project's declared `stack` against the
 technology radar (by id or exact name), and writes one aggregate JSON file.
 
@@ -33,7 +33,7 @@ Output shape (data/projects.json):
         "artifacts": { "models": [...], "rio": {...} | null, "files": [...] } } ] }
 
 Artifacts are optional engineering data dropped next to the project under
-projects/artifacts/<project-id>/:
+content/projects/artifacts/<project-id>/:
   *.sysml          — SysML v2 textual models, summarised (packages, defs, trace)
   *risk*.csv       — a risk / issue / opportunity (RIO) register export (CMPro
                      or any tool that writes CSV); risks and opportunities are
@@ -52,7 +52,7 @@ import re
 import radar_core
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PROJECTS_DIR = os.path.join(HERE, "projects")
+PROJECTS_DIR = os.path.join(HERE, "content", "projects")
 ARTIFACTS_DIR = os.path.join(PROJECTS_DIR, "artifacts")
 OUT = os.path.join(HERE, "data", "projects.json")
 
@@ -361,7 +361,7 @@ def parse_rio_register(text):
 
 
 def load_artifacts(project_id, root=ARTIFACTS_DIR):
-    """Collect projects/artifacts/<project_id>/** into the record's artifacts
+    """Collect content/projects/artifacts/<project_id>/** into the record's artifacts
     block, or None when the project has no artifact folder."""
     base = os.path.join(root, project_id)
     if not os.path.isdir(base):
@@ -396,7 +396,7 @@ def load_artifacts(project_id, root=ARTIFACTS_DIR):
 
 # --- assembly ---------------------------------------------------------------
 def load_projects():
-    """Parse every projects/*.md (except README.md) into raw dicts."""
+    """Parse every content/projects/*.md (except README.md) into raw dicts."""
     out = []
     if not os.path.isdir(PROJECTS_DIR):
         return out
