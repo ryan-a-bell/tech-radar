@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-build_learning.py — aggregate the Markdown learning files in learning/ into
+build_learning.py — aggregate the Markdown learning files in content/learning/ into
 data/learning.json for the LEARNING tab (web/learning.html).
 
   python build_learning.py
 
-Each learning/*.md is one item (book · article · video · certification): a
+Each content/learning/*.md is one item (book · article · video · certification): a
 YAML-style front-matter block between `---` fences, then a free-text body that
-is the blurb (see learning/README.md for the format). This script parses them
+is the blurb (see content/learning/README.md for the format). This script parses them
 via learning_core and writes one aggregate JSON file.
 
-This mirrors how build_projects.py / build_people.py turn people/*.md and
-projects/*.md into their aggregate JSON. The Learning Library page reads the
+This mirrors how build_projects.py / build_people.py turn content/people/*.md and
+content/projects/*.md into their aggregate JSON. The Learning Library page reads the
 generated data/learning.json directly, so running this IS the publish step for
 hand-edited files; the learning.py CLI runs it for you after every write.
 
@@ -29,7 +29,7 @@ OUT = core.LEARNING_JSON
 
 
 def build_learning_json(day=None):
-    """Read learning/*.md and (re)write data/learning.json. Returns the item
+    """Read content/learning/*.md and (re)write data/learning.json. Returns the item
     count. `ensure_ascii=True` keeps the on-disk JSON byte-identical in style to
     what the old single-file store produced (unicode escaped as \\uXXXX)."""
     items = core.load_items()

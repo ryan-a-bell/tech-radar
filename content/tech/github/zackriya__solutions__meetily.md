@@ -1,0 +1,22 @@
+---
+id: github:Zackriya-Solutions/meetily
+name: meetily
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/Zackriya-Solutions/meetily
+canonical_url: github.com/zackriya-solutions/meetily
+company: null
+stars: 1777
+momentum: 71
+tags: ["rust"]
+topics: []
+archived_at: null
+first_seen: 2026-07-05
+last_seen: 2026-07-08
+also_seen: []
+stars_history: {"2026-07-05": 718, "2026-07-06": 1409, "2026-07-07": 2494, "2026-07-08": 1777}
+---
+
+Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai ) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows.

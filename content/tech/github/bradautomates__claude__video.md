@@ -1,0 +1,22 @@
+---
+id: github:bradautomates/claude-video
+name: claude-video
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/bradautomates/claude-video
+canonical_url: github.com/bradautomates/claude-video
+company: null
+stars: 988
+momentum: 42
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-07
+last_seen: 2026-07-29
+also_seen: []
+stars_history: {"2026-07-07": 427, "2026-07-08": 965, "2026-07-09": 951, "2026-07-10": 718, "2026-07-28": 434, "2026-07-29": 988}
+---
+
+Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.

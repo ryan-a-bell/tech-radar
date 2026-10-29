@@ -1,0 +1,22 @@
+---
+id: github:hasaneyldrm/exercises-dataset
+name: exercises-dataset
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/hasaneyldrm/exercises-dataset
+canonical_url: github.com/hasaneyldrm/exercises-dataset
+company: null
+stars: 710
+momentum: 100
+tags: ["html"]
+topics: []
+archived_at: null
+first_seen: 2026-07-01
+last_seen: 2026-07-17
+also_seen: []
+stars_history: {"2026-07-01": 1343, "2026-07-02": 2470, "2026-07-03": 938, "2026-07-14": 451, "2026-07-15": 851, "2026-07-16": 949, "2026-07-17": 710}
+---
+
+A comprehensive dataset of 433 fitness exercises. Each entry includes name, category, target muscle group, equipment, instructions, thumbnail image, and animation video.

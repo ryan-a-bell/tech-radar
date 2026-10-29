@@ -1,0 +1,22 @@
+---
+id: github:MoonshotAI/kimi-cli
+name: kimi-cli
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/MoonshotAI/kimi-cli
+canonical_url: github.com/moonshotai/kimi-cli
+company: null
+stars: 410
+momentum: 6
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-19
+last_seen: 2026-07-21
+also_seen: []
+stars_history: {"2026-07-19": 65, "2026-07-20": 410, "2026-07-21": 410}
+---
+
+Kimi Code CLI is your next CLI agent.

@@ -1,0 +1,22 @@
+---
+id: github:ansible/ansible
+name: ansible
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/ansible/ansible
+canonical_url: github.com/ansible/ansible
+company: null
+stars: 30
+momentum: 6
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-04
+last_seen: 2026-08-02
+also_seen: []
+stars_history: {"2026-07-04": 65, "2026-07-12": 24, "2026-07-31": 29, "2026-08-02": 30}
+---
+
+Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com .

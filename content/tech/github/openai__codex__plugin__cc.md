@@ -1,0 +1,22 @@
+---
+id: github:openai/codex-plugin-cc
+name: codex-plugin-cc
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/openai/codex-plugin-cc
+canonical_url: github.com/openai/codex-plugin-cc
+company: OpenAI
+stars: 906
+momentum: 35
+tags: ["javascript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-03
+last_seen: 2026-07-07
+also_seen: []
+stars_history: {"2026-07-03": 352, "2026-07-04": 634, "2026-07-05": 718, "2026-07-06": 1532, "2026-07-07": 906}
+---
+
+Use Codex from Claude Code to review code or delegate tasks.

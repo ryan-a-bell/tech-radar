@@ -17,7 +17,7 @@ to track, rating, or changing a personal attendance status, use
 # Conference Tracking — Scrape Updates
 
 Conferences live in the **Learning Library** as `type: conference` items.
-Unlike a book or a video, a conference **recurs**: one `learning/<id>.md` holds
+Unlike a book or a video, a conference **recurs**: one `content/learning/<id>.md` holds
 the whole series and a list of `editions`, one per year
 (`year | dates | location | status | cfp | url`). This skill is the "scraper"
 for that list — it visits each tracked conference's website, reads off the next
@@ -74,8 +74,8 @@ python learning.py edition "<name>" --year 2026 --dates "..." --location "..."
 
 - Topics use the shared vocabulary (AI, ML, Agents, Skills, Prompts, Trading,
   Quant, RAG, Data Feeds); most professional conferences map to `Skills`.
-- Source of truth is `learning/<id>.md`; the CLI rebuilds `data/learning.json`.
+- Source of truth is `content/learning/<id>.md`; the CLI rebuilds `data/learning.json`.
   Hand-edited an edition line? Run `python build_learning.py`. Edition line
-  format + the edition status vocabulary are documented in `learning/README.md`.
+  format + the edition status vocabulary are documented in `content/learning/README.md`.
 - Discovers/records dates only — deciding to attend (moving an edition to
   `Registered` / `Attended`) is a human call via `learning-manage`.

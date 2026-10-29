@@ -7,7 +7,7 @@ description: Manage and classify items in the technology radar — promote/demot
 The scraper discovers tech and parks it in the **Discovered** ring. This
 skill is the human side: triaging that queue and curating the radar. All
 changes go through `radar.py`, which edits the per-tech Markdown +
-YAML-frontmatter files (`data/items/<source>/<slug>.md`) and rebuilds
+YAML-frontmatter files (`content/tech/<source>/<slug>.md`) and rebuilds
 `data/radar.json` for the dashboard automatically.
 
 ## The rings

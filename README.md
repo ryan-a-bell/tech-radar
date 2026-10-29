@@ -8,12 +8,12 @@ A self-hosted technology radar that automatically discovers emerging technologie
 
 ```
 GitHub Trending ──┐
-Reddit            ├──► runner.py ──► data/items/ ──► data/radar.json ──► dashboard
+Reddit            ├──► runner.py ──► content/tech/ ──► data/radar.json ──► dashboard
 RSS Feeds         ┘                       ▲
                                     radar.py (human curation)
 ```
 
-1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one Markdown file (YAML frontmatter + a free-text description body) per technology into `data/items/`.
+1. **Discovery** — `runner.py` runs all scrapers, deduplicates across sources using canonical GitHub URLs, and writes one Markdown file (YAML frontmatter + a free-text description body) per technology into `content/tech/`.
 2. **Curation** — `radar.py` lets you triage the inbox (`Discovered` ring), promote items to `Assess`, `Trial`, or `Adopted`, archive dead tech, assign topics, and fix metadata. Every change rebuilds `data/radar.json` automatically.
 3. **Deploy** — `build_site.py` assembles a self-contained `site/` folder you can push to GitHub Pages, Netlify, or serve locally.
 
@@ -30,7 +30,7 @@ RSS Feeds         ┘                       ▲
 ## Quick start
 
 ```bash
-# 1. Run discovery (writes to data/items/, builds data/radar.json)
+# 1. Run discovery (writes to content/tech/, builds data/radar.json)
 python runner.py
 
 # 2. See what was found
@@ -100,7 +100,7 @@ python edit_server.py 8080     # custom port
 Serves the **same** `index.html` + `dashboard.jsx` as the public site, but
 answers `GET /config.js` with `window.RADAR_EDIT = true`. That single flag
 unlocks a ring editor in the detail panels; clicking a ring POSTs to
-`/api/promote`, writes the change to `data/items/*.md`, and rebuilds
+`/api/promote`, writes the change to `content/tech/*.md`, and rebuilds
 `radar.json` immediately — the same effect as `radar.py promote`, just visual.
 
 There is one dashboard, not two. Edit affordances are gated behind the runtime
@@ -191,7 +191,7 @@ article, video, and a technology can share a topic tag.
 A companion page (`web/learning.html` + `web/learning.jsx`) for tracking
 learning content — **books, articles, videos, certifications, and
 conferences** — alongside the technologies they relate to. Hand-curated in Markdown under
-`learning/` (one file per item, like `people/` and `projects/`), which
+`content/learning/` (one file per item, like `content/people/` and `content/projects/`), which
 `build_learning.py` aggregates into `data/learning.json`. Manage it with
 `learning.py` (the `learning-manage` skill):
 
@@ -202,16 +202,16 @@ python learning.py rate <id-or-title> 5
 python learning.py add "<Title>" --type book --author "..." --topics "ML,AI"
 ```
 
-The CLI writes the `learning/*.md` source **and** refreshes
+The CLI writes the `content/learning/*.md` source **and** refreshes
 `data/learning.json` in one step, so a CLI edit publishes immediately. Prefer
-to hand-edit a `learning/<id>.md`? Run `python build_learning.py` to republish.
+to hand-edit a `content/learning/<id>.md`? Run `python build_learning.py` to republish.
 Read-only in the browser, same as the deployed dashboard. See
-`learning/README.md` for the file format.
+`content/learning/README.md` for the file format.
 
 ### Syncing books from Calibre
 
 `calibre_sync.py` pulls a [Calibre](https://calibre-ebook.com/) library through
-the official `calibredb` CLI and writes/updates one `learning/<id>.md` **book**
+the official `calibredb` CLI and writes/updates one `content/learning/<id>.md` **book**
 file per title, then refreshes `data/learning.json` — the same source-of-truth
 write the `learning.py` CLI does:
 
@@ -226,7 +226,7 @@ Calibre owns the *facts* (title, author, year, rating, `pages`, blurb,
 tags→topics, date added). *Reading state* (`status`, `pages_read`, and the
 `started`/`finished`/`queued`/`shelved` date stamps) comes from Calibre custom
 columns (`#status`, `#pages_read`, `#started`, `#finished`) when they exist, and
-is otherwise **preserved from the existing `learning/<id>.md`** — so curated
+is otherwise **preserved from the existing `content/learning/<id>.md`** — so curated
 status and blurbs are never clobbered. New library books are added as
 `Discovered`; existing `book` items not found in the library are left untouched
 and reported (non-book items — articles, videos, certifications — are never
@@ -264,7 +264,7 @@ A **conference** recurs, so its single file tracks the series and one `editions`
 entry per year (`year | dates | location | status | cfp | url`) plus a
 `recurrence` cadence. Each year is recorded with `python learning.py edition`,
 and the `conference-track` skill refreshes those editions from the conferences'
-websites. See `learning/README.md` for the edition line format and edition
+websites. See `content/learning/README.md` for the edition line format and edition
 status vocabulary.
 
 ```json
@@ -359,7 +359,7 @@ A companion page (`web/projects.html`) that maps **personal projects** to the
 technology radar — a hybrid of two ideas:
 
 - **Declared stack (what you ARE using)** — each project is one Markdown file in
-  `projects/`, with a `stack:` list in its front-matter referencing tools by
+  `content/projects/`, with a `stack:` list in its front-matter referencing tools by
   radar id (`manual:cursor`) or name (`Cursor`). `build_projects.py` resolves
   these against the radar and writes `data/projects.json`.
 - **Recommended tools (what MIGHT be useful)** — cosine similarity between the
@@ -387,7 +387,7 @@ The page has three views (top-left switch):
 
 Projects live in their own directory, separate from the scraped technology
 JSON under `data/` — hand-written prose, not discovery output. See
-`projects/README.md` for the full file format.
+`content/projects/README.md` for the full file format.
 
 ### Project schema (Markdown front-matter)
 
@@ -419,7 +419,7 @@ path as the Tool Similarity page's `data/similarity.json`). When that file is
 present the PROJECTS tab prefers it; otherwise it falls back to TF-IDF.
 
 ```bash
-python build_projects.py     # projects/*.md -> data/projects.json
+python build_projects.py     # content/projects/*.md -> data/projects.json
 python build_similarity.py   # optional — semantic project→tool recommendations
 python build_site.py         # build_site also refreshes projects.json
 ```
@@ -430,7 +430,7 @@ python build_site.py         # build_site also refreshes projects.json
 
 A companion page (`web/people.html`) that maps **people and their skills** onto
 the technology radar and the Projects board — the Projects page with the noun
-swapped. Each person is one Markdown file in `people/`, with a `skills:` list in
+swapped. Each person is one Markdown file in `content/people/`, with a `skills:` list in
 its front-matter referencing tools by radar id (`manual:gs-quant`) or name
 (`gs-quant`). `build_people.py` resolves these against the radar and writes
 `data/people.json`.
@@ -481,11 +481,11 @@ Prose bio — what the person works on. This is the text the recommender embeds.
 
 `topics` and `interests` draw from the same `TOPICS` vocabulary as the tech
 radar, Learning Library, and Projects, so a person, a project, a book, and a
-technology can all share a topic tag. See `people/README.md` for the full
+technology can all share a topic tag. See `content/people/README.md` for the full
 format.
 
 ```bash
-python build_people.py       # people/*.md -> data/people.json
+python build_people.py       # content/people/*.md -> data/people.json
 python build_similarity.py   # optional — semantic person→tool/project/person matrices
 python build_site.py         # build_site also refreshes people.json
 ```
@@ -517,12 +517,12 @@ tech-radar/
 ├── radar.py            # curation CLI — human triage and ring management
 ├── radar_core.py       # shared library — item schema, dedup, persistence
 ├── build_site.py       # static site assembler — bundles web/ → site/
-├── build_projects.py   # projects/*.md → data/projects.json (declared stacks)
-├── build_people.py     # people/*.md → data/people.json (skills + interests)
-├── build_learning.py   # learning/*.md → data/learning.json (books/articles/videos/certs)
-├── learning.py         # Learning Library CLI — writes learning/*.md + rebuilds the JSON
+├── build_projects.py   # content/projects/*.md → data/projects.json (declared stacks)
+├── build_people.py     # content/people/*.md → data/people.json (skills + interests)
+├── build_learning.py   # content/learning/*.md → data/learning.json (books/articles/videos/certs)
+├── learning.py         # Learning Library CLI — writes content/learning/*.md + rebuilds the JSON
 ├── learning_core.py    # shared library — item schema, Markdown parse/serialize
-├── calibre_sync.py     # Calibre (calibredb) → learning/*.md book files
+├── calibre_sync.py     # Calibre (calibredb) → content/learning/*.md book files
 ├── build_similarity.py # optional — precompute semantic similarity matrices
 ├── edit_server.py      # local server — serves web/ with editing turned on
 ├── scrapers/           # discovery sources — one module per source
@@ -540,22 +540,24 @@ tech-radar/
 │   ├── projects.html   # Projects page — declared stack + recommended tools
 │   ├── people.html     # People page — skills + tech/staffing/peer recommendations
 │   └── concept-drawings/   # prototype dashboard concepts (dashboard2/3.jsx)
-├── projects/           # personal projects — one Markdown file each (hand-written)
-├── people/             # people + their skills — one Markdown file each (hand-written)
-├── learning/           # Learning Library — one Markdown file per item (source of truth)
-├── notebooks/          # calibre_sync.ipynb — async Calibre pull → learning/*.md
+├── content/            # everything you edit by hand — one Markdown file per item
+│   ├── tech/           # the radar: one file (YAML frontmatter) per technology
+│   │   ├── github/     #   …grouped by discovery source
+│   │   ├── manual/
+│   │   └── substack/
+│   ├── learning/       # Learning Library — books/articles/videos/certs/conferences
+│   ├── people/         # people + their skills
+│   └── projects/       # personal projects (+ artifacts/<project-id>/)
+├── notebooks/          # calibre_sync.ipynb — async Calibre pull → content/learning/*.md
 ├── tests/              # stdlib unittest suite for radar_core + learning_core
 ├── docs/               # routine guides + architecture.html diagram
 ├── SKILL-manage.md     # Skill definition for Claude-assisted curation
-├── data/
-│   ├── items/          # one Markdown file (YAML frontmatter) per technology
-│   │   ├── github/
-│   │   └── reddit/
+├── data/               # generated output only — never hand-edit
 │   ├── raw/            # audit trail of raw scrape output (generated)
 │   ├── radar.json      # aggregated payload for the dashboard (generated)
-│   ├── projects.json   # aggregated projects payload (generated from projects/)
-│   ├── people.json     # aggregated people payload (generated from people/)
-│   └── learning.json    # aggregated Learning Library payload (generated from learning/)
+│   ├── projects.json   # aggregated projects payload (generated from content/projects/)
+│   ├── people.json     # aggregated people payload (generated from content/people/)
+│   └── learning.json    # aggregated Learning Library payload (generated from content/learning/)
 └── site/               # deployable static site (generated by build_site.py)
     ├── index.html
     ├── config.js        # window.RADAR_EDIT = false → read-only public build

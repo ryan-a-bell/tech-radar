@@ -1,0 +1,22 @@
+---
+id: github:hesreallyhim/awesome-claude-code
+name: awesome-claude-code
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/hesreallyhim/awesome-claude-code
+canonical_url: github.com/hesreallyhim/awesome-claude-code
+company: null
+stars: 144
+momentum: 14
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-06
+last_seen: 2026-07-08
+also_seen: []
+stars_history: {"2026-07-06": 148, "2026-07-08": 144}
+---
+
+A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins

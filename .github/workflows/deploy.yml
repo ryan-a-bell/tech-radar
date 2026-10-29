@@ -20,9 +20,8 @@ on:
     branches: [main]
     paths:
       - "web/**"
-      - "build_site.py"
-      - "build_projects.py"
-      - "projects/**"
+      - "content/**"
+      - "build_*.py"
       - "data/**"
       - ".github/workflows/deploy.yml"
 
@@ -60,10 +59,10 @@ jobs:
       - name: Commit any new discoveries
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
-          if [ -n "$(git status --porcelain data/)" ]; then
+          if [ -n "$(git status --porcelain data/ content/tech/)" ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/
+            git add data/ content/tech/
             git commit -m "discovery: $(date -u +%Y-%m-%d) — automated scrape"
             git push
           else

@@ -1,0 +1,22 @@
+---
+id: github:usekaneo/kaneo
+name: kaneo
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/usekaneo/kaneo
+canonical_url: github.com/usekaneo/kaneo
+company: null
+stars: 559
+momentum: 19
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-08-01
+last_seen: 2026-08-05
+also_seen: []
+stars_history: {"2026-08-01": 194, "2026-08-02": 760, "2026-08-03": 496, "2026-08-04": 665, "2026-08-05": 559}
+---
+
+🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.

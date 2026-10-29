@@ -1,0 +1,22 @@
+---
+id: github:google/guava
+name: guava
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/google/guava
+canonical_url: github.com/google/guava
+company: Google
+stars: 93
+momentum: 1
+tags: ["java"]
+topics: []
+archived_at: null
+first_seen: 2026-08-07
+last_seen: 2026-08-09
+also_seen: []
+stars_history: {"2026-08-07": 13, "2026-08-08": 152, "2026-08-09": 93}
+---
+
+Google core libraries for Java

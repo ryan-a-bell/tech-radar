@@ -10,9 +10,9 @@ via Calibre's official `calibredb` CLI.
 
 How it fits the Learning Library
 --------------------------------
-The source of truth is one Markdown file per item under learning/ (see
-learning/README.md). This script does what the learning.py CLI does — write
-`learning/<id>.md` and then refresh data/learning.json — but the field values
+The source of truth is one Markdown file per item under content/learning/ (see
+content/learning/README.md). This script does what the learning.py CLI does — write
+`content/learning/<id>.md` and then refresh data/learning.json — but the field values
 come from Calibre instead of a human. It only ever writes `type: book` items;
 articles, videos, and certifications are never touched.
 
@@ -26,11 +26,11 @@ Calibre owns the *facts* of a book:
 The *reading state* — status / pages_read / started / finished — has no native
 Calibre field, so it comes from Calibre **custom columns** (`#status`,
 `#pages_read`, `#started`, `#finished`, `#pages`) when they exist, and is
-otherwise **preserved from the existing learning/<id>.md**. This is what keeps
+otherwise **preserved from the existing content/learning/<id>.md**. This is what keeps
 hand-curated status and blurbs from being clobbered. A library book with no
 existing file is added as `Discovered`.
 
-Books already in learning/ but no longer in the Calibre library are left
+Books already in content/learning/ but no longer in the Calibre library are left
 untouched and reported (never deleted).
 
 Matching: a Calibre book is matched to an existing item by case-insensitive
@@ -41,7 +41,7 @@ The pull (talking to Calibre — slow, I/O) and the write (map + merge + save �
 fast, pure) are separate entry points so a caller can run them independently:
 
     records = fetch_calibre_books(library)        # or: await fetch_calibre_books_async(...)
-    sync_books(records=records)                   # map + merge + write learning/*.md + refresh JSON
+    sync_books(records=records)                   # map + merge + write content/learning/*.md + refresh JSON
 """
 
 import argparse
@@ -327,7 +327,7 @@ def plan_sync(records, items):
 
 def _report(added, updated, orphans):
     print(f"  {len(added)} new, {len(updated)} updated, {len(orphans)} in "
-          f"learning/ but not in Calibre (kept)")
+          f"content/learning/ but not in Calibre (kept)")
     for it in added:
         print(f"    + {it['title']} — {it['author']}  ({it['id']})")
     for it in orphans:
@@ -336,7 +336,7 @@ def _report(added, updated, orphans):
 
 def sync_books(records=None, library=None, calibredb="calibredb", dry_run=False):
     """Map + merge + write. If `records` is given (e.g. from an already-completed
-    async pull) the Calibre fetch is skipped. Writes each affected learning/<id>.md
+    async pull) the Calibre fetch is skipped. Writes each affected content/learning/<id>.md
     and refreshes data/learning.json. Returns (added, updated, orphans)."""
     if records is None:
         records = fetch_calibre_books(library, calibredb)
@@ -351,7 +351,7 @@ def sync_books(records=None, library=None, calibredb="calibredb", dry_run=False)
     for item in added + updated:
         core.save_item(item)
     n = build_learning_json()
-    print(f"  ✓ learning/ + learning.json updated ({n} items total)")
+    print(f"  ✓ content/learning/ + learning.json updated ({n} items total)")
     return added, updated, orphans
 
 

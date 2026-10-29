@@ -250,7 +250,7 @@ C4Container
         Container(curation, "Curation CLI", "Python 3 CLI", "Human-in-the-loop triage: promote/demote between rings, set metadata/topics, archive, find stale inbox items, manual add")
         Container(builder, "Site Builder", "Python 3", "Bundles web/ into a deployable static site/ folder; ships config.js as read-only")
         Container(editsrv, "Edit Server", "Python 3 http.server", "Serves web/ locally with window.RADAR_EDIT=true; ring clicks POST /api/promote and write through to disk")
-        ContainerDb(itemstore, "Item Store", "Markdown + YAML frontmatter files", "data/items/source/slug.md — one file per technology; structured fields live in frontmatter, description is the body; the ring field drives dashboard classification")
+        ContainerDb(itemstore, "Item Store", "Markdown + YAML frontmatter files", "content/tech/source/slug.md — one file per technology; structured fields live in frontmatter, description is the body; the ring field drives dashboard classification")
         ContainerDb(manifest, "Radar Manifest", "Single JSON file", "data/radar.json — aggregated payload with computed trend fields, read by the dashboard")
         Container(dashboard, "Web Dashboard", "React 18 + CDN Babel", "web/: Atlas and Index views + edit mode — no build step. config.js flag gates editing")
     }
@@ -317,7 +317,7 @@ C4Component
         Component(rss_scraper, "RSS Scraper [stub]", "scrapers/rss_feeds.py", "Registered and wired; discover() returns [] until feed parsing is implemented")
         Component(dedup, "Dedup Engine", "radar_core.py", "Builds a canonical-URL index from all stored items; detects when a new discovery is the same repo seen elsewhere")
         Component(persist, "Item Persister", "radar_core.py — save_new, touch_last_seen, record_also_seen", "Writes new items; refreshes last_seen and star history on re-encounters; merges also_seen for cross-source matches")
-        Component(builder, "Manifest Builder", "runner.py — build_radar_json", "Walks data/items/, computes star trend for each item, sorts, writes data/radar.json")
+        Component(builder, "Manifest Builder", "runner.py — build_radar_json", "Walks content/tech/, computes star trend for each item, sorts, writes data/radar.json")
     }
 
     ContainerDb(items, "Item Store", "JSON files")
@@ -449,7 +449,7 @@ sequenceDiagram
     participant R as runner.py
     participant S as Scraper(s)
     participant C as radar_core.py
-    participant FS as data/items/
+    participant FS as content/tech/
     participant Raw as data/raw/
     participant MF as data/radar.json
 
@@ -472,7 +472,7 @@ sequenceDiagram
                 C->>FS: append to also_seen, refresh last_seen
             else genuinely new technology
                 R->>C: save_new(item)
-                C->>FS: write data/items/source/slug.md
+                C->>FS: write content/tech/source/slug.md
                 Note over R,C: add canonical_url to in-memory index
             end
         end
@@ -502,7 +502,7 @@ sequenceDiagram
     actor Eng as Engineer
     participant CLI as radar.py
     participant Core as radar_core.py
-    participant FS as data/items/
+    participant FS as content/tech/
     participant Build as runner.build_radar_json
     participant MF as data/radar.json
 
@@ -562,7 +562,7 @@ sequenceDiagram
     participant Br as Browser (dashboard.jsx)
     participant ES as edit_server.py
     participant Core as radar_core.py
-    participant FS as data/items/
+    participant FS as content/tech/
     participant MF as data/radar.json
 
     Eng->>ES: python edit_server.py
@@ -607,7 +607,7 @@ sequenceDiagram
     participant CI as GitHub Actions
     participant Build as build_site.py
     participant RB as runner.build_radar_json
-    participant FS as data/items/
+    participant FS as content/tech/
     participant MF as data/radar.json
     participant Site as site/
     participant Pages as GitHub Pages

@@ -1,0 +1,22 @@
+---
+id: github:TencentCloud/TencentDB-Agent-Memory
+name: TencentDB-Agent-Memory
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/TencentCloud/TencentDB-Agent-Memory
+canonical_url: github.com/tencentcloud/tencentdb-agent-memory
+company: null
+stars: 1057
+momentum: 31
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-09
+last_seen: 2026-08-07
+also_seen: []
+stars_history: {"2026-07-09": 318, "2026-07-11": 123, "2026-08-02": 227, "2026-08-03": 602, "2026-08-04": 1090, "2026-08-05": 1111, "2026-08-06": 1892, "2026-08-07": 1057}
+---
+
+TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.

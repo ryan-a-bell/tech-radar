@@ -1,0 +1,22 @@
+---
+id: manual:qc-strategybacktest
+name: QC-StrategyBacktest
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/rccannizzaro/QC-StrategyBacktest
+canonical_url: github.com/rccannizzaro/qc-strategybacktest
+company: ""
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant", "Trading"]
+archived_at: null
+first_seen: 2026-07-16
+last_seen: 2026-07-16
+also_seen: []
+stars_history: {}
+---
+
+Python backtesting tool for the QuantConnect platform; runs historical strategy validation via a single main script plus supporting library modules.

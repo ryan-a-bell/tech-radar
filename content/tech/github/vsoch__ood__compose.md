@@ -1,0 +1,22 @@
+---
+id: github:vsoch/ood-compose
+name: ood-compose
+quadrant: Platforms
+ring: Assess
+source: GitHub
+discovered_by: manual
+url: https://github.com/vsoch/ood-compose
+canonical_url: github.com/vsoch/ood-compose
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-06-30
+last_seen: 2026-06-30
+also_seen: []
+stars_history: {}
+---
+
+Docker compose to bring up Open OnDemand with SLURM

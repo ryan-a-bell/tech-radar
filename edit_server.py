@@ -9,7 +9,7 @@ Serves the SAME web/ bundle (index.html + dashboard.jsx) as the public site —
 /data/* is mapped to the repo-root data/ dir — but with one difference: it
 answers GET /config.js with `window.RADAR_EDIT = true`, which
 unlocks the in-browser ring editor. Ring changes POST to /api/promote and are
-written straight to data/items/*.md, rebuilding radar.json immediately.
+written straight to content/tech/*.md, rebuilding radar.json immediately.
 
 The deployed GitHub Pages build ships config.js as `false` and has no backend,
 so the public radar can't be edited — this server is the only thing that turns

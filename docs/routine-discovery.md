@@ -9,7 +9,7 @@ laptop is closed.
 1. Runs `python runner.py` against the repo
 2. Scrapes GitHub Trending, Reddit, and RSS feeds (RSS is a stub until implemented)
 3. Deduplicates across sources using canonical GitHub URLs
-4. If anything new was found, commits `data/items/` and `data/radar.json` and pushes to main
+4. If anything new was found, commits `content/tech/` and `data/radar.json` and pushes to main
 5. If nothing new was found, exits cleanly with no commit
 
 Human-curated fields (`ring`, `quadrant`, `company`) are never touched by the runner.
@@ -39,7 +39,7 @@ Steps:
    cross-source-merged discoveries, e.g.:
      "--- totals: 4 new, 18 known, 2 cross-source merges, 0 scraper errors"
 3. If new > 0 or cross-source merges > 0:
-   a. Stage data/items/ and data/radar.json.
+   a. Stage content/tech/ and data/radar.json.
    b. Commit with the message:
         discovery: YYYY-MM-DD — N new, M merged
       where YYYY-MM-DD is today's date and N/M are the actual counts.

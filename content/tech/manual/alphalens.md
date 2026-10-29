@@ -1,0 +1,22 @@
+---
+id: manual:alphalens
+name: AlphaLens
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/quantopian/alphalens
+canonical_url: github.com/quantopian/alphalens
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant"]
+archived_at: null
+first_seen: 2026-07-16
+last_seen: 2026-07-16
+also_seen: []
+stars_history: {}
+---
+
+Python library for performance analysis of predictive (alpha) stock factors, producing returns, information-coefficient, and turnover statistics; in maintenance mode since 2020.

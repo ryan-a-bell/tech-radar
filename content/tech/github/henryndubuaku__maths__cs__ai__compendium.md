@@ -1,0 +1,22 @@
+---
+id: github:HenryNdubuaku/maths-cs-ai-compendium
+name: maths-cs-ai-compendium
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/HenryNdubuaku/maths-cs-ai-compendium
+canonical_url: github.com/henryndubuaku/maths-cs-ai-compendium
+company: null
+stars: 200
+momentum: 11
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-15
+last_seen: 2026-07-18
+also_seen: []
+stars_history: {"2026-07-15": 112, "2026-07-16": 725, "2026-07-18": 200}
+---
+
+Become a cracked AI/ML Research Engineer

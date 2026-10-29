@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-build_people.py — aggregate the Markdown people files in people/ into
+build_people.py — aggregate the Markdown people files in content/people/ into
 data/people.json for the PEOPLE tab (web/people.html).
 
   python build_people.py
 
-Each people/*.md is a person: a YAML-style front-matter block between `---`
-fences, then a free-text bio (see people/README.md for the format). This script
+Each content/people/*.md is a person: a YAML-style front-matter block between `---`
+fences, then a free-text bio (see content/people/README.md for the format). This script
 parses them, resolves each person's declared `skills` against the technology
 radar (by id or exact name), and writes one aggregate JSON file.
 
@@ -66,7 +66,7 @@ from build_projects import (
 )
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-PEOPLE_DIR = os.path.join(HERE, "people")
+PEOPLE_DIR = os.path.join(HERE, "content", "people")
 OUT = os.path.join(HERE, "data", "people.json")
 
 # rolodex / contact block — all optional, all additive.
@@ -134,7 +134,7 @@ def parse_notes(fm):
 
 
 def load_people():
-    """Parse every people/*.md (except README.md) into raw dicts."""
+    """Parse every content/people/*.md (except README.md) into raw dicts."""
     out = []
     if not os.path.isdir(PEOPLE_DIR):
         return out

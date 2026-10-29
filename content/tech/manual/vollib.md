@@ -1,0 +1,22 @@
+---
+id: manual:vollib
+name: vollib
+quadrant: Tools
+ring: Assess
+source: Manual
+discovered_by: manual
+url: https://github.com/vollib/vollib
+canonical_url: github.com/vollib/vollib
+company: null
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant"]
+archived_at: null
+first_seen: 2026-07-02
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {}
+---
+
+Library for calculating option prices, implied volatility, and Greeks (Black, Black-Scholes, Black-Scholes-Merton).

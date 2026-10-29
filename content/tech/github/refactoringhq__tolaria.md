@@ -1,0 +1,22 @@
+---
+id: github:refactoringhq/tolaria
+name: tolaria
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/refactoringhq/tolaria
+canonical_url: github.com/refactoringhq/tolaria
+company: null
+stars: 150
+momentum: 24
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-06-07
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {"2026-06-07": 242, "2026-06-08": 649, "2026-06-09": 821, "2026-06-10": 618, "2026-06-11": 612, "2026-06-12": 369, "2026-06-13": 369, "2026-06-29": 249, "2026-06-30": 280, "2026-07-02": 150}
+---
+
+Desktop app to manage markdown knowledge bases

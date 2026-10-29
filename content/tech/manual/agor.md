@@ -1,0 +1,22 @@
+---
+id: manual:agor
+name: Agor
+quadrant: Tools
+ring: Discovered
+source: Manual
+discovered_by: manual
+url: https://github.com/preset-io/agor
+canonical_url: github.com/preset-io/agor
+company: Preset
+stars: 0
+momentum: 0
+tags: []
+topics: ["Agents", "AI"]
+archived_at: null
+first_seen: 2026-07-04
+last_seen: 2026-07-04
+also_seen: []
+stars_history: {}
+---
+
+Self-hosted, multiplayer web workspace that orchestrates coding agents (Claude Code, Codex, Gemini) on isolated git worktrees with real-time collaboration.

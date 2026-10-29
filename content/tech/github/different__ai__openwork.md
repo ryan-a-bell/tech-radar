@@ -1,0 +1,22 @@
+---
+id: github:different-ai/openwork
+name: openwork
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/different-ai/openwork
+canonical_url: github.com/different-ai/openwork
+company: null
+stars: 280
+momentum: 9
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-07-30
+last_seen: 2026-08-03
+also_seen: []
+stars_history: {"2026-07-30": 97, "2026-07-31": 915, "2026-08-01": 806, "2026-08-03": 280}
+---
+
+The open-source alternative to Claude Cowork (powered by opencode)

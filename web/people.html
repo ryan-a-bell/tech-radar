@@ -554,8 +554,8 @@ function App() {
       <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
         <TopBar count={0} />
         <div style={{ padding: 24, color: "var(--muted)" }}>
-          No people yet. Add a Markdown file under <code>people/</code> and run{" "}
-          <code>python build_people.py</code>. See <code>people/README.md</code> for the format.
+          No people yet. Add a Markdown file under <code>content/people/</code> and run{" "}
+          <code>python build_people.py</code>. See <code>content/people/README.md</code> for the format.
         </div>
       </div>
     );
@@ -1320,7 +1320,7 @@ function ProjectRecs({ recs, rankBy, hasProjects }) {
       <>
         <SectionTitle>Matching projects</SectionTitle>
         <div style={{ color: "var(--muted)", marginTop: 8 }}>
-          No <code>data/projects.json</code> — add projects under <code>projects/</code> and run{" "}
+          No <code>data/projects.json</code> — add projects under <code>content/projects/</code> and run{" "}
           <code>python build_projects.py</code> to enable staffing suggestions.
         </div>
       </>

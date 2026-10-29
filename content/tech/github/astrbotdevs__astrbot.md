@@ -1,0 +1,22 @@
+---
+id: github:AstrBotDevs/AstrBot
+name: AstrBot
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/AstrBotDevs/AstrBot
+canonical_url: github.com/astrbotdevs/astrbot
+company: null
+stars: 416
+momentum: 8
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-20
+last_seen: 2026-07-22
+also_seen: []
+stars_history: {"2026-07-20": 83, "2026-07-21": 317, "2026-07-22": 416}
+---
+
+AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨

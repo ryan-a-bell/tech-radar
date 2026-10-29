@@ -1,0 +1,22 @@
+---
+id: github:hashicorp/terraform
+name: terraform
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/hashicorp/terraform
+canonical_url: github.com/hashicorp/terraform
+company: HashiCorp
+stars: 229
+momentum: 17
+tags: ["go"]
+topics: []
+archived_at: null
+first_seen: 2026-07-11
+last_seen: 2026-07-12
+also_seen: []
+stars_history: {"2026-07-11": 172, "2026-07-12": 229}
+---
+
+Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.

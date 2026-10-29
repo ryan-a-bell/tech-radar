@@ -1,0 +1,22 @@
+---
+id: manual:openbb
+name: OpenBB
+quadrant: Tools
+ring: Trial
+source: Manual
+discovered_by: manual
+url: https://github.com/OpenBB-finance/OpenBB
+canonical_url: github.com/openbb-finance/openbb
+company: OpenBB-finance
+stars: 0
+momentum: 0
+tags: []
+topics: ["Quant"]
+archived_at: null
+first_seen: 2026-07-02
+last_seen: 2026-07-02
+also_seen: []
+stars_history: {}
+---
+
+Open source investment research platform aggregating financial data, analytics, and Python tooling.

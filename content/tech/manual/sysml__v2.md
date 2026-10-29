@@ -1,0 +1,22 @@
+---
+id: manual:sysml-v2
+name: SysML v2
+quadrant: Languages
+ring: Adopted
+source: Manual
+discovered_by: manual
+url: https://www.omg.org/spec/SysML/
+canonical_url: null
+company: OMG
+stars: 0
+momentum: 0
+tags: []
+topics: []
+archived_at: null
+first_seen: 2026-07-12
+last_seen: 2026-07-12
+also_seen: []
+stars_history: {}
+---
+
+OMG Systems Modeling Language v2 — next-generation MBSE language with a formal metamodel and textual + graphical notation. OMG spec: https://www.omg.org/spec/SysML/ · https://www.omgsysml.org/ · Reference implementation & releases: https://github.com/Systems-Modeling/SysML-v2-Release

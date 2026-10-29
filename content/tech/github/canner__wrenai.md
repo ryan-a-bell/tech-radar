@@ -1,0 +1,22 @@
+---
+id: github:Canner/WrenAI
+name: WrenAI
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/Canner/WrenAI
+canonical_url: github.com/canner/wrenai
+company: null
+stars: 121
+momentum: 12
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-20
+last_seen: 2026-07-20
+also_seen: []
+stars_history: {"2026-07-20": 121}
+---
+
+GenBI (Generative BI) for AI agents, an open-source, governed text-to-SQL through an open context layer that turns natural-language questions into trusted dashboards, charts, and SQL across 20+ data sources, such as BigQuery, Snowflake, PostgreSQL, ClickHouse, Amazon Redshift, Databricks and more.

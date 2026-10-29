@@ -1,0 +1,22 @@
+---
+id: github:harvard-edge/cs249r_book
+name: cs249r_book
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/harvard-edge/cs249r_book
+canonical_url: github.com/harvard-edge/cs249r_book
+company: null
+stars: 329
+momentum: 6
+tags: ["python"]
+topics: []
+archived_at: null
+first_seen: 2026-07-03
+last_seen: 2026-07-06
+also_seen: []
+stars_history: {"2026-07-03": 68, "2026-07-04": 793, "2026-07-05": 443, "2026-07-06": 329}
+---
+
+Machine Learning Systems
