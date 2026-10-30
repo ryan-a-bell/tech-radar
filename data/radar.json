@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29",
+  "generated": "2026-10-30",
   "count": 878,
   "items": [
     {
@@ -40,7 +40,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "canonical_url": "github.com/milind-soni/openmausbot",
       "company": null,
-      "stars": 1190,
+      "stars": 899,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -48,14 +48,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
-        "2026-10-29": 1190
+        "2026-10-29": 1190,
+        "2026-10-30": 899
       },
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -291
     },
     {
       "id": "github:CopilotKit/OpenBot",
@@ -67,7 +68,7 @@
       "url": "https://github.com/CopilotKit/OpenBot",
       "canonical_url": "github.com/copilotkit/openbot",
       "company": null,
-      "stars": 240,
+      "stars": 707,
       "momentum": 24,
       "tags": [
         "typescript"
@@ -75,14 +76,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
-        "2026-10-29": 240
+        "2026-10-29": 240,
+        "2026-10-30": 707
       },
       "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 467
     },
     {
       "id": "manual:meshy",
@@ -173,7 +175,7 @@
       "url": "https://github.com/expo/skills",
       "canonical_url": "github.com/expo/skills",
       "company": null,
-      "stars": 212,
+      "stars": 233,
       "momentum": 21,
       "tags": [
         "shell"
@@ -181,14 +183,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-28",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
-        "2026-10-28": 212
+        "2026-10-28": 212,
+        "2026-10-30": 233
       },
       "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 21
     },
     {
       "id": "github:elayadesign/ai-design-skills",
@@ -252,22 +255,23 @@
       "url": "https://github.com/togg53192-cmd/jailbreaks",
       "canonical_url": "github.com/togg53192-cmd/jailbreaks",
       "company": null,
-      "stars": 1610,
+      "stars": 2053,
       "momentum": 89,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-27",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-10-27": 890,
         "2026-10-28": 1478,
-        "2026-10-29": 1610
+        "2026-10-29": 1610,
+        "2026-10-30": 2053
       },
       "description": "LIST OF ALL MY JAILBREAKS",
       "trend": "up",
-      "trend_delta": 720
+      "trend_delta": 1163
     },
     {
       "id": "github:JetBrains/thinkrail",
@@ -279,7 +283,7 @@
       "url": "https://github.com/JetBrains/thinkrail",
       "canonical_url": "github.com/jetbrains/thinkrail",
       "company": "JetBrains",
-      "stars": 1116,
+      "stars": 717,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -287,17 +291,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-10-26": 1156,
         "2026-10-27": 1173,
         "2026-10-28": 1075,
-        "2026-10-29": 1116
+        "2026-10-29": 1116,
+        "2026-10-30": 717
       },
       "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work \u2014 The Vibe You Need",
       "trend": "down",
-      "trend_delta": -40
+      "trend_delta": -439
     },
     {
       "id": "github:gitroomhq/postiz-app",
@@ -585,7 +590,7 @@
       "url": "https://github.com/Renhuai123/ziwei-doushu",
       "canonical_url": "github.com/renhuai123/ziwei-doushu",
       "company": null,
-      "stars": 546,
+      "stars": 1146,
       "momentum": 54,
       "tags": [
         "typescript"
@@ -593,14 +598,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
-        "2026-10-24": 546
+        "2026-10-24": 546,
+        "2026-10-30": 1146
       },
       "description": "\u7d2b\u5fae\u6597\u6570\u5f00\u6e90\u6392\u76d8\u5f15\u64ce \u2014 \u57fa\u4e8e\u502a\u6d77\u53a6\u300a\u5929\u7eaa\u300b\u4f53\u7cfb\uff0c\u542b\u5b8c\u6574\u6392\u76d8\u7b97\u6cd5\u3001\u56db\u5316\u7cfb\u7edf\u3001\u683c\u5c40\u77e5\u8bc6\u5e93\u3001\u53e4\u7c4d\u539f\u6587\u6570\u636e",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 600
     },
     {
       "id": "github:php/php-src",
@@ -5123,7 +5129,7 @@
       "url": "https://github.com/lightpanda-io/browser",
       "canonical_url": "github.com/lightpanda-io/browser",
       "company": null,
-      "stars": 58,
+      "stars": 559,
       "momentum": 5,
       "tags": [
         "zig"
@@ -5131,14 +5137,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
-        "2026-09-08": 58
+        "2026-09-08": 58,
+        "2026-10-30": 559
       },
       "description": "Lightpanda: the headless browser designed for AI and automation",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 501
     },
     {
       "id": "github:MoonTechLab/LunaTV",
@@ -6563,7 +6570,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 324,
+      "stars": 1145,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -6571,7 +6578,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
@@ -6580,11 +6587,12 @@
         "2026-10-06": 536,
         "2026-10-07": 578,
         "2026-10-08": 662,
-        "2026-10-29": 324
+        "2026-10-29": 324,
+        "2026-10-30": 1145
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-      "trend": "down",
-      "trend_delta": -338
+      "trend": "up",
+      "trend_delta": 483
     },
     {
       "id": "github:tt-a1i/archify",
@@ -8276,7 +8284,7 @@
       "url": "https://github.com/macro-inc/macro",
       "canonical_url": "github.com/macro-inc/macro",
       "company": null,
-      "stars": 106,
+      "stars": 379,
       "momentum": 22,
       "tags": [
         "rust"
@@ -8284,17 +8292,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 227,
         "2026-08-14": 1239,
         "2026-08-15": 436,
-        "2026-10-28": 106
+        "2026-10-28": 106,
+        "2026-10-30": 379
       },
       "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM \u2014 @-linked together with shared AI memory.",
       "trend": "down",
-      "trend_delta": -330
+      "trend_delta": -57
     },
     {
       "id": "github:localsend/localsend",
@@ -10641,7 +10650,7 @@
       "url": "https://github.com/pbakaus/impeccable",
       "canonical_url": "github.com/pbakaus/impeccable",
       "company": null,
-      "stars": 2881,
+      "stars": 2299,
       "momentum": 41,
       "tags": [
         "javascript"
@@ -10649,7 +10658,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 413,
@@ -10665,11 +10674,12 @@
         "2026-10-26": 1551,
         "2026-10-27": 1506,
         "2026-10-28": 1471,
-        "2026-10-29": 2881
+        "2026-10-29": 2881,
+        "2026-10-30": 2299
       },
       "description": "The design language that makes your AI harness better at design.",
       "trend": "up",
-      "trend_delta": 1934
+      "trend_delta": 1352
     },
     {
       "id": "github:permissionlesstech/bitchat-android",
@@ -12840,7 +12850,7 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "canonical_url": "github.com/hkuds/deeptutor",
       "company": null,
-      "stars": 1926,
+      "stars": 2282,
       "momentum": 17,
       "tags": [
         "python"
@@ -12848,7 +12858,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-16",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-16": 172,
@@ -12857,11 +12867,12 @@
         "2026-08-12": 812,
         "2026-10-27": 1587,
         "2026-10-28": 2376,
-        "2026-10-29": 1926
+        "2026-10-29": 1926,
+        "2026-10-30": 2282
       },
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/ .",
       "trend": "up",
-      "trend_delta": 1114
+      "trend_delta": 1470
     },
     {
       "id": "manual:alphalens",
@@ -13160,7 +13171,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "canonical_url": "github.com/pingdotgg/t3code",
       "company": null,
-      "stars": 487,
+      "stars": 920,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -13168,7 +13179,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-05",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 75,
@@ -13176,11 +13187,12 @@
         "2026-08-10": 163,
         "2026-08-11": 389,
         "2026-10-04": 492,
-        "2026-10-05": 487
+        "2026-10-05": 487,
+        "2026-10-30": 920
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 98
+      "trend_delta": 433
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -17699,13 +17711,13 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 189,
+      "stars": 287,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
@@ -17713,11 +17725,12 @@
         "2026-09-04": 281,
         "2026-09-05": 511,
         "2026-09-06": 475,
-        "2026-09-26": 189
+        "2026-09-26": 189,
+        "2026-10-30": 287
       },
       "description": "Public repository for Agent Skills",
-      "trend": "down",
-      "trend_delta": -286
+      "trend": "up",
+      "trend_delta": 98
     },
     {
       "id": "github:openai/skills",
@@ -21155,7 +21168,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1737,
+      "stars": 882,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21163,7 +21176,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -21201,11 +21214,12 @@
         "2026-10-07": 1406,
         "2026-10-08": 1770,
         "2026-10-09": 1696,
-        "2026-10-10": 1737
+        "2026-10-10": 1737,
+        "2026-10-30": 882
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "trend": "up",
-      "trend_delta": 782
+      "trend": "down",
+      "trend_delta": -855
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -23504,7 +23518,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 1037,
+      "stars": 1255,
       "momentum": 100,
       "tags": [
         "shell"
@@ -23512,7 +23526,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-10-30",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -23558,11 +23572,12 @@
         "2026-10-17": 973,
         "2026-10-27": 608,
         "2026-10-28": 1096,
-        "2026-10-29": 1037
+        "2026-10-29": 1037,
+        "2026-10-30": 1255
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 64
+      "trend_delta": 282
     },
     {
       "id": "github:openai/plugins",

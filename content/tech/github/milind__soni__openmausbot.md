@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/milind-soni/OpenMausBot
 canonical_url: github.com/milind-soni/openmausbot
 company: null
-stars: 1190
+stars: 899
 momentum: 100
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-10-29
-last_seen: 2026-10-29
+last_seen: 2026-10-30
 also_seen: []
-stars_history: {"2026-10-29": 1190}
+stars_history: {"2026-10-29": 1190, "2026-10-30": 899}
 ---
 
 Open-source Grok Bot alternative with a virtual machine that bots can use
