@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/lightpanda-io/browser
 canonical_url: github.com/lightpanda-io/browser
 company: null
-stars: 559
+stars: 929
 momentum: 5
 tags: ["zig"]
 topics: []
 archived_at: null
 first_seen: 2026-09-08
-last_seen: 2026-10-30
+last_seen: 2026-10-31
 also_seen: []
-stars_history: {"2026-09-08": 58, "2026-10-30": 559}
+stars_history: {"2026-09-08": 58, "2026-10-30": 559, "2026-10-31": 929}
 ---
 
 Lightpanda: the headless browser designed for AI and automation
