@@ -1,7 +1,57 @@
 {
-  "generated": "2026-10-30",
-  "count": 878,
+  "generated": "2026-10-31",
+  "count": 880,
   "items": [
+    {
+      "id": "manual:automl",
+      "name": "AutoML",
+      "quadrant": "Techniques",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://automl.space",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "ML"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Automated machine learning: automating the expert-heavy parts of the ML workflow \u2014 model selection, hyperparameter optimization (e.g. Bayesian/multi-fidelity HPO), neural architecture search, and pipeline/ensemble construction. Tools like auto-sklearn, SMAC, and AutoGluon implement it.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:autogluon",
+      "name": "AutoGluon",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/autogluon/autogluon",
+      "canonical_url": "github.com/autogluon/autogluon",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "ML"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-10-31",
+      "last_seen": "2026-10-31",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Open-source (Apache-2.0) AutoML library that trains and stacks/ensembles many models in a few lines of code, with predictors for tabular data, time-series forecasting, and multimodal inputs. A strong baseline-in-minutes for tabular and forecasting problems (e.g. trading/quant feature sets) before hand-tuning.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:vibegamedev-com",
       "name": "Vibegamedev.com",
