@@ -1,7 +1,169 @@
 {
-  "generated": "2026-10-31",
-  "count": 883,
+  "generated": "2026-11-01",
+  "count": 889,
   "items": [
+    {
+      "id": "github:kornia/kornia",
+      "name": "kornia",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kornia/kornia",
+      "canonical_url": "github.com/kornia/kornia",
+      "company": null,
+      "stars": 88,
+      "momentum": 8,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 88
+      },
+      "description": "\ud83d\udc0d Geometric Computer Vision Library for Spatial AI",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anomalyco/hex",
+      "name": "hex",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anomalyco/hex",
+      "canonical_url": "github.com/anomalyco/hex",
+      "company": null,
+      "stars": 172,
+      "momentum": 17,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 172
+      },
+      "description": "Local-first voice dictation for macOS. Hold a shortcut, speak, and paste into any app. Native Rust, on-device speech recognition, and a Linux beta.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:patchy631/ai-engineering-hub",
+      "name": "ai-engineering-hub",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/patchy631/ai-engineering-hub",
+      "canonical_url": "github.com/patchy631/ai-engineering-hub",
+      "company": null,
+      "stars": 573,
+      "momentum": 57,
+      "tags": [
+        "jupyter notebook"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 573
+      },
+      "description": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:cjpais/Handy",
+      "name": "Handy",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/cjpais/Handy",
+      "canonical_url": "github.com/cjpais/handy",
+      "company": null,
+      "stars": 611,
+      "momentum": 61,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 611
+      },
+      "description": "A free, open source, and extensible speech-to-text application that works completely offline.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:FlashML-org/FreeToken",
+      "name": "FreeToken",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/FlashML-org/FreeToken",
+      "canonical_url": "github.com/flashml-org/freetoken",
+      "company": null,
+      "stars": 232,
+      "momentum": 23,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 232
+      },
+      "description": "FreeToken brings datacenter-scale model serving to your desktop. Run massive models locally, fast and efficiently.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:beenuar/AiSOC",
+      "name": "AiSOC",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/beenuar/AiSOC",
+      "canonical_url": "github.com/beenuar/aisoc",
+      "company": null,
+      "stars": 436,
+      "momentum": 43,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-01": 436
+      },
+      "description": "Open-source AI Security Operations Center: alert fusion, LLM-agent triage, MITRE ATT&CK investigation, and a replayable decision ledger for every agent step. Self-hostable, runs with no API keys, MIT licensed. Ships an MCP server for Claude, Cursor and Continue.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:vorssaint/vorssaint-utils",
       "name": "vorssaint-utils",
@@ -171,7 +333,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "canonical_url": "github.com/milind-soni/openmausbot",
       "company": null,
-      "stars": 1304,
+      "stars": 919,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -179,16 +341,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 1190,
         "2026-10-30": 899,
-        "2026-10-31": 1304
+        "2026-10-31": 1304,
+        "2026-11-01": 919
       },
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "trend": "up",
-      "trend_delta": 114
+      "trend": "down",
+      "trend_delta": -271
     },
     {
       "id": "github:CopilotKit/OpenBot",
@@ -200,7 +363,7 @@
       "url": "https://github.com/CopilotKit/OpenBot",
       "canonical_url": "github.com/copilotkit/openbot",
       "company": null,
-      "stars": 707,
+      "stars": 178,
       "momentum": 24,
       "tags": [
         "typescript"
@@ -208,15 +371,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-30",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 240,
-        "2026-10-30": 707
+        "2026-10-30": 707,
+        "2026-11-01": 178
       },
       "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "trend": "up",
-      "trend_delta": 467
+      "trend": "down",
+      "trend_delta": -62
     },
     {
       "id": "manual:meshy",
@@ -253,7 +417,7 @@
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
       "canonical_url": "github.com/donchitos/claude-code-game-studios",
       "company": null,
-      "stars": 1347,
+      "stars": 970,
       "momentum": 53,
       "tags": [
         "shell"
@@ -261,15 +425,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 538,
-        "2026-10-31": 1347
+        "2026-10-31": 1347,
+        "2026-11-01": 970
       },
       "description": "Turn Claude Code into a full game dev studio \u2014 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "trend": "up",
-      "trend_delta": 809
+      "trend_delta": 432
     },
     {
       "id": "github:xiaolai/the-craft-of-selfteaching",
@@ -388,23 +553,24 @@
       "url": "https://github.com/togg53192-cmd/jailbreaks",
       "canonical_url": "github.com/togg53192-cmd/jailbreaks",
       "company": null,
-      "stars": 2053,
+      "stars": 730,
       "momentum": 89,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-27",
-      "last_seen": "2026-10-30",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-10-27": 890,
         "2026-10-28": 1478,
         "2026-10-29": 1610,
-        "2026-10-30": 2053
+        "2026-10-30": 2053,
+        "2026-11-01": 730
       },
       "description": "LIST OF ALL MY JAILBREAKS",
-      "trend": "up",
-      "trend_delta": 1163
+      "trend": "down",
+      "trend_delta": -160
     },
     {
       "id": "github:JetBrains/thinkrail",
@@ -723,7 +889,7 @@
       "url": "https://github.com/Renhuai123/ziwei-doushu",
       "canonical_url": "github.com/renhuai123/ziwei-doushu",
       "company": null,
-      "stars": 1093,
+      "stars": 953,
       "momentum": 54,
       "tags": [
         "typescript"
@@ -731,16 +897,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-24",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-10-24": 546,
         "2026-10-30": 1146,
-        "2026-10-31": 1093
+        "2026-10-31": 1093,
+        "2026-11-01": 953
       },
       "description": "\u7d2b\u5fae\u6597\u6570\u5f00\u6e90\u6392\u76d8\u5f15\u64ce \u2014 \u57fa\u4e8e\u502a\u6d77\u53a6\u300a\u5929\u7eaa\u300b\u4f53\u7cfb\uff0c\u542b\u5b8c\u6574\u6392\u76d8\u7b97\u6cd5\u3001\u56db\u5316\u7cfb\u7edf\u3001\u683c\u5c40\u77e5\u8bc6\u5e93\u3001\u53e4\u7c4d\u539f\u6587\u6570\u636e",
       "trend": "up",
-      "trend_delta": 547
+      "trend_delta": 407
     },
     {
       "id": "github:php/php-src",
@@ -5263,7 +5430,7 @@
       "url": "https://github.com/lightpanda-io/browser",
       "canonical_url": "github.com/lightpanda-io/browser",
       "company": null,
-      "stars": 929,
+      "stars": 827,
       "momentum": 5,
       "tags": [
         "zig"
@@ -5271,16 +5438,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-08",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-09-08": 58,
         "2026-10-30": 559,
-        "2026-10-31": 929
+        "2026-10-31": 929,
+        "2026-11-01": 827
       },
       "description": "Lightpanda: the headless browser designed for AI and automation",
       "trend": "up",
-      "trend_delta": 871
+      "trend_delta": 769
     },
     {
       "id": "github:MoonTechLab/LunaTV",
@@ -6706,7 +6874,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 1723,
+      "stars": 1527,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -6714,7 +6882,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
@@ -6725,11 +6893,12 @@
         "2026-10-08": 662,
         "2026-10-29": 324,
         "2026-10-30": 1145,
-        "2026-10-31": 1723
+        "2026-10-31": 1723,
+        "2026-11-01": 1527
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 1061
+      "trend_delta": 865
     },
     {
       "id": "github:tt-a1i/archify",
@@ -7982,7 +8151,7 @@
       "url": "https://github.com/public-apis/public-apis",
       "canonical_url": "github.com/public-apis/public-apis",
       "company": null,
-      "stars": 1005,
+      "stars": 298,
       "momentum": 100,
       "tags": [
         "python"
@@ -7990,16 +8159,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 2260,
         "2026-08-17": 1588,
-        "2026-08-19": 1005
+        "2026-08-19": 1005,
+        "2026-11-01": 298
       },
       "description": "A collective list of free APIs",
       "trend": "down",
-      "trend_delta": -1255
+      "trend_delta": -707
     },
     {
       "id": "github:cordiverse/cordis",
@@ -11510,7 +11680,7 @@
       "url": "https://github.com/hyprwm/Hyprland",
       "canonical_url": "github.com/hyprwm/hyprland",
       "company": null,
-      "stars": 356,
+      "stars": 37,
       "momentum": 5,
       "tags": [
         "c++"
@@ -11518,15 +11688,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-22",
-      "last_seen": "2026-07-23",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-07-22": 58,
-        "2026-07-23": 356
+        "2026-07-23": 356,
+        "2026-11-01": 37
       },
       "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
-      "trend": "up",
-      "trend_delta": 298
+      "trend": "down",
+      "trend_delta": -319
     },
     {
       "id": "github:chrislgarry/Apollo-11",
@@ -13310,7 +13481,7 @@
       "url": "https://github.com/pingdotgg/t3code",
       "canonical_url": "github.com/pingdotgg/t3code",
       "company": null,
-      "stars": 1148,
+      "stars": 3100,
       "momentum": 7,
       "tags": [
         "typescript"
@@ -13318,7 +13489,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-13",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-07-13": 75,
@@ -13328,11 +13499,12 @@
         "2026-10-04": 492,
         "2026-10-05": 487,
         "2026-10-30": 920,
-        "2026-10-31": 1148
+        "2026-10-31": 1148,
+        "2026-11-01": 3100
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 661
+      "trend_delta": 2613
     },
     {
       "id": "manual:github:super-productivity/super-productivity",
@@ -22144,7 +22316,7 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "canonical_url": "github.com/shiyu-coder/kronos",
       "company": null,
-      "stars": 733,
+      "stars": 611,
       "momentum": 24,
       "tags": [
         "python"
@@ -22152,7 +22324,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-10-21",
+      "last_seen": "2026-11-01",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 244,
@@ -22167,11 +22339,12 @@
         "2026-08-13": 266,
         "2026-10-19": 355,
         "2026-10-20": 363,
-        "2026-10-21": 733
+        "2026-10-21": 733,
+        "2026-11-01": 611
       },
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-      "trend": "up",
-      "trend_delta": 467
+      "trend": "down",
+      "trend_delta": -122
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",

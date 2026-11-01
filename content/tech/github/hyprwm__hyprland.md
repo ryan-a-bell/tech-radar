@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/hyprwm/Hyprland
 canonical_url: github.com/hyprwm/hyprland
 company: null
-stars: 356
+stars: 37
 momentum: 5
 tags: ["c++"]
 topics: []
 archived_at: null
 first_seen: 2026-07-22
-last_seen: 2026-07-23
+last_seen: 2026-11-01
 also_seen: []
-stars_history: {"2026-07-22": 58, "2026-07-23": 356}
+stars_history: {"2026-07-22": 58, "2026-07-23": 356, "2026-11-01": 37}
 ---
 
 Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
