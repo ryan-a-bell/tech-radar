@@ -68,6 +68,11 @@ const { useState, useMemo, useEffect, useRef } = React;
  *   RADAR    a scope: your idea at the centre, matches as blips (sector =
  *            category, distance from centre = match strength), plus an
  *            auto-assembled "build kit" reading the best pick per category.
+ *   MAP      a knowledge graph of item↔item similarity ACROSS all five
+ *            categories: nodes are the panel matches (or the whole corpus),
+ *            edges are the top-K / above-threshold neighbours in the shared
+ *            TF-IDF space. Click a node to inspect its neighbours, expand them
+ *            into the graph, and walk the relationships hop by hop.
  *
  * Ranking runs in-browser in real time on every keystroke: corpus vectors are
  * built once on load, so each input only vectorises the query and cosines it.
@@ -204,7 +209,7 @@ const clip = (s, n) => (s || "").length > n ? s.slice(0, n).replace(/\s+\S*$/, "
 function App() {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState(EXAMPLE);
-  const [view, setView] = useState("columns");   // "columns" | "radar"
+  const [view, setView] = useState("columns");   // "columns" | "radar" | "map"
   const [method, setMethod] = useState("tfidf");  // "tfidf"  (embeddings: next)
   const [perCat, setPerCat] = useState(5);        // radar: blips per sector
   const [sel, setSel] = useState(null);           // radar: selected blip id
@@ -253,7 +258,9 @@ function App() {
       <ControlBar view={view} setView={setView} method={method} setMethod={setMethod}
         perCat={perCat} setPerCat={setPerCat} />
       <div style={{ flex: 1, minHeight: 0, overflow: view === "columns" ? "auto" : "hidden" }}>
-        {!ranked.hasQuery
+        {view === "map"
+          ? <MapView engine={engine} ranked={ranked} />
+          : !ranked.hasQuery
           ? <Empty />
           : view === "columns"
             ? <ColumnsView engine={engine} ranked={ranked} />
@@ -337,7 +344,7 @@ function ControlBar({ view, setView, method, setMethod, perCat, setPerCat }) {
       borderBottom: "1px solid var(--border)", color: "var(--muted)", flexWrap: "wrap" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <span style={k}>View</span>
-        <Seg options={[["columns", "Columns"], ["radar", "Radar"]]} value={view} onChange={setView} />
+        <Seg options={[["columns", "Columns"], ["radar", "Radar"], ["map", "Map"]]} value={view} onChange={setView} />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <span style={k}>Method</span>
@@ -354,7 +361,9 @@ function ControlBar({ view, setView, method, setMethod, perCat, setPerCat }) {
       <span style={{ marginLeft: "auto", fontSize: 11.5 }}>
         {view === "columns"
           ? "five columns · highest match surfaced per category"
-          : "your idea at centre · nearer = stronger · size = score"}
+          : view === "radar"
+          ? "your idea at centre · nearer = stronger · size = score"
+          : "knowledge graph · every edge = semantic similarity between two items"}
       </span>
     </div>
   );
@@ -687,6 +696,499 @@ function KitPhrase({ top }) {
   if (rio) parts.push(<span key="rio">, and {rio.item.type === "Opportunity" ? "pursue" : "watch for"} <b style={{ color: ACCENT.rio }}>{rio.item.title}</b>
     <span style={{ color: "var(--muted)" }}> ({rio.item.project})</span></span>);
   return <span>{parts}</span>;
+}
+
+/* ==========================================================================
+ * MAP view — a knowledge graph of semantic similarity across every category
+ *
+ * Nodes  : the panel matches (top-N per category for the query) — or, with
+ *          scope = "everything", every item in every corpus. Nodes the user
+ *          expands from the inspector are added on top and stay put.
+ * Edges  : item↔item cosine in the same shared TF-IDF space the panels use,
+ *          kept when ≥ threshold and within each node's top-K. Optional
+ *          "cross-category only" hides same-kind links (tool↔tool …) so the
+ *          interesting bridges (tool → book → person) stand out. Dashed spokes
+ *          tie the query node to its matches.
+ * The pairwise similarity function is the single seam where precomputed
+ * embeddings slot in later — same as the panels' method selector.
+ * ========================================================================== */
+const QUERY_UID = "__query__";
+
+function MapView({ engine, ranked }) {
+  // flat index of every item across the five corpora
+  const all = useMemo(() => {
+    const out = [];
+    for (const c of engine.cats) for (const it of c.items)
+      out.push({ uid: c.key + ":" + (it.id || nameOf(c.key, it)), key: c.key, item: it });
+    return out;
+  }, [engine]);
+  const byUid = useMemo(() => new Map(all.map((n) => [n.uid, n])), [all]);
+
+  const [scope, setScope] = useState("matches");   // "matches" | "everything"
+  const [perCat, setPerCat] = useState(10);
+  const [topK, setTopK] = useState(3);
+  const [threshold, setThreshold] = useState(0.08);
+  const [crossOnly, setCrossOnly] = useState(false);
+  const [showQuery, setShowQuery] = useState(true);
+  const [hidden, setHidden] = useState(() => new Set());   // category keys toggled off
+  const [expanded, setExpanded] = useState(() => new Set()); // uids added by exploration
+  const [sel, setSel] = useState(null);
+  const camTarget = useRef(null);
+
+  // query relevance per uid (for node size + spokes)
+  const rel = useMemo(() => {
+    const m = new Map();
+    if (!ranked.hasQuery) return m;
+    for (const c of CATS) for (const r of ranked.byCat[c.key] || []) m.set(r.id, r.score / ranked.globalMax);
+    return m;
+  }, [ranked]);
+
+  // which items are on the map
+  const nodeUids = useMemo(() => {
+    const set = new Set();
+    if (scope === "everything") {
+      for (const n of all) if (!hidden.has(n.key)) set.add(n.uid);
+    } else if (ranked.hasQuery) {
+      for (const c of CATS) {
+        if (hidden.has(c.key)) continue;
+        for (const r of (ranked.byCat[c.key] || []).slice(0, perCat)) set.add(r.id);
+      }
+    }
+    for (const u of expanded) if (byUid.has(u) && !hidden.has(byUid.get(u).key)) set.add(u);
+    return [...set];
+  }, [scope, all, hidden, ranked, perCat, expanded, byUid]);
+
+  // edges among visible nodes: top-K per node above threshold (union, deduped)
+  const graph = useMemo(() => {
+    const nodes = nodeUids.map((u) => byUid.get(u));
+    const N = nodes.length;
+    const cand = Array.from({ length: N }, () => []);
+    for (let a = 0; a < N; a++) for (let b = a + 1; b < N; b++) {
+      if (crossOnly && nodes[a].key === nodes[b].key) continue;
+      const s = cosine(nodes[a].item._vec, nodes[b].item._vec);
+      if (s < threshold) continue;
+      cand[a].push([b, s]); cand[b].push([a, s]);
+    }
+    const seen = new Set(), edges = [];
+    for (let a = 0; a < N; a++) {
+      cand[a].sort((x, y) => y[1] - x[1]);
+      for (const [b, s] of cand[a].slice(0, topK)) {
+        const k = a < b ? a + "-" + b : b + "-" + a;
+        if (seen.has(k)) continue;
+        seen.add(k); edges.push({ a, b, s });
+      }
+    }
+    const degree = new Array(N).fill(0);
+    for (const e of edges) { degree[e.a]++; degree[e.b]++; }
+    return { nodes, edges, degree };
+  }, [nodeUids, byUid, threshold, topK, crossOnly]);
+
+  // inspector: the selected node's strongest neighbours across the WHOLE corpus
+  const selNode = sel && sel !== QUERY_UID ? byUid.get(sel) : null;
+  const neighbours = useMemo(() => {
+    if (!selNode) return [];
+    return all.filter((n) => n.uid !== selNode.uid && !hidden.has(n.key) && (!crossOnly || n.key !== selNode.key))
+      .map((n) => ({ ...n, s: cosine(selNode.item._vec, n.item._vec) }))
+      .filter((n) => n.s > 0.001)
+      .sort((x, y) => y.s - x.s).slice(0, 12)
+      .map((n) => ({ ...n, why: sharedTerms(selNode.item._vec, n.item._vec, 4) }));
+  }, [selNode, all, hidden, crossOnly]);
+
+  const onMap = new Set(nodeUids);
+  const expandSel = () => {
+    const next = new Set(expanded);
+    if (!onMap.has(selNode.uid)) next.add(selNode.uid);
+    for (const n of neighbours.slice(0, Math.max(topK, 5))) next.add(n.uid);
+    setExpanded(next);
+  };
+  const goTo = (uid) => {
+    if (!onMap.has(uid)) setExpanded(new Set([...expanded, uid]));
+    setSel(uid); camTarget.current = uid;
+  };
+
+  const toggleCat = (k) => { const h = new Set(hidden); h.has(k) ? h.delete(k) : h.add(k); setHidden(h); };
+  const k = { fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5, color: "var(--muted)" };
+  const empty = scope === "matches" && !ranked.hasQuery && expanded.size === 0;
+
+  return (
+    <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", gap: 16, alignItems: "center", padding: "7px 20px", flexWrap: "wrap",
+        borderBottom: "1px solid var(--border)", color: "var(--ink-2)", fontSize: 12 }}>
+        <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={k}>Scope</span>
+          <Seg value={scope} onChange={setScope}
+            options={[["matches", "Panel matches", false, "the top matches per category for your description"],
+                      ["everything", "Everything", false, "every item in every corpus (" + all.length + ")"]]} />
+        </span>
+        {scope === "matches" && <label>per category <input type="range" min="3" max="30" value={perCat}
+          onChange={(e) => setPerCat(+e.target.value)} /> {perCat}</label>}
+        <label>top-K <input type="range" min="1" max="10" value={topK} onChange={(e) => setTopK(+e.target.value)} /> {topK}</label>
+        <label>threshold <input type="range" min="0" max="0.6" step="0.01" value={threshold}
+          onChange={(e) => setThreshold(+e.target.value)} /> {threshold.toFixed(2)}</label>
+        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={crossOnly} onChange={(e) => setCrossOnly(e.target.checked)} /> cross-category only</label>
+        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={showQuery} onChange={(e) => setShowQuery(e.target.checked)} /> query spokes</label>
+        <span style={{ display: "flex", gap: 6 }}>
+          {CATS.map((c) => {
+            const off = hidden.has(c.key);
+            return <button key={c.key} onClick={() => toggleCat(c.key)} title={(off ? "show " : "hide ") + c.label}
+              style={{ ...ghostBtn, padding: "3px 9px", fontSize: 11, display: "flex", alignItems: "center", gap: 6,
+                opacity: off ? 0.4 : 1, textDecoration: off ? "line-through" : "none" }}>
+              <span style={{ width: 8, height: 8, borderRadius: 2, background: c.accent }} />{c.label}</button>;
+          })}
+        </span>
+        {expanded.size > 0 && <button style={{ ...ghostBtn, padding: "3px 9px", fontSize: 11 }}
+          onClick={() => setExpanded(new Set())}>reset {expanded.size} explored</button>}
+        <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: 11.5 }}>
+          {graph.nodes.length} nodes · {graph.edges.length} edges
+        </span>
+      </div>
+      <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
+        <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
+          {empty ? <Empty /> :
+            <GraphCanvas graph={graph} rel={rel} showQuery={showQuery && ranked.hasQuery}
+              sel={sel} setSel={setSel} camTarget={camTarget} />}
+          <div style={{ position: "absolute", left: 14, bottom: 10, color: "var(--muted)", fontSize: 11, pointerEvents: "none" }}>
+            drag nodes · drag background to pan · scroll to zoom · click a node to inspect
+          </div>
+        </div>
+        <Inspector sel={sel} node={selNode} neighbours={neighbours} onMap={onMap} rel={rel}
+          graph={graph} onExpand={expandSel} goTo={goTo} onClose={() => setSel(null)} />
+      </div>
+    </div>
+  );
+}
+
+// one force-layout step: repulsion, edge springs, query pull, gravity, integrate
+function layoutTick(P, graph, rel, showQuery, alpha, pinned) {
+  const N = P.length, big = N > 250, rep = big ? 900 : 1800;
+  for (let a = 0; a < N; a++) for (let b = a + 1; b < N; b++) {
+    let dx = P[a].x - P[b].x, dy = P[a].y - P[b].y;
+    if (!dx && !dy) { dx = Math.random() - 0.5; dy = Math.random() - 0.5; }
+    const d2 = Math.max(dx * dx + dy * dy, 25);
+    if (big && d2 > 90000) continue;
+    const d = Math.sqrt(d2), f = rep / d2; dx /= d; dy /= d;
+    P[a].vx += dx * f; P[a].vy += dy * f; P[b].vx -= dx * f; P[b].vy -= dy * f;
+  }
+  for (const e of graph.edges) {
+    const pa = P[e.a], pb = P[e.b];
+    let dx = pb.x - pa.x, dy = pb.y - pa.y;
+    const d = Math.hypot(dx, dy) || 0.01, rest = 50 + (1 - e.s) * 110;
+    const f = (d - rest) * 0.02 * (0.4 + e.s); dx /= d; dy /= d;
+    pa.vx += dx * f; pa.vy += dy * f; pb.vx -= dx * f; pb.vy -= dy * f;
+  }
+  // query spokes pull matches gently toward the centre (where the query node sits)
+  if (showQuery) graph.nodes.forEach((n, i) => { const r = rel.get(n.uid); if (r) { P[i].vx -= P[i].x * 0.004 * r; P[i].vy -= P[i].y * 0.004 * r; } });
+  for (const p of P) {
+    p.vx -= p.x * 0.0025; p.vy -= p.y * 0.0025; p.vx *= 0.85; p.vy *= 0.85;
+    if (p === pinned) continue;
+    const v = Math.hypot(p.vx, p.vy);
+    if (v > 40) { p.vx *= 40 / v; p.vy *= 40 / v; }   // clamp: coincident nodes must not explode
+    p.x += p.vx * alpha; p.y += p.vy * alpha;
+  }
+}
+
+function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
+  const canvasRef = useRef(null);
+  const st = useRef({ pos: new Map(), cam: { x: 0, y: 0, z: 1 }, alpha: 1, laid: [] });
+  const [hover, setHover] = useState(null);
+  const drag = useRef(null), pan = useRef(null);
+  const hoverRef = useRef(null), selRef = useRef(sel);
+  hoverRef.current = hover; selRef.current = sel;
+
+  // keep positions across rebuilds so exploring doesn't reshuffle the map
+  useEffect(() => {
+    const s = st.current, pos = new Map();
+    graph.nodes.forEach((n, i) => {
+      let p = s.pos.get(n.uid);
+      if (!p) {
+        // seed new nodes beside an already-placed neighbour, else by category sector
+        const e = graph.edges.find((e) => (e.a === i && s.pos.has(graph.nodes[e.b].uid)) || (e.b === i && s.pos.has(graph.nodes[e.a].uid)));
+        const anchor = e && s.pos.get(graph.nodes[e.a === i ? e.b : e.a].uid);
+        const cat = CATS.find((c) => c.key === n.key);
+        const spread = 60 + Math.sqrt(graph.nodes.length) * 14;
+        const r = spread * (0.6 + Math.random() * 0.6);
+        p = anchor ? { x: anchor.x + (Math.random() - 0.5) * 60, y: anchor.y + (Math.random() - 0.5) * 60, vx: 0, vy: 0 }
+          : { x: Math.cos(cat.a0) * r + (Math.random() - 0.5) * 80, y: Math.sin(cat.a0) * r + (Math.random() - 0.5) * 80, vx: 0, vy: 0 };
+      }
+      pos.set(n.uid, p);
+    });
+    const fresh = graph.nodes.filter((n) => !s.pos.has(n.uid)).length;
+    s.pos = pos; s.alpha = Math.max(s.alpha, 0.6);
+    // a mostly-new graph (first load, scope switch): pre-settle off-screen, then frame it
+    if (graph.nodes.length && fresh > graph.nodes.length * 0.3) {
+      const P = graph.nodes.map((n) => pos.get(n.uid));
+      const iters = graph.nodes.length > 250 ? 140 : 300;
+      let a = 1;
+      for (let i = 0; i < iters; i++) { layoutTick(P, graph, rel, showQuery, a, null); a *= 0.985; }
+      s.alpha = 0.15;
+      s.autoFit = true;
+    }
+  }, [graph]);
+
+  // zoom/pan so the nodes fill the view (big graphs: 2nd–98th percentile, so
+  // a few drifting outliers don't shrink everything). ease=true glides there.
+  function fit(ease) {
+    const c = canvasRef.current, s = st.current;
+    if (!c || !s.pos.size) return;
+    const xs = [], ys = [];
+    for (const p of s.pos.values()) { xs.push(p.x); ys.push(p.y); }
+    if (showQuery) { xs.push(0); ys.push(0); }
+    xs.sort((a, b) => a - b); ys.sort((a, b) => a - b);
+    const q = xs.length > 100 ? 0.02 : 0, at = (arr, f) => arr[Math.min(arr.length - 1, Math.max(0, Math.round(f * (arr.length - 1))))];
+    const x0 = at(xs, q), x1 = at(xs, 1 - q), y0 = at(ys, q), y1 = at(ys, 1 - q);
+    const w = c.clientWidth, h = c.clientHeight;
+    if (!w || !h) return;
+    const z = Math.min(2.2, Math.max(0.12, Math.min((w - 200) / (x1 - x0 || 1), (h - 70) / (y1 - y0 || 1))));
+    const target = { x: -((x0 + x1) / 2) * z, y: -((y0 + y1) / 2) * z, z };
+    if (!ease) { s.cam = target; return; }
+    const k = 0.15;
+    s.cam = { x: s.cam.x + (target.x - s.cam.x) * k, y: s.cam.y + (target.y - s.cam.y) * k, z: s.cam.z + (target.z - s.cam.z) * k };
+  }
+
+  // pan to a node the inspector navigated to
+  useEffect(() => {
+    const u = camTarget.current; if (!u) return;
+    const p = st.current.pos.get(u);
+    if (p) { st.current.autoFit = false; const z = st.current.cam.z; st.current.cam.x = -p.x * z; st.current.cam.y = -p.y * z; camTarget.current = null; }
+  }, [sel, graph]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current, ctx = canvas.getContext("2d");
+    let raf, running = true;
+    const resize = () => {
+      const r = canvas.parentElement.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
+      canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+      canvas.style.width = r.width + "px"; canvas.style.height = r.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize(); window.addEventListener("resize", resize);
+    const big = graph.nodes.length > 250;
+
+    const frame = () => {
+      const s = st.current, { nodes, edges, degree } = graph;
+      const P = nodes.map((n) => s.pos.get(n.uid));
+      const N = P.length;
+      if (s.alpha > 0.004 && N && P.every(Boolean)) {
+        layoutTick(P, graph, rel, showQuery, s.alpha, drag.current && drag.current.p);
+        s.alpha *= big ? 0.98 : 0.993;
+      }
+      if (s.autoFit) fit(true);   // follow the settling layout until the user takes the camera
+
+      const w = canvas.clientWidth, h = canvas.clientHeight, cam = s.cam;
+      ctx.clearRect(0, 0, w, h);
+      ctx.save(); ctx.translate(w / 2 + cam.x, h / 2 + cam.y); ctx.scale(cam.z, cam.z);
+
+      const focus = hoverRef.current || selRef.current;
+      const fi = focus ? nodes.findIndex((n) => n.uid === focus) : -1;
+      const lit = new Set();
+      if (fi >= 0) { lit.add(fi); for (const e of edges) { if (e.a === fi) lit.add(e.b); if (e.b === fi) lit.add(e.a); } }
+      const qFocus = focus === QUERY_UID;
+
+      // query spokes
+      if (showQuery) {
+        ctx.setLineDash([3, 5]);
+        nodes.forEach((n, i) => {
+          const r = rel.get(n.uid); if (!r || !P[i]) return;
+          const on = qFocus || fi === i;
+          ctx.strokeStyle = on ? "rgba(255,255,255,0.55)" : `rgba(255,255,255,${fi >= 0 ? 0.03 : 0.04 + r * 0.1})`;
+          ctx.lineWidth = 0.8 / cam.z + (on ? 0.6 : 0);
+          ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(P[i].x, P[i].y); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+      }
+      // similarity edges — tinted by the two categories they bridge
+      for (const e of edges) {
+        const pa = P[e.a], pb = P[e.b]; if (!pa || !pb) continue;
+        const on = fi < 0 || e.a === fi || e.b === fi;
+        const ka = nodes[e.a].key, kb = nodes[e.b].key;
+        let stroke;
+        if (!on) stroke = "rgba(120,125,135,0.05)";
+        else if (ka === kb) stroke = ACCENT[ka] + Math.round((0.25 + e.s * 0.6) * 255).toString(16).padStart(2, "0");
+        else {
+          const g = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
+          const al = Math.round((0.3 + e.s * 0.6) * 255).toString(16).padStart(2, "0");
+          g.addColorStop(0, ACCENT[ka] + al); g.addColorStop(1, ACCENT[kb] + al); stroke = g;
+        }
+        ctx.strokeStyle = stroke;
+        ctx.lineWidth = on ? (0.6 + e.s * 3) / Math.sqrt(cam.z) : 0.5;
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+      // query node
+      const laid = [];
+      if (showQuery) {
+        ctx.beginPath(); ctx.arc(0, 0, 10, 0, Math.PI * 2); ctx.fillStyle = "#fff"; ctx.fill();
+        ctx.strokeStyle = "rgba(255,255,255,0.22)"; ctx.lineWidth = 8; ctx.stroke();
+        ctx.fillStyle = "#c3c2b7"; ctx.font = "600 10px 'IBM Plex Mono', monospace"; ctx.textAlign = "center";
+        ctx.fillText("YOUR IDEA", 0, 26); ctx.textAlign = "left";
+        laid.push({ uid: QUERY_UID, x: 0, y: 0, r: 12 });
+      }
+      // nodes
+      const labelAll = N <= 90 || cam.z > 1.6;
+      nodes.forEach((n, i) => {
+        const p = P[i]; if (!p) return;
+        const r = 3.5 + Math.min(5, degree[i] * 0.7) + (rel.get(n.uid) || 0) * 4;
+        const dim = fi >= 0 && !lit.has(i);
+        ctx.globalAlpha = dim ? 0.18 : 1;
+        ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+        ctx.fillStyle = ACCENT[n.key]; ctx.fill();
+        if (n.uid === selRef.current || i === fi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.8 / cam.z; ctx.stroke(); }
+        if ((labelAll && !dim) || lit.has(i)) {
+          const nm = nameOf(n.key, n.item);
+          ctx.fillStyle = i === fi ? "#fff" : "#d6d5cf";
+          ctx.font = (i === fi ? "600 " : "") + (10 / Math.sqrt(cam.z)).toFixed(1) + "px 'IBM Plex Mono', monospace";
+          ctx.fillText(nm.length > 26 ? nm.slice(0, 25) + "…" : nm, p.x + r + 3, p.y + 3);
+        }
+        ctx.globalAlpha = 1;
+        laid.push({ uid: n.uid, x: p.x, y: p.y, r, p });
+      });
+      ctx.restore();
+      s.laid = laid;
+      if (running) raf = requestAnimationFrame(frame);
+    };
+    frame();
+    return () => { running = false; cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
+  }, [graph, rel, showQuery]);
+
+  const toWorld = (ev) => {
+    const r = canvasRef.current.getBoundingClientRect(), cam = st.current.cam;
+    return { x: (ev.clientX - r.left - r.width / 2 - cam.x) / cam.z, y: (ev.clientY - r.top - r.height / 2 - cam.y) / cam.z };
+  };
+  const pick = (ev) => {
+    const { x, y } = toWorld(ev), z = st.current.cam.z;
+    let best = null, bd = Infinity;
+    for (const l of st.current.laid) {
+      const d = (l.x - x) ** 2 + (l.y - y) ** 2, lim = (l.r + 5 / z) ** 2;
+      if (d < lim && d < bd) { bd = d; best = l; }
+    }
+    return best;
+  };
+  const onDown = (ev) => {
+    st.current.autoFit = false;
+    const l = pick(ev);
+    if (l && l.p) drag.current = { p: l.p, uid: l.uid, x: ev.clientX, y: ev.clientY };
+    else pan.current = { x: ev.clientX, y: ev.clientY, cam: { ...st.current.cam }, uid: l && l.uid };
+  };
+  const onMove = (ev) => {
+    if (drag.current) {
+      const { x, y } = toWorld(ev); const p = drag.current.p;
+      p.x = x; p.y = y; p.vx = 0; p.vy = 0; st.current.alpha = Math.max(st.current.alpha, 0.3);
+    } else if (pan.current) {
+      st.current.cam.x = pan.current.cam.x + ev.clientX - pan.current.x;
+      st.current.cam.y = pan.current.cam.y + ev.clientY - pan.current.y;
+    } else {
+      const l = pick(ev); setHover(l ? l.uid : null);
+      canvasRef.current.style.cursor = l ? "pointer" : "grab";
+    }
+  };
+  const onUp = (ev) => {
+    const g = drag.current || pan.current;
+    if (g && Math.hypot(ev.clientX - g.x, ev.clientY - g.y) < 4) setSel(g.uid || null);
+    drag.current = null; pan.current = null;
+  };
+  const onWheel = (ev) => {
+    ev.preventDefault();
+    st.current.autoFit = false;
+    const cam = st.current.cam, r = canvasRef.current.getBoundingClientRect();
+    const mx = ev.clientX - r.left - r.width / 2, my = ev.clientY - r.top - r.height / 2;
+    const z = Math.min(5, Math.max(0.15, cam.z * Math.exp(-ev.deltaY * 0.0015)));
+    cam.x = mx - (mx - cam.x) * (z / cam.z); cam.y = my - (my - cam.y) * (z / cam.z); cam.z = z;
+  };
+  useEffect(() => {
+    const c = canvasRef.current; c.addEventListener("wheel", onWheel, { passive: false });
+    return () => c.removeEventListener("wheel", onWheel);
+  }, []);
+
+  return (
+    <div style={{ position: "absolute", inset: 0 }}>
+      <canvas ref={canvasRef} onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp}
+        onMouseLeave={() => { setHover(null); drag.current = null; pan.current = null; }}
+        style={{ display: "block", width: "100%", height: "100%" }} />
+      <button onClick={() => { st.current.autoFit = true; }} style={{ ...ghostBtn, position: "absolute", top: 10, right: 12, background: "var(--surface-1)" }}>⤢ fit</button>
+    </div>
+  );
+}
+
+function Inspector({ sel, node, neighbours, onMap, rel, graph, onExpand, goTo, onClose }) {
+  const box = { width: 340, flex: "0 0 340px", borderLeft: "1px solid var(--border)", overflow: "auto",
+    padding: "16px 16px 24px", background: "var(--surface-1)" };
+  if (!node) {
+    // overview: which categories the map bridges most
+    const pairs = new Map();
+    for (const e of graph.edges) {
+      const a = graph.nodes[e.a].key, b = graph.nodes[e.b].key;
+      const k = [a, b].sort().join("|"); pairs.set(k, (pairs.get(k) || 0) + 1);
+    }
+    const hubs = graph.nodes.map((n, i) => ({ n, d: graph.degree[i] })).sort((x, y) => y.d - x.d).slice(0, 8);
+    return (
+      <div style={box}>
+        <div style={{ fontSize: 12, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4 }}>Knowledge map</div>
+        <div style={{ color: "var(--muted)", fontSize: 11.5, marginBottom: 14 }}>
+          {sel === QUERY_UID ? "your description — dashed spokes run to every match on the map. " : ""}
+          click any node to see its nearest neighbours across all five categories, then expand or jump to walk the graph
+        </div>
+        <div style={{ fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", color: "var(--muted)", margin: "6px 0" }}>Most connected</div>
+        {hubs.map(({ n, d }) => (
+          <div key={n.uid} onClick={() => goTo(n.uid)} style={{ display: "flex", gap: 8, alignItems: "center", padding: "5px 0", cursor: "pointer", borderTop: "1px solid var(--border)" }}>
+            <span style={{ width: 8, height: 8, borderRadius: 2, background: ACCENT[n.key], flex: "0 0 8px" }} />
+            <span style={{ fontSize: 12.5, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{nameOf(n.key, n.item)}</span>
+            <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: 11 }}>{d} links</span>
+          </div>
+        ))}
+        <div style={{ fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", color: "var(--muted)", margin: "16px 0 6px" }}>Links by category pair</div>
+        {[...pairs].sort((x, y) => y[1] - x[1]).map(([k, c]) => {
+          const [a, b] = k.split("|");
+          return (
+            <div key={k} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11.5, padding: "3px 0" }}>
+              <span style={{ width: 8, height: 8, borderRadius: 2, background: ACCENT[a] }} />
+              <span style={{ color: "var(--muted)" }}>↔</span>
+              <span style={{ width: 8, height: 8, borderRadius: 2, background: ACCENT[b] }} />
+              <span style={{ color: "var(--ink-2)" }}>{LABEL[a]}{a !== b ? " · " + LABEL[b] : ""}</span>
+              <span style={{ marginLeft: "auto", color: "var(--muted)", fontVariantNumeric: "tabular-nums" }}>{c}</span>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+  const r = rel.get(node.uid);
+  return (
+    <div style={box}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={{ width: 10, height: 10, borderRadius: 2, background: ACCENT[node.key] }} />
+        <span style={{ fontSize: 10, letterSpacing: 1, color: ACCENT[node.key], textTransform: "uppercase" }}>{LABEL[node.key]}</span>
+        {r != null && <span style={{ color: "var(--ink-2)", fontSize: 11 }}>· {Math.round(r * 100)}% to your idea</span>}
+        <button onClick={onClose} style={{ marginLeft: "auto", background: "none", border: "none", color: "var(--muted)", cursor: "pointer", fontSize: 16 }}>×</button>
+      </div>
+      <div style={{ fontSize: 15, fontWeight: 600, marginTop: 6 }}>{nameOf(node.key, node.item)}</div>
+      <div style={{ color: "var(--muted)", fontSize: 11.5, marginTop: 2 }}>{metaSub(node.key, node.item)}</div>
+      <div style={{ color: "var(--ink-2)", fontSize: 12, marginTop: 8 }}>{clip(blurbOf(node.key, node.item), 240)}</div>
+      {node.key === "tools" && node.item.url &&
+        <div style={{ marginTop: 6 }}><a href={node.item.url} target="_blank" style={{ fontSize: 11.5 }}>{node.item.url.replace(/^https?:\/\//, "")}</a></div>}
+      <div style={{ display: "flex", alignItems: "center", margin: "16px 0 6px" }}>
+        <span style={{ fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", color: "var(--muted)" }}>Nearest across the corpus</span>
+        <button onClick={onExpand} style={{ ...ghostBtn, marginLeft: "auto", padding: "3px 9px", fontSize: 11 }}>+ expand onto map</button>
+      </div>
+      {neighbours.map((n) => {
+        const there = onMap.has(n.uid);
+        return (
+          <div key={n.uid} onClick={() => goTo(n.uid)} title={there ? "jump to node" : "add to map and jump"}
+            style={{ padding: "7px 0", borderTop: "1px solid var(--border)", cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ width: 8, height: 8, borderRadius: there ? 2 : 8, flex: "0 0 8px",
+                background: there ? ACCENT[n.key] : "transparent", border: "1.5px solid " + ACCENT[n.key] }} />
+              <span style={{ fontSize: 12.5, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{nameOf(n.key, n.item)}</span>
+              <span style={{ marginLeft: "auto", fontSize: 11, color: ACCENT[n.key], fontVariantNumeric: "tabular-nums" }}>{n.s.toFixed(2)}</span>
+            </div>
+            <div style={{ marginLeft: 16, height: 3, background: "var(--grid)", borderRadius: 2, marginTop: 4 }}>
+              <div style={{ width: Math.round(Math.min(1, n.s / (neighbours[0].s || 1)) * 100) + "%", height: 3, background: ACCENT[n.key], borderRadius: 2 }} />
+            </div>
+            {n.why.length > 0 && <div style={{ marginLeft: 16, color: "var(--muted)", fontSize: 10.5, marginTop: 3 }}>shared: {n.why.join(" · ")}</div>}
+          </div>
+        );
+      })}
+      <div style={{ color: "var(--muted)", fontSize: 10.5, marginTop: 10 }}>● on the map · ○ not yet — click to add &amp; jump</div>
+    </div>
+  );
 }
 
 function Footer({ live, view }) {
