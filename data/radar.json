@@ -1,6 +1,6 @@
 {
   "generated": "2026-11-02",
-  "count": 892,
+  "count": 893,
   "items": [
     {
       "id": "github:max-sixty/worktrunk",
@@ -80,6 +80,32 @@
         "2026-11-02": 2243
       },
       "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it \u2014 refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:cameo-mcp-bridge",
+      "name": "Cameo MCP Bridge",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/ajhcs/cameo-mcp-bridge",
+      "canonical_url": "github.com/ajhcs/cameo-mcp-bridge",
+      "company": "",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "MCP server that lets AI assistants like Claude Code query, create, modify, validate, and diagram SysML/UML models in a running Cameo Systems Modeler (CATIA Magic) via a Java plugin exposing ~162 tools. Relevant for bringing agent-driven workflows into MBSE; local-only with no auth, and includes a Groovy macro tool.",
       "trend": "none",
       "trend_delta": 0
     },
