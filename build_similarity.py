@@ -37,26 +37,23 @@ Output shape:
 """
 
 import datetime as _dt
-import glob
 import json
 import math
 import os
 
+import radar_core
+
 HERE = os.path.dirname(os.path.abspath(__file__))
-ITEMS_DIR = os.path.join(HERE, "content", "tech")
 OUT = os.path.join(HERE, "data", "similarity.json")
 PROJ_OUT = os.path.join(HERE, "data", "project_similarity.json")
 PEOPLE_OUT = os.path.join(HERE, "data", "people_similarity.json")
 
 
 def load_items():
-    items = []
-    for path in sorted(glob.glob(os.path.join(ITEMS_DIR, "**", "*.json"), recursive=True)):
-        with open(path, encoding="utf-8") as f:
-            it = json.load(f)
-        if it.get("ring") == "Archived":
-            continue
-        items.append(it)
+    """Every non-archived radar item, read through radar_core so this stays in
+    step with the content/tech/**.md layout (sorted by id for stable output)."""
+    items = [it for it in radar_core.load_all_items() if it.get("ring") != "Archived"]
+    items.sort(key=lambda it: it["id"])
     return items
 
 
