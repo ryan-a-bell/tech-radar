@@ -1,0 +1,10 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+SCP-R01,Risk,Cloud forecast error wastes optical passes on overcast targets,4,3,Open,Planner lead,Ingest short-range forecast; re-plan within two hours of pass
+SCP-R02,Risk,Learned allocation policy starves low-priority requests indefinitely,3,4,Mitigating,Autonomy lead,Age-of-information penalty in the reward; fairness floor per customer
+SCP-R03,Risk,Ground-station downlink windows too short for full onboard storage dump,3,4,Open,Ops lead,Prioritize downlink queue; add a second commercial ground station
+SCP-I01,Issue,STK license unavailable for the planning server cluster,,3,Open,PM,Precompute access windows nightly on licensed workstation
+SCP-I02,Issue,PettingZoo env step rate too slow for a 12-satellite constellation,,2,Mitigating,Autonomy lead,Vectorize env; coarsen time step outside access windows
+SCP-I03,Issue,Two-line element sets go stale and access windows drift by minutes,,3,Open,Ops lead,Refresh orbital elements every pass; flag windows older than 24 h
+SCP-O01,Opportunity,Same satellite relay windows feed the Contested-Comms SAR Mesh fallback,4,3,Pursuing,Planner lead,Publish relay window table as a shared feed
+SCP-O02,Opportunity,Cue from RF spectrum detections triggers rapid revisit,3,4,Open,PM,Define cue interface with RF Spectrum Situational Awareness
+SCP-O03,Opportunity,Commercial imagery tasking API covers gaps in own constellation,2,4,Watch,PM,Price commercial tasking trade study next quarter

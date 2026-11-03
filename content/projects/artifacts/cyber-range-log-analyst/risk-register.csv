@@ -1,0 +1,10 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+CRL-R01,Risk,LLM merges unrelated alerts into one incident and hides an attack,3,5,Open,Analytics lead,Show alert-level evidence; analyst approves every merge
+CRL-R02,Risk,Log volume at exercise peak saturates the observability store,4,3,Mitigating,Infra lead,Sample low-value flow logs; scale ingest nodes before exercise
+CRL-R03,Risk,Exercise data mirroring real networks leaks outside the range,2,5,Open,Security lead,Air-gapped range; local model only; SSO with role-based views
+CRL-I01,Issue,IDS alert timestamps skewed between range segments,,3,Open,Infra lead,Enforce NTP across the range; correct skew at ingest
+CRL-I02,Issue,Keycloak role mapping gives observers access to blue-team notes,,4,Mitigating,Security lead,Separate realms per cell; audit role mappings before each exercise
+CRL-I03,Issue,No ground-truth attack timeline to score clustering accuracy,,2,Open,White cell lead,Red team logs every action with timestamps for scoring
+CRL-O01,Opportunity,Share the OpenObserve stack with RF Spectrum Situational Awareness,4,3,Open,Infra lead,Common deployment templates and dashboards
+CRL-O02,Opportunity,Route model calls through the Homelab LLM Gateway instead of a dedicated server,4,2,Pursuing,Infra lead,Point the analyst at the gateway endpoint with a range-only key
+CRL-O03,Opportunity,Drafted after-action reports cut white-cell write-up time in half,3,4,Open,White cell lead,Pilot on next exercise; compare against manual reports
