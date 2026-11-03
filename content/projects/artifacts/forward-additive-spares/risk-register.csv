@@ -1,0 +1,10 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+FAS-R01,Risk,Printed part fails in service below drawing strength,3,5,Open,Materials lead,Restrict to non-flight-critical parts; coupon test every material lot
+FAS-R02,Risk,Technical data package rights do not permit additive reproduction,4,4,Open,PM,Data-rights review per part; maintain approved-parts list
+FAS-R03,Risk,Humidity at forward sites degrades filament before printing,3,3,Mitigating,Ops lead,Sealed dry boxes; moisture check before each print
+FAS-I01,Issue,Scanned drawings lose tolerances in OCR,,4,Open,Software lead,Human verification of every extracted dimension and tolerance
+FAS-I02,Issue,PrusaSlicer profiles differ between depot printers,,2,Mitigating,Ops lead,Lock per-part slicer profiles under version control
+FAS-I03,Issue,No inspection gauges at the forward site for critical dimensions,,3,Open,Quality lead,Ship go/no-go gauge kit; print gauges where tolerance allows
+FAS-O01,Opportunity,Readiness Predictor forecasts drive which materials to pre-stock,4,4,Pursuing,PM,Consume predicted-failure feed from the readiness predictor
+FAS-O02,Opportunity,Share CAD and slicing pipeline with the Generative Fixture Designer,4,3,Open,Software lead,Extract common Fusion and slicer scripts into one module
+FAS-O03,Opportunity,Metal printer at the regional hub widens the printable parts list,2,5,Watch,PM,Survey part list for metal-only candidates; price a hub printer
