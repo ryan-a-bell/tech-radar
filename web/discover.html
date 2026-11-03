@@ -73,6 +73,11 @@ const { useState, useMemo, useEffect, useRef } = React;
  *            edges are the top-K / above-threshold neighbours in the shared
  *            TF-IDF space. Click a node to inspect its neighbours, expand them
  *            into the graph, and walk the relationships hop by hop.
+ *            Hover an edge for its score + shared terms; ring / learning-status
+ *            chips filter and style nodes (Everything hides Discovered by
+ *            default). The view, description and every map setting live in
+ *            the URL hash — links are shareable and back/forward walks the
+ *            exploration.
  *
  * Ranking runs in-browser in real time on every keystroke: corpus vectors are
  * built once on load, so each input only vectorises the query and cosines it.
@@ -205,11 +210,79 @@ function topicsOf(key, it) {
 }
 const clip = (s, n) => (s || "").length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : (s || "");
 
+// ---------------------------------------------------------------------------
+// URL hash state — the view, the description and every map setting live in
+// location.hash, so a link reopens the exact map you were looking at, and
+// back/forward steps through an exploration (selecting / expanding a node
+// pushes a history entry; dragging a slider just replaces the current one).
+//   #view=map&scope=everything&k=4&t=0.12&cross=1&rings=Discovered&sel=…&exp=a|b
+// Only values that differ from the defaults are written, so links stay short.
+// ---------------------------------------------------------------------------
+const defRings = (scope) => (scope === "everything" ? ["Discovered"] : []);
+const MAP_DEFAULTS = { scope: "matches", n: 10, k: 3, t: 0.08, cross: false, spokes: true,
+  hide: [], rings: [], status: [], sel: null, exp: [] };
+const MAP_KEYS = Object.keys(MAP_DEFAULTS);
+function mapDefault(key, scope) { return key === "rings" ? defRings(scope) : MAP_DEFAULTS[key]; }
+
+function parseHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  const map = { ...MAP_DEFAULTS };
+  for (const k of MAP_KEYS) {
+    if (!p.has(k)) continue;
+    const raw = p.get(k), d = MAP_DEFAULTS[k];
+    if (Array.isArray(d)) map[k] = raw.split("|").filter(Boolean);
+    else if (typeof d === "boolean") map[k] = raw === "1";
+    else if (typeof d === "number") { if (raw !== "" && !isNaN(+raw)) map[k] = +raw; }
+    else map[k] = raw || null;
+  }
+  if (!["matches", "everything"].includes(map.scope)) map.scope = "matches";
+  if (!p.has("rings")) map.rings = defRings(map.scope);
+  const view = ["columns", "radar", "map"].includes(p.get("view")) ? p.get("view") : "columns";
+  return { view, query: p.has("idea") ? p.get("idea") : EXAMPLE, map };
+}
+
+function buildHash({ view, query, map }) {
+  const p = new URLSearchParams();
+  if (view !== "columns") p.set("view", view);
+  if (query !== EXAMPLE) p.set("idea", query);
+  if (view === "map") for (const k of MAP_KEYS) {
+    const v = map[k], d = mapDefault(k, map.scope);
+    if (Array.isArray(v)) { if (v.join("|") !== d.join("|")) p.set(k, v.join("|")); }
+    else if (typeof v === "boolean") { if (v !== d) p.set(k, v ? "1" : "0"); }
+    else if (v !== d && v != null) p.set(k, String(v));
+  }
+  const h = p.toString();
+  return h ? "#" + h : "";
+}
+
 // ============================================================================
 function App() {
+  const init = useMemo(parseHash, []);
   const [data, setData] = useState(null);
-  const [query, setQuery] = useState(EXAMPLE);
-  const [view, setView] = useState("columns");   // "columns" | "radar" | "map"
+  const [query, setQuery] = useState(init.query);
+  const [view, setViewRaw] = useState(init.view);   // "columns" | "radar" | "map"
+  const [mapState, setMapState] = useState(init.map);
+  const pushNext = useRef(false);                   // next hash write = new history entry?
+  const setView = (v) => { pushNext.current = true; setViewRaw(v); };
+  const updMap = (patch, push = false) => {
+    if (push) pushNext.current = true;
+    setMapState((m) => ({ ...m, ...(typeof patch === "function" ? patch(m) : patch) }));
+  };
+
+  // state -> URL
+  useEffect(() => {
+    const hash = buildHash({ view, query, map: mapState });
+    const push = pushNext.current; pushNext.current = false;
+    if (hash === location.hash || (!hash && !location.hash)) return;
+    history[push ? "pushState" : "replaceState"](null, "", location.pathname + location.search + hash);
+  }, [view, query, mapState]);
+  // URL -> state (back / forward, or a hand-edited hash)
+  useEffect(() => {
+    const onPop = () => { const h = parseHash(); setViewRaw(h.view); setQuery(h.query); setMapState(h.map); };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
   const [method, setMethod] = useState("tfidf");  // "tfidf"  (embeddings: next)
   const [perCat, setPerCat] = useState(5);        // radar: blips per sector
   const [sel, setSel] = useState(null);           // radar: selected blip id
@@ -259,7 +332,7 @@ function App() {
         perCat={perCat} setPerCat={setPerCat} />
       <div style={{ flex: 1, minHeight: 0, overflow: view === "columns" ? "auto" : "hidden" }}>
         {view === "map"
-          ? <MapView engine={engine} ranked={ranked} />
+          ? <MapView engine={engine} ranked={ranked} ms={mapState} upd={updMap} />
           : !ranked.hasQuery
           ? <Empty />
           : view === "columns"
@@ -714,7 +787,7 @@ function KitPhrase({ top }) {
  * ========================================================================== */
 const QUERY_UID = "__query__";
 
-function MapView({ engine, ranked }) {
+function MapView({ engine, ranked, ms, upd }) {
   // flat index of every item across the five corpora
   const all = useMemo(() => {
     const out = [];
@@ -724,16 +797,23 @@ function MapView({ engine, ranked }) {
   }, [engine]);
   const byUid = useMemo(() => new Map(all.map((n) => [n.uid, n])), [all]);
 
-  const [scope, setScope] = useState("matches");   // "matches" | "everything"
-  const [perCat, setPerCat] = useState(10);
-  const [topK, setTopK] = useState(3);
-  const [threshold, setThreshold] = useState(0.08);
-  const [crossOnly, setCrossOnly] = useState(false);
-  const [showQuery, setShowQuery] = useState(true);
-  const [hidden, setHidden] = useState(() => new Set());   // category keys toggled off
-  const [expanded, setExpanded] = useState(() => new Set()); // uids added by exploration
-  const [sel, setSel] = useState(null);
+  // all map settings live in the URL-backed `ms` (see parseHash / buildHash)
+  const { scope, n: perCat, k: topK, t: threshold, cross: crossOnly, spokes: showQuery, sel } = ms;
+  const hidden = useMemo(() => new Set(ms.hide), [ms.hide]);         // category keys toggled off
+  const hiddenRings = useMemo(() => new Set(ms.rings), [ms.rings]);  // radar rings toggled off
+  const hiddenStatus = useMemo(() => new Set(ms.status), [ms.status]); // learning statuses toggled off
+  const expanded = useMemo(() => new Set(ms.exp), [ms.exp]);         // uids added by exploration
+  const setSel = (uid) => { if (uid !== sel) upd({ sel: uid }, true); };
+  const setExpanded = (set, extra) => upd({ exp: [...set], ...extra }, true);
+  // switching scope resets the ring filter to that scope's default
+  // (Everything hides the scraper's Discovered inbox, which otherwise swamps the map)
+  const setScope = (v) => upd({ scope: v, rings: defRings(v) }, true);
   const camTarget = useRef(null);
+
+  // ---- ring / status filter (3) ----
+  const passes = (n) => !hidden.has(n.key)
+    && !(n.key === "tools" && hiddenRings.has(n.item.ring))
+    && !(n.key === "learning" && hiddenStatus.has(n.item.status));
 
   // query relevance per uid (for node size + spokes)
   const rel = useMemo(() => {
@@ -747,16 +827,17 @@ function MapView({ engine, ranked }) {
   const nodeUids = useMemo(() => {
     const set = new Set();
     if (scope === "everything") {
-      for (const n of all) if (!hidden.has(n.key)) set.add(n.uid);
+      for (const n of all) if (passes(n)) set.add(n.uid);
     } else if (ranked.hasQuery) {
       for (const c of CATS) {
         if (hidden.has(c.key)) continue;
-        for (const r of (ranked.byCat[c.key] || []).slice(0, perCat)) set.add(r.id);
+        const ok = (ranked.byCat[c.key] || []).filter((r) => passes(byUid.get(r.id)));
+        for (const r of ok.slice(0, perCat)) set.add(r.id);
       }
     }
-    for (const u of expanded) if (byUid.has(u) && !hidden.has(byUid.get(u).key)) set.add(u);
+    for (const u of expanded) if (byUid.has(u) && passes(byUid.get(u))) set.add(u);
     return [...set];
-  }, [scope, all, hidden, ranked, perCat, expanded, byUid]);
+  }, [scope, all, hidden, hiddenRings, hiddenStatus, ranked, perCat, expanded, byUid]);
 
   // edges among visible nodes: top-K per node above threshold (union, deduped)
   const graph = useMemo(() => {
@@ -787,12 +868,12 @@ function MapView({ engine, ranked }) {
   const selNode = sel && sel !== QUERY_UID ? byUid.get(sel) : null;
   const neighbours = useMemo(() => {
     if (!selNode) return [];
-    return all.filter((n) => n.uid !== selNode.uid && !hidden.has(n.key) && (!crossOnly || n.key !== selNode.key))
+    return all.filter((n) => n.uid !== selNode.uid && passes(n) && (!crossOnly || n.key !== selNode.key))
       .map((n) => ({ ...n, s: cosine(selNode.item._vec, n.item._vec) }))
       .filter((n) => n.s > 0.001)
       .sort((x, y) => y.s - x.s).slice(0, 12)
       .map((n) => ({ ...n, why: sharedTerms(selNode.item._vec, n.item._vec, 4) }));
-  }, [selNode, all, hidden, crossOnly]);
+  }, [selNode, all, hidden, hiddenRings, hiddenStatus, crossOnly]);
 
   const onMap = new Set(nodeUids);
   const expandSel = () => {
@@ -802,11 +883,30 @@ function MapView({ engine, ranked }) {
     setExpanded(next);
   };
   const goTo = (uid) => {
-    if (!onMap.has(uid)) setExpanded(new Set([...expanded, uid]));
-    setSel(uid); camTarget.current = uid;
+    camTarget.current = uid;
+    if (!onMap.has(uid)) setExpanded(new Set([...expanded, uid]), { sel: uid });   // one history entry
+    else setSel(uid);
   };
 
-  const toggleCat = (k) => { const h = new Set(hidden); h.has(k) ? h.delete(k) : h.add(k); setHidden(h); };
+  const toggleIn = (key, v) => {
+    const cur = new Set(ms[key]); cur.has(v) ? cur.delete(v) : cur.add(v);
+    upd({ [key]: [...cur] });
+  };
+  const toggleCat = (c) => toggleIn("hide", c);
+  // counts for the ring / status chips (over the whole corpus)
+  const ringCount = useMemo(() => {
+    const m = {};
+    for (const n of all) {
+      if (n.key === "tools") m["r:" + n.item.ring] = (m["r:" + n.item.ring] || 0) + 1;
+      if (n.key === "learning") m["s:" + n.item.status] = (m["s:" + n.item.status] || 0) + 1;
+    }
+    return m;
+  }, [all]);
+  const [copied, setCopied] = useState(false);
+  const copyLink = () => {
+    const done = () => { setCopied(true); setTimeout(() => setCopied(false), 1500); };
+    try { navigator.clipboard.writeText(location.href).then(done, done); } catch (e) { done(); }
+  };
   const k = { fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5, color: "var(--muted)" };
   const empty = scope === "matches" && !ranked.hasQuery && expanded.size === 0;
 
@@ -821,12 +921,12 @@ function MapView({ engine, ranked }) {
                       ["everything", "Everything", false, "every item in every corpus (" + all.length + ")"]]} />
         </span>
         {scope === "matches" && <label>per category <input type="range" min="3" max="30" value={perCat}
-          onChange={(e) => setPerCat(+e.target.value)} /> {perCat}</label>}
-        <label>top-K <input type="range" min="1" max="10" value={topK} onChange={(e) => setTopK(+e.target.value)} /> {topK}</label>
+          onChange={(e) => upd({ n: +e.target.value })} /> {perCat}</label>}
+        <label>top-K <input type="range" min="1" max="10" value={topK} onChange={(e) => upd({ k: +e.target.value })} /> {topK}</label>
         <label>threshold <input type="range" min="0" max="0.6" step="0.01" value={threshold}
-          onChange={(e) => setThreshold(+e.target.value)} /> {threshold.toFixed(2)}</label>
-        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={crossOnly} onChange={(e) => setCrossOnly(e.target.checked)} /> cross-category only</label>
-        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={showQuery} onChange={(e) => setShowQuery(e.target.checked)} /> query spokes</label>
+          onChange={(e) => upd({ t: +e.target.value })} /> {threshold.toFixed(2)}</label>
+        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={crossOnly} onChange={(e) => upd({ cross: e.target.checked })} /> cross-category only</label>
+        <label style={{ cursor: "pointer" }}><input type="checkbox" checked={showQuery} onChange={(e) => upd({ spokes: e.target.checked })} /> query spokes</label>
         <span style={{ display: "flex", gap: 6 }}>
           {CATS.map((c) => {
             const off = hidden.has(c.key);
@@ -841,6 +941,23 @@ function MapView({ engine, ranked }) {
         <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: 11.5 }}>
           {graph.nodes.length} nodes · {graph.edges.length} edges
         </span>
+        <button onClick={copyLink} title="copy a link that reopens this exact map"
+          style={{ ...ghostBtn, padding: "3px 10px", fontSize: 11, color: copied ? "#4ade80" : "var(--ink-2)" }}>
+          {copied ? "✓ link copied" : "⧉ copy link"}</button>
+      </div>
+      <div style={{ display: "flex", gap: 6, alignItems: "center", padding: "6px 20px", flexWrap: "wrap",
+        borderBottom: "1px solid var(--border)", color: "var(--ink-2)", fontSize: 11 }}>
+        <span style={{ ...k, marginRight: 4 }}>Radar ring</span>
+        {RINGS.map((r) => <FilterChip key={r} label={r} count={ringCount["r:" + r] || 0} accent={ACCENT.tools}
+          tier={tierOf("tools", r)} off={hiddenRings.has(r)} onClick={() => toggleIn("rings", r)} />)}
+        <span style={{ ...k, margin: "0 4px 0 14px" }}>Learning status</span>
+        {STATUSES.map((v) => <FilterChip key={v} label={v} count={ringCount["s:" + v] || 0} accent={ACCENT.learning}
+          tier={tierOf("learning", v)} off={hiddenStatus.has(v)} onClick={() => toggleIn("status", v)} />)}
+        <span style={{ marginLeft: "auto", color: "var(--muted)", display: "flex", gap: 12, alignItems: "center" }}>
+          <TierGlyph tier="core" accent="#c3c2b7" /> Adopted / Read
+          <TierGlyph tier="active" accent="#c3c2b7" /> Trial / Reading
+          <TierGlyph tier="candidate" accent="#c3c2b7" /> Discovered
+        </span>
       </div>
       <div style={{ flex: 1, minHeight: 0, display: "flex" }}>
         <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
@@ -848,7 +965,7 @@ function MapView({ engine, ranked }) {
             <GraphCanvas graph={graph} rel={rel} showQuery={showQuery && ranked.hasQuery}
               sel={sel} setSel={setSel} camTarget={camTarget} />}
           <div style={{ position: "absolute", left: 14, bottom: 10, color: "var(--muted)", fontSize: 11, pointerEvents: "none" }}>
-            drag nodes · drag background to pan · scroll to zoom · click a node to inspect
+            drag nodes · drag background to pan · scroll to zoom · click a node to inspect · hover an edge to see why it's there
           </div>
         </div>
         <Inspector sel={sel} node={selNode} neighbours={neighbours} onMap={onMap} rel={rel}
@@ -856,6 +973,43 @@ function MapView({ engine, ranked }) {
       </div>
     </div>
   );
+}
+
+// ---- ring / status encoding (3) -------------------------------------------
+const RINGS = ["Adopted", "Trial", "Assess", "Discovered"];
+const STATUSES = ["Read", "Reading", "Queued", "Discovered", "Shelved"];
+// core = you rely on it · active = being evaluated now · candidate = untriaged inbox
+function tierOf(key, v) {
+  if (key !== "tools" && key !== "learning") return null;
+  if (v === "Adopted" || v === "Read") return "core";
+  if (v === "Trial" || v === "Reading") return "active";
+  if (v === "Discovered") return "candidate";
+  return null;
+}
+const nodeTier = (n) => tierOf(n.key, n.key === "tools" ? n.item.ring : n.key === "learning" ? n.item.status : null);
+function TierGlyph({ tier, accent }) {
+  const base = { display: "inline-block", width: 9, height: 9, borderRadius: 9, boxSizing: "border-box" };
+  if (tier === "core") return <span style={{ ...base, background: accent, boxShadow: "0 0 0 1.5px var(--page), 0 0 0 2.6px #fff" }} />;
+  if (tier === "active") return <span style={{ ...base, background: accent, boxShadow: "0 0 0 1.5px var(--page), 0 0 0 2.6px " + accent + "aa" }} />;
+  if (tier === "candidate") return <span style={{ ...base, border: "1.5px solid " + accent, background: accent + "33" }} />;
+  return <span style={{ ...base, background: accent }} />;
+}
+function FilterChip({ label, count, accent, tier, off, onClick }) {
+  return (
+    <button onClick={onClick} title={(off ? "show " : "hide ") + label}
+      style={{ ...ghostBtn, padding: "2px 8px", fontSize: 11, display: "flex", alignItems: "center", gap: 6,
+        opacity: off ? 0.4 : 1, textDecoration: off ? "line-through" : "none" }}>
+      <TierGlyph tier={tier} accent={accent} />{label}
+      <span style={{ color: "var(--muted)", fontVariantNumeric: "tabular-nums" }}>{count}</span>
+    </button>
+  );
+}
+
+// distance from point (x,y) to segment a–b, for edge hit-testing
+function segDist(x, y, a, b) {
+  const dx = b.x - a.x, dy = b.y - a.y, l2 = dx * dx + dy * dy || 1;
+  const t = Math.max(0, Math.min(1, ((x - a.x) * dx + (y - a.y) * dy) / l2));
+  return Math.hypot(x - (a.x + t * dx), y - (a.y + t * dy));
 }
 
 // one force-layout step: repulsion, edge springs, query pull, gravity, integrate
@@ -891,9 +1045,11 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
   const canvasRef = useRef(null);
   const st = useRef({ pos: new Map(), cam: { x: 0, y: 0, z: 1 }, alpha: 1, laid: [] });
   const [hover, setHover] = useState(null);
+  const [hoverEdge, setHoverEdge] = useState(null);   // { i, sx, sy } — index into graph.edges + screen pos
   const drag = useRef(null), pan = useRef(null);
-  const hoverRef = useRef(null), selRef = useRef(sel);
-  hoverRef.current = hover; selRef.current = sel;
+  const hoverRef = useRef(null), selRef = useRef(sel), edgeRef = useRef(null);
+  hoverRef.current = hover; selRef.current = sel; edgeRef.current = hoverEdge ? hoverEdge.i : null;
+  useEffect(() => setHoverEdge(null), [graph]);
 
   // keep positions across rebuilds so exploring doesn't reshuffle the map
   useEffect(() => {
@@ -978,10 +1134,13 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
       ctx.clearRect(0, 0, w, h);
       ctx.save(); ctx.translate(w / 2 + cam.x, h / 2 + cam.y); ctx.scale(cam.z, cam.z);
 
-      const focus = hoverRef.current || selRef.current;
+      const he = edgeRef.current != null ? edges[edgeRef.current] : null;   // hovered edge wins focus
+      const focus = he ? null : hoverRef.current || selRef.current;
       const fi = focus ? nodes.findIndex((n) => n.uid === focus) : -1;
       const lit = new Set();
       if (fi >= 0) { lit.add(fi); for (const e of edges) { if (e.a === fi) lit.add(e.b); if (e.b === fi) lit.add(e.a); } }
+      if (he) { lit.add(he.a); lit.add(he.b); }
+      const anyFocus = fi >= 0 || !!he;
       const qFocus = focus === QUERY_UID;
 
       // query spokes
@@ -990,7 +1149,7 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
         nodes.forEach((n, i) => {
           const r = rel.get(n.uid); if (!r || !P[i]) return;
           const on = qFocus || fi === i;
-          ctx.strokeStyle = on ? "rgba(255,255,255,0.55)" : `rgba(255,255,255,${fi >= 0 ? 0.03 : 0.04 + r * 0.1})`;
+          ctx.strokeStyle = on ? "rgba(255,255,255,0.55)" : `rgba(255,255,255,${anyFocus ? 0.03 : 0.04 + r * 0.1})`;
           ctx.lineWidth = 0.8 / cam.z + (on ? 0.6 : 0);
           ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(P[i].x, P[i].y); ctx.stroke();
         });
@@ -999,10 +1158,11 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
       // similarity edges — tinted by the two categories they bridge
       for (const e of edges) {
         const pa = P[e.a], pb = P[e.b]; if (!pa || !pb) continue;
-        const on = fi < 0 || e.a === fi || e.b === fi;
+        const on = he ? e === he : (fi < 0 || e.a === fi || e.b === fi);
         const ka = nodes[e.a].key, kb = nodes[e.b].key;
         let stroke;
         if (!on) stroke = "rgba(120,125,135,0.05)";
+        else if (e === he) stroke = "#ffffff";
         else if (ka === kb) stroke = ACCENT[ka] + Math.round((0.25 + e.s * 0.6) * 255).toString(16).padStart(2, "0");
         else {
           const g = ctx.createLinearGradient(pa.x, pa.y, pb.x, pb.y);
@@ -1010,7 +1170,7 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
           g.addColorStop(0, ACCENT[ka] + al); g.addColorStop(1, ACCENT[kb] + al); stroke = g;
         }
         ctx.strokeStyle = stroke;
-        ctx.lineWidth = on ? (0.6 + e.s * 3) / Math.sqrt(cam.z) : 0.5;
+        ctx.lineWidth = e === he ? 3 / Math.sqrt(cam.z) : on ? (0.6 + e.s * 3) / Math.sqrt(cam.z) : 0.5;
         ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
       }
       // query node
@@ -1027,14 +1187,29 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
       nodes.forEach((n, i) => {
         const p = P[i]; if (!p) return;
         const r = 3.5 + Math.min(5, degree[i] * 0.7) + (rel.get(n.uid) || 0) * 4;
-        const dim = fi >= 0 && !lit.has(i);
+        const dim = anyFocus && !lit.has(i);
+        const tier = nodeTier(n), acc = ACCENT[n.key];
         ctx.globalAlpha = dim ? 0.18 : 1;
         ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = ACCENT[n.key]; ctx.fill();
-        if (n.uid === selRef.current || i === fi) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.8 / cam.z; ctx.stroke(); }
+        if (tier === "candidate") {
+          // untriaged inbox: hollow, faint
+          ctx.fillStyle = acc + "2a"; ctx.fill();
+          ctx.strokeStyle = acc + "bb"; ctx.lineWidth = 1.3 / Math.sqrt(cam.z); ctx.stroke();
+        } else {
+          ctx.fillStyle = acc; ctx.fill();
+          if (tier === "core" || tier === "active") {   // halo: white = Adopted/Read, accent = Trial/Reading
+            ctx.beginPath(); ctx.arc(p.x, p.y, r + 2.6 / Math.sqrt(cam.z), 0, Math.PI * 2);
+            ctx.strokeStyle = tier === "core" ? "rgba(255,255,255,0.9)" : acc + "aa";
+            ctx.lineWidth = 1.2 / Math.sqrt(cam.z); ctx.stroke();
+          }
+        }
+        if (n.uid === selRef.current || i === fi) {
+          ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.8 / cam.z; ctx.stroke();
+        }
         if ((labelAll && !dim) || lit.has(i)) {
           const nm = nameOf(n.key, n.item);
-          ctx.fillStyle = i === fi ? "#fff" : "#d6d5cf";
+          ctx.fillStyle = i === fi || (he && lit.has(i)) ? "#fff" : "#d6d5cf";
           ctx.font = (i === fi ? "600 " : "") + (10 / Math.sqrt(cam.z)).toFixed(1) + "px 'IBM Plex Mono', monospace";
           ctx.fillText(nm.length > 26 ? nm.slice(0, 25) + "…" : nm, p.x + r + 3, p.y + 3);
         }
@@ -1062,8 +1237,20 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
     }
     return best;
   };
+  const pickEdge = (ev) => {
+    const { x, y } = toWorld(ev), z = st.current.cam.z, pos = st.current.pos;
+    let best = null, bd = 5 / z;
+    graph.edges.forEach((e, i) => {
+      const a = pos.get(graph.nodes[e.a].uid), b = pos.get(graph.nodes[e.b].uid);
+      if (!a || !b) return;
+      const d = segDist(x, y, a, b);
+      if (d < bd) { bd = d; best = i; }
+    });
+    return best;
+  };
   const onDown = (ev) => {
     st.current.autoFit = false;
+    setHoverEdge(null);
     const l = pick(ev);
     if (l && l.p) drag.current = { p: l.p, uid: l.uid, x: ev.clientX, y: ev.clientY };
     else pan.current = { x: ev.clientX, y: ev.clientY, cam: { ...st.current.cam }, uid: l && l.uid };
@@ -1077,7 +1264,12 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
       st.current.cam.y = pan.current.cam.y + ev.clientY - pan.current.y;
     } else {
       const l = pick(ev); setHover(l ? l.uid : null);
-      canvasRef.current.style.cursor = l ? "pointer" : "grab";
+      const ei = l ? null : pickEdge(ev);
+      if (ei != null) {
+        const r = canvasRef.current.getBoundingClientRect();
+        setHoverEdge({ i: ei, sx: ev.clientX - r.left, sy: ev.clientY - r.top, w: r.width, h: r.height });
+      } else if (hoverEdge) setHoverEdge(null);
+      canvasRef.current.style.cursor = l ? "pointer" : ei != null ? "help" : "grab";
     }
   };
   const onUp = (ev) => {
@@ -1101,9 +1293,42 @@ function GraphCanvas({ graph, rel, showQuery, sel, setSel, camTarget }) {
   return (
     <div style={{ position: "absolute", inset: 0 }}>
       <canvas ref={canvasRef} onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp}
-        onMouseLeave={() => { setHover(null); drag.current = null; pan.current = null; }}
+        onMouseLeave={() => { setHover(null); setHoverEdge(null); drag.current = null; pan.current = null; }}
         style={{ display: "block", width: "100%", height: "100%" }} />
+      {hoverEdge && graph.edges[hoverEdge.i] && <EdgeTip graph={graph} e={graph.edges[hoverEdge.i]} at={hoverEdge} />}
       <button onClick={() => { st.current.autoFit = true; }} style={{ ...ghostBtn, position: "absolute", top: 10, right: 12, background: "var(--surface-1)" }}>⤢ fit</button>
+    </div>
+  );
+}
+
+// tooltip explaining one similarity edge: who it joins, how strong, and the shared words behind it
+function EdgeTip({ graph, e, at }) {
+  const A = graph.nodes[e.a], B = graph.nodes[e.b];
+  const why = sharedTerms(A.item._vec, B.item._vec, 6);
+  const row = (n) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 7, minWidth: 0 }}>
+      <span style={{ width: 8, height: 8, borderRadius: 2, background: ACCENT[n.key], flex: "0 0 8px" }} />
+      <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontWeight: 600 }}>{nameOf(n.key, n.item)}</span>
+      <span style={{ color: "var(--muted)", fontSize: 10.5, marginLeft: "auto", flex: "0 0 auto" }}>{LABEL[n.key]}</span>
+    </div>
+  );
+  return (
+    <div style={{ position: "absolute", left: at.sx + 330 > at.w ? at.sx - 314 : at.sx + 14,
+      top: at.sy + 150 > at.h ? at.sy - 140 : at.sy + 12, width: 300, pointerEvents: "none",
+      background: "rgba(20,20,19,0.97)", border: "1px solid var(--border)", borderRadius: 10, padding: "9px 11px", fontSize: 12 }}>
+      {row(A)}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "5px 0 5px 3px", color: "var(--muted)", fontSize: 11 }}>
+        <span>↕ similarity</span>
+        <span style={{ flex: 1, height: 3, background: "var(--grid)", borderRadius: 2 }}>
+          <span style={{ display: "block", width: Math.round(Math.min(1, e.s / 0.5) * 100) + "%", height: 3, background: "#fff", borderRadius: 2 }} />
+        </span>
+        <span style={{ color: "var(--ink)", fontVariantNumeric: "tabular-nums" }}>{e.s.toFixed(2)}</span>
+      </div>
+      {row(B)}
+      <div style={{ marginTop: 8, color: "var(--muted)", fontSize: 11 }}>
+        shared terms:{" "}
+        {why.length ? why.map((t, i) => <span key={t}><span style={{ color: "var(--ink-2)" }}>{t}</span>{i < why.length - 1 ? " · " : ""}</span>) : "—"}
+      </div>
     </div>
   );
 }
@@ -1131,7 +1356,7 @@ function Inspector({ sel, node, neighbours, onMap, rel, graph, onExpand, goTo, o
           <div key={n.uid} onClick={() => goTo(n.uid)} style={{ display: "flex", gap: 8, alignItems: "center", padding: "5px 0", cursor: "pointer", borderTop: "1px solid var(--border)" }}>
             <span style={{ width: 8, height: 8, borderRadius: 2, background: ACCENT[n.key], flex: "0 0 8px" }} />
             <span style={{ fontSize: 12.5, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{nameOf(n.key, n.item)}</span>
-            <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: 11 }}>{d} links</span>
+            <span style={{ marginLeft: "auto", color: "var(--muted)", fontSize: 11, whiteSpace: "nowrap", flex: "0 0 auto" }}>{d} links</span>
           </div>
         ))}
         <div style={{ fontSize: 10.5, letterSpacing: 1, textTransform: "uppercase", color: "var(--muted)", margin: "16px 0 6px" }}>Links by category pair</div>
