@@ -1,0 +1,10 @@
+Risk ID,Type,Title,Likelihood,Consequence,Status,Owner,Mitigation
+RTR-R01,Risk,LLM misparses radio traffic into a wrong report field,3,5,Open,Autonomy lead,Operator confirms every 9-line before send; flag low-confidence fields
+RTR-R02,Risk,Speech-to-text accuracy collapses on narrowband clipped audio,4,4,Mitigating,Audio lead,Fine-tune on recorded net traffic; add squelch-tail trimming
+RTR-R03,Risk,Rugged handheld lacks the memory to run the model alongside the radio app,2,3,Watch,Hardware lead,Quantize model; benchmark on target device each release
+RTR-I01,Issue,Phonetic-alphabet grid references transcribed as words instead of digits,,4,Open,Audio lead,Post-process normalizer for grids and procedure words
+RTR-I02,Issue,No labelled corpus of real net traffic for evaluation,,3,Open,PM,Record exercise nets under a data-use agreement
+RTR-I03,Issue,Batch re-transcription pass drifts out of sync with the live log timestamps,,2,Mitigating,Software lead,Align on radio PTT timestamps rather than audio offsets
+RTR-O01,Opportunity,Share the radio-traffic parser with the SAR Fleet Coordinator,4,4,Pursuing,Autonomy lead,Extract parser into a shared library with SAR fleet
+RTR-O02,Opportunity,Reuse Field-Notes Transcriber diarization to separate callsigns,3,3,Open,Audio lead,Spike diarization on two-speaker net recordings
+RTR-O03,Opportunity,Template engine extends to SITREP and SALUTE reports for free,4,2,Open,Software lead,Make report templates data-driven rather than hard-coded

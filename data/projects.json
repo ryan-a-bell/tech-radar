@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-03",
   "projects": [
     {
       "id": "autonomous-trading-desk",
@@ -77,6 +77,236 @@
       "model_terms": ""
     },
     {
+      "id": "counter-uas-engagement-sim",
+      "name": "Counter-UAS Engagement Simulator",
+      "status": "Idea",
+      "topics": [
+        "Agents",
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "A Monte Carlo study tool for sizing a layered small-drone defense around a fixed site. Planners place radars, electro-optical/infrared cameras, and RF detectors on terrain, set an incoming threat mix — single drones, coordinated swarms, low-and-slow quadcopters hugging the tree line — and run thousands of raids. The output is how often each threat is detected, tracked, and handed off inside the time available. It is a sizing and placement tool, not a fire-control system.",
+      "body": "A Monte Carlo study tool for sizing a layered small-drone defense around a\nfixed site. Planners place radars, electro-optical/infrared cameras, and RF\ndetectors on terrain, set an incoming threat mix — single drones, coordinated\nswarms, low-and-slow quadcopters hugging the tree line — and run thousands of\nraids. The output is how often each threat is detected, tracked, and handed off\ninside the time available. It is a sizing and placement tool, not a fire-control\nsystem.\n\nThe value is in the coupled models. Sensor line-of-sight and coverage come from\nan orbital and terrain analysis tool, radar cross-sections and antenna patterns\nfrom electromagnetic simulation, and the attacking swarm is an agent-based model\nwhose behaviors — saturate, decoy, split up — are trained in a multi-agent\nreinforcement-learning environment. Sweeps run in containers across a cluster.\nIt reuses the mission-rehearsal simulator's machinery with the roles reversed:\ninstead of flying the drones, you are trying to see them.",
+      "stack": [
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:mesa/mesa",
+          "name": "mesa",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/mesa/mesa",
+          "canonical_url": "github.com/mesa/mesa"
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:ansys",
+          "name": "ANSYS HFSS / AEDT",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/electronics/ansys-hfss",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "cyber-range-log-analyst",
+      "name": "Cyber Range Log Analyst",
+      "status": "Idea",
+      "topics": [
+        "AI",
+        "Agents",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "An analyst's assistant for defensive cyber exercises on a training range. During the exercise it ingests network flows, host logs, and IDS alerts from the range and groups related alerts into incidents — this phishing click, that lateral movement, the later data staging. It writes a running timeline of each incident so the blue team can see the attack as a story rather than a thousand alerts, and the white cell can score their detection and response times.",
+      "body": "An analyst's assistant for defensive cyber exercises on a training range.\nDuring the exercise it ingests network flows, host logs, and IDS alerts from\nthe range and groups related alerts into incidents — this phishing click, that\nlateral movement, the later data staging. It writes a running timeline of each\nincident so the blue team can see the attack as a story rather than a thousand\nalerts, and the white cell can score their detection and response times.\n\nLogs, metrics, and traces land in a single observability store, so the\nassistant queries one place rather than a dozen consoles. Single sign-on gives\nthe blue team, white cell, and observers separate views of the same data. A\nlocal model clusters alerts, summarizes each incident with links to the\nunderlying log lines, and drafts the after-action report — keeping exercise\ndata, which often mirrors real network layouts, off any external service. It\nuses the same observability stack as the RF spectrum network and points at the\nhomelab LLM gateway for its model.",
+      "stack": [
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        },
+        {
+          "id": "github:keycloak/keycloak",
+          "name": "keycloak",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/keycloak/keycloak",
+          "canonical_url": "github.com/keycloak/keycloak"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [],
+        "rio": {
+          "items": [
+            {
+              "id": "CRL-R01",
+              "type": "Risk",
+              "title": "LLM merges unrelated alerts into one incident and hides an attack",
+              "likelihood": 3,
+              "consequence": 5,
+              "score": 15,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Analytics lead",
+              "mitigation": "Show alert-level evidence; analyst approves every merge"
+            },
+            {
+              "id": "CRL-O01",
+              "type": "Opportunity",
+              "title": "Share the OpenObserve stack with RF Spectrum Situational Awareness",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Infra lead",
+              "mitigation": "Common deployment templates and dashboards"
+            },
+            {
+              "id": "CRL-O03",
+              "type": "Opportunity",
+              "title": "Drafted after-action reports cut white-cell write-up time in half",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "White cell lead",
+              "mitigation": "Pilot on next exercise; compare against manual reports"
+            },
+            {
+              "id": "CRL-R02",
+              "type": "Risk",
+              "title": "Log volume at exercise peak saturates the observability store",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Infra lead",
+              "mitigation": "Sample low-value flow logs; scale ingest nodes before exercise"
+            },
+            {
+              "id": "CRL-R03",
+              "type": "Risk",
+              "title": "Exercise data mirroring real networks leaks outside the range",
+              "likelihood": 2,
+              "consequence": 5,
+              "score": 10,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Security lead",
+              "mitigation": "Air-gapped range; local model only; SSO with role-based views"
+            },
+            {
+              "id": "CRL-O02",
+              "type": "Opportunity",
+              "title": "Route model calls through the Homelab LLM Gateway instead of a dedicated server",
+              "likelihood": 4,
+              "consequence": 2,
+              "score": 8,
+              "level": "Moderate",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "Infra lead",
+              "mitigation": "Point the analyst at the gateway endpoint with a range-only key"
+            },
+            {
+              "id": "CRL-I02",
+              "type": "Issue",
+              "title": "Keycloak role mapping gives observers access to blue-team notes",
+              "likelihood": null,
+              "consequence": 4,
+              "score": 4,
+              "level": "High",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Security lead",
+              "mitigation": "Separate realms per cell; audit role mappings before each exercise"
+            },
+            {
+              "id": "CRL-I01",
+              "type": "Issue",
+              "title": "IDS alert timestamps skewed between range segments",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Infra lead",
+              "mitigation": "Enforce NTP across the range; correct skew at ingest"
+            },
+            {
+              "id": "CRL-I03",
+              "type": "Issue",
+              "title": "No ground-truth attack timeline to score clustering accuracy",
+              "likelihood": null,
+              "consequence": 2,
+              "score": 2,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "White cell lead",
+              "mitigation": "Red team logs every action with timestamps for scoring"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/cyber-range-log-analyst/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      },
+      "model_terms": ""
+    },
+    {
       "id": "document-intelligence-engine",
       "name": "Technical-Document Intelligence Engine",
       "status": "Idea",
@@ -136,6 +366,336 @@
       "model_terms": ""
     },
     {
+      "id": "factor-research-lab",
+      "name": "Equity Factor Research Lab",
+      "status": "Paused",
+      "topics": [
+        "Quant",
+        "Trading",
+        "ML"
+      ],
+      "repo": "https://github.com/you/factor-lab",
+      "blurb": "A research harness for cross-sectional equity factors — value, momentum, quality, low volatility, and a handful of ML-learned alphas — that measures each factor's information coefficient, turnover, and decay across holding periods before anything is allowed near a portfolio.",
+      "body": "A research harness for cross-sectional equity factors — value, momentum,\nquality, low volatility, and a handful of ML-learned alphas — that measures\neach factor's information coefficient, turnover, and decay across holding\nperiods before anything is allowed near a portfolio.\n\nThe discipline is in the evaluation: point-in-time data so nothing leaks from\nthe future, factor returns neutralized against sector and size, regression\ndiagnostics on every exposure, and a tear sheet that shows drawdowns and\nrolling Sharpe rather than one flattering number. Paused until the data\npipeline can serve survivorship-free fundamentals; the surviving factors are\nmeant to feed the portfolio optimizer as expected-return views.",
+      "stack": [
+        {
+          "id": "manual:qlib",
+          "name": "Qlib",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/microsoft/qlib",
+          "canonical_url": "github.com/microsoft/qlib"
+        },
+        {
+          "id": "manual:alphalens",
+          "name": "AlphaLens",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/quantopian/alphalens",
+          "canonical_url": "github.com/quantopian/alphalens"
+        },
+        {
+          "id": "manual:pyfolio",
+          "name": "PyFolio",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/quantopian/pyfolio",
+          "canonical_url": "github.com/quantopian/pyfolio"
+        },
+        {
+          "id": "manual:empyrical",
+          "name": "Empyrical",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/quantopian/empyrical",
+          "canonical_url": "github.com/quantopian/empyrical"
+        },
+        {
+          "id": "manual:statsmodels",
+          "name": "Statsmodels",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/statsmodels/statsmodels",
+          "canonical_url": "github.com/statsmodels/statsmodels"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "field-notes-transcriber",
+      "name": "Field-Notes Transcriber",
+      "status": "Shipped",
+      "topics": [
+        "STT",
+        "RAG",
+        "AI"
+      ],
+      "repo": "https://github.com/you/field-notes",
+      "blurb": "Turns voice memos, meeting recordings, and site-walk dictation into searchable, speaker-labelled notes. Drop an audio file in a folder and it is transcribed, diarized, timestamped, summarized into action items, and indexed so you can ask \"what did we decide about the antenna mount?\" and land on the exact second of the recording.",
+      "body": "Turns voice memos, meeting recordings, and site-walk dictation into searchable,\nspeaker-labelled notes. Drop an audio file in a folder and it is transcribed,\ndiarized, timestamped, summarized into action items, and indexed so you can ask\n\"what did we decide about the antenna mount?\" and land on the exact second of\nthe recording.\n\nEverything runs locally: a fast speech-to-text engine does the first pass, a\nword-level alignment and diarization step attributes each sentence to a\nspeaker, and a local model writes the summary and answers questions over the\ntranscript archive through a chat front-end. Shipped and in daily use — it is\nthe audio sibling of the document intelligence engine, grounding answers in a\nrecording instead of a scanned page.",
+      "stack": [
+        {
+          "id": "manual:github:SYSTRAN/faster-whisper",
+          "name": "faster-whisper",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/SYSTRAN/faster-whisper",
+          "canonical_url": "github.com/systran/faster-whisper"
+        },
+        {
+          "id": "manual:whisperx",
+          "name": "WhisperX",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/m-bain/whisperX",
+          "canonical_url": "github.com/m-bain/whisperx"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:open-webui",
+          "name": "Open WebUI",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/open-webui/open-webui",
+          "canonical_url": "github.com/open-webui/open-webui"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "forward-additive-spares",
+      "name": "Forward Additive Spares Depot",
+      "status": "Idea",
+      "topics": [
+        "3D Printing",
+        "CNC",
+        "OCR"
+      ],
+      "repo": null,
+      "blurb": "A workflow for printing replacement parts at a forward location instead of waiting weeks for the supply chain. A maintainer identifies a failed part; the tool finds its technical data package, checks whether it is approved for additive manufacture and whether the material and printer on hand can meet its strength and temperature requirements, then prepares the print and records a qualification log tying the printed part to its source drawing, print settings, and inspection results.",
+      "body": "A workflow for printing replacement parts at a forward location instead of\nwaiting weeks for the supply chain. A maintainer identifies a failed part; the\ntool finds its technical data package, checks whether it is approved for\nadditive manufacture and whether the material and printer on hand can meet its\nstrength and temperature requirements, then prepares the print and records a\nqualification log tying the printed part to its source drawing, print settings,\nand inspection results.\n\nThe hard part is trust in the part. Technical data packages are often scanned\ndrawings and PDFs, so a document parser pulls dimensions, materials, and\ntolerances out of them. Parametric CAD adapts the geometry when a printable\nsubstitute needs thicker walls or a different orientation, and the slicer\nproduces the print with settings fixed per part. The readiness predictor tells\nthe depot which parts to stock material for; the fixture designer shares the\nCAD and slicing pipeline.",
+      "stack": [
+        {
+          "id": "manual:fusion-360",
+          "name": "Autodesk Fusion",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.autodesk.com/products/fusion",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:prusaslicer",
+          "name": "PrusaSlicer",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.prusa3d.com/page/prusaslicer_424/",
+          "canonical_url": null
+        },
+        {
+          "id": "github:docling-project/docling",
+          "name": "docling",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/docling-project/docling",
+          "canonical_url": "github.com/docling-project/docling"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [],
+        "rio": {
+          "items": [
+            {
+              "id": "FAS-O01",
+              "type": "Opportunity",
+              "title": "Readiness Predictor forecasts drive which materials to pre-stock",
+              "likelihood": 4,
+              "consequence": 4,
+              "score": 16,
+              "level": "High",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Consume predicted-failure feed from the readiness predictor"
+            },
+            {
+              "id": "FAS-R02",
+              "type": "Risk",
+              "title": "Technical data package rights do not permit additive reproduction",
+              "likelihood": 4,
+              "consequence": 4,
+              "score": 16,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Data-rights review per part; maintain approved-parts list"
+            },
+            {
+              "id": "FAS-R01",
+              "type": "Risk",
+              "title": "Printed part fails in service below drawing strength",
+              "likelihood": 3,
+              "consequence": 5,
+              "score": 15,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Materials lead",
+              "mitigation": "Restrict to non-flight-critical parts; coupon test every material lot"
+            },
+            {
+              "id": "FAS-O02",
+              "type": "Opportunity",
+              "title": "Share CAD and slicing pipeline with the Generative Fixture Designer",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Extract common Fusion and slicer scripts into one module"
+            },
+            {
+              "id": "FAS-O03",
+              "type": "Opportunity",
+              "title": "Metal printer at the regional hub widens the printable parts list",
+              "likelihood": 2,
+              "consequence": 5,
+              "score": 10,
+              "level": "Moderate",
+              "status": "Watch",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Survey part list for metal-only candidates; price a hub printer"
+            },
+            {
+              "id": "FAS-R03",
+              "type": "Risk",
+              "title": "Humidity at forward sites degrades filament before printing",
+              "likelihood": 3,
+              "consequence": 3,
+              "score": 9,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Ops lead",
+              "mitigation": "Sealed dry boxes; moisture check before each print"
+            },
+            {
+              "id": "FAS-I01",
+              "type": "Issue",
+              "title": "Scanned drawings lose tolerances in OCR",
+              "likelihood": null,
+              "consequence": 4,
+              "score": 4,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Human verification of every extracted dimension and tolerance"
+            },
+            {
+              "id": "FAS-I03",
+              "type": "Issue",
+              "title": "No inspection gauges at the forward site for critical dimensions",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Quality lead",
+              "mitigation": "Ship go/no-go gauge kit; print gauges where tolerance allows"
+            },
+            {
+              "id": "FAS-I02",
+              "type": "Issue",
+              "title": "PrusaSlicer profiles differ between depot printers",
+              "likelihood": null,
+              "consequence": 2,
+              "score": 2,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Ops lead",
+              "mitigation": "Lock per-part slicer profiles under version control"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/forward-additive-spares/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      },
+      "model_terms": ""
+    },
+    {
+      "id": "generative-fixture-designer",
+      "name": "Generative Fixture Designer",
+      "status": "Idea",
+      "topics": [
+        "CNC",
+        "3D Printing",
+        "AI"
+      ],
+      "repo": null,
+      "blurb": "An idea for designing workholding fixtures automatically. Give it a part model and the machining operations planned for it, and it proposes soft jaws, vise fixtures, or a printed nest that locates the part repeatably, clears every tool path, and resists the cutting forces — then exports a printable or machinable fixture body.",
+      "body": "An idea for designing workholding fixtures automatically. Give it a part model\nand the machining operations planned for it, and it proposes soft jaws, vise\nfixtures, or a printed nest that locates the part repeatably, clears every tool\npath, and resists the cutting forces — then exports a printable or machinable\nfixture body.\n\nThe interesting problem is reasoning about geometry under constraints: picking\ndatum faces, checking tool-path clearance, and trading print time against\nstiffness. Parametric CAD scripts generate candidate fixtures, a slicer\nestimates print time and material for the printed variants, and a local model\nreads the setup sheet to infer which faces matter. It borrows the trade-space\nsweep idea from the microgrid sizing study, aimed at a vise instead of a\nbattery bank.",
+      "stack": [
+        {
+          "id": "manual:fusion-360",
+          "name": "Autodesk Fusion",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.autodesk.com/products/fusion",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:freecad",
+          "name": "FreeCAD",
+          "quadrant": "Tools",
+          "ring": "Discovered",
+          "url": "https://www.freecad.org/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:prusaslicer",
+          "name": "PrusaSlicer",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.prusa3d.com/page/prusaslicer_424/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
       "id": "gsd-core-app",
       "name": "GSD Core App",
       "status": "Active",
@@ -162,6 +722,138 @@
           "ring": "Discovered",
           "url": "https://cursor.com",
           "canonical_url": null
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "homelab-llm-gateway",
+      "name": "Homelab LLM Gateway",
+      "status": "Active",
+      "topics": [
+        "AI",
+        "RAG",
+        "Agents"
+      ],
+      "repo": "https://github.com/you/llm-gateway",
+      "blurb": "A single, authenticated front door to every model running at home. It serves large models on the GPU box and small quantized ones on CPU nodes, exposes them behind one OpenAI-compatible endpoint with per-user keys and quotas, and gives the household a shared chat interface with conversation history and document upload.",
+      "body": "A single, authenticated front door to every model running at home. It serves\nlarge models on the GPU box and small quantized ones on CPU nodes, exposes them\nbehind one OpenAI-compatible endpoint with per-user keys and quotas, and gives\nthe household a shared chat interface with conversation history and document\nupload.\n\nThe interesting work is operational: routing each request to the cheapest\nmodel that can handle it, batching to keep the GPU saturated, single sign-on\nin front of everything, and tracing every call so latency, token spend, and\nerrors are visible. Containers on a small cluster keep it reproducible. The\nother local-first projects — the transcriber, the copilot, the trading desk's\nagents — all point at this gateway instead of each running their own model.",
+      "stack": [
+        {
+          "id": "manual:vllm",
+          "name": "vLLM",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/vllm-project/vllm",
+          "canonical_url": "github.com/vllm-project/vllm"
+        },
+        {
+          "id": "github:ggml-org/llama.cpp",
+          "name": "llama.cpp",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/ggml-org/llama.cpp",
+          "canonical_url": "github.com/ggml-org/llama.cpp"
+        },
+        {
+          "id": "github:danny-avila/LibreChat",
+          "name": "LibreChat",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/danny-avila/LibreChat",
+          "canonical_url": "github.com/danny-avila/librechat"
+        },
+        {
+          "id": "github:keycloak/keycloak",
+          "name": "keycloak",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/keycloak/keycloak",
+          "canonical_url": "github.com/keycloak/keycloak"
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:kubernetes",
+          "name": "Kubernetes",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://kubernetes.io",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "mbse-model-copilot",
+      "name": "MBSE Model Copilot",
+      "status": "Idea",
+      "topics": [
+        "Agents",
+        "RAG",
+        "AI"
+      ],
+      "repo": null,
+      "blurb": "An assistant that sits beside a systems model and keeps it honest. It reads requirement documents and interface control documents, proposes SysML v2 requirement definitions and satisfy links, flags requirements nothing satisfies, and answers questions like \"which parts are affected if the uplink budget drops by 3 dB?\" by walking the model rather than guessing.",
+      "body": "An assistant that sits beside a systems model and keeps it honest. It reads\nrequirement documents and interface control documents, proposes SysML v2\nrequirement definitions and satisfy links, flags requirements nothing\nsatisfies, and answers questions like \"which parts are affected if the uplink\nbudget drops by 3 dB?\" by walking the model rather than guessing.\n\nTwo halves make it work: a document parser turns specifications into\nstructured text with tables intact, and a model-aware agent queries and edits\nthe textual SysML through an open-source modeling server while staying\nround-trip compatible with the commercial tool the team already uses. A local\nmodel keeps controlled technical data on-premises. The SAR fleet model is the\nfirst test case — its requirements-trace gaps are exactly what the copilot\nshould close.",
+      "stack": [
+        {
+          "id": "manual:sysml-v2",
+          "name": "SysML v2",
+          "quadrant": "Languages",
+          "ring": "Adopted",
+          "url": "https://www.omg.org/spec/SysML/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:cameo-magicdraw",
+          "name": "Cameo/MagicDraw",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.3ds.com/products/catia/no-magic",
+          "canonical_url": null
+        },
+        {
+          "id": "github:eclipse-syson/syson",
+          "name": "syson",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/eclipse-syson/syson",
+          "canonical_url": "github.com/eclipse-syson/syson"
+        },
+        {
+          "id": "github:docling-project/docling",
+          "name": "docling",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/docling-project/docling",
+          "canonical_url": "github.com/docling-project/docling"
         },
         {
           "id": "manual:ollama",
@@ -235,6 +927,113 @@
       "model_terms": ""
     },
     {
+      "id": "ml-drift-monitor",
+      "name": "Model Drift Monitor",
+      "status": "Active",
+      "topics": [
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/drift-monitor",
+      "blurb": "A monitoring service that watches deployed models for data drift and quietly degrading accuracy. It compares each day's feature distributions against the training reference, tracks prediction drift and delayed ground-truth accuracy, and opens an alert — with the offending features ranked — before a stale model does real damage.",
+      "body": "A monitoring service that watches deployed models for data drift and quietly\ndegrading accuracy. It compares each day's feature distributions against the\ntraining reference, tracks prediction drift and delayed ground-truth accuracy,\nand opens an alert — with the offending features ranked — before a stale model\ndoes real damage.\n\nReference datasets and model versions are pinned with data version control so\nevery alert points at the exact snapshot the model was trained on, statistical\ndrift reports are generated per feature, and the metrics and logs stream into\ndashboards next to the rest of the infrastructure. The forecaster and the\nsensor-anomaly detector are its first two customers; both suffer the same\ndistribution shift over time.",
+      "stack": [
+        {
+          "id": "github:evidentlyai/evidently",
+          "name": "evidently",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/evidentlyai/evidently",
+          "canonical_url": "github.com/evidentlyai/evidently"
+        },
+        {
+          "id": "github:treeverse/dvc",
+          "name": "dvc",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/treeverse/dvc",
+          "canonical_url": "github.com/treeverse/dvc"
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        },
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "options-flow-scanner",
+      "name": "Unusual Options-Flow Scanner",
+      "status": "Active",
+      "topics": [
+        "Trading",
+        "Quant",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/options-flow-scanner",
+      "blurb": "A scanner that watches the live options tape for unusual activity — block prints well above open interest, sweeps hitting the ask across several exchanges, and sudden jumps in implied volatility on a single strike — and ranks each alert by how far it sits outside that contract's normal behavior.",
+      "body": "A scanner that watches the live options tape for unusual activity — block\nprints well above open interest, sweeps hitting the ask across several\nexchanges, and sudden jumps in implied volatility on a single strike — and\nranks each alert by how far it sits outside that contract's normal behavior.\n\nEvery trade is enriched with greeks and implied volatility computed on the fly,\nso an alert carries delta-adjusted notional rather than raw premium. Historical\nquotes and trades come from a tick-level options feed, underlying prices from a\nsecond market-data source, and a research terminal is used to sanity-check a\nflagged name before it ever reaches the desk. Alert rates, latency, and feed\ngaps are charted on a live dashboard. It is the natural input for the\nvol-surface lab and the research agents on the trading desk.",
+      "stack": [
+        {
+          "id": "manual:thetadata",
+          "name": "ThetaData",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://www.thetadata.net/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:vollib",
+          "name": "vollib",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/vollib/vollib",
+          "canonical_url": "github.com/vollib/vollib"
+        },
+        {
+          "id": "manual:polygon-io",
+          "name": "Polygon.io",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://polygon.io/",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:openbb",
+          "name": "OpenBB",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/OpenBB-finance/OpenBB",
+          "canonical_url": "github.com/openbb-finance/openbb"
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
       "id": "options-vol-surface",
       "name": "Options Vol-Surface Lab",
       "status": "Idea",
@@ -247,6 +1046,48 @@
       "blurb": "An idea, no code yet. I want to build and calibrate an implied-volatility surface for equity options: pull an options chain, fit a no-arbitrage surface across strikes and expiries, and price exotic payoffs off it. The interesting part is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to interpolate the surface for pricing.",
       "body": "An idea, no code yet. I want to build and calibrate an implied-volatility\nsurface for equity options: pull an options chain, fit a no-arbitrage surface\nacross strikes and expiries, and price exotic payoffs off it. The interesting\npart is the calibration — SVI or SABR fits, arbitrage checks, and a clean way to\ninterpolate the surface for pricing.\n\nBecause there is no declared stack, the recommendations below are the whole\nsuggested tech stack, inferred purely from this description — option pricing\nlibraries, a quant analytics toolkit, and a market-data feed for the chains.",
       "stack": [],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "practice-room-coach",
+      "name": "Practice-Room Coach",
+      "status": "Archived",
+      "topics": [
+        "Music",
+        "STT",
+        "ML"
+      ],
+      "repo": "https://github.com/you/practice-coach",
+      "blurb": "A practice companion for piano that listens while you play, follows along in the score, and afterwards shows where tempo drifted, which passages had wrong or missed notes, and how a piece improved across a week of sessions. Spoken commands — \"loop bars twelve to sixteen\", \"slow it to eighty percent\" — keep your hands on the keys.",
+      "body": "A practice companion for piano that listens while you play, follows along in\nthe score, and afterwards shows where tempo drifted, which passages had wrong\nor missed notes, and how a piece improved across a week of sessions. Spoken\ncommands — \"loop bars twelve to sixteen\", \"slow it to eighty percent\" — keep\nyour hands on the keys.\n\nOn-device audio inference handles pitch and onset detection, a small\nspeech-recognition model listens for the voice commands, and a sight-reading\napp supplies the scores and drills. Archived after the prototype: score\nfollowing on polyphonic audio needed more than a hobby budget, though the\nonset-detection code was reused in the field-notes transcriber.",
+      "stack": [
+        {
+          "id": "manual:sightread",
+          "name": "Sightread",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/sightread/sightread",
+          "canonical_url": "github.com/sightread/sightread"
+        },
+        {
+          "id": "manual:audio-cpp",
+          "name": "audio.cpp",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/0xShug0/audio.cpp",
+          "canonical_url": "github.com/0xshug0/audio.cpp"
+        },
+        {
+          "id": "manual:github:ggerganov/whisper.cpp",
+          "name": "whisper.cpp",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/ggerganov/whisper.cpp",
+          "canonical_url": "github.com/ggerganov/whisper.cpp"
+        }
+      ],
       "stack_unresolved": [],
       "artifacts": null,
       "model_terms": ""
@@ -279,6 +1120,114 @@
           "ring": "Assess",
           "url": "https://github.com/goldmansachs/gs-quant",
           "canonical_url": "github.com/goldmansachs/gs-quant"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "rf-spectrum-awareness",
+      "name": "RF Spectrum Situational Awareness",
+      "status": "Idea",
+      "topics": [
+        "ML",
+        "Data Feeds",
+        "Agents"
+      ],
+      "repo": null,
+      "blurb": "A distributed spectrum-monitoring network built from small passive software-defined-radio sensors. Each node sweeps its band, classifies the emitters it hears, and flags interference or jamming. The nodes share what they see over a peer-to-peer mesh, building one picture of a contested spectrum that the comms planner can use to switch frequency or route before a link actually drops.",
+      "body": "A distributed spectrum-monitoring network built from small passive\nsoftware-defined-radio sensors. Each node sweeps its band, classifies the\nemitters it hears, and flags interference or jamming. The nodes share what\nthey see over a peer-to-peer mesh, building one picture of a contested\nspectrum that the comms planner can use to switch frequency or route before a\nlink actually drops.\n\nThe hard part is classification at the edge with intermittent backhaul. An RF\nframework handles signal detection, demodulation, and fingerprinting on each\nnode. The mesh layer syncs detections opportunistically when neighbors are in\nrange, and a local model turns raw detections into plain-language reports for\nthe operator (\"wideband noise on the UHF relay band, onset 14:02, bearing\nnorth-east\"). Detection rates, false alarms, and sensor health stream into\nobservability dashboards, and the classifier is watched for drift as the RF\nenvironment changes. It is the sensing half of the contested-comms SAR mesh:\nthat project survives a jammed link, this one sees the jamming coming.",
+      "stack": [
+        {
+          "id": "manual:fissure",
+          "name": "FISSURE",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/ainfosec/fissure",
+          "canonical_url": "github.com/ainfosec/fissure"
+        },
+        {
+          "id": "github:n0-computer/iroh",
+          "name": "iroh",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/n0-computer/iroh",
+          "canonical_url": "github.com/n0-computer/iroh"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        },
+        {
+          "id": "manual:github:openobserve/openobserve",
+          "name": "OpenObserve",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/openobserve/openobserve",
+          "canonical_url": "github.com/openobserve/openobserve"
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "sales-account-researcher",
+      "name": "Sales Account Researcher",
+      "status": "Idea",
+      "topics": [
+        "Sales",
+        "Agents",
+        "RAG"
+      ],
+      "repo": null,
+      "blurb": "An agent that prepares a one-page brief before every sales call. Given a company name, it browses the company's site, recent filings, press releases, and job postings, extracts who the buyers are, what they are hiring for, and which initiatives were just announced, and drafts three tailored talking points with a citation behind every claim.",
+      "body": "An agent that prepares a one-page brief before every sales call. Given a\ncompany name, it browses the company's site, recent filings, press releases,\nand job postings, extracts who the buyers are, what they are hiring for, and\nwhich initiatives were just announced, and drafts three tailored talking points\nwith a citation behind every claim.\n\nThe research loop is a tool-using agent driving a headless browser, a\nknowledge-base layer stores what it learns so the next brief on the same\naccount starts warm, and a workflow-automation tool kicks off a brief whenever\na meeting lands on the calendar and files the result into the CRM. It shares\nthe \"answer only with a source\" rule of the document intelligence engine,\npointed at the open web instead of a filing cabinet.",
+      "stack": [
+        {
+          "id": "github:NousResearch/hermes-agent",
+          "name": "hermes-agent",
+          "quadrant": "Languages",
+          "ring": "Trial",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "canonical_url": "github.com/nousresearch/hermes-agent"
+        },
+        {
+          "id": "manual:playwright",
+          "name": "Playwright",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://github.com/microsoft/playwright",
+          "canonical_url": "github.com/microsoft/playwright"
+        },
+        {
+          "id": "manual:archon",
+          "name": "Archon",
+          "quadrant": "Platforms",
+          "ring": "Assess",
+          "url": "https://github.com/coleam00/Archon",
+          "canonical_url": "github.com/coleam00/archon"
+        },
+        {
+          "id": "github:n8n-io/n8n",
+          "name": "n8n",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/n8n-io/n8n",
+          "canonical_url": "github.com/n8n-io/n8n"
         }
       ],
       "stack_unresolved": [],
@@ -755,6 +1704,178 @@
       "model_terms": "search coverage re task latency endurance margin degraded comms tasking port sensor feed port tasking craft status detection position search cell craft unmanned surface vessel uav ground station search planner drift model task allocator fleet dashboard plan search allocate tasks re task The fleet shall cover a 25 nm^2 search area at POD >= 0.8 within 4 h. Re-tasking shall reach every craft within 30 s of a POD map update. Each assigned sweep shall leave >= 20% fuel/battery reserve for RTB. Craft shall continue the last valid tasking for 10 min on loss of link."
     },
     {
+      "id": "satellite-collection-planner",
+      "name": "Satellite Collection Planner",
+      "status": "Idea",
+      "topics": [
+        "Agents",
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": null,
+      "blurb": "A scheduler for a small Earth-observation constellation. Analysts submit collection requests — image this port daily, revisit this region within six hours of a cue, record emitters in this area — and the planner assigns each request to a satellite pass. It balances priority, cloud forecasts, sensor slew limits, onboard storage, and ground-station downlink windows, and re-plans the whole schedule when an urgent request arrives.",
+      "body": "A scheduler for a small Earth-observation constellation. Analysts submit\ncollection requests — image this port daily, revisit this region within six\nhours of a cue, record emitters in this area — and the planner assigns each\nrequest to a satellite pass. It balances priority, cloud forecasts, sensor\nslew limits, onboard storage, and ground-station downlink windows, and re-plans\nthe whole schedule when an urgent request arrives.\n\nAccess windows, sensor footprints, and downlink contacts come from orbital\nanalysis, so the planner only ever reasons about geometry that is physically\npossible. Allocation is treated as a multi-agent problem: each satellite bids\non requests it can serve, and a policy trained in a multi-agent\nreinforcement-learning environment learns when to hold capacity back for\ncue-driven requests rather than filling every pass. Request backlog, fulfilment\nrate, and age-of-information per target sit on a live dashboard. It is the\norbital cousin of the SAR fleet coordinator's re-tasking problem, and the\nsatellite relay windows it computes are the same ones the contested-comms mesh\nfalls back on.",
+      "stack": [
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [],
+        "rio": {
+          "items": [
+            {
+              "id": "SCP-O01",
+              "type": "Opportunity",
+              "title": "Same satellite relay windows feed the Contested-Comms SAR Mesh fallback",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "Planner lead",
+              "mitigation": "Publish relay window table as a shared feed"
+            },
+            {
+              "id": "SCP-O02",
+              "type": "Opportunity",
+              "title": "Cue from RF spectrum detections triggers rapid revisit",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Define cue interface with RF Spectrum Situational Awareness"
+            },
+            {
+              "id": "SCP-R01",
+              "type": "Risk",
+              "title": "Cloud forecast error wastes optical passes on overcast targets",
+              "likelihood": 4,
+              "consequence": 3,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Planner lead",
+              "mitigation": "Ingest short-range forecast; re-plan within two hours of pass"
+            },
+            {
+              "id": "SCP-R02",
+              "type": "Risk",
+              "title": "Learned allocation policy starves low-priority requests indefinitely",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Age-of-information penalty in the reward; fairness floor per customer"
+            },
+            {
+              "id": "SCP-R03",
+              "type": "Risk",
+              "title": "Ground-station downlink windows too short for full onboard storage dump",
+              "likelihood": 3,
+              "consequence": 4,
+              "score": 12,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Ops lead",
+              "mitigation": "Prioritize downlink queue; add a second commercial ground station"
+            },
+            {
+              "id": "SCP-O03",
+              "type": "Opportunity",
+              "title": "Commercial imagery tasking API covers gaps in own constellation",
+              "likelihood": 2,
+              "consequence": 4,
+              "score": 8,
+              "level": "Moderate",
+              "status": "Watch",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Price commercial tasking trade study next quarter"
+            },
+            {
+              "id": "SCP-I01",
+              "type": "Issue",
+              "title": "STK license unavailable for the planning server cluster",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Precompute access windows nightly on licensed workstation"
+            },
+            {
+              "id": "SCP-I03",
+              "type": "Issue",
+              "title": "Two-line element sets go stale and access windows drift by minutes",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Ops lead",
+              "mitigation": "Refresh orbital elements every pass; flag windows older than 24 h"
+            },
+            {
+              "id": "SCP-I02",
+              "type": "Issue",
+              "title": "PettingZoo env step rate too slow for a 12-satellite constellation",
+              "likelihood": null,
+              "consequence": 2,
+              "score": 2,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Vectorize env; coarsen time step outside access windows"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/satellite-collection-planner/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      },
+      "model_terms": ""
+    },
+    {
       "id": "sensor-anomalies",
       "name": "Sensor Telemetry Anomalies",
       "status": "Idea",
@@ -768,6 +1889,237 @@
       "stack": [],
       "stack_unresolved": [],
       "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "sustainment-readiness-predictor",
+      "name": "Sustainment & Readiness Predictor",
+      "status": "Active",
+      "topics": [
+        "ML",
+        "OCR",
+        "RAG",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/readiness-predictor",
+      "blurb": "Predictive maintenance for a vehicle fleet. It combines maintenance-action records, onboard sensor telemetry, and parts-supply data to forecast which components on which vehicles are likely to fail in the next 30, 60, and 90 days. It then recommends which spares to order and which inspections to pull forward so that mission readiness does not drop.",
+      "body": "Predictive maintenance for a vehicle fleet. It combines maintenance-action\nrecords, onboard sensor telemetry, and parts-supply data to forecast which\ncomponents on which vehicles are likely to fail in the next 30, 60, and 90 days.\nIt then recommends which spares to order and which inspections to pull forward\nso that mission readiness does not drop.\n\nHalf the problem is the data. Decades of maintenance history live in scanned\nwork orders and technical manuals, so OCR and document parsing lift fault codes,\nparts, and procedures off the page into structured records. A survival-style\nfailure model trains on the cleaned history, with every training snapshot\nversion-controlled so a prediction can be traced back to the data behind it.\nDrift reports catch a model going stale when a new vehicle variant or operating\ntheater changes the failure patterns. A local model explains each\nrecommendation and cites the manual paragraph and maintenance records behind\nit. It reuses the sensor-anomaly detector's temporal machinery and the document\nengine's OCR pipeline.",
+      "stack": [
+        {
+          "id": "github:docling-project/docling",
+          "name": "docling",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/docling-project/docling",
+          "canonical_url": "github.com/docling-project/docling"
+        },
+        {
+          "id": "github:PaddlePaddle/PaddleOCR",
+          "name": "PaddleOCR",
+          "quadrant": "Languages",
+          "ring": "Discovered",
+          "url": "https://github.com/PaddlePaddle/PaddleOCR",
+          "canonical_url": "github.com/paddlepaddle/paddleocr"
+        },
+        {
+          "id": "github:evidentlyai/evidently",
+          "name": "evidently",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/evidentlyai/evidently",
+          "canonical_url": "github.com/evidentlyai/evidently"
+        },
+        {
+          "id": "github:treeverse/dvc",
+          "name": "dvc",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/treeverse/dvc",
+          "canonical_url": "github.com/treeverse/dvc"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "tactical-radio-to-report",
+      "name": "Tactical Radio-to-Report",
+      "status": "Idea",
+      "topics": [
+        "STT",
+        "AI",
+        "Agents"
+      ],
+      "repo": null,
+      "blurb": "Turns push-to-talk radio traffic into structured reports, entirely on a rugged laptop or handheld with no connection to anything. It listens to a net, transcribes each transmission through static, clipping, and callsign jargon, and fills the right template — a 9-line medevac request, a situation report, a spot report — highlighting any required line that is missing so the operator can ask for it before the sender goes off the air.",
+      "body": "Turns push-to-talk radio traffic into structured reports, entirely on a\nrugged laptop or handheld with no connection to anything. It listens to a net,\ntranscribes each transmission through static, clipping, and callsign jargon, and\nfills the right template — a 9-line medevac request, a situation report, a\nspot report — highlighting any required line that is missing so the operator\ncan ask for it before the sender goes off the air.\n\nThe hard parts are the audio and the format. Radio audio is narrowband, noisy,\nand full of procedure words and phonetic-alphabet grid references, so a small\nspeech-to-text model is tuned on that vocabulary and a faster batch pass\nre-transcribes recordings afterwards for the log. A local model maps the\ntranscript onto the report fields and normalizes grids, times, and callsigns.\nIt is the field-notes transcriber hardened for a radio net, and the same\n\"messy radio traffic into structured tasking\" step the SAR fleet coordinator\nneeds from its incident net.",
+      "stack": [
+        {
+          "id": "manual:github:ggerganov/whisper.cpp",
+          "name": "whisper.cpp",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/ggerganov/whisper.cpp",
+          "canonical_url": "github.com/ggerganov/whisper.cpp"
+        },
+        {
+          "id": "manual:github:SYSTRAN/faster-whisper",
+          "name": "faster-whisper",
+          "quadrant": "Tools",
+          "ring": "Trial",
+          "url": "https://github.com/SYSTRAN/faster-whisper",
+          "canonical_url": "github.com/systran/faster-whisper"
+        },
+        {
+          "id": "manual:ollama",
+          "name": "Ollama",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://ollama.com",
+          "canonical_url": null
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": {
+        "models": [],
+        "rio": {
+          "items": [
+            {
+              "id": "RTR-O01",
+              "type": "Opportunity",
+              "title": "Share the radio-traffic parser with the SAR Fleet Coordinator",
+              "likelihood": 4,
+              "consequence": 4,
+              "score": 16,
+              "level": "High",
+              "status": "Pursuing",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Extract parser into a shared library with SAR fleet"
+            },
+            {
+              "id": "RTR-R02",
+              "type": "Risk",
+              "title": "Speech-to-text accuracy collapses on narrowband clipped audio",
+              "likelihood": 4,
+              "consequence": 4,
+              "score": 16,
+              "level": "High",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Audio lead",
+              "mitigation": "Fine-tune on recorded net traffic; add squelch-tail trimming"
+            },
+            {
+              "id": "RTR-R01",
+              "type": "Risk",
+              "title": "LLM misparses radio traffic into a wrong report field",
+              "likelihood": 3,
+              "consequence": 5,
+              "score": 15,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Autonomy lead",
+              "mitigation": "Operator confirms every 9-line before send; flag low-confidence fields"
+            },
+            {
+              "id": "RTR-O02",
+              "type": "Opportunity",
+              "title": "Reuse Field-Notes Transcriber diarization to separate callsigns",
+              "likelihood": 3,
+              "consequence": 3,
+              "score": 9,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Audio lead",
+              "mitigation": "Spike diarization on two-speaker net recordings"
+            },
+            {
+              "id": "RTR-O03",
+              "type": "Opportunity",
+              "title": "Template engine extends to SITREP and SALUTE reports for free",
+              "likelihood": 4,
+              "consequence": 2,
+              "score": 8,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Make report templates data-driven rather than hard-coded"
+            },
+            {
+              "id": "RTR-R03",
+              "type": "Risk",
+              "title": "Rugged handheld lacks the memory to run the model alongside the radio app",
+              "likelihood": 2,
+              "consequence": 3,
+              "score": 6,
+              "level": "Low",
+              "status": "Watch",
+              "open": true,
+              "owner": "Hardware lead",
+              "mitigation": "Quantize model; benchmark on target device each release"
+            },
+            {
+              "id": "RTR-I01",
+              "type": "Issue",
+              "title": "Phonetic-alphabet grid references transcribed as words instead of digits",
+              "likelihood": null,
+              "consequence": 4,
+              "score": 4,
+              "level": "High",
+              "status": "Open",
+              "open": true,
+              "owner": "Audio lead",
+              "mitigation": "Post-process normalizer for grids and procedure words"
+            },
+            {
+              "id": "RTR-I02",
+              "type": "Issue",
+              "title": "No labelled corpus of real net traffic for evaluation",
+              "likelihood": null,
+              "consequence": 3,
+              "score": 3,
+              "level": "Moderate",
+              "status": "Open",
+              "open": true,
+              "owner": "PM",
+              "mitigation": "Record exercise nets under a data-use agreement"
+            },
+            {
+              "id": "RTR-I03",
+              "type": "Issue",
+              "title": "Batch re-transcription pass drifts out of sync with the live log timestamps",
+              "likelihood": null,
+              "consequence": 2,
+              "score": 2,
+              "level": "Moderate",
+              "status": "Mitigating",
+              "open": true,
+              "owner": "Software lead",
+              "mitigation": "Align on radio PTT timestamps rather than audio offsets"
+            }
+          ],
+          "sources": [
+            {
+              "file": "risk-register.csv",
+              "href": "projects/artifacts/tactical-radio-to-report/risk-register.csv"
+            }
+          ]
+        },
+        "files": []
+      },
       "model_terms": ""
     },
     {
@@ -798,6 +2150,64 @@
           "ring": "Assess",
           "url": "https://github.com/jsmidt/QuantPy",
           "canonical_url": "github.com/jsmidt/quantpy"
+        }
+      ],
+      "stack_unresolved": [],
+      "artifacts": null,
+      "model_terms": ""
+    },
+    {
+      "id": "uas-mission-rehearsal-sim",
+      "name": "UAS Mission Rehearsal Simulator",
+      "status": "Active",
+      "topics": [
+        "Agents",
+        "ML",
+        "Data Feeds"
+      ],
+      "repo": "https://github.com/you/mission-rehearsal",
+      "blurb": "A simulator for rehearsing multi-drone missions before they fly. Planners load terrain, airspace restrictions, weather, and a fleet roster, then run hundreds of Monte Carlo rehearsals in which vehicles lose links, batteries sag in the cold, and targets move — producing a mission-success distribution instead of a single optimistic plan.",
+      "body": "A simulator for rehearsing multi-drone missions before they fly. Planners load\nterrain, airspace restrictions, weather, and a fleet roster, then run hundreds\nof Monte Carlo rehearsals in which vehicles lose links, batteries sag in the\ncold, and targets move — producing a mission-success distribution instead of a\nsingle optimistic plan.\n\nSensor footprints and line-of-sight geometry come from an orbital and terrain\nanalysis tool, an agent-based model plays the environment and the other\nairspace users, and a multi-agent reinforcement-learning environment lets the\nsame allocation policy used by the SAR fleet coordinator be trained and stress\ntested here first. Runs are containerized so a sweep fans out across a\ncluster, and the outcome distributions land on a dashboard.",
+      "stack": [
+        {
+          "id": "manual:stk",
+          "name": "STK",
+          "quadrant": "Tools",
+          "ring": "Adopted",
+          "url": "https://www.ansys.com/products/missions/ansys-stk",
+          "canonical_url": null
+        },
+        {
+          "id": "github:mesa/mesa",
+          "name": "mesa",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/mesa/mesa",
+          "canonical_url": "github.com/mesa/mesa"
+        },
+        {
+          "id": "github:Farama-Foundation/PettingZoo",
+          "name": "PettingZoo",
+          "quadrant": "Tools",
+          "ring": "Assess",
+          "url": "https://github.com/Farama-Foundation/PettingZoo",
+          "canonical_url": "github.com/farama-foundation/pettingzoo"
+        },
+        {
+          "id": "manual:docker",
+          "name": "Docker",
+          "quadrant": "Platforms",
+          "ring": "Adopted",
+          "url": "https://www.docker.com",
+          "canonical_url": null
+        },
+        {
+          "id": "github:grafana/grafana",
+          "name": "grafana",
+          "quadrant": "Platforms",
+          "ring": "Trial",
+          "url": "https://github.com/grafana/grafana",
+          "canonical_url": "github.com/grafana/grafana"
         }
       ],
       "stack_unresolved": [],
