@@ -1,7 +1,88 @@
 {
   "generated": "2026-11-03",
-  "count": 893,
+  "count": 896,
   "items": [
+    {
+      "id": "github:spotify/portal-ai-plugins",
+      "name": "portal-ai-plugins",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/spotify/portal-ai-plugins",
+      "canonical_url": "github.com/spotify/portal-ai-plugins",
+      "company": null,
+      "stars": 94,
+      "momentum": 9,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-03": 94
+      },
+      "description": "A typescript project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:floci-io/floci",
+      "name": "floci",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/floci-io/floci",
+      "canonical_url": "github.com/floci-io/floci",
+      "company": null,
+      "stars": 219,
+      "momentum": 21,
+      "tags": [
+        "java"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-03": 219
+      },
+      "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Usagi-org/ai-goofish-monitor",
+      "name": "ai-goofish-monitor",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+      "canonical_url": "github.com/usagi-org/ai-goofish-monitor",
+      "company": null,
+      "stars": 204,
+      "momentum": 20,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-03": 204
+      },
+      "description": "\u57fa\u4e8e Playwright \u548cAI\u5b9e\u73b0\u7684\u95f2\u9c7c\u591a\u4efb\u52a1\u5b9e\u65f6/\u5b9a\u65f6\u76d1\u63a7\u4e0e\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff0c\u914d\u5907\u4e86\u529f\u80fd\u5b8c\u5584\u7684\u540e\u53f0\u7ba1\u7406UI\u3002\u5e2e\u52a9\u7528\u6237\u4ece\u95f2\u9c7c\u6d77\u91cf\u5546\u54c1\u4e2d\uff0c\u627e\u5230\u5fc3\u4eea\u4ea7\u54c1\u3002",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:max-sixty/worktrunk",
       "name": "worktrunk",
@@ -12,7 +93,7 @@
       "url": "https://github.com/max-sixty/worktrunk",
       "canonical_url": "github.com/max-sixty/worktrunk",
       "company": null,
-      "stars": 115,
+      "stars": 437,
       "momentum": 11,
       "tags": [
         "rust"
@@ -20,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
-        "2026-11-02": 115
+        "2026-11-02": 115,
+        "2026-11-03": 437
       },
       "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 322
     },
     {
       "id": "github:karpathy/nanochat",
@@ -66,7 +148,7 @@
       "url": "https://github.com/vercel-labs/agent-desktop",
       "canonical_url": "github.com/vercel-labs/agent-desktop",
       "company": null,
-      "stars": 2243,
+      "stars": 3792,
       "momentum": 100,
       "tags": [
         "rust"
@@ -74,14 +156,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
-        "2026-11-02": 2243
+        "2026-11-02": 2243,
+        "2026-11-03": 3792
       },
       "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it \u2014 refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1549
     },
     {
       "id": "manual:cameo-mcp-bridge",
@@ -147,7 +230,7 @@
       "url": "https://github.com/anomalyco/hex",
       "canonical_url": "github.com/anomalyco/hex",
       "company": null,
-      "stars": 172,
+      "stars": 1134,
       "momentum": 17,
       "tags": [
         "rust"
@@ -155,14 +238,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-01",
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
-        "2026-11-01": 172
+        "2026-11-01": 172,
+        "2026-11-03": 1134
       },
       "description": "Local-first voice dictation for macOS. Hold a shortcut, speak, and paste into any app. Native Rust, on-device speech recognition, and a Linux beta.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 962
     },
     {
       "id": "github:patchy631/ai-engineering-hub",
@@ -526,7 +610,7 @@
       "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
       "canonical_url": "github.com/donchitos/claude-code-game-studios",
       "company": null,
-      "stars": 1380,
+      "stars": 1181,
       "momentum": 53,
       "tags": [
         "shell"
@@ -534,17 +618,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 538,
         "2026-10-31": 1347,
         "2026-11-01": 970,
-        "2026-11-02": 1380
+        "2026-11-02": 1380,
+        "2026-11-03": 1181
       },
       "description": "Turn Claude Code into a full game dev studio \u2014 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
       "trend": "up",
-      "trend_delta": 842
+      "trend_delta": 643
     },
     {
       "id": "github:xiaolai/the-craft-of-selfteaching",
@@ -5244,7 +5329,7 @@
       "url": "https://github.com/JustVugg/colibri",
       "canonical_url": "github.com/justvugg/colibri",
       "company": null,
-      "stars": 655,
+      "stars": 803,
       "momentum": 9,
       "tags": [
         "c"
@@ -5252,7 +5337,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-11",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-09-11": 98,
@@ -5262,11 +5347,12 @@
         "2026-09-16": 2026,
         "2026-09-17": 1546,
         "2026-09-18": 873,
-        "2026-11-02": 655
+        "2026-11-02": 655,
+        "2026-11-03": 803
       },
       "description": "Run frontier MoE models on hardware you already own \u2014 pure C, zero deps, experts streamed from disk. Tiny engine, immense model. \ud83d\udc26",
       "trend": "down",
-      "trend_delta": -218
+      "trend_delta": -70
     },
     {
       "id": "github:armory3d/armorpaint",
@@ -6509,7 +6595,7 @@
       "url": "https://github.com/p-e-w/heretic",
       "canonical_url": "github.com/p-e-w/heretic",
       "company": null,
-      "stars": 404,
+      "stars": 699,
       "momentum": 15,
       "tags": [
         "python"
@@ -6517,17 +6603,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-30",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-08-30": 150,
         "2026-08-31": 369,
         "2026-09-01": 537,
-        "2026-11-02": 404
+        "2026-11-02": 404,
+        "2026-11-03": 699
       },
       "description": "Fully automatic censorship removal for language models",
-      "trend": "down",
-      "trend_delta": -133
+      "trend": "up",
+      "trend_delta": 162
     },
     {
       "id": "github:THU-MAIC/OpenMAIC",
@@ -6986,7 +7073,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 1799,
+      "stars": 1138,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -6994,7 +7081,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
@@ -7007,11 +7094,12 @@
         "2026-10-30": 1145,
         "2026-10-31": 1723,
         "2026-11-01": 1527,
-        "2026-11-02": 1799
+        "2026-11-02": 1799,
+        "2026-11-03": 1138
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 1137
+      "trend_delta": 476
     },
     {
       "id": "github:tt-a1i/archify",
@@ -21596,7 +21684,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 970,
+      "stars": 1164,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21604,7 +21692,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -21645,11 +21733,12 @@
         "2026-10-10": 1737,
         "2026-10-30": 882,
         "2026-10-31": 882,
-        "2026-11-02": 970
+        "2026-11-02": 970,
+        "2026-11-03": 1164
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -767
+      "trend_delta": -573
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -22433,7 +22522,7 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "canonical_url": "github.com/shiyu-coder/kronos",
       "company": null,
-      "stars": 855,
+      "stars": 503,
       "momentum": 24,
       "tags": [
         "python"
@@ -22441,7 +22530,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-15",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-06-15": 244,
@@ -22458,11 +22547,12 @@
         "2026-10-20": 363,
         "2026-10-21": 733,
         "2026-11-01": 611,
-        "2026-11-02": 855
+        "2026-11-02": 855,
+        "2026-11-03": 503
       },
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-      "trend": "up",
-      "trend_delta": 122
+      "trend": "down",
+      "trend_delta": -230
     },
     {
       "id": "github:Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
@@ -25098,7 +25188,7 @@
       "url": "https://github.com/D4Vinci/Scrapling",
       "canonical_url": "github.com/d4vinci/scrapling",
       "company": null,
-      "stars": 892,
+      "stars": 1658,
       "momentum": 100,
       "tags": [
         "python"
@@ -25106,15 +25196,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-03",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1067,
-        "2026-11-02": 892
+        "2026-11-02": 892,
+        "2026-11-03": 1658
       },
       "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
-      "trend": "down",
-      "trend_delta": -175
+      "trend": "up",
+      "trend_delta": 591
     },
     {
       "id": "github:Open-LLM-VTuber/Open-LLM-VTuber",
