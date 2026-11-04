@@ -1,7 +1,169 @@
 {
-  "generated": "2026-11-03",
-  "count": 896,
+  "generated": "2026-11-04",
+  "count": 902,
   "items": [
+    {
+      "id": "github:scenario-labs/skills",
+      "name": "skills",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/scenario-labs/skills",
+      "canonical_url": "github.com/scenario-labs/skills",
+      "company": null,
+      "stars": 224,
+      "momentum": 22,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 224
+      },
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:The-PR-Agent/pr-agent",
+      "name": "pr-agent",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/The-PR-Agent/pr-agent",
+      "canonical_url": "github.com/the-pr-agent/pr-agent",
+      "company": null,
+      "stars": 279,
+      "momentum": 27,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 279
+      },
+      "description": "\ud83d\ude80 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/auto-ontology",
+      "name": "auto-ontology",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "canonical_url": "github.com/nvidia/auto-ontology",
+      "company": "NVIDIA",
+      "stars": 2053,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 2053
+      },
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Thysrael/Horizon",
+      "name": "Horizon",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Thysrael/Horizon",
+      "canonical_url": "github.com/thysrael/horizon",
+      "company": null,
+      "stars": 121,
+      "momentum": 12,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 121
+      },
+      "description": "\ud83d\udce1 Your own AI-powered news radar. Generates daily briefings in English & Chinese. | \u7528 AI \u6784\u5efa\u4f60\u4e13\u5c5e\u7684\u65b0\u95fb\u96f7\u8fbe",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:JiaFeiMiao-K-Cat/DiscImageStudio",
+      "name": "DiscImageStudio",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+      "canonical_url": "github.com/jiafeimiao-k-cat/discimagestudio",
+      "company": null,
+      "stars": 1792,
+      "momentum": 100,
+      "tags": [
+        "c#"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 1792
+      },
+      "description": "A c# project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:MichaelCade/90DaysOfDevOps",
+      "name": "90DaysOfDevOps",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/MichaelCade/90DaysOfDevOps",
+      "canonical_url": "github.com/michaelcade/90daysofdevops",
+      "company": null,
+      "stars": 156,
+      "momentum": 15,
+      "tags": [
+        "shell"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-04": 156
+      },
+      "description": "This repository started out as a learning in public project for myself and has now become a structured learning map for many in the community. We have 3 years under our belt covering all things DevOps, including Principles, Processes, Tooling and Use Cases surrounding this vast topic.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:spotify/portal-ai-plugins",
       "name": "portal-ai-plugins",
@@ -39,7 +201,7 @@
       "url": "https://github.com/floci-io/floci",
       "canonical_url": "github.com/floci-io/floci",
       "company": null,
-      "stars": 219,
+      "stars": 1082,
       "momentum": 21,
       "tags": [
         "java"
@@ -47,14 +209,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
-        "2026-11-03": 219
+        "2026-11-03": 219,
+        "2026-11-04": 1082
       },
       "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 863
     },
     {
       "id": "github:Usagi-org/ai-goofish-monitor",
@@ -93,7 +256,7 @@
       "url": "https://github.com/max-sixty/worktrunk",
       "canonical_url": "github.com/max-sixty/worktrunk",
       "company": null,
-      "stars": 437,
+      "stars": 524,
       "momentum": 11,
       "tags": [
         "rust"
@@ -101,15 +264,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-11-02": 115,
-        "2026-11-03": 437
+        "2026-11-03": 437,
+        "2026-11-04": 524
       },
       "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
       "trend": "up",
-      "trend_delta": 322
+      "trend_delta": 409
     },
     {
       "id": "github:karpathy/nanochat",
@@ -148,7 +312,7 @@
       "url": "https://github.com/vercel-labs/agent-desktop",
       "canonical_url": "github.com/vercel-labs/agent-desktop",
       "company": null,
-      "stars": 3792,
+      "stars": 2463,
       "momentum": 100,
       "tags": [
         "rust"
@@ -156,15 +320,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-11-02": 2243,
-        "2026-11-03": 3792
+        "2026-11-03": 3792,
+        "2026-11-04": 2463
       },
       "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it \u2014 refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
       "trend": "up",
-      "trend_delta": 1549
+      "trend_delta": 220
     },
     {
       "id": "manual:cameo-mcp-bridge",
@@ -7073,7 +7238,7 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "canonical_url": "github.com/thedotmack/claude-mem",
       "company": null,
-      "stars": 1138,
+      "stars": 1165,
       "momentum": 13,
       "tags": [
         "javascript"
@@ -7081,7 +7246,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-08-27": 133,
@@ -7095,11 +7260,12 @@
         "2026-10-31": 1723,
         "2026-11-01": 1527,
         "2026-11-02": 1799,
-        "2026-11-03": 1138
+        "2026-11-03": 1138,
+        "2026-11-04": 1165
       },
       "description": "Persistent Context Across Sessions for Every Agent \u2013 Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "trend": "up",
-      "trend_delta": 476
+      "trend_delta": 503
     },
     {
       "id": "github:tt-a1i/archify",
@@ -20810,7 +20976,7 @@
       "url": "https://github.com/garrytan/gstack",
       "canonical_url": "github.com/garrytan/gstack",
       "company": null,
-      "stars": 674,
+      "stars": 285,
       "momentum": 45,
       "tags": [
         "typescript"
@@ -20818,7 +20984,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-28",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 454,
@@ -20827,11 +20993,12 @@
         "2026-06-25": 836,
         "2026-06-26": 767,
         "2026-06-27": 950,
-        "2026-06-28": 674
+        "2026-06-28": 674,
+        "2026-11-04": 285
       },
       "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
-      "trend": "up",
-      "trend_delta": 220
+      "trend": "down",
+      "trend_delta": -389
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -21684,7 +21851,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1164,
+      "stars": 1376,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21692,7 +21859,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -21734,11 +21901,12 @@
         "2026-10-30": 882,
         "2026-10-31": 882,
         "2026-11-02": 970,
-        "2026-11-03": 1164
+        "2026-11-03": 1164,
+        "2026-11-04": 1376
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "down",
-      "trend_delta": -573
+      "trend_delta": -361
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -23246,7 +23414,7 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "canonical_url": "github.com/harry0703/moneyprinterturbo",
       "company": null,
-      "stars": 338,
+      "stars": 615,
       "momentum": 100,
       "tags": [
         "python"
@@ -23254,7 +23422,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-09-30",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 1471,
@@ -23264,11 +23432,12 @@
         "2026-08-20": 2221,
         "2026-08-21": 2761,
         "2026-08-22": 1201,
-        "2026-09-30": 338
+        "2026-09-30": 338,
+        "2026-11-04": 615
       },
       "description": "\u5229\u7528AI\u5927\u6a21\u578b\uff0c\u4e00\u952e\u751f\u6210\u9ad8\u6e05\u77ed\u89c6\u9891 Generate short videos with one click using AI LLM.",
-      "trend": "down",
-      "trend_delta": -863
+      "trend": "up",
+      "trend_delta": 277
     },
     {
       "id": "github:masterking32/MasterDnsVPN",
@@ -24489,7 +24658,7 @@
       "url": "https://github.com/github/spec-kit",
       "canonical_url": "github.com/github/spec-kit",
       "company": null,
-      "stars": 1015,
+      "stars": 810,
       "momentum": 31,
       "tags": [
         "python"
@@ -24497,7 +24666,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-09-12",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 311,
@@ -24505,11 +24674,12 @@
         "2026-07-14": 543,
         "2026-08-15": 1160,
         "2026-08-16": 892,
-        "2026-09-12": 1015
+        "2026-09-12": 1015,
+        "2026-11-04": 810
       },
       "description": "\ud83d\udcab Toolkit to help you get started with Spec-Driven Development",
-      "trend": "up",
-      "trend_delta": 123
+      "trend": "down",
+      "trend_delta": -205
     },
     {
       "id": "github:openclaw/openclaw-windows-node",
@@ -25188,7 +25358,7 @@
       "url": "https://github.com/D4Vinci/Scrapling",
       "canonical_url": "github.com/d4vinci/scrapling",
       "company": null,
-      "stars": 1658,
+      "stars": 2006,
       "momentum": 100,
       "tags": [
         "python"
@@ -25196,16 +25366,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-04",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1067,
         "2026-11-02": 892,
-        "2026-11-03": 1658
+        "2026-11-03": 1658,
+        "2026-11-04": 2006
       },
       "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
       "trend": "up",
-      "trend_delta": 591
+      "trend_delta": 939
     },
     {
       "id": "github:Open-LLM-VTuber/Open-LLM-VTuber",

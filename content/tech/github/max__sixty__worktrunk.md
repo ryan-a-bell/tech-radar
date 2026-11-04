@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/max-sixty/worktrunk
 canonical_url: github.com/max-sixty/worktrunk
 company: null
-stars: 437
+stars: 524
 momentum: 11
 tags: ["rust"]
 topics: []
 archived_at: null
 first_seen: 2026-11-02
-last_seen: 2026-11-03
+last_seen: 2026-11-04
 also_seen: []
-stars_history: {"2026-11-02": 115, "2026-11-03": 437}
+stars_history: {"2026-11-02": 115, "2026-11-03": 437, "2026-11-04": 524}
 ---
 
 Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows
