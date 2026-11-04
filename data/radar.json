@@ -1,6 +1,6 @@
 {
   "generated": "2026-11-04",
-  "count": 902,
+  "count": 904,
   "items": [
     {
       "id": "github:scenario-labs/skills",
@@ -134,6 +134,58 @@
         "2026-11-04": 1792
       },
       "description": "A c# project trending on GitHub.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:agentcraft-rts",
+      "name": "AgentCraft RTS",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.getagentcraft.com/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Browser-based RTS-style command center (npx @idosal/agentcraft) by Ido Salomon that shows Claude Code, Codex, OpenCode and Cursor agents as units on a tactical map so you can monitor, summon and command them from one pane. Adds remote approvals via mobile PWA push and Telegram/Discord, Docker/Apple container isolation, and shared multiplayer 'Alliance Hall' rooms.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:agentcraft-minecraft",
+      "name": "AgentCraft (Minecraft)",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/blendi-remade/agentcraft",
+      "canonical_url": "github.com/blendi-remade/agentcraft",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "Agents"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Open-source (MIT) Minecraft Java mod plus a Node 'Foreman' that runs a team of Claude Agent SDK (or Codex) coding agents as an in-game studio: a lead agent splits a goal into a task graph, workers code in isolated git worktrees, and you review diffs and click merge yourself. A novel spatial UI for multi-agent coding with human-gated merges; young, singleplayer-only project.",
       "trend": "none",
       "trend_delta": 0
     },
