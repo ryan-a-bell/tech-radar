@@ -1,6 +1,6 @@
 {
   "generated": "2026-11-04",
-  "count": 904,
+  "count": 905,
   "items": [
     {
       "id": "github:scenario-labs/skills",
@@ -80,6 +80,32 @@
         "2026-11-04": 2053
       },
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:kubeflow",
+      "name": "Kubeflow",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.kubeflow.org/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "AI",
+        "ML"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Open-source, Kubernetes-native ML platform (CNCF) made of modular subprojects \u2014 Pipelines, Notebooks, Trainer, Katib for hyperparameter tuning, Model Registry \u2014 covering the model lifecycle from experimentation through distributed training to production on any cluster.",
       "trend": "none",
       "trend_delta": 0
     },
