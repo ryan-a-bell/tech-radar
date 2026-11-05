@@ -1,7 +1,61 @@
 {
-  "generated": "2026-11-04",
-  "count": 905,
+  "generated": "2026-11-05",
+  "count": 907,
   "items": [
+    {
+      "id": "github:lz4/lz4",
+      "name": "lz4",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/lz4/lz4",
+      "canonical_url": "github.com/lz4/lz4",
+      "company": null,
+      "stars": 16,
+      "momentum": 1,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-05": 16
+      },
+      "description": "Extremely Fast Compression algorithm",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:vercel-labs/agent-browser",
+      "name": "agent-browser",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "canonical_url": "github.com/vercel-labs/agent-browser",
+      "company": null,
+      "stars": 132,
+      "momentum": 13,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-05": 132
+      },
+      "description": "Browser automation CLI for AI agents",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:scenario-labs/skills",
       "name": "skills",
@@ -12,7 +66,7 @@
       "url": "https://github.com/scenario-labs/skills",
       "canonical_url": "github.com/scenario-labs/skills",
       "company": null,
-      "stars": 224,
+      "stars": 674,
       "momentum": 22,
       "tags": [
         "python"
@@ -20,14 +74,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
-        "2026-11-04": 224
+        "2026-11-04": 224,
+        "2026-11-05": 674
       },
       "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 450
     },
     {
       "id": "github:The-PR-Agent/pr-agent",
@@ -66,7 +121,7 @@
       "url": "https://github.com/NVIDIA/auto-ontology",
       "canonical_url": "github.com/nvidia/auto-ontology",
       "company": "NVIDIA",
-      "stars": 2053,
+      "stars": 2707,
       "momentum": 100,
       "tags": [
         "python"
@@ -74,14 +129,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
-        "2026-11-04": 2053
+        "2026-11-04": 2053,
+        "2026-11-05": 2707
       },
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 654
     },
     {
       "id": "manual:kubeflow",
@@ -146,7 +202,7 @@
       "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
       "canonical_url": "github.com/jiafeimiao-k-cat/discimagestudio",
       "company": null,
-      "stars": 1792,
+      "stars": 977,
       "momentum": 100,
       "tags": [
         "c#"
@@ -154,14 +210,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
-        "2026-11-04": 1792
+        "2026-11-04": 1792,
+        "2026-11-05": 977
       },
       "description": "A c# project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -815
     },
     {
       "id": "manual:agentcraft-rts",
@@ -279,7 +336,7 @@
       "url": "https://github.com/floci-io/floci",
       "canonical_url": "github.com/floci-io/floci",
       "company": null,
-      "stars": 1082,
+      "stars": 784,
       "momentum": 21,
       "tags": [
         "java"
@@ -287,15 +344,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-11-03": 219,
-        "2026-11-04": 1082
+        "2026-11-04": 1082,
+        "2026-11-05": 784
       },
       "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
       "trend": "up",
-      "trend_delta": 863
+      "trend_delta": 565
     },
     {
       "id": "github:Usagi-org/ai-goofish-monitor",
@@ -307,7 +365,7 @@
       "url": "https://github.com/Usagi-org/ai-goofish-monitor",
       "canonical_url": "github.com/usagi-org/ai-goofish-monitor",
       "company": null,
-      "stars": 204,
+      "stars": 242,
       "momentum": 20,
       "tags": [
         "python"
@@ -315,14 +373,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-03",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
-        "2026-11-03": 204
+        "2026-11-03": 204,
+        "2026-11-05": 242
       },
       "description": "\u57fa\u4e8e Playwright \u548cAI\u5b9e\u73b0\u7684\u95f2\u9c7c\u591a\u4efb\u52a1\u5b9e\u65f6/\u5b9a\u65f6\u76d1\u63a7\u4e0e\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff0c\u914d\u5907\u4e86\u529f\u80fd\u5b8c\u5584\u7684\u540e\u53f0\u7ba1\u7406UI\u3002\u5e2e\u52a9\u7528\u6237\u4ece\u95f2\u9c7c\u6d77\u91cf\u5546\u54c1\u4e2d\uff0c\u627e\u5230\u5fc3\u4eea\u4ea7\u54c1\u3002",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 38
     },
     {
       "id": "github:max-sixty/worktrunk",
@@ -334,7 +393,7 @@
       "url": "https://github.com/max-sixty/worktrunk",
       "canonical_url": "github.com/max-sixty/worktrunk",
       "company": null,
-      "stars": 524,
+      "stars": 546,
       "momentum": 11,
       "tags": [
         "rust"
@@ -342,16 +401,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-11-02": 115,
         "2026-11-03": 437,
-        "2026-11-04": 524
+        "2026-11-04": 524,
+        "2026-11-05": 546
       },
       "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
       "trend": "up",
-      "trend_delta": 409
+      "trend_delta": 431
     },
     {
       "id": "github:karpathy/nanochat",
@@ -390,7 +450,7 @@
       "url": "https://github.com/vercel-labs/agent-desktop",
       "canonical_url": "github.com/vercel-labs/agent-desktop",
       "company": null,
-      "stars": 2463,
+      "stars": 2173,
       "momentum": 100,
       "tags": [
         "rust"
@@ -398,16 +458,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-11-02": 2243,
         "2026-11-03": 3792,
-        "2026-11-04": 2463
+        "2026-11-04": 2463,
+        "2026-11-05": 2173
       },
       "description": "Agent Desktop gives any agent reliable computer use on the desktop. Built with Rust, it sees any app's real UI structure through OS accessibility trees and operates it \u2014 refs stay stable and actions stay safe to retry, instead of guessing from pixels.",
-      "trend": "up",
-      "trend_delta": 220
+      "trend": "down",
+      "trend_delta": -70
     },
     {
       "id": "manual:cameo-mcp-bridge",
@@ -7289,7 +7350,7 @@
       "url": "https://github.com/ConardLi/garden-skills",
       "canonical_url": "github.com/conardli/garden-skills",
       "company": null,
-      "stars": 413,
+      "stars": 181,
       "momentum": 41,
       "tags": [
         "css"
@@ -7297,14 +7358,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-27",
-      "last_seen": "2026-08-27",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
-        "2026-08-27": 413
+        "2026-08-27": 413,
+        "2026-11-05": 181
       },
       "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -232
     },
     {
       "id": "github:thedotmack/claude-mem",
@@ -19441,29 +19503,6 @@
       "trend_delta": 0
     },
     {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "also_seen": [],
-      "stars_history": {},
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "none",
-      "trend_delta": 0
-    },
-    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "quadrant": "Techniques",
@@ -19493,6 +19532,29 @@
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "up",
       "trend_delta": 45
+    },
+    {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "trend": "none",
+      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -21054,7 +21116,7 @@
       "url": "https://github.com/garrytan/gstack",
       "canonical_url": "github.com/garrytan/gstack",
       "company": null,
-      "stars": 285,
+      "stars": 608,
       "momentum": 45,
       "tags": [
         "typescript"
@@ -21062,7 +21124,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 454,
@@ -21072,11 +21134,12 @@
         "2026-06-26": 767,
         "2026-06-27": 950,
         "2026-06-28": 674,
-        "2026-11-04": 285
+        "2026-11-04": 285,
+        "2026-11-05": 608
       },
       "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
       "trend": "down",
-      "trend_delta": -389
+      "trend_delta": -66
     },
     {
       "id": "github:firecrawl/firecrawl",
@@ -21929,7 +21992,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1376,
+      "stars": 2053,
       "momentum": 100,
       "tags": [
         "shell"
@@ -21937,7 +22000,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -21980,11 +22043,12 @@
         "2026-10-31": 882,
         "2026-11-02": 970,
         "2026-11-03": 1164,
-        "2026-11-04": 1376
+        "2026-11-04": 1376,
+        "2026-11-05": 2053
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
-      "trend": "down",
-      "trend_delta": -361
+      "trend": "up",
+      "trend_delta": 316
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -23763,7 +23827,7 @@
       "url": "https://github.com/google/skills",
       "canonical_url": "github.com/google/skills",
       "company": "Google",
-      "stars": 39,
+      "stars": 199,
       "momentum": 48,
       "tags": [
         "python"
@@ -23771,7 +23835,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-10-03",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 481,
@@ -23782,11 +23846,12 @@
         "2026-08-09": 481,
         "2026-08-10": 528,
         "2026-10-02": 30,
-        "2026-10-03": 39
+        "2026-10-03": 39,
+        "2026-11-05": 199
       },
       "description": "Agent Skills for Google products and technologies",
-      "trend": "down",
-      "trend_delta": -489
+      "trend": "up",
+      "trend_delta": 160
     },
     {
       "id": "github:phuryn/pm-skills",
@@ -24573,7 +24638,7 @@
       "url": "https://github.com/microsoft/VibeVoice",
       "canonical_url": "github.com/microsoft/vibevoice",
       "company": "Microsoft",
-      "stars": 336,
+      "stars": 214,
       "momentum": 21,
       "tags": [
         "python"
@@ -24581,16 +24646,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 219,
         "2026-06-07": 216,
-        "2026-07-30": 336
+        "2026-07-30": 336,
+        "2026-11-05": 214
       },
       "description": "Open-Source Frontier Voice AI",
-      "trend": "up",
-      "trend_delta": 120
+      "trend": "down",
+      "trend_delta": -122
     },
     {
       "id": "github:danielmiessler/Personal_AI_Infrastructure",
@@ -25436,7 +25502,7 @@
       "url": "https://github.com/D4Vinci/Scrapling",
       "canonical_url": "github.com/d4vinci/scrapling",
       "company": null,
-      "stars": 2006,
+      "stars": 1661,
       "momentum": 100,
       "tags": [
         "python"
@@ -25444,17 +25510,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-11-04",
+      "last_seen": "2026-11-05",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 1067,
         "2026-11-02": 892,
         "2026-11-03": 1658,
-        "2026-11-04": 2006
+        "2026-11-04": 2006,
+        "2026-11-05": 1661
       },
       "description": "\ud83d\udd77\ufe0f An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!",
       "trend": "up",
-      "trend_delta": 939
+      "trend_delta": 594
     },
     {
       "id": "github:Open-LLM-VTuber/Open-LLM-VTuber",
