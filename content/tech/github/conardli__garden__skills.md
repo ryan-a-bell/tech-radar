@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/ConardLi/garden-skills
 canonical_url: github.com/conardli/garden-skills
 company: null
-stars: 413
+stars: 181
 momentum: 41
 tags: ["css"]
 topics: []
 archived_at: null
 first_seen: 2026-08-27
-last_seen: 2026-08-27
+last_seen: 2026-11-05
 also_seen: []
-stars_history: {"2026-08-27": 413}
+stars_history: {"2026-08-27": 413, "2026-11-05": 181}
 ---
 
 ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and more.

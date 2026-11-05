@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/google/skills
 canonical_url: github.com/google/skills
 company: Google
-stars: 39
+stars: 199
 momentum: 48
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-06-08
-last_seen: 2026-10-03
+last_seen: 2026-11-05
 also_seen: []
-stars_history: {"2026-06-08": 481, "2026-06-09": 461, "2026-06-10": 680, "2026-06-11": 211, "2026-08-08": 327, "2026-08-09": 481, "2026-08-10": 528, "2026-10-02": 30, "2026-10-03": 39}
+stars_history: {"2026-06-08": 481, "2026-06-09": 461, "2026-06-10": 680, "2026-06-11": 211, "2026-08-08": 327, "2026-08-09": 481, "2026-08-10": 528, "2026-10-02": 30, "2026-10-03": 39, "2026-11-05": 199}
 ---
 
 Agent Skills for Google products and technologies

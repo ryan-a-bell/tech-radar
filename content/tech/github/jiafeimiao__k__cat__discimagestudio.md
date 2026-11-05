@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio
 canonical_url: github.com/jiafeimiao-k-cat/discimagestudio
 company: null
-stars: 1792
+stars: 977
 momentum: 100
 tags: ["c#"]
 topics: []
 archived_at: null
 first_seen: 2026-11-04
-last_seen: 2026-11-04
+last_seen: 2026-11-05
 also_seen: []
-stars_history: {"2026-11-04": 1792}
+stars_history: {"2026-11-04": 1792, "2026-11-05": 977}
 ---
 
 A c# project trending on GitHub.
