@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05",
+  "generated": "2026-11-06",
   "people": [
     {
       "id": "devin-cross",
@@ -416,6 +416,14 @@
           "canonical_url": "github.com/gradio-app/gradio"
         },
         {
+          "id": "github:react/react",
+          "name": "react",
+          "quadrant": "Tools",
+          "ring": "Discovered",
+          "url": "https://github.com/react/react",
+          "canonical_url": "github.com/react/react"
+        },
+        {
           "id": "github:microsoft/TypeScript",
           "name": "TypeScript",
           "quadrant": "Languages",
@@ -425,7 +433,6 @@
         }
       ],
       "skills_freeform": [
-        "React",
         "data visualization",
         "UI design",
         "Python"

@@ -1,7 +1,277 @@
 {
-  "generated": "2026-11-05",
-  "count": 907,
+  "generated": "2026-11-06",
+  "count": 917,
   "items": [
+    {
+      "id": "github:zed-industries/zed",
+      "name": "zed",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/zed-industries/zed",
+      "canonical_url": "github.com/zed-industries/zed",
+      "company": "Zed Industries",
+      "stars": 292,
+      "momentum": 29,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 292
+      },
+      "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:symfony/symfony",
+      "name": "symfony",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/symfony/symfony",
+      "canonical_url": "github.com/symfony/symfony",
+      "company": null,
+      "stars": 89,
+      "momentum": 8,
+      "tags": [
+        "php"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 89
+      },
+      "description": "The Symfony PHP framework",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:astral-sh/ruff",
+      "name": "ruff",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/astral-sh/ruff",
+      "canonical_url": "github.com/astral-sh/ruff",
+      "company": "Astral",
+      "stars": 107,
+      "momentum": 10,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 107
+      },
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:react/react",
+      "name": "react",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/react/react",
+      "canonical_url": "github.com/react/react",
+      "company": null,
+      "stars": 244,
+      "momentum": 24,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 244
+      },
+      "description": "The library for web and native user interfaces.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:rails/rails",
+      "name": "rails",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/rails/rails",
+      "canonical_url": "github.com/rails/rails",
+      "company": null,
+      "stars": 44,
+      "momentum": 4,
+      "tags": [
+        "ruby"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 44
+      },
+      "description": "Ruby on Rails",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:prometheus/prometheus",
+      "name": "prometheus",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/prometheus/prometheus",
+      "canonical_url": "github.com/prometheus/prometheus",
+      "company": null,
+      "stars": 140,
+      "momentum": 14,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 140
+      },
+      "description": "The Prometheus monitoring system and time series database.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:openssl/openssl",
+      "name": "openssl",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openssl/openssl",
+      "canonical_url": "github.com/openssl/openssl",
+      "company": null,
+      "stars": 24,
+      "momentum": 2,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 24
+      },
+      "description": "General purpose TLS and crypto library",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:nushell/nushell",
+      "name": "nushell",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/nushell/nushell",
+      "canonical_url": "github.com/nushell/nushell",
+      "company": null,
+      "stars": 88,
+      "momentum": 8,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 88
+      },
+      "description": "A new type of shell",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mpv-player/mpv",
+      "name": "mpv",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mpv-player/mpv",
+      "canonical_url": "github.com/mpv-player/mpv",
+      "company": null,
+      "stars": 36,
+      "momentum": 3,
+      "tags": [
+        "c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 36
+      },
+      "description": "\ud83c\udfa5 Command line media player",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:etcd-io/etcd",
+      "name": "etcd",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/etcd-io/etcd",
+      "canonical_url": "github.com/etcd-io/etcd",
+      "company": null,
+      "stars": 123,
+      "momentum": 12,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-06",
+      "last_seen": "2026-11-06",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-06": 123
+      },
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:lz4/lz4",
       "name": "lz4",
@@ -12,7 +282,7 @@
       "url": "https://github.com/lz4/lz4",
       "canonical_url": "github.com/lz4/lz4",
       "company": null,
-      "stars": 16,
+      "stars": 313,
       "momentum": 1,
       "tags": [
         "c"
@@ -20,14 +290,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
-        "2026-11-05": 16
+        "2026-11-05": 16,
+        "2026-11-06": 313
       },
       "description": "Extremely Fast Compression algorithm",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 297
     },
     {
       "id": "github:vercel-labs/agent-browser",
@@ -121,7 +392,7 @@
       "url": "https://github.com/NVIDIA/auto-ontology",
       "canonical_url": "github.com/nvidia/auto-ontology",
       "company": "NVIDIA",
-      "stars": 2707,
+      "stars": 2005,
       "momentum": 100,
       "tags": [
         "python"
@@ -129,15 +400,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-04",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
         "2026-11-04": 2053,
-        "2026-11-05": 2707
+        "2026-11-05": 2707,
+        "2026-11-06": 2005
       },
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
-      "trend": "up",
-      "trend_delta": 654
+      "trend": "down",
+      "trend_delta": -48
     },
     {
       "id": "manual:kubeflow",
@@ -2460,7 +2732,7 @@
       "url": "https://github.com/rust-lang/rust",
       "canonical_url": "github.com/rust-lang/rust",
       "company": null,
-      "stars": 207,
+      "stars": 186,
       "momentum": 20,
       "tags": [
         "rust"
@@ -2468,14 +2740,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
-        "2026-10-15": 207
+        "2026-10-15": 207,
+        "2026-11-06": 186
       },
       "description": "Empowering everyone to build reliable and efficient software.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -21
     },
     {
       "id": "github:ifixai-ai/iFixAi",
@@ -3809,7 +4082,7 @@
       "url": "https://github.com/microsoft/vscode",
       "canonical_url": "github.com/microsoft/vscode",
       "company": "Microsoft",
-      "stars": 95,
+      "stars": 295,
       "momentum": 9,
       "tags": [
         "typescript"
@@ -3817,14 +4090,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-27",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
-        "2026-09-27": 95
+        "2026-09-27": 95,
+        "2026-11-06": 295
       },
       "description": "Visual Studio Code",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 200
     },
     {
       "id": "github:tensorflow/tensorflow",
@@ -4822,7 +5096,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 2264,
+      "stars": 2524,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -4830,7 +5104,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
@@ -4842,11 +5116,12 @@
         "2026-10-22": 2012,
         "2026-10-23": 2979,
         "2026-10-24": 2716,
-        "2026-10-25": 2264
+        "2026-10-25": 2264,
+        "2026-11-06": 2524
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "trend": "up",
-      "trend_delta": 1726
+      "trend_delta": 260
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -10260,7 +10535,7 @@
       "url": "https://github.com/angular/angular",
       "canonical_url": "github.com/angular/angular",
       "company": null,
-      "stars": 13,
+      "stars": 128,
       "momentum": 1,
       "tags": [
         "typescript"
@@ -10268,14 +10543,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
-        "2026-08-05": 13
+        "2026-08-05": 13,
+        "2026-11-06": 128
       },
       "description": "Deliver web apps with confidence \ud83d\ude80",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 115
     },
     {
       "id": "github:uber/ADR",
@@ -18524,6 +18800,33 @@
       "trend_delta": 0
     },
     {
+      "id": "github:openai/skills",
+      "name": "skills",
+      "quadrant": "Tools",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/openai/skills",
+      "canonical_url": "github.com/openai/skills",
+      "company": "OpenAI",
+      "stars": 490,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-09-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-09-07": 46,
+        "2026-09-08": 351,
+        "2026-09-09": 490
+      },
+      "description": "Skills Catalog for Codex",
+      "trend": "up",
+      "trend_delta": 444
+    },
+    {
       "id": "github:anthropics/skills",
       "name": "skills",
       "quadrant": "Tools",
@@ -18553,33 +18856,6 @@
       "description": "Public repository for Agent Skills",
       "trend": "up",
       "trend_delta": 98
-    },
-    {
-      "id": "github:openai/skills",
-      "name": "skills",
-      "quadrant": "Tools",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/openai/skills",
-      "canonical_url": "github.com/openai/skills",
-      "company": "OpenAI",
-      "stars": 490,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-09-09",
-      "also_seen": [],
-      "stars_history": {
-        "2026-09-07": 46,
-        "2026-09-08": 351,
-        "2026-09-09": 490
-      },
-      "description": "Skills Catalog for Codex",
-      "trend": "up",
-      "trend_delta": 444
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -19503,6 +19779,29 @@
       "trend_delta": 0
     },
     {
+      "id": "github:travisvn/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "quadrant": "Techniques",
+      "ring": "Assess",
+      "source": "GitHub",
+      "discovered_by": "manual",
+      "url": "https://github.com/travisvn/awesome-claude-skills",
+      "canonical_url": "github.com/travisvn/awesome-claude-skills",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-06-30",
+      "last_seen": "2026-06-30",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
       "id": "github:ComposioHQ/awesome-claude-skills",
       "name": "awesome-claude-skills",
       "quadrant": "Techniques",
@@ -19532,29 +19831,6 @@
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
       "trend": "up",
       "trend_delta": 45
-    },
-    {
-      "id": "github:travisvn/awesome-claude-skills",
-      "name": "awesome-claude-skills",
-      "quadrant": "Techniques",
-      "ring": "Assess",
-      "source": "GitHub",
-      "discovered_by": "manual",
-      "url": "https://github.com/travisvn/awesome-claude-skills",
-      "canonical_url": "github.com/travisvn/awesome-claude-skills",
-      "company": null,
-      "stars": 0,
-      "momentum": 0,
-      "tags": [],
-      "topics": [],
-      "archived_at": null,
-      "first_seen": "2026-06-30",
-      "last_seen": "2026-06-30",
-      "also_seen": [],
-      "stars_history": {},
-      "description": "Curated collection of Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "trend": "none",
-      "trend_delta": 0
     },
     {
       "id": "github:heilcheng/awesome-agent-skills",
@@ -21992,7 +22268,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2053,
+      "stars": 2058,
       "momentum": 100,
       "tags": [
         "shell"
@@ -22000,7 +22276,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -22044,11 +22320,12 @@
         "2026-11-02": 970,
         "2026-11-03": 1164,
         "2026-11-04": 1376,
-        "2026-11-05": 2053
+        "2026-11-05": 2053,
+        "2026-11-06": 2058
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 316
+      "trend_delta": 1176
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -23827,7 +24104,7 @@
       "url": "https://github.com/google/skills",
       "canonical_url": "github.com/google/skills",
       "company": "Google",
-      "stars": 199,
+      "stars": 532,
       "momentum": 48,
       "tags": [
         "python"
@@ -23835,7 +24112,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 481,
@@ -23847,11 +24124,12 @@
         "2026-08-10": 528,
         "2026-10-02": 30,
         "2026-10-03": 39,
-        "2026-11-05": 199
+        "2026-11-05": 199,
+        "2026-11-06": 532
       },
       "description": "Agent Skills for Google products and technologies",
       "trend": "up",
-      "trend_delta": 160
+      "trend_delta": 493
     },
     {
       "id": "github:phuryn/pm-skills",
