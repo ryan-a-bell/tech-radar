@@ -2,7 +2,7 @@
 id: manual:meshy
 name: Meshy
 quadrant: Tools
-ring: Assess
+ring: Trial
 source: Manual
 discovered_by: manual
 url: https://www.meshy.ai
