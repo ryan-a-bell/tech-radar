@@ -1,7 +1,142 @@
 {
-  "generated": "2026-11-06",
-  "count": 917,
+  "generated": "2026-11-07",
+  "count": 922,
   "items": [
+    {
+      "id": "github:sherlock-project/sherlock",
+      "name": "sherlock",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "canonical_url": "github.com/sherlock-project/sherlock",
+      "company": null,
+      "stars": 1761,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-07": 1761
+      },
+      "description": "Hunt down social media accounts by username across social networks",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:dsx-ai-factory/nvke",
+      "name": "nvke",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "canonical_url": "github.com/dsx-ai-factory/nvke",
+      "company": null,
+      "stars": 125,
+      "momentum": 12,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-07": 125
+      },
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:mbillow/localthings",
+      "name": "localthings",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/mbillow/localthings",
+      "canonical_url": "github.com/mbillow/localthings",
+      "company": null,
+      "stars": 184,
+      "momentum": 18,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-07": 184
+      },
+      "description": "Control your Samsung appliances from Home Assistant over your home network, with no cloud account.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ranxianglei/billion-context",
+      "name": "billion-context",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "canonical_url": "github.com/ranxianglei/billion-context",
+      "company": null,
+      "stars": 185,
+      "momentum": 18,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-07": 185
+      },
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .\u4e0a\u4e0b\u6587\u538b\u7f29\u63d2\u4ef6\uff0c\u6708\u7ea7\u957f\u4f1a\u8bdd\u4f1a\u8bdd\uff0c \u517c\u987e\u5c0f\u7a97\u53e3(100k\u4e0a\u4e0b\u6587\u8db3\u77e3)\u7701token(\u77015\u500dtoken) . billion-context is all you need",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:meta/astryx",
+      "name": "astryx",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/meta/astryx",
+      "canonical_url": "github.com/meta/astryx",
+      "company": "Meta",
+      "stars": 198,
+      "momentum": 19,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-07": 198
+      },
+      "description": "An open source design system that's fully customizable and agent ready",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:zed-industries/zed",
       "name": "zed",
@@ -12,7 +147,7 @@
       "url": "https://github.com/zed-industries/zed",
       "canonical_url": "github.com/zed-industries/zed",
       "company": "Zed Industries",
-      "stars": 292,
+      "stars": 1119,
       "momentum": 29,
       "tags": [
         "rust"
@@ -20,14 +155,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
-        "2026-11-06": 292
+        "2026-11-06": 292,
+        "2026-11-07": 1119
       },
       "description": "Code at the speed of thought \u2013 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 827
     },
     {
       "id": "github:symfony/symfony",
@@ -66,7 +202,7 @@
       "url": "https://github.com/astral-sh/ruff",
       "canonical_url": "github.com/astral-sh/ruff",
       "company": "Astral",
-      "stars": 107,
+      "stars": 350,
       "momentum": 10,
       "tags": [
         "rust"
@@ -74,14 +210,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
-        "2026-11-06": 107
+        "2026-11-06": 107,
+        "2026-11-07": 350
       },
       "description": "An extremely fast Python linter and code formatter, written in Rust.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 243
     },
     {
       "id": "github:react/react",
@@ -147,7 +284,7 @@
       "url": "https://github.com/prometheus/prometheus",
       "canonical_url": "github.com/prometheus/prometheus",
       "company": null,
-      "stars": 140,
+      "stars": 325,
       "momentum": 14,
       "tags": [
         "go"
@@ -155,14 +292,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-06",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
-        "2026-11-06": 140
+        "2026-11-06": 140,
+        "2026-11-07": 325
       },
       "description": "The Prometheus monitoring system and time series database.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 185
     },
     {
       "id": "github:openssl/openssl",
@@ -310,7 +448,7 @@
       "url": "https://github.com/vercel-labs/agent-browser",
       "canonical_url": "github.com/vercel-labs/agent-browser",
       "company": null,
-      "stars": 132,
+      "stars": 180,
       "momentum": 13,
       "tags": [
         "rust"
@@ -318,14 +456,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
-        "2026-11-05": 132
+        "2026-11-05": 132,
+        "2026-11-07": 180
       },
       "description": "Browser automation CLI for AI agents",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 48
     },
     {
       "id": "github:scenario-labs/skills",
@@ -1102,7 +1241,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "canonical_url": "github.com/milind-soni/openmausbot",
       "company": null,
-      "stars": 919,
+      "stars": 1986,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -1110,17 +1249,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 1190,
         "2026-10-30": 899,
         "2026-10-31": 1304,
-        "2026-11-01": 919
+        "2026-11-01": 919,
+        "2026-11-07": 1986
       },
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "trend": "down",
-      "trend_delta": -271
+      "trend": "up",
+      "trend_delta": 682
     },
     {
       "id": "github:CopilotKit/OpenBot",
@@ -5096,7 +5236,7 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "canonical_url": "github.com/cloudflare/security-audit-skill",
       "company": "Cloudflare",
-      "stars": 2524,
+      "stars": 2088,
       "momentum": 92,
       "tags": [
         "javascript"
@@ -5104,7 +5244,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-17",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-09-17": 927,
@@ -5117,11 +5257,12 @@
         "2026-10-23": 2979,
         "2026-10-24": 2716,
         "2026-10-25": 2264,
-        "2026-11-06": 2524
+        "2026-11-06": 2524,
+        "2026-11-07": 2088
       },
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "trend": "up",
-      "trend_delta": 260
+      "trend": "down",
+      "trend_delta": -176
     },
     {
       "id": "github:anthropics/knowledge-work-plugins",
@@ -10426,7 +10567,7 @@
       "url": "https://github.com/tailwindlabs/tailwindcss",
       "canonical_url": "github.com/tailwindlabs/tailwindcss",
       "company": null,
-      "stars": 408,
+      "stars": 152,
       "momentum": 5,
       "tags": [
         "typescript"
@@ -10434,15 +10575,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-05",
-      "last_seen": "2026-08-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-08-05": 52,
-        "2026-08-06": 408
+        "2026-08-06": 408,
+        "2026-11-07": 152
       },
       "description": "A utility-first CSS framework for rapid UI development.",
-      "trend": "up",
-      "trend_delta": 356
+      "trend": "down",
+      "trend_delta": -256
     },
     {
       "id": "github:gabime/spdlog",
@@ -18836,13 +18978,13 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 287,
+      "stars": 386,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-30",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
@@ -18851,11 +18993,12 @@
         "2026-09-05": 511,
         "2026-09-06": 475,
         "2026-09-26": 189,
-        "2026-10-30": 287
+        "2026-10-30": 287,
+        "2026-11-07": 386
       },
       "description": "Public repository for Agent Skills",
       "trend": "up",
-      "trend_delta": 98
+      "trend_delta": 99
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -22268,7 +22411,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 2058,
+      "stars": 1111,
       "momentum": 100,
       "tags": [
         "shell"
@@ -22276,7 +22419,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -22321,11 +22464,12 @@
         "2026-11-03": 1164,
         "2026-11-04": 1376,
         "2026-11-05": 2053,
-        "2026-11-06": 2058
+        "2026-11-06": 2058,
+        "2026-11-07": 1111
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 1176
+      "trend_delta": 229
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -24104,7 +24248,7 @@
       "url": "https://github.com/google/skills",
       "canonical_url": "github.com/google/skills",
       "company": "Google",
-      "stars": 532,
+      "stars": 449,
       "momentum": 48,
       "tags": [
         "python"
@@ -24112,7 +24256,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-08",
-      "last_seen": "2026-11-06",
+      "last_seen": "2026-11-07",
       "also_seen": [],
       "stars_history": {
         "2026-06-08": 481,
@@ -24125,11 +24269,12 @@
         "2026-10-02": 30,
         "2026-10-03": 39,
         "2026-11-05": 199,
-        "2026-11-06": 532
+        "2026-11-06": 532,
+        "2026-11-07": 449
       },
       "description": "Agent Skills for Google products and technologies",
       "trend": "up",
-      "trend_delta": 493
+      "trend_delta": 410
     },
     {
       "id": "github:phuryn/pm-skills",

@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/tailwindlabs/tailwindcss
 canonical_url: github.com/tailwindlabs/tailwindcss
 company: null
-stars: 408
+stars: 152
 momentum: 5
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-05
-last_seen: 2026-08-06
+last_seen: 2026-11-07
 also_seen: []
-stars_history: {"2026-08-05": 52, "2026-08-06": 408}
+stars_history: {"2026-08-05": 52, "2026-08-06": 408, "2026-11-07": 152}
 ---
 
 A utility-first CSS framework for rapid UI development.

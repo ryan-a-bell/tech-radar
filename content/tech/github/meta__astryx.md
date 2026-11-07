@@ -1,0 +1,22 @@
+---
+id: github:meta/astryx
+name: astryx
+quadrant: Languages
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/meta/astryx
+canonical_url: github.com/meta/astryx
+company: Meta
+stars: 198
+momentum: 19
+tags: ["typescript"]
+topics: []
+archived_at: null
+first_seen: 2026-11-07
+last_seen: 2026-11-07
+also_seen: []
+stars_history: {"2026-11-07": 198}
+---
+
+An open source design system that's fully customizable and agent ready
