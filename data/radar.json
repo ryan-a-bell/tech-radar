@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07",
+  "generated": "2026-11-08",
   "count": 922,
   "items": [
     {
@@ -1295,7 +1295,7 @@
       "id": "manual:meshy",
       "name": "Meshy",
       "quadrant": "Tools",
-      "ring": "Assess",
+      "ring": "Trial",
       "source": "Manual",
       "discovered_by": "manual",
       "url": "https://www.meshy.ai",
