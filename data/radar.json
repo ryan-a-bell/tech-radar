@@ -1,7 +1,115 @@
 {
-  "generated": "2026-11-08",
-  "count": 922,
+  "generated": "2026-11-09",
+  "count": 926,
   "items": [
+    {
+      "id": "github:google-deepmind/mujoco",
+      "name": "mujoco",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "canonical_url": "github.com/google-deepmind/mujoco",
+      "company": "Google DeepMind",
+      "stars": 579,
+      "momentum": 57,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-09": 579
+      },
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:homeassistant-ai/ha-mcp",
+      "name": "ha-mcp",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "canonical_url": "github.com/homeassistant-ai/ha-mcp",
+      "company": null,
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-09": 31
+      },
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:garrytan/gbrain",
+      "name": "gbrain",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/garrytan/gbrain",
+      "canonical_url": "github.com/garrytan/gbrain",
+      "company": null,
+      "stars": 215,
+      "momentum": 21,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-09": 215
+      },
+      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:anthropics/claude-quickstarts",
+      "name": "claude-quickstarts",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "canonical_url": "github.com/anthropics/claude-quickstarts",
+      "company": "Anthropic",
+      "stars": 560,
+      "momentum": 56,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-09": 560
+      },
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:sherlock-project/sherlock",
       "name": "sherlock",
@@ -12,7 +120,7 @@
       "url": "https://github.com/sherlock-project/sherlock",
       "canonical_url": "github.com/sherlock-project/sherlock",
       "company": null,
-      "stars": 1761,
+      "stars": 4294,
       "momentum": 100,
       "tags": [
         "python"
@@ -20,14 +128,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
-        "2026-11-07": 1761
+        "2026-11-07": 1761,
+        "2026-11-09": 4294
       },
       "description": "Hunt down social media accounts by username across social networks",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 2533
     },
     {
       "id": "github:dsx-ai-factory/nvke",
@@ -120,7 +229,7 @@
       "url": "https://github.com/meta/astryx",
       "canonical_url": "github.com/meta/astryx",
       "company": "Meta",
-      "stars": 198,
+      "stars": 3324,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -128,14 +237,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
-        "2026-11-07": 198
+        "2026-11-07": 198,
+        "2026-11-09": 3324
       },
       "description": "An open source design system that's fully customizable and agent ready",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 3126
     },
     {
       "id": "github:zed-industries/zed",
@@ -448,7 +558,7 @@
       "url": "https://github.com/vercel-labs/agent-browser",
       "canonical_url": "github.com/vercel-labs/agent-browser",
       "company": null,
-      "stars": 180,
+      "stars": 914,
       "momentum": 13,
       "tags": [
         "rust"
@@ -456,15 +566,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
         "2026-11-05": 132,
-        "2026-11-07": 180
+        "2026-11-07": 180,
+        "2026-11-09": 914
       },
       "description": "Browser automation CLI for AI agents",
       "trend": "up",
-      "trend_delta": 48
+      "trend_delta": 782
     },
     {
       "id": "github:scenario-labs/skills",
@@ -1241,7 +1352,7 @@
       "url": "https://github.com/milind-soni/OpenMausBot",
       "canonical_url": "github.com/milind-soni/openmausbot",
       "company": null,
-      "stars": 1986,
+      "stars": 1589,
       "momentum": 100,
       "tags": [
         "typescript"
@@ -1249,18 +1360,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 1190,
         "2026-10-30": 899,
         "2026-10-31": 1304,
         "2026-11-01": 919,
-        "2026-11-07": 1986
+        "2026-11-07": 1986,
+        "2026-11-09": 1589
       },
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "trend": "up",
-      "trend_delta": 682
+      "trend_delta": 670
     },
     {
       "id": "github:CopilotKit/OpenBot",
@@ -18978,13 +19090,13 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 386,
+      "stars": 1052,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
@@ -18994,11 +19106,12 @@
         "2026-09-06": 475,
         "2026-09-26": 189,
         "2026-10-30": 287,
-        "2026-11-07": 386
+        "2026-11-07": 386,
+        "2026-11-09": 1052
       },
       "description": "Public repository for Agent Skills",
       "trend": "up",
-      "trend_delta": 99
+      "trend_delta": 765
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -21883,7 +21996,7 @@
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "company": null,
-      "stars": 243,
+      "stars": 505,
       "momentum": 51,
       "tags": [
         "python"
@@ -21891,7 +22004,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-08-12",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 519,
@@ -21900,11 +22013,12 @@
         "2026-06-24": 1119,
         "2026-06-25": 1468,
         "2026-08-10": 306,
-        "2026-08-12": 243
+        "2026-08-12": 243,
+        "2026-11-09": 505
       },
       "description": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
-      "trend": "down",
-      "trend_delta": -1225
+      "trend": "up",
+      "trend_delta": 262
     },
     {
       "id": "github:topoteretes/cognee",
@@ -23938,7 +24052,7 @@
       "url": "https://github.com/ruvnet/RuView",
       "canonical_url": "github.com/ruvnet/ruview",
       "company": null,
-      "stars": 415,
+      "stars": 203,
       "momentum": 43,
       "tags": [
         "rust"
@@ -23946,7 +24060,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-10",
-      "last_seen": "2026-10-28",
+      "last_seen": "2026-11-09",
       "also_seen": [],
       "stars_history": {
         "2026-06-10": 439,
@@ -23961,11 +24075,12 @@
         "2026-08-11": 154,
         "2026-09-14": 370,
         "2026-09-15": 383,
-        "2026-10-28": 415
+        "2026-10-28": 415,
+        "2026-11-09": 203
       },
       "description": "\u03c0 RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection \u2014 all without a single pixel of video.",
-      "trend": "up",
-      "trend_delta": 32
+      "trend": "down",
+      "trend_delta": -212
     },
     {
       "id": "github:harry0703/MoneyPrinterTurbo",
