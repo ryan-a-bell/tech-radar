@@ -1,7 +1,34 @@
 {
-  "generated": "2026-11-09",
-  "count": 926,
+  "generated": "2026-11-10",
+  "count": 927,
   "items": [
+    {
+      "id": "github:we-promise/sure",
+      "name": "sure",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/we-promise/sure",
+      "canonical_url": "github.com/we-promise/sure",
+      "company": null,
+      "stars": 184,
+      "momentum": 18,
+      "tags": [
+        "ruby"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-10",
+      "last_seen": "2026-11-10",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-10": 184
+      },
+      "description": "The personal finance app for everyone (by everyone)",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:google-deepmind/mujoco",
       "name": "mujoco",
@@ -12,7 +39,7 @@
       "url": "https://github.com/google-deepmind/mujoco",
       "canonical_url": "github.com/google-deepmind/mujoco",
       "company": "Google DeepMind",
-      "stars": 579,
+      "stars": 453,
       "momentum": 57,
       "tags": [
         "c++"
@@ -20,14 +47,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
-        "2026-11-09": 579
+        "2026-11-09": 579,
+        "2026-11-10": 453
       },
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -126
     },
     {
       "id": "github:homeassistant-ai/ha-mcp",
@@ -39,7 +67,7 @@
       "url": "https://github.com/homeassistant-ai/ha-mcp",
       "canonical_url": "github.com/homeassistant-ai/ha-mcp",
       "company": null,
-      "stars": 31,
+      "stars": 792,
       "momentum": 3,
       "tags": [
         "python"
@@ -47,14 +75,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
-        "2026-11-09": 31
+        "2026-11-09": 31,
+        "2026-11-10": 792
       },
       "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 761
     },
     {
       "id": "github:garrytan/gbrain",
@@ -93,7 +122,7 @@
       "url": "https://github.com/anthropics/claude-quickstarts",
       "canonical_url": "github.com/anthropics/claude-quickstarts",
       "company": "Anthropic",
-      "stars": 560,
+      "stars": 530,
       "momentum": 56,
       "tags": [
         "python"
@@ -101,14 +130,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
-        "2026-11-09": 560
+        "2026-11-09": 560,
+        "2026-11-10": 530
       },
       "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -30
     },
     {
       "id": "github:sherlock-project/sherlock",
@@ -120,7 +150,7 @@
       "url": "https://github.com/sherlock-project/sherlock",
       "canonical_url": "github.com/sherlock-project/sherlock",
       "company": null,
-      "stars": 4294,
+      "stars": 2387,
       "momentum": 100,
       "tags": [
         "python"
@@ -128,15 +158,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-11-07": 1761,
-        "2026-11-09": 4294
+        "2026-11-09": 4294,
+        "2026-11-10": 2387
       },
       "description": "Hunt down social media accounts by username across social networks",
       "trend": "up",
-      "trend_delta": 2533
+      "trend_delta": 626
     },
     {
       "id": "github:dsx-ai-factory/nvke",
@@ -202,7 +233,7 @@
       "url": "https://github.com/ranxianglei/billion-context",
       "canonical_url": "github.com/ranxianglei/billion-context",
       "company": null,
-      "stars": 185,
+      "stars": 374,
       "momentum": 18,
       "tags": [
         "typescript"
@@ -210,14 +241,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
-        "2026-11-07": 185
+        "2026-11-07": 185,
+        "2026-11-10": 374
       },
       "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .\u4e0a\u4e0b\u6587\u538b\u7f29\u63d2\u4ef6\uff0c\u6708\u7ea7\u957f\u4f1a\u8bdd\u4f1a\u8bdd\uff0c \u517c\u987e\u5c0f\u7a97\u53e3(100k\u4e0a\u4e0b\u6587\u8db3\u77e3)\u7701token(\u77015\u500dtoken) . billion-context is all you need",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 189
     },
     {
       "id": "github:meta/astryx",
@@ -229,7 +261,7 @@
       "url": "https://github.com/meta/astryx",
       "canonical_url": "github.com/meta/astryx",
       "company": "Meta",
-      "stars": 3324,
+      "stars": 3111,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -237,15 +269,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-11-07": 198,
-        "2026-11-09": 3324
+        "2026-11-09": 3324,
+        "2026-11-10": 3111
       },
       "description": "An open source design system that's fully customizable and agent ready",
       "trend": "up",
-      "trend_delta": 3126
+      "trend_delta": 2913
     },
     {
       "id": "github:zed-industries/zed",
@@ -558,7 +591,7 @@
       "url": "https://github.com/vercel-labs/agent-browser",
       "canonical_url": "github.com/vercel-labs/agent-browser",
       "company": null,
-      "stars": 914,
+      "stars": 775,
       "momentum": 13,
       "tags": [
         "rust"
@@ -566,16 +599,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-11-05": 132,
         "2026-11-07": 180,
-        "2026-11-09": 914
+        "2026-11-09": 914,
+        "2026-11-10": 775
       },
       "description": "Browser automation CLI for AI agents",
       "trend": "up",
-      "trend_delta": 782
+      "trend_delta": 643
     },
     {
       "id": "github:scenario-labs/skills",
@@ -12806,7 +12840,7 @@
       "url": "https://github.com/tokio-rs/topcoat",
       "canonical_url": "github.com/tokio-rs/topcoat",
       "company": null,
-      "stars": 371,
+      "stars": 192,
       "momentum": 37,
       "tags": [
         "rust"
@@ -12814,14 +12848,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-21",
-      "last_seen": "2026-07-21",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
-        "2026-07-21": 371
+        "2026-07-21": 371,
+        "2026-11-10": 192
       },
       "description": "A batteries-included framework for building web apps",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -179
     },
     {
       "id": "github:oblien/openship",
@@ -19090,13 +19125,13 @@
       "url": "https://github.com/anthropics/skills",
       "canonical_url": "github.com/anthropics/skills",
       "company": "Anthropic",
-      "stars": 1052,
+      "stars": 1676,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 485,
@@ -19107,11 +19142,12 @@
         "2026-09-26": 189,
         "2026-10-30": 287,
         "2026-11-07": 386,
-        "2026-11-09": 1052
+        "2026-11-09": 1052,
+        "2026-11-10": 1676
       },
       "description": "Public repository for Agent Skills",
       "trend": "up",
-      "trend_delta": 765
+      "trend_delta": 1389
     },
     {
       "id": "github:ruvnet/ruflo",
@@ -22525,7 +22561,7 @@
       "url": "https://github.com/mattpocock/skills",
       "canonical_url": "github.com/mattpocock/skills",
       "company": null,
-      "stars": 1111,
+      "stars": 1223,
       "momentum": 100,
       "tags": [
         "shell"
@@ -22533,7 +22569,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-17",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-17": 1849,
@@ -22579,11 +22615,12 @@
         "2026-11-04": 1376,
         "2026-11-05": 2053,
         "2026-11-06": 2058,
-        "2026-11-07": 1111
+        "2026-11-07": 1111,
+        "2026-11-10": 1223
       },
       "description": "Skills for Real Engineers. Straight from my .claude directory.",
       "trend": "up",
-      "trend_delta": 229
+      "trend_delta": 59
     },
     {
       "id": "github:alexzhang13/rlm",
@@ -24246,7 +24283,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 751,
+      "stars": 465,
       "momentum": 34,
       "tags": [
         "shell"
@@ -24254,7 +24291,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-11-10",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -24284,11 +24321,12 @@
         "2026-09-20": 556,
         "2026-10-04": 336,
         "2026-10-07": 453,
-        "2026-10-09": 751
+        "2026-10-09": 751,
+        "2026-11-10": 465
       },
       "description": "Production-grade engineering skills for AI coding agents.",
-      "trend": "up",
-      "trend_delta": 195
+      "trend": "down",
+      "trend_delta": -286
     },
     {
       "id": "github:Andyyyy64/whichllm",

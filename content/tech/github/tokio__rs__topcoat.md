@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/tokio-rs/topcoat
 canonical_url: github.com/tokio-rs/topcoat
 company: null
-stars: 371
+stars: 192
 momentum: 37
 tags: ["rust"]
 topics: []
 archived_at: null
 first_seen: 2026-07-21
-last_seen: 2026-07-21
+last_seen: 2026-11-10
 also_seen: []
-stars_history: {"2026-07-21": 371}
+stars_history: {"2026-07-21": 371, "2026-11-10": 192}
 ---
 
 A batteries-included framework for building web apps
