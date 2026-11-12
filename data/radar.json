@@ -1,7 +1,88 @@
 {
-  "generated": "2026-11-11",
-  "count": 931,
+  "generated": "2026-11-12",
+  "count": 934,
   "items": [
+    {
+      "id": "github:QwenLM/qwen-code",
+      "name": "qwen-code",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "canonical_url": "github.com/qwenlm/qwen-code",
+      "company": null,
+      "stars": 151,
+      "momentum": 15,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-12": 151
+      },
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ashhart/TensorFold",
+      "name": "TensorFold",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ashhart/TensorFold",
+      "canonical_url": "github.com/ashhart/tensorfold",
+      "company": null,
+      "stars": 58,
+      "momentum": 5,
+      "tags": [
+        "zig"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-12": 58
+      },
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:pookjw/HermesEnabler",
+      "name": "HermesEnabler",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "canonical_url": "github.com/pookjw/hermesenabler",
+      "company": null,
+      "stars": 390,
+      "momentum": 39,
+      "tags": [
+        "objective-c"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-12": 390
+      },
+      "description": "Enable Herm\u00e8s Watch Faces on any Apple Watch devices",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:GoogleChrome/modern-web-guidance-src",
       "name": "modern-web-guidance-src",
@@ -12,7 +93,7 @@
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
       "canonical_url": "github.com/googlechrome/modern-web-guidance-src",
       "company": null,
-      "stars": 133,
+      "stars": 799,
       "momentum": 13,
       "tags": [
         "typescript"
@@ -20,14 +101,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-11",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
-        "2026-11-11": 133
+        "2026-11-11": 133,
+        "2026-11-12": 799
       },
       "description": "A typescript project trending on GitHub.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 666
     },
     {
       "id": "github:shadcn/improve",
@@ -64,7 +146,7 @@
       "url": "https://github.com/openai/codex-security",
       "canonical_url": "github.com/openai/codex-security",
       "company": "OpenAI",
-      "stars": 20,
+      "stars": 663,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -72,14 +154,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-11",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
-        "2026-11-11": 20
+        "2026-11-11": 20,
+        "2026-11-12": 663
       },
       "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 643
     },
     {
       "id": "github:TheAlgorithms/Java",
@@ -118,7 +201,7 @@
       "url": "https://github.com/we-promise/sure",
       "canonical_url": "github.com/we-promise/sure",
       "company": null,
-      "stars": 1079,
+      "stars": 974,
       "momentum": 18,
       "tags": [
         "ruby"
@@ -126,15 +209,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-11",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-11-10": 184,
-        "2026-11-11": 1079
+        "2026-11-11": 1079,
+        "2026-11-12": 974
       },
       "description": "The personal finance app for everyone (by everyone)",
       "trend": "up",
-      "trend_delta": 895
+      "trend_delta": 790
     },
     {
       "id": "github:google-deepmind/mujoco",
@@ -369,7 +453,7 @@
       "url": "https://github.com/meta/astryx",
       "canonical_url": "github.com/meta/astryx",
       "company": "Meta",
-      "stars": 2842,
+      "stars": 1789,
       "momentum": 19,
       "tags": [
         "typescript"
@@ -377,17 +461,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-11",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-11-07": 198,
         "2026-11-09": 3324,
         "2026-11-10": 3111,
-        "2026-11-11": 2842
+        "2026-11-11": 2842,
+        "2026-11-12": 1789
       },
       "description": "An open source design system that's fully customizable and agent ready",
       "trend": "up",
-      "trend_delta": 2644
+      "trend_delta": 1591
     },
     {
       "id": "github:zed-industries/zed",
@@ -1528,7 +1613,7 @@
       "url": "https://github.com/CopilotKit/OpenBot",
       "canonical_url": "github.com/copilotkit/openbot",
       "company": null,
-      "stars": 178,
+      "stars": 291,
       "momentum": 24,
       "tags": [
         "typescript"
@@ -1536,16 +1621,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-10-29",
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-10-29": 240,
         "2026-10-30": 707,
-        "2026-11-01": 178
+        "2026-11-01": 178,
+        "2026-11-12": 291
       },
       "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "trend": "down",
-      "trend_delta": -62
+      "trend": "up",
+      "trend_delta": 113
     },
     {
       "id": "manual:meshy",
@@ -10016,7 +10102,7 @@
       "url": "https://github.com/nvm-sh/nvm",
       "canonical_url": "github.com/nvm-sh/nvm",
       "company": null,
-      "stars": 52,
+      "stars": 79,
       "momentum": 2,
       "tags": [
         "shell"
@@ -10024,16 +10110,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 22,
         "2026-09-06": 22,
-        "2026-10-15": 52
+        "2026-10-15": 52,
+        "2026-11-12": 79
       },
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
       "trend": "up",
-      "trend_delta": 30
+      "trend_delta": 27
     },
     {
       "id": "github:3b1b/manim",
@@ -11051,7 +11138,7 @@
       "url": "https://github.com/Alishahryar1/free-claude-code",
       "canonical_url": "github.com/alishahryar1/free-claude-code",
       "company": null,
-      "stars": 705,
+      "stars": 636,
       "momentum": 27,
       "tags": [
         "python"
@@ -11059,17 +11146,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-04",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-08-04": 278,
         "2026-08-24": 1081,
         "2026-08-25": 891,
-        "2026-10-12": 705
+        "2026-10-12": 705,
+        "2026-11-12": 636
       },
       "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
       "trend": "down",
-      "trend_delta": -186
+      "trend_delta": -69
     },
     {
       "id": "github:livekit/agents",
@@ -12081,7 +12169,7 @@
       "url": "https://github.com/nodejs/node",
       "canonical_url": "github.com/nodejs/node",
       "company": null,
-      "stars": 66,
+      "stars": 133,
       "momentum": 3,
       "tags": [
         "javascript"
@@ -12089,15 +12177,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-27",
-      "last_seen": "2026-10-24",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-07-27": 36,
-        "2026-10-24": 66
+        "2026-10-24": 66,
+        "2026-11-12": 133
       },
       "description": "Node.js JavaScript runtime \u2728\ud83d\udc22\ud83d\ude80\u2728",
       "trend": "up",
-      "trend_delta": 30
+      "trend_delta": 67
     },
     {
       "id": "github:jenkinsci/jenkins",
@@ -24394,7 +24483,7 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "canonical_url": "github.com/addyosmani/agent-skills",
       "company": null,
-      "stars": 788,
+      "stars": 812,
       "momentum": 34,
       "tags": [
         "shell"
@@ -24402,7 +24491,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-09",
-      "last_seen": "2026-11-11",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-06-09": 348,
@@ -24434,11 +24523,12 @@
         "2026-10-07": 453,
         "2026-10-09": 751,
         "2026-11-10": 465,
-        "2026-11-11": 788
+        "2026-11-11": 788,
+        "2026-11-12": 812
       },
       "description": "Production-grade engineering skills for AI coding agents.",
       "trend": "up",
-      "trend_delta": 37
+      "trend_delta": 61
     },
     {
       "id": "github:Andyyyy64/whichllm",
@@ -24805,7 +24895,7 @@
       "url": "https://github.com/ggml-org/llama.cpp",
       "canonical_url": "github.com/ggml-org/llama.cpp",
       "company": null,
-      "stars": 158,
+      "stars": 162,
       "momentum": 19,
       "tags": [
         "c++"
@@ -24813,15 +24903,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-07",
-      "last_seen": "2026-06-08",
+      "last_seen": "2026-11-12",
       "also_seen": [],
       "stars_history": {
         "2026-06-07": 199,
-        "2026-06-08": 158
+        "2026-06-08": 158,
+        "2026-11-12": 162
       },
       "description": "LLM inference in C/C++",
-      "trend": "down",
-      "trend_delta": -41
+      "trend": "up",
+      "trend_delta": 4
     },
     {
       "id": "github:aaif-goose/goose",

@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/CopilotKit/OpenBot
 canonical_url: github.com/copilotkit/openbot
 company: null
-stars: 178
+stars: 291
 momentum: 24
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-10-29
-last_seen: 2026-11-01
+last_seen: 2026-11-12
 also_seen: []
-stars_history: {"2026-10-29": 240, "2026-10-30": 707, "2026-11-01": 178}
+stars_history: {"2026-10-29": 240, "2026-10-30": 707, "2026-11-01": 178, "2026-11-12": 291}
 ---
 
 Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.

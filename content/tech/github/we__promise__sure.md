@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/we-promise/sure
 canonical_url: github.com/we-promise/sure
 company: null
-stars: 1079
+stars: 974
 momentum: 18
 tags: ["ruby"]
 topics: []
 archived_at: null
 first_seen: 2026-11-10
-last_seen: 2026-11-11
+last_seen: 2026-11-12
 also_seen: []
-stars_history: {"2026-11-10": 184, "2026-11-11": 1079}
+stars_history: {"2026-11-10": 184, "2026-11-11": 1079, "2026-11-12": 974}
 ---
 
 The personal finance app for everyone (by everyone)
