@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/louislam/uptime-kuma
 canonical_url: github.com/louislam/uptime-kuma
 company: null
-stars: 61
+stars: 432
 momentum: 6
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-11-13
-last_seen: 2026-11-13
+last_seen: 2026-11-14
 also_seen: []
-stars_history: {"2026-11-13": 61}
+stars_history: {"2026-11-13": 61, "2026-11-14": 432}
 ---
 
 A fancy self-hosted monitoring tool
