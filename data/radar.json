@@ -35,7 +35,7 @@
       "url": "https://github.com/louislam/uptime-kuma",
       "canonical_url": "github.com/louislam/uptime-kuma",
       "company": null,
-      "stars": 61,
+      "stars": 432,
       "momentum": 6,
       "tags": [
         "javascript"
@@ -43,14 +43,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
-        "2026-11-13": 61
+        "2026-11-13": 61,
+        "2026-11-14": 432
       },
       "description": "A fancy self-hosted monitoring tool",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 371
     },
     {
       "id": "github:backnotprop/plannotator",
@@ -62,7 +63,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "canonical_url": "github.com/backnotprop/plannotator",
       "company": null,
-      "stars": 100,
+      "stars": 412,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -70,14 +71,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
-        "2026-11-13": 100
+        "2026-11-13": 100,
+        "2026-11-14": 412
       },
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 312
     },
     {
       "id": "github:tradermonty/claude-trading-skills",
@@ -89,7 +91,7 @@
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "canonical_url": "github.com/tradermonty/claude-trading-skills",
       "company": null,
-      "stars": 60,
+      "stars": 556,
       "momentum": 6,
       "tags": [
         "python"
@@ -97,14 +99,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
-        "2026-11-13": 60
+        "2026-11-13": 60,
+        "2026-11-14": 556
       },
       "description": "Claude Code skills for equity investors and traders \u2014 market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 496
     },
     {
       "id": "github:Likely7/Veyra-NRVideo",
@@ -116,7 +119,7 @@
       "url": "https://github.com/Likely7/Veyra-NRVideo",
       "canonical_url": "github.com/likely7/veyra-nrvideo",
       "company": null,
-      "stars": 245,
+      "stars": 423,
       "momentum": 24,
       "tags": [
         "c++"
@@ -124,14 +127,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
-        "2026-11-13": 245
+        "2026-11-13": 245,
+        "2026-11-14": 423
       },
       "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 178
     },
     {
       "id": "github:QwenLM/qwen-code",
@@ -224,7 +228,7 @@
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
       "canonical_url": "github.com/googlechrome/modern-web-guidance-src",
       "company": null,
-      "stars": 1875,
+      "stars": 1225,
       "momentum": 13,
       "tags": [
         "typescript"
@@ -232,16 +236,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-11-11": 133,
         "2026-11-12": 799,
-        "2026-11-13": 1875
+        "2026-11-13": 1875,
+        "2026-11-14": 1225
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 1742
+      "trend_delta": 1092
     },
     {
       "id": "github:shadcn/improve",
@@ -278,7 +283,7 @@
       "url": "https://github.com/openai/codex-security",
       "canonical_url": "github.com/openai/codex-security",
       "company": "OpenAI",
-      "stars": 754,
+      "stars": 599,
       "momentum": 2,
       "tags": [
         "typescript"
@@ -286,16 +291,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-11-11": 20,
         "2026-11-12": 663,
-        "2026-11-13": 754
+        "2026-11-13": 754,
+        "2026-11-14": 599
       },
       "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
       "trend": "up",
-      "trend_delta": 734
+      "trend_delta": 579
     },
     {
       "id": "github:TheAlgorithms/Java",
@@ -334,7 +340,7 @@
       "url": "https://github.com/we-promise/sure",
       "canonical_url": "github.com/we-promise/sure",
       "company": null,
-      "stars": 944,
+      "stars": 659,
       "momentum": 18,
       "tags": [
         "ruby"
@@ -342,17 +348,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-11-10": 184,
         "2026-11-11": 1079,
         "2026-11-12": 974,
-        "2026-11-13": 944
+        "2026-11-13": 944,
+        "2026-11-14": 659
       },
       "description": "The personal finance app for everyone (by everyone)",
       "trend": "up",
-      "trend_delta": 760
+      "trend_delta": 475
     },
     {
       "id": "github:google-deepmind/mujoco",
@@ -7963,7 +7970,7 @@
       "url": "https://github.com/tailscale/tailcat",
       "canonical_url": "github.com/tailscale/tailcat",
       "company": null,
-      "stars": 173,
+      "stars": 490,
       "momentum": 98,
       "tags": [
         "go"
@@ -7971,17 +7978,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-28",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-08-28": 986,
         "2026-08-29": 965,
         "2026-08-30": 789,
-        "2026-11-13": 173
+        "2026-11-13": 173,
+        "2026-11-14": 490
       },
       "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
       "trend": "down",
-      "trend_delta": -616
+      "trend_delta": -299
     },
     {
       "id": "github:abi/screenshot-to-code",
@@ -12576,7 +12584,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 206,
+      "stars": 897,
       "momentum": 18,
       "tags": [
         "go"
@@ -12584,7 +12592,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -12600,11 +12608,12 @@
         "2026-09-18": 3286,
         "2026-09-19": 2704,
         "2026-10-09": 323,
-        "2026-11-13": 206
+        "2026-11-13": 206,
+        "2026-11-14": 897
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-      "trend": "down",
-      "trend_delta": -117
+      "trend": "up",
+      "trend_delta": 574
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -12704,7 +12713,7 @@
       "url": "https://github.com/block/buzz",
       "canonical_url": "github.com/block/buzz",
       "company": null,
-      "stars": 95,
+      "stars": 275,
       "momentum": 100,
       "tags": [
         "rust"
@@ -12714,7 +12723,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 2162,
@@ -12723,11 +12732,12 @@
         "2026-07-27": 1710,
         "2026-08-24": 410,
         "2026-09-27": 339,
-        "2026-11-13": 95
+        "2026-11-13": 95,
+        "2026-11-14": 275
       },
       "description": "A hive mind communication platform",
       "trend": "down",
-      "trend_delta": -244
+      "trend_delta": -64
     },
     {
       "id": "github:likec4/likec4",
@@ -18103,7 +18113,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "company": null,
-      "stars": 60,
+      "stars": 673,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -18111,7 +18121,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 104,
@@ -18121,11 +18131,12 @@
         "2026-08-28": 61,
         "2026-08-29": 67,
         "2026-09-03": 148,
-        "2026-11-13": 60
+        "2026-11-13": 60,
+        "2026-11-14": 673
       },
       "description": "Chrome DevTools for coding agents",
-      "trend": "down",
-      "trend_delta": -88
+      "trend": "up",
+      "trend_delta": 525
     },
     {
       "id": "github:actions/checkout",
@@ -22369,7 +22380,7 @@
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "canonical_url": "github.com/zhulinsen/daily_stock_analysis",
       "company": null,
-      "stars": 272,
+      "stars": 867,
       "momentum": 51,
       "tags": [
         "python"
@@ -22377,7 +22388,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-21",
-      "last_seen": "2026-11-13",
+      "last_seen": "2026-11-14",
       "also_seen": [],
       "stars_history": {
         "2026-06-21": 519,
@@ -22389,11 +22400,12 @@
         "2026-08-12": 243,
         "2026-11-09": 505,
         "2026-11-11": 960,
-        "2026-11-13": 272
+        "2026-11-13": 272,
+        "2026-11-14": 867
       },
       "description": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
       "trend": "up",
-      "trend_delta": 29
+      "trend_delta": 624
     },
     {
       "id": "github:topoteretes/cognee",
