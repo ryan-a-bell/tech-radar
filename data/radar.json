@@ -1,7 +1,88 @@
 {
-  "generated": "2026-11-14",
-  "count": 940,
+  "generated": "2026-11-15",
+  "count": 943,
   "items": [
+    {
+      "id": "github:martin-olivier/airgorah",
+      "name": "airgorah",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/martin-olivier/airgorah",
+      "canonical_url": "github.com/martin-olivier/airgorah",
+      "company": null,
+      "stars": 270,
+      "momentum": 27,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-15": 270
+      },
+      "description": "A WiFi security auditing software",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:ag-ui-protocol/ag-ui",
+      "name": "ag-ui",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/ag-ui-protocol/ag-ui",
+      "canonical_url": "github.com/ag-ui-protocol/ag-ui",
+      "company": null,
+      "stars": 9,
+      "momentum": 0,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-15": 9
+      },
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:Tencent/LoopForge",
+      "name": "LoopForge",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/Tencent/LoopForge",
+      "canonical_url": "github.com/tencent/loopforge",
+      "company": null,
+      "stars": 33,
+      "momentum": 3,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-15": 33
+      },
+      "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "manual:headlamp",
       "name": "Headlamp",
@@ -58,7 +139,7 @@
       "url": "https://github.com/louislam/uptime-kuma",
       "canonical_url": "github.com/louislam/uptime-kuma",
       "company": null,
-      "stars": 432,
+      "stars": 352,
       "momentum": 6,
       "tags": [
         "javascript"
@@ -66,15 +147,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 61,
-        "2026-11-14": 432
+        "2026-11-14": 432,
+        "2026-11-15": 352
       },
       "description": "A fancy self-hosted monitoring tool",
       "trend": "up",
-      "trend_delta": 371
+      "trend_delta": 291
     },
     {
       "id": "github:backnotprop/plannotator",
@@ -86,7 +168,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "canonical_url": "github.com/backnotprop/plannotator",
       "company": null,
-      "stars": 412,
+      "stars": 860,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -94,15 +176,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 100,
-        "2026-11-14": 412
+        "2026-11-14": 412,
+        "2026-11-15": 860
       },
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "trend": "up",
-      "trend_delta": 312
+      "trend_delta": 760
     },
     {
       "id": "github:tradermonty/claude-trading-skills",
@@ -114,7 +197,7 @@
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "canonical_url": "github.com/tradermonty/claude-trading-skills",
       "company": null,
-      "stars": 556,
+      "stars": 707,
       "momentum": 6,
       "tags": [
         "python"
@@ -122,15 +205,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 60,
-        "2026-11-14": 556
+        "2026-11-14": 556,
+        "2026-11-15": 707
       },
       "description": "Claude Code skills for equity investors and traders \u2014 market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "trend": "up",
-      "trend_delta": 496
+      "trend_delta": 647
     },
     {
       "id": "github:Likely7/Veyra-NRVideo",
@@ -142,7 +226,7 @@
       "url": "https://github.com/Likely7/Veyra-NRVideo",
       "canonical_url": "github.com/likely7/veyra-nrvideo",
       "company": null,
-      "stars": 423,
+      "stars": 731,
       "momentum": 24,
       "tags": [
         "c++"
@@ -150,15 +234,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 245,
-        "2026-11-14": 423
+        "2026-11-14": 423,
+        "2026-11-15": 731
       },
       "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
       "trend": "up",
-      "trend_delta": 178
+      "trend_delta": 486
     },
     {
       "id": "github:QwenLM/qwen-code",
@@ -170,7 +255,7 @@
       "url": "https://github.com/QwenLM/qwen-code",
       "canonical_url": "github.com/qwenlm/qwen-code",
       "company": null,
-      "stars": 151,
+      "stars": 64,
       "momentum": 15,
       "tags": [
         "typescript"
@@ -178,14 +263,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-12",
-      "last_seen": "2026-11-12",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
-        "2026-11-12": 151
+        "2026-11-12": 151,
+        "2026-11-15": 64
       },
       "description": "An open-source AI coding agent that lives in your terminal.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -87
     },
     {
       "id": "github:ashhart/TensorFold",
@@ -197,7 +283,7 @@
       "url": "https://github.com/ashhart/TensorFold",
       "canonical_url": "github.com/ashhart/tensorfold",
       "company": null,
-      "stars": 58,
+      "stars": 37,
       "momentum": 5,
       "tags": [
         "zig"
@@ -205,14 +291,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-12",
-      "last_seen": "2026-11-12",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
-        "2026-11-12": 58
+        "2026-11-12": 58,
+        "2026-11-15": 37
       },
       "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -21
     },
     {
       "id": "github:pookjw/HermesEnabler",
@@ -251,7 +338,7 @@
       "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
       "canonical_url": "github.com/googlechrome/modern-web-guidance-src",
       "company": null,
-      "stars": 1225,
+      "stars": 1220,
       "momentum": 13,
       "tags": [
         "typescript"
@@ -259,17 +346,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-11": 133,
         "2026-11-12": 799,
         "2026-11-13": 1875,
-        "2026-11-14": 1225
+        "2026-11-14": 1225,
+        "2026-11-15": 1220
       },
       "description": "A typescript project trending on GitHub.",
       "trend": "up",
-      "trend_delta": 1092
+      "trend_delta": 1087
     },
     {
       "id": "github:shadcn/improve",
@@ -363,7 +451,7 @@
       "url": "https://github.com/we-promise/sure",
       "canonical_url": "github.com/we-promise/sure",
       "company": null,
-      "stars": 659,
+      "stars": 520,
       "momentum": 18,
       "tags": [
         "ruby"
@@ -371,18 +459,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-11-10": 184,
         "2026-11-11": 1079,
         "2026-11-12": 974,
         "2026-11-13": 944,
-        "2026-11-14": 659
+        "2026-11-14": 659,
+        "2026-11-15": 520
       },
       "description": "The personal finance app for everyone (by everyone)",
       "trend": "up",
-      "trend_delta": 475
+      "trend_delta": 336
     },
     {
       "id": "github:google-deepmind/mujoco",
@@ -5222,7 +5311,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 1099,
+      "stars": 495,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -5230,7 +5319,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-09-29",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
@@ -5239,11 +5328,12 @@
         "2026-09-26": 1050,
         "2026-09-27": 849,
         "2026-09-28": 895,
-        "2026-09-29": 1099
+        "2026-09-29": 1099,
+        "2026-11-15": 495
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
-      "trend": "up",
-      "trend_delta": 844
+      "trend": "down",
+      "trend_delta": -604
     },
     {
       "id": "github:superdesigndev/treg",
@@ -12607,7 +12697,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 897,
+      "stars": 688,
       "momentum": 18,
       "tags": [
         "go"
@@ -12615,7 +12705,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -12632,11 +12722,12 @@
         "2026-09-19": 2704,
         "2026-10-09": 323,
         "2026-11-13": 206,
-        "2026-11-14": 897
+        "2026-11-14": 897,
+        "2026-11-15": 688
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 574
+      "trend_delta": 365
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -18136,7 +18227,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "company": null,
-      "stars": 673,
+      "stars": 718,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -18144,7 +18235,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-11-14",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 104,
@@ -18155,11 +18246,12 @@
         "2026-08-29": 67,
         "2026-09-03": 148,
         "2026-11-13": 60,
-        "2026-11-14": 673
+        "2026-11-14": 673,
+        "2026-11-15": 718
       },
       "description": "Chrome DevTools for coding agents",
       "trend": "up",
-      "trend_delta": 525
+      "trend_delta": 570
     },
     {
       "id": "github:actions/checkout",
@@ -20367,7 +20459,7 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "canonical_url": "github.com/juliusbrussee/caveman",
       "company": null,
-      "stars": 433,
+      "stars": 227,
       "momentum": 0,
       "tags": [],
       "topics": [
@@ -20375,7 +20467,7 @@
       ],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-10-16",
+      "last_seen": "2026-11-15",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 926,
@@ -20389,11 +20481,12 @@
         "2026-10-02": 193,
         "2026-10-03": 209,
         "2026-10-04": 434,
-        "2026-10-16": 433
+        "2026-10-16": 433,
+        "2026-11-15": 227
       },
       "description": "Claude Code skill reducing token usage through simplified language",
       "trend": "down",
-      "trend_delta": -1
+      "trend_delta": -206
     },
     {
       "id": "github:eclipse-capella/capella",
