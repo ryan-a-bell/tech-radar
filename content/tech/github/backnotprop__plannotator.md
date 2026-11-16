@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/backnotprop/plannotator
 canonical_url: github.com/backnotprop/plannotator
 company: null
-stars: 860
+stars: 689
 momentum: 10
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-11-13
-last_seen: 2026-11-15
+last_seen: 2026-11-16
 also_seen: []
-stars_history: {"2026-11-13": 100, "2026-11-14": 412, "2026-11-15": 860}
+stars_history: {"2026-11-13": 100, "2026-11-14": 412, "2026-11-15": 860, "2026-11-16": 689}
 ---
 
 The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.

@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/sveltejs/svelte
 canonical_url: github.com/sveltejs/svelte
 company: null
-stars: 25
+stars: 58
 momentum: 15
 tags: ["javascript"]
 topics: []
 archived_at: null
 first_seen: 2026-06-06
-last_seen: 2026-06-07
+last_seen: 2026-11-16
 also_seen: []
-stars_history: {"2026-06-06": 158, "2026-06-07": 25}
+stars_history: {"2026-06-06": 158, "2026-06-07": 25, "2026-11-16": 58}
 ---
 
 web development for the rest of us

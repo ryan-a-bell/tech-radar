@@ -1,7 +1,142 @@
 {
-  "generated": "2026-11-15",
-  "count": 943,
+  "generated": "2026-11-16",
+  "count": 948,
   "items": [
+    {
+      "id": "github:google-research/paper-orchestra",
+      "name": "paper-orchestra",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/google-research/paper-orchestra",
+      "canonical_url": "github.com/google-research/paper-orchestra",
+      "company": null,
+      "stars": 306,
+      "momentum": 30,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-16": 306
+      },
+      "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:DeanChensj/jiangshan-map",
+      "name": "jiangshan-map",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/DeanChensj/jiangshan-map",
+      "canonical_url": "github.com/deanchensj/jiangshan-map",
+      "company": null,
+      "stars": 285,
+      "momentum": 28,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-16": 285
+      },
+      "description": "\u6c5f\u5c71\u65f6\u5e8f \u00b7 \u4e2d\u56fd\u5386\u53f2\u4ea4\u4e92\u5730\u56fe\u65f6\u95f4\u8f74 (403 BCE \u2013 Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:kajisho5/ffmpeg-skill",
+      "name": "ffmpeg-skill",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/kajisho5/ffmpeg-skill",
+      "canonical_url": "github.com/kajisho5/ffmpeg-skill",
+      "company": null,
+      "stars": 331,
+      "momentum": 33,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-16": 331
+      },
+      "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:getarcaneapp/arcane",
+      "name": "arcane",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/getarcaneapp/arcane",
+      "canonical_url": "github.com/getarcaneapp/arcane",
+      "company": null,
+      "stars": 31,
+      "momentum": 3,
+      "tags": [
+        "go"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-16": 31
+      },
+      "description": "Modern Docker Management, Designed for Everyone",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:NVIDIA/SkillEvaluator",
+      "name": "SkillEvaluator",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/NVIDIA/SkillEvaluator",
+      "canonical_url": "github.com/nvidia/skillevaluator",
+      "company": "NVIDIA",
+      "stars": 953,
+      "momentum": 95,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-16": 953
+      },
+      "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:martin-olivier/airgorah",
       "name": "airgorah",
@@ -39,7 +174,7 @@
       "url": "https://github.com/ag-ui-protocol/ag-ui",
       "canonical_url": "github.com/ag-ui-protocol/ag-ui",
       "company": null,
-      "stars": 9,
+      "stars": 790,
       "momentum": 0,
       "tags": [
         "typescript"
@@ -47,14 +182,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-15",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
-        "2026-11-15": 9
+        "2026-11-15": 9,
+        "2026-11-16": 790
       },
       "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 781
     },
     {
       "id": "github:Tencent/LoopForge",
@@ -168,7 +304,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "canonical_url": "github.com/backnotprop/plannotator",
       "company": null,
-      "stars": 860,
+      "stars": 689,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -176,16 +312,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 100,
         "2026-11-14": 412,
-        "2026-11-15": 860
+        "2026-11-15": 860,
+        "2026-11-16": 689
       },
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "trend": "up",
-      "trend_delta": 760
+      "trend_delta": 589
     },
     {
       "id": "github:tradermonty/claude-trading-skills",
@@ -197,7 +334,7 @@
       "url": "https://github.com/tradermonty/claude-trading-skills",
       "canonical_url": "github.com/tradermonty/claude-trading-skills",
       "company": null,
-      "stars": 707,
+      "stars": 841,
       "momentum": 6,
       "tags": [
         "python"
@@ -205,16 +342,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 60,
         "2026-11-14": 556,
-        "2026-11-15": 707
+        "2026-11-15": 707,
+        "2026-11-16": 841
       },
       "description": "Claude Code skills for equity investors and traders \u2014 market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "trend": "up",
-      "trend_delta": 647
+      "trend_delta": 781
     },
     {
       "id": "github:Likely7/Veyra-NRVideo",
@@ -5311,7 +5449,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 495,
+      "stars": 1878,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -5319,7 +5457,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
@@ -5329,11 +5467,12 @@
         "2026-09-27": 849,
         "2026-09-28": 895,
         "2026-09-29": 1099,
-        "2026-11-15": 495
+        "2026-11-15": 495,
+        "2026-11-16": 1878
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
-      "trend": "down",
-      "trend_delta": -604
+      "trend": "up",
+      "trend_delta": 779
     },
     {
       "id": "github:superdesigndev/treg",
@@ -12697,7 +12836,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 688,
+      "stars": 946,
       "momentum": 18,
       "tags": [
         "go"
@@ -12705,7 +12844,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -12723,11 +12862,12 @@
         "2026-10-09": 323,
         "2026-11-13": 206,
         "2026-11-14": 897,
-        "2026-11-15": 688
+        "2026-11-15": 688,
+        "2026-11-16": 946
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 365
+      "trend_delta": 623
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -16510,7 +16650,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "company": null,
-      "stars": 340,
+      "stars": 540,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -16518,15 +16658,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-07-12",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 117,
-        "2026-07-12": 340
+        "2026-07-12": 340,
+        "2026-11-16": 540
       },
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "trend": "up",
-      "trend_delta": 223
+      "trend_delta": 200
     },
     {
       "id": "github:vercel/next.js",
@@ -18227,7 +18368,7 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "canonical_url": "github.com/chromedevtools/chrome-devtools-mcp",
       "company": null,
-      "stars": 718,
+      "stars": 837,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -18235,7 +18376,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-03",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-07-03": 104,
@@ -18247,11 +18388,12 @@
         "2026-09-03": 148,
         "2026-11-13": 60,
         "2026-11-14": 673,
-        "2026-11-15": 718
+        "2026-11-15": 718,
+        "2026-11-16": 837
       },
       "description": "Chrome DevTools for coding agents",
       "trend": "up",
-      "trend_delta": 570
+      "trend_delta": 689
     },
     {
       "id": "github:actions/checkout",
@@ -25370,7 +25512,7 @@
       "url": "https://github.com/sveltejs/svelte",
       "canonical_url": "github.com/sveltejs/svelte",
       "company": null,
-      "stars": 25,
+      "stars": 58,
       "momentum": 15,
       "tags": [
         "javascript"
@@ -25378,15 +25520,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-06-07",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 158,
-        "2026-06-07": 25
+        "2026-06-07": 25,
+        "2026-11-16": 58
       },
       "description": "web development for the rest of us",
-      "trend": "down",
-      "trend_delta": -133
+      "trend": "up",
+      "trend_delta": 33
     },
     {
       "id": "github:obra/superpowers",
@@ -25941,7 +26084,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "company": null,
-      "stars": 206,
+      "stars": 122,
       "momentum": 17,
       "tags": [
         "python"
@@ -25949,7 +26092,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-08-03",
+      "last_seen": "2026-11-16",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 173,
@@ -25965,11 +26108,12 @@
         "2026-07-28": 240,
         "2026-07-31": 378,
         "2026-08-01": 658,
-        "2026-08-03": 206
+        "2026-08-03": 206,
+        "2026-11-16": 122
       },
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "trend": "down",
-      "trend_delta": -146
+      "trend_delta": -84
     },
     {
       "id": "github:NVIDIA/cosmos",
