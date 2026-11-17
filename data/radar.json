@@ -1,7 +1,34 @@
 {
-  "generated": "2026-11-16",
-  "count": 948,
+  "generated": "2026-11-17",
+  "count": 949,
   "items": [
+    {
+      "id": "github:elementalsouls/Claude-BugHunter",
+      "name": "Claude-BugHunter",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "canonical_url": "github.com/elementalsouls/claude-bughunter",
+      "company": null,
+      "stars": 1007,
+      "momentum": 100,
+      "tags": [
+        "python"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-17": 1007
+      },
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:google-research/paper-orchestra",
       "name": "paper-orchestra",
@@ -12,7 +39,7 @@
       "url": "https://github.com/google-research/paper-orchestra",
       "canonical_url": "github.com/google-research/paper-orchestra",
       "company": null,
-      "stars": 306,
+      "stars": 1175,
       "momentum": 30,
       "tags": [
         "python"
@@ -20,14 +47,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
-        "2026-11-16": 306
+        "2026-11-16": 306,
+        "2026-11-17": 1175
       },
       "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 869
     },
     {
       "id": "github:DeanChensj/jiangshan-map",
@@ -93,7 +121,7 @@
       "url": "https://github.com/getarcaneapp/arcane",
       "canonical_url": "github.com/getarcaneapp/arcane",
       "company": null,
-      "stars": 31,
+      "stars": 654,
       "momentum": 3,
       "tags": [
         "go"
@@ -101,14 +129,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
-        "2026-11-16": 31
+        "2026-11-16": 31,
+        "2026-11-17": 654
       },
       "description": "Modern Docker Management, Designed for Everyone",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 623
     },
     {
       "id": "github:NVIDIA/SkillEvaluator",
@@ -174,7 +203,7 @@
       "url": "https://github.com/ag-ui-protocol/ag-ui",
       "canonical_url": "github.com/ag-ui-protocol/ag-ui",
       "company": null,
-      "stars": 790,
+      "stars": 1444,
       "momentum": 0,
       "tags": [
         "typescript"
@@ -182,15 +211,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-15",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-11-15": 9,
-        "2026-11-16": 790
+        "2026-11-16": 790,
+        "2026-11-17": 1444
       },
       "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
       "trend": "up",
-      "trend_delta": 781
+      "trend_delta": 1435
     },
     {
       "id": "github:Tencent/LoopForge",
@@ -202,7 +232,7 @@
       "url": "https://github.com/Tencent/LoopForge",
       "canonical_url": "github.com/tencent/loopforge",
       "company": null,
-      "stars": 33,
+      "stars": 590,
       "momentum": 3,
       "tags": [
         "go"
@@ -210,14 +240,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-15",
-      "last_seen": "2026-11-15",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
-        "2026-11-15": 33
+        "2026-11-15": 33,
+        "2026-11-17": 590
       },
       "description": "Self-hosted workflows for coding-agent delivery. Orchestrate CodeBuddy, Codex and Claude Code with scripts and human approval gates. Includes Local workflows for coding assistants.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 557
     },
     {
       "id": "manual:headlamp",
@@ -304,7 +335,7 @@
       "url": "https://github.com/backnotprop/plannotator",
       "canonical_url": "github.com/backnotprop/plannotator",
       "company": null,
-      "stars": 689,
+      "stars": 691,
       "momentum": 10,
       "tags": [
         "typescript"
@@ -312,17 +343,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-11-13": 100,
         "2026-11-14": 412,
         "2026-11-15": 860,
-        "2026-11-16": 689
+        "2026-11-16": 689,
+        "2026-11-17": 691
       },
       "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "trend": "up",
-      "trend_delta": 589
+      "trend_delta": 591
     },
     {
       "id": "github:tradermonty/claude-trading-skills",
@@ -5449,7 +5481,7 @@
       "url": "https://github.com/dream-num/univer",
       "canonical_url": "github.com/dream-num/univer",
       "company": null,
-      "stars": 1878,
+      "stars": 1776,
       "momentum": 25,
       "tags": [
         "typescript"
@@ -5457,7 +5489,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-23",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-09-23": 255,
@@ -5468,11 +5500,12 @@
         "2026-09-28": 895,
         "2026-09-29": 1099,
         "2026-11-15": 495,
-        "2026-11-16": 1878
+        "2026-11-16": 1878,
+        "2026-11-17": 1776
       },
       "description": "The Office Harness for AI Agents \u2014 Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.",
       "trend": "up",
-      "trend_delta": 779
+      "trend_delta": 677
     },
     {
       "id": "github:superdesigndev/treg",
@@ -7831,7 +7864,7 @@
       "url": "https://github.com/jingyaogong/minimind",
       "canonical_url": "github.com/jingyaogong/minimind",
       "company": null,
-      "stars": 1005,
+      "stars": 188,
       "momentum": 47,
       "tags": [
         "python"
@@ -7839,16 +7872,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-31",
-      "last_seen": "2026-09-02",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-08-31": 472,
         "2026-09-01": 495,
-        "2026-09-02": 1005
+        "2026-09-02": 1005,
+        "2026-11-17": 188
       },
       "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
-      "trend": "up",
-      "trend_delta": 533
+      "trend": "down",
+      "trend_delta": -817
     },
     {
       "id": "github:pollen-robotics/microduck_rl",
@@ -9958,7 +9992,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 278,
+      "stars": 196,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -9966,7 +10000,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-10-17",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -9979,11 +10013,12 @@
         "2026-10-01": 157,
         "2026-10-02": 150,
         "2026-10-03": 163,
-        "2026-10-17": 278
+        "2026-10-17": 278,
+        "2026-11-17": 196
       },
       "description": "Cursor plugin specification and official plugins",
-      "trend": "up",
-      "trend_delta": 115
+      "trend": "down",
+      "trend_delta": -82
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -12836,7 +12871,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "canonical_url": "github.com/alibaba/open-code-review",
       "company": null,
-      "stars": 946,
+      "stars": 764,
       "momentum": 18,
       "tags": [
         "go"
@@ -12844,7 +12879,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-24",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-07-24": 180,
@@ -12863,11 +12898,12 @@
         "2026-11-13": 206,
         "2026-11-14": 897,
         "2026-11-15": 688,
-        "2026-11-16": 946
+        "2026-11-16": 946,
+        "2026-11-17": 764
       },
       "description": "Open-source & free \u2014 Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "trend": "up",
-      "trend_delta": 623
+      "trend_delta": 441
     },
     {
       "id": "github:jellyfin/jellyfin",
@@ -16650,7 +16686,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "company": null,
-      "stars": 540,
+      "stars": 350,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -16658,16 +16694,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 117,
         "2026-07-12": 340,
-        "2026-11-16": 540
+        "2026-11-16": 540,
+        "2026-11-17": 350
       },
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "trend": "up",
-      "trend_delta": 200
+      "trend_delta": 10
     },
     {
       "id": "github:vercel/next.js",
@@ -25512,7 +25549,7 @@
       "url": "https://github.com/sveltejs/svelte",
       "canonical_url": "github.com/sveltejs/svelte",
       "company": null,
-      "stars": 58,
+      "stars": 533,
       "momentum": 15,
       "tags": [
         "javascript"
@@ -25520,16 +25557,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 158,
         "2026-06-07": 25,
-        "2026-11-16": 58
+        "2026-11-16": 58,
+        "2026-11-17": 533
       },
       "description": "web development for the rest of us",
       "trend": "up",
-      "trend_delta": 33
+      "trend_delta": 508
     },
     {
       "id": "github:obra/superpowers",
@@ -25541,7 +25579,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 663,
+      "stars": 1905,
       "momentum": 100,
       "tags": [
         "shell"
@@ -25549,7 +25587,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-10-31",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -25597,11 +25635,12 @@
         "2026-10-28": 1096,
         "2026-10-29": 1037,
         "2026-10-30": 1255,
-        "2026-10-31": 663
+        "2026-10-31": 663,
+        "2026-11-17": 1905
       },
       "description": "An agentic skills framework & software development methodology that works.",
-      "trend": "down",
-      "trend_delta": -310
+      "trend": "up",
+      "trend_delta": 1242
     },
     {
       "id": "github:openai/plugins",
@@ -26084,7 +26123,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "company": null,
-      "stars": 122,
+      "stars": 772,
       "momentum": 17,
       "tags": [
         "python"
@@ -26092,7 +26131,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 173,
@@ -26109,11 +26148,12 @@
         "2026-07-31": 378,
         "2026-08-01": 658,
         "2026-08-03": 206,
-        "2026-11-16": 122
+        "2026-11-16": 122,
+        "2026-11-17": 772
       },
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-      "trend": "down",
-      "trend_delta": -84
+      "trend": "up",
+      "trend_delta": 566
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -26752,7 +26792,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 896,
+      "stars": 902,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -26760,7 +26800,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-10-27",
+      "last_seen": "2026-11-17",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -26795,11 +26835,12 @@
         "2026-10-17": 1057,
         "2026-10-18": 1145,
         "2026-10-26": 853,
-        "2026-10-27": 896
+        "2026-10-27": 896,
+        "2026-11-17": 902
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "trend": "down",
-      "trend_delta": -249
+      "trend": "up",
+      "trend_delta": 6
     }
   ]
 }
