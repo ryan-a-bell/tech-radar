@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/getarcaneapp/arcane
 canonical_url: github.com/getarcaneapp/arcane
 company: null
-stars: 654
+stars: 547
 momentum: 3
 tags: ["go"]
 topics: []
 archived_at: null
 first_seen: 2026-11-16
-last_seen: 2026-11-17
+last_seen: 2026-11-18
 also_seen: []
-stars_history: {"2026-11-16": 31, "2026-11-17": 654}
+stars_history: {"2026-11-16": 31, "2026-11-17": 654, "2026-11-18": 547}
 ---
 
 Modern Docker Management, Designed for Everyone

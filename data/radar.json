@@ -1,7 +1,167 @@
 {
-  "generated": "2026-11-17",
-  "count": 949,
+  "generated": "2026-11-18",
+  "count": 955,
   "items": [
+    {
+      "id": "github:astral-sh/uv",
+      "name": "uv",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/astral-sh/uv",
+      "canonical_url": "github.com/astral-sh/uv",
+      "company": "Astral",
+      "stars": 260,
+      "momentum": 26,
+      "tags": [
+        "rust"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 260
+      },
+      "description": "An extremely fast Python package and project manager, written in Rust.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:solidjs/solid",
+      "name": "solid",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/solidjs/solid",
+      "canonical_url": "github.com/solidjs/solid",
+      "company": null,
+      "stars": 37,
+      "momentum": 3,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 37
+      },
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:openvinotoolkit/openvino",
+      "name": "openvino",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "canonical_url": "github.com/openvinotoolkit/openvino",
+      "company": null,
+      "stars": 18,
+      "momentum": 1,
+      "tags": [
+        "c++"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 18
+      },
+      "description": "OpenVINO\u2122 is an open source toolkit for optimizing and deploying AI inference",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:jquery/jquery",
+      "name": "jquery",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/jquery/jquery",
+      "canonical_url": "github.com/jquery/jquery",
+      "company": null,
+      "stars": 268,
+      "momentum": 26,
+      "tags": [
+        "javascript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 268
+      },
+      "description": "jQuery JavaScript Library",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:punkpeye/awesome-mcp-servers",
+      "name": "awesome-mcp-servers",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "canonical_url": "github.com/punkpeye/awesome-mcp-servers",
+      "company": null,
+      "stars": 52,
+      "momentum": 5,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 52
+      },
+      "description": "A collection of MCP servers.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "github:appwrite/appwrite",
+      "name": "appwrite",
+      "quadrant": "Languages",
+      "ring": "Discovered",
+      "source": "GitHub",
+      "discovered_by": "scraper",
+      "url": "https://github.com/appwrite/appwrite",
+      "canonical_url": "github.com/appwrite/appwrite",
+      "company": null,
+      "stars": 239,
+      "momentum": 23,
+      "tags": [
+        "typescript"
+      ],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "also_seen": [],
+      "stars_history": {
+        "2026-11-18": 239
+      },
+      "description": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:elementalsouls/Claude-BugHunter",
       "name": "Claude-BugHunter",
@@ -12,7 +172,7 @@
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
       "canonical_url": "github.com/elementalsouls/claude-bughunter",
       "company": null,
-      "stars": 1007,
+      "stars": 2322,
       "momentum": 100,
       "tags": [
         "python"
@@ -20,14 +180,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-17",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
-        "2026-11-17": 1007
+        "2026-11-17": 1007,
+        "2026-11-18": 2322
       },
       "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 1315
     },
     {
       "id": "github:google-research/paper-orchestra",
@@ -39,7 +200,7 @@
       "url": "https://github.com/google-research/paper-orchestra",
       "canonical_url": "github.com/google-research/paper-orchestra",
       "company": null,
-      "stars": 1175,
+      "stars": 1529,
       "momentum": 30,
       "tags": [
         "python"
@@ -47,15 +208,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-11-16": 306,
-        "2026-11-17": 1175
+        "2026-11-17": 1175,
+        "2026-11-18": 1529
       },
       "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
       "trend": "up",
-      "trend_delta": 869
+      "trend_delta": 1223
     },
     {
       "id": "github:DeanChensj/jiangshan-map",
@@ -67,7 +229,7 @@
       "url": "https://github.com/DeanChensj/jiangshan-map",
       "canonical_url": "github.com/deanchensj/jiangshan-map",
       "company": null,
-      "stars": 285,
+      "stars": 991,
       "momentum": 28,
       "tags": [
         "javascript"
@@ -75,14 +237,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
-        "2026-11-16": 285
+        "2026-11-16": 285,
+        "2026-11-18": 991
       },
       "description": "\u6c5f\u5c71\u65f6\u5e8f \u00b7 \u4e2d\u56fd\u5386\u53f2\u4ea4\u4e92\u5730\u56fe\u65f6\u95f4\u8f74 (403 BCE \u2013 Present) | Interactive Historical Atlas of China across 18 dynasties, 198 territory snapshots, ancient-to-modern place genealogy & classical poetry routes",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "up",
+      "trend_delta": 706
     },
     {
       "id": "github:kajisho5/ffmpeg-skill",
@@ -121,7 +284,7 @@
       "url": "https://github.com/getarcaneapp/arcane",
       "canonical_url": "github.com/getarcaneapp/arcane",
       "company": null,
-      "stars": 654,
+      "stars": 547,
       "momentum": 3,
       "tags": [
         "go"
@@ -129,15 +292,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-11-16": 31,
-        "2026-11-17": 654
+        "2026-11-17": 654,
+        "2026-11-18": 547
       },
       "description": "Modern Docker Management, Designed for Everyone",
       "trend": "up",
-      "trend_delta": 623
+      "trend_delta": 516
     },
     {
       "id": "github:NVIDIA/SkillEvaluator",
@@ -149,7 +313,7 @@
       "url": "https://github.com/NVIDIA/SkillEvaluator",
       "canonical_url": "github.com/nvidia/skillevaluator",
       "company": "NVIDIA",
-      "stars": 953,
+      "stars": 869,
       "momentum": 95,
       "tags": [
         "python"
@@ -157,14 +321,15 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-16",
-      "last_seen": "2026-11-16",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
-        "2026-11-16": 953
+        "2026-11-16": 953,
+        "2026-11-18": 869
       },
       "description": "Multi-tier framework for evaluating AI agent skills with quality gates, semantic overlap detection, synthetic evaluation dataset generation, and live agent evaluation that measures how skills affect agent behavior.",
-      "trend": "none",
-      "trend_delta": 0
+      "trend": "down",
+      "trend_delta": -84
     },
     {
       "id": "github:martin-olivier/airgorah",
@@ -9124,7 +9289,7 @@
       "url": "https://github.com/n8n-io/n8n",
       "canonical_url": "github.com/n8n-io/n8n",
       "company": null,
-      "stars": 281,
+      "stars": 315,
       "momentum": 14,
       "tags": [
         "typescript"
@@ -9132,15 +9297,16 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-23",
-      "last_seen": "2026-09-18",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-23": 149,
-        "2026-09-18": 281
+        "2026-09-18": 281,
+        "2026-11-18": 315
       },
       "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
       "trend": "up",
-      "trend_delta": 132
+      "trend_delta": 34
     },
     {
       "id": "github:openai/codex",
@@ -9931,7 +10097,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 606,
+      "stars": 384,
       "momentum": 11,
       "tags": [
         "python"
@@ -9939,7 +10105,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-10-20",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
@@ -9949,11 +10115,12 @@
         "2026-10-17": 281,
         "2026-10-18": 574,
         "2026-10-19": 607,
-        "2026-10-20": 606
+        "2026-10-20": 606,
+        "2026-11-18": 384
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-      "trend": "up",
-      "trend_delta": 193
+      "trend": "down",
+      "trend_delta": -222
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -9992,7 +10159,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 196,
+      "stars": 315,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -10000,7 +10167,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -10014,11 +10181,12 @@
         "2026-10-02": 150,
         "2026-10-03": 163,
         "2026-10-17": 278,
-        "2026-11-17": 196
+        "2026-11-17": 196,
+        "2026-11-18": 315
       },
       "description": "Cursor plugin specification and official plugins",
-      "trend": "down",
-      "trend_delta": -82
+      "trend": "up",
+      "trend_delta": 37
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -10532,7 +10700,7 @@
       "url": "https://github.com/nvm-sh/nvm",
       "canonical_url": "github.com/nvm-sh/nvm",
       "company": null,
-      "stars": 79,
+      "stars": 199,
       "momentum": 2,
       "tags": [
         "shell"
@@ -10540,17 +10708,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-12",
-      "last_seen": "2026-11-12",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-08-12": 22,
         "2026-09-06": 22,
         "2026-10-15": 52,
-        "2026-11-12": 79
+        "2026-11-12": 79,
+        "2026-11-18": 199
       },
       "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
       "trend": "up",
-      "trend_delta": 27
+      "trend_delta": 147
     },
     {
       "id": "github:3b1b/manim",
@@ -16686,7 +16855,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "company": null,
-      "stars": 350,
+      "stars": 369,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -16694,17 +16863,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 117,
         "2026-07-12": 340,
         "2026-11-16": 540,
-        "2026-11-17": 350
+        "2026-11-17": 350,
+        "2026-11-18": 369
       },
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "trend": "up",
-      "trend_delta": 10
+      "trend_delta": 29
     },
     {
       "id": "github:vercel/next.js",
@@ -25549,7 +25719,7 @@
       "url": "https://github.com/sveltejs/svelte",
       "canonical_url": "github.com/sveltejs/svelte",
       "company": null,
-      "stars": 533,
+      "stars": 694,
       "momentum": 15,
       "tags": [
         "javascript"
@@ -25557,17 +25727,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 158,
         "2026-06-07": 25,
         "2026-11-16": 58,
-        "2026-11-17": 533
+        "2026-11-17": 533,
+        "2026-11-18": 694
       },
       "description": "web development for the rest of us",
       "trend": "up",
-      "trend_delta": 508
+      "trend_delta": 669
     },
     {
       "id": "github:obra/superpowers",
@@ -25579,7 +25750,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 1905,
+      "stars": 823,
       "momentum": 100,
       "tags": [
         "shell"
@@ -25587,7 +25758,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -25636,11 +25807,12 @@
         "2026-10-29": 1037,
         "2026-10-30": 1255,
         "2026-10-31": 663,
-        "2026-11-17": 1905
+        "2026-11-17": 1905,
+        "2026-11-18": 823
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 1242
+      "trend_delta": 160
     },
     {
       "id": "github:openai/plugins",
@@ -26123,7 +26295,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "company": null,
-      "stars": 772,
+      "stars": 1062,
       "momentum": 17,
       "tags": [
         "python"
@@ -26131,7 +26303,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 173,
@@ -26149,11 +26321,12 @@
         "2026-08-01": 658,
         "2026-08-03": 206,
         "2026-11-16": 122,
-        "2026-11-17": 772
+        "2026-11-17": 772,
+        "2026-11-18": 1062
       },
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "trend": "up",
-      "trend_delta": 566
+      "trend_delta": 856
     },
     {
       "id": "github:NVIDIA/cosmos",
@@ -26792,7 +26965,7 @@
       "url": "https://github.com/affaan-m/ECC",
       "canonical_url": "github.com/affaan-m/ecc",
       "company": null,
-      "stars": 902,
+      "stars": 1109,
       "momentum": 100,
       "tags": [
         "javascript"
@@ -26800,7 +26973,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-03",
-      "last_seen": "2026-11-17",
+      "last_seen": "2026-11-18",
       "also_seen": [],
       "stars_history": {
         "2026-06-03": 2141,
@@ -26836,11 +27009,12 @@
         "2026-10-18": 1145,
         "2026-10-26": 853,
         "2026-10-27": 896,
-        "2026-11-17": 902
+        "2026-11-17": 902,
+        "2026-11-18": 1109
       },
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
       "trend": "up",
-      "trend_delta": 6
+      "trend_delta": 213
     }
   ]
 }

@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/n8n-io/n8n
 canonical_url: github.com/n8n-io/n8n
 company: null
-stars: 281
+stars: 315
 momentum: 14
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-08-23
-last_seen: 2026-09-18
+last_seen: 2026-11-18
 also_seen: []
-stars_history: {"2026-08-23": 149, "2026-09-18": 281}
+stars_history: {"2026-08-23": 149, "2026-09-18": 281, "2026-11-18": 315}
 ---
 
 Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.

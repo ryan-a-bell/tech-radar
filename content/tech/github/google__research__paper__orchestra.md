@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/google-research/paper-orchestra
 canonical_url: github.com/google-research/paper-orchestra
 company: null
-stars: 1175
+stars: 1529
 momentum: 30
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-11-16
-last_seen: 2026-11-17
+last_seen: 2026-11-18
 also_seen: []
-stars_history: {"2026-11-16": 306, "2026-11-17": 1175}
+stars_history: {"2026-11-16": 306, "2026-11-17": 1175, "2026-11-18": 1529}
 ---
 
 PaperOrchestra is a multi-agent framework for automated AI research paper writing.
