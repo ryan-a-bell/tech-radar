@@ -1,0 +1,22 @@
+---
+id: github:mjmirza/app-store-compliance
+name: app-store-compliance
+quadrant: Tools
+ring: Discovered
+source: GitHub
+discovered_by: scraper
+url: https://github.com/mjmirza/app-store-compliance
+canonical_url: github.com/mjmirza/app-store-compliance
+company: null
+stars: 542
+momentum: 54
+tags: ["shell"]
+topics: []
+archived_at: null
+first_seen: 2026-11-19
+last_seen: 2026-11-19
+also_seen: []
+stars_history: {"2026-11-19": 542}
+---
+
+Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.
