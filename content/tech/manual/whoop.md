@@ -11,7 +11,7 @@ company: Whoop, Inc.
 stars: 0
 momentum: 0
 tags: []
-topics: []
+topics: ["Wearables"]
 archived_at: null
 first_seen: 2026-11-21
 last_seen: 2026-11-21

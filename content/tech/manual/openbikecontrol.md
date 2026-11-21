@@ -19,4 +19,4 @@ also_seen: []
 stars_history: {}
 ---
 
-Open, royalty-free protocol (MIT spec) for how shifters, buttons and brake levers send input to trainer apps over BLE or mDNS/TCP; supported by TrainingPeaks Virtual, MyWhoosh and others, with BikeControl (ex-SwiftControl) as the reference app.
+Two parts: (1) the OpenBikeControl protocol, an open, royalty-free MIT-licensed spec for how shifters, buttons and brake levers send input to trainer apps over BLE or mDNS/TCP, implemented by TrainingPeaks Virtual, MyWhoosh, Incyclist and others, with the Stages SB200 as first hardware; and (2) BikeControl (formerly SwiftControl), the reference Flutter app that turns Zwift Click/Ride/Play, Shimano Di2 and similar controllers into virtual-shifting input for trainer apps.
