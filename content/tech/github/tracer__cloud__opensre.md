@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/Tracer-Cloud/opensre
 canonical_url: github.com/tracer-cloud/opensre
 company: null
-stars: 465
+stars: 450
 momentum: 2
 tags: ["python"]
 topics: []
 archived_at: null
 first_seen: 2026-11-19
-last_seen: 2026-11-20
+last_seen: 2026-11-21
 also_seen: []
-stars_history: {"2026-11-19": 25, "2026-11-20": 465}
+stars_history: {"2026-11-19": 25, "2026-11-20": 465, "2026-11-21": 450}
 ---
 
 The open-source agent for CI/CD reliability.
