@@ -1,7 +1,241 @@
 {
-  "generated": "2026-11-21",
-  "count": 959,
+  "generated": "2026-11-22",
+  "count": 969,
   "items": [
+    {
+      "id": "manual:wahoo-app-pro-systm",
+      "name": "Wahoo App Pro (SYSTM)",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.wahoofitness.com/wahoo-app-subscription",
+      "canonical_url": null,
+      "company": "Wahoo Fitness",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Wahoo's app membership; the Pro tier bundles the SYSTM library of video and structured workouts across cycling, running, strength, yoga and mental training, with personalized plans based on Wahoo's 4DP power profile. No racing or group riding.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:whoop",
+      "name": "WHOOP",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.whoop.com/",
+      "canonical_url": null,
+      "company": "Whoop, Inc.",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Wearables"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Screenless, subscription-based wrist strap that tracks HRV, resting heart rate, respiratory rate and sleep to produce daily strain and 0-100% recovery scores in its app. Current hardware is WHOOP 5.0 / WHOOP MG (May 2025).",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:trainingpeaks-virtual",
+      "name": "TrainingPeaks Virtual",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.trainingpeaks.com/virtual/",
+      "canonical_url": null,
+      "company": "TrainingPeaks",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Indoor virtual cycling app (formerly indieVelo) for races, group rides, structured workouts and free-roam/GPX routes, with realistic wind and drafting physics; bundled with TrainingPeaks Premium, syncs to Garmin Connect, runs on desktop, mobile and Apple TV, and supports the OpenBikeControl protocol.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:trainerroad",
+      "name": "TrainerRoad",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://www.trainerroad.com/",
+      "canonical_url": null,
+      "company": "TrainerRoad",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Structured cycling training app whose 'TrainerRoad AI' builds adaptive plans, workouts and FTP detection from ride history; no virtual world, just power targets on a smart trainer, power meter or speed sensor, with outdoor and Zwift rides feeding the plan.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:rouvy",
+      "name": "ROUVY",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://rouvy.com/",
+      "canonical_url": null,
+      "company": "ROUVY",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Indoor cycling app built on filmed real-world routes with avatars, training plans, group rides and a route creator for turning your own rides into routes; works with smart and classic trainers over Bluetooth, ANT+ or Wi-Fi. Reportedly acquired by Zwift in April 2026 but kept as a separate app.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:oura-ring",
+      "name": "Oura Ring",
+      "quadrant": "Platforms",
+      "ring": "Trial",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://ouraring.com/",
+      "canonical_url": null,
+      "company": "Oura",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [
+        "Wearables"
+      ],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Oura's smart ring line for sleep, readiness/recovery, heart-health and activity tracking via the Oura app. Covers the Oura Ring 4 (incl. Ceramic variant) and the newer Oura Ring 5 (released 2026); both are currently sold.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:openbikecontrol",
+      "name": "OpenBikeControl",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://openbikecontrol.org/",
+      "canonical_url": null,
+      "company": "OpenBikeControl UG",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Two parts: (1) the OpenBikeControl protocol, an open, royalty-free MIT-licensed spec for how shifters, buttons and brake levers send input to trainer apps over BLE or mDNS/TCP, implemented by TrainingPeaks Virtual, MyWhoosh, Incyclist and others, with the Stages SB200 as first hardware; and (2) BikeControl (formerly SwiftControl), the reference Flutter app that turns Zwift Click/Ride/Play, Shimano Di2 and similar controllers into virtual-shifting input for trainer apps.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:incyclist",
+      "name": "Incyclist",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://incyclist.com/",
+      "canonical_url": null,
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Free, open-source (MIT org) indoor cycling app for real-life videos (RLV/Tacx/KWT), any GPX route in Street View or satellite, free ride and .zwo/Intervals.icu workouts; runs on Windows, macOS, Linux, Android and iOS, supports ANT+, BLE FTMS, Direct Connect and Zwift Click/Play, and implements OpenBikeControl.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:goldencheetah",
+      "name": "GoldenCheetah",
+      "quadrant": "Tools",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://github.com/GoldenCheetah/GoldenCheetah",
+      "canonical_url": "github.com/goldencheetah/goldencheetah",
+      "company": null,
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "Free GPL-3.0 desktop app for cyclists, runners and coaches that analyses workout data with power-based models (Critical Power, W'bal, Banister, PMC), importing from bike computers and syncing with services like Strava.",
+      "trend": "none",
+      "trend_delta": 0
+    },
+    {
+      "id": "manual:biketerra",
+      "name": "Biketerra",
+      "quadrant": "Platforms",
+      "ring": "Discovered",
+      "source": "Manual",
+      "discovered_by": "manual",
+      "url": "https://biketerra.com/",
+      "canonical_url": null,
+      "company": "Biketerra",
+      "stars": 0,
+      "momentum": 0,
+      "tags": [],
+      "topics": [],
+      "archived_at": null,
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "also_seen": [],
+      "stars_history": {},
+      "description": "3D indoor cycling app that renders any GPX/FIT/TCX route from real terrain and building data, with wind-tunnel-calibrated physics, race bots, free group events and structured workouts (.ZWO, Intervals.icu, TrainerDay); native on Windows, macOS, Linux and iOS or in the browser, with an unlimited free tier.",
+      "trend": "none",
+      "trend_delta": 0
+    },
     {
       "id": "github:Tracer-Cloud/opensre",
       "name": "opensre",
@@ -12,7 +246,7 @@
       "url": "https://github.com/Tracer-Cloud/opensre",
       "canonical_url": "github.com/tracer-cloud/opensre",
       "company": null,
-      "stars": 450,
+      "stars": 395,
       "momentum": 2,
       "tags": [
         "python"
@@ -20,16 +254,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 25,
         "2026-11-20": 465,
-        "2026-11-21": 450
+        "2026-11-21": 450,
+        "2026-11-22": 395
       },
       "description": "The open-source agent for CI/CD reliability.",
       "trend": "up",
-      "trend_delta": 425
+      "trend_delta": 370
     },
     {
       "id": "github:mjmirza/app-store-compliance",
@@ -41,7 +276,7 @@
       "url": "https://github.com/mjmirza/app-store-compliance",
       "canonical_url": "github.com/mjmirza/app-store-compliance",
       "company": null,
-      "stars": 724,
+      "stars": 617,
       "momentum": 54,
       "tags": [
         "shell"
@@ -49,16 +284,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 542,
         "2026-11-20": 874,
-        "2026-11-21": 724
+        "2026-11-21": 724,
+        "2026-11-22": 617
       },
       "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
       "trend": "up",
-      "trend_delta": 182
+      "trend_delta": 75
     },
     {
       "id": "github:XiaoYouChR/Ghost-Downloader-3",
@@ -70,7 +306,7 @@
       "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
       "canonical_url": "github.com/xiaoyouchr/ghost-downloader-3",
       "company": null,
-      "stars": 774,
+      "stars": 690,
       "momentum": 43,
       "tags": [
         "python"
@@ -78,16 +314,17 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 432,
         "2026-11-20": 1082,
-        "2026-11-21": 774
+        "2026-11-21": 774,
+        "2026-11-22": 690
       },
       "description": "The only downloader you need. \u4e0b\u8f7d\u5668\u7684\u96c6\u5927\u6210\u8005\u3002",
       "trend": "up",
-      "trend_delta": 342
+      "trend_delta": 258
     },
     {
       "id": "manual:american-intelligence-tdp-library",
@@ -179,7 +416,7 @@
       "url": "https://github.com/openvinotoolkit/openvino",
       "canonical_url": "github.com/openvinotoolkit/openvino",
       "company": null,
-      "stars": 202,
+      "stars": 155,
       "momentum": 1,
       "tags": [
         "c++"
@@ -187,17 +424,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-18",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-18": 18,
         "2026-11-19": 246,
         "2026-11-20": 219,
-        "2026-11-21": 202
+        "2026-11-21": 202,
+        "2026-11-22": 155
       },
       "description": "OpenVINO\u2122 is an open source toolkit for optimizing and deploying AI inference",
       "trend": "up",
-      "trend_delta": 184
+      "trend_delta": 137
     },
     {
       "id": "github:jquery/jquery",
@@ -288,7 +526,7 @@
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
       "canonical_url": "github.com/elementalsouls/claude-bughunter",
       "company": null,
-      "stars": 1794,
+      "stars": 1721,
       "momentum": 100,
       "tags": [
         "python"
@@ -296,18 +534,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-17",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-17": 1007,
         "2026-11-18": 2322,
         "2026-11-19": 1353,
         "2026-11-20": 1660,
-        "2026-11-21": 1794
+        "2026-11-21": 1794,
+        "2026-11-22": 1721
       },
       "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
       "trend": "up",
-      "trend_delta": 787
+      "trend_delta": 714
     },
     {
       "id": "github:google-research/paper-orchestra",
@@ -5922,7 +6161,7 @@
       "url": "https://github.com/zhouxiaoka/autoclip",
       "canonical_url": "github.com/zhouxiaoka/autoclip",
       "company": null,
-      "stars": 689,
+      "stars": 640,
       "momentum": 39,
       "tags": [
         "python"
@@ -5930,18 +6169,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 395,
         "2026-09-22": 250,
         "2026-11-19": 110,
         "2026-11-20": 983,
-        "2026-11-21": 689
+        "2026-11-21": 689,
+        "2026-11-22": 640
       },
       "description": "AutoClip : AI-powered video clipping and highlight generation \u00b7 \u4e00\u6b3e\u667a\u80fd\u9ad8\u5149\u63d0\u53d6\u4e0e\u526a\u8f91\u7684\u4e8c\u521b\u5de5\u5177",
       "trend": "up",
-      "trend_delta": 439
+      "trend_delta": 390
     },
     {
       "id": "github:ruanyf/weekly",
@@ -8151,7 +8391,7 @@
       "url": "https://github.com/jingyaogong/minimind",
       "canonical_url": "github.com/jingyaogong/minimind",
       "company": null,
-      "stars": 488,
+      "stars": 473,
       "momentum": 47,
       "tags": [
         "python"
@@ -8159,7 +8399,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-31",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-31": 472,
@@ -8168,11 +8408,12 @@
         "2026-11-17": 188,
         "2026-11-19": 687,
         "2026-11-20": 841,
-        "2026-11-21": 488
+        "2026-11-21": 488,
+        "2026-11-22": 473
       },
       "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
       "trend": "down",
-      "trend_delta": -517
+      "trend_delta": -532
     },
     {
       "id": "github:pollen-robotics/microduck_rl",
@@ -10222,7 +10463,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 767,
+      "stars": 687,
       "momentum": 11,
       "tags": [
         "python"
@@ -10230,7 +10471,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
@@ -10244,11 +10485,12 @@
         "2026-11-18": 384,
         "2026-11-19": 899,
         "2026-11-20": 774,
-        "2026-11-21": 767
+        "2026-11-21": 767,
+        "2026-11-22": 687
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "trend": "up",
-      "trend_delta": 161
+      "trend_delta": 81
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -10287,7 +10529,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 261,
+      "stars": 301,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -10295,7 +10537,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -10313,11 +10555,12 @@
         "2026-11-18": 315,
         "2026-11-19": 383,
         "2026-11-20": 292,
-        "2026-11-21": 261
+        "2026-11-21": 261,
+        "2026-11-22": 301
       },
       "description": "Cursor plugin specification and official plugins",
-      "trend": "down",
-      "trend_delta": -17
+      "trend": "up",
+      "trend_delta": 23
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -10700,7 +10943,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 582,
+      "stars": 513,
       "momentum": 100,
       "tags": [
         "html"
@@ -10708,7 +10951,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -10732,11 +10975,12 @@
         "2026-10-14": 1815,
         "2026-11-19": 332,
         "2026-11-20": 634,
-        "2026-11-21": 582
+        "2026-11-21": 582,
+        "2026-11-22": 513
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -1233
+      "trend_delta": -1302
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -16989,7 +17233,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "company": null,
-      "stars": 324,
+      "stars": 516,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -16997,7 +17241,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 117,
@@ -17007,11 +17251,12 @@
         "2026-11-18": 369,
         "2026-11-19": 303,
         "2026-11-20": 315,
-        "2026-11-21": 324
+        "2026-11-21": 324,
+        "2026-11-22": 516
       },
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "trend": "down",
-      "trend_delta": -16
+      "trend": "up",
+      "trend_delta": 176
     },
     {
       "id": "github:vercel/next.js",
@@ -21436,22 +21681,23 @@
       "url": "https://github.com/toeverything/AFFiNE",
       "canonical_url": "github.com/toeverything/affine",
       "company": null,
-      "stars": 577,
+      "stars": 537,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 170,
         "2026-11-20": 686,
-        "2026-11-21": 577
+        "2026-11-21": 577,
+        "2026-11-22": 537
       },
       "description": "Next-generation knowledge base combining planning and creation tools",
       "trend": "up",
-      "trend_delta": 407
+      "trend_delta": 367
     },
     {
       "id": "github:browser-use/video-use",
@@ -22673,7 +22919,7 @@
       "url": "https://github.com/firecrawl/firecrawl",
       "canonical_url": "github.com/firecrawl/firecrawl",
       "company": null,
-      "stars": 999,
+      "stars": 910,
       "momentum": 51,
       "tags": [
         "typescript"
@@ -22681,7 +22927,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 513,
@@ -22690,11 +22936,12 @@
         "2026-08-11": 835,
         "2026-11-19": 795,
         "2026-11-20": 1226,
-        "2026-11-21": 999
+        "2026-11-21": 999,
+        "2026-11-22": 910
       },
       "description": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
       "trend": "up",
-      "trend_delta": 164
+      "trend_delta": 75
     },
     {
       "id": "github:JCodesMore/ai-website-cloner-template",
@@ -25894,7 +26141,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 884,
+      "stars": 785,
       "momentum": 100,
       "tags": [
         "shell"
@@ -25902,7 +26149,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -25955,11 +26202,12 @@
         "2026-11-18": 823,
         "2026-11-19": 2029,
         "2026-11-20": 888,
-        "2026-11-21": 884
+        "2026-11-21": 884,
+        "2026-11-22": 785
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 221
+      "trend_delta": 122
     },
     {
       "id": "github:openai/plugins",
@@ -26005,7 +26253,7 @@
       "url": "https://github.com/nginx/nginx",
       "canonical_url": "github.com/nginx/nginx",
       "company": null,
-      "stars": 195,
+      "stars": 168,
       "momentum": 3,
       "tags": [
         "c"
@@ -26013,18 +26261,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 39,
         "2026-06-07": 20,
         "2026-11-19": 66,
         "2026-11-20": 246,
-        "2026-11-21": 195
+        "2026-11-21": 195,
+        "2026-11-22": 168
       },
       "description": "The official NGINX Open Source repository.",
       "trend": "up",
-      "trend_delta": 175
+      "trend_delta": 148
     },
     {
       "id": "github:microsoft/mxc",
@@ -26445,7 +26694,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "company": null,
-      "stars": 566,
+      "stars": 673,
       "momentum": 17,
       "tags": [
         "python"
@@ -26453,7 +26702,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-11-21",
+      "last_seen": "2026-11-22",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 173,
@@ -26475,11 +26724,12 @@
         "2026-11-18": 1062,
         "2026-11-19": 952,
         "2026-11-20": 685,
-        "2026-11-21": 566
+        "2026-11-21": 566,
+        "2026-11-22": 673
       },
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "trend": "up",
-      "trend_delta": 360
+      "trend_delta": 467
     },
     {
       "id": "github:NVIDIA/cosmos",

@@ -8,15 +8,15 @@ discovered_by: manual
 url: https://github.com/toeverything/AFFiNE
 canonical_url: github.com/toeverything/affine
 company: null
-stars: 577
+stars: 537
 momentum: 0
 tags: []
 topics: []
 archived_at: null
 first_seen: 2026-06-30
-last_seen: 2026-11-21
+last_seen: 2026-11-22
 also_seen: []
-stars_history: {"2026-11-19": 170, "2026-11-20": 686, "2026-11-21": 577}
+stars_history: {"2026-11-19": 170, "2026-11-20": 686, "2026-11-21": 577, "2026-11-22": 537}
 ---
 
 Next-generation knowledge base combining planning and creation tools
