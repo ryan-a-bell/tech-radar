@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22",
+  "generated": "2026-11-23",
   "count": 969,
   "items": [
     {
@@ -246,7 +246,7 @@
       "url": "https://github.com/Tracer-Cloud/opensre",
       "canonical_url": "github.com/tracer-cloud/opensre",
       "company": null,
-      "stars": 395,
+      "stars": 438,
       "momentum": 2,
       "tags": [
         "python"
@@ -254,17 +254,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 25,
         "2026-11-20": 465,
         "2026-11-21": 450,
-        "2026-11-22": 395
+        "2026-11-22": 395,
+        "2026-11-23": 438
       },
       "description": "The open-source agent for CI/CD reliability.",
       "trend": "up",
-      "trend_delta": 370
+      "trend_delta": 413
     },
     {
       "id": "github:mjmirza/app-store-compliance",
@@ -276,7 +277,7 @@
       "url": "https://github.com/mjmirza/app-store-compliance",
       "canonical_url": "github.com/mjmirza/app-store-compliance",
       "company": null,
-      "stars": 617,
+      "stars": 755,
       "momentum": 54,
       "tags": [
         "shell"
@@ -284,17 +285,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 542,
         "2026-11-20": 874,
         "2026-11-21": 724,
-        "2026-11-22": 617
+        "2026-11-22": 617,
+        "2026-11-23": 755
       },
       "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
       "trend": "up",
-      "trend_delta": 75
+      "trend_delta": 213
     },
     {
       "id": "github:XiaoYouChR/Ghost-Downloader-3",
@@ -306,7 +308,7 @@
       "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
       "canonical_url": "github.com/xiaoyouchr/ghost-downloader-3",
       "company": null,
-      "stars": 690,
+      "stars": 1078,
       "momentum": 43,
       "tags": [
         "python"
@@ -314,17 +316,18 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-19",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 432,
         "2026-11-20": 1082,
         "2026-11-21": 774,
-        "2026-11-22": 690
+        "2026-11-22": 690,
+        "2026-11-23": 1078
       },
       "description": "The only downloader you need. \u4e0b\u8f7d\u5668\u7684\u96c6\u5927\u6210\u8005\u3002",
       "trend": "up",
-      "trend_delta": 258
+      "trend_delta": 646
     },
     {
       "id": "manual:american-intelligence-tdp-library",
@@ -416,7 +419,7 @@
       "url": "https://github.com/openvinotoolkit/openvino",
       "canonical_url": "github.com/openvinotoolkit/openvino",
       "company": null,
-      "stars": 155,
+      "stars": 183,
       "momentum": 1,
       "tags": [
         "c++"
@@ -424,18 +427,19 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-18",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-18": 18,
         "2026-11-19": 246,
         "2026-11-20": 219,
         "2026-11-21": 202,
-        "2026-11-22": 155
+        "2026-11-22": 155,
+        "2026-11-23": 183
       },
       "description": "OpenVINO\u2122 is an open source toolkit for optimizing and deploying AI inference",
       "trend": "up",
-      "trend_delta": 137
+      "trend_delta": 165
     },
     {
       "id": "github:jquery/jquery",
@@ -526,7 +530,7 @@
       "url": "https://github.com/elementalsouls/Claude-BugHunter",
       "canonical_url": "github.com/elementalsouls/claude-bughunter",
       "company": null,
-      "stars": 1721,
+      "stars": 2037,
       "momentum": 100,
       "tags": [
         "python"
@@ -534,7 +538,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-11-17",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-17": 1007,
@@ -542,11 +546,12 @@
         "2026-11-19": 1353,
         "2026-11-20": 1660,
         "2026-11-21": 1794,
-        "2026-11-22": 1721
+        "2026-11-22": 1721,
+        "2026-11-23": 2037
       },
       "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
       "trend": "up",
-      "trend_delta": 714
+      "trend_delta": 1030
     },
     {
       "id": "github:google-research/paper-orchestra",
@@ -6161,7 +6166,7 @@
       "url": "https://github.com/zhouxiaoka/autoclip",
       "canonical_url": "github.com/zhouxiaoka/autoclip",
       "company": null,
-      "stars": 640,
+      "stars": 908,
       "momentum": 39,
       "tags": [
         "python"
@@ -6169,7 +6174,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-09-21",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-09-21": 395,
@@ -6177,11 +6182,12 @@
         "2026-11-19": 110,
         "2026-11-20": 983,
         "2026-11-21": 689,
-        "2026-11-22": 640
+        "2026-11-22": 640,
+        "2026-11-23": 908
       },
       "description": "AutoClip : AI-powered video clipping and highlight generation \u00b7 \u4e00\u6b3e\u667a\u80fd\u9ad8\u5149\u63d0\u53d6\u4e0e\u526a\u8f91\u7684\u4e8c\u521b\u5de5\u5177",
       "trend": "up",
-      "trend_delta": 390
+      "trend_delta": 658
     },
     {
       "id": "github:ruanyf/weekly",
@@ -8391,7 +8397,7 @@
       "url": "https://github.com/jingyaogong/minimind",
       "canonical_url": "github.com/jingyaogong/minimind",
       "company": null,
-      "stars": 473,
+      "stars": 828,
       "momentum": 47,
       "tags": [
         "python"
@@ -8399,7 +8405,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-31",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-08-31": 472,
@@ -8409,11 +8415,12 @@
         "2026-11-19": 687,
         "2026-11-20": 841,
         "2026-11-21": 488,
-        "2026-11-22": 473
+        "2026-11-22": 473,
+        "2026-11-23": 828
       },
       "description": "\ud83e\udde0 Train a 64M-parameter LLM from scratch in just 2h!",
       "trend": "down",
-      "trend_delta": -532
+      "trend_delta": -177
     },
     {
       "id": "github:pollen-robotics/microduck_rl",
@@ -10463,7 +10470,7 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "canonical_url": "github.com/hkuds/cli-anything",
       "company": null,
-      "stars": 687,
+      "stars": 783,
       "momentum": 11,
       "tags": [
         "python"
@@ -10471,7 +10478,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-16",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-08-16": 118,
@@ -10486,11 +10493,12 @@
         "2026-11-19": 899,
         "2026-11-20": 774,
         "2026-11-21": 767,
-        "2026-11-22": 687
+        "2026-11-22": 687,
+        "2026-11-23": 783
       },
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "trend": "up",
-      "trend_delta": 81
+      "trend_delta": 177
     },
     {
       "id": "github:rustdesk/rustdesk",
@@ -10529,7 +10537,7 @@
       "url": "https://github.com/cursor/plugins",
       "canonical_url": "github.com/cursor/plugins",
       "company": null,
-      "stars": 301,
+      "stars": 395,
       "momentum": 4,
       "tags": [
         "typescript"
@@ -10537,7 +10545,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-15",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-08-15": 41,
@@ -10556,11 +10564,12 @@
         "2026-11-19": 383,
         "2026-11-20": 292,
         "2026-11-21": 261,
-        "2026-11-22": 301
+        "2026-11-22": 301,
+        "2026-11-23": 395
       },
       "description": "Cursor plugin specification and official plugins",
       "trend": "up",
-      "trend_delta": 23
+      "trend_delta": 117
     },
     {
       "id": "github:deepseek-ai/awesome-deepseek-agent",
@@ -10943,7 +10952,7 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "canonical_url": "github.com/cathrynlavery/diagram-design",
       "company": null,
-      "stars": 513,
+      "stars": 624,
       "momentum": 100,
       "tags": [
         "html"
@@ -10951,7 +10960,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-08-13",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-08-13": 2855,
@@ -10976,11 +10985,12 @@
         "2026-11-19": 332,
         "2026-11-20": 634,
         "2026-11-21": 582,
-        "2026-11-22": 513
+        "2026-11-22": 513,
+        "2026-11-23": 624
       },
       "description": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
       "trend": "down",
-      "trend_delta": -1302
+      "trend_delta": -1191
     },
     {
       "id": "github:NVIDIA-NeMo/Switchyard",
@@ -17233,7 +17243,7 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "canonical_url": "github.com/google-labs-code/stitch-skills",
       "company": null,
-      "stars": 516,
+      "stars": 425,
       "momentum": 11,
       "tags": [
         "typescript"
@@ -17241,7 +17251,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-07-11",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-07-11": 117,
@@ -17252,11 +17262,12 @@
         "2026-11-19": 303,
         "2026-11-20": 315,
         "2026-11-21": 324,
-        "2026-11-22": 516
+        "2026-11-22": 516,
+        "2026-11-23": 425
       },
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-      "trend": "up",
-      "trend_delta": 176
+      "trend": "down",
+      "trend_delta": -115
     },
     {
       "id": "github:vercel/next.js",
@@ -21681,23 +21692,24 @@
       "url": "https://github.com/toeverything/AFFiNE",
       "canonical_url": "github.com/toeverything/affine",
       "company": null,
-      "stars": 537,
+      "stars": 593,
       "momentum": 0,
       "tags": [],
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-30",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-11-19": 170,
         "2026-11-20": 686,
         "2026-11-21": 577,
-        "2026-11-22": 537
+        "2026-11-22": 537,
+        "2026-11-23": 593
       },
       "description": "Next-generation knowledge base combining planning and creation tools",
       "trend": "up",
-      "trend_delta": 367
+      "trend_delta": 423
     },
     {
       "id": "github:browser-use/video-use",
@@ -22919,7 +22931,7 @@
       "url": "https://github.com/firecrawl/firecrawl",
       "canonical_url": "github.com/firecrawl/firecrawl",
       "company": null,
-      "stars": 910,
+      "stars": 920,
       "momentum": 51,
       "tags": [
         "typescript"
@@ -22927,7 +22939,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-22",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-06-22": 513,
@@ -22937,11 +22949,12 @@
         "2026-11-19": 795,
         "2026-11-20": 1226,
         "2026-11-21": 999,
-        "2026-11-22": 910
+        "2026-11-22": 910,
+        "2026-11-23": 920
       },
       "description": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
       "trend": "up",
-      "trend_delta": 75
+      "trend_delta": 85
     },
     {
       "id": "github:JCodesMore/ai-website-cloner-template",
@@ -26141,7 +26154,7 @@
       "url": "https://github.com/obra/superpowers",
       "canonical_url": "github.com/obra/superpowers",
       "company": null,
-      "stars": 785,
+      "stars": 838,
       "momentum": 100,
       "tags": [
         "shell"
@@ -26149,7 +26162,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 1008,
@@ -26203,11 +26216,12 @@
         "2026-11-19": 2029,
         "2026-11-20": 888,
         "2026-11-21": 884,
-        "2026-11-22": 785
+        "2026-11-22": 785,
+        "2026-11-23": 838
       },
       "description": "An agentic skills framework & software development methodology that works.",
       "trend": "up",
-      "trend_delta": 122
+      "trend_delta": 175
     },
     {
       "id": "github:openai/plugins",
@@ -26253,7 +26267,7 @@
       "url": "https://github.com/nginx/nginx",
       "canonical_url": "github.com/nginx/nginx",
       "company": null,
-      "stars": 168,
+      "stars": 174,
       "momentum": 3,
       "tags": [
         "c"
@@ -26261,7 +26275,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-06",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-06-06": 39,
@@ -26269,11 +26283,12 @@
         "2026-11-19": 66,
         "2026-11-20": 246,
         "2026-11-21": 195,
-        "2026-11-22": 168
+        "2026-11-22": 168,
+        "2026-11-23": 174
       },
       "description": "The official NGINX Open Source repository.",
       "trend": "up",
-      "trend_delta": 148
+      "trend_delta": 154
     },
     {
       "id": "github:microsoft/mxc",
@@ -26694,7 +26709,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "canonical_url": "github.com/mvanhorn/last30days-skill",
       "company": null,
-      "stars": 673,
+      "stars": 790,
       "momentum": 17,
       "tags": [
         "python"
@@ -26702,7 +26717,7 @@
       "topics": [],
       "archived_at": null,
       "first_seen": "2026-06-04",
-      "last_seen": "2026-11-22",
+      "last_seen": "2026-11-23",
       "also_seen": [],
       "stars_history": {
         "2026-06-04": 173,
@@ -26725,11 +26740,12 @@
         "2026-11-19": 952,
         "2026-11-20": 685,
         "2026-11-21": 566,
-        "2026-11-22": 673
+        "2026-11-22": 673,
+        "2026-11-23": 790
       },
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "trend": "up",
-      "trend_delta": 467
+      "trend_delta": 668
     },
     {
       "id": "github:NVIDIA/cosmos",
