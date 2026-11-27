@@ -8,15 +8,15 @@ discovered_by: scraper
 url: https://github.com/firecrawl/firecrawl
 canonical_url: github.com/firecrawl/firecrawl
 company: null
-stars: 1042
+stars: 833
 momentum: 51
 tags: ["typescript"]
 topics: []
 archived_at: null
 first_seen: 2026-06-22
-last_seen: 2026-11-26
+last_seen: 2026-11-27
 also_seen: []
-stars_history: {"2026-06-22": 513, "2026-06-23": 615, "2026-07-07": 867, "2026-08-11": 835, "2026-11-19": 795, "2026-11-20": 1226, "2026-11-21": 999, "2026-11-22": 910, "2026-11-23": 920, "2026-11-24": 990, "2026-11-25": 1131, "2026-11-26": 1042}
+stars_history: {"2026-06-22": 513, "2026-06-23": 615, "2026-07-07": 867, "2026-08-11": 835, "2026-11-19": 795, "2026-11-20": 1226, "2026-11-21": 999, "2026-11-22": 910, "2026-11-23": 920, "2026-11-24": 990, "2026-11-25": 1131, "2026-11-26": 1042, "2026-11-27": 833}
 ---
 
 The API to search, scrape, and interact with the web at scale. 🔥
